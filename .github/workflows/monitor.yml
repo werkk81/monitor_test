@@ -1,0 +1,39 @@
+name: PyPI Anti-Malware Monitor
+
+on:
+  schedule:
+    # 한국 시간(KST) 새벽 3시 00분부터 아침 7시 50분까지 '10분마다' 실행
+    # (UTC 기준 18:00 ~ 22:50 분 단위 매 10분마다)
+    - cron: '*/10 18-22 * * *'
+
+  workflow_dispatch: # 언제든 수동으로도 켜볼 수 있는 버튼
+
+jobs:
+  check-packages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 코드를 github 컴퓨터로 가져오기
+        uses: actions/checkout@v4
+
+      - name: uv 및 파이썬 설치
+        uses: astral-sh/setup-uv@v3
+
+      - name: 의존성 라이브러리 설치
+        run: |
+          uv venv
+          uv pip install -r requirements.txt
+
+      - name: 탐지 스크립트 실행
+        run: |
+          uv run python monitor.py
+
+      - name: 수집된 JSON 데이터를 내 저장소에 자동 커밋 & 푸시
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+
+          # 새로운 악성 패키지가 발견되어 JSON 파일이 변경되었을 때만 커밋 수행 (에러 방지)
+          git diff --staged --quiet || git commit -m "bot: Auto-update detected malware evidence [$(date +'%Y-%m-%d')]"
+          git push
