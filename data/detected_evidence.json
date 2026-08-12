@@ -572,5 +572,1005 @@
         "code_snippet": "def _terminate_spawned(process: subprocess.Popen[Any]) -> None:"
       }
     ]
+  },
+  {
+    "package_name": "sacor",
+    "checked_at": "2026-08-12T20:25:01.667552",
+    "download_url": "https://files.pythonhosted.org/packages/31/d6/7950087790f1695423cbc8e4d1127703300b741554121e0e6754181f9244/sacor-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sacor-0.1.0/eval/run.py",
+        "line": 192,
+        "keyword_detected": "eval(",
+        "code_snippet": "def esegui_eval("
+      },
+      {
+        "file": "sacor-0.1.0/eval/run.py",
+        "line": 320,
+        "keyword_detected": "eval(",
+        "code_snippet": "return esegui_eval(schema, oracle, extractor or TierZeroExtractor(), corpus_raw, metadata)"
+      }
+    ]
+  },
+  {
+    "package_name": "kizashi-edr-client",
+    "checked_at": "2026-08-12T20:25:01.691457",
+    "download_url": "https://files.pythonhosted.org/packages/54/db/6af91c51df258a8cdfd9ad3c20e6f296e27ec1ced75e007d1b7b87981265/kizashi_edr_client-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kizashi_edr_client-1.0.0/kizashi_edr/__init__.py",
+        "line": 637,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self, session_id: str, command: str) -> Dict[str, Any]:"
+      },
+      {
+        "file": "kizashi_edr_client-1.0.0/tests/test_client.py",
+        "line": 528,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_live_response_exec(self, mock_urlopen):"
+      },
+      {
+        "file": "kizashi_edr_client-1.0.0/tests/test_client.py",
+        "line": 530,
+        "keyword_detected": "exec(",
+        "code_snippet": "self.client.live_response.exec(session_id=\"sess-1\", command=\"id\")"
+      }
+    ]
+  },
+  {
+    "package_name": "kapps-semantic-middleware",
+    "checked_at": "2026-08-12T20:25:01.839137",
+    "download_url": "https://files.pythonhosted.org/packages/b1/c9/4036931ff91f388a46ba96e98127680d68c9f0ffeeb5f94a307105f83ced/kapps_semantic_middleware-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/control_station.py",
+        "line": 73,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def bind_free_socket(host: str) -> socket.socket:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/control_station.py",
+        "line": 81,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/control_station.py",
+        "line": 89,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "host: str, port: int, controller: Controller, sock: socket.socket | None = None"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/launcher.py",
+        "line": 53,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: subprocess.Popen"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/launcher.py",
+        "line": 125,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/launcher.py",
+        "line": 178,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/launcher.py",
+        "line": 197,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/launcher.py",
+        "line": 249,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _request_stop(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/launcher.py",
+        "line": 274,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "TerminateProcess) and reported. The whole path uses the cross-platform ``subprocess.Popen``"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/middleware.py",
+        "line": 33,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def bind_free_socket(host: str) -> socket.socket:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/middleware.py",
+        "line": 41,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/middleware.py",
+        "line": 51,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/middleware.py",
+        "line": 107,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "host: str, port: int, middleware: SemanticMiddleware, sock: socket.socket | None = None"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/plc/__main__.py",
+        "line": 19,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def bind_free_socket(host: str) -> socket.socket:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/plc/__main__.py",
+        "line": 27,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/demo/transferunits/plc/__main__.py",
+        "line": 34,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "async def run_server(host: str, port: int, sock: socket.socket | None = None) -> None:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_controller_view.py",
+        "line": 189,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _bind_free_socket(host: str) -> socket.socket:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_controller_view.py",
+        "line": 197,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_controller_view.py",
+        "line": 204,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _start_server(app, host: str, sock: socket.socket):"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_controller_view.py",
+        "line": 246,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn_peer_middleware(unit_index: int, repository: str) -> subprocess.Popen:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_controller_view.py",
+        "line": 259,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_controller_view.py",
+        "line": 301,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate(proc: subprocess.Popen, timeout: float = 10.0) -> None:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_demo_broker_transport.py",
+        "line": 26,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_demo_broker_transport.py",
+        "line": 38,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as srv:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_factory_deregistration.py",
+        "line": 64,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_factory(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_factory_deregistration.py",
+        "line": 135,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_factory_smoke.py",
+        "line": 264,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: subprocess.Popen"
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_factory_smoke.py",
+        "line": 327,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "kapps_semantic_middleware-0.1.0/tests/test_launcher_factory.py",
+        "line": 4,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "in for a subprocess.Popen, and the graph lookup is monkeypatched."
+      }
+    ]
+  },
+  {
+    "package_name": "retrace-kit",
+    "checked_at": "2026-08-12T20:25:01.920419",
+    "download_url": "https://files.pythonhosted.org/packages/03/ab/2688e43fef2ca7a257b33682b14b81f8ac285d9b4b7ab1a5897a757d1f6b/retrace_kit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "retrace_kit-0.1.0/tests/test_capture.py",
+        "line": 55,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, namespace)  # noqa: S102"
+      }
+    ]
+  },
+  {
+    "package_name": "mcp-sandbox-computer-vm-for-ai",
+    "checked_at": "2026-08-12T20:25:02.016095",
+    "download_url": "https://files.pythonhosted.org/packages/96/d0/bba4a2002b168859bc9798fa4d1804daf68b453cd73cba6bc993e4711455/mcp_sandbox_computer_vm_for_ai-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/base.py",
+        "line": 132,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/docker.py",
+        "line": 171,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/docker.py",
+        "line": 227,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/docker.py",
+        "line": 584,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/docker.py",
+        "line": 730,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _do_exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/docker.py",
+        "line": 737,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/docker.py",
+        "line": 794,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/docker.py",
+        "line": 803,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._do_exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/docker.py",
+        "line": 817,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/docker.py",
+        "line": 843,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/e2b.py",
+        "line": 300,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _do_exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/e2b.py",
+        "line": 410,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/e2b.py",
+        "line": 420,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._do_exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/fly.py",
+        "line": 144,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/fly.py",
+        "line": 482,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _do_exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/fly.py",
+        "line": 543,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await self._do_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/fly.py",
+        "line": 556,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/fly.py",
+        "line": 560,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._do_exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/modal.py",
+        "line": 334,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"\"\"Build the positional args for Modal Sandbox.exec().\"\"\""
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/modal.py",
+        "line": 344,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"\"\"Build keyword args for Modal Sandbox.exec().\"\"\""
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/modal.py",
+        "line": 405,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _do_exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/modal.py",
+        "line": 486,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/modal.py",
+        "line": 495,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._do_exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_base.py",
+        "line": 218,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_base.py",
+        "line": 312,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"\"\"exec() should return ExecResult.\"\"\""
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_base.py",
+        "line": 315,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(req)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_base.py",
+        "line": 320,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"\"\"exec() on dead sandbox should raise SandboxDiedError.\"\"\""
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_base.py",
+        "line": 326,
+        "keyword_detected": "exec(",
+        "code_snippet": "await sandbox.exec(req)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker.py",
+        "line": 572,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker.py",
+        "line": 593,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker.py",
+        "line": 610,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker.py",
+        "line": 628,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker.py",
+        "line": 642,
+        "keyword_detected": "exec(",
+        "code_snippet": "await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker.py",
+        "line": 670,
+        "keyword_detected": "exec(",
+        "code_snippet": "task1 = asyncio.create_task(sandbox.exec(request))"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker.py",
+        "line": 671,
+        "keyword_detected": "exec(",
+        "code_snippet": "task2 = asyncio.create_task(sandbox.exec(request))"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker_integration.py",
+        "line": 152,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker_integration.py",
+        "line": 172,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker_integration.py",
+        "line": 188,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sb.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_docker_integration.py",
+        "line": 235,
+        "keyword_detected": "exec(",
+        "code_snippet": "await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 489,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 505,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 519,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 536,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 555,
+        "keyword_detected": "exec(",
+        "code_snippet": "await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 575,
+        "keyword_detected": "exec(",
+        "code_snippet": "task1 = asyncio.create_task(sandbox.exec(request))"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 576,
+        "keyword_detected": "exec(",
+        "code_snippet": "task2 = asyncio.create_task(sandbox.exec(request))"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 595,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 616,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b.py",
+        "line": 638,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_e2b_e2e.py",
+        "line": 87,
+        "keyword_detected": "exec(",
+        "code_snippet": "await sb.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_fly.py",
+        "line": 159,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 125,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 139,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 157,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 167,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 185,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 194,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 212,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 222,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 246,
+        "keyword_detected": "exec(",
+        "code_snippet": "write_result = await sandbox.exec(write_request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 252,
+        "keyword_detected": "exec(",
+        "code_snippet": "read_result = await sandbox.exec(read_request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 262,
+        "keyword_detected": "exec(",
+        "code_snippet": "mkdir_result = await sandbox.exec(mkdir_request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 268,
+        "keyword_detected": "exec(",
+        "code_snippet": "ls_result = await sandbox.exec(ls_request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 289,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 310,
+        "keyword_detected": "exec(",
+        "code_snippet": "result1 = await sandbox.exec(request1)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 315,
+        "keyword_detected": "exec(",
+        "code_snippet": "result2 = await sandbox.exec(request2)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 322,
+        "keyword_detected": "exec(",
+        "code_snippet": "result1 = await sandbox.exec(request1)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_linux_container_integration.py",
+        "line": 327,
+        "keyword_detected": "exec(",
+        "code_snippet": "result2 = await sandbox.exec(request2)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 109,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self):"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 587,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 603,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 645,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 664,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 678,
+        "keyword_detected": "exec(",
+        "code_snippet": "await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 689,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def slow_exec(*args, **kwargs):"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 705,
+        "keyword_detected": "exec(",
+        "code_snippet": "task1 = asyncio.create_task(sandbox.exec(request))"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 706,
+        "keyword_detected": "exec(",
+        "code_snippet": "task2 = asyncio.create_task(sandbox.exec(request))"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 717,
+        "keyword_detected": "exec(",
+        "code_snippet": "task1 = asyncio.create_task(sandbox.exec(request))"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal.py",
+        "line": 718,
+        "keyword_detected": "exec(",
+        "code_snippet": "task2 = asyncio.create_task(sandbox.exec(request))"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal_integration.py",
+        "line": 178,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal_integration.py",
+        "line": 202,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal_integration.py",
+        "line": 221,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sb.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal_integration.py",
+        "line": 249,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def run_exec(req):"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal_integration.py",
+        "line": 250,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await sandbox.exec(req)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal_integration.py",
+        "line": 252,
+        "keyword_detected": "exec(",
+        "code_snippet": "results = await asyncio.gather(*[run_exec(req) for req in requests])"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal_integration.py",
+        "line": 298,
+        "keyword_detected": "exec(",
+        "code_snippet": "await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_modal_integration.py",
+        "line": 351,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sb.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_utils.py",
+        "line": 32,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec_results: A queue of results to return from exec(). If None,"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_utils.py",
+        "line": 47,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm.py",
+        "line": 584,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm.py",
+        "line": 601,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm.py",
+        "line": 620,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm.py",
+        "line": 634,
+        "keyword_detected": "exec(",
+        "code_snippet": "await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 90,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 111,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 132,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 151,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 173,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 189,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 203,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 222,
+        "keyword_detected": "exec(",
+        "code_snippet": "head_result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 234,
+        "keyword_detected": "exec(",
+        "code_snippet": "tail_result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 250,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 264,
+        "keyword_detected": "exec(",
+        "code_snippet": "mkdir_result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 274,
+        "keyword_detected": "exec(",
+        "code_snippet": "ls_result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 284,
+        "keyword_detected": "exec(",
+        "code_snippet": "rmdir_result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 295,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 312,
+        "keyword_detected": "exec(",
+        "code_snippet": "result1 = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/test_wasm_go_busybox.py",
+        "line": 323,
+        "keyword_detected": "exec(",
+        "code_snippet": "result2 = await sandbox.exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/wasm.py",
+        "line": 398,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _do_exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/wasm.py",
+        "line": 471,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, request: ExecRequest) -> ExecResult:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/backends/wasm.py",
+        "line": 480,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._do_exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/errors.py",
+        "line": 31,
+        "keyword_detected": "exec(",
+        "code_snippet": "Raised by Sandbox.exec() if the sandbox is dead (detected before"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/server.py",
+        "line": 475,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/server.py",
+        "line": 794,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def sandbox_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/test_e2e_mcp.py",
+        "line": 45,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/test_e2e_mcp.py",
+        "line": 154,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/test_e2e_mcp.py",
+        "line": 247,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/test_http_lifecycle.py",
+        "line": 156,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as port_socket:"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/test_http_lifecycle.py",
+        "line": 164,
+        "keyword_detected": "exec(",
+        "code_snippet": "server_proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/test_http_lifecycle.py",
+        "line": 325,
+        "keyword_detected": "exec(",
+        "code_snippet": "container_query = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/test_http_lifecycle.py",
+        "line": 339,
+        "keyword_detected": "exec(",
+        "code_snippet": "container_stop = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/test_lifecycle_integration.py",
+        "line": 97,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await sandbox.exec(request)"
+      },
+      {
+        "file": "mcp_sandbox_computer_vm_for_ai-0.2.1/src/kilntainers/test_lifecycle_integration.py",
+        "line": 111,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def test_lifespan_no_container_before_exec(self, backend, engine):"
+      }
+    ]
   }
 ]
