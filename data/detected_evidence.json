@@ -364,5 +364,87 @@
         "code_snippet": "data = base64.b64decode(base64_data)"
       }
     ]
+  },
+  {
+    "package_name": "codedecorum",
+    "checked_at": "2026-08-12T18:42:27.260320",
+    "download_url": "https://files.pythonhosted.org/packages/be/c7/d0437453cd0882f948aa8b61d2afb542bcc8c03a482e9d287eb36b0807c6/codedecorum-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "codedecorum-0.1.0/src/codedecorum/engine.py",
+        "line": 212,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(path.read_bytes(), path, \"exec\"), module.__dict__)"
+      }
+    ]
+  },
+  {
+    "package_name": "jibit-ir-sdk",
+    "checked_at": "2026-08-12T18:42:27.298925",
+    "download_url": "https://files.pythonhosted.org/packages/91/67/2cd87418edab075fcbb8f124c163cfcdbceb692381bb5acb53617641d7b0/jibit_ir_sdk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jibit_ir_sdk-0.1.0/src/jibit/services/contracts/models.py",
+        "line": 80,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(value, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "nomo-bot",
+    "checked_at": "2026-08-12T18:42:27.535262",
+    "download_url": "https://files.pythonhosted.org/packages/36/46/75c52474d86a387627561762d19446ca092d903b13eb525ca1889d6816ad/nomo_bot-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nomo_bot-0.1.0/nomo_bot/bot.py",
+        "line": 181,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "text = base64.b64decode(text).decode(\"utf-8\")"
+      }
+    ]
+  },
+  {
+    "package_name": "api-mcp-compiler",
+    "checked_at": "2026-08-12T18:42:27.580839",
+    "download_url": "https://files.pythonhosted.org/packages/90/ca/1cf7eb2e95a6ca185d04921ed296455496059da60ef5738fc9a5a6f72b4b/api_mcp_compiler-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "api_mcp_compiler-0.1.0/src/api_mcp_compiler/evaluation/oracles.py",
+        "line": 71,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _check_retrieval("
+      },
+      {
+        "file": "api_mcp_compiler-0.1.0/src/api_mcp_compiler/evaluation/oracles.py",
+        "line": 171,
+        "keyword_detected": "eval(",
+        "code_snippet": "_check_retrieval(item, trace) for item in oracle.retrieval_assertions"
+      },
+      {
+        "file": "api_mcp_compiler-0.1.0/tests/test_generated_confirmation.py",
+        "line": 99,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<generated server>\", \"exec\"), namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "verify-engineer",
+    "checked_at": "2026-08-12T18:42:27.651697",
+    "download_url": "https://files.pythonhosted.org/packages/e4/9d/cf7a511810186311ca5066286fec52a58ad902b18c811b9de596baaf37f0/verify_engineer-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "verify_engineer-0.2.0/engineer/scanner/rules.py",
+        "line": 130,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen\", \"os.system\", \"os.execv\", \"os.execve\", \"os.spawnv\"),"
+      }
+    ]
   }
 ]
