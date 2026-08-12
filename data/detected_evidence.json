@@ -446,5 +446,131 @@
         "code_snippet": "\"subprocess.Popen\", \"os.system\", \"os.execv\", \"os.execve\", \"os.spawnv\"),"
       }
     ]
+  },
+  {
+    "package_name": "rosh-lang",
+    "checked_at": "2026-08-12T19:48:20.629991",
+    "download_url": "https://files.pythonhosted.org/packages/bd/11/fdf81a5ae83b5c2b36a04c0b4221ce452322ca2e351fa8aef7f16dbcb368/rosh_lang-0.9.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rosh_lang-0.9.3/tests/test_sheets.py",
+        "line": 73,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(b64_data)"
+      },
+      {
+        "file": "rosh_lang-0.9.3/tests/test_sprites.py",
+        "line": 25,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(b64)"
+      },
+      {
+        "file": "rosh_lang-0.9.3/tests/test_sprites.py",
+        "line": 30,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(uri.split(\",\", 1)[1])"
+      },
+      {
+        "file": "rosh_lang-0.9.3/tests/test_sprites.py",
+        "line": 35,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(uri.split(\",\", 1)[1])"
+      },
+      {
+        "file": "rosh_lang-0.9.3/tests/test_sprites.py",
+        "line": 40,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(uri.split(\",\", 1)[1])"
+      },
+      {
+        "file": "rosh_lang-0.9.3/tests/test_sprites.py",
+        "line": 46,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(uri.split(\",\", 1)[1])"
+      },
+      {
+        "file": "rosh_lang-0.9.3/tests/test_sprites.py",
+        "line": 53,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(uri.split(\",\", 1)[1])"
+      },
+      {
+        "file": "rosh_lang-0.9.3/tests/test_sprites.py",
+        "line": 62,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(uri.split(\",\", 1)[1])"
+      },
+      {
+        "file": "rosh_lang-0.9.3/tests/test_sprites.py",
+        "line": 144,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(uri.split(\",\", 1)[1])"
+      }
+    ]
+  },
+  {
+    "package_name": "maple-mcp",
+    "checked_at": "2026-08-12T19:48:21.763381",
+    "download_url": "https://files.pythonhosted.org/packages/a0/37/d6f8ab7a5f36d0659bd5f2705fd6ccc959c0d269a61a0c73e4e1a70bcf69/maple_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "maple_mcp-0.1.0/maple/services.py",
+        "line": 140,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "train-guard",
+    "checked_at": "2026-08-12T19:48:21.883306",
+    "download_url": "https://files.pythonhosted.org/packages/e2/11/2b73af20adaca01296cdf61dee8f0d1426d65c44e5267ccaf6678f1acb8d/train_guard-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "train_guard-0.4.0/tests/test_platforms.py",
+        "line": 135,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-c\", code, str(counter)])"
+      },
+      {
+        "file": "train_guard-0.4.0/tests/test_quality.py",
+        "line": 151,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "worker = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(30)\"])"
+      },
+      {
+        "file": "train_guard-0.4.0/tests/test_state.py",
+        "line": 243,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "holder = subprocess.Popen("
+      },
+      {
+        "file": "train_guard-0.4.0/tests/test_supervisor.py",
+        "line": 46,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([sys.executable, \"-c\", f\"import time; time.sleep({seconds})\"])"
+      },
+      {
+        "file": "train_guard-0.4.0/trainguard/cli.py",
+        "line": 244,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": ") -> subprocess.Popen[bytes]:"
+      },
+      {
+        "file": "train_guard-0.4.0/trainguard/cli.py",
+        "line": 258,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(list(args), **kw)"
+      },
+      {
+        "file": "train_guard-0.4.0/trainguard/cli.py",
+        "line": 264,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_spawned(process: subprocess.Popen[Any]) -> None:"
+      }
+    ]
   }
 ]
