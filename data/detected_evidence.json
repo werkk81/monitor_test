@@ -1572,5 +1572,63 @@
         "code_snippet": "async def test_lifespan_no_container_before_exec(self, backend, engine):"
       }
     ]
+  },
+  {
+    "package_name": "redgap",
+    "checked_at": "2026-08-12T21:09:13.998732",
+    "download_url": "https://files.pythonhosted.org/packages/4e/8f/82b44986946558e08b951929a678221f29f8f3993919b915130e27bc9a64/redgap-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "redgap-0.1.0/src/redgap/detection/engine.py",
+        "line": 220,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(node: Any, event: Event) -> bool:"
+      },
+      {
+        "file": "redgap-0.1.0/src/redgap/detection/engine.py",
+        "line": 222,
+        "keyword_detected": "eval(",
+        "code_snippet": "return all(_eval(arg, event) for arg in node.args)"
+      },
+      {
+        "file": "redgap-0.1.0/src/redgap/detection/engine.py",
+        "line": 224,
+        "keyword_detected": "eval(",
+        "code_snippet": "return any(_eval(arg, event) for arg in node.args)"
+      },
+      {
+        "file": "redgap-0.1.0/src/redgap/detection/engine.py",
+        "line": 226,
+        "keyword_detected": "eval(",
+        "code_snippet": "return not _eval(node.args[0], event)"
+      },
+      {
+        "file": "redgap-0.1.0/src/redgap/detection/engine.py",
+        "line": 251,
+        "keyword_detected": "eval(",
+        "code_snippet": "if _eval(arg, event):"
+      },
+      {
+        "file": "redgap-0.1.0/src/redgap/detection/engine.py",
+        "line": 267,
+        "keyword_detected": "eval(",
+        "code_snippet": "if not _eval(rule.ast, event):"
+      }
+    ]
+  },
+  {
+    "package_name": "tati-langchain",
+    "checked_at": "2026-08-12T21:09:14.914673",
+    "download_url": "https://files.pythonhosted.org/packages/21/10/a6a1bf350e11741971737cbda410394b7a5a74b1a65a33c5cc0947672333/tati_langchain-0.3.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tati_langchain-0.3.2/src/tati_langchain/tools/image.py",
+        "line": 97,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"data\": base64.b64decode(b64),"
+      }
+    ]
   }
 ]
