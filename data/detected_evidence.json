@@ -1630,5 +1630,233 @@
         "code_snippet": "\"data\": base64.b64decode(b64),"
       }
     ]
+  },
+  {
+    "package_name": "mini-agent-cmu",
+    "checked_at": "2026-08-12T22:35:58.642622",
+    "download_url": "https://files.pythonhosted.org/packages/b1/14/19c45688f47f082fbd073b0f885d5940af183ebc5ab21b13f6d9270acbef/mini_agent_cmu-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/benchmarks/web.py",
+        "line": 419,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "encrypted = base64.b64decode(ciphertext, validate=True)"
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/cua.py",
+        "line": 627,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png = base64.b64decode(encoded, validate=True)"
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/cua.py",
+        "line": 1063,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "f\"_text = base64.b64decode({encoded!r}).decode('utf-8')\\n\""
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/osworld_apptainer.py",
+        "line": 212,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/osworld_apptainer.py",
+        "line": 250,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes],"
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/osworld_apptainer.py",
+        "line": 435,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes],"
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swe.py",
+        "line": 168,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 695,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 712,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await self._exec(command)"
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 739,
+        "keyword_detected": "exec(",
+        "code_snippet": "staged = await self._exec(\"git add --all -- .\")"
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 742,
+        "keyword_detected": "exec(",
+        "code_snippet": "patch = await self._exec("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 817,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await self._exec("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 831,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._exec(f\"git apply --binary --index /tmp/{name}\")"
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 1106,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 1133,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await self._exec(command)"
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 1149,
+        "keyword_detected": "exec(",
+        "code_snippet": "staged = await self._exec(\"git add --all -- .\")"
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 1152,
+        "keyword_detected": "exec(",
+        "code_snippet": "patch = await self._exec("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 1187,
+        "keyword_detected": "exec(",
+        "code_snippet": "applied = await self._exec("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 1202,
+        "keyword_detected": "exec(",
+        "code_snippet": "restored = await self._exec("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/src/mini_agent/environments/swebench.py",
+        "line": 1224,
+        "keyword_detected": "exec(",
+        "code_snippet": "reset = await self._exec("
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/tests/test_osworld_apptainer.py",
+        "line": 57,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"mini_agent.environments.osworld_apptainer.subprocess.Popen\","
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/tests/test_osworld_apptainer.py",
+        "line": 145,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"mini_agent.environments.osworld_apptainer.subprocess.Popen\","
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/tests/test_osworld_apptainer.py",
+        "line": 226,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"mini_agent.environments.osworld_apptainer.subprocess.Popen\","
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/tests/test_osworld_apptainer.py",
+        "line": 242,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"mini_agent.environments.osworld_apptainer.subprocess.Popen\","
+      },
+      {
+        "file": "mini_agent_cmu-0.5.0/tests/test_osworld_apptainer.py",
+        "line": 317,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"mini_agent.environments.osworld_apptainer.subprocess.Popen\""
+      }
+    ]
+  },
+  {
+    "package_name": "wayland-computer-use",
+    "checked_at": "2026-08-12T22:35:58.796507",
+    "download_url": "https://files.pythonhosted.org/packages/d2/c0/845e91924a0e94da09d0333d8e72d54ad1a5d885f1d149a34da7675245f8/wayland_computer_use-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wayland_computer_use-0.1.0/src/wayland_computer_use/core.py",
+        "line": 462,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "wayland_computer_use-0.1.0/src/wayland_computer_use/core.py",
+        "line": 538,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "wayland_computer_use-0.1.0/src/wayland_computer_use/core.py",
+        "line": 601,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(*args: str) -> tuple[int, str]:"
+      },
+      {
+        "file": "wayland_computer_use-0.1.0/src/wayland_computer_use/core.py",
+        "line": 606,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "wayland_computer_use-0.1.0/src/wayland_computer_use/core.py",
+        "line": 633,
+        "keyword_detected": "exec(",
+        "code_snippet": "code, out = await self._exec("
+      },
+      {
+        "file": "wayland_computer_use-0.1.0/src/wayland_computer_use/core.py",
+        "line": 642,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"qdbus6\", \"org.kde.KWin\", f\"/Scripting/Script{sid}\","
+      },
+      {
+        "file": "wayland_computer_use-0.1.0/src/wayland_computer_use/core.py",
+        "line": 645,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"qdbus6\", \"org.kde.KWin\", \"/Scripting\","
+      },
+      {
+        "file": "wayland_computer_use-0.1.0/src/wayland_computer_use/core.py",
+        "line": 647,
+        "keyword_detected": "exec(",
+        "code_snippet": "_, journal = await self._exec("
+      }
+    ]
+  },
+  {
+    "package_name": "clownhead",
+    "checked_at": "2026-08-12T22:35:58.853883",
+    "download_url": "https://files.pythonhosted.org/packages/45/12/c3604cdb5ab71d0f48900a2dc790ffa7109a6cebc4c42f718db44a0bbf50/clownhead-0.7.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "clownhead-0.7.0/src/clownhead/control.py",
+        "line": 156,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      }
+    ]
   }
 ]
