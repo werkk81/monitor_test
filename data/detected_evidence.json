@@ -1,0 +1,368 @@
+[
+  {
+    "package_name": "CatDot-py",
+    "checked_at": "2026-08-12T03:55:48.857099",
+    "download_url": "https://files.pythonhosted.org/packages/b3/fc/22d593127ce2b7b3220c2e6fee07a6747b4488b24f626852c7d92d5baca5/catdot_py-26.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "catdot_py-26.1.0/src/CpY/CrackDown/__init__.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(*args, **kwargs)"
+      },
+      {
+        "file": "catdot_py-26.1.0/src/CpY/CrackDown/__init__.py",
+        "line": 61,
+        "keyword_detected": "exec(",
+        "code_snippet": "return exec(*args, **kwargs)"
+      },
+      {
+        "file": "catdot_py-26.1.0/src/CpY/Seacret/__init__.py",
+        "line": 170,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(catcat,tobig,ig)"
+      }
+    ]
+  },
+  {
+    "package_name": "sensors-cli",
+    "checked_at": "2026-08-12T03:55:48.979381",
+    "download_url": "https://files.pythonhosted.org/packages/6c/3b/67f70625e8ad81d40753a579ac2f654b013b92848545a44bf8e3509dadc3/sensors_cli-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sensors_cli-0.1.1/sensors/cli.py",
+        "line": 417,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(  # noqa: S603 -- args are sys.executable + literals + user-provided working_dir; validated by caller"
+      },
+      {
+        "file": "sensors_cli-0.1.1/tests/test_stylelint.py",
+        "line": 136,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "rlinf-rldx",
+    "checked_at": "2026-08-12T03:55:49.239893",
+    "download_url": "https://files.pythonhosted.org/packages/4a/28/596f0bf64139ad7a462adf9668209cf291a76b0fb622349db2014d584f49/rlinf_rldx-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/data/interfaces.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/data/state_action/state_action_processor.py",
+        "line": 109,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/eval/real_robot/SO100/eval_so100.py",
+        "line": 200,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(cfg: EvalConfig):"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/eval/real_robot/SO100/eval_so100.py",
+        "line": 266,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/benchmark_action_model.py",
+        "line": 364,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/benchmark_action_model.py",
+        "line": 375,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/benchmark_action_model.py",
+        "line": 416,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/benchmark_action_model.py",
+        "line": 424,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/benchmark_action_model.py",
+        "line": 429,
+        "keyword_detected": "eval(",
+        "code_snippet": "custom_ah = CustomActionHeadChain(gs_action_model, device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/engine/custom_action_model_chain.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/engine/custom_action_model_chain.py",
+        "line": 176,
+        "keyword_detected": "eval(",
+        "code_snippet": "return CustomActionHeadChain(action_head_model, device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/engine/custom_expanded_action_model_chain.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/engine/custom_expanded_action_model_chain.py",
+        "line": 218,
+        "keyword_detected": "eval(",
+        "code_snippet": "return CustomExpandedActionHeadChain(action_head_model, device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/engine/custom_expanded_msat_chain.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/engine/custom_expanded_msat_chain.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/engine/custom_msat_chain.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/action_model/engine/custom_msat_chain.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/backbone/vision_encoder/model/graph_safe_qwen3vl_vision_model.py",
+        "line": 173,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.motion_block.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/benchmark_vla.py",
+        "line": 186,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/benchmark_vla.py",
+        "line": 219,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/benchmark_vla.py",
+        "line": 223,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/engine/custom_vla_chain.py",
+        "line": 139,
+        "keyword_detected": "eval(",
+        "code_snippet": "return CustomExpandedVLAChain(backbone_chain, ah_chain, gs_vla=gs_vla).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/engine/custom_vla_chain.py",
+        "line": 141,
+        "keyword_detected": "eval(",
+        "code_snippet": "return CustomVLAChain(backbone_chain, ah_chain, gs_vla=gs_vla).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/memory/benchmark_memory.py",
+        "line": 190,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/memory/benchmark_memory.py",
+        "line": 219,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/memory/engine/custom_memory_chain.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "return CustomMemoryChain(gs_memory, device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/serve_optimization.py",
+        "line": 177,
+        "keyword_detected": "eval(",
+        "code_snippet": "gs_backbone = GraphSafeQwen3VLBackbone(backbone, backbone_inputs).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/serve_optimization.py",
+        "line": 196,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/serve_optimization.py",
+        "line": 217,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/serve_optimization.py",
+        "line": 221,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/utils/loader.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "backbone = backbone.to(device=device, dtype=torch.bfloat16).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/utils/loader.py",
+        "line": 131,
+        "keyword_detected": "eval(",
+        "code_snippet": "backbone = backbone.to(device).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/utils/loader.py",
+        "line": 170,
+        "keyword_detected": "eval(",
+        "code_snippet": "action_model = action_model.to(device=cuda_device, dtype=torch.bfloat16).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/utils/loader.py",
+        "line": 323,
+        "keyword_detected": "eval(",
+        "code_snippet": "memory_module = memory_module.to(device=cuda_device, dtype=torch.bfloat16).eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/utils/loader.py",
+        "line": 395,
+        "keyword_detected": "eval(",
+        "code_snippet": "backbone = backbone.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/utils/loader.py",
+        "line": 408,
+        "keyword_detected": "eval(",
+        "code_snippet": "action_model = action_model.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/inference/utils/loader.py",
+        "line": 412,
+        "keyword_detected": "eval(",
+        "code_snippet": "full_model.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/processing_rldx.py",
+        "line": 322,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/processing_rldx.py",
+        "line": 323,
+        "keyword_detected": "eval(",
+        "code_snippet": "super().eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/processing_rldx.py",
+        "line": 324,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.state_action_processor.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/rldx.py",
+        "line": 290,
+        "keyword_detected": "eval(",
+        "code_snippet": "need to call model.eval() for the frozen modules."
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/rldx.py",
+        "line": 294,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.state_encoder.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/rldx.py",
+        "line": 295,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.action_encoder.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/rldx.py",
+        "line": 296,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.action_decoder.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/rldx.py",
+        "line": 297,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.physics.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/rldx.py",
+        "line": 299,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.position_embedding.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/core/rldx.py",
+        "line": 301,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/modules/backbone/adapter.py",
+        "line": 278,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.qwen_model.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/model/modules/backbone/adapter.py",
+        "line": 280,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.qwen_model.model.visual.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/policy/policy_loader.py",
+        "line": 173,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/policy/policy_loader.py",
+        "line": 211,
+        "keyword_detected": "eval(",
+        "code_snippet": "processor.eval()"
+      },
+      {
+        "file": "rlinf_rldx-1.0.1/rldx/utils/qwen_vision_process.py",
+        "line": 121,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(base64_data)"
+      }
+    ]
+  }
+]
