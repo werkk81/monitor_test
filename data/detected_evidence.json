@@ -1858,5 +1858,123 @@
         "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
       }
     ]
+  },
+  {
+    "package_name": "codeevolve",
+    "checked_at": "2026-08-12T23:19:53.406828",
+    "download_url": "https://files.pythonhosted.org/packages/a4/6c/5fe7dd665784bf952bf3b3885ec7074713ce4aeea8305b0509ed63639745/codeevolve-0.21.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "codeevolve-0.21.0/src/codeevolve/eval/agent_eval.py",
+        "line": 352,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_agent_eval("
+      },
+      {
+        "file": "codeevolve-0.21.0/src/codeevolve/eval/dynamics_gold.py",
+        "line": 317,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_dynamics_eval("
+      },
+      {
+        "file": "codeevolve-0.21.0/src/codeevolve/eval/ecology_gold.py",
+        "line": 218,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_ecology_eval(work_dir: Path | str | None = None) -> list[BenchmarkCase]:"
+      },
+      {
+        "file": "codeevolve-0.21.0/src/codeevolve/eval/runner.py",
+        "line": 125,
+        "keyword_detected": "eval(",
+        "code_snippet": "tax_cases = run_taxonomy_eval(work / \"taxonomy\")"
+      },
+      {
+        "file": "codeevolve-0.21.0/src/codeevolve/eval/runner.py",
+        "line": 133,
+        "keyword_detected": "eval(",
+        "code_snippet": "eco_cases = run_ecology_eval(work / \"ecology\")"
+      },
+      {
+        "file": "codeevolve-0.21.0/src/codeevolve/eval/runner.py",
+        "line": 143,
+        "keyword_detected": "eval(",
+        "code_snippet": "dyn_result = run_dynamics_eval(work, offline=offline)"
+      },
+      {
+        "file": "codeevolve-0.21.0/src/codeevolve/eval/runner.py",
+        "line": 168,
+        "keyword_detected": "eval(",
+        "code_snippet": "agent_report = run_agent_eval(work / \"agent\")"
+      },
+      {
+        "file": "codeevolve-0.21.0/src/codeevolve/eval/taxonomy_gold.py",
+        "line": 122,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_taxonomy_eval(work_dir: Path | str | None = None) -> list[BenchmarkCase]:"
+      },
+      {
+        "file": "codeevolve-0.21.0/tests/test_agent_eval_outcomes.py",
+        "line": 119,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _stub_agent_eval(*_a, **_k):"
+      },
+      {
+        "file": "codeevolve-0.21.0/tests/test_agent_v20.py",
+        "line": 198,
+        "keyword_detected": "eval(",
+        "code_snippet": "report = run_agent_eval(tmp_path / \"eval\")"
+      },
+      {
+        "file": "codeevolve-0.21.0/tests/test_agent_v21.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": "report = run_agent_eval("
+      },
+      {
+        "file": "codeevolve-0.21.0/tests/test_v10_public_scorecard.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _stub_agent_eval(*_a, **_k):"
+      },
+      {
+        "file": "codeevolve-0.21.0/tests/test_v12_gap_closure.py",
+        "line": 40,
+        "keyword_detected": "eval(",
+        "code_snippet": "cases = run_taxonomy_eval(tmp_path)"
+      },
+      {
+        "file": "codeevolve-0.21.0/tests/test_v13_ecology_calibration.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "cases = run_ecology_eval(tmp_path)"
+      },
+      {
+        "file": "codeevolve-0.21.0/tests/test_v16_micro_schema_eval.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_dynamics_eval(offline=True)"
+      },
+      {
+        "file": "codeevolve-0.21.0/tests/test_v16_micro_schema_eval.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_dynamics_eval(offline=False)"
+      }
+    ]
+  },
+  {
+    "package_name": "sqlir",
+    "checked_at": "2026-08-12T23:19:53.830839",
+    "download_url": "https://files.pythonhosted.org/packages/e8/47/b47d166df704f9e2fc7e4a203a0f5de16791dd4e4840a21bd63cca09ba30/sqlir-0.5.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sqlir-0.5.1/sqlir/adaptconvert.py",
+        "line": 110,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(func_code, ns)"
+      }
+    ]
   }
 ]
