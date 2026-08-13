@@ -2034,5 +2034,407 @@
         "code_snippet": "report_filter = eval(input(\"Enter report filter expression: \"))"
       }
     ]
+  },
+  {
+    "package_name": "frankenstein-transformer",
+    "checked_at": "2026-08-13T20:20:41.509404",
+    "download_url": "https://files.pythonhosted.org/packages/47/21/56e10e5e6cac4c57ba1cb17fd25dbad00ea10d21b8f907270e430245f391/frankenstein_transformer-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "frankenstein_transformer-1.0.0/src/engine.py",
+        "line": 603,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/engine.py",
+        "line": 1093,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/deploy/deploy.py",
+        "line": 166,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/deploy/deploy.py",
+        "line": 295,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/deploy/inference.py",
+        "line": 140,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/deploy/transformers_export.py",
+        "line": 271,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/streamlit_gui/app.py",
+        "line": 1289,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def run_command_with_nohup(command: str, log_file: str) -> subprocess.Popen:"
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/streamlit_gui/app.py",
+        "line": 1292,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/utils/gpu_temp_guard.py",
+        "line": 435,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_process_group(proc: \"subprocess.Popen\") -> None:"
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/utils/gpu_temp_guard.py",
+        "line": 754,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "frankenstein_transformer-1.0.0/src/utils/gpu_temp_guard.py",
+        "line": 810,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _request_checkpoint(self, proc: \"subprocess.Popen\") -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "kairos-fm",
+    "checked_at": "2026-08-13T20:20:41.958695",
+    "download_url": "https://files.pythonhosted.org/packages/3e/ea/daa7e73bcc309ccbb126aaefc369b36867bfd6283e60d489f04690be84d7/kairos_fm-0.0.0.dev13.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kairos_fm-0.0.0.dev13/kairos/pipeline.py",
+        "line": 520,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "kairos_fm-0.0.0.dev13/notebook/kairos_pretraining.py",
+        "line": 506,
+        "keyword_detected": "eval(",
+        "code_snippet": "pipe.model.eval()"
+      },
+      {
+        "file": "kairos_fm-0.0.0.dev13/scripts/pretrain/build_keep_it_simple_multimodal.py",
+        "line": 467,
+        "keyword_detected": "eval(",
+        "code_snippet": "params[key] = ast.literal_eval(value)"
+      }
+    ]
+  },
+  {
+    "package_name": "qxui",
+    "checked_at": "2026-08-13T20:20:42.119362",
+    "download_url": "https://files.pythonhosted.org/packages/bf/46/5109ae7cd3cedcdaea8b85d2cc97d68b8dce7ff98369ac8f2c6f4d05574b/qxui-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qxui-1.0.0/qxui/qxui.py",
+        "line": 314,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self.qapp.exec()"
+      }
+    ]
+  },
+  {
+    "package_name": "routerai",
+    "checked_at": "2026-08-13T20:20:42.296026",
+    "download_url": "https://files.pythonhosted.org/packages/8d/3f/33e766372e2969b044aada01086cd4e4b6d5006466a6361cde57906b73c5/routerai-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "routerai-0.1.0/src/routerai/resources/chat.py",
+        "line": 326,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data=base64.b64decode(audio[\"data\"], validate=True),"
+      },
+      {
+        "file": "routerai-0.1.0/src/routerai/resources/images.py",
+        "line": 341,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(b64, validate=True)"
+      },
+      {
+        "file": "routerai-0.1.0/src/routerai/resources/images.py",
+        "line": 378,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "images.append(GeneratedImage(base64.b64decode(b64), b64=b64))"
+      },
+      {
+        "file": "routerai-0.1.0/src/routerai/resources/videos.py",
+        "line": 41,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(match.group(1), validate=True)"
+      },
+      {
+        "file": "routerai-0.1.0/tests/conftest.py",
+        "line": 104,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "``socket.socketpair()`` for its self-pipe on Python 3.14."
+      }
+    ]
+  },
+  {
+    "package_name": "mutagen-cli",
+    "checked_at": "2026-08-13T20:20:42.510891",
+    "download_url": "https://files.pythonhosted.org/packages/ab/e2/f8bfd7430900a5022acb4569e9aaa3628036889aa258f28ccbfa83e0be76/mutagen_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mutagen_cli-0.1.0/src/mutagen_cli/runner.py",
+        "line": 99,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "kevy",
+    "checked_at": "2026-08-13T20:20:43.034186",
+    "download_url": "https://files.pythonhosted.org/packages/92/36/77b7b8462bd1fe953eaf1a8351fcdbc257ac0eb2f4e247d0557c9bde3a18/kevy-5.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kevy-5.1.0/kevy/_client.py",
+        "line": 91,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, argv: List[bytes]) -> Reply:"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client.py",
+        "line": 102,
+        "keyword_detected": "exec(",
+        "code_snippet": "return dec(self._exec(argv))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client.py",
+        "line": 112,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec([to_bytes(a) for a in argv])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async.py",
+        "line": 74,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, argv: List[bytes]) -> Reply:"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async.py",
+        "line": 83,
+        "keyword_detected": "exec(",
+        "code_snippet": "return dec(await self._exec(argv))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async.py",
+        "line": 90,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._exec([to_bytes(a) for a in argv])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 50,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, argv: List[bytes]) -> Reply:  # provided by AsyncClient"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 63,
+        "keyword_detected": "exec(",
+        "code_snippet": "_expect_ok(await self._exec([b\"IDX.CREATE\", *[to_bytes(a) for a in args]]))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self._exec([b\"IDX.DROP\", to_bytes(name)])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 76,
+        "keyword_detected": "exec(",
+        "code_snippet": "return parse_idx_list(await self._exec([b\"IDX.LIST\"]))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 99,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self._exec([b\"IDX.QUERY\", *[to_bytes(a) for a in args]])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 112,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _expect_count(await self._exec([b\"FEED.SHARDS\"]))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 117,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self._exec([b\"FEED.TAIL\", str(int(shard)).encode()])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 135,
+        "keyword_detected": "exec(",
+        "code_snippet": "return parse_feed_batch(await self._exec(argv))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 155,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self._exec(_block_argv(b\"BZPOPMIN\", kb, timeout))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 168,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self._exec(_block_argv(verb, keys, timeout))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 185,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self._exec([verb, k, b\"1\"])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_async_remote.py",
+        "line": 199,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self._exec([b\"ZPOPMIN\", k, b\"1\"])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 50,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, argv: List[bytes]) -> Reply:  # provided by Client"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 63,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._exec([b\"IDX.CREATE\", *[to_bytes(a) for a in args]])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 68,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._exec([b\"IDX.DROP\", to_bytes(name)])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "return parse_idx_list(self._exec([b\"IDX.LIST\"]))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 100,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._exec([b\"IDX.QUERY\", *[to_bytes(a) for a in args]])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 113,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._exec([b\"FEED.SHARDS\"])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 119,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._exec([b\"FEED.TAIL\", str(int(shard)).encode()])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 137,
+        "keyword_detected": "exec(",
+        "code_snippet": "return parse_feed_batch(self._exec(argv))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 157,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._exec(_block_argv(b\"BZPOPMIN\", kb, timeout))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 171,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._exec(_block_argv(verb, keys, timeout))"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 187,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._exec([verb, k, b\"1\"])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_client_remote.py",
+        "line": 201,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._exec([b\"ZPOPMIN\", k, b\"1\"])"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_resp_conn.py",
+        "line": 26,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def __init__(self, sock: socket.socket, host: str, port: int):"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_resp_conn.py",
+        "line": 27,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._sock: Optional[socket.socket] = sock"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_transaction.py",
+        "line": 93,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self) -> List[Reply]:"
+      },
+      {
+        "file": "kevy-5.1.0/kevy/_transaction_async.py",
+        "line": 80,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self) -> List[Reply]:"
+      },
+      {
+        "file": "kevy-5.1.0/tests/test_async.py",
+        "line": 92,
+        "keyword_detected": "exec(",
+        "code_snippet": "replies = await tx.exec()"
+      },
+      {
+        "file": "kevy-5.1.0/tests/test_transaction.py",
+        "line": 12,
+        "keyword_detected": "exec(",
+        "code_snippet": "replies = tx.exec()"
+      },
+      {
+        "file": "kevy-5.1.0/tests/test_transaction.py",
+        "line": 43,
+        "keyword_detected": "exec(",
+        "code_snippet": "replies = tx.exec()"
+      },
+      {
+        "file": "kevy-5.1.0/tests/test_transaction.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "replies = tx.exec()"
+      }
+    ]
   }
 ]
