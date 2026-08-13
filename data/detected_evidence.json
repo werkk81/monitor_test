@@ -2462,5 +2462,135 @@
         "code_snippet": "raw = base64.b64decode(params[\"data_base64\"], validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "agent-chaos-runner",
+    "checked_at": "2026-08-13T21:58:08.381293",
+    "download_url": "https://files.pythonhosted.org/packages/b6/16/7df6476ca1bf79372f5c93676ac42ab63a66760cf88255ffeff37f299d04/agent_chaos_runner-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_chaos_runner-0.1.0/src/agentchaos/proxy/server.py",
+        "line": 73,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._socket: socket.socket | None = None"
+      },
+      {
+        "file": "agent_chaos_runner-0.1.0/src/agentchaos/proxy/server.py",
+        "line": 86,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "agent_chaos_runner-0.1.0/src/agentchaos/runtime/process.py",
+        "line": 57,
+        "keyword_detected": "exec(",
+        "code_snippet": "self.process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "vectorprism",
+    "checked_at": "2026-08-13T21:58:09.257663",
+    "download_url": "https://files.pythonhosted.org/packages/40/89/f1ff3933a8cddcf9f91c4855f05958956ff03a67ffe85723a1f99419c1e2/vectorprism-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "vectorprism-0.1.0/checkpointing.py",
+        "line": 77,
+        "keyword_detected": "eval(",
+        "code_snippet": "adapter.eval()"
+      },
+      {
+        "file": "vectorprism-0.1.0/checkpointing.py",
+        "line": 86,
+        "keyword_detected": "eval(",
+        "code_snippet": "relation_table.eval()"
+      },
+      {
+        "file": "vectorprism-0.1.0/epistemic_truth.py",
+        "line": 167,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "vectorprism-0.1.0/epistemic_truth.py",
+        "line": 185,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "vectorprism-0.1.0/epistemic_truth.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "vectorprism-0.1.0/eval_runner.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_phase1_eval("
+      },
+      {
+        "file": "vectorprism-0.1.0/eval_runner.py",
+        "line": 160,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_ablation_eval("
+      },
+      {
+        "file": "vectorprism-0.1.0/identity_anchor.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "adapter.eval()"
+      },
+      {
+        "file": "vectorprism-0.1.0/ingest_pipeline.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.adapter.eval()"
+      },
+      {
+        "file": "vectorprism-0.1.0/ingest_pipeline.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.truth_classifier.eval()"
+      },
+      {
+        "file": "vectorprism-0.1.0/intrinsic_runner.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "report = link_prediction_eval(true_dist, np.stack(corrupt))"
+      },
+      {
+        "file": "vectorprism-0.1.0/intrinsic_validation.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "def link_prediction_eval("
+      },
+      {
+        "file": "vectorprism-0.1.0/vectorprism.py",
+        "line": 155,
+        "keyword_detected": "eval(",
+        "code_snippet": "def cmd_eval(args) -> int:"
+      },
+      {
+        "file": "vectorprism-0.1.0/vectorprism.py",
+        "line": 159,
+        "keyword_detected": "eval(",
+        "code_snippet": "report = run_phase1_eval(args.checkpoint, encoder, args.documents, args.eval)"
+      },
+      {
+        "file": "vectorprism-0.1.0/vectorprism.py",
+        "line": 175,
+        "keyword_detected": "eval(",
+        "code_snippet": "results = run_ablation_eval(args.checkpoint, encoder, args.documents, args.eval)"
+      },
+      {
+        "file": "vectorprism-0.1.0/vectorprism.py",
+        "line": 390,
+        "keyword_detected": "eval(",
+        "code_snippet": "def cmd_hard_eval(args) -> int:"
+      }
+    ]
   }
 ]
