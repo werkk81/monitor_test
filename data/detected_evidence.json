@@ -1976,5 +1976,63 @@
         "code_snippet": "exec(func_code, ns)"
       }
     ]
+  },
+  {
+    "package_name": "plaky115",
+    "checked_at": "2026-08-13T19:44:23.528460",
+    "download_url": "https://files.pythonhosted.org/packages/05/9d/6ff7e614da468328a6fb90417d3612cf30ec8a098aa531c4411ddd005176/plaky115-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "plaky115-1.0.0/src/plaky115/runtime/upload.py",
+        "line": 199,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(file_base64, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "CyberDefense",
+    "checked_at": "2026-08-13T19:44:23.587929",
+    "download_url": "https://files.pythonhosted.org/packages/23/45/92b6a44e728cfec2b80215771c327f240d4677f12955e9eba65ed52c5314/cyberdefense-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cyberdefense-0.1.0/src/cyberdefense/code_scanner.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"Dangerous eval()\": r\"\\beval\\s*\\(\","
+      },
+      {
+        "file": "cyberdefense-0.1.0/src/cyberdefense/log_parser.py",
+        "line": 146,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server_process = subprocess.Popen([sys.executable, generator_path, str(port), host])"
+      },
+      {
+        "file": "cyberdefense-0.1.0/src/cyberdefense/network_scanner.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as connection:"
+      },
+      {
+        "file": "cyberdefense-0.1.0/src/cyberdefense/support/log_generator.py",
+        "line": 21,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "cyberdefense-0.1.0/src/cyberdefense/support/sample_vulnerable_code.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "user_id = eval(input(\"Enter employee ID: \"))"
+      },
+      {
+        "file": "cyberdefense-0.1.0/src/cyberdefense/support/sample_vulnerable_code.py",
+        "line": 23,
+        "keyword_detected": "eval(",
+        "code_snippet": "report_filter = eval(input(\"Enter report filter expression: \"))"
+      }
+    ]
   }
 ]
