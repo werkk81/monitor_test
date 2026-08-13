@@ -2436,5 +2436,31 @@
         "code_snippet": "replies = tx.exec()"
       }
     ]
+  },
+  {
+    "package_name": "science-assistant-client",
+    "checked_at": "2026-08-13T21:09:27.440578",
+    "download_url": "https://files.pythonhosted.org/packages/6b/ae/e79df5f2e3bdf67f548aa18873b93c879783b7c61448cbd6c98f86dace7b/science_assistant_client-0.2.23.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "science_assistant_client-0.2.23/science_assistant_client/client.py",
+        "line": 419,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(str(result.get(\"data_base64\", \"\")), validate=True)"
+      },
+      {
+        "file": "science_assistant_client-0.2.23/tests/test_client.py",
+        "line": 61,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(params[\"data_base64\"], validate=True)"
+      },
+      {
+        "file": "science_assistant_client-0.2.23/tests/test_client.py",
+        "line": 79,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(params[\"data_base64\"], validate=True)"
+      }
+    ]
   }
 ]
