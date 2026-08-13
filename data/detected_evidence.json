@@ -2964,5 +2964,271 @@
         "code_snippet": "\"claude_cost_tracker.capture.subprocess.Popen\","
       }
     ]
+  },
+  {
+    "package_name": "separan",
+    "checked_at": "2026-08-13T23:21:27.387016",
+    "download_url": "https://files.pythonhosted.org/packages/ce/ec/f514f736ad8c28442c1dd898bed6635455e5733a6bb89d1677a612e52c9b/separan-0.1.0a2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "separan-0.1.0a2/reference/separan/auth.py",
+        "line": 142,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "salt = base64.b64decode(salt_text, validate=True); expected = base64.b64decode(digest_text, validate=True)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/bytes_ops.py",
+        "line": 78,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "try: return BytesValue(base64.b64decode(value, validate=True))"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 190,
+        "keyword_detected": "eval(",
+        "code_snippet": "elif isinstance(stmt, Assignment): self.environment.assign(stmt.name, self._eval(stmt.value), stmt.position)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 191,
+        "keyword_detected": "eval(",
+        "code_snippet": "elif isinstance(stmt, ConstDeclaration): self.environment.define_const(stmt.name, self._eval(stmt.value), stmt.position)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 192,
+        "keyword_detected": "eval(",
+        "code_snippet": "elif isinstance(stmt, PrintStmt): self.output.write(self._display(self._eval(stmt.value)) + \"\\n\")"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 193,
+        "keyword_detected": "eval(",
+        "code_snippet": "elif isinstance(stmt, PrintErrorStmt): self.error_output.write(self._display(self._eval(stmt.value)) + \"\\n\")"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 194,
+        "keyword_detected": "eval(",
+        "code_snippet": "elif isinstance(stmt, ExpressionStmt): self._eval(stmt.expression)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 195,
+        "keyword_detected": "eval(",
+        "code_snippet": "elif isinstance(stmt, ReturnStmt): raise Returned(None if stmt.value is None else self._eval(stmt.value))"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 198,
+        "keyword_detected": "eval(",
+        "code_snippet": "if self._boolean(self._eval(branch.condition), branch.condition.position): self._execute_all(branch.body); return"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 201,
+        "keyword_detected": "eval(",
+        "code_snippet": "while self._boolean(self._eval(stmt.condition), stmt.condition.position): self._execute_all(stmt.body)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "iterable = self._eval(stmt.iterable)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 209,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = self._eval(stmt.value)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 213,
+        "keyword_detected": "eval(",
+        "code_snippet": "connection = self._eval(stmt.connection); db_begin(connection, stmt.position, self)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 277,
+        "keyword_detected": "eval(",
+        "code_snippet": "values = [self._eval(value) for value in stmt.elements]; list_element_type(values, stmt.position); return values"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 280,
+        "keyword_detected": "eval(",
+        "code_snippet": "fields[entry.name] = self._eval(entry.value) if isinstance(entry, ObjectField) else self._build_data_block(entry)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 312,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(self, expr):"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 314,
+        "keyword_detected": "eval(",
+        "code_snippet": "if isinstance(expr, GroupExpr): return self._eval(expr.expression)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 320,
+        "keyword_detected": "eval(",
+        "code_snippet": "values = [self._eval(e) for e in expr.elements]; list_element_type(values, expr.position); return values"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 322,
+        "keyword_detected": "eval(",
+        "code_snippet": "positional = [self._eval(a) for a in expr.arguments]"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 323,
+        "keyword_detected": "eval(",
+        "code_snippet": "named = {name: self._eval(value) for name, value in expr.named_arguments.items()}"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 326,
+        "keyword_detected": "eval(",
+        "code_snippet": "target, index = self._eval(expr.target), self._eval(expr.index)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 332,
+        "keyword_detected": "eval(",
+        "code_snippet": "target = self._eval(expr.target)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 350,
+        "keyword_detected": "eval(",
+        "code_snippet": "target = self._eval(expr.target)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 351,
+        "keyword_detected": "eval(",
+        "code_snippet": "args = [self._eval(item) for item in expr.arguments]; named = {key: self._eval(value) for key, value in expr.named_arguments.items()}"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 364,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = self._eval(expr.operand)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 369,
+        "keyword_detected": "eval(",
+        "code_snippet": "left = self._eval(expr.left)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 370,
+        "keyword_detected": "eval(",
+        "code_snippet": "if expr.operator == \"&&\": return self._boolean(left, expr.left.position) and self._boolean(self._eval(expr.right), expr.right.position)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 371,
+        "keyword_detected": "eval(",
+        "code_snippet": "if expr.operator == \"||\": return self._boolean(left, expr.left.position) or self._boolean(self._eval(expr.right), expr.right.position)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 372,
+        "keyword_detected": "eval(",
+        "code_snippet": "if expr.operator == \"??\": return left if left is not None else self._eval(expr.right)"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/interpreter.py",
+        "line": 373,
+        "keyword_detected": "eval(",
+        "code_snippet": "right = self._eval(expr.right); op = expr.operator"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/processes.py",
+        "line": 32,
+        "keyword_detected": "exec(",
+        "code_snippet": "if type(value) is not list: runtime.type_error(position, \"list<string>\", runtime.type_name(value), \"exec() arguments must be a list of strings.\")"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/processes.py",
+        "line": 34,
+        "keyword_detected": "exec(",
+        "code_snippet": "if type(item) is not str or \"\\0\" in item: runtime.type_error(position, \"list<string> without NUL\", f\"argument {index}: {runtime.type_name(item)}\", \"exec() arguments must be strings without NUL.\")"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/processes.py",
+        "line": 77,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command if shell else [command, *argv], cwd=cwd, env=environment,"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/processes.py",
+        "line": 92,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(checked):"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/processes.py",
+        "line": 104,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _shell_exec(arguments, named, position, runtime):"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/processes.py",
+        "line": 107,
+        "keyword_detected": "exec(",
+        "code_snippet": "if type(command) is not str or not command or \"\\0\" in command: runtime.type_error(position, \"non-empty string\", runtime.type_name(command), \"shell_exec() requires a command string.\")"
+      },
+      {
+        "file": "separan-0.1.0a2/reference/separan/processes.py",
+        "line": 116,
+        "keyword_detected": "exec(",
+        "code_snippet": "UtilityFunction(\"exec\", 2, 2, _exec(False), OPTIONS), UtilityFunction(\"exec_checked\", 2, 2, _exec(True), OPTIONS),"
+      },
+      {
+        "file": "separan-0.1.0a2/tests/test_process_execution.py",
+        "line": 22,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = exec(\"{self.command}\", [\"-c\", \"import sys;print(sys.argv[1])\", \"& del * | echo unsafe\"])"
+      },
+      {
+        "file": "separan-0.1.0a2/tests/test_process_execution.py",
+        "line": 36,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = exec(\"{self.command}\", [\"-c\", \"raise SystemExit(7)\"])"
+      },
+      {
+        "file": "separan-0.1.0a2/tests/test_process_execution.py",
+        "line": 49,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = exec(\"{self.command}\", [\"-c\", \"import time;time.sleep(1)\"], timeout = duration(\"10ms\"))"
+      },
+      {
+        "file": "separan-0.1.0a2/tests/test_process_execution.py",
+        "line": 55,
+        "keyword_detected": "exec(",
+        "code_snippet": "execute(f'print exec(\"{self.command}\", [\"-c\", \"print(12345)\"], max_stdout_bytes = 2)\\n', capabilities=self.capability)"
+      },
+      {
+        "file": "separan-0.1.0a2/tests/test_process_execution.py",
+        "line": 71,
+        "keyword_detected": "exec(",
+        "code_snippet": "with self.assertRaises(SeparanError) as caught: execute(f'print exec(\"{self.command}\", [])\\n', capabilities=denied)"
+      },
+      {
+        "file": "separan-0.1.0a2/tests/test_process_execution.py",
+        "line": 75,
+        "keyword_detected": "exec(",
+        "code_snippet": "with self.assertRaises(SeparanError) as caught: execute('print shell_exec(\"echo unsafe\")\\n', capabilities=self.capability)"
+      }
+    ]
   }
 ]
