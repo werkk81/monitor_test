@@ -3230,5 +3230,111 @@
         "code_snippet": "with self.assertRaises(SeparanError) as caught: execute('print shell_exec(\"echo unsafe\")\\n', capabilities=self.capability)"
       }
     ]
+  },
+  {
+    "package_name": "magnelio",
+    "checked_at": "2026-08-14T18:36:30.618863",
+    "download_url": "https://files.pythonhosted.org/packages/21/b0/076a1b4fd55360975aac0ad8b8dd6a02c237824f6c6db418f92f64f81790/magnelio-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "magnelio-0.1.0/tests/integration/test_paraview_session.py",
+        "line": 108,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(text[: text.index(\"def build\")], ns)"
+      },
+      {
+        "file": "magnelio-0.1.0/tests/unit/test_modal_discretize.py",
+        "line": 191,
+        "keyword_detected": "eval(",
+        "code_snippet": "def zero_eval(u, v):"
+      },
+      {
+        "file": "magnelio-0.1.0/tests/unit/test_paraview_export.py",
+        "line": 199,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(text[: text.index(\"def build\")], ns)"
+      }
+    ]
+  },
+  {
+    "package_name": "sblcp",
+    "checked_at": "2026-08-14T18:36:30.815641",
+    "download_url": "https://files.pythonhosted.org/packages/db/84/f3314737897d20b219a07129862a192cc6ef84b3a392e70a09f9d7bdc0ae/sblcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sblcp-0.1.0/src/sblcp/arp.py",
+        "line": 144,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "sblcp-0.1.0/src/sblcp/arp.py",
+        "line": 198,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "sblcp-0.1.0/src/sblcp/client.py",
+        "line": 75,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "sblcp-0.1.0/src/sblcp/simulator.py",
+        "line": 295,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "sblcp-0.1.0/tests/test_arp.py",
+        "line": 179,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(\"sblcp.arp.socket.socket\", lambda *_, **__: FakeSocket())"
+      },
+      {
+        "file": "sblcp-0.1.0/tests/test_arp.py",
+        "line": 201,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(\"sblcp.arp.socket.socket\", lambda *_, **__: FakeSocket())"
+      },
+      {
+        "file": "sblcp-0.1.0/tests/test_client.py",
+        "line": 23,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "sblcp-0.1.0/tests/test_key_slots.py",
+        "line": 93,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "sblcp-0.1.0/tests/test_message_codes.py",
+        "line": 93,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "sblcp-0.1.0/tests/test_ota_server.py",
+        "line": 95,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "sblcp-0.1.0/tests/test_udp_keys.py",
+        "line": 61,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "sblcp-0.1.0/tests/test_who_are_you.py",
+        "line": 49,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
   }
 ]
