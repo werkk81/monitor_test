@@ -3336,5 +3336,83 @@
         "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
       }
     ]
+  },
+  {
+    "package_name": "queuefy",
+    "checked_at": "2026-08-14T19:33:11.625537",
+    "download_url": "https://files.pythonhosted.org/packages/e9/5d/1d7c5c7da25fa829ca476c7e70aa8577420493ed7e8e91340e3871e7ed2d/queuefy-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "queuefy-1.0.0/tests/conftest.py",
+        "line": 67,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "queuefy-1.0.0/tests/test_fleet_stress.py",
+        "line": 76,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return [(subprocess.Popen([sys.executable, \"-m\", \"tests.machine\", json.dumps(settings)], cwd=ROOT, env=environment, stdout=log, stderr=subprocess.STDOUT), log) for log in logs]"
+      },
+      {
+        "file": "queuefy-1.0.0/tests/test_many_machines.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return [(subprocess.Popen([sys.executable, \"-m\", \"tests.machine\", json.dumps(settings)], cwd=ROOT, env=environment, stdout=log, stderr=subprocess.STDOUT), log) for log in logs]"
+      },
+      {
+        "file": "queuefy-1.0.0/tests/test_surviving_a_restart.py",
+        "line": 38,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([sys.executable, \"-m\", \"tests.survivor\", url, str(output), str(seconds)], cwd=ROOT, env=os.environ | {\"PYTHONPATH\": str(ROOT)})"
+      }
+    ]
+  },
+  {
+    "package_name": "it-eval-framework",
+    "checked_at": "2026-08-14T19:33:12.119407",
+    "download_url": "https://files.pythonhosted.org/packages/96/37/d91847600b71340c2174129e84c3e8698dc328c48e06b6815d3ec9298d78/it_eval_framework-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "it_eval_framework-0.1.1/src/it_eval_framework/runners/run_all.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_lighteval(config_path)"
+      },
+      {
+        "file": "it_eval_framework-0.1.1/src/it_eval_framework/runners/run_lighteval.py",
+        "line": 107,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen("
+      },
+      {
+        "file": "it_eval_framework-0.1.1/src/it_eval_framework/utils/modeling.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "sagabench",
+    "checked_at": "2026-08-14T19:33:12.223175",
+    "download_url": "https://files.pythonhosted.org/packages/f1/fe/b2201cf5fa67667381fb6797ddb9dcdf5e030d1fd98a7f627533cc3611c6/sagabench-0.6.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sagabench-0.6.2/sagabench_sdk/subprocess_transport.py",
+        "line": 45,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "sagabench-0.6.2/sagabench_sdk/subprocess_transport.py",
+        "line": 52,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      }
+    ]
   }
 ]
