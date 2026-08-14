@@ -3968,5 +3968,71 @@
         "code_snippet": "return base64.b64decode(value.encode(\"ascii\"))"
       }
     ]
+  },
+  {
+    "package_name": "oc-rox",
+    "checked_at": "2026-08-14T21:45:15.307992",
+    "download_url": "https://files.pythonhosted.org/packages/bc/ec/a60e92f2d1226bf8e8d1f5cf2d99eb2f7a1ccd4aa80752986b8cab1cd906/oc_rox-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "oc_rox-0.2.0/src/oc_rox/launchd.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "f.write(render_plist(resolve_exec()))"
+      },
+      {
+        "file": "oc_rox-0.2.0/src/oc_rox/service.py",
+        "line": 12,
+        "keyword_detected": "exec(",
+        "code_snippet": "def resolve_exec():"
+      },
+      {
+        "file": "oc_rox-0.2.0/src/oc_rox/service.py",
+        "line": 41,
+        "keyword_detected": "exec(",
+        "code_snippet": "f.write(render_unit(resolve_exec()))"
+      },
+      {
+        "file": "oc_rox-0.2.0/tests/test_service.py",
+        "line": 5,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_render_unit_has_absolute_exec():"
+      }
+    ]
+  },
+  {
+    "package_name": "watermarkbuster-local",
+    "checked_at": "2026-08-14T21:45:15.488843",
+    "download_url": "https://files.pythonhosted.org/packages/ba/c1/ae6360d85b3e98ffef560aefbcdc9853a3857a78ea7f0f569a600a5fb960/watermarkbuster_local-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "watermarkbuster_local-0.1.0/tests/test_mcp_server.py",
+        "line": 53,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(result[\"contentBase64\"]) == b\"Owned text\""
+      }
+    ]
+  },
+  {
+    "package_name": "watcherml",
+    "checked_at": "2026-08-14T21:45:15.602648",
+    "download_url": "https://files.pythonhosted.org/packages/ec/c3/194b6f6b71688d283da618061ca95b5ebdfe5fff4ec2a99b4284ed2b12be/watcherml-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "watcherml-0.1.0/src/watcherml/trial_runner.py",
+        "line": 218,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "watcherml-0.1.0/tests/test_trial_runner.py",
+        "line": 286,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-c\", child_code, marker])"
+      }
+    ]
   }
 ]
