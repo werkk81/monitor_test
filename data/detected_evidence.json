@@ -3414,5 +3414,51 @@
         "code_snippet": "self._proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "engram-proxy",
+    "checked_at": "2026-08-14T20:05:52.545215",
+    "download_url": "https://files.pythonhosted.org/packages/be/ab/c037c84bd143c3ceab89cdec62196a1ccc28d9f68f42d99eec3dc747eaf2/engram_proxy-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "engram_proxy-0.3.0/engram/cli.py",
+        "line": 213,
+        "keyword_detected": "eval(",
+        "code_snippet": "def cmd_eval(cfg: Config, args):"
+      },
+      {
+        "file": "engram_proxy-0.3.0/engram/cli.py",
+        "line": 218,
+        "keyword_detected": "eval(",
+        "code_snippet": "sys.exit(asyncio.run(run_eval(cfg, model=args.model or DEFAULT_MODEL)))"
+      },
+      {
+        "file": "engram_proxy-0.3.0/engram/eval.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def run_eval(cfg: Config, model: str = DEFAULT_MODEL):"
+      }
+    ]
+  },
+  {
+    "package_name": "beakerhub",
+    "checked_at": "2026-08-14T20:05:53.047043",
+    "download_url": "https://files.pythonhosted.org/packages/83/77/585d25ea54feca0e65ecb6db77cf526e532c82815b632af72a79b0ea3936/beakerhub-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "beakerhub-0.0.1/tests/integration/conftest.py",
+        "line": 134,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "port_forward_proc = subprocess.Popen("
+      },
+      {
+        "file": "beakerhub-0.0.1/tests/unit/auth/test_cognito.py",
+        "line": 60,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(result)"
+      }
+    ]
   }
 ]
