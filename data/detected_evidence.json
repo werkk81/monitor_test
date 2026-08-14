@@ -4086,5 +4086,31 @@
         "code_snippet": "process = await asyncio.create_subprocess_exec("
       }
     ]
+  },
+  {
+    "package_name": "oghidra",
+    "checked_at": "2026-08-14T23:00:07.623340",
+    "download_url": "https://files.pythonhosted.org/packages/07/1d/5f6e7c880aa58b9ed1904cdb13f0aac8589e7d67a197040c1e87e6e07e21/oghidra-0.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "oghidra-0.0.0/src/ghidra_client.py",
+        "line": 635,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(raw_result.strip())"
+      },
+      {
+        "file": "oghidra-0.0.0/tests/debug_scan.py",
+        "line": 90,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(raw.strip())"
+      },
+      {
+        "file": "oghidra-0.0.0/tests/test_read_bytes.py",
+        "line": 103,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(result)"
+      }
+    ]
   }
 ]
