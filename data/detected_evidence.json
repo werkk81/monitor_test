@@ -4060,5 +4060,31 @@
         "code_snippet": "process = await asyncio.create_subprocess_exec("
       }
     ]
+  },
+  {
+    "package_name": "ensmcp",
+    "checked_at": "2026-08-14T22:19:04.633315",
+    "download_url": "https://files.pythonhosted.org/packages/df/5d/56fa801f6ca86f8b582c30ae7497ffc247026422d5eea3f442d2e160f22c/ensmcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ensmcp-0.1.0/tests/test_main.py",
+        "line": 144,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "ensmcp-0.1.0/tests/test_packaging.py",
+        "line": 144,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "ensmcp-0.1.0/tests/guia/test_build_guia_808.py",
+        "line": 516,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
   }
 ]
