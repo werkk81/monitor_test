@@ -3460,5 +3460,513 @@
         "code_snippet": "decoded = base64.b64decode(result)"
       }
     ]
+  },
+  {
+    "package_name": "ptl-266-temp",
+    "checked_at": "2026-08-14T20:38:54.840478",
+    "download_url": "https://files.pythonhosted.org/packages/82/da/2db57b95a233af750b956ff2318bb06c5f60885fb1e45b08b8c956b72ec1/ptl_266_temp-2.6.6.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/fabric/plugins/environments/lightning.py",
+        "line": 120,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/fabric/strategies/launchers/subprocess_script.py",
+        "line": 40,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "In its default behavior, the main process in each node then spawns N-1 child processes via :func:`subprocess.Popen`,"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/fabric/strategies/launchers/subprocess_script.py",
+        "line": 84,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.procs: list[subprocess.Popen] = []  # launched child subprocesses, does not include the launcher"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/fabric/strategies/launchers/subprocess_script.py",
+        "line": 144,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(command, env=env_copy, cwd=cwd)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/fabric/strategies/launchers/subprocess_script.py",
+        "line": 187,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _launch_process_observer(child_processes: list[subprocess.Popen]) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/fabric/strategies/launchers/subprocess_script.py",
+        "line": 193,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def __init__(self, main_pid: int, child_processes: list[subprocess.Popen], sleep_period: int = 5) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/hooks.py",
+        "line": 163,
+        "keyword_detected": "eval(",
+        "code_snippet": "def on_validation_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/hooks.py",
+        "line": 166,
+        "keyword_detected": "eval(",
+        "code_snippet": "The validation loop by default calls ``.eval()`` on the LightningModule before it starts. Override this hook"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/hooks.py",
+        "line": 170,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.trainer.model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/hooks.py",
+        "line": 183,
+        "keyword_detected": "eval(",
+        "code_snippet": "def on_test_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/hooks.py",
+        "line": 186,
+        "keyword_detected": "eval(",
+        "code_snippet": "The test loop by default calls ``.eval()`` on the LightningModule before it starts. Override this hook"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/hooks.py",
+        "line": 190,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.trainer.model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/hooks.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "def on_predict_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/hooks.py",
+        "line": 206,
+        "keyword_detected": "eval(",
+        "code_snippet": "The predict loop by default calls ``.eval()`` on the LightningModule before it starts. Override this hook"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/hooks.py",
+        "line": 210,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.trainer.model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/module.py",
+        "line": 1425,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/module.py",
+        "line": 1574,
+        "keyword_detected": "eval(",
+        "code_snippet": "torchscript_module = torch.jit.script(self.eval(), **kwargs)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/module.py",
+        "line": 1593,
+        "keyword_detected": "eval(",
+        "code_snippet": "torchscript_module = torch.jit.trace(func=self.eval(), example_inputs=example_inputs, **kwargs)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/module.py",
+        "line": 1681,
+        "keyword_detected": "eval(",
+        "code_snippet": "module=self.eval(),"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/module.py",
+        "line": 1802,
+        "keyword_detected": "eval(",
+        "code_snippet": "pretrained_model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/core/saving.py",
+        "line": 388,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(val)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/loops/evaluation_loop.py",
+        "line": 285,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._on_evaluation_model_eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/loops/evaluation_loop.py",
+        "line": 338,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _on_evaluation_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/loops/prediction_loop.py",
+        "line": 197,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._on_predict_model_eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/loops/prediction_loop.py",
+        "line": 348,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _on_predict_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/serve/servable_module_validator.py",
+        "line": 153,
+        "keyword_detected": "eval(",
+        "code_snippet": "servable_model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/strategies/launchers/subprocess_script.py",
+        "line": 41,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "In its default behavior, the main process in each node then spawns N-1 child processes via :func:`subprocess.Popen`,"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/strategies/launchers/subprocess_script.py",
+        "line": 80,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.procs: list[subprocess.Popen] = []  # launched child subprocesses, does not include the launcher"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/strategies/launchers/subprocess_script.py",
+        "line": 148,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "new_process = subprocess.Popen(command, env=env_copy, cwd=cwd)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/utilities/argparse.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = literal_eval(val)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning/pytorch/utilities/model_summary/model_summary.py",
+        "line": 346,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning_fabric/plugins/environments/lightning.py",
+        "line": 120,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning_fabric/strategies/launchers/subprocess_script.py",
+        "line": 40,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "In its default behavior, the main process in each node then spawns N-1 child processes via :func:`subprocess.Popen`,"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning_fabric/strategies/launchers/subprocess_script.py",
+        "line": 84,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.procs: list[subprocess.Popen] = []  # launched child subprocesses, does not include the launcher"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning_fabric/strategies/launchers/subprocess_script.py",
+        "line": 144,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(command, env=env_copy, cwd=cwd)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning_fabric/strategies/launchers/subprocess_script.py",
+        "line": 187,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _launch_process_observer(child_processes: list[subprocess.Popen]) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/lightning_fabric/strategies/launchers/subprocess_script.py",
+        "line": 193,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def __init__(self, main_pid: int, child_processes: list[subprocess.Popen], sleep_period: int = 5) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/hooks.py",
+        "line": 163,
+        "keyword_detected": "eval(",
+        "code_snippet": "def on_validation_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/hooks.py",
+        "line": 166,
+        "keyword_detected": "eval(",
+        "code_snippet": "The validation loop by default calls ``.eval()`` on the LightningModule before it starts. Override this hook"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/hooks.py",
+        "line": 170,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.trainer.model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/hooks.py",
+        "line": 183,
+        "keyword_detected": "eval(",
+        "code_snippet": "def on_test_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/hooks.py",
+        "line": 186,
+        "keyword_detected": "eval(",
+        "code_snippet": "The test loop by default calls ``.eval()`` on the LightningModule before it starts. Override this hook"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/hooks.py",
+        "line": 190,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.trainer.model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/hooks.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "def on_predict_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/hooks.py",
+        "line": 206,
+        "keyword_detected": "eval(",
+        "code_snippet": "The predict loop by default calls ``.eval()`` on the LightningModule before it starts. Override this hook"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/hooks.py",
+        "line": 210,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.trainer.model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/module.py",
+        "line": 1425,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/module.py",
+        "line": 1574,
+        "keyword_detected": "eval(",
+        "code_snippet": "torchscript_module = torch.jit.script(self.eval(), **kwargs)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/module.py",
+        "line": 1593,
+        "keyword_detected": "eval(",
+        "code_snippet": "torchscript_module = torch.jit.trace(func=self.eval(), example_inputs=example_inputs, **kwargs)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/module.py",
+        "line": 1681,
+        "keyword_detected": "eval(",
+        "code_snippet": "module=self.eval(),"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/module.py",
+        "line": 1802,
+        "keyword_detected": "eval(",
+        "code_snippet": "pretrained_model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/core/saving.py",
+        "line": 388,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(val)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/loops/evaluation_loop.py",
+        "line": 285,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._on_evaluation_model_eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/loops/evaluation_loop.py",
+        "line": 338,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _on_evaluation_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/loops/prediction_loop.py",
+        "line": 197,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._on_predict_model_eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/loops/prediction_loop.py",
+        "line": 348,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _on_predict_model_eval(self) -> None:"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/serve/servable_module_validator.py",
+        "line": 153,
+        "keyword_detected": "eval(",
+        "code_snippet": "servable_model.eval()"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/strategies/launchers/subprocess_script.py",
+        "line": 41,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "In its default behavior, the main process in each node then spawns N-1 child processes via :func:`subprocess.Popen`,"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/strategies/launchers/subprocess_script.py",
+        "line": 80,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.procs: list[subprocess.Popen] = []  # launched child subprocesses, does not include the launcher"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/strategies/launchers/subprocess_script.py",
+        "line": 148,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "new_process = subprocess.Popen(command, env=env_copy, cwd=cwd)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/utilities/argparse.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = literal_eval(val)"
+      },
+      {
+        "file": "ptl_266_temp-2.6.6/src/pytorch_lightning/utilities/model_summary/model_summary.py",
+        "line": 346,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "roiapp",
+    "checked_at": "2026-08-14T20:38:54.973603",
+    "download_url": "https://files.pythonhosted.org/packages/62/7e/73bd0f93f860a0863aaf7f66e668b01248a70a5718d6c4f96ee9738b3ab3/roiapp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "roiapp-0.1.0/movieslider/gui/movie_slider_widget.py",
+        "line": 485,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "roiapp-0.1.0/movieslider/main.py",
+        "line": 85,
+        "keyword_detected": "exec(",
+        "code_snippet": "sys.exit(app.exec())"
+      },
+      {
+        "file": "roiapp-0.1.0/roiapp/gui/dialogs.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "box.exec()"
+      },
+      {
+        "file": "roiapp-0.1.0/roiapp/main.py",
+        "line": 19,
+        "keyword_detected": "exec(",
+        "code_snippet": "sys.exit(app.exec())"
+      }
+    ]
+  },
+  {
+    "package_name": "nightsitter",
+    "checked_at": "2026-08-14T20:38:55.301301",
+    "download_url": "https://files.pythonhosted.org/packages/59/66/23977db9e0a6c4c60081cc7c832b830e1e5432716cc15a8ba383471e7df1/nightsitter-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nightsitter-0.1.0/src/nightsitter/runner.py",
+        "line": 27,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _signal_tree(proc: subprocess.Popen[bytes], sig: signal.Signals) -> None:"
+      },
+      {
+        "file": "nightsitter-0.1.0/src/nightsitter/runner.py",
+        "line": 64,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, start_new_session=(os.name == \"posix\"))"
+      },
+      {
+        "file": "nightsitter-0.1.0/tests/test_runner.py",
+        "line": 74,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"p=subprocess.Popen([sys.executable,'-c','import time;time.sleep(120)']);\""
+      }
+    ]
+  },
+  {
+    "package_name": "battest",
+    "checked_at": "2026-08-14T20:38:55.541556",
+    "download_url": "https://files.pythonhosted.org/packages/cc/34/9d149f2cef043d49d02aac8d3e162a7af59807bfecbd870ec86d9fd7ab3b/battest-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "battest-1.0.1/src/battest/engine.py",
+        "line": 85,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "``communicate`` matches :meth:`subprocess.Popen.communicate` so a real"
+      },
+      {
+        "file": "battest-1.0.1/src/battest/engine.py",
+        "line": 184,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _close_process_streams(process: subprocess.Popen[bytes]) -> None:"
+      },
+      {
+        "file": "battest-1.0.1/src/battest/engine.py",
+        "line": 224,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(  # pylint: disable=consider-using-with"
+      },
+      {
+        "file": "battest-1.0.1/tests/test_engine.py",
+        "line": 1160,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"battest.engine.subprocess.Popen\", OkProcess)"
+      },
+      {
+        "file": "battest-1.0.1/tests/test_engine.py",
+        "line": 1196,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"battest.engine.subprocess.Popen\", TimeoutProcess)"
+      },
+      {
+        "file": "battest-1.0.1/tests/test_engine.py",
+        "line": 1241,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"battest.engine.subprocess.Popen\", OkProcess)"
+      }
+    ]
+  },
+  {
+    "package_name": "gestaltdb",
+    "checked_at": "2026-08-14T20:38:55.600854",
+    "download_url": "https://files.pythonhosted.org/packages/f3/82/0749cd28530959fd80a5708ad01d69d690dedda45c83fddd431068937e57/gestaltdb-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gestaltdb-0.3.0/src/gestaltdb/cypher_parser.py",
+        "line": 349,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(literal_text)"
+      },
+      {
+        "file": "gestaltdb-0.3.0/src/gestaltdb/cypher_parser.py",
+        "line": 511,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(parts[0]), ast.literal_eval(parts[1])"
+      },
+      {
+        "file": "gestaltdb-0.3.0/src/gestaltdb/serializers.py",
+        "line": 224,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value.encode(\"ascii\"))"
+      }
+    ]
   }
 ]
