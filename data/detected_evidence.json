@@ -5682,5 +5682,149 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "readeverything",
+    "checked_at": "2026-08-15T22:58:27.939351",
+    "download_url": "https://files.pythonhosted.org/packages/2f/69/3284c7abd6d6805d24c6bbc757d1d6b26667724b4e3ba239d1b6959819a6/readeverything-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "readeverything-0.1.0/src/readeverything/adapters/binary_probe.py",
+        "line": 78,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "readeverything-0.1.0/src/readeverything/adapters/ffmpeg_audio.py",
+        "line": 61,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "readeverything-0.1.0/src/readeverything/adapters/ffmpeg_captions.py",
+        "line": 108,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "readeverything-0.1.0/src/readeverything/adapters/ffmpeg_clip.py",
+        "line": 69,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "readeverything-0.1.0/src/readeverything/adapters/ffmpeg_frames.py",
+        "line": 70,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "readeverything-0.1.0/src/readeverything/adapters/ffmpeg_frames.py",
+        "line": 122,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "readeverything-0.1.0/src/readeverything/adapters/ffprobe_streams.py",
+        "line": 103,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "readeverything-0.1.0/src/readeverything/adapters/rendition_codec.py",
+        "line": 95,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return ImageContent(base64.b64decode(raw[\"data\"]), raw[\"mime\"])"
+      },
+      {
+        "file": "readeverything-0.1.0/tests/integration/test_readme_example.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "await eval(code, namespace)"
+      },
+      {
+        "file": "readeverything-0.1.0/tests/unit/adapters/test_vision_langchain.py",
+        "line": 56,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(url.split(\",\", 1)[1]) == PNG"
+      }
+    ]
+  },
+  {
+    "package_name": "witness-cli",
+    "checked_at": "2026-08-15T22:58:28.112568",
+    "download_url": "https://files.pythonhosted.org/packages/0d/5a/469848fbd3b55e9aa4d4176c8bd8b783703439940912b3e5c528da8de4d3/witness_cli-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "witness_cli-0.2.0/src/witness/collectors/decode.py",
+        "line": 77,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(_clean_base64(blob), validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "JEvent",
+    "checked_at": "2026-08-15T22:58:28.337771",
+    "download_url": "https://files.pythonhosted.org/packages/2d/2c/1d4ada52870b0a665d8d017e86d5ac48b3f28655d986782880ce4753baa9/jevent-1.0.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jevent-1.0.3/src/JEvent/JEvent.py",
+        "line": 235,
+        "keyword_detected": "eval(",
+        "code_snippet": "binding_tuple = ast.literal_eval(bindings)"
+      }
+    ]
+  },
+  {
+    "package_name": "evennia-world-builder",
+    "checked_at": "2026-08-15T22:58:28.726446",
+    "download_url": "https://files.pythonhosted.org/packages/1c/2e/00213a9170bbef7b2ff543c4853e4e7193ea35912961633289632ff8975c/evennia_world_builder-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "evennia_world_builder-0.1.0/src/evennia_world_builder/builder.py",
+        "line": 469,
+        "keyword_detected": "eval(",
+        "code_snippet": "subscripts.append(ast.literal_eval(tree.slice))"
+      },
+      {
+        "file": "evennia_world_builder-0.1.0/src/evennia_world_builder/validator.py",
+        "line": 280,
+        "keyword_detected": "eval(",
+        "code_snippet": "ast.literal_eval(tree.slice)"
+      }
+    ]
+  },
+  {
+    "package_name": "pm4py-ucm",
+    "checked_at": "2026-08-15T22:58:29.003803",
+    "download_url": "https://files.pythonhosted.org/packages/dc/52/5a08b0a594aa20add8aed6d08f5997c4507f872b4817268df25e09a3dcf1/pm4py_ucm-0.7.10.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pm4py_ucm-0.7.10/pm4py_ucm/algo/scenario_traversal.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(_code, {\"__builtins__\": {}}, {\"V\": values})"
+      }
+    ]
+  },
+  {
+    "package_name": "paritex",
+    "checked_at": "2026-08-15T22:58:29.111180",
+    "download_url": "https://files.pythonhosted.org/packages/00/13/62e3bccb057fd2a5cb7f38301d7e2808e3ac50f6aa4a6e14f2f32ff75883/paritex-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "paritex-0.1.2/paritex/backends.py",
+        "line": 188,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
