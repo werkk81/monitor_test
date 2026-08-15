@@ -5654,5 +5654,33 @@
         "code_snippet": "self._model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "pm4py-ucm",
+    "checked_at": "2026-08-15T22:41:00.932540",
+    "download_url": "https://files.pythonhosted.org/packages/dc/52/5a08b0a594aa20add8aed6d08f5997c4507f872b4817268df25e09a3dcf1/pm4py_ucm-0.7.10.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pm4py_ucm-0.7.10/pm4py_ucm/algo/scenario_traversal.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(_code, {\"__builtins__\": {}}, {\"V\": values})"
+      }
+    ]
+  },
+  {
+    "package_name": "paritex",
+    "checked_at": "2026-08-15T22:41:01.068371",
+    "download_url": "https://files.pythonhosted.org/packages/00/13/62e3bccb057fd2a5cb7f38301d7e2808e3ac50f6aa4a6e14f2f32ff75883/paritex-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "paritex-0.1.2/paritex/backends.py",
+        "line": 188,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
