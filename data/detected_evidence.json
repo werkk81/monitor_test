@@ -5140,5 +5140,143 @@
         "code_snippet": "while ((m = re.exec(text)) !== null) {"
       }
     ]
+  },
+  {
+    "package_name": "scoop-latex-packer",
+    "checked_at": "2026-08-15T20:38:39.758712",
+    "download_url": "https://files.pythonhosted.org/packages/e3/3a/ed19fc79d18bf85cdd80ee70f3c8f41a375a80861ca4355008220b7b5b0b/scoop_latex_packer-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "scoop_latex_packer-0.1.0/src/scoop_latex_packer/validate.py",
+        "line": 103,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "skylam",
+    "checked_at": "2026-08-15T20:38:40.289239",
+    "download_url": "https://files.pythonhosted.org/packages/78/4f/0acf132c3da1db783d6819352b7170d9a4ac2190eca8b104c412546da035/skylam-5.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "skylam-5.2.0/mainline/skylam/console/for_llm/interface.py",
+        "line": 343,
+        "keyword_detected": "exec(",
+        "code_snippet": "def tool_cmdexec(command):"
+      },
+      {
+        "file": "skylam-5.2.0/mainline/skylam/core/model.py",
+        "line": 152,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "skylam-5.2.0/mainline/skylam/core/model.py",
+        "line": 164,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "skylam-5.2.0/mainline/skylam/core/model.py",
+        "line": 423,
+        "keyword_detected": "eval(",
+        "code_snippet": "stage1_model.eval()"
+      },
+      {
+        "file": "skylam-5.2.0/mainline/skylam/core/model.py",
+        "line": 429,
+        "keyword_detected": "eval(",
+        "code_snippet": "base_model.eval()"
+      },
+      {
+        "file": "skylam-5.2.0/mainline/skylam/core/model.py",
+        "line": 440,
+        "keyword_detected": "eval(",
+        "code_snippet": "stage2_model.eval()"
+      },
+      {
+        "file": "skylam-5.2.0/mainline/skylam/core/model.py",
+        "line": 581,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(candidate)"
+      },
+      {
+        "file": "skylam-5.2.0/mainline/skylam/kpcore/kdph.py",
+        "line": 576,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded_data = base64.b64decode(encoded_data)"
+      },
+      {
+        "file": "skylam-5.2.0/mainline/skylam/oslayer/background.py",
+        "line": 23,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(cmd, cwd=cwd, env=env, **kwargs)"
+      }
+    ]
+  },
+  {
+    "package_name": "modbus-connector",
+    "checked_at": "2026-08-15T20:38:40.432364",
+    "download_url": "https://files.pythonhosted.org/packages/64/8c/14f8fb632806435ef949d1611de78a8907becd8fac016f517e1e5007b681/modbus_connector-0.8.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "modbus_connector-0.8.2/src/modbus_connector/app.py",
+        "line": 29,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "modbus_connector-0.8.2/src/modbus_connector/connection_panel.py",
+        "line": 327,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "modbus_connector-0.8.2/src/modbus_connector/connection_panel.py",
+        "line": 375,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "modbus_connector-0.8.2/src/modbus_connector/registers_panel.py",
+        "line": 623,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "modbus_connector-0.8.2/src/modbus_connector/registers_panel.py",
+        "line": 630,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "modbus_connector-0.8.2/src/modbus_connector/registers_panel.py",
+        "line": 802,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "modbus_connector-0.8.2/src/modbus_connector/registers_panel.py",
+        "line": 869,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "modbus_connector-0.8.2/src/modbus_connector/registers_panel.py",
+        "line": 967,
+        "keyword_detected": "exec(",
+        "code_snippet": "menu.exec(self._table.viewport().mapToGlobal(pos))"
+      },
+      {
+        "file": "modbus_connector-0.8.2/src/modbus_connector/registers_panel.py",
+        "line": 1384,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QDialog.DialogCode.Accepted:"
+      }
+    ]
   }
 ]
