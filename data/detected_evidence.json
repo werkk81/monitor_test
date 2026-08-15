@@ -5278,5 +5278,47 @@
         "code_snippet": "if dialog.exec() != QDialog.DialogCode.Accepted:"
       }
     ]
+  },
+  {
+    "package_name": "beaverweb",
+    "checked_at": "2026-08-15T20:54:47.297020",
+    "download_url": "https://files.pythonhosted.org/packages/26/b9/91c0b8b1819842e60cfbe22f4ca6474aa21ca7ab36347551a700a81a2e79/beaverweb-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "beaverweb-0.1.0/beaver/app.py",
+        "line": 169,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:"
+      }
+    ]
+  },
+  {
+    "package_name": "webrender-worker",
+    "checked_at": "2026-08-15T20:54:47.342400",
+    "download_url": "https://files.pythonhosted.org/packages/a0/1d/45e8a414e6212aeede2d2b0cdb792d62e89e08a7a9628e6dae5437cb9467/webrender_worker-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "webrender_worker-0.1.0/webrender_worker/daemon.py",
+        "line": 108,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "text = reader.read(base64.b64decode(line[\"png\"]), line[\"prompt\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "nonebot-plugin-autospeak",
+    "checked_at": "2026-08-15T20:54:47.650348",
+    "download_url": "https://files.pythonhosted.org/packages/77/e6/f0e4c8126b07e3f9975d9e29ef35cadc40e6c4f3d31d3ebb2209354319b2/nonebot_plugin_autospeak-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nonebot_plugin_autospeak-0.1.2/nonebot_plugin_autospeak/images.py",
+        "line": 77,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(file[len(\"base64://\"):])"
+      }
+    ]
   }
 ]
