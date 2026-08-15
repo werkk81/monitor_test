@@ -4216,5 +4216,137 @@
         "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as dummy:"
       }
     ]
+  },
+  {
+    "package_name": "CrystOD",
+    "checked_at": "2026-08-15T18:44:35.493189",
+    "download_url": "https://files.pythonhosted.org/packages/9d/17/5625c12861499c6122440fe602a6a5259bf8e2d8ef97dae7e0e8a80aa9f3/crystod-0.3.6.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "crystod-0.3.6/crystod/mo_diagram.py",
+        "line": 1229,
+        "keyword_detected": "exec(",
+        "code_snippet": "while ((m = re.exec(text)) !== null) {"
+      },
+      {
+        "file": "crystod-0.3.6/crystod/mo_diagram.py",
+        "line": 1499,
+        "keyword_detected": "exec(",
+        "code_snippet": "while ((m = re.exec(text)) !== null) {"
+      }
+    ]
+  },
+  {
+    "package_name": "nestor-meaning",
+    "checked_at": "2026-08-15T18:44:35.861446",
+    "download_url": "https://files.pythonhosted.org/packages/6f/f2/ab27b14797feff4046d5186e806693ded2f99416516a05d771090a3da900/nestor_meaning-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nestor_meaning-0.3.0/nestor/frank.py",
+        "line": 146,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "nestor_meaning-0.3.0/nestor/frank.py",
+        "line": 247,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_audit_2026_07_31.py",
+        "line": 235,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs = [subprocess.Popen([sys.executable, \"-c\", code, str(ledger), str(n)],"
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_audit_2026_07_31.py",
+        "line": 360,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-c\", holder, str(ledger)],"
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_audit_against_jeles.py",
+        "line": 161,
+        "keyword_detected": "exec(",
+        "code_snippet": "for forbidden in (\"importlib\", \"exec(\", \"runpy\", \"__import__\"):"
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_cli.py",
+        "line": 42,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_cli.py",
+        "line": 380,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_cli.py",
+        "line": 404,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_cli.py",
+        "line": 428,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_docs.py",
+        "line": 318,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(demo, \"README quick start\", \"exec\"), {\"__name__\": \"__main__\"})"
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_feed_jeles_sources.py",
+        "line": 84,
+        "keyword_detected": "exec(",
+        "code_snippet": "for forbidden in (\"importlib\", \"exec(\", \"runpy\", \"__import__\"):"
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_feed_willow_constitution.py",
+        "line": 102,
+        "keyword_detected": "exec(",
+        "code_snippet": "for forbidden in (\"importlib\", \"exec(\", \"runpy\", \"__import__\"):"
+      },
+      {
+        "file": "nestor_meaning-0.3.0/tests/test_feed_willow_constitution.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "# `eval(` is banned only in its dangerous forms. `ast.literal_eval` parses a"
+      }
+    ]
+  },
+  {
+    "package_name": "relarena",
+    "checked_at": "2026-08-15T18:44:36.015620",
+    "download_url": "https://files.pythonhosted.org/packages/74/c8/3f9ed2bfecd4dcdbcb52c759b115da489fa6f72f05f3f236c39aa19dbc04/relarena-0.0.1a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "relarena-0.0.1a1/src/relarena/models/_shared/gnn/training.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "relarena-0.0.1a1/src/relarena/models/relgt/model.py",
+        "line": 177,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "relarena-0.0.1a1/src/relarena/models/rt/config.py",
+        "line": 641,
+        "keyword_detected": "eval(",
+        "code_snippet": "`rt.eval.evaluator` runs under `torch.inference_mode()` with `net.eval()`,"
+      }
+    ]
   }
 ]
