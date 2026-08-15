@@ -4112,5 +4112,109 @@
         "code_snippet": "decoded = base64.b64decode(result)"
       }
     ]
+  },
+  {
+    "package_name": "perforata",
+    "checked_at": "2026-08-15T18:08:48.661895",
+    "download_url": "https://files.pythonhosted.org/packages/aa/d0/fb450d06e1d3c6efb7970001b5b59460128ec045278976ac394345ab2201/perforata-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "perforata-0.3.0/src/perforata/fields.py",
+        "line": 275,
+        "keyword_detected": "eval(",
+        "code_snippet": "out = eval(self._code, {\"__builtins__\": {}}, ns)  # noqa: S307"
+      },
+      {
+        "file": "perforata-0.3.0/src/perforata/graph.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(name: str):"
+      },
+      {
+        "file": "perforata-0.3.0/src/perforata/graph.py",
+        "line": 106,
+        "keyword_detected": "eval(",
+        "code_snippet": "args = [_eval(dep) for dep in inputs]"
+      },
+      {
+        "file": "perforata-0.3.0/src/perforata/graph.py",
+        "line": 112,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _eval(output)"
+      }
+    ]
+  },
+  {
+    "package_name": "relational-transformer",
+    "checked_at": "2026-08-15T18:08:48.704885",
+    "download_url": "https://files.pythonhosted.org/packages/4f/42/070417ee12df7ed76c86649cff7c5e1de8effc0cf8de00f0beedc841b6a3/relational_transformer-1.8.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "relational_transformer-1.8.0/src/rt/eval/evaluator.py",
+        "line": 160,
+        "keyword_detected": "eval(",
+        "code_snippet": "net.eval()"
+      },
+      {
+        "file": "relational_transformer-1.8.0/src/rt/eval/evaluator.py",
+        "line": 209,
+        "keyword_detected": "eval(",
+        "code_snippet": "net.eval()"
+      },
+      {
+        "file": "relational_transformer-1.8.0/src/rt/train/_train.py",
+        "line": 1087,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_eval(step):"
+      },
+      {
+        "file": "relational_transformer-1.8.0/src/rt/train/_train.py",
+        "line": 1234,
+        "keyword_detected": "eval(",
+        "code_snippet": "stop_early = run_eval(step)"
+      },
+      {
+        "file": "relational_transformer-1.8.0/src/rt/train/_train.py",
+        "line": 1403,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(step)"
+      }
+    ]
+  },
+  {
+    "package_name": "elfes",
+    "checked_at": "2026-08-15T18:08:48.773341",
+    "download_url": "https://files.pythonhosted.org/packages/cc/83/3175cbaa75cc48f427f627b1f4a1cae3e1cb7e498591b413b9fa071d7728/elfes-0.0.1a0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "elfes-0.0.1a0/src/elfes/io/pyscf/reader.py",
+        "line": 111,
+        "keyword_detected": "eval(",
+        "code_snippet": "specification = ast.literal_eval(serialized)"
+      }
+    ]
+  },
+  {
+    "package_name": "hotkoffee",
+    "checked_at": "2026-08-15T18:08:48.799777",
+    "download_url": "https://files.pythonhosted.org/packages/0c/5e/c1f960c7de11ad9d893c59c6caddc09d79741aef8bae75411caf86925fec/hotkoffee-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hotkoffee-0.1.0/hotkoffee/renderers/web/server.py",
+        "line": 21,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "hotkoffee-0.1.0/tests/test_run_auto_port.py",
+        "line": 10,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as dummy:"
+      }
+    ]
   }
 ]
