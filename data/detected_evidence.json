@@ -5320,5 +5320,59 @@
         "code_snippet": "data = base64.b64decode(file[len(\"base64://\"):])"
       }
     ]
+  },
+  {
+    "package_name": "revela",
+    "checked_at": "2026-08-15T21:09:07.537349",
+    "download_url": "https://files.pythonhosted.org/packages/a9/dc/49cd0757ec9f35fb409d23562b24c24cabf02c84708b66aeff2794b32548/revela-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "revela-0.1.0/revela/run.py",
+        "line": 570,
+        "keyword_detected": "eval(",
+        "code_snippet": "for (int i = 0; i < 4; i++) { top->clk = 0; top->eval(); top->clk = 1; top->eval(); }"
+      },
+      {
+        "file": "revela-0.1.0/revela/run.py",
+        "line": 574,
+        "keyword_detected": "eval(",
+        "code_snippet": "top->clk = 0; top->eval();"
+      },
+      {
+        "file": "revela-0.1.0/revela/run.py",
+        "line": 577,
+        "keyword_detected": "eval(",
+        "code_snippet": "top->clk = 1; top->eval();"
+      }
+    ]
+  },
+  {
+    "package_name": "beaverweb",
+    "checked_at": "2026-08-15T21:09:07.706718",
+    "download_url": "https://files.pythonhosted.org/packages/26/b9/91c0b8b1819842e60cfbe22f4ca6474aa21ca7ab36347551a700a81a2e79/beaverweb-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "beaverweb-0.1.0/beaver/app.py",
+        "line": 169,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:"
+      }
+    ]
+  },
+  {
+    "package_name": "webrender-worker",
+    "checked_at": "2026-08-15T21:09:07.872724",
+    "download_url": "https://files.pythonhosted.org/packages/a0/1d/45e8a414e6212aeede2d2b0cdb792d62e89e08a7a9628e6dae5437cb9467/webrender_worker-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "webrender_worker-0.1.0/webrender_worker/daemon.py",
+        "line": 108,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "text = reader.read(base64.b64decode(line[\"png\"]), line[\"prompt\"])"
+      }
+    ]
   }
 ]
