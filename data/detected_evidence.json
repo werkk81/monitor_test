@@ -5060,5 +5060,85 @@
         "code_snippet": "monkeypatch.setattr(\"helios.cli.subprocess.Popen\", lambda *a, **k: _Proc())"
       }
     ]
+  },
+  {
+    "package_name": "funes-core",
+    "checked_at": "2026-08-15T20:10:12.302174",
+    "download_url": "https://files.pythonhosted.org/packages/bb/8f/76c1ac13514f924a8e1b11bd9452e73bbcb9c08bb44169c16feb227415dd/funes_core-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "funes_core-0.1.0/src/funes/interface/application.py",
+        "line": 47,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      }
+    ]
+  },
+  {
+    "package_name": "qtwist",
+    "checked_at": "2026-08-15T20:10:12.657931",
+    "download_url": "https://files.pythonhosted.org/packages/ca/fb/136fee782c244ebcd995c95135724afa5578dd10658aa51e1f9fb9d83842/qtwist-5.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qtwist-5.0.0/qtwist_core/certification/neural_features.py",
+        "line": 340,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "minimol-onnx",
+    "checked_at": "2026-08-15T20:10:14.604866",
+    "download_url": "https://files.pythonhosted.org/packages/42/10/9fe06029b90b27ab1d3864e41575660723ffc7131dd75640a76b97c03481/minimol_onnx-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "minimol_onnx-0.1.1/export/export_onnx.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "backbone = MiniMolBackbone(network).eval()"
+      },
+      {
+        "file": "minimol_onnx-0.1.1/export/featurize_ref.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Proper .eval(): the Laplacian PE encoder sign-flips in training mode."
+      },
+      {
+        "file": "minimol_onnx-0.1.1/export/featurize_ref.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "net.eval()"
+      },
+      {
+        "file": "minimol_onnx-0.1.1/export/test_backbone.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "backbone = MiniMolBackbone(model.predictor.network).eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "CrystOD",
+    "checked_at": "2026-08-15T20:10:14.928762",
+    "download_url": "https://files.pythonhosted.org/packages/9d/17/5625c12861499c6122440fe602a6a5259bf8e2d8ef97dae7e0e8a80aa9f3/crystod-0.3.6.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "crystod-0.3.6/crystod/mo_diagram.py",
+        "line": 1229,
+        "keyword_detected": "exec(",
+        "code_snippet": "while ((m = re.exec(text)) !== null) {"
+      },
+      {
+        "file": "crystod-0.3.6/crystod/mo_diagram.py",
+        "line": 1499,
+        "keyword_detected": "exec(",
+        "code_snippet": "while ((m = re.exec(text)) !== null) {"
+      }
+    ]
   }
 ]
