@@ -4738,5 +4738,131 @@
         "code_snippet": "#             res = _fitpack._bspleval(xk[:-1], xk, cvals, order, m)"
       }
     ]
+  },
+  {
+    "package_name": "catenna",
+    "checked_at": "2026-08-15T19:43:32.405296",
+    "download_url": "https://files.pythonhosted.org/packages/6c/d7/856f450453825b7e1ab2ab7d70127659fd174f47f3b105a42e116a655a64/catenna-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "catenna-1.0.0/agent_pipeline/controller.py",
+        "line": 435,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/real_runner.py",
+        "line": 217,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_controller_reliability.py",
+        "line": 1612,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "original_popen = controller.subprocess.Popen"
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_controller_reliability.py",
+        "line": 1615,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "controller.subprocess.Popen = FakePopen"
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_real_runner.py",
+        "line": 233,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"child = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(60)'])\\n\""
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_tail.py",
+        "line": 61,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-c\", \"pass\"])"
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_usage.py",
+        "line": 194,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs.append(subprocess.Popen([sys.executable, \"-c\", code]))"
+      }
+    ]
+  },
+  {
+    "package_name": "crowe-argo",
+    "checked_at": "2026-08-15T19:43:32.591483",
+    "download_url": "https://files.pythonhosted.org/packages/b4/96/021d3b2baf5778f9f10fc07c7742eadcffd48554d936a509f91861d92723/crowe_argo-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "crowe_argo-0.1.0/tests/test_wheel.py",
+        "line": 288,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "payload = base64.b64decode(fav.split(\":\", 1)[1].rstrip(\"\\\\a\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "helios-audit",
+    "checked_at": "2026-08-15T19:43:32.654862",
+    "download_url": "https://files.pythonhosted.org/packages/6b/22/100a3dfd25dbde26da1a93f2c80b0ff38e1395f012762143b8f8ed1657ed/helios_audit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "helios_audit-0.1.0/src/helios/cli.py",
+        "line": 469,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/audit_record.py",
+        "line": 91,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "signature = base64.b64decode(self.signature.signature_b64.encode(\"utf-8\"))"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = session.exec(select(AuditRecordRow)).all()"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 115,
+        "keyword_detected": "exec(",
+        "code_snippet": "existing = session.exec("
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = session.exec(statement).first()"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 158,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = session.exec(statement).all()"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 177,
+        "keyword_detected": "exec(",
+        "code_snippet": "return len(list(session.exec(statement).all()))"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 183,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = session.exec(statement).first()"
+      },
+      {
+        "file": "helios_audit-0.1.0/tests/test_cli_and_routes.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"helios.cli.subprocess.Popen\", lambda *a, **k: _Proc())"
+      }
+    ]
   }
 ]
