@@ -4864,5 +4864,201 @@
         "code_snippet": "monkeypatch.setattr(\"helios.cli.subprocess.Popen\", lambda *a, **k: _Proc())"
       }
     ]
+  },
+  {
+    "package_name": "dxrk",
+    "checked_at": "2026-08-15T19:56:12.222876",
+    "download_url": "https://files.pythonhosted.org/packages/ed/d8/473d97eab02c8c77717f78b232d67ae98dc548a915ed3994c39561f9fa91/dxrk-4.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dxrk-4.0.0/dxrk/mcp/__init__.py",
+        "line": 24,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "dxrk-4.0.0/dxrk/plugin.py",
+        "line": 642,
+        "keyword_detected": "exec(",
+        "code_snippet": "def check_hook_exec(self, plugin_id: str, point: HookPoint) -> tuple[bool, str]:"
+      },
+      {
+        "file": "dxrk-4.0.0/dxrk/utils/image.py",
+        "line": 418,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(s)"
+      },
+      {
+        "file": "dxrk-4.0.0/dxrk/utils/image.py",
+        "line": 422,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(s)"
+      },
+      {
+        "file": "dxrk-4.0.0/dxrk/vault/__init__.py",
+        "line": 142,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(data)"
+      },
+      {
+        "file": "dxrk-4.0.0/tests/test_plugin.py",
+        "line": 441,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_check_hook_exec(self):"
+      },
+      {
+        "file": "dxrk-4.0.0/tests/test_plugin.py",
+        "line": 444,
+        "keyword_detected": "exec(",
+        "code_snippet": "allowed, reason = pm.check_hook_exec(\"plug-a\", HookBeforeLoad)"
+      },
+      {
+        "file": "dxrk-4.0.0/tests/test_plugin.py",
+        "line": 448,
+        "keyword_detected": "exec(",
+        "code_snippet": "allowed, reason = pm.check_hook_exec(\"plug-a\", HookAfterToolExec)"
+      }
+    ]
+  },
+  {
+    "package_name": "skeptic-cli",
+    "checked_at": "2026-08-15T19:56:12.321849",
+    "download_url": "https://files.pythonhosted.org/packages/07/ff/116fc36dfecf2e9f2d58701b6d042365dcc6e495f5c2c86f7600baced6bd/skeptic_cli-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "skeptic_cli-0.5.0/src/skeptic/verifier/models.py",
+        "line": 7,
+        "keyword_detected": "exec(",
+        "code_snippet": "with the user before building): generating and exec()'ing arbitrary"
+      }
+    ]
+  },
+  {
+    "package_name": "catenna",
+    "checked_at": "2026-08-15T19:56:12.498520",
+    "download_url": "https://files.pythonhosted.org/packages/6c/d7/856f450453825b7e1ab2ab7d70127659fd174f47f3b105a42e116a655a64/catenna-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "catenna-1.0.0/agent_pipeline/controller.py",
+        "line": 435,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/real_runner.py",
+        "line": 217,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_controller_reliability.py",
+        "line": 1612,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "original_popen = controller.subprocess.Popen"
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_controller_reliability.py",
+        "line": 1615,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "controller.subprocess.Popen = FakePopen"
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_real_runner.py",
+        "line": 233,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"child = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(60)'])\\n\""
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_tail.py",
+        "line": 61,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-c\", \"pass\"])"
+      },
+      {
+        "file": "catenna-1.0.0/agent_pipeline/tests/test_usage.py",
+        "line": 194,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs.append(subprocess.Popen([sys.executable, \"-c\", code]))"
+      }
+    ]
+  },
+  {
+    "package_name": "crowe-argo",
+    "checked_at": "2026-08-15T19:56:12.605754",
+    "download_url": "https://files.pythonhosted.org/packages/b4/96/021d3b2baf5778f9f10fc07c7742eadcffd48554d936a509f91861d92723/crowe_argo-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "crowe_argo-0.1.0/tests/test_wheel.py",
+        "line": 288,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "payload = base64.b64decode(fav.split(\":\", 1)[1].rstrip(\"\\\\a\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "helios-audit",
+    "checked_at": "2026-08-15T19:56:12.740357",
+    "download_url": "https://files.pythonhosted.org/packages/6b/22/100a3dfd25dbde26da1a93f2c80b0ff38e1395f012762143b8f8ed1657ed/helios_audit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "helios_audit-0.1.0/src/helios/cli.py",
+        "line": 469,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/audit_record.py",
+        "line": 91,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "signature = base64.b64decode(self.signature.signature_b64.encode(\"utf-8\"))"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = session.exec(select(AuditRecordRow)).all()"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 115,
+        "keyword_detected": "exec(",
+        "code_snippet": "existing = session.exec("
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = session.exec(statement).first()"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 158,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = session.exec(statement).all()"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 177,
+        "keyword_detected": "exec(",
+        "code_snippet": "return len(list(session.exec(statement).all()))"
+      },
+      {
+        "file": "helios_audit-0.1.0/src/helios/core/storage.py",
+        "line": 183,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = session.exec(statement).first()"
+      },
+      {
+        "file": "helios_audit-0.1.0/tests/test_cli_and_routes.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"helios.cli.subprocess.Popen\", lambda *a, **k: _Proc())"
+      }
+    ]
   }
 ]
