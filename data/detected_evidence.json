@@ -4348,5 +4348,83 @@
         "code_snippet": "`rt.eval.evaluator` runs under `torch.inference_mode()` with `net.eval()`,"
       }
     ]
+  },
+  {
+    "package_name": "py3wafo",
+    "checked_at": "2026-08-15T19:02:46.544065",
+    "download_url": "https://files.pythonhosted.org/packages/1a/55/e3c40387f386ef62c156b7d05b716f3a6c8ac09b44b574e407bb62c77aab/py3wafo-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(t, c):"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 56,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.eval(t, d_c)"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(t, c):"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.eval(t, c)"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 408,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = basis.eval([-1, 1], solution[0])"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/interpolate.py",
+        "line": 460,
+        "keyword_detected": "eval(",
+        "code_snippet": "#             res = _fitpack._bspleval(xk[:-1], xk, cvals, order, m)"
+      }
+    ]
+  },
+  {
+    "package_name": "wre-runtime",
+    "checked_at": "2026-08-15T19:02:46.684076",
+    "download_url": "https://files.pythonhosted.org/packages/50/8b/806ef208e35fd76fe9ea21ec304b7927576aff99abc0b2ed7cbc840c74b0/wre_runtime-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wre_runtime-0.2.1/wre_runtime/sidecar.py",
+        "line": 25,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: \"subprocess.Popen[bytes]\","
+      },
+      {
+        "file": "wre_runtime-0.2.1/wre_runtime/sidecar.py",
+        "line": 369,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "cjm-transcript-correction-qt",
+    "checked_at": "2026-08-15T19:02:46.847179",
+    "download_url": "https://files.pythonhosted.org/packages/64/8b/0c41badbd46ab907953dd07934f4900e2ff1b3daf688518e58e694bde97b/cjm_transcript_correction_qt-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cjm_transcript_correction_qt-0.0.1/cjm_transcript_correction_qt/cli.py",
+        "line": 35,
+        "keyword_detected": "exec(",
+        "code_snippet": "qapp.exec()"
+      }
+    ]
   }
 ]
