@@ -5628,5 +5628,31 @@
         "code_snippet": "subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "axon-ai-agent",
+    "checked_at": "2026-08-15T22:18:47.769750",
+    "download_url": "https://files.pythonhosted.org/packages/31/71/ef160e92f90770af09ae59c2acb820be16af53b018e3dbaa01c4a07e43f8/axon_ai_agent-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "axon_ai_agent-0.1.0/src/axon/ingestion/torch_embedding_backend.py",
+        "line": 78,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._model.eval()"
+      },
+      {
+        "file": "axon_ai_agent-0.1.0/src/axon/llm/gemini_adapter.py",
+        "line": 110,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "part[\"thought_signature\"] = base64.b64decode(thought_signature)"
+      },
+      {
+        "file": "axon_ai_agent-0.1.0/src/axon/retrieval/torch_backend.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._model.eval()"
+      }
+    ]
   }
 ]
