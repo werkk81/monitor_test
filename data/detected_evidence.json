@@ -5518,5 +5518,115 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "stayput",
+    "checked_at": "2026-08-15T21:59:29.513630",
+    "download_url": "https://files.pythonhosted.org/packages/65/e4/ca70caba18913ce29595cdb2e4e710c9591bc738a94a4352231748cbc596/stayput-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stayput-0.1.0/tests/test_check.py",
+        "line": 22,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _write_exec(path: Path, source: str) -> Path:"
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_check.py",
+        "line": 228,
+        "keyword_detected": "exec(",
+        "code_snippet": "fake = _write_exec("
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_locus_failclosed.py",
+        "line": 12,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _write_exec(path: Path, source: str) -> Path:"
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_locus_failclosed.py",
+        "line": 78,
+        "keyword_detected": "exec(",
+        "code_snippet": "fake = _write_exec("
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_locus_failclosed.py",
+        "line": 93,
+        "keyword_detected": "exec(",
+        "code_snippet": "fake = _write_exec("
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_paths_failclosed.py",
+        "line": 20,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _write_exec(path: Path, source: str) -> Path:"
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_paths_failclosed.py",
+        "line": 129,
+        "keyword_detected": "exec(",
+        "code_snippet": "fake = _write_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "gpuqu",
+    "checked_at": "2026-08-15T21:59:29.751336",
+    "download_url": "https://files.pythonhosted.org/packages/77/31/f4a52729b74963290c32eca4cfa10e378c8c56f06dff7225f9e08323d5de/gpuqu-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gpuqu-0.1.2/gpuq/scheduler.py",
+        "line": 70,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._procs: dict[str, subprocess.Popen] = {}"
+      },
+      {
+        "file": "gpuqu-0.1.2/gpuq/scheduler.py",
+        "line": 189,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "crs-zone-toolkit",
+    "checked_at": "2026-08-15T21:59:30.337777",
+    "download_url": "https://files.pythonhosted.org/packages/18/50/97e5d4fa149bd1b1be7d4bbfe8a0c7b773225d9f712a6f79ef254ba29551/crs_zone_toolkit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "crs_zone_toolkit-0.1.0/tests/conftest.py",
+        "line": 244,
+        "keyword_detected": "eval(",
+        "code_snippet": "def tp22_croissant_a_cheval() -> gpd.GeoDataFrame:"
+      },
+      {
+        "file": "crs_zone_toolkit-0.1.0/tests/test_report_carte.py",
+        "line": 18,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(uri.split(\",\", 1)[1])"
+      }
+    ]
+  },
+  {
+    "package_name": "arcaeon-once",
+    "checked_at": "2026-08-15T21:59:30.418573",
+    "download_url": "https://files.pythonhosted.org/packages/c6/71/6b11032884460614352e3c9bc61ace0b90bb2e713af0e5558ce1ffe799d3/arcaeon_once-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "arcaeon_once-0.1.0/test_concurrency.py",
+        "line": 58,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "arcaeon_once-0.1.0/test_concurrency.py",
+        "line": 207,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
   }
 ]
