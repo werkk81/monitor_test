@@ -4426,5 +4426,317 @@
         "code_snippet": "qapp.exec()"
       }
     ]
+  },
+  {
+    "package_name": "caether",
+    "checked_at": "2026-08-15T19:28:37.674164",
+    "download_url": "https://files.pythonhosted.org/packages/73/22/4a4230e0263acfa9aa1d344ce1be2241a92ebcb1bf8a2693cc06941cdaeb/caether-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "caether-1.0.1/caether/image/_types.py",
+        "line": 34,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(self.b64_json)"
+      },
+      {
+        "file": "caether-1.0.1/caether/voice/_voice.py",
+        "line": 414,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "yield base64.b64decode(event[\"delta\"])"
+      },
+      {
+        "file": "caether-1.0.1/caether/voice/_voice.py",
+        "line": 461,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "yield base64.b64decode(event[\"delta\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "wger-mcp",
+    "checked_at": "2026-08-15T19:28:37.766077",
+    "download_url": "https://files.pythonhosted.org/packages/9e/0a/50ea186348cb04a45286337805b01025d5f5ea6d9da7a0ab2ca2463dd7a8/wger_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wger_mcp-0.1.0/tests/test_stdio.py",
+        "line": 360,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "agent-substrate",
+    "checked_at": "2026-08-15T19:28:37.893039",
+    "download_url": "https://files.pythonhosted.org/packages/73/b9/a27261a3c691090716737e0bf2c39ff1f47e8202aa452b4b594f41160333/agent_substrate-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/agents/safety/normalize.py",
+        "line": 114,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(candidate, validate=True)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/history/durable_history.py",
+        "line": 73,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(val[\"__bytes_b64__\"])"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/knowledge/backends/local.py",
+        "line": 554,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/code_risk.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Bare builtins: eval(...), exec(...), open(...)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/code_risk.py",
+        "line": 118,
+        "keyword_detected": "exec(",
+        "code_snippet": "# Bare builtins: eval(...), exec(...), open(...)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/runtimes/bubblewrap.py",
+        "line": 178,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/runtimes/inprocess.py",
+        "line": 61,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(spec.code or \"\", \"<agent-code>\", \"exec\"), namespace)  # noqa: S102"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/runtimes/inprocess.py",
+        "line": 80,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/runtimes/staged.py",
+        "line": 169,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(encoded)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/sandbox_response.py",
+        "line": 87,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ImageBlock(data=base64.b64decode(content_b64), media_type=mime)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/sandbox_runtime.py",
+        "line": 141,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compiled, namespace)  # noqa: S102"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/sandbox_runtime.py",
+        "line": 179,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(request.content_base64, validate=True)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/code_interpreter/code_interpreter/sandbox_runtime.py",
+        "line": 276,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(body.content_base64)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/compute/calculator.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "def safe_eval(expression: str) -> float:"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/compute/calculator.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = safe_eval(expression)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/capabilities/tools/web/surfer.py",
+        "line": 313,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data=base64.b64decode(result[\"screenshot\"]),"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/cli.py",
+        "line": 140,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/integrations/llm/encoders/gemini.py",
+        "line": 62,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(parts[1]) if len(parts) > 1 else b\"\""
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/integrations/tools/mcp/tool.py",
+        "line": 89,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data=base64.b64decode(item.data), media_type=mime"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/integrations/tools/mcp/tool.py",
+        "line": 112,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data=base64.b64decode(str(item.get(\"data\", \"\"))),"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/serving/services/extraction/routes.py",
+        "line": 73,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(body.content_base64, validate=True)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/serving/services/extraction/routes.py",
+        "line": 157,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(body.image_base64, validate=True)"
+      },
+      {
+        "file": "agent_substrate-0.1.0/src/substrate/serving/services/tool_executor/routes.py",
+        "line": 82,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(raw_content)"
+      }
+    ]
+  },
+  {
+    "package_name": "proctrace",
+    "checked_at": "2026-08-15T19:28:37.922582",
+    "download_url": "https://files.pythonhosted.org/packages/0d/d6/957a0dea4fa536e4f2d1fa72a444e2bddb1a1d35d037d9f1b9e901307981/proctrace-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "proctrace-0.1.0/guide-codesnippet/06_ipc_tracing.py",
+        "line": 73,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_sock, client_sock = socket.socketpair(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "proctrace-0.1.0/proctrace/cli.py",
+        "line": 24,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(args.command)"
+      },
+      {
+        "file": "proctrace-0.1.0/proctrace/ipc.py",
+        "line": 107,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def __init__(self, sock: _socket.socket, stats: Any) -> None:"
+      },
+      {
+        "file": "proctrace-0.1.0/proctrace/ipc.py",
+        "line": 174,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock: _socket.socket,"
+      },
+      {
+        "file": "proctrace-0.1.0/proctrace/logger.py",
+        "line": 20,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "output: str | Path | _socket.socket = \"proctrace.log\","
+      },
+      {
+        "file": "proctrace-0.1.0/proctrace/logger.py",
+        "line": 27,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._socket: _socket.socket | None = None"
+      },
+      {
+        "file": "proctrace-0.1.0/proctrace/logger.py",
+        "line": 30,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "if isinstance(output, _socket.socket):"
+      },
+      {
+        "file": "proctrace-0.1.0/tests/test_ipc.py",
+        "line": 69,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s1, s2 = socket.socketpair()"
+      },
+      {
+        "file": "proctrace-0.1.0/tests/test_logger.py",
+        "line": 105,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "left, right = socket.socketpair()"
+      }
+    ]
+  },
+  {
+    "package_name": "pystreamerbot",
+    "checked_at": "2026-08-15T19:28:37.945291",
+    "download_url": "https://files.pythonhosted.org/packages/f5/4e/6f844e04d40e62587f7504a8ab361dae369f0d28296ffdb6cd0ab1021eab/pystreamerbot-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pystreamerbot-0.1.0/pystreamerbot/client.py",
+        "line": 406,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(msg)"
+      },
+      {
+        "file": "pystreamerbot-0.1.0/pystreamerbot/client.py",
+        "line": 414,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, msg: dict[str, Any]) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "py3wafo",
+    "checked_at": "2026-08-15T19:28:38.111978",
+    "download_url": "https://files.pythonhosted.org/packages/1a/55/e3c40387f386ef62c156b7d05b716f3a6c8ac09b44b574e407bb62c77aab/py3wafo-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(t, c):"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 56,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.eval(t, d_c)"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(t, c):"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.eval(t, c)"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/integrate_oscillating.py",
+        "line": 408,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = basis.eval([-1, 1], solution[0])"
+      },
+      {
+        "file": "py3wafo-0.4.0/src/wafo/interpolate.py",
+        "line": 460,
+        "keyword_detected": "eval(",
+        "code_snippet": "#             res = _fitpack._bspleval(xk[:-1], xk, cvals, order, m)"
+      }
+    ]
   }
 ]
