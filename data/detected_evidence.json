@@ -5434,5 +5434,89 @@
         "code_snippet": "subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "geninit",
+    "checked_at": "2026-08-15T21:49:37.457426",
+    "download_url": "https://files.pythonhosted.org/packages/de/3c/c0c930a21f7d907476f9f178e2960afbec69542a24b237a30558062352f3/geninit-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "geninit-0.1.3/src/geninit/generator.py",
+        "line": 428,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(value_node)"
+      }
+    ]
+  },
+  {
+    "package_name": "stayput",
+    "checked_at": "2026-08-15T21:49:37.495886",
+    "download_url": "https://files.pythonhosted.org/packages/65/e4/ca70caba18913ce29595cdb2e4e710c9591bc738a94a4352231748cbc596/stayput-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stayput-0.1.0/tests/test_check.py",
+        "line": 22,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _write_exec(path: Path, source: str) -> Path:"
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_check.py",
+        "line": 228,
+        "keyword_detected": "exec(",
+        "code_snippet": "fake = _write_exec("
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_locus_failclosed.py",
+        "line": 12,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _write_exec(path: Path, source: str) -> Path:"
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_locus_failclosed.py",
+        "line": 78,
+        "keyword_detected": "exec(",
+        "code_snippet": "fake = _write_exec("
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_locus_failclosed.py",
+        "line": 93,
+        "keyword_detected": "exec(",
+        "code_snippet": "fake = _write_exec("
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_paths_failclosed.py",
+        "line": 20,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _write_exec(path: Path, source: str) -> Path:"
+      },
+      {
+        "file": "stayput-0.1.0/tests/test_paths_failclosed.py",
+        "line": 129,
+        "keyword_detected": "exec(",
+        "code_snippet": "fake = _write_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "gpuqu",
+    "checked_at": "2026-08-15T21:49:37.544918",
+    "download_url": "https://files.pythonhosted.org/packages/77/31/f4a52729b74963290c32eca4cfa10e378c8c56f06dff7225f9e08323d5de/gpuqu-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gpuqu-0.1.2/gpuq/scheduler.py",
+        "line": 70,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._procs: dict[str, subprocess.Popen] = {}"
+      },
+      {
+        "file": "gpuqu-0.1.2/gpuq/scheduler.py",
+        "line": 189,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
