@@ -6416,5 +6416,143 @@
         "code_snippet": "with subprocess.Popen(config.shell + [command]) as process:"
       }
     ]
+  },
+  {
+    "package_name": "ragassure",
+    "checked_at": "2026-08-16T19:55:32.270219",
+    "download_url": "https://files.pythonhosted.org/packages/db/29/675f94272c393366569c5271f462726ede821be60f4bfb37f0524879da48/ragassure-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ragassure-0.1.0/examples/http_adapter.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "# result = run_eval(cases, system, k=5)"
+      },
+      {
+        "file": "ragassure-0.1.0/src/ragassure/cli.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_eval(cases, MockRAG(args.mock), k=args.k)"
+      },
+      {
+        "file": "ragassure-0.1.0/src/ragassure/evals/runner.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_eval(cases: list[GoldenCase], system: RAGSystem, k: int = 5) -> RunResult:"
+      },
+      {
+        "file": "ragassure-0.1.0/tests/test_runner.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_eval(CASES[:1], StubRAG())"
+      },
+      {
+        "file": "ragassure-0.1.0/tests/test_runner.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_eval(negative, LeakyRAG())"
+      },
+      {
+        "file": "ragassure-0.1.0/tests/test_runner.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_eval([case], system)"
+      },
+      {
+        "file": "ragassure-0.1.0/tests/test_runner.py",
+        "line": 94,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_eval([case], ContractRAG(leak=True))"
+      },
+      {
+        "file": "ragassure-0.1.0/tests/test_runner.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_eval([case], ContractRAG())"
+      },
+      {
+        "file": "ragassure-0.1.0/tests/test_runner.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_eval([case], ContractRAG(leak=True), k=5)"
+      }
+    ]
+  },
+  {
+    "package_name": "research-assistant-xf",
+    "checked_at": "2026-08-16T19:55:32.508584",
+    "download_url": "https://files.pythonhosted.org/packages/82/9a/cedd7d681fc1323e3acc2406ec0482c2c5eb688e942a4b37f8a0448047df/research_assistant_xf-1.7.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "research_assistant_xf-1.7.0/_subprocess_fix.py",
+        "line": 2,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "P0-2: Restore subprocess.Popen as a class to fix asyncio."
+      },
+      {
+        "file": "research_assistant_xf-1.7.0/_subprocess_fix.py",
+        "line": 4,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Root cause: discipline_enforcer replaces subprocess.Popen with a function"
+      },
+      {
+        "file": "research_assistant_xf-1.7.0/_subprocess_fix.py",
+        "line": 20,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"\"\"Replace the monkey-patched subprocess.Popen function with a proper class."
+      },
+      {
+        "file": "research_assistant_xf-1.7.0/_subprocess_fix.py",
+        "line": 122,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen = _PopenClass"
+      },
+      {
+        "file": "research_assistant_xf-1.7.0/metacognition/unified_config.py",
+        "line": 319,
+        "keyword_detected": "eval(",
+        "code_snippet": "valid = eval(config_entry.validation, {\"__builtins__\": {}}, {\"v\": config_entry.value})"
+      },
+      {
+        "file": "research_assistant_xf-1.7.0/methods/forecasting.py",
+        "line": 357,
+        "keyword_detected": "eval(",
+        "code_snippet": "def rolling_forecast_eval(series: np.ndarray, window: int = None,"
+      }
+    ]
+  },
+  {
+    "package_name": "corparius",
+    "checked_at": "2026-08-16T19:55:32.784432",
+    "download_url": "https://files.pythonhosted.org/packages/47/19/454107ef2ebeabb0c65ae5da857ceef37ce33687464b521eb77c369426d9/corparius-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "corparius-0.5.0/corparius/api/handlers.py",
+        "line": 443,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(str(ctx.body.get(\"data\", \"\")), validate=True)"
+      },
+      {
+        "file": "corparius-0.5.0/corparius/api/handlers.py",
+        "line": 1255,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(str(ctx.body.get(\"data\", \"\")), validate=True)"
+      },
+      {
+        "file": "corparius-0.5.0/corparius/api/server.py",
+        "line": 481,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "corparius-0.5.0/corparius/kernel/proc.py",
+        "line": 174,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
