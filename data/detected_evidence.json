@@ -6320,5 +6320,101 @@
         "code_snippet": "with subprocess.Popen(config.shell + [command]) as process:"
       }
     ]
+  },
+  {
+    "package_name": "corparius",
+    "checked_at": "2026-08-16T19:42:34.792652",
+    "download_url": "https://files.pythonhosted.org/packages/47/19/454107ef2ebeabb0c65ae5da857ceef37ce33687464b521eb77c369426d9/corparius-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "corparius-0.5.0/corparius/api/handlers.py",
+        "line": 443,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(str(ctx.body.get(\"data\", \"\")), validate=True)"
+      },
+      {
+        "file": "corparius-0.5.0/corparius/api/handlers.py",
+        "line": 1255,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(str(ctx.body.get(\"data\", \"\")), validate=True)"
+      },
+      {
+        "file": "corparius-0.5.0/corparius/api/server.py",
+        "line": 481,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "corparius-0.5.0/corparius/kernel/proc.py",
+        "line": 174,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "zenplayer",
+    "checked_at": "2026-08-16T19:42:35.271693",
+    "download_url": "https://files.pythonhosted.org/packages/31/2b/ffb4809f1d259f665e716e592331911b6a20c8ce2a6f8055cd3a8a97f815/zenplayer-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "zenplayer-0.1.1/zenplayer/audio/capture.py",
+        "line": 37,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "zenplayer-0.1.1/zenplayer/audio/player.py",
+        "line": 19,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "zenplayer-0.1.1/zenplayer/audio/player.py",
+        "line": 28,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._sock: Optional[socket.socket] = None"
+      },
+      {
+        "file": "zenplayer-0.1.1/zenplayer/audio/player.py",
+        "line": 57,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "zenplayer-0.1.1/zenplayer/audio/player.py",
+        "line": 94,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _reap(proc: subprocess.Popen):"
+      },
+      {
+        "file": "zenplayer-0.1.1/zenplayer/audio/player.py",
+        "line": 157,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "zenplayer-0.1.1/zenplayer/audio/player.py",
+        "line": 215,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _send(self, sock: socket.socket, req_id: int, command: list) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "updall",
+    "checked_at": "2026-08-16T19:42:35.373529",
+    "download_url": "https://files.pythonhosted.org/packages/30/24/ddeee4850f3c1edf1d73c9ba29fea3fb4484e1610c04c04b834e2210f176/updall-1.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "updall-1.1.1/src/updall/__init__.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(config.shell + [command]) as process:"
+      }
+    ]
   }
 ]
