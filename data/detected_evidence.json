@@ -7794,5 +7794,163 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "northstar-runtime",
+    "checked_at": "2026-08-16T21:30:40.585250",
+    "download_url": "https://files.pythonhosted.org/packages/f7/da/6697b686a37dbafd67c56c5050f71dfac6988057451bfedfc47c26e89c26/northstar_runtime-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "northstar_runtime-0.2.0/src/northstar/surface.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "declared = {str(v) for v in ast.literal_eval(node.value)}"
+      }
+    ]
+  },
+  {
+    "package_name": "rubricon-eval",
+    "checked_at": "2026-08-16T21:30:40.678031",
+    "download_url": "https://files.pythonhosted.org/packages/28/20/2e22440753a4ed182acb6b2b34da8d12d2df4b53392fcfffbc686e0d1b07/rubricon_eval-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rubricon_eval-0.1.3/scripts/verify_capture.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(\"       system - wrap those calls in rubricon.record_retrieval() by hand.\")"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/src/rubricon/__init__.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "rubricon.record_retrieval(question, my_retriever.search(question))"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/src/rubricon/capture.py",
+        "line": 368,
+        "keyword_detected": "eval(",
+        "code_snippet": "def record_retrieval("
+      },
+      {
+        "file": "rubricon_eval-0.1.3/src/rubricon/cli/main.py",
+        "line": 579,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval("
+      },
+      {
+        "file": "rubricon_eval-0.1.3/src/rubricon/cli/main.py",
+        "line": 1482,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"[cyan]rubricon.record_retrieval(query, documents)[/cyan] where yours \""
+      },
+      {
+        "file": "rubricon_eval-0.1.3/src/rubricon/integrations/langchain.py",
+        "line": 172,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"invisible to it. Use record_retrieval() and record_llm() at those two points.\","
+      },
+      {
+        "file": "rubricon_eval-0.1.3/src/rubricon/server/app.py",
+        "line": 786,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"<code>rubricon.record_retrieval(query, documents)</code> where yours \""
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_capture.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "record_retrieval(\"why?\", [{\"id\": \"d1\", \"text\": \"because\"}])"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_capture.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "record_retrieval(\"why?\", [])"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_capture.py",
+        "line": 95,
+        "keyword_detected": "eval(",
+        "code_snippet": "record_retrieval(\"q\", [{\"id\": \"d1\"}])"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_capture.py",
+        "line": 144,
+        "keyword_detected": "eval(",
+        "code_snippet": "record_retrieval(name, [{\"id\": f\"{name}-doc\"}])"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_capture.py",
+        "line": 166,
+        "keyword_detected": "eval(",
+        "code_snippet": "record_retrieval(\"q\", [{\"id\": \"d1\", \"text\": \"x\" * 5000}])"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_capture.py",
+        "line": 197,
+        "keyword_detected": "eval(",
+        "code_snippet": "record_retrieval(\"q\", [{\"id\": f\"d{i}\"} for i in range(40)])"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_capture.py",
+        "line": 209,
+        "keyword_detected": "eval(",
+        "code_snippet": "record_retrieval(\"q\", [{\"id\": \"d1\", \"text\": \"t\", \"score\": 0.9}], duration_ms=12.0)"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_field_report_0_1_2.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert \"record_retrieval()\" in failed[0].metadata[\"capture_gap\"]"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_field_report_0_1_2.py",
+        "line": 174,
+        "keyword_detected": "eval(",
+        "code_snippet": "hand-rolled, they were told to call ``record_retrieval()``, and they get an empty file with"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_field_report_regressions.py",
+        "line": 218,
+        "keyword_detected": "eval(",
+        "code_snippet": "record_retrieval(question, [{\"id\": \"doc-a\", \"text\": \"x\", \"score\": 0.9}])"
+      },
+      {
+        "file": "rubricon_eval-0.1.3/tests/test_server_sample_page.py",
+        "line": 282,
+        "keyword_detected": "eval(",
+        "code_snippet": "record_retrieval(\"refund\", [{\"id\": \"policy-3\", \"text\": \"30 days\"}])"
+      }
+    ]
+  },
+  {
+    "package_name": "cyber-easy",
+    "checked_at": "2026-08-16T21:30:40.720039",
+    "download_url": "https://files.pythonhosted.org/packages/be/40/388c03efdf2aba8e7c8cfff9fd74030d64b564eeecb5707199e4a81a1cad/cyber_easy-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cyber_easy-1.0.0/cyber_easy/tools/port_scanner.py",
+        "line": 20,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "signet7",
+    "checked_at": "2026-08-16T21:30:40.811096",
+    "download_url": "https://files.pythonhosted.org/packages/f4/6d/fc036a4de5385c739a94f4e8bba24dfd5fa5f15977f2643df871c4151ab2/signet7-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "signet7-0.2.0/signet7_agent/notify.py",
+        "line": 66,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
   }
 ]
