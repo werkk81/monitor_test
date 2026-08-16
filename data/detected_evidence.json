@@ -6864,5 +6864,491 @@
         "code_snippet": "png = base64.b64decode("
       }
     ]
+  },
+  {
+    "package_name": "simultex",
+    "checked_at": "2026-08-16T20:51:32.831179",
+    "download_url": "https://files.pythonhosted.org/packages/bf/56/4b570de8c38604ff5881a1f8107a62da164a95e78d4c6c4ba0ecfc6ac03f/simultex-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "simultex-0.1.0/src/simultex/model_proxy.py",
+        "line": 621,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "simultex-0.1.0/tests/test_model_proxy.py",
+        "line": 720,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "upstream_socket_fd = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "simultex-0.1.0/tests/test_protocol.py",
+        "line": 28,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertEqual(base64.b64decode(payload), png)"
+      }
+    ]
+  },
+  {
+    "package_name": "stoneburner-atomics",
+    "checked_at": "2026-08-16T20:51:33.002478",
+    "download_url": "https://files.pythonhosted.org/packages/b6/37/1f48e5ad563aee0c58f79c46326ccfc176f961f90d0d9086e05e9245d6e5/stoneburner_atomics-0.18.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/sweep.py",
+        "line": 93,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = await run_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/webhooks.py",
+        "line": 29,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "return \"discord.com/api/webhooks\" in url"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/api/_runners.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = await run_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/api/routes.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def start_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/commands/benchmark.py",
+        "line": 866,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = await run_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/commands/eval.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/commands/eval.py",
+        "line": 222,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = asyncio.run(run_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/commands/rag.py",
+        "line": 326,
+        "keyword_detected": "eval(",
+        "code_snippet": "def rag_retrieval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/commands/worker_npm.py",
+        "line": 103,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/commands/worker_npm.py",
+        "line": 117,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/eval/gauntlet.py",
+        "line": 202,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval_summary = await run_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/eval/runner.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def run_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/eval/codegen/sandbox.py",
+        "line": 3,
+        "keyword_detected": "exec(",
+        "code_snippet": "Generated code is untrusted input. It used to run via `exec()` inside the"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/eval/codegen/sandbox.py",
+        "line": 74,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket = _no_network"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/eval/codegen/sandbox.py",
+        "line": 81,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(payload[\"code\"], \"<generated>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/eval/codegen/sandbox.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = func(*ast.literal_eval(payload[\"args_repr\"]))"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/eval/codegen/sandbox.py",
+        "line": 145,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(  # noqa: S603"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/eval/codegen/sandbox.py",
+        "line": 183,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(reported[\"result_repr\"])"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/eval/codegen/sandbox.py",
+        "line": 191,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_group(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/mcp/client.py",
+        "line": 172,
+        "keyword_detected": "eval(",
+        "code_snippet": "def submit_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/mcp/server.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "def submit_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/mcp/server.py",
+        "line": 133,
+        "keyword_detected": "eval(",
+        "code_snippet": "return api.submit_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/atomics/workers/bridge.py",
+        "line": 44,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await create_subprocess_exec("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/scripts/smoke_fleet.py",
+        "line": 73,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/scripts/smoke_fleet.py",
+        "line": 104,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.procs: list[subprocess.Popen] = []"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/scripts/smoke_fleet.py",
+        "line": 108,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn(self, argv: list[str]) -> subprocess.Popen:"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/scripts/smoke_fleet.py",
+        "line": 109,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/scripts/smoke_fleet.py",
+        "line": 123,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def add_worker(self, *labels: str, heartbeat: int = 5) -> subprocess.Popen:"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/scripts/test_dashboard_live.py",
+        "line": 45,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_api_runners.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def test_run_eval_suite_accuracy_dispatches_to_run_eval():"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_cli.py",
+        "line": 1403,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def fake_run_eval(*_a, **_kw):"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_cli.py",
+        "line": 1446,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def fake_run_eval(*_a, **_kw):"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_cli_suite_persistence.py",
+        "line": 258,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _patch_eval(monkeypatch, db_path, *, fail: bool = False) -> list[MetricsRepository]:"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_cli_suite_persistence.py",
+        "line": 266,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def fake_run_eval(*_args, **kwargs):"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_cli_suite_persistence.py",
+        "line": 298,
+        "keyword_detected": "eval(",
+        "code_snippet": "opened = _patch_eval(monkeypatch, db_path)"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_cli_suite_persistence.py",
+        "line": 313,
+        "keyword_detected": "eval(",
+        "code_snippet": "_patch_eval(monkeypatch, db_path, fail=True)"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_cli_suite_persistence.py",
+        "line": 325,
+        "keyword_detected": "eval(",
+        "code_snippet": "opened = _patch_eval(monkeypatch, db_path, fail=True)"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_cli_suite_persistence.py",
+        "line": 336,
+        "keyword_detected": "eval(",
+        "code_snippet": "_patch_eval(monkeypatch, db_path, fail=True)"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_e2e_eval_budget.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "await run_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_eval.py",
+        "line": 224,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = asyncio.run(run_eval(provider, judge_provider=judge))"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_eval.py",
+        "line": 232,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = asyncio.run(run_eval(provider, judge_provider=judge))"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_eval.py",
+        "line": 241,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = asyncio.run(run_eval(provider, judge_provider=judge))"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_eval.py",
+        "line": 252,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = asyncio.run(run_eval(provider, judge_provider=judge))"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_eval.py",
+        "line": 277,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(provider, judge_provider=judge, on_fixture_done=lambda fr: calls.append(fr))"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_eval.py",
+        "line": 287,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = asyncio.run(run_eval(provider, judge_provider=judge))"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_eval.py",
+        "line": 303,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(provider, judge_provider=judge, fixtures=[EVAL_FIXTURES[0]])"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_eval.py",
+        "line": 325,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(provider, judge_provider=judge, on_fixture_done=lambda fr: calls.append(fr))"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_mcp_api_contract.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "lambda c: c.submit_eval(suite=\"accuracy\", provider=\"ollama\", budget_usd=1.0)"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_mcp_api_contract.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "request = captured_request(lambda c: c.submit_eval(suite=\"accuracy\", provider=\"ollama\"))"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_mcp_client.py",
+        "line": 89,
+        "keyword_detected": "eval(",
+        "code_snippet": "client.submit_eval(suite=\"adversarial\", provider=\"claude\")"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_mcp_client.py",
+        "line": 101,
+        "keyword_detected": "eval(",
+        "code_snippet": "client.submit_eval("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_mcp_client.py",
+        "line": 182,
+        "keyword_detected": "eval(",
+        "code_snippet": "client.submit_eval(suite=\"nope\", provider=\"claude\")"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_mcp_client.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "client.submit_eval(suite=\"\", provider=\"claude\")"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_mcp_server.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "def submit_eval(self, **kwargs):"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_scenario.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_valid_eval(self) -> None:"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_scenario.py",
+        "line": 195,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_resolve_eval(self) -> None:"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_webhooks.py",
+        "line": 52,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "assert _is_discord_url(\"https://discord.com/api/webhooks/123/abc\") is True"
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_webhooks.py",
+        "line": 197,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "\"https://discord.com/api/webhooks/123/abc\","
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_worker_npm.py",
+        "line": 129,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "stoneburner_atomics-0.18.0/tests/test_worker_npm.py",
+        "line": 187,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "hamiltonzero",
+    "checked_at": "2026-08-16T20:51:33.252286",
+    "download_url": "https://files.pythonhosted.org/packages/ea/f4/8b1d42eec64cb0e95f2a430113e7600d3e48f0e0067c5197c9226b9310a1/hamiltonzero-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/mcmc/_monotone_cubic.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _hermite_eval("
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/mcmc/_monotone_cubic.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _hermite_eval(self.ts, self.ys, self.ds, t)"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_custom_lap_primitives.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _quadrilinear_merge_abstract_eval(T_aval, u_a_aval, u_b_aval):"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_custom_lap_primitives.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "quadrilinear_merge_p.def_abstract_eval(_quadrilinear_merge_abstract_eval)"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_pallas_attn/mhsea_full_ad.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _outer_abstract_eval(q, k, e, v, mask):"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_pallas_attn/mhsea_full_ad.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "mhsea_full_ad_p.def_abstract_eval(_outer_abstract_eval)"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_pallas_attn/mhsea_full_ad.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _inner_abstract_eval(q, k, e, v, mask, primal_out, lse, qt, kt, et, vt):"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_pallas_attn/mhsea_full_ad.py",
+        "line": 182,
+        "keyword_detected": "eval(",
+        "code_snippet": "mhsea_full_ad_lin_p.def_abstract_eval(_inner_abstract_eval)"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_pallas_attn/mhsea_tuned.py",
+        "line": 95,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _outer_abstract_eval(q, k, e, v, mask):"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_pallas_attn/mhsea_tuned.py",
+        "line": 171,
+        "keyword_detected": "eval(",
+        "code_snippet": "mhsea_tuned_ad_p.def_abstract_eval(_outer_abstract_eval)"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_pallas_attn/mhsea_tuned.py",
+        "line": 201,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _inner_abstract_eval(q, k, e, v, mask, primal_out, lse, qt, kt, et, vt):"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/hamiltonzero/model/_pallas_attn/mhsea_tuned.py",
+        "line": 237,
+        "keyword_detected": "eval(",
+        "code_snippet": "mhsea_tuned_ad_lin_p.def_abstract_eval(_inner_abstract_eval)"
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/kfac_jax/_src/layers_and_loss_tags.py",
+        "line": 144,
+        "keyword_detected": "eval(",
+        "code_snippet": "def abstract_eval("
+      },
+      {
+        "file": "hamiltonzero-0.1.1/src/kfac_jax/_src/layers_and_loss_tags.py",
+        "line": 345,
+        "keyword_detected": "eval(",
+        "code_snippet": "def abstract_eval("
+      }
+    ]
   }
 ]
