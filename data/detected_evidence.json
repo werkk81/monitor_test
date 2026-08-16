@@ -8640,5 +8640,309 @@
         "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
       }
     ]
+  },
+  {
+    "package_name": "blockchecks",
+    "checked_at": "2026-08-16T22:16:14.347348",
+    "download_url": "https://files.pythonhosted.org/packages/91/54/6bf092cdca093040f2a2516dc081ebe6bdbb0fb45390983e0d59651dc3cc/blockchecks-1.3.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/dns_secure.py",
+        "line": 104,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/l3_probe.py",
+        "line": 112,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_ICMP)"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/l3_probe.py",
+        "line": 143,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/quic_raw.py",
+        "line": 125,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/quic_raw.py",
+        "line": 126,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "icmp: socket.socket | None = None"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/quic_raw.py",
+        "line": 132,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "icmp = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_ICMP)"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/udp_voice.py",
+        "line": 67,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/udp_voice.py",
+        "line": 105,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/udp_voice.py",
+        "line": 158,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/voice_discovery.py",
+        "line": 32,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_singbox_proc: subprocess.Popen | None = None"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/voice_discovery.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _manage_singbox(start: bool) -> subprocess.Popen | None:"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/voice_discovery.py",
+        "line": 49,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_singbox_proc = subprocess.Popen("
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/checkers/voice_discovery.py",
+        "line": 67,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "async def _singbox_session() -> AsyncIterator[subprocess.Popen | None]:"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/service/nfqws2.py",
+        "line": 119,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/service/nfqws2.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: subprocess.Popen | None = None"
+      },
+      {
+        "file": "blockchecks-1.3.2/src/blockchecks/service/nfqws2.py",
+        "line": 159,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "af-toolkit",
+    "checked_at": "2026-08-16T22:16:14.594882",
+    "download_url": "https://files.pythonhosted.org/packages/ac/c7/a56647bc591fa5f2d0ec4b670eb1c54efc5e308c60a5d7e69a755cc33f14/af_toolkit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "af_toolkit-0.1.0/af/gateway/multiplexer.py",
+        "line": 22,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "af_toolkit-0.1.0/af/gateway/multiplexer.py",
+        "line": 28,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "af_toolkit-0.1.0/af/mcp_client/client.py",
+        "line": 20,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "af_toolkit-0.1.0/af/mcp_client/client.py",
+        "line": 26,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "agent-bitcoin",
+    "checked_at": "2026-08-16T22:16:14.632426",
+    "download_url": "https://files.pythonhosted.org/packages/0a/89/0a1e8a0cd5f00847ba840ba6be0ab5e679bdca82af09add7e6193ba2e6ba/agent_bitcoin-26.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_bitcoin-26.2.0/agent_bitcoin/nostr/nip44.py",
+        "line": 149,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(payload, validate=False)"
+      },
+      {
+        "file": "agent_bitcoin-26.2.0/agent_bitcoin/utils.py",
+        "line": 10,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(macaroon, validate=True)"
+      },
+      {
+        "file": "agent_bitcoin-26.2.0/examples/nostr_agent_poc.py",
+        "line": 90,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "salt = base64.b64decode(blob[\"salt_b64\"])"
+      },
+      {
+        "file": "agent_bitcoin-26.2.0/examples/nostr_common.py",
+        "line": 49,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "salt = base64.b64decode(blob[\"salt_b64\"])"
+      },
+      {
+        "file": "agent_bitcoin-26.2.0/examples/nostr_phase_c_signer.py",
+        "line": 238,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "instagram-username-finder",
+    "checked_at": "2026-08-16T22:16:14.657862",
+    "download_url": "https://files.pythonhosted.org/packages/a1/60/3090553640bf56ad50bcf02283eac6ce8947c23afb25974abe55f535f030/instagram_username_finder-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "instagram_username_finder-0.1.0/tests/unit/test_checker.py",
+        "line": 103,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      }
+    ]
+  },
+  {
+    "package_name": "portly",
+    "checked_at": "2026-08-16T22:16:14.681033",
+    "download_url": "https://files.pythonhosted.org/packages/62/89/8a14625fece3dd3080667d71e7c27e6a4b21ea024897e1045ea211116448/portly-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "portly-0.1.0/examples/main.py",
+        "line": 28,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_demo_servers: dict[int, subprocess.Popen] = {}"
+      },
+      {
+        "file": "portly-0.1.0/examples/main.py",
+        "line": 32,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "portly-0.1.0/examples/main.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "portly-0.1.0/tests/conftest.py",
+        "line": 18,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "portly-0.1.0/tests/conftest.py",
+        "line": 30,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "portly-0.1.0/tests/conftest.py",
+        "line": 38,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "portly-0.1.0/tests/conftest.py",
+        "line": 47,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def temp_server() -> Iterator[tuple[socket.socket, int]]:"
+      },
+      {
+        "file": "portly-0.1.0/tests/conftest.py",
+        "line": 49,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "portly-0.1.0/tests/conftest.py",
+        "line": 58,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def subprocess_server() -> Iterator[tuple[subprocess.Popen[bytes], int]]:"
+      },
+      {
+        "file": "portly-0.1.0/tests/conftest.py",
+        "line": 65,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "portly-0.1.0/tests/test_portly.py",
+        "line": 59,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "portly-0.1.0/tests/test_portly.py",
+        "line": 77,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "portly-0.1.0/tests/test_portly.py",
+        "line": 94,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_busy_port_returns_info(self, temp_server: tuple[socket.socket, int]) -> None:"
+      },
+      {
+        "file": "portly-0.1.0/tests/test_portly.py",
+        "line": 117,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self, subprocess_server: tuple[subprocess.Popen[bytes], int]"
+      },
+      {
+        "file": "portly-0.1.0/tests/test_portly.py",
+        "line": 126,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self, subprocess_server: tuple[subprocess.Popen[bytes], int]"
+      },
+      {
+        "file": "portly-0.1.0/tests/test_portly.py",
+        "line": 142,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "portly-0.1.0/tests/test_portly.py",
+        "line": 161,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def test_full_workflow(self, subprocess_server: tuple[subprocess.Popen[bytes], int]) -> None:"
+      },
+      {
+        "file": "portly-0.1.0/tests/test_portly.py",
+        "line": 177,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      }
+    ]
   }
 ]
