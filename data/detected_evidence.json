@@ -8958,5 +8958,45 @@
         "code_snippet": "\"os.system\", \"subprocess.run\", \"subprocess.call\", \"subprocess.Popen\","
       }
     ]
+  },
+  {
+    "package_name": "solver-support",
+    "checked_at": "2026-08-16T22:53:02.425643",
+    "download_url": "https://files.pythonhosted.org/packages/75/ed/991bbfa6601e125a45c743f271e99426c2b2edcaa4cd3e04ea8c39d7c2e8/solver_support-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "solver_support-0.1.1/solver_support/solver_runner.py",
+        "line": 140,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_process_tree(self, process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "solver_support-0.1.1/solver_support/solver_runner.py",
+        "line": 227,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "solver_support-0.1.1/tests/test_solver_runner.py",
+        "line": 295,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "@patch('subprocess.Popen')"
+      }
+    ]
+  },
+  {
+    "package_name": "perry-spies",
+    "checked_at": "2026-08-16T22:53:02.491315",
+    "download_url": "https://files.pythonhosted.org/packages/da/32/38c587018a2ffc77678ac170207877e6d367e12f89ae404de84453e0db71/perry_spies-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "perry_spies-1.0.0/perry/services/sast_engine.py",
+        "line": 103,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"os.system\", \"subprocess.run\", \"subprocess.call\", \"subprocess.Popen\","
+      }
+    ]
   }
 ]
