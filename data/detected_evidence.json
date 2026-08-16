@@ -6256,5 +6256,69 @@
         "code_snippet": "self.embed_model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "zenplayer",
+    "checked_at": "2026-08-16T19:27:55.055461",
+    "download_url": "https://files.pythonhosted.org/packages/20/3c/411d19f5cf0f8e34a440677503cd0ab5b28f0781d97083fd785fc1330ec8/zenplayer-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "zenplayer-0.1.0/zenplayer/audio/capture.py",
+        "line": 37,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "zenplayer-0.1.0/zenplayer/audio/player.py",
+        "line": 19,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "zenplayer-0.1.0/zenplayer/audio/player.py",
+        "line": 28,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._sock: Optional[socket.socket] = None"
+      },
+      {
+        "file": "zenplayer-0.1.0/zenplayer/audio/player.py",
+        "line": 57,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "zenplayer-0.1.0/zenplayer/audio/player.py",
+        "line": 94,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _reap(proc: subprocess.Popen):"
+      },
+      {
+        "file": "zenplayer-0.1.0/zenplayer/audio/player.py",
+        "line": 157,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "zenplayer-0.1.0/zenplayer/audio/player.py",
+        "line": 215,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _send(self, sock: socket.socket, req_id: int, command: list) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "updall",
+    "checked_at": "2026-08-16T19:27:55.100683",
+    "download_url": "https://files.pythonhosted.org/packages/30/24/ddeee4850f3c1edf1d73c9ba29fea3fb4484e1610c04c04b834e2210f176/updall-1.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "updall-1.1.1/src/updall/__init__.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(config.shell + [command]) as process:"
+      }
+    ]
   }
 ]
