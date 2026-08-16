@@ -8944,5 +8944,19 @@
         "code_snippet": "server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
       }
     ]
+  },
+  {
+    "package_name": "perry-spies",
+    "checked_at": "2026-08-16T22:37:23.741465",
+    "download_url": "https://files.pythonhosted.org/packages/da/32/38c587018a2ffc77678ac170207877e6d367e12f89ae404de84453e0db71/perry_spies-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "perry_spies-1.0.0/perry/services/sast_engine.py",
+        "line": 103,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"os.system\", \"subprocess.run\", \"subprocess.call\", \"subprocess.Popen\","
+      }
+    ]
   }
 ]
