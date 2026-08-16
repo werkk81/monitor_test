@@ -6698,5 +6698,171 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "wallbreaker-hermes",
+    "checked_at": "2026-08-16T20:34:00.598104",
+    "download_url": "https://files.pythonhosted.org/packages/2e/4a/933f74c65b04a4a8cfa6cc573b457543b02af792bd00e9bd9786701c6ecf/wallbreaker_hermes-0.2.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_capabilities.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(node.value)"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_claude_code.py",
+        "line": 38,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(*args, **kw):"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_claude_code.py",
+        "line": 191,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(*args, **kw):"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_claude_code.py",
+        "line": 236,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(*args, **kw):"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_hermes_lab.py",
+        "line": 488,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(_PROBE_SOURCE, namespace)"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_hermes_lab.py",
+        "line": 992,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(_PROBE_SOURCE, namespace)"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_image_edit.py",
+        "line": 17,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "PNG_BYTES = base64.b64decode(PNG_B64)"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_image_target.py",
+        "line": 27,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "PNG_BYTES = base64.b64decode(PNG_B64)"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_loop_features14.py",
+        "line": 124,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def fake_exec(name, args):"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_loop_features5.py",
+        "line": 91,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def fake_exec(name, args):"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_loop_features7.py",
+        "line": 79,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def fake_exec(name, args):"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_session_card.py",
+        "line": 20,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "PNG_BYTES = base64.b64decode(PNG_B64)"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_sysprompt_load.py",
+        "line": 66,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def fake_exec(name, args):"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/tests/test_sysprompt_prefill.py",
+        "line": 80,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def fake_exec(name, args):"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/wallbreaker/capabilities.py",
+        "line": 111,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(node.value)"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/wallbreaker/hermes_lab.py",
+        "line": 745,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/wallbreaker/hermes_lab.py",
+        "line": 775,
+        "keyword_detected": "exec(",
+        "code_snippet": "killer = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/wallbreaker/providers/claude_code.py",
+        "line": 196,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/wallbreaker/providers/image_provider.py",
+        "line": 57,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return mime, base64.b64decode(payload, validate=False)"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/wallbreaker/tools/pair.py",
+        "line": 184,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def _eval(cand: str) -> bool:"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/wallbreaker/tools/pair.py",
+        "line": 238,
+        "keyword_detected": "eval(",
+        "code_snippet": "flags = await gather_capped([_eval(c) for c in cands], fanout)"
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/wallbreaker/tools/session_card.py",
+        "line": 447,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "wallbreaker_hermes-0.2.2/wallbreaker/transforms/encodings.py",
+        "line": 45,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(text.encode(\"ascii\")).decode(\"utf-8\", \"replace\")"
+      }
+    ]
+  },
+  {
+    "package_name": "open-h3-ir",
+    "checked_at": "2026-08-16T20:34:01.472186",
+    "download_url": "https://files.pythonhosted.org/packages/54/6b/b3bb90d122b6546f00f760115001fc3e2d4ba04f9b1f8f540df157ac6bc0/open_h3_ir-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "open_h3_ir-0.1.0/h3ir/cli.py",
+        "line": 100,
+        "keyword_detected": "eval(",
+        "code_snippet": "def cmd_eval(args) -> int:"
+      },
+      {
+        "file": "open_h3_ir-0.1.0/tests/test_video_reference.py",
+        "line": 183,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png = base64.b64decode("
+      }
+    ]
   }
 ]
