@@ -8998,5 +8998,95 @@
         "code_snippet": "\"os.system\", \"subprocess.run\", \"subprocess.call\", \"subprocess.Popen\","
       }
     ]
+  },
+  {
+    "package_name": "unist",
+    "checked_at": "2026-08-17T18:59:36.951868",
+    "download_url": "https://files.pythonhosted.org/packages/fe/d4/278ae078bc805cadc00d657dc4aa28057e079b72c4f86efab62dea51cbe7/unist-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "unist-0.1.0/middle_slice/inr_model.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "mazu-web",
+    "checked_at": "2026-08-17T18:59:37.017209",
+    "download_url": "https://files.pythonhosted.org/packages/79/d6/a2e0af27d189f18b3683ca97a48ae7e12974bb3c2736b7b5808cc91ae27b/mazu_web-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mazu_web-0.2.0/mazu_web/app.py",
+        "line": 454,
+        "keyword_detected": "eval(",
+        "code_snippet": "explanations = explain_retrieval(memory_store, query=query, limit=limit)"
+      }
+    ]
+  },
+  {
+    "package_name": "jerryproxy",
+    "checked_at": "2026-08-17T18:59:37.095106",
+    "download_url": "https://files.pythonhosted.org/packages/a1/56/cb876b443c45d54160b70e482319b7d8ae85bd7993ceb77cb263df67e23e/jerryproxy-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jerryproxy-0.1.0/jerryproxy/runtime/guardian.py",
+        "line": 243,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([str(executable), \"-f\", str(config_path)], **options)"
+      },
+      {
+        "file": "jerryproxy-0.1.0/jerryproxy/runtime/mihomo.py",
+        "line": 210,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "descriptor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "jerryproxy-0.1.0/jerryproxy/runtime/mihomo.py",
+        "line": 225,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "descriptor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "jerryproxy-0.1.0/jerryproxy/runtime/mihomo.py",
+        "line": 1418,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen(arguments, **options)"
+      },
+      {
+        "file": "jerryproxy-0.1.0/jerryproxy/selfcheck/runtime.py",
+        "line": 286,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "jerryproxy-0.1.0/jerryproxy/subscription/manager.py",
+        "line": 218,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "body = base64.b64decode(value[\"body\"].encode(\"ascii\"), validate=True)"
+      },
+      {
+        "file": "jerryproxy-0.1.0/jerryproxy/subscription/storage.py",
+        "line": 675,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "body = base64.b64decode(value[\"body\"].encode(\"ascii\"), validate=True)"
+      },
+      {
+        "file": "jerryproxy-0.1.0/jerryproxy/subscription/transport.py",
+        "line": 353,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(compact, validate=True)"
+      },
+      {
+        "file": "jerryproxy-0.1.0/setup.py",
+        "line": 8,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(stream.read(), meta)"
+      }
+    ]
   }
 ]
