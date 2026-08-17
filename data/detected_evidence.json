@@ -9960,5 +9960,39 @@
         "code_snippet": "raw_bytes = base64.b64decode(\"\".join(raw_str.split()), validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "raef",
+    "checked_at": "2026-08-17T22:46:06.361702",
+    "download_url": "https://files.pythonhosted.org/packages/bb/9e/2ffe9e88eb2839a5e211447f5a360d1e802943c1508edb125c380b89519f/raef-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "raef-0.1.3/src/model/raef.py",
+        "line": 145,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "raef-0.1.3/src/model/raef.py",
+        "line": 167,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "claude-logbook",
+    "checked_at": "2026-08-17T22:46:06.888886",
+    "download_url": "https://files.pythonhosted.org/packages/fe/1a/de4ed565d2133118020921e56ad87b5567bf6afe9c34ac74ae138dbc9970/claude_logbook-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "claude_logbook-1.1.0/claude_logbook/terminal.py",
+        "line": 248,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(args, stdin=subprocess.PIPE)"
+      }
+    ]
   }
 ]
