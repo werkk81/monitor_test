@@ -9314,5 +9314,269 @@
         "code_snippet": "explanations = explain_retrieval(memory_store, query=query, limit=limit)"
       }
     ]
+  },
+  {
+    "package_name": "akctl",
+    "checked_at": "2026-08-17T20:02:15.725984",
+    "download_url": "https://files.pythonhosted.org/packages/ad/2e/9aea54d70059e2d6602b345b8d93ddd1a7b54edb14d71c89ea16acaf7b27/akctl-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "akctl-0.1.0/src/ak/commands.py",
+        "line": 163,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      }
+    ]
+  },
+  {
+    "package_name": "sciagent-cli",
+    "checked_at": "2026-08-17T20:02:16.140572",
+    "download_url": "https://files.pythonhosted.org/packages/2d/30/ecab06de17ae7c4392d37f96d37bdbf502a3112c1737591126fef7f8e633/sciagent_cli-2.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/compute/backends/skypilot.py",
+        "line": 1400,
+        "keyword_detected": "exec(",
+        "code_snippet": "request_id = sky.exec(task, cluster_name=cluster_name)"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/monitoring.py",
+        "line": 76,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/monitoring.py",
+        "line": 162,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, **popen_kwargs)"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/monitoring.py",
+        "line": 362,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_process(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/process_manager.py",
+        "line": 40,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/process_manager.py",
+        "line": 155,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/subagent.py",
+        "line": 681,
+        "keyword_detected": "exec(",
+        "code_snippet": "compute_exec(cluster_name=\"...\", command='''"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/subagent.py",
+        "line": 857,
+        "keyword_detected": "exec(",
+        "code_snippet": "2. compute_exec(cluster_name, command) for follow-ups (probes, fixes,"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/subagent.py",
+        "line": 1080,
+        "keyword_detected": "exec(",
+        "code_snippet": "- **Iterate on a workspace** (case-file reproductions, multi-step pipelines, anything you'll probe before the real run). `compute_run(mode=\"cluster\", cluster_name=..., backend=\"skypilot\")` → `compute_exec(cluster_name, command)` for follow-ups → `compute_cluster(action=\"wait_for_job\", ...)` for each → `compute_cluster(action=\"stop\", cluster_name=...)` (or rely on autostop) when done. `compute_cluster(action=\"refresh_mounts\", ...)` re-syncs inputs without re-running setup. Reserve `action=\"down\"` for explicit cleanup; `stop` is the default."
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/subagent.py",
+        "line": 1317,
+        "keyword_detected": "exec(",
+        "code_snippet": "| L2 — warm compute cluster | The simulation cluster is `up` or `stopped`, and its image already has (or accepts a `pip install` of) the libs you need | `compute_cluster(action=\"start\", ...)` if stopped, then `compute_exec(cluster, \"...\")` for the analysis. Data is local to the cluster — no fetch. |"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/subagent.py",
+        "line": 1331,
+        "keyword_detected": "exec(",
+        "code_snippet": "Don't bake every conceivable analysis library into the registry — that's the wrap-and-restrict anti-pattern. Stock numerics images carry numpy/scipy/matplotlib/pandas/sklearn; niche libs (pyvista, gpytorch, cantera, optuna, …) are one `compute_exec(cluster, \"pip install <lib>\")` away on a warm cluster. ~10-30s overhead, no registry change."
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/tools/atomic/compute.py",
+        "line": 1184,
+        "keyword_detected": "exec(",
+        "code_snippet": "f\"follow-ups: compute_exec(cluster_name='{cluster}', \""
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/tools/atomic/compute_exec.py",
+        "line": 5,
+        "keyword_detected": "exec(",
+        "code_snippet": "``sky.exec(task, cluster_name=...)``, which skips provisioning AND setup"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/tools/atomic/todo.py",
+        "line": 1054,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._validate_exec(command)"
+      },
+      {
+        "file": "sciagent_cli-2.1.1/src/sciagent/tools/atomic/todo.py",
+        "line": 1112,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _validate_exec(self, command: str) -> Optional[str]:"
+      }
+    ]
+  },
+  {
+    "package_name": "binnacle",
+    "checked_at": "2026-08-17T20:02:16.313294",
+    "download_url": "https://files.pythonhosted.org/packages/47/12/9bd9608e494ac7bafd968e7fa5c3fffae66f8043c494e4241af6ba007fb9/binnacle-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "binnacle-0.3.0/binnacle/agree.py",
+        "line": 584,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, argv, timeout):"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/agree.py",
+        "line": 597,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(argv, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/agree.py",
+        "line": 654,
+        "keyword_detected": "exec(",
+        "code_snippet": "rc, _, err = self._exec("
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/agree.py",
+        "line": 663,
+        "keyword_detected": "exec(",
+        "code_snippet": "rc, _, err = self._exec(argv, max(60, self.timeout))"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/agree.py",
+        "line": 668,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec(self.ssh_argv(host, \"chmod +x %s\" % names), 60)[0:3:2]"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/agree.py",
+        "line": 679,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec(argv, max(60, self.timeout))[0]"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/agree.py",
+        "line": 692,
+        "keyword_detected": "exec(",
+        "code_snippet": "rc, out, err = self._exec(self.ssh_argv(host, command), self.timeout)"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/agree.py",
+        "line": 697,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(self.ssh_argv("
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/during.py",
+        "line": 2429,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(cmd)"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/netmesh.py",
+        "line": 751,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/netmesh.py",
+        "line": 761,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.mtu_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/netmesh.py",
+        "line": 924,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.ping_procs[st.name] = subprocess.Popen("
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/netmesh.py",
+        "line": 1249,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/netmesh.py",
+        "line": 1752,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([\"ethtool\", \"-c\", iface],"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/netmesh.py",
+        "line": 2213,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(load_cmd)"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/netmesh.py",
+        "line": 2438,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/netmesh.py",
+        "line": 2487,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs.append(subprocess.Popen(cmd, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/reachable.py",
+        "line": 481,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(argv, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/resolve.py",
+        "line": 189,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/resolve.py",
+        "line": 385,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(fam, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/resolve.py",
+        "line": 427,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(fam, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/skew.py",
+        "line": 247,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/skew.py",
+        "line": 354,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(family, socktype, proto)"
+      },
+      {
+        "file": "binnacle-0.3.0/binnacle/why_slow.py",
+        "line": 193,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, stdout=subprocess.PIPE,"
+      }
+    ]
   }
 ]
