@@ -9088,5 +9088,183 @@
         "code_snippet": "exec(stream.read(), meta)"
       }
     ]
+  },
+  {
+    "package_name": "zecret",
+    "checked_at": "2026-08-17T19:26:16.672104",
+    "download_url": "https://files.pythonhosted.org/packages/bc/52/8c3dc76868309542570b20e5dae413f946ba89a8ab059d16d80b7696bb41/zecret-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "zecret-0.1.0/src/zecret/crypto.py",
+        "line": 103,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "salt=base64.b64decode(data[\"salt\"], validate=True),"
+      },
+      {
+        "file": "zecret-0.1.0/src/zecret/storage.py",
+        "line": 506,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "nonce = base64.b64decode(verifier[\"nonce\"], validate=True)"
+      },
+      {
+        "file": "zecret-0.1.0/src/zecret/storage.py",
+        "line": 507,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(verifier[\"ciphertext\"], validate=True)"
+      },
+      {
+        "file": "zecret-0.1.0/src/zecret/storage.py",
+        "line": 522,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(raw[\"nonce\"], validate=True),"
+      },
+      {
+        "file": "zecret-0.1.0/src/zecret/storage.py",
+        "line": 523,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(raw[\"ciphertext\"], validate=True),"
+      },
+      {
+        "file": "zecret-0.1.0/tests/test_properties.py",
+        "line": 244,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(encoded, validate=True) == salt"
+      },
+      {
+        "file": "zecret-0.1.0/tests/test_storage.py",
+        "line": 260,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = bytearray(base64.b64decode(document[\"verifier\"][\"ciphertext\"]))"
+      },
+      {
+        "file": "zecret-0.1.0/tests/test_storage.py",
+        "line": 344,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = bytearray(base64.b64decode(document[\"entries\"][1][\"ciphertext\"]))"
+      }
+    ]
+  },
+  {
+    "package_name": "pstrain",
+    "checked_at": "2026-08-17T19:26:16.876639",
+    "download_url": "https://files.pythonhosted.org/packages/b6/78/1362779d5487e15ed513ede9c9607d9cb327fd18896e1e139c558bf920ab/pstrain-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pstrain-0.1.0/pstrain/lib/contract_docs.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(node)"
+      },
+      {
+        "file": "pstrain-0.1.0/scripts/procctl.py",
+        "line": 183,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_failed_launch(process: subprocess.Popen[bytes], pgid: int) -> str:"
+      },
+      {
+        "file": "pstrain-0.1.0/scripts/procctl.py",
+        "line": 223,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pstrain-0.1.0/scripts/run_verified_tests.py",
+        "line": 37,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(sys.argv[2], {\"__name__\": \"__main__\"})"
+      },
+      {
+        "file": "pstrain-0.1.0/tests/test_native_worker.py",
+        "line": 234,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "duplicate = socket.socket(fileno=os.dup(worker._connection.fileno()))"
+      },
+      {
+        "file": "pstrain-0.1.0/tests/test_pipeline_runner.py",
+        "line": 684,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_fixture_tree(process: subprocess.Popen[str], pids: list[int]) -> None:"
+      },
+      {
+        "file": "pstrain-0.1.0/tests/test_pipeline_runner.py",
+        "line": 708,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)"
+      },
+      {
+        "file": "pstrain-0.1.0/tests/test_pipeline_runner.py",
+        "line": 741,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pstrain-0.1.0/tests/test_pipeline_runner.py",
+        "line": 780,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "wagtail-auto-block-preview",
+    "checked_at": "2026-08-17T19:26:16.921339",
+    "download_url": "https://files.pythonhosted.org/packages/2a/8e/b8873f97f767c27bd142f9c995b52a279cbbee6a5dbb3ace25b25720545a/wagtail_auto_block_preview-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wagtail_auto_block_preview-0.1.0/tests/test_wagtail_auto_block_preview.py",
+        "line": 572,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "svg = base64.b64decode(encoded).decode(\"utf-8\")"
+      },
+      {
+        "file": "wagtail_auto_block_preview-0.1.0/tests/test_wagtail_auto_block_preview.py",
+        "line": 696,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data_uri[len(prefix) :]).decode(\"utf-8\")"
+      }
+    ]
+  },
+  {
+    "package_name": "autotune-doctor",
+    "checked_at": "2026-08-17T19:26:17.086474",
+    "download_url": "https://files.pythonhosted.org/packages/e6/f3/b0f41d9098d0e64c8faf829ba9e2d040acbdf3c5db9cbbf8673fd15b71d1/autotune_doctor-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "autotune_doctor-0.1.0/src/autotune/sandbox/executor.py",
+        "line": 60,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "autotune_doctor-0.1.0/src/autotune/sandbox/timeout.py",
+        "line": 11,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def kill_process_group(proc: subprocess.Popen) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "kirby-cost",
+    "checked_at": "2026-08-17T19:26:17.203931",
+    "download_url": "https://files.pythonhosted.org/packages/e8/b5/ea81fd3cc3b899f430dc6323e088488b76d0b4ffa76db4e7194dcca3565f/kirby_cost-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kirby_cost-0.2.1/kirby_cost/behaviors/engine.py",
+        "line": 16,
+        "keyword_detected": "eval(",
+        "code_snippet": "Safely evaluates mathematical expressions without using eval()."
+      },
+      {
+        "file": "kirby_cost-0.2.1/kirby_cost/behaviors/plugins.py",
+        "line": 256,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, module.__dict__)"
+      }
+    ]
   }
 ]
