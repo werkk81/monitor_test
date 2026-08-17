@@ -9684,5 +9684,19 @@
         "code_snippet": "self.model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "ascender-kit",
+    "checked_at": "2026-08-17T20:57:48.322452",
+    "download_url": "https://files.pythonhosted.org/packages/73/6c/5be1e1ca3a82da900ab63d2e319cdc20359441e7890dab0b12546de88cff/ascender_kit-25.5.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ascender_kit-25.5.1/ascenderkit/scripts/basic_session.py",
+        "line": 76,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(script.read(), globals())"
+      }
+    ]
   }
 ]
