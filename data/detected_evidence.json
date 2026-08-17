@@ -9748,5 +9748,63 @@
         "code_snippet": "self.model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "sinpapel",
+    "checked_at": "2026-08-17T21:43:56.388206",
+    "download_url": "https://files.pythonhosted.org/packages/ae/53/749fffa7d4dd19f5b54f6ef9224a89bebd9f09111a5f1f345062a44bcb24/sinpapel-0.7.0.post1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sinpapel-0.7.0.post1/signing/backends/fiel.py",
+        "line": 234,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return x509.load_der_x509_certificate(base64.b64decode(cert_b64))"
+      },
+      {
+        "file": "sinpapel-0.7.0.post1/signing/backends/fiel.py",
+        "line": 249,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "firma_raw = base64.b64decode(firma_b64)"
+      }
+    ]
+  },
+  {
+    "package_name": "django-mirroring",
+    "checked_at": "2026-08-17T21:43:56.796446",
+    "download_url": "https://files.pythonhosted.org/packages/bf/4c/f9107ecc1fd861dad5e98e2bc94ec98589b84b336a132b255dfb2af63091/django_mirroring-0.2.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/refresh_database_mirror.py",
+        "line": 499,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dump_proc = subprocess.Popen(dump_cmd, stdout=subprocess.PIPE, stderr=dump_err, env=src_env)"
+      },
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/refresh_database_mirror.py",
+        "line": 503,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dumpling_proc = subprocess.Popen("
+      },
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/refresh_database_mirror.py",
+        "line": 513,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "psql_proc = subprocess.Popen("
+      },
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/restore_from_mirror.py",
+        "line": 419,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dump_proc = subprocess.Popen(dump_cmd, stdout=subprocess.PIPE, stderr=dump_err, env=src_env)"
+      },
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/restore_from_mirror.py",
+        "line": 422,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "psql_proc = subprocess.Popen("
+      }
+    ]
   }
 ]
