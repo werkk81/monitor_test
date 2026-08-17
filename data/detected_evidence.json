@@ -9266,5 +9266,53 @@
         "code_snippet": "exec(code, module.__dict__)"
       }
     ]
+  },
+  {
+    "package_name": "kirby-cost",
+    "checked_at": "2026-08-17T19:48:26.384049",
+    "download_url": "https://files.pythonhosted.org/packages/e8/b5/ea81fd3cc3b899f430dc6323e088488b76d0b4ffa76db4e7194dcca3565f/kirby_cost-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kirby_cost-0.2.1/kirby_cost/behaviors/engine.py",
+        "line": 16,
+        "keyword_detected": "eval(",
+        "code_snippet": "Safely evaluates mathematical expressions without using eval()."
+      },
+      {
+        "file": "kirby_cost-0.2.1/kirby_cost/behaviors/plugins.py",
+        "line": 256,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, module.__dict__)"
+      }
+    ]
+  },
+  {
+    "package_name": "unist",
+    "checked_at": "2026-08-17T19:48:27.019830",
+    "download_url": "https://files.pythonhosted.org/packages/fe/d4/278ae078bc805cadc00d657dc4aa28057e079b72c4f86efab62dea51cbe7/unist-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "unist-0.1.0/middle_slice/inr_model.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "mazu-web",
+    "checked_at": "2026-08-17T19:48:27.254899",
+    "download_url": "https://files.pythonhosted.org/packages/79/d6/a2e0af27d189f18b3683ca97a48ae7e12974bb3c2736b7b5808cc91ae27b/mazu_web-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mazu_web-0.2.0/mazu_web/app.py",
+        "line": 454,
+        "keyword_detected": "eval(",
+        "code_snippet": "explanations = explain_retrieval(memory_store, query=query, limit=limit)"
+      }
+    ]
   }
 ]
