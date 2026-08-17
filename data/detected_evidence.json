@@ -9932,5 +9932,33 @@
         "code_snippet": "exec(FakeClient(), \"inst\", \"echo\")"
       }
     ]
+  },
+  {
+    "package_name": "scramblenames",
+    "checked_at": "2026-08-17T22:22:46.346360",
+    "download_url": "https://files.pythonhosted.org/packages/ce/cd/8f7fa06204762fa3e5747a3346d6ede6a4b564ed69e7b94e19c4fae62c5d/scramblenames-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "scramblenames-0.1.0/tests/conftest.py",
+        "line": 9,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, \"<test>\", \"exec\"), namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "domainiq-cli",
+    "checked_at": "2026-08-17T22:22:46.480044",
+    "download_url": "https://files.pythonhosted.org/packages/63/60/ccfdfaf6d7b5d88bcca4b17876615cffd093ad3794024177aa0a90559109/domainiq_cli-3.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "domainiq_cli-3.1.0/domainiq/deserializers.py",
+        "line": 224,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_bytes = base64.b64decode(\"\".join(raw_str.split()), validate=True)"
+      }
+    ]
   }
 ]
