@@ -9806,5 +9806,131 @@
         "code_snippet": "psql_proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "sinpapel",
+    "checked_at": "2026-08-17T21:59:55.856019",
+    "download_url": "https://files.pythonhosted.org/packages/ae/53/749fffa7d4dd19f5b54f6ef9224a89bebd9f09111a5f1f345062a44bcb24/sinpapel-0.7.0.post1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sinpapel-0.7.0.post1/signing/backends/fiel.py",
+        "line": 234,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return x509.load_der_x509_certificate(base64.b64decode(cert_b64))"
+      },
+      {
+        "file": "sinpapel-0.7.0.post1/signing/backends/fiel.py",
+        "line": 249,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "firma_raw = base64.b64decode(firma_b64)"
+      }
+    ]
+  },
+  {
+    "package_name": "django-mirroring",
+    "checked_at": "2026-08-17T21:59:56.431434",
+    "download_url": "https://files.pythonhosted.org/packages/bf/4c/f9107ecc1fd861dad5e98e2bc94ec98589b84b336a132b255dfb2af63091/django_mirroring-0.2.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/refresh_database_mirror.py",
+        "line": 499,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dump_proc = subprocess.Popen(dump_cmd, stdout=subprocess.PIPE, stderr=dump_err, env=src_env)"
+      },
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/refresh_database_mirror.py",
+        "line": 503,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dumpling_proc = subprocess.Popen("
+      },
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/refresh_database_mirror.py",
+        "line": 513,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "psql_proc = subprocess.Popen("
+      },
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/restore_from_mirror.py",
+        "line": 419,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dump_proc = subprocess.Popen(dump_cmd, stdout=subprocess.PIPE, stderr=dump_err, env=src_env)"
+      },
+      {
+        "file": "django_mirroring-0.2.3/src/mirroring/management/commands/restore_from_mirror.py",
+        "line": 422,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "psql_proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "hypeman",
+    "checked_at": "2026-08-17T21:59:56.944426",
+    "download_url": "https://files.pythonhosted.org/packages/4d/4a/3c984157defec9d2a763704a4673c6d525b1e775e677f21534d9b358ef03/hypeman-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hypeman-0.1.0/examples/exec_and_copy.py",
+        "line": 8,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = exec(client, instance_id, [\"cat\", \"/tmp/input.txt\"])"
+      },
+      {
+        "file": "hypeman-0.1.0/src/hypeman/lib/exec.py",
+        "line": 140,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec("
+      },
+      {
+        "file": "hypeman-0.1.0/tests/lib/test_websocket_lib.py",
+        "line": 141,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = exec("
+      },
+      {
+        "file": "hypeman-0.1.0/tests/lib/test_websocket_lib.py",
+        "line": 179,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = exec(FakeClient(base_url=\"http://localhost:4973\"), \"inst\", [\"false\"], connector=connector)"
+      },
+      {
+        "file": "hypeman-0.1.0/tests/lib/test_websocket_lib.py",
+        "line": 189,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(FakeClient(), \"inst\", [\"true\"], connector=connector)"
+      },
+      {
+        "file": "hypeman-0.1.0/tests/lib/test_websocket_lib.py",
+        "line": 196,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(FakeClient(), \"inst\", [\"do-once\"], connector=connector)"
+      },
+      {
+        "file": "hypeman-0.1.0/tests/lib/test_websocket_lib.py",
+        "line": 205,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(FakeClient(), \"inst\", [\"true\"], tty=tty, resize=resize, connector=connector)"
+      },
+      {
+        "file": "hypeman-0.1.0/tests/lib/test_websocket_lib.py",
+        "line": 213,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(FakeClient(), \"inst\", [\"true\"], connector=connector)"
+      },
+      {
+        "file": "hypeman-0.1.0/tests/lib/test_websocket_lib.py",
+        "line": 525,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(FakeClient(), \"../instance\", [\"true\"], connector=connector)"
+      },
+      {
+        "file": "hypeman-0.1.0/tests/lib/test_websocket_lib.py",
+        "line": 551,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(FakeClient(), \"inst\", \"echo\")"
+      }
+    ]
   }
 ]
