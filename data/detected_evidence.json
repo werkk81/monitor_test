@@ -9578,5 +9578,111 @@
         "code_snippet": "p = subprocess.Popen(cmd, stdout=subprocess.PIPE,"
       }
     ]
+  },
+  {
+    "package_name": "scubiee",
+    "checked_at": "2026-08-17T20:36:53.308286",
+    "download_url": "https://files.pythonhosted.org/packages/86/f1/b4132166983d2006e21924c389725e2b8e81650604dfb5dcaa64b5b1dcc1/scubiee-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "scubiee-0.2.0/packages/graphify/detect.py",
+        "line": 1094,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(target: Path) -> bool:"
+      },
+      {
+        "file": "scubiee-0.2.0/packages/graphify/detect.py",
+        "line": 1151,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _eval(path)"
+      },
+      {
+        "file": "scubiee-0.2.0/packages/graphify/detect.py",
+        "line": 1156,
+        "keyword_detected": "eval(",
+        "code_snippet": "if _eval(ancestor):"
+      },
+      {
+        "file": "scubiee-0.2.0/packages/graphify/detect.py",
+        "line": 1158,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _eval(path)"
+      },
+      {
+        "file": "scubiee-0.2.0/packages/pipeline/daemon.py",
+        "line": 272,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, **kwargs)  # noqa: S603"
+      },
+      {
+        "file": "scubiee-0.2.0/packages/pipeline/dashboard_port.py",
+        "line": 37,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
+      },
+      {
+        "file": "scubiee-0.2.0/packages/pipeline/dashboard_server.py",
+        "line": 689,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, **kwargs)"
+      },
+      {
+        "file": "scubiee-0.2.0/packages/pipeline/watchdog.py",
+        "line": 310,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, **kwargs)  # noqa: S603"
+      }
+    ]
+  },
+  {
+    "package_name": "isodec",
+    "checked_at": "2026-08-17T20:36:54.230605",
+    "download_url": "https://files.pythonhosted.org/packages/bd/8e/29ad38fd5d727cf9c606d14c5a382f07d7d8417ce61cfa18615ac4d03033/isodec-2.0.0b2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "isodec-2.0.0b2/extern/IsoGen/isogen/isogen_base.py",
+        "line": 220,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/extern/IsoGen/isogen/isogen_base.py",
+        "line": 258,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/extern/IsoGen/isogen/isogen_base.py",
+        "line": 280,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/isodec/models.py",
+        "line": 332,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/isodec/models.py",
+        "line": 372,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/isodec/models.py",
+        "line": 395,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/isodec/models.py",
+        "line": 414,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      }
+    ]
   }
 ]
