@@ -9994,5 +9994,83 @@
         "code_snippet": "p = subprocess.Popen(args, stdin=subprocess.PIPE)"
       }
     ]
+  },
+  {
+    "package_name": "maradocs-sdk-py",
+    "checked_at": "2026-08-17T23:00:53.973663",
+    "download_url": "https://files.pythonhosted.org/packages/5b/99/7f208624c4d5608d9dd6670556bac7b97eba9e8396d66dfeba955ef20634/maradocs_sdk_py-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "maradocs_sdk_py-0.2.0/src/maradocs/decode.py",
+        "line": 24,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(token)"
+      },
+      {
+        "file": "maradocs_sdk_py-0.2.0/src/maradocs/decode.py",
+        "line": 31,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "enc = base64.b64decode(payload[\"encryption_key\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "macos-harness",
+    "checked_at": "2026-08-17T23:00:54.139404",
+    "download_url": "https://files.pythonhosted.org/packages/94/07/1788c5675666ea1b450b8efeb0d902f59db07eafebe95ce618dc0ac31f24/macos_harness-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "macos_harness-0.1.2/src/macos_harness/browser.py",
+        "line": 129,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "approver = subprocess.Popen("
+      },
+      {
+        "file": "macos_harness-0.1.2/src/macos_harness/cli.py",
+        "line": 36,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, \"<macos-harness>\", \"exec\"), namespace, namespace)  # noqa: S102"
+      },
+      {
+        "file": "macos_harness-0.1.2/src/macos_harness/overlay.py",
+        "line": 25,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen[str] | None = None"
+      },
+      {
+        "file": "macos_harness-0.1.2/src/macos_harness/overlay.py",
+        "line": 74,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _start(self) -> subprocess.Popen[str]:"
+      },
+      {
+        "file": "macos_harness-0.1.2/src/macos_harness/overlay.py",
+        "line": 75,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "macos_harness-0.1.2/src/macos_harness/telemetry.py",
+        "line": 145,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "taiji-cli",
+    "checked_at": "2026-08-17T23:00:55.493556",
+    "download_url": "https://files.pythonhosted.org/packages/1c/a6/231f66a007139d973f248d226c3505f625a5ecfdf46d0a5b1142f1171b63/taiji_cli-0.6.23.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "taiji_cli-0.6.23/src/toad/jsonrpc.py",
+        "line": 316,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(parameter.annotation)"
+      }
+    ]
   }
 ]
