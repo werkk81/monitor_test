@@ -9698,5 +9698,55 @@
         "code_snippet": "exec(script.read(), globals())"
       }
     ]
+  },
+  {
+    "package_name": "isodec",
+    "checked_at": "2026-08-17T21:19:23.323090",
+    "download_url": "https://files.pythonhosted.org/packages/bd/8e/29ad38fd5d727cf9c606d14c5a382f07d7d8417ce61cfa18615ac4d03033/isodec-2.0.0b2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "isodec-2.0.0b2/extern/IsoGen/isogen/isogen_base.py",
+        "line": 220,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/extern/IsoGen/isogen/isogen_base.py",
+        "line": 258,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/extern/IsoGen/isogen/isogen_base.py",
+        "line": 280,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/isodec/models.py",
+        "line": 332,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/isodec/models.py",
+        "line": 372,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/isodec/models.py",
+        "line": 395,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "isodec-2.0.0b2/isodec/models.py",
+        "line": 414,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      }
+    ]
   }
 ]
