@@ -10186,5 +10186,271 @@
         "code_snippet": "expected = ast.literal_eval(expected_path.read_text(encoding=\"utf-8\"))"
       }
     ]
+  },
+  {
+    "package_name": "TrackmaniaRL",
+    "checked_at": "2026-08-18T19:22:27.206765",
+    "download_url": "https://files.pythonhosted.org/packages/97/55/41b12c701cbc9515feafbcbc66f4d9083d14f2e1f0c91ce9e49082c90c9b/trackmaniarl-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_behavior_cloning.py",
+        "line": 343,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_distributed_runtime.py",
+        "line": 647,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_distributed_runtime.py",
+        "line": 1027,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_distributed_runtime.py",
+        "line": 1368,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_distributed_runtime.py",
+        "line": 1408,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_distributed_runtime.py",
+        "line": 1721,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_iqn_lidar_release.py",
+        "line": 972,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_iqn_lidar_release.py",
+        "line": 1219,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_release_runtime.py",
+        "line": 452,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_release_runtime.py",
+        "line": 474,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_release_runtime.py",
+        "line": 500,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/tests/test_release_runtime.py",
+        "line": 527,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/_torch.py",
+        "line": 46,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.actor = deepcopy(actor).to(device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/implicit_quantile_q_learning.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model: Any = deepcopy(model).to(device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/implicit_quantile_q_learning.py",
+        "line": 357,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.target_model = deepcopy(self.model).to(self.device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/implicit_quantile_q_learning.py",
+        "line": 361,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.policy_anchor_model = deepcopy(self.model).to(self.device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/implicit_quantile_q_learning.py",
+        "line": 1119,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.policy_anchor_model = deepcopy(self.model).to(self.device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/randomized_ensemble_sac.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.target_model = deepcopy(self.model).to(self.device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/soft_actor_critic.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.target_model = deepcopy(self.model).to(self.device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/stable_discrete_soft_actor_critic.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.actor = deepcopy(actor).to(device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/stable_discrete_soft_actor_critic.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.target_model = deepcopy(self.model).to(self.device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/algorithms/truncated_quantile_critic.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.target_model = deepcopy(self.model).to(self.device).eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/cli.py",
+        "line": 1166,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/trackmania/behavior_cloning.py",
+        "line": 356,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/trackmania/behavior_cloning.py",
+        "line": 585,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "trackmaniarl-1.0.0/trackmaniarl/trackmania/telemetry.py",
+        "line": 48,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._socket: socket.socket | None = None"
+      }
+    ]
+  },
+  {
+    "package_name": "standardkernels",
+    "checked_at": "2026-08-18T19:22:27.447577",
+    "download_url": "https://files.pythonhosted.org/packages/d1/4b/806473a1ac1c591990446326a020953d4767d11cd1dd67d7d855104bc706/standardkernels-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "standardkernels-0.0.1/src/standardkernels/nn/geglu.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "raise RuntimeError(\"PreNormGEGLUFFN is inference-only; call eval() before use.\")"
+      }
+    ]
+  },
+  {
+    "package_name": "herold-odin",
+    "checked_at": "2026-08-18T19:22:27.520539",
+    "download_url": "https://files.pythonhosted.org/packages/46/d8/1fd2e7078980192171c34e824b72bd9b566d1b4741aa72d5f62ed3ae9577/herold_odin-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "herold_odin-1.1.0/src/herold_odin/cli.py",
+        "line": 143,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _resume_or_reexec(args: argparse.Namespace) -> tuple[bool, dict | int]:"
+      },
+      {
+        "file": "herold_odin-1.1.0/src/herold_odin/cli.py",
+        "line": 231,
+        "keyword_detected": "exec(",
+        "code_snippet": "forwarded, value = _resume_or_reexec(args)"
+      },
+      {
+        "file": "herold_odin-1.1.0/src/herold_odin/legacy_pack_api.py",
+        "line": 168,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "herold_odin-1.1.0/src/herold_odin/resources/bundle/packs/brokkr/runtime/quality.py",
+        "line": 153,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
+      },
+      {
+        "file": "herold_odin-1.1.0/src/herold_odin/resources/bundle/packs/brokkr/runtime/quality.py",
+        "line": 160,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(argv, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,"
+      },
+      {
+        "file": "herold_odin-1.1.0/src/herold_odin/resources/bundle/packs/freyja/runtime/decision.py",
+        "line": 233,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(direction_set,direction_id): return next((e for e in direction_set.get(\"evaluations\",[]) if e.get(\"direction_id\")==direction_id),None)"
+      },
+      {
+        "file": "herold_odin-1.1.0/src/herold_odin/resources/bundle/packs/freyja/runtime/decision.py",
+        "line": 236,
+        "keyword_detected": "eval(",
+        "code_snippet": "base=resolve_direction_selection(direction_set=direction_set,selection=selection); ev=_eval(direction_set,base[\"base_direction_id\"])"
+      },
+      {
+        "file": "herold_odin-1.1.0/src/herold_odin/resources/bundle/packs/freyja/runtime/decision.py",
+        "line": 243,
+        "keyword_detected": "eval(",
+        "code_snippet": "other=_eval(direction_set,did); rejected.append({\"direction_id\":did,\"reason\":\"hard constraint violation\" if not other[\"eligible\"] else \"lower ranked evidence score\",\"score\":other[\"weighted_score\"],\"hard_violation_ids\":[v[\"rule_id\"] for v in other.get(\"hard_violations\",[])]})"
+      }
+    ]
+  },
+  {
+    "package_name": "reeltime",
+    "checked_at": "2026-08-18T19:22:27.660145",
+    "download_url": "https://files.pythonhosted.org/packages/0b/99/5d98edab14c49c1141f0816ae270364879af2e13bb6e6301c2abf98ef478/reeltime-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "reeltime-0.1.1/src/reeltime/core/http/common.py",
+        "line": 89,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(raw)"
+      },
+      {
+        "file": "reeltime-0.1.1/src/reeltime/core/http/common.py",
+        "line": 140,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return [base64.b64decode(chunk) for chunk in chunks]"
+      },
+      {
+        "file": "reeltime-0.1.1/tests/test_http.py",
+        "line": 101,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(event.res[\"body\"][\"raw\"]) == payload"
+      },
+      {
+        "file": "reeltime-0.1.1/tests/test_redact.py",
+        "line": 172,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(token + \"===\", validate=True).decode(\"utf-8\", \"ignore\")"
+      }
+    ]
   }
 ]
