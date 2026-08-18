@@ -12450,5 +12450,79 @@
         "code_snippet": "def stop(proc: subprocess.Popen) -> None:"
       }
     ]
+  },
+  {
+    "package_name": "deadman-kit",
+    "checked_at": "2026-08-18T20:42:38.656046",
+    "download_url": "https://files.pythonhosted.org/packages/55/01/462148416a20d604d6909eb7db1e5462c4ea8245d437f03790564a241977/deadman_kit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "deadman_kit-0.1.0/tests/test_g11_ledger.py",
+        "line": 285,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs = [subprocess.Popen([sys.executable, str(script), root, str(paths.root), str(n), w],"
+      },
+      {
+        "file": "deadman_kit-0.1.0/tests/test_g9_todo_en_llamas.py",
+        "line": 182,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sys.executable, str(script), pkg, root, store], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "ubiquity",
+    "checked_at": "2026-08-18T20:42:38.880555",
+    "download_url": "https://files.pythonhosted.org/packages/ab/3b/dd5b066f37c27799ee469a542fc37d307049b3568d170d3e2b1ca4d868dd/ubiquity-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ubiquity-0.0.1/src/ubiquity/tools/grep.py",
+        "line": 156,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "servette",
+    "checked_at": "2026-08-18T20:42:39.316523",
+    "download_url": "https://files.pythonhosted.org/packages/70/27/729ad3112cd1177874f86b7a1b43ac361e926c63784a13fe2a2622cdc2c7/servette-0.26.230.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "servette-0.26.230/servette.py",
+        "line": 1403,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded        = base64.b64decode(auth[6:]).decode(\"utf-8\", errors=\"strict\")"
+      },
+      {
+        "file": "servette-0.26.230/servette.py",
+        "line": 3111,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with _socket.socket(_socket.AF_INET, _socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "servette-0.26.230/tests/test.py",
+        "line": 3493,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock_a, sock_b = socket.socketpair()"
+      }
+    ]
+  },
+  {
+    "package_name": "crawlerflow",
+    "checked_at": "2026-08-18T20:42:39.702145",
+    "download_url": "https://files.pythonhosted.org/packages/8d/de/19c919f4463be1a85b293ec8535a57ba6c2be63f971baff30c68b8550bb7/crawlerflow-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "crawlerflow-0.2.0/crawlerflow/expressions/engine.py",
+        "line": 153,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(f\"({raw_arguments},)\")"
+      }
+    ]
   }
 ]
