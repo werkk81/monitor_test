@@ -12702,5 +12702,19 @@
         "code_snippet": "key = base64.b64decode(access_key)"
       }
     ]
+  },
+  {
+    "package_name": "tensoratlas",
+    "checked_at": "2026-08-18T22:16:38.364457",
+    "download_url": "https://files.pythonhosted.org/packages/2d/d1/9df7684a9c7bb33c0a530ac38df007f56573ecca46e26ae0e9661d9567da/tensoratlas-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tensoratlas-0.1.0/src/tensoratlas/semantic_rewrite.py",
+        "line": 236,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(env):"
+      }
+    ]
   }
 ]
