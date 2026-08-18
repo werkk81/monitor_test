@@ -13016,5 +13016,61 @@
         "code_snippet": "\"child=subprocess.Popen([sys.executable,'-c','import time; time.sleep(30)']); \""
       }
     ]
+  },
+  {
+    "package_name": "TrustRail",
+    "checked_at": "2026-08-18T23:00:07.027869",
+    "download_url": "https://files.pythonhosted.org/packages/31/54/66f9c7c1111e623874b6081cc920dd5290c8146b1f962046a3a54dbbc05c/trustrail-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "trustrail-0.1.0/src/TrustRail/normalization/normalizer.py",
+        "line": 253,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "for decoder in (base64.b64decode, base64.urlsafe_b64decode):"
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_policy_completeness.py",
+        "line": 189,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = guard.check(\"Here is the code: result = eval(user_input)\", GuardStage.LLM_RESPONSE)"
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 18,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"result = eval(user_input)\","
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 19,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec(compile(code, '<string>', 'exec'))\","
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 22,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen(['bash', '-c', cmd])\","
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"setTimeout('eval(data)', 100)\","
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rule.evaluate(\"x = eval(input())\", _ctx())"
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_output.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_detects_backtick_exec(self):"
+      }
+    ]
   }
 ]
