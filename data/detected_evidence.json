@@ -10472,5 +10472,195 @@
         "code_snippet": "@pytest.mark.parametrize(\"call\", [\"exec('1')\", \"eval('1')\", \"__import__('os')\"])"
       }
     ]
+  },
+  {
+    "package_name": "mindweft",
+    "checked_at": "2026-08-18T19:58:11.087590",
+    "download_url": "https://files.pythonhosted.org/packages/e6/78/ff41a746198d5064e0dc0d9f59907eb2dc559758e2313617528e85e9b1e7/mindweft-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mindweft-0.1.0/app/main.py",
+        "line": 473,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(part.data, validate=True)"
+      },
+      {
+        "file": "mindweft-0.1.0/app/main.py",
+        "line": 1585,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(upload.data, validate=True)"
+      },
+      {
+        "file": "mindweft-0.1.0/app/session_auth.py",
+        "line": 359,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "salt = base64.b64decode(salt_text, validate=True)"
+      },
+      {
+        "file": "mindweft-0.1.0/app/session_auth.py",
+        "line": 360,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "expected = base64.b64decode(expected_text, validate=True)"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_client/speech.py",
+        "line": 78,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_process: subprocess.Popen[str] | None = field(default=None, init=False)"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_client/speech.py",
+        "line": 94,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen(command, text=True)"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_client/speech.py",
+        "line": 130,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_playback_process: subprocess.Popen[bytes] | None = field(default=None, init=False)"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_client/speech.py",
+        "line": 277,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._playback_process = subprocess.Popen([afplay, str(output_path)])"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/bridge/stdio.py",
+        "line": 82,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/orchestration.py",
+        "line": 38,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "processes: list[subprocess.Popen[str]] = []"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/orchestration.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "managed_http_processes: list[tuple[CodingMCPServerSpec, subprocess.Popen[str]]] = []"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/processes.py",
+        "line": 16,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def start_process(command: list[str], *, env: dict[str, str], label: str) -> subprocess.Popen[str]:"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/processes.py",
+        "line": 18,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(command, env=env, text=True, start_new_session=True)"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/processes.py",
+        "line": 49,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def wait_for_managed_http_server(spec: CodingMCPServerSpec, process: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/processes.py",
+        "line": 76,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def wait_for_processes(processes: list[subprocess.Popen[str]]) -> int:"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/processes.py",
+        "line": 87,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def stop_process(process: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/servers/shell.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_ACTIVE_COMMAND_PROCESSES: set[subprocess.Popen[str]] = set()"
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/servers/shell.py",
+        "line": 97,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "mindweft-0.1.0/mindweft_workspace/servers/shell.py",
+        "line": 169,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_process_group(process: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "mindweft-0.1.0/tests/test_api.py",
+        "line": 723,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content=base64.b64decode(PNG_1X1_BASE64),"
+      },
+      {
+        "file": "mindweft-0.1.0/tests/test_api.py",
+        "line": 744,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content=base64.b64decode(PNG_1X1_BASE64),"
+      },
+      {
+        "file": "mindweft-0.1.0/tests/test_api.py",
+        "line": 815,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content=base64.b64decode(PNG_1X1_BASE64),"
+      },
+      {
+        "file": "mindweft-0.1.0/tests/test_api.py",
+        "line": 934,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png = base64.b64decode(PNG_1X1_BASE64)"
+      },
+      {
+        "file": "mindweft-0.1.0/tests/test_minigent_client.py",
+        "line": 755,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"minigent_client.speech.subprocess.Popen\", fake_popen)"
+      },
+      {
+        "file": "mindweft-0.1.0/tests/test_minigent_client.py",
+        "line": 1223,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"minigent_client.speech.subprocess.Popen\", lambda command, text: FakeProcess()"
+      },
+      {
+        "file": "mindweft-0.1.0/tests/test_minigent_client.py",
+        "line": 1338,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"minigent_client.speech.subprocess.Popen\", fake_popen)"
+      },
+      {
+        "file": "mindweft-0.1.0/tests/test_minigent_client.py",
+        "line": 1395,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"minigent_client.speech.subprocess.Popen\", FakeProcess)"
+      }
+    ]
+  },
+  {
+    "package_name": "sugarai-erp-connector-base",
+    "checked_at": "2026-08-18T19:58:11.550668",
+    "download_url": "https://files.pythonhosted.org/packages/92/3c/395a89b978d9fbbf01e78df959a65a4d30cba20401ca3f2704ba6851e614/sugarai_erp_connector_base-1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sugarai_erp_connector_base-1.1/connector_base/tests/test_extension_safety.py",
+        "line": 188,
+        "keyword_detected": "eval(",
+        "code_snippet": "@pytest.mark.parametrize(\"call\", [\"exec('1')\", \"eval('1')\", \"__import__('os')\"])"
+      },
+      {
+        "file": "sugarai_erp_connector_base-1.1/connector_base/tests/test_extension_safety.py",
+        "line": 188,
+        "keyword_detected": "exec(",
+        "code_snippet": "@pytest.mark.parametrize(\"call\", [\"exec('1')\", \"eval('1')\", \"__import__('os')\"])"
+      }
+    ]
   }
 ]
