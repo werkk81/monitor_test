@@ -10452,5 +10452,25 @@
         "code_snippet": "decoded = base64.b64decode(token + \"===\", validate=True).decode(\"utf-8\", \"ignore\")"
       }
     ]
+  },
+  {
+    "package_name": "sugarai-erp-connector-base",
+    "checked_at": "2026-08-18T19:45:39.847953",
+    "download_url": "https://files.pythonhosted.org/packages/92/3c/395a89b978d9fbbf01e78df959a65a4d30cba20401ca3f2704ba6851e614/sugarai_erp_connector_base-1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sugarai_erp_connector_base-1.1/connector_base/tests/test_extension_safety.py",
+        "line": 188,
+        "keyword_detected": "eval(",
+        "code_snippet": "@pytest.mark.parametrize(\"call\", [\"exec('1')\", \"eval('1')\", \"__import__('os')\"])"
+      },
+      {
+        "file": "sugarai_erp_connector_base-1.1/connector_base/tests/test_extension_safety.py",
+        "line": 188,
+        "keyword_detected": "exec(",
+        "code_snippet": "@pytest.mark.parametrize(\"call\", [\"exec('1')\", \"eval('1')\", \"__import__('os')\"])"
+      }
+    ]
   }
 ]
