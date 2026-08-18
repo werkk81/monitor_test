@@ -10072,5 +10072,119 @@
         "code_snippet": "eval(parameter.annotation)"
       }
     ]
+  },
+  {
+    "package_name": "airtel-odu-app",
+    "checked_at": "2026-08-18T18:57:51.235065",
+    "download_url": "https://files.pythonhosted.org/packages/12/c9/b850c7d4329fcda877d91d4d9ce66973087013854f488c82cc57130b4de7/airtel_odu_app-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "airtel_odu_app-0.1.0/airtel_odu_app/app.py",
+        "line": 924,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "airtel_odu_app-0.1.0/airtel_odu_app/core/zlt.py",
+        "line": 1005,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(blob + \"=\" * (-len(blob) % 4))"
+      }
+    ]
+  },
+  {
+    "package_name": "keel-trust",
+    "checked_at": "2026-08-18T18:57:51.335051",
+    "download_url": "https://files.pythonhosted.org/packages/71/76/b71f4fe98cf431c32b2044cacc31b1ccbdca111bbf16cfb5cee5625f94aa/keel_trust-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "keel_trust-0.3.0/keel/cert/authority.py",
+        "line": 48,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "candidates.append(base64.b64decode(raw, validate=True).decode())"
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/gateway/mcp_proxy.py",
+        "line": 124,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"async def handler({sig}):\\n\""
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 72,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, sql: str, args: Iterable[Any] = ()) -> sqlite3.Cursor:"
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 87,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"INSERT OR REPLACE INTO kv (k,v) VALUES (?,?)\", (k, json.dumps(v)))"
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 91,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 105,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"INSERT OR REPLACE INTO alias VALUES (?,?,?,?)\","
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 113,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"INSERT OR REPLACE INTO topo_edge VALUES (?,?,?,?,?)\","
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 157,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 168,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"DELETE FROM incident WHERE incident_id=?\", (incident_id,))"
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 201,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"INSERT OR REPLACE INTO certificate VALUES (?,?,?,?)\","
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 218,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"INSERT OR REPLACE INTO outcome VALUES (?,?)\","
+      },
+      {
+        "file": "keel_trust-0.3.0/keel/store.py",
+        "line": 226,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"INSERT INTO translog VALUES (?,?,?,?)\", (idx, leaf_hash, cert_id, ts))"
+      }
+    ]
+  },
+  {
+    "package_name": "nrdl",
+    "checked_at": "2026-08-18T18:57:51.366024",
+    "download_url": "https://files.pythonhosted.org/packages/04/d5/db1a72fa9ab074ec1651f22adcfb265b91c639c79ef62df2be59bde1adff/nrdl-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nrdl-0.1.0/tests/test_samples.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "expected = ast.literal_eval(expected_path.read_text(encoding=\"utf-8\"))"
+      }
+    ]
   }
 ]
