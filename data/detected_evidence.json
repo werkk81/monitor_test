@@ -12524,5 +12524,19 @@
         "code_snippet": "parsed = ast.literal_eval(f\"({raw_arguments},)\")"
       }
     ]
+  },
+  {
+    "package_name": "mcp-atlassian-cli",
+    "checked_at": "2026-08-18T21:00:03.481662",
+    "download_url": "https://files.pythonhosted.org/packages/dc/ff/abc9ab316acddb685af30db2b2fdcbf79f9da9b975235466745f8ed5a063/mcp_atlassian_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mcp_atlassian_cli-0.1.0/tests/test_main.py",
+        "line": 274,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
