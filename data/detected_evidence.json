@@ -12716,5 +12716,305 @@
         "code_snippet": "def _eval(env):"
       }
     ]
+  },
+  {
+    "package_name": "TrustRail",
+    "checked_at": "2026-08-18T22:43:00.215920",
+    "download_url": "https://files.pythonhosted.org/packages/31/54/66f9c7c1111e623874b6081cc920dd5290c8146b1f962046a3a54dbbc05c/trustrail-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "trustrail-0.1.0/src/TrustRail/normalization/normalizer.py",
+        "line": 253,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "for decoder in (base64.b64decode, base64.urlsafe_b64decode):"
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_policy_completeness.py",
+        "line": 189,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = guard.check(\"Here is the code: result = eval(user_input)\", GuardStage.LLM_RESPONSE)"
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 18,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"result = eval(user_input)\","
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 19,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec(compile(code, '<string>', 'exec'))\","
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 22,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen(['bash', '-c', cmd])\","
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"setTimeout('eval(data)', 100)\","
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_code_injection.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rule.evaluate(\"x = eval(input())\", _ctx())"
+      },
+      {
+        "file": "trustrail-0.1.0/tests/unit/test_rules_output.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_detects_backtick_exec(self):"
+      }
+    ]
+  },
+  {
+    "package_name": "leader-agent",
+    "checked_at": "2026-08-18T22:43:00.428652",
+    "download_url": "https://files.pythonhosted.org/packages/e4/a2/5b6fe071441cdd5ee3da50638e8fecd065910d4e7278d629bd343e569aca/leader_agent-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "leader_agent-0.2.0/leader/adapters/openclaw.py",
+        "line": 26,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "leader_agent-0.2.0/leader/adapters/zeroclaw.py",
+        "line": 26,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "vanth",
+    "checked_at": "2026-08-18T22:43:00.768251",
+    "download_url": "https://files.pythonhosted.org/packages/f0/aa/2b189bbe28e322c9d1bba6e6e6c5546ce796e676723e4ff5ed0d78149c8a/vanth-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "vanth-1.0.1/scripts/chaos_matrix.py",
+        "line": 54,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "vanth-1.0.1/scripts/chaos_matrix.py",
+        "line": 205,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/scripts/chaos_matrix.py",
+        "line": 257,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "final = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/scripts/chaos_matrix.py",
+        "line": 350,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/scripts/chaos_matrix.py",
+        "line": 504,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with _socket.socket() as sock:"
+      },
+      {
+        "file": "vanth-1.0.1/scripts/chaos_matrix.py",
+        "line": 509,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "daemon = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/scripts/demo_jobs.py",
+        "line": 60,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/src/vanth/client.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/src/vanth/codex_bridge.py",
+        "line": 53,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/src/vanth/runner.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _abort_workload(manager: JobManager, job_id: str, proc: subprocess.Popen[bytes]) -> int:"
+      },
+      {
+        "file": "vanth-1.0.1/src/vanth/runner.py",
+        "line": 56,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/src/vanth/server.py",
+        "line": 195,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.processes: dict[str, subprocess.Popen[bytes]] = {}"
+      },
+      {
+        "file": "vanth-1.0.1/src/vanth/server.py",
+        "line": 878,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/src/vanth/server.py",
+        "line": 938,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _watch_runner(self, job_id: str, proc: subprocess.Popen[bytes]) -> None:"
+      },
+      {
+        "file": "vanth-1.0.1/src/vanth/server.py",
+        "line": 1045,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _watch(self, job_id: str, proc: subprocess.Popen[bytes], timeout_seconds: int | None) -> None:"
+      },
+      {
+        "file": "vanth-1.0.1/src/vanth/server.py",
+        "line": 1064,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_process(self, proc: subprocess.Popen[bytes], force: bool) -> None:"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_cli.py",
+        "line": 15,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_cli.py",
+        "line": 25,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_cli.py",
+        "line": 110,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon.py",
+        "line": 10,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon.py",
+        "line": 17,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon_discovery.py",
+        "line": 13,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon_discovery.py",
+        "line": 20,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon_hardening.py",
+        "line": 17,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon_hardening.py",
+        "line": 24,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon_hardening.py",
+        "line": 165,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "second = subprocess.Popen([sys.executable, \"-m\", \"vanth.daemon\"], env=env, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon_hardening.py",
+        "line": 184,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "request_socket = socket.socket()"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon_hardening.py",
+        "line": 284,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with _socket.socket() as sock:"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon_hardening.py",
+        "line": 289,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_daemon_hardening.py",
+        "line": 304,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc2 = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_mcp_stdio.py",
+        "line": 21,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_mcp_stdio.py",
+        "line": 28,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_release_workloads.py",
+        "line": 162,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs = [subprocess.Popen([sys.executable, \"-c\", worker], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True) for _ in range(6)]"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_telemetry.py",
+        "line": 19,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_telemetry.py",
+        "line": 128,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "vanth-1.0.1/tests/test_v1_hardening.py",
+        "line": 273,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"child=subprocess.Popen([sys.executable,'-c','import time; time.sleep(30)']); \""
+      }
+    ]
   }
 ]
