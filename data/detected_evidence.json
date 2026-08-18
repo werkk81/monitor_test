@@ -10662,5 +10662,1793 @@
         "code_snippet": "@pytest.mark.parametrize(\"call\", [\"exec('1')\", \"eval('1')\", \"__import__('os')\"])"
       }
     ]
+  },
+  {
+    "package_name": "mcp-agent-guard",
+    "checked_at": "2026-08-18T20:16:43.145285",
+    "download_url": "https://files.pythonhosted.org/packages/61/9c/5f3ee392a874824614effed97a2c0dc43a55dab2b02ab4090ea929a1f7bf/mcp_agent_guard-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mcp_agent_guard-0.1.0/agent_guard/detectors/secrets.py",
+        "line": 56,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(token, validate=True).decode(\"utf-8\", errors=\"strict\")"
+      },
+      {
+        "file": "mcp_agent_guard-0.1.0/agent_guard/detectors/taint.py",
+        "line": 18,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(token, validate=True).decode(\"utf-8\", errors=\"strict\")"
+      }
+    ]
+  },
+  {
+    "package_name": "marrow-agent",
+    "checked_at": "2026-08-18T20:16:44.073004",
+    "download_url": "https://files.pythonhosted.org/packages/b6/f9/57a6fbc1cd6da70e40b03d21991bcb02ad3b911a52a4dd63302b89ec572b/marrow_agent-0.19.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "marrow_agent-0.19.0/acp_adapter/server.py",
+        "line": 329,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(blob, validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/agent_runtime_helpers.py",
+        "line": 3409,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "* The Python ``socket.socket`` we close here is the SAME object held by"
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/agent_runtime_helpers.py",
+        "line": 3424,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "the FD via the same ``socket.socket`` object, and because Python's socket"
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/bedrock_adapter.py",
+        "line": 561,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_bytes = base64.b64decode(data)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/copilot_acp_client.py",
+        "line": 420,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._active_process: subprocess.Popen[str] | None = None"
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/copilot_acp_client.py",
+        "line": 424,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: subprocess.Popen[str] | None"
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/copilot_acp_client.py",
+        "line": 506,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/copilot_acp_client.py",
+        "line": 668,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[str],"
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/gemini_native_adapter.py",
+        "line": 229,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(encoded)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/image_gen_provider.py",
+        "line": 251,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(b64_data)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/lsp/client.py",
+        "line": 306,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/transports/codex_app_server.py",
+        "line": 130,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/agent/video_gen_provider.py",
+        "line": 225,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(b64_data)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/cli.py",
+        "line": 863,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _patched_exec(module):"
+      },
+      {
+        "file": "marrow_agent-0.19.0/cli.py",
+        "line": 864,
+        "keyword_detected": "exec(",
+        "code_snippet": "_orig_exec(module)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/cli.py",
+        "line": 1385,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Windows form (``C:\\\\Users\\\\...``) that Python's ``subprocess.Popen``"
+      },
+      {
+        "file": "marrow_agent-0.19.0/cli.py",
+        "line": 1416,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "the result directly to ``Path``/``subprocess.Popen(cwd=...)`` on"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/platforms/qqbot/adapter.py",
+        "line": 2115,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/platforms/qqbot/crypto.py",
+        "line": 37,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(key_base64)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/platforms/qqbot/crypto.py",
+        "line": 38,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(encrypted_base64)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/platforms/signal.py",
+        "line": 903,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_data = base64.b64decode(result)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/platforms/webhook.py",
+        "line": 1096,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(encoded_secret, validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/platforms/weixin.py",
+        "line": 352,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(aes_key_b64)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/platforms/whatsapp_cloud.py",
+        "line": 1250,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/platforms/yuanbao.py",
+        "line": 1970,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "pb = base64.b64decode(value)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/relay/ws_transport.py",
+        "line": 233,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "body = base64.b64decode(body_b64)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/run.py",
+        "line": 1689,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# Expand shell tilde in local/container cwd so subprocess.Popen"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/run.py",
+        "line": 2346,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/run.py",
+        "line": 6822,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/run.py",
+        "line": 6857,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/run.py",
+        "line": 6881,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/run.py",
+        "line": 6889,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/run.py",
+        "line": 6968,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/shutdown_forensics.py",
+        "line": 257,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/slash_commands.py",
+        "line": 4939,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdout=f, stderr=subprocess.STDOUT, env=env)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/slash_commands.py",
+        "line": 4945,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/slash_commands.py",
+        "line": 4969,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/slash_commands.py",
+        "line": 4977,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/gateway/systemd_notify.py",
+        "line": 32,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM) as sender:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 7,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "shim.  ``subprocess.Popen([\"npm\", ...])`` fails with WinError 193"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 16,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "* Console-window flashes — every ``subprocess.Popen`` of a ``.exe`` on"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 59,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "``subprocess.Popen([\"npm\", \"install\"])`` fails with WinError 193"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 84,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "A list suitable for passing to subprocess.Popen/run/call."
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 120,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen — on POSIX use ``start_new_session=True`` instead,"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 143,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "on the ``subprocess.Popen`` call.  Callers in this codebase already"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 164,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "``OSError`` (``PermissionError``) on the ``subprocess.Popen`` call."
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 172,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(argv, creationflags=windows_detach_flags(), …)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 174,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 215,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 228,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(..., start_new_session=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 244,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_git_process_tree(proc: \"subprocess.Popen\") -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/_subprocess_compat.py",
+        "line": 307,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/browser_connect.py",
+        "line": 235,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(family, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/browser_connect.py",
+        "line": 274,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: subprocess.Popen,"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/browser_connect.py",
+        "line": 380,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/cli_commands_mixin.py",
+        "line": 1999,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/clipboard.py",
+        "line": 208,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "image_bytes = base64.b64decode(b64_data, validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway.py",
+        "line": 846,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(cmd, **_popen_kwargs)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway.py",
+        "line": 854,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(cmd, **_popen_kwargs)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway.py",
+        "line": 857,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(cmd, **_popen_kwargs)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway.py",
+        "line": 875,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway.py",
+        "line": 893,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway.py",
+        "line": 3905,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway.py",
+        "line": 4149,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway_windows.py",
+        "line": 773,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "native argv for direct ``subprocess.Popen`` invocation — no cmd.exe"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway_windows.py",
+        "line": 929,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/gateway_windows.py",
+        "line": 946,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/kanban_db.py",
+        "line": 8672,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(  # noqa: S603 -- argv is a fixed list built above"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/main.py",
+        "line": 4969,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/main.py",
+        "line": 8819,
+        "keyword_detected": "exec(",
+        "code_snippet": "across ``exec()``, so pip and git subprocesses also stop dying on"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/main.py",
+        "line": 12919,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# subprocess.Popen + sys.exit() on Windows to avoid the crash."
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/main.py",
+        "line": 12921,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(reexec_argv, env=env)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/status.py",
+        "line": 609,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/tools_config.py",
+        "line": 1127,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/tools_config.py",
+        "line": 1142,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/tools_config.py",
+        "line": 1228,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# Use the resolved npm_bin absolute path so subprocess.Popen can"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 2171,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(encoded, validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 3639,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_ACTION_PROCS: Dict[str, subprocess.Popen] = {}"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 3676,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn_marrow_action(subcommand: List[str], name: str) -> subprocess.Popen:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 3712,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, **popen_kwargs)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 3834,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn_gateway_restart(profile: Optional[str] = None) -> Tuple[subprocess.Popen, bool]:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 4174,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "audio_bytes = base64.b64decode(encoded, validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 8301,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: subprocess.Popen | None"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 8433,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn_whatsapp_pairing_process(session_path: Path, mode: str) -> subprocess.Popen:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 8457,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 8478,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_whatsapp_pairing(proc: subprocess.Popen | None) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 8493,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _watch_whatsapp_pairing(pairing_id: str, proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 14702,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"cmd.exe\", \"/c\", \"start\", \"\", command])"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 14711,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"osascript\", \"-e\", applescript])"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/web_server.py",
+        "line": 14731,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(popen_args)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/marrow_cli/windows_ssh_runtime.py",
+        "line": 429,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(args, stdin=subprocess.DEVNULL, stdout=log_stream, stderr=log_stream,"
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/godmode/scripts/auto_jailbreak.py",
+        "line": 9,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(open(os.path.expanduser("
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/godmode/scripts/auto_jailbreak.py",
+        "line": 33,
+        "keyword_detected": "exec(",
+        "code_snippet": "# Resolve skill directory — works both as direct script and via exec()"
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/godmode/scripts/auto_jailbreak.py",
+        "line": 37,
+        "keyword_detected": "exec(",
+        "code_snippet": "# __file__ not defined when loaded via exec() — search standard paths"
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/godmode/scripts/auto_jailbreak.py",
+        "line": 52,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(open(_parseltongue_path).read(), str(_parseltongue_path), 'exec'), _caller_globals)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/godmode/scripts/auto_jailbreak.py",
+        "line": 54,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(open(_race_path).read(), str(_race_path), 'exec'), _caller_globals)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/godmode/scripts/godmode_race.py",
+        "line": 10,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(open(os.path.join(os.environ.get(\"MARROW_HOME\", os.path.expanduser(\"~/.marrow\")), \"skills/red-teaming/godmode/scripts/godmode_race.py\")).read())"
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/godmode/scripts/load_godmode.py",
+        "line": 5,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(open(os.path.expanduser("
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/godmode/scripts/load_godmode.py",
+        "line": 29,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(open(path).read(), str(path), 'exec'), ns)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/godmode/scripts/parseltongue.py",
+        "line": 14,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(open(os.path.join(os.environ.get(\"MARROW_HOME\", os.path.expanduser(\"~/.marrow\")), \"skills/red-teaming/godmode/scripts/parseltongue.py\")).read())"
+      },
+      {
+        "file": "marrow_agent-0.19.0/optional-skills/security/unbroker/scripts/cdp.py",
+        "line": 158,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, **kwargs)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/dashboard_auth/basic/__init__.py",
+        "line": 146,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "salt = base64.b64decode(salt_b64)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/dashboard_auth/basic/__init__.py",
+        "line": 147,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "expected = base64.b64decode(dk_b64)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/dashboard_auth/basic/__init__.py",
+        "line": 384,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "for decoder in (base64.b64decode, bytes.fromhex):"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/google_meet/process_manager.py",
+        "line": 163,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/google_meet/realtime/openai_client.py",
+        "line": 173,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "chunk = base64.b64decode(b64)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/image_gen/openai/__init__.py",
+        "line": 148,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(b64), f\"image.{ext}\""
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/image_gen/openai-codex/__init__.py",
+        "line": 213,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(data, validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/memory/mem0/_setup.py",
+        "line": 615,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/memory/openviking/__init__.py",
+        "line": 1170,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/email/adapter.py",
+        "line": 75,
+        "keyword_detected": "socket.socket",
+        "code_snippet": ") -> socket.socket:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/email/adapter.py",
+        "line": 86,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(family, socktype, proto)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/photon/adapter.py",
+        "line": 322,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._sidecar_proc: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/photon/adapter.py",
+        "line": 982,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._sidecar_proc = subprocess.Popen(  # noqa: S603"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/photon/adapter.py",
+        "line": 1025,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "async def _supervise_sidecar(self, proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/photon/adapter.py",
+        "line": 1639,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(data_b64)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/raft/adapter.py",
+        "line": 464,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._bridge_process: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/raft/adapter.py",
+        "line": 490,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with _socket.socket(_socket.AF_INET, _socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/raft/adapter.py",
+        "line": 548,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._bridge_process = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/telegram/adapter.py",
+        "line": 6347,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/wecom/adapter.py",
+        "line": 804,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(payload)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/wecom/adapter.py",
+        "line": 1072,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(aes_key)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/wecom/callback_adapter.py",
+        "line": 134,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with _socket.socket(_socket.AF_INET, _socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/wecom/wecom_crypto.py",
+        "line": 81,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.key = base64.b64decode(encoding_aes_key + \"=\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/wecom/wecom_crypto.py",
+        "line": 93,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "cipher_text = base64.b64decode(encrypt)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/whatsapp/adapter.py",
+        "line": 398,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._bridge_process: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/platforms/whatsapp/adapter.py",
+        "line": 642,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._bridge_process = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/__init__.py",
+        "line": 7,
+        "keyword_detected": "eval(",
+        "code_snippet": "dangerous code patterns (eval(, pickle.load, yaml.load, os.system,"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/__init__.py",
+        "line": 15,
+        "keyword_detected": "eval(",
+        "code_snippet": "Why not block? Patterns have a non-trivial false-positive rate (``eval(`` in"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/patterns.py",
+        "line": 96,
+        "keyword_detected": "exec(",
+        "code_snippet": "# Gate to JS/TS files — bare `exec(` otherwise fires on Python's"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/patterns.py",
+        "line": 97,
+        "keyword_detected": "exec(",
+        "code_snippet": "# exec() and on prose/docstrings mentioning exec."
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/patterns.py",
+        "line": 101,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"reminder\": \"\"\"⚠️ Security Warning: Using child_process.exec() can lead to command injection vulnerabilities."
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/patterns.py",
+        "line": 103,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec() runs the command string through a shell, so any user input interpolated into it can inject arbitrary commands. Prefer child_process.execFile() (or spawn()) with an argument array instead of building a shell string."
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/patterns.py",
+        "line": 106,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(`command ${userInput}`)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/patterns.py",
+        "line": 116,
+        "keyword_detected": "exec(",
+        "code_snippet": "Only use exec() if you absolutely need shell features and the input is guaranteed to be safe.\"\"\","
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/patterns.py",
+        "line": 125,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Lookbehind excludes `.` so method calls like PyTorch model.eval(),"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/patterns.py",
+        "line": 126,
+        "keyword_detected": "eval(",
+        "code_snippet": "# redis.eval(), spec.eval() don't match. Skip doc/prose files."
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/security-guidance/patterns.py",
+        "line": 129,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"reminder\": \"⚠️ Security Warning: eval() executes arbitrary code and is a major security risk. Use JSON.parse() for data, ast.literal_eval() for Python literals, or a safe expression parser. If this is safe or is explicitly needed, briefly document that in a comment before continuing.\","
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/teams_pipeline/pipeline.py",
+        "line": 498,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/web/ddgs/provider.py",
+        "line": 84,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_last_worker_proc: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/web/ddgs/provider.py",
+        "line": 109,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: Optional[subprocess.Popen],"
+      },
+      {
+        "file": "marrow_agent-0.19.0/plugins/web/ddgs/provider.py",
+        "line": 187,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/run_agent.py",
+        "line": 5359,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "tmp.write(base64.b64decode(data))"
+      },
+      {
+        "file": "marrow_agent-0.19.0/skills/productivity/docx/scripts/office/soffice.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/skills/productivity/powerpoint/scripts/office/soffice.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/skills/productivity/xlsx/scripts/office/soffice.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tests/test_install_sh_pythonpath_sanitization.py",
+        "line": 23,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_marrow_launcher_wrapper_clears_python_env_before_exec() -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tests/test_live_system_guard_self_test.py",
+        "line": 177,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"systemctl\", \"--user\", \"stop\", \"marrow-gateway\"])"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tests/test_live_system_guard_self_test.py",
+        "line": 234,
+        "keyword_detected": "exec(",
+        "code_snippet": "await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tests/test_live_system_guard_self_test.py",
+        "line": 330,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([\"sleep\", \"30\"])"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tests/test_run_tests_parallel.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tests/test_stale_utils_module_import.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, mod.__file__, \"exec\"), mod.__dict__)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tests/test_windows_subprocess_no_window_flags.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "``_subprocess_compat.subprocess.Popen`` — which is the shared ``subprocess``"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/approval.py",
+        "line": 679,
+        "keyword_detected": "exec(",
+        "code_snippet": "(r'\\bfind\\b.*-exec(?:dir)?\\s+(/\\S*/)?rm\\b', \"find -exec/-execdir rm\"),"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_supervisor.py",
+        "line": 537,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def _do_eval(by_value: bool) -> Dict[str, Any]:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_supervisor.py",
+        "line": 554,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _run_eval(by_value: bool) -> Dict[str, Any]:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_supervisor.py",
+        "line": 555,
+        "keyword_detected": "eval(",
+        "code_snippet": "fut = safe_schedule_threadsafe(_do_eval(by_value), loop)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_supervisor.py",
+        "line": 561,
+        "keyword_detected": "eval(",
+        "code_snippet": "response = _run_eval(return_by_value)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_supervisor.py",
+        "line": 573,
+        "keyword_detected": "eval(",
+        "code_snippet": "response = _run_eval(False)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_tool.py",
+        "line": 1148,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_tool.py",
+        "line": 2489,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_tool.py",
+        "line": 3401,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _browser_eval(expression, task_id)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_tool.py",
+        "line": 3679,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _browser_eval(expression: str, task_id: Optional[str] = None) -> str:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_tool.py",
+        "line": 3700,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _camofox_eval(expression, task_id)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/browser_tool.py",
+        "line": 3860,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _camofox_eval(expression: str, task_id: Optional[str] = None) -> str:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/code_execution_tool.py",
+        "line": 172,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "# Without them, even stdlib calls like ``socket.socket()`` fail with"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/code_execution_tool.py",
+        "line": 432,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/code_execution_tool.py",
+        "line": 435,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "_sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/code_execution_tool.py",
+        "line": 545,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_sock: socket.socket,"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/code_execution_tool.py",
+        "line": 1310,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/code_execution_tool.py",
+        "line": 1315,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/code_execution_tool.py",
+        "line": 1398,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/computer_use/cua_backend.py",
+        "line": 1838,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(png_b64, validate=False)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/computer_use/doctor.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/computer_use/tool.py",
+        "line": 549,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(image_b64, validate=False)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/computer_use/tool.py",
+        "line": 842,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = _base64.b64decode(cap.png_b64, validate=False)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/base.py",
+        "line": 202,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _pipe_stdin(proc: subprocess.Popen, data: str) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/base.py",
+        "line": 238,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": ") -> subprocess.Popen:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/base.py",
+        "line": 246,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/base.py",
+        "line": 292,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen satisfies this natively.  SDK backends (Modal, Daytona)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/base.py",
+        "line": 443,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Returns a ProcessHandle (subprocess.Popen or _ThreadedProcessHandle)."
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/daytona.py",
+        "line": 135,
+        "keyword_detected": "exec(",
+        "code_snippet": "home = self._sandbox.process.exec(\"echo $HOME\").result.strip()"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/daytona.py",
+        "line": 157,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._sandbox.process.exec(quoted_mkdir_command([parent]))"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/daytona.py",
+        "line": 174,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._sandbox.process.exec(quoted_mkdir_command(parents))"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/daytona.py",
+        "line": 188,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._sandbox.process.exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/daytona.py",
+        "line": 194,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._sandbox.process.exec(f\"rm -f {shlex.quote(remote_tar)}\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/daytona.py",
+        "line": 200,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._sandbox.process.exec(quoted_rm_command(remote_paths))"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/daytona.py",
+        "line": 239,
+        "keyword_detected": "exec(",
+        "code_snippet": "response = sandbox.process.exec(shell_cmd, timeout=timeout)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/docker.py",
+        "line": 1059,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "stdin_data: str | None = None) -> subprocess.Popen:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/local.py",
+        "line": 27,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "``subprocess.Popen(..., cwd=...)`` can find it."
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/local.py",
+        "line": 61,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "values once, up front, so both ``subprocess.Popen(cwd=...)`` and the"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/local.py",
+        "line": 144,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "``subprocess.Popen(cwd='/root')`` then dies with ``PermissionError:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/local.py",
+        "line": 170,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "(issue #65583).  Without this guard, ``subprocess.Popen(..., cwd=...)``"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/local.py",
+        "line": 1335,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "stdin_data: str | None = None) -> subprocess.Popen:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/local.py",
+        "line": 1379,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/managed_modal.py",
+        "line": 72,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _start_modal_exec(self, prepared: PreparedModalExec) -> ModalExecStart:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/managed_modal.py",
+        "line": 121,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _poll_modal_exec(self, handle: _ManagedModalExecHandle) -> dict | None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/managed_modal.py",
+        "line": 148,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _cancel_modal_exec(self, handle: _ManagedModalExecHandle) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/managed_modal.py",
+        "line": 149,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._cancel_exec(handle.exec_id)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/managed_modal.py",
+        "line": 248,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _cancel_exec(self, exec_id: str) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal.py",
+        "line": 3,
+        "keyword_detected": "exec(",
+        "code_snippet": "Uses ``Sandbox.create()`` + ``Sandbox.exec()`` instead of the older runtime"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal_utils.py",
+        "line": 95,
+        "keyword_detected": "exec(",
+        "code_snippet": "prepared = self._prepare_modal_exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal_utils.py",
+        "line": 103,
+        "keyword_detected": "exec(",
+        "code_snippet": "start = self._start_modal_exec(prepared)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal_utils.py",
+        "line": 128,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._cancel_modal_exec(start.handle)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal_utils.py",
+        "line": 134,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._poll_modal_exec(start.handle)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal_utils.py",
+        "line": 143,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._cancel_modal_exec(start.handle)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal_utils.py",
+        "line": 161,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _prepare_modal_exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal_utils.py",
+        "line": 201,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _start_modal_exec(self, prepared: PreparedModalExec) -> ModalExecStart:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal_utils.py",
+        "line": 205,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _poll_modal_exec(self, handle: Any) -> dict | None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/modal_utils.py",
+        "line": 209,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _cancel_modal_exec(self, handle: Any) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/singularity.py",
+        "line": 234,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "stdin_data: str | None = None) -> subprocess.Popen:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/ssh.py",
+        "line": 255,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "tar_proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/ssh.py",
+        "line": 262,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "ssh_proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/environments/ssh.py",
+        "line": 345,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "stdin_data: str | None = None) -> subprocess.Popen:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 503,
+        "keyword_detected": "exec(",
+        "code_snippet": "# Shell-based linters by file extension.  Invoked via _exec() with the"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 812,
+        "keyword_detected": "exec(",
+        "code_snippet": "Every _exec() call prefers the LIVE ``terminal_env.cwd`` over"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 819,
+        "keyword_detected": "exec(",
+        "code_snippet": "init-time cwd for every _exec() call, which caused relative"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 836,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, command: str, cwd: str = None, timeout: int = None,"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 871,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(f\"command -v {cmd} >/dev/null 2>&1 && echo 'yes'\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 937,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(\"echo $HOME\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 953,
+        "keyword_detected": "exec(",
+        "code_snippet": "expand_result = self._exec(f\"echo ~{username}\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1030,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec(script, stdin_data=content)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1048,
+        "keyword_detected": "exec(",
+        "code_snippet": "head_result = self._exec(head_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1064,
+        "keyword_detected": "exec(",
+        "code_snippet": "head_result = self._exec(head_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1104,
+        "keyword_detected": "exec(",
+        "code_snippet": "stat_result = self._exec(stat_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1135,
+        "keyword_detected": "exec(",
+        "code_snippet": "sample_result = self._exec(sample_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1148,
+        "keyword_detected": "exec(",
+        "code_snippet": "read_result = self._exec(read_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1161,
+        "keyword_detected": "exec(",
+        "code_snippet": "wc_result = self._exec(wc_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1192,
+        "keyword_detected": "exec(",
+        "code_snippet": "ls_result = self._exec(ls_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1242,
+        "keyword_detected": "exec(",
+        "code_snippet": "stat_result = self._exec(stat_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1252,
+        "keyword_detected": "exec(",
+        "code_snippet": "sample_result = self._exec(f\"head -c 1000 {self._escape_shell_arg(path)} 2>/dev/null\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1259,
+        "keyword_detected": "exec(",
+        "code_snippet": "cat_result = self._exec(f\"cat {self._escape_shell_arg(path)}\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1323,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(f\"python3 -c {self._escape_shell_arg(snippet)}\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1328,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(f\"python -c {self._escape_shell_arg(snippet)}\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1343,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1454,
+        "keyword_detected": "exec(",
+        "code_snippet": "read_result = self._exec(read_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1494,
+        "keyword_detected": "exec(",
+        "code_snippet": "mkdir_result = self._exec(mkdir_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1520,
+        "keyword_detected": "exec(",
+        "code_snippet": "stat_result = self._exec(stat_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1579,
+        "keyword_detected": "exec(",
+        "code_snippet": "read_result = self._exec(read_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1631,
+        "keyword_detected": "exec(",
+        "code_snippet": "verify_result = self._exec(verify_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1737,
+        "keyword_detected": "exec(",
+        "code_snippet": "read_result = self._exec(read_cmd)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 1772,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(cmd, timeout=30)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 2078,
+        "keyword_detected": "exec(",
+        "code_snippet": "check = self._exec(f\"test -e {self._escape_shell_arg(path)} && echo exists || echo not_found\")"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 2085,
+        "keyword_detected": "exec(",
+        "code_snippet": "parent_check = self._exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 2089,
+        "keyword_detected": "exec(",
+        "code_snippet": "ls_result = self._exec("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 2158,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(cmd, timeout=60)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 2165,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(cmd_simple, timeout=60)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 2224,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(cmd_sorted, timeout=60)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 2235,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(cmd_plain, timeout=60)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 2302,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(cmd, timeout=60)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/file_operations.py",
+        "line": 2430,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = self._exec(cmd, timeout=60)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/image_source.py",
+        "line": 157,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(payload, validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/image_source.py",
+        "line": 311,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(res.get(\"output\", \"\"), validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/kanban_tools.py",
+        "line": 873,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(str(content_b64), validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/mcp_oauth.py",
+        "line": 155,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/mcp_oauth.py",
+        "line": 166,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "_reserved_sockets: \"dict[int, socket.socket]\" = {}"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/mcp_oauth.py",
+        "line": 178,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/mcp_stdio_watchdog.py",
+        "line": 62,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_process_group(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/mcp_stdio_watchdog.py",
+        "line": 95,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _watchdog_loop(proc: subprocess.Popen, original_ppid: int) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/mcp_stdio_watchdog.py",
+        "line": 121,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/mcp_tool.py",
+        "line": 745,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_bytes = base64.b64decode(data)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/mcp_tool.py",
+        "line": 833,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_bytes = base64.b64decode(data)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/mcp_tool.py",
+        "line": 913,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_bytes = base64.b64decode(blob)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/process_registry.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: Optional[subprocess.Popen] = None  # Popen handle (local only)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/process_registry.py",
+        "line": 706,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen if ptyprocess is not installed."
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/process_registry.py",
+        "line": 771,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/skills_guard.py",
+        "line": 323,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval() with string argument\"),"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/skills_guard.py",
+        "line": 326,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec() with string argument\"),"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/skills_guard.py",
+        "line": 373,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"Java Runtime.exec() — shell execution\"),"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/terminal_tool.py",
+        "line": 2458,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# For local backends: uses subprocess.Popen with output buffering."
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/transcription_tools.py",
+        "line": 482,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_command_stt_process_tree(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/transcription_tools.py",
+        "line": 563,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(command, **popen_kwargs, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/tts_tool.py",
+        "line": 724,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_command_tts_process_tree(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/tts_tool.py",
+        "line": 789,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(command, **popen_kwargs, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/tts_tool.py",
+        "line": 1586,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "audio_bytes = base64.b64decode(response.audio_data)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/tts_tool.py",
+        "line": 1899,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "pcm_bytes = base64.b64decode(audio_b64)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/voice_mode.py",
+        "line": 130,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/voice_mode.py",
+        "line": 1019,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_active_playback: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tools/voice_mode.py",
+        "line": 1099,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/host_supervisor.py",
+        "line": 154,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: subprocess.Popen[str] | None = None"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/host_supervisor.py",
+        "line": 321,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/host_supervisor.py",
+        "line": 386,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _drain_stdout(self, proc: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/host_supervisor.py",
+        "line": 397,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _drain_stderr(self, proc: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/host_supervisor.py",
+        "line": 456,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _wait_for_exit(self, proc: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/host_supervisor.py",
+        "line": 543,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_process(self, proc: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/server.py",
+        "line": 348,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/server.py",
+        "line": 8022,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(payload, validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/server.py",
+        "line": 10778,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return _base64.b64decode(cleaned, validate=True)"
+      },
+      {
+        "file": "marrow_agent-0.19.0/tui_gateway/server.py",
+        "line": 11114,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return _base64.b64decode(cleaned, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "telepane",
+    "checked_at": "2026-08-18T20:16:44.298426",
+    "download_url": "https://files.pythonhosted.org/packages/75/73/256770a818afe49dd0a936bd2cd9348f2001fbb73e978aab1fe24e4ac3da/telepane-0.9.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "telepane-0.9.3/scripts/_dev_watch.py",
+        "line": 22,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def launch() -> subprocess.Popen:"
+      },
+      {
+        "file": "telepane-0.9.3/scripts/_dev_watch.py",
+        "line": 25,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([PY, \"-m\", \"telepane\"], cwd=ROOT)"
+      },
+      {
+        "file": "telepane-0.9.3/scripts/_dev_watch.py",
+        "line": 28,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def stop(proc: subprocess.Popen) -> None:"
+      }
+    ]
   }
 ]
