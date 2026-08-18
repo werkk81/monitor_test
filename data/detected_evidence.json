@@ -12668,5 +12668,39 @@
         "code_snippet": "key = base64.b64decode(access_key)"
       }
     ]
+  },
+  {
+    "package_name": "zeit-graph",
+    "checked_at": "2026-08-18T21:58:10.269643",
+    "download_url": "https://files.pythonhosted.org/packages/7b/2a/6cf04c7f1317f7910a9250e8b442e24b20944ae11e2c5bf9e89c25538216/zeit_graph-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "zeit_graph-0.1.2/tests/conftest.py",
+        "line": 105,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "zeit_graph-0.1.2/tests/conftest.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "aegis-finance-mcp",
+    "checked_at": "2026-08-18T21:58:10.762770",
+    "download_url": "https://files.pythonhosted.org/packages/94/97/0f2ad1e6264afd7365b806d3c75e5caf8688c50b2fefa15f90975582285e/aegis_finance_mcp-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aegis_finance_mcp-0.1.1/aegis/sources/sophtron_source.py",
+        "line": 33,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(access_key)"
+      }
+    ]
   }
 ]
