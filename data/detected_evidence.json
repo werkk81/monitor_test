@@ -12538,5 +12538,101 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "aegis-finance-mcp",
+    "checked_at": "2026-08-18T21:23:27.103744",
+    "download_url": "https://files.pythonhosted.org/packages/94/97/0f2ad1e6264afd7365b806d3c75e5caf8688c50b2fefa15f90975582285e/aegis_finance_mcp-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aegis_finance_mcp-0.1.1/aegis/sources/sophtron_source.py",
+        "line": 33,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(access_key)"
+      }
+    ]
+  },
+  {
+    "package_name": "dflash",
+    "checked_at": "2026-08-18T21:23:27.203091",
+    "download_url": "https://files.pythonhosted.org/packages/f0/cb/72a6e7b09210b745990d16c2b6186cc35591748811298ff2970b5cd88a52/dflash-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dflash-0.1.0/dflash/benchmark.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": "target = target.to(device).eval()"
+      },
+      {
+        "file": "dflash-0.1.0/dflash/benchmark.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": ".eval()"
+      },
+      {
+        "file": "dflash-0.1.0/dflash/benchmark.py",
+        "line": 122,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(draft.parameters())"
+      },
+      {
+        "file": "dflash-0.1.0/dflash/model.py",
+        "line": 617,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "dflash-0.1.0/dflash/model_mlx.py",
+        "line": 483,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dflash-0.1.0/dflash/model_mlx.py",
+        "line": 485,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(model.parameters())"
+      },
+      {
+        "file": "dflash-0.1.0/dflash/model_mlx.py",
+        "line": 702,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval([c.state for c in cache], hidden_chunks[-1])"
+      },
+      {
+        "file": "dflash-0.1.0/dflash/model_mlx.py",
+        "line": 767,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(logits, hidden)"
+      },
+      {
+        "file": "dflash-0.1.0/dflash/model_mlx.py",
+        "line": 818,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.async_eval(draft_tokens)"
+      },
+      {
+        "file": "dflash-0.1.0/dflash/model_mlx.py",
+        "line": 830,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.async_eval(target_probs if temperature > 0 else target_tokens, hidden)"
+      }
+    ]
+  },
+  {
+    "package_name": "tpu-runner",
+    "checked_at": "2026-08-18T21:23:27.311233",
+    "download_url": "https://files.pythonhosted.org/packages/4d/62/35e943f81cb9d291050f6a5831f699c9816f3436e3e6fcbcd2c2eed88f04/tpu_runner-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tpu_runner-0.1.0/tpu_runner/distributed.py",
+        "line": 936,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
