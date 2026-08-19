@@ -13072,5 +13072,33 @@
         "code_snippet": "def test_detects_backtick_exec(self):"
       }
     ]
+  },
+  {
+    "package_name": "hanzo-operative",
+    "checked_at": "2026-08-19T18:13:55.904423",
+    "download_url": "https://files.pythonhosted.org/packages/89/4c/ae4468f6d909a66bd05f92a7ee8921e2d1f1311127dba2ff54e1cedba04b/hanzo_operative-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hanzo_operative-0.1.1/operative/operative.py",
+        "line": 552,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "st.image(base64.b64decode(tool_msg.base64_image))"
+      }
+    ]
+  },
+  {
+    "package_name": "moonbeam-miner",
+    "checked_at": "2026-08-19T18:13:56.042448",
+    "download_url": "https://files.pythonhosted.org/packages/d4/6a/06abeadd4e192e133b75ca21ef03d6b734ca0ab01b96beb4518337b91d04/moonbeam_miner-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "moonbeam_miner-1.0.0/src/moonbeam/miners.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
   }
 ]
