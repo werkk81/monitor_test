@@ -13724,5 +13724,25 @@
         "code_snippet": "model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "fluidattacks_core_serializers",
+    "checked_at": "2026-08-19T21:03:37.018582",
+    "download_url": "https://files.pythonhosted.org/packages/fb/07/fcaf4bf59b898bf81fe0ffcffd609b117bc0495d2e7e6d611ce9bd7d74d8/fluidattacks_core_serializers-12.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fluidattacks_core_serializers-12.0.0/tests/test_make_snippet.py",
+        "line": 629,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"models.TmxDriver.findOne({_id: id}).exec((err, driver) => {\\n\""
+      },
+      {
+        "file": "fluidattacks_core_serializers-12.0.0/tests/test_make_snippet.py",
+        "line": 1032,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"models.TmxDriver.findOne({_id: id}).exec((err, driver) => {\\n\""
+      }
+    ]
   }
 ]
