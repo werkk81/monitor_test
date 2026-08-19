@@ -13628,5 +13628,19 @@
         "code_snippet": "resp = await _dispatch_event(opt, _make_run_end_with_eval(success=False, score=0.85))"
       }
     ]
+  },
+  {
+    "package_name": "fhelium",
+    "checked_at": "2026-08-19T19:55:54.157003",
+    "download_url": "https://files.pythonhosted.org/packages/b1/fe/d9bbc63d3550b969dc5df998e57874321332d0446bd3c752992c3d64ba15/fhelium-0.10.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fhelium-0.10.0/scripts/generate_api_docs.py",
+        "line": 918,
+        "keyword_detected": "eval(",
+        "code_snippet": "exports = ast.literal_eval(value)"
+      }
+    ]
   }
 ]
