@@ -13100,5 +13100,265 @@
         "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
       }
     ]
+  },
+  {
+    "package_name": "ai-calibrator",
+    "checked_at": "2026-08-19T18:53:16.189647",
+    "download_url": "https://files.pythonhosted.org/packages/a1/de/b906ccc2ca465e53a07fcb03b8077b50deba3e047b7ce925ce38b439985d/ai_calibrator-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ai_calibrator-0.0.1/src/ai_calibrator/api.py",
+        "line": 678,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(project, subject, judge, run_id=next_run_id(d),"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/src/ai_calibrator/ci.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(project, subject, judge, run_id=next_run_id(project_dir), judge_passes=judge_passes,"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/src/ai_calibrator/cli.py",
+        "line": 1001,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(project, subject, judge, run_id=next_run_id(path),"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/src/ai_calibrator/drift.py",
+        "line": 133,
+        "keyword_detected": "eval(",
+        "code_snippet": "candidate = run_eval(project, subject, judge, run_id=next_run_id(project_dir), project_dir=project_dir)"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/src/ai_calibrator/eval.py",
+        "line": 232,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_eval("
+      },
+      {
+        "file": "ai_calibrator-0.0.1/src/ai_calibrator/pipeline.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(project, subject, judge, run_id=run_id, judge_passes=judge_passes,"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/src/ai_calibrator/rightsize.py",
+        "line": 127,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(project, subject, judge, run_id=f\"rightsize-{i:02d}\", project_dir=project_dir)"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_ci.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": "save_scorecard(tmp_path, run_eval(p, Subject(\"GOOD baseline\"), Judge(), run_id=\"run-0001\"))"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_ci.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "save_scorecard(tmp_path, run_eval(p, Subject(\"GOOD baseline\"), Judge(), run_id=\"run-0001\"))"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_ci.py",
+        "line": 132,
+        "keyword_detected": "eval(",
+        "code_snippet": "save_scorecard(tmp_path, run_eval(p, Subject(\"GOOD baseline\"), Judge(), run_id=\"run-0001\"))"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_ci.py",
+        "line": 140,
+        "keyword_detected": "eval(",
+        "code_snippet": "save_scorecard(tmp_path, run_eval(p, Subject(\"GOOD baseline\"), Judge(), run_id=\"run-0001\"))"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_ci.py",
+        "line": 158,
+        "keyword_detected": "eval(",
+        "code_snippet": "save_scorecard(tmp_path, run_eval(p, Subject(\"GOOD everywhere\"), Judge(), run_id=\"run-0001\"))"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_ci.py",
+        "line": 180,
+        "keyword_detected": "eval(",
+        "code_snippet": "save_scorecard(tmp_path, run_eval(p, Subject(\"BAD old\"), Judge(), run_id=\"run-0001\"))   # failing baseline"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_ci.py",
+        "line": 181,
+        "keyword_detected": "eval(",
+        "code_snippet": "save_scorecard(tmp_path, run_eval(p, Subject(\"GOOD mid\"), Judge(), run_id=\"run-0002\"))"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_drift.py",
+        "line": 122,
+        "keyword_detected": "eval(",
+        "code_snippet": "base = run_eval(project, _Subj(\"GOOD answer\"), _Judge(), run_id=next_run_id(tmp_path))"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(_project(), GoodSubject(), PassJudge(), run_id=\"run-0001\")"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(_project(), GoodSubject(), PassJudge(), run_id=\"run-0001\")"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(proj, GoodSubject(), PassJudge(), run_id=\"r\","
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 113,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(_project(), EmptySubject(), SpyJudge(), run_id=\"r\")"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(project, RefineAwareSubject(), PassJudge(), run_id=\"r\")  # fails (POOR)"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 138,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(_project(), GoodSubject(), PassJudge(), run_id=next_run_id(tmp_path))"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 155,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(_project(), WeirdSubject(), PassJudge(), run_id=\"run-0001\")  # must NOT raise"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 175,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(_project(), GoodSubject(), FlakyJudge(), run_id=\"r\", judge_passes=3)"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 184,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(_project(), GoodSubject(), PassJudge(), run_id=\"r\")  # judge_passes default 1"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 192,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(_project(), GoodSubject(), PassJudge(), judge_passes=bad)"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 220,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(p, Subject(\"our 30-day return policy\"), SpyJudge(), run_id=\"r\")"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 224,
+        "keyword_detected": "eval(",
+        "code_snippet": "card2 = run_eval(p, Subject(\"no policy here\"), PassJudge(), run_id=\"r2\")"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 248,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(p, Subject(), PassJudge(), run_id=\"r\")"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 268,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(p, ConvoSubject(), PassJudge(), run_id=\"r\")"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 303,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(p, Subject(), Judge(), run_id=\"r\")"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 331,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(_project(), GoodSubject(), FlakyJudge(), run_id=\"r\", judge_passes=2)"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 369,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(_project(), GoodSubject(), StringFalseJudge(), run_id=\"r\")"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_eval.py",
+        "line": 425,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(project, GoodSubject(), UnhashableIdJudge())"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_gate_honesty.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(p, SilentSubject(), BoomJudge())"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_gate_honesty.py",
+        "line": 106,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(p, EchoUserSubject(), PassJudge())"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_gate_honesty.py",
+        "line": 119,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(p, SilentSubject(), BoomJudge())"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_gate_honesty.py",
+        "line": 141,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(p, Recorder(), PassJudge())"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_grading_honesty.py",
+        "line": 156,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(p, ScriptedSubject(*replies), PassJudge())"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_grading_honesty.py",
+        "line": 390,
+        "keyword_detected": "eval(",
+        "code_snippet": "card = run_eval(before, ScriptedSubject(\"a\", \"b\"), PassJudge())"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_rag.py",
+        "line": 95,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(p, subj, PassJudge(), run_id=\"r\", project_dir=tmp_path)   # RAG on"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_rag.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(p, subj, PassJudge(), run_id=\"r\")                        # project_dir omitted"
+      },
+      {
+        "file": "ai_calibrator-0.0.1/tests/test_report.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_confidence_zero_without_eval():"
+      }
+    ]
   }
 ]
