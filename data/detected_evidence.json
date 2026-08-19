@@ -13744,5 +13744,133 @@
         "code_snippet": "\"models.TmxDriver.findOne({_id: id}).exec((err, driver) => {\\n\""
       }
     ]
+  },
+  {
+    "package_name": "cisco-antares-cli",
+    "checked_at": "2026-08-19T21:54:06.983617",
+    "download_url": "https://files.pythonhosted.org/packages/03/f3/0f3601cad306c491e840ce30dd61f025555f46f964af9fabd5bef172df9c/cisco_antares_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/core/cwe_selection_evidence.py",
+        "line": 173,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval(\","
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/core/cwe_selection_evidence.py",
+        "line": 174,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec(\","
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/core/cwe_selection_evidence.py",
+        "line": 472,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"childprocess.exec(\","
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/core/cwe_selection_evidence.py",
+        "line": 473,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"child_process.exec(\","
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/core/cwe_selection_evidence.py",
+        "line": 475,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"runtime.getruntime().exec(\","
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/tools/shell_exec.py",
+        "line": 760,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _signal_process(process: subprocess.Popen[bytes], *, force: bool) -> None:"
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/tools/shell_exec.py",
+        "line": 773,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_pipeline(processes: list[subprocess.Popen[bytes]]) -> None:"
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/tools/shell_exec.py",
+        "line": 798,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _close_pipeline_streams(processes: list[subprocess.Popen[bytes]]) -> None:"
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/tools/shell_exec.py",
+        "line": 820,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "processes: list[subprocess.Popen[bytes]] = []"
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/src/antares_cli/tools/shell_exec.py",
+        "line": 838,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_cwe_selection.py",
+        "line": 984,
+        "keyword_detected": "eval(",
+        "code_snippet": "(generated / \"client.js\").write_text(\"eval(userInput)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_cwe_selection.py",
+        "line": 1041,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"const childProcess = require('child_process');\\nchildProcess.exec(command, callback);\\n\","
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_cwe_selection.py",
+        "line": 1260,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"engine.eval(source);\\n\","
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_read_only_commands_blocked.py",
+        "line": 258,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_find_exec(self, router: ToolRouter) -> None:"
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_readonly_repository.py",
+        "line": 126,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "real_popen = subprocess.Popen"
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_readonly_repository.py",
+        "line": 129,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def launch_descendant(*_args: object, **kwargs: Any) -> subprocess.Popen[bytes]:"
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_readonly_repository.py",
+        "line": 139,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"antares_cli.tools.shell_exec.subprocess.Popen\","
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_readonly_repository.py",
+        "line": 249,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"antares_cli.tools.shell_exec.subprocess.Popen\", lambda *_a, **_kw: process)"
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_readonly_repository.py",
+        "line": 306,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"antares_cli.tools.shell_exec.subprocess.Popen\","
+      },
+      {
+        "file": "cisco_antares_cli-0.1.0/tests/unit/test_readonly_repository.py",
+        "line": 415,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"antares_cli.tools.shell_exec.subprocess.Popen\", unexpected_popen)"
+      }
+    ]
   }
 ]
