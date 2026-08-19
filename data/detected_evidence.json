@@ -15062,5 +15062,45 @@
         "code_snippet": "filepath.write_bytes(base64.b64decode(image_b64))"
       }
     ]
+  },
+  {
+    "package_name": "ffmpeg-zeo",
+    "checked_at": "2026-08-19T23:01:02.427917",
+    "download_url": "https://files.pythonhosted.org/packages/72/36/7ab2ded689109086b2bc29c4f6623447a2b20ea8afbef09c6419162ac833/ffmpeg_zeo-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ffmpeg_zeo-0.1.0/src/ffmpeg_zeo/probe.py",
+        "line": 157,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "ffmpeg_zeo-0.1.0/src/ffmpeg_zeo/run.py",
+        "line": 142,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "awnode",
+    "checked_at": "2026-08-19T23:01:03.951923",
+    "download_url": "https://files.pythonhosted.org/packages/19/d0/92e884ce1c42f02cf85f5cb045685856d6fa6aee14918dfa558feba33714/awnode-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "awnode-0.3.0/awnode/extensions.py",
+        "line": 459,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "awnode-0.3.0/awnode/tools/generation.py",
+        "line": 70,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "filepath.write_bytes(base64.b64decode(image_b64))"
+      }
+    ]
   }
 ]
