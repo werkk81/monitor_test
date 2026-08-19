@@ -13524,5 +13524,109 @@
         "code_snippet": "exec(patched, globals_dict, locals_dict)"
       }
     ]
+  },
+  {
+    "package_name": "fhelium",
+    "checked_at": "2026-08-19T19:40:00.318207",
+    "download_url": "https://files.pythonhosted.org/packages/b1/fe/d9bbc63d3550b969dc5df998e57874321332d0446bd3c752992c3d64ba15/fhelium-0.10.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fhelium-0.10.0/scripts/generate_api_docs.py",
+        "line": 918,
+        "keyword_detected": "eval(",
+        "code_snippet": "exports = ast.literal_eval(value)"
+      }
+    ]
+  },
+  {
+    "package_name": "fancy-last-word",
+    "checked_at": "2026-08-19T19:40:00.527047",
+    "download_url": "https://files.pythonhosted.org/packages/17/84/ada771786d224e343108572e6c087dcbc1d36e8fc6248856f05e92c74369/fancy_last_word-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fancy_last_word-0.1.0/src/last_word/writer/docx_writer.py",
+        "line": 577,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(re.sub(r\"\\s\", \"\", match.group(2)), validate=True)"
+      },
+      {
+        "file": "fancy_last_word-0.1.0/tests/test_images.py",
+        "line": 42,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data_url.split(\",\", 1)[1])"
+      },
+      {
+        "file": "fancy_last_word-0.1.0/tests/conformance/test_shared_suites.py",
+        "line": 72,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(case[\"input\"][\"base64\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "fancy-dark-slide",
+    "checked_at": "2026-08-19T19:40:00.560059",
+    "download_url": "https://files.pythonhosted.org/packages/ed/3f/7079bd5088b879b3af41851f59ac712172894acfc5f7a2e3ebbe8f5a6345/fancy_dark_slide-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fancy_dark_slide-0.1.0/src/dark_slide/writer/pptx_writer.py",
+        "line": 2065,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "payload_bytes = base64.b64decode(payload, validate=True)"
+      },
+      {
+        "file": "fancy_dark_slide-0.1.0/tests/test_image_size.py",
+        "line": 79,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"png_1x1\": base64.b64decode("
+      },
+      {
+        "file": "fancy_dark_slide-0.1.0/tests/test_image_size.py",
+        "line": 82,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"png_2x1\": base64.b64decode("
+      },
+      {
+        "file": "fancy_dark_slide-0.1.0/tests/test_image_size.py",
+        "line": 85,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"gif_1x1\": base64.b64decode(\"R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\"),"
+      },
+      {
+        "file": "fancy_dark_slide-0.1.0/tests/test_image_size.py",
+        "line": 91,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"webp_vp8l_1x1\": base64.b64decode(\"UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==\"),"
+      }
+    ]
+  },
+  {
+    "package_name": "superred-optimizer-many-shot",
+    "checked_at": "2026-08-19T19:40:00.619725",
+    "download_url": "https://files.pythonhosted.org/packages/41/c2/3a3b09774f2ebb6eabbcf17a1557afcceec081f0662c5f561e6659628539/superred_optimizer_many_shot-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "superred_optimizer_many_shot-0.1.0/tests/test_optimizer.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _make_run_end_with_eval(*, success: bool, score: float):"
+      },
+      {
+        "file": "superred_optimizer_many_shot-0.1.0/tests/test_optimizer.py",
+        "line": 404,
+        "keyword_detected": "eval(",
+        "code_snippet": "resp = await _dispatch_event(opt, _make_run_end_with_eval(success=True, score=0.1))"
+      },
+      {
+        "file": "superred_optimizer_many_shot-0.1.0/tests/test_optimizer.py",
+        "line": 417,
+        "keyword_detected": "eval(",
+        "code_snippet": "resp = await _dispatch_event(opt, _make_run_end_with_eval(success=False, score=0.85))"
+      }
+    ]
   }
 ]
