@@ -13360,5 +13360,169 @@
         "code_snippet": "def test_confidence_zero_without_eval():"
       }
     ]
+  },
+  {
+    "package_name": "plumhud",
+    "checked_at": "2026-08-19T19:15:31.975039",
+    "download_url": "https://files.pythonhosted.org/packages/e6/ca/f0a7494a68315234035318d2c8861b6aea3011f7fa81129c90d4383be0d2/plumhud-4.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "plumhud-4.0.0/src/plumhud/app.py",
+        "line": 538,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "superred-optimizer-agentvigil-websentinel",
+    "checked_at": "2026-08-19T19:15:31.995887",
+    "download_url": "https://files.pythonhosted.org/packages/6c/df/1509fa7a7fb7467d491ae774dc294bf01740b8d11c9e38ec07931d075646/superred_optimizer_agentvigil_websentinel-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "def success_eval() -> EvaluationResult:"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "def failure_eval(score: float = 0.0) -> EvaluationResult:"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 355,
+        "keyword_detected": "eval(",
+        "code_snippet": "RunEndEvent(evaluation=success_eval(), security_domain=USER_TAG),"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 377,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 416,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 425,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 445,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 515,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 533,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 584,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 819,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 831,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 1024,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 1089,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 1147,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 1268,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 1302,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 1324,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      },
+      {
+        "file": "superred_optimizer_agentvigil_websentinel-0.1.0/tests/test_optimizer.py",
+        "line": 1333,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt, RunEndEvent(evaluation=failure_eval(), security_domain=USER_TAG)"
+      }
+    ]
+  },
+  {
+    "package_name": "email-header-intel",
+    "checked_at": "2026-08-19T19:15:32.084205",
+    "download_url": "https://files.pythonhosted.org/packages/10/10/ed17bcee4ad6bd3f292f121703c35a9356e5e865796917931b2218646b1d/email_header_intel-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "email_header_intel-1.0.0/email_intel/org_decoders.py",
+        "line": 14,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(raw_b64).decode(\"utf-8\")"
+      }
+    ]
+  },
+  {
+    "package_name": "sparsepr",
+    "checked_at": "2026-08-19T19:15:38.955019",
+    "download_url": "https://files.pythonhosted.org/packages/66/d8/04eb886c55da2a71150db754b37fb16a15b4f69b8d815faf6167db2b9080/sparsepr-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sparsepr-0.1.0/src/sparsepr/flashinfer_patch.py",
+        "line": 190,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(patched, globals_dict, locals_dict)"
+      }
+    ]
   }
 ]
