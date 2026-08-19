@@ -13642,5 +13642,87 @@
         "code_snippet": "exports = ast.literal_eval(value)"
       }
     ]
+  },
+  {
+    "package_name": "kamodo-core-official",
+    "checked_at": "2026-08-19T20:45:38.151963",
+    "download_url": "https://files.pythonhosted.org/packages/3b/42/d37a0bf4ac795eb6db388f977a95e748958874909f9446adc8c6ba30b9df/kamodo_core_official-26.8.7.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kamodo_core_official-26.8.7/kamodo/kamodo.py",
+        "line": 1329,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(soln_str.format(), scope)"
+      },
+      {
+        "file": "kamodo_core_official-26.8.7/kamodo/util.py",
+        "line": 1212,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "#     base64.b64decode(obj['__ndarray__']),"
+      },
+      {
+        "file": "kamodo_core_official-26.8.7/kamodo/util.py",
+        "line": 1218,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "#     base64.b64decode(obj['__npgeneric__']),"
+      }
+    ]
+  },
+  {
+    "package_name": "fairlms",
+    "checked_at": "2026-08-19T20:45:39.371841",
+    "download_url": "https://files.pythonhosted.org/packages/1a/03/ec41b64e7a475a611ff4d3495f9428b1b07be21b90de7ffc145cfcf22408/fairlms-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fairlms-0.3.0/fairlms/definition/decoder_only/extrinsic_bias/performance_disparity/ad/main.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "hf.eval()"
+      },
+      {
+        "file": "fairlms-0.3.0/fairlms/definition/encoder_only/extrinsic_bias/context_based_disparity/main.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "hf.eval()"
+      },
+      {
+        "file": "fairlms-0.3.0/fairlms/definition/encoder_only/extrinsic_bias/equal_opportunity/main.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "hf_model.eval()"
+      },
+      {
+        "file": "fairlms-0.3.0/fairlms/definition/encoder_only/extrinsic_bias/fair_inference/main.py",
+        "line": 29,
+        "keyword_detected": "eval(",
+        "code_snippet": "hf_model.eval()"
+      },
+      {
+        "file": "fairlms-0.3.0/fairlms/definition/encoder_only/intrinsic_bias/similarity_based/ceat/generate_embeddings.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(dev).eval()"
+      },
+      {
+        "file": "fairlms-0.3.0/fairlms/models/base.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self) -> \"LoadedModel\":"
+      },
+      {
+        "file": "fairlms-0.3.0/fairlms/models/base.py",
+        "line": 28,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "fairlms-0.3.0/fairlms/models/huggingface.py",
+        "line": 106,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
   }
 ]
