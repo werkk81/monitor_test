@@ -15216,5 +15216,101 @@
         "code_snippet": "png = base64.b64decode("
       }
     ]
+  },
+  {
+    "package_name": "pygraft-gui",
+    "checked_at": "2026-08-20T19:02:47.650380",
+    "download_url": "https://files.pythonhosted.org/packages/43/11/eebbd843d6d6e822ca59b30c59476250fbf40852165a348f79e931dc9a30/pygraft_gui-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pygraft_gui-0.2.0/src/graftapp/app.py",
+        "line": 112,
+        "keyword_detected": "exec(",
+        "code_snippet": "app.exec()"
+      }
+    ]
+  },
+  {
+    "package_name": "arkady-plugin-sdk",
+    "checked_at": "2026-08-20T19:02:48.013872",
+    "download_url": "https://files.pythonhosted.org/packages/6c/ab/63b063419c08b409658c156e3e3a347f04b6cd65f18249bb8ea65ba20630/arkady_plugin_sdk-0.10.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "arkady_plugin_sdk-0.10.4/src/arkady_plugin/core/server/serverless/request_reader.py",
+        "line": 98,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "if socket.socket is gevent.socket.socket:"
+      },
+      {
+        "file": "arkady_plugin_sdk-0.10.4/src/arkady_plugin/core/server/tcp/request_reader.py",
+        "line": 74,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "if native_socket.socket is gevent_socket.socket:"
+      },
+      {
+        "file": "arkady_plugin_sdk-0.10.4/src/arkady_plugin/core/server/tcp/request_reader.py",
+        "line": 128,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "if native_socket.socket is gevent_socket.socket:"
+      },
+      {
+        "file": "arkady_plugin_sdk-0.10.4/src/arkady_plugin/core/server/tcp/request_reader.py",
+        "line": 150,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "if native_socket.socket is not gevent_socket.socket:"
+      },
+      {
+        "file": "arkady_plugin_sdk-0.10.4/src/arkady_plugin/entities/invoke_message.py",
+        "line": 153,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "v[\"blob\"] = base64.b64decode(v[\"blob\"])"
+      },
+      {
+        "file": "arkady_plugin_sdk-0.10.4/src/arkady_plugin/integration/run.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen(  # ruff:ignore[subprocess-without-shell-equals-true]"
+      },
+      {
+        "file": "arkady_plugin_sdk-0.10.4/src/arkady_plugin/interfaces/model/ai_model.py",
+        "line": 25,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "if socket.socket is gevent.socket.socket:"
+      },
+      {
+        "file": "arkady_plugin_sdk-0.10.4/src/arkady_plugin/interfaces/model/ai_model.py",
+        "line": 399,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "if socket.socket is gevent.socket.socket:"
+      }
+    ]
+  },
+  {
+    "package_name": "create-aimarket-agent",
+    "checked_at": "2026-08-20T19:02:48.053942",
+    "download_url": "https://files.pythonhosted.org/packages/89/68/6c18dc6921e2299d7096e08c20cd628c26eca267a3ac1647417213c1f6c0/create_aimarket_agent-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "create_aimarket_agent-0.1.0/src/create_aimarket_agent/templates/base/test_agent.py",
+        "line": 22,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "signature = base64.b64decode(response.headers[\"x-provider-signature\"], validate=True)"
+      },
+      {
+        "file": "create_aimarket_agent-0.1.0/src/create_aimarket_agent/templates/base/test_agent.py",
+        "line": 30,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "public_key = base64.b64decode(client.get(\"/health\").json()[\"provider_pubkey\"], validate=True)"
+      },
+      {
+        "file": "create_aimarket_agent-0.1.0/src/create_aimarket_agent/templates/base/validate_manifest.py",
+        "line": 134,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "provider_key = base64.b64decode(str(data[\"provider_pubkey\"]), validate=True)"
+      }
+    ]
   }
 ]
