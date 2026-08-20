@@ -15924,5 +15924,33 @@
         "code_snippet": "exec(compile(code, f\"{name}.py\", \"exec\"), module.__dict__)  # noqa: S102"
       }
     ]
+  },
+  {
+    "package_name": "lean-ctx-python",
+    "checked_at": "2026-08-20T20:52:07.676145",
+    "download_url": "https://files.pythonhosted.org/packages/91/40/1cda105fd043b1a90ceba4f241269f36c8231b1555ee89b1c14fa01321a8/lean_ctx_python-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "lean_ctx_python-1.0.0/lean_ctx/receipt.py",
+        "line": 165,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value.removeprefix(\"base64:\"), validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "hydraclaim",
+    "checked_at": "2026-08-20T20:52:08.201233",
+    "download_url": "https://files.pythonhosted.org/packages/c6/13/520b7edda3bc1d57097013c6e9df7d915eac97d3a0e9a6f132f28ebcecb6/hydraclaim-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hydraclaim-0.2.0/demo/term-video.py",
+        "line": 81,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)"
+      }
+    ]
   }
 ]
