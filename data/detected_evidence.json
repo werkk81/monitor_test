@@ -15998,5 +15998,609 @@
         "code_snippet": "return base64.b64decode(value.removeprefix(\"base64:\"), validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "sockrates",
+    "checked_at": "2026-08-20T21:43:40.218086",
+    "download_url": "https://files.pythonhosted.org/packages/1b/fe/80c3248a156341fb90fe3d786d79a8f775c7e61b8b8e20750da77cd7f506/sockrates-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sockrates-0.2.0/sockrates.py",
+        "line": 211,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "timeout: float) -> socket.socket:"
+      },
+      {
+        "file": "sockrates-0.2.0/sockrates.py",
+        "line": 254,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _recv_exact(s: socket.socket, n: int) -> bytes:"
+      },
+      {
+        "file": "sockrates-0.2.0/sockrates.py",
+        "line": 264,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def mtproto_handshake(sock: socket.socket, timeout: float) -> bool:"
+      },
+      {
+        "file": "sockrates-0.2.0/tests/test_protocol.py",
+        "line": 27,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "srv = socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "secaudit-kit",
+    "checked_at": "2026-08-20T21:43:40.673706",
+    "download_url": "https://files.pythonhosted.org/packages/d1/e9/990fb9a3ccd05938c74089cb7fcd30d6ad107499d46a17e8b730aa8a2b11/secaudit_kit-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/detectors.py",
+        "line": 127,
+        "keyword_detected": "eval(",
+        "code_snippet": "# do; a code-shape rule like `eval(` does not, and matching"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/detectors.py",
+        "line": 658,
+        "keyword_detected": "eval(",
+        "code_snippet": "# `$redis->eval(...)` is Redis' Lua evaluator, `Process::exec(...)` is a class method,"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/detectors.py",
+        "line": 658,
+        "keyword_detected": "exec(",
+        "code_snippet": "# `$redis->eval(...)` is Redis' Lua evaluator, `Process::exec(...)` is a class method,"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/detectors.py",
+        "line": 662,
+        "keyword_detected": "exec(",
+        "code_snippet": "# `(?<!function )` drops the declaration for the same reason — `function exec(` is where a"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/detectors.py",
+        "line": 1152,
+        "keyword_detected": "eval(",
+        "code_snippet": "# that mentions `eval(` in a string, or a comment naming a vulnerability class, no longer reads"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/engine.py",
+        "line": 316,
+        "keyword_detected": "eval(",
+        "code_snippet": "# contents blanked, so a rule catalog mentioning `eval(` in a literal is not read as a"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/redos.py",
+        "line": 808,
+        "keyword_detected": "exec(",
+        "code_snippet": "`const TOKEN_RE = /…/` at the top of the module and `TOKEN_RE.exec(input)` inside the handler."
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 33,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen\": Sink(\"TAINT-PY-CMDI-SHELL\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval\": Sink(\"TAINT-PY-EVAL\", \"Code injection — untrusted input reaches eval()\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 56,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec\": Sink(\"TAINT-PY-EXEC\", \"Code injection — untrusted input reaches exec()\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 381,
+        "keyword_detected": "exec(",
+        "code_snippet": "(re.compile(r\"(?<![.\\w])exec(?:Sync)?\\s*\\(|child_process\\s*\\.\\s*exec(?:Sync)?\\s*\\(\"),"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 387,
+        "keyword_detected": "eval(",
+        "code_snippet": "Sink(\"TAINT-JS-EVAL\", \"Code injection — untrusted input reaches eval()\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 407,
+        "keyword_detected": "eval(",
+        "code_snippet": "# `eval(` because the parenthesis after `eval` is the one closing the comma expression."
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 481,
+        "keyword_detected": "exec(",
+        "code_snippet": "# --------------------------------------------------------- who is the receiver of `.exec(`?"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 483,
+        "keyword_detected": "exec(",
+        "code_snippet": "# `JS_SINKS` anchors its shell entry on a bare `exec(` or the literal receiver `child_process`,"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 484,
+        "keyword_detected": "exec(",
+        "code_snippet": "# and that lookbehind is load-bearing: `pattern.exec(string)` is the RegExp method and is the"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 485,
+        "keyword_detected": "exec(",
+        "code_snippet": "# most common `.exec(` in the language. Anchoring on the name misses every ordinary spelling of"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 489,
+        "keyword_detected": "exec(",
+        "code_snippet": "#     const cp = require('child_process');      cp.exec(cmd)"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 490,
+        "keyword_detected": "exec(",
+        "code_snippet": "#     import * as childProcess from 'child_process';   childProcess.exec(cmd)"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 491,
+        "keyword_detected": "exec(",
+        "code_snippet": "#     child_process_1.exec(cmd)                 // what TypeScript emits for a namespace import"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 493,
+        "keyword_detected": "exec(",
+        "code_snippet": "#     const cp_exec = util.promisify(cp.exec);  await cp_exec(cmd)"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 494,
+        "keyword_detected": "exec(",
+        "code_snippet": "#     const shell = require('shelljs');         shell.exec(cmd)"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 554,
+        "keyword_detected": "exec(",
+        "code_snippet": "r\"[^;\\n]*?\\bexec(?:Sync)?\\b\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/catalog.py",
+        "line": 570,
+        "keyword_detected": "exec(",
+        "code_snippet": "_SHELL_METHODS = r\"exec(?:Sync|File|FileSync)?\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/model.py",
+        "line": 157,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"parameter as `this.file` and a method that later runs `exec('convert ' + this.file)` \""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/secaudit_core/taint/model.py",
+        "line": 164,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"`pattern.exec(text)` in a file that imported neither is a regular expression. A \""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_authz.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "return str(eval(expression))"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_backends.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "f.write(\"import os\\n\" * 40 + \"eval(request.args['x'])\\n\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_backends.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval(request.args['x'])\", \"do not eval\")]"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_backends.py",
+        "line": 112,
+        "keyword_detected": "eval(",
+        "code_snippet": "if \"eval(request.args['x'])\" not in prompt or \"FILE app.py\" not in prompt:"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_backends.py",
+        "line": 210,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval(request.args['x'])\", \"do not eval\")]"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_cli.py",
+        "line": 154,
+        "keyword_detected": "eval(",
+        "code_snippet": "f.write(\"eval(userInput);\\n\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_deps.py",
+        "line": 183,
+        "keyword_detected": "eval(",
+        "code_snippet": "line=1, evidence=\"eval(x)\", fix=\"Do not.\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_detectors.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "(\"e.py\",     \"eval(user_input)\\n\",                                \"SEC-PY-EVAL\"),"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_detectors.py",
+        "line": 71,
+        "keyword_detected": "exec(",
+        "code_snippet": "(\"run.py\",   \"exec(llm_response)\\n\",                              \"SEC-AI-LLM-EXEC\"),"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_detectors.py",
+        "line": 191,
+        "keyword_detected": "eval(",
+        "code_snippet": "(\"redis.php\", \"<?php $this->redis->eval($script, 1);\\nProcess::exec($cmd);\\n\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_detectors.py",
+        "line": 191,
+        "keyword_detected": "exec(",
+        "code_snippet": "(\"redis.php\", \"<?php $this->redis->eval($script, 1);\\nProcess::exec($cmd);\\n\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_diff.py",
+        "line": 33,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec('ping -c 1 ' + req.query.host, (e, out) => res.send(out));"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_diff.py",
+        "line": 168,
+        "keyword_detected": "eval(",
+        "code_snippet": "line=line, evidence=\"eval(input);\", fix=\"\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_engine.py",
+        "line": 129,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"module.exports = (x) => cp.exec('ls ' + x);\\n\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_exploitation.py",
+        "line": 98,
+        "keyword_detected": "exec(",
+        "code_snippet": "evidence=\"exec('ping ' + req.query.host)\", fix=\"Use execFile.\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_i18n.py",
+        "line": 115,
+        "keyword_detected": "exec(",
+        "code_snippet": "evidence=\"exec('ping ' + req.query.host)\", fix=\"Use execFile.\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_monitor.py",
+        "line": 46,
+        "keyword_detected": "eval(",
+        "code_snippet": "evidence=\"eval(x)\", fix=\"don't\")],"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_patch.py",
+        "line": 37,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec('ping -c 1 ' + req.query.host, (e, out) => res.send(out));"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_patch.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "evidence=\"exec('ping -c 1 ' + req.query.host, (e, out) => res.send(out));\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_patch.py",
+        "line": 83,
+        "keyword_detected": "exec(",
+        "code_snippet": "-  exec('ping -c 1 ' + req.query.host, (e, out) => res.send(out));"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_patch.py",
+        "line": 97,
+        "keyword_detected": "exec(",
+        "code_snippet": "-  exec('ping -c 1 ' + req.query.host, (e, out) => res.send(out));"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_patch.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": "+const run = (s) => eval(s);"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_patch.py",
+        "line": 110,
+        "keyword_detected": "exec(",
+        "code_snippet": "-  exec('ping -c 1 ' + req.query.host, (e, out) => res.send(out));"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_patch.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "check(\"exec('ping\" in f.read(),"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_report.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"app.get('/b', (req, res) => { res.send(eval(req.query.x)); });\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_report.py",
+        "line": 205,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"  res.send(eval(req.query.x));\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_report.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"  res.send(eval(req.query.x));\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "src = 'x = \"eval(a)\"  # eval(b)\\nif True: eval(c)\\n'"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "check(view.count(\"eval(\") == 1, \"code_view left a literal or comment `eval(` visible\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "check(\"eval(c)\" in view, \"code_view blanked a real call\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 65,
+        "keyword_detected": "exec(",
+        "code_snippet": "js = \"const a = 'exec(1)'; // exec(2)\\n/* exec(3) */ exec(4);\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "check(jview.count(\"exec(\") == 1, \"code_view leaked a JS comment/literal sink\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 111,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"    return pickle.loads(base64.b64decode(cookie))\\n\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 125,
+        "keyword_detected": "eval(",
+        "code_snippet": "paths = taint.analyze(\"a.py\", \"def f(request):\\n    eval(request.args['x'])\\n\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "paths = taint.analyze(\"a.py\", \"def f(x):\\n    eval(x)\\n\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 217,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec(v);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 237,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec('ping ' + x);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 249,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec(v);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 262,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"  eval(q());\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 270,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec('ping ' + h);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 282,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec(v);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 292,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  run(v) { exec(v); }\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 300,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"function b(x) { return x ? a(x) : exec(x); }\\n\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 314,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec('report --for ' + name);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 349,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"util.js\": (\"function runReport(name) { exec('report ' + name); }\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 416,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"util.js\": \"function runReport(n) { exec('r ' + n); }\\nmodule.exports = { runReport };\\n\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 426,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"u.js\": \"function run(n) { exec('x ' + n); }\\nmodule.exports = { run };\\n\","
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 565,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  cp.exec('ping ' + name);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 569,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  childProcess.exec(`ping ${n}`);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 580,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  return await cp_exec('scan ' + s);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 588,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  return shell.exec('dig ' + h, { silent: true });\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 593,
+        "keyword_detected": "exec(",
+        "code_snippet": "# The negative that pays for all of it. `.exec()` on a regular expression is the most common"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 594,
+        "keyword_detected": "exec(",
+        "code_snippet": "# `.exec(` in JavaScript, and a name list would have to guess; the import list knows."
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 598,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  return PATTERN.exec(name);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 604,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  cp.exec('ping ' + n);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 662,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"    cp.exec(cmd, { maxBuffer: 1024 }, callback);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 678,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"    cp.exec(cmd);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 699,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec('ping ' + host, cb);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 738,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"  eval(t);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 765,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec('ping ' + target, cb);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 771,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec('ping ' + host, cb);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 777,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec('ping ' + first, cb);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 782,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"  eval(body.code);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 805,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"  eval(b);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 826,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec(cmd);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 836,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"  exec(cmd);\\n\""
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 983,
+        "keyword_detected": "eval(",
+        "code_snippet": "paths = taint.analyze(\"a.py\", f\"def view(request):\\n    eval({expr})\\n\")"
+      },
+      {
+        "file": "secaudit_kit-1.0.0/tests/test_taint.py",
+        "line": 988,
+        "keyword_detected": "eval(",
+        "code_snippet": "paths = taint.analyze(\"a.py\", \"def view(request):\\n    eval(request.app_config)\\n\")"
+      }
+    ]
   }
 ]
