@@ -16602,5 +16602,133 @@
         "code_snippet": "paths = taint.analyze(\"a.py\", \"def view(request):\\n    eval(request.app_config)\\n\")"
       }
     ]
+  },
+  {
+    "package_name": "cmake-pip",
+    "checked_at": "2026-08-20T22:01:45.059068",
+    "download_url": "https://files.pythonhosted.org/packages/c9/28/65bf1cb279112c83938c80e6e0810b7a99214204c139724206b911a2f7ad/cmake_pip-0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cmake_pip-0.1/test/test_cmake1.py",
+        "line": 41,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_cmake1.py",
+        "line": 100,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_cmake1.py",
+        "line": 138,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_cmake1.py",
+        "line": 211,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_cmake1.py",
+        "line": 271,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_cmake1.py",
+        "line": 329,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_common.py",
+        "line": 141,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "`subprocess.Popen`."
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_common.py",
+        "line": 164,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_common.py",
+        "line": 219,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_common.py",
+        "line": 254,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_common.py",
+        "line": 366,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_conan.py",
+        "line": 200,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_conan.py",
+        "line": 243,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_conan.py",
+        "line": 298,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_conan.py",
+        "line": 337,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_editable.py",
+        "line": 38,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_editable.py",
+        "line": 100,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_editable.py",
+        "line": 145,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_with_cmake_module.py",
+        "line": 26,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "cmake_pip-0.1/test/test_with_cmake_module.py",
+        "line": 92,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      }
+    ]
   }
 ]
