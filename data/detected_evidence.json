@@ -15432,5 +15432,283 @@
         "code_snippet": "def test_delete_document_removes_from_retrieval(self, client):"
       }
     ]
+  },
+  {
+    "package_name": "ainir",
+    "checked_at": "2026-08-20T19:59:10.521791",
+    "download_url": "https://files.pythonhosted.org/packages/85/65/feb76b650e174d2762ceca2a5c68f5f1467b8c50f75ea5f8b00fff4180ba/ainir-1.0.0rc2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/cli.py",
+        "line": 524,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase18_trust_gate_eval(args.out_dir)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/cli.py",
+        "line": 530,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase19_trust_receipt_eval(args.out_dir)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/cli.py",
+        "line": 536,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase20_receipt_conformance_eval(args.out_dir)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/cli.py",
+        "line": 542,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase21_launch_readiness_eval(args.out_dir)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/cli.py",
+        "line": 548,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase22_verified_intent_eval(args.out_dir)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/cli.py",
+        "line": 554,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase23_verified_intent_hardening_eval(args.out_dir)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/cli.py",
+        "line": 560,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase24_verified_intent_semantic_eval(args.out_dir)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/cli.py",
+        "line": 566,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase25_verified_intent_contract_eval(args.out_dir)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase18_trust_gate_eval.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_phase18_trust_gate_eval(out_dir: str | Path) -> dict[str, Any]:"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase19_trust_receipt_eval.py",
+        "line": 11,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_phase19_trust_receipt_eval(out_dir: str | Path = \"phase19_trust_receipt_results\") -> dict:"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase20_receipt_conformance_eval.py",
+        "line": 12,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_phase20_receipt_conformance_eval(out_dir: str | Path = \"phase20_receipt_conformance_results\") -> dict[str, Any]:"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase20_receipt_conformance_eval.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "phase19 = run_phase19_trust_receipt_eval(out / \"phase19_receipt_replay\")"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase21_release_readiness_eval.py",
+        "line": 154,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_phase21_launch_readiness_eval(out_dir: str | Path = \"phase21_launch_readiness_results\") -> dict[str, Any]:"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase21_release_readiness_eval.py",
+        "line": 169,
+        "keyword_detected": "eval(",
+        "code_snippet": "steps.append(_run_eval_step(\"phase18_trust_gate_eval\", run_phase18_trust_gate_eval(out / \"phase18_trust_gate\")))"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase21_release_readiness_eval.py",
+        "line": 170,
+        "keyword_detected": "eval(",
+        "code_snippet": "steps.append(_run_eval_step(\"phase19_trust_receipt_replay_eval\", run_phase19_trust_receipt_eval(out / \"phase19_trust_receipt\")))"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase21_release_readiness_eval.py",
+        "line": 171,
+        "keyword_detected": "eval(",
+        "code_snippet": "steps.append(_run_eval_step(\"phase20_receipt_conformance_eval\", run_phase20_receipt_conformance_eval(out / \"phase20_receipt_conformance\")))"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase21_release_readiness_eval.py",
+        "line": 172,
+        "keyword_detected": "eval(",
+        "code_snippet": "steps.append(_run_eval_step(\"phase24_verified_intent_semantic_eval\", run_phase24_verified_intent_semantic_eval(out / \"phase24_verified_intent_semantic\")))"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase21_release_readiness_eval.py",
+        "line": 173,
+        "keyword_detected": "eval(",
+        "code_snippet": "steps.append(_run_eval_step(\"phase25_verified_intent_contract_eval\", run_phase25_verified_intent_contract_eval(out / \"phase25_verified_intent_contract\")))"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase22_verified_intent_eval.py",
+        "line": 16,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_phase22_verified_intent_eval(out_dir: str | Path = ainir_temp_str(\"ainir_phase22_verified_intent\")) -> dict[str, Any]:"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase23_verified_intent_hardening_eval.py",
+        "line": 16,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_phase23_verified_intent_hardening_eval(out_dir: str | Path = \"phase23_verified_intent_hardening_results\") -> dict[str, Any]:"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase24_verified_intent_semantic_eval.py",
+        "line": 13,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_phase24_verified_intent_semantic_eval(out_dir: str | Path = \"phase24_verified_intent_semantic_results\") -> dict[str, Any]:"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase25_verified_intent_contract_eval.py",
+        "line": 14,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_phase25_verified_intent_contract_eval(out_dir: str | Path = ainir_temp_str(\"ainir_phase25_verified_intent_contract\")) -> dict[str, Any]:"
+      },
+      {
+        "file": "ainir-1.0.0rc2/src/ainir/phase25_verified_intent_contract_eval.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "report = run_phase25_verified_intent_contract_eval(args.out_dir)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase18_trust_gate.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_phase18_eval(tmp_path):"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase18_trust_gate.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase18_trust_gate_eval(tmp_path / \"phase18\")"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase19_trust_receipt.py",
+        "line": 41,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase19_trust_receipt_eval(tmp_path / \"eval\")"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase20_receipt_conformance.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_phase20_receipt_conformance_eval(tmp_path: Path) -> None:"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase20_receipt_conformance.py",
+        "line": 18,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase20_receipt_conformance_eval(tmp_path / \"phase20\")"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase21_launch_readiness.py",
+        "line": 9,
+        "keyword_detected": "eval(",
+        "code_snippet": "report = run_phase21_launch_readiness_eval(tmp_path / \"phase21\")"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase22_verified_intent_export.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase22_verified_intent_eval(tmp_path)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase23_verified_intent_hardening.py",
+        "line": 7,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase23_verified_intent_hardening_eval(tmp_path)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase24_verified_intent_semantic.py",
+        "line": 7,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase24_verified_intent_semantic_eval(tmp_path)"
+      },
+      {
+        "file": "ainir-1.0.0rc2/tests/test_phase25_verified_intent_contract.py",
+        "line": 7,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_phase25_verified_intent_contract_eval(tmp_path / \"phase25\")"
+      }
+    ]
+  },
+  {
+    "package_name": "lst-ai",
+    "checked_at": "2026-08-20T19:59:10.695683",
+    "download_url": "https://files.pythonhosted.org/packages/fa/0e/e48e88795ee58b1fc90152b073bdd205118adcfd0463c6aec90eea7f7281/lst_ai-2.0.0rc1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "lst_ai-2.0.0rc1/lst_ai/segment.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "return mdl.to(torch_device).eval()"
+      },
+      {
+        "file": "lst_ai-2.0.0rc1/lst_ai/weights.py",
+        "line": 199,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "lst_ai-2.0.0rc1/tests/test_model.py",
+        "line": 165,
+        "keyword_detected": "eval(",
+        "code_snippet": "restored.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "scad123d",
+    "checked_at": "2026-08-20T19:59:10.960692",
+    "download_url": "https://files.pythonhosted.org/packages/c4/61/211ba6ee46529619afb3a0c4ed100202001b79d7e701c31c633b983f5bb3/scad123d-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "scad123d-0.1.0/src/scad123d/module_import.py",
+        "line": 93,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(source, {\"_UNSET\": _UNSET, \"_dispatch\": dispatch}, namespace)  # noqa: S102"
+      },
+      {
+        "file": "scad123d-0.1.0/tests/test_module_import.py",
+        "line": 141,
+        "keyword_detected": "exec(",
+        "code_snippet": "# __getattr__ (a fresh exec()'d function each time would fail this)."
+      }
+    ]
+  },
+  {
+    "package_name": "certops-cli",
+    "checked_at": "2026-08-20T19:59:11.132088",
+    "download_url": "https://files.pythonhosted.org/packages/67/99/c5701f08077f137b603f5d48580509dc29a1ce2f78d857e5d89b14c8ca8b/certops_cli-0.1.1b1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "certops_cli-0.1.1b1/src/certops/bridge.py",
+        "line": 77,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "certops_cli-0.1.1b1/src/certops/bridge.py",
+        "line": 162,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      },
+      {
+        "file": "certops_cli-0.1.1b1/tests/test_renderer.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_comparison_gates_are_not_labelled_eval():"
+      }
+    ]
   }
 ]
