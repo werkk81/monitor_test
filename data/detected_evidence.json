@@ -15312,5 +15312,125 @@
         "code_snippet": "provider_key = base64.b64decode(str(data[\"provider_pubkey\"]), validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "zimzap",
+    "checked_at": "2026-08-20T19:38:14.287858",
+    "download_url": "https://files.pythonhosted.org/packages/a8/a1/4e1a22e2a31c7b2b26b05f71e8a03b8af30afc3d6efa8f8c303be55cf9c6/zimzap-0.0.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "return literal_eval(x)"
+      },
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "return literal_eval(x)"
+      },
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "return literal_eval(x)"
+      },
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "return literal_eval(x)"
+      },
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "return [literal_eval(x)]"
+      },
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "frames_to_remove        = literal_eval(config.get('Basic pre-processing options', 'frames_to_remove'))"
+      },
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 103,
+        "keyword_detected": "eval(",
+        "code_snippet": "center_param_centering    = literal_eval(config.get('Advanced pre-processing options', 'center_param_centering'))"
+      },
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "object_param_centering    = literal_eval(config.get('Advanced pre-processing options', 'object_param_centering'))"
+      },
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "flux_center_coordinates   = literal_eval(config.get('Advanced pre-processing options', 'flux_center_coordinates'))"
+      },
+      {
+        "file": "zimzap-0.0.3/src/zimzap/config_methods.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": "flux_param_centering      = literal_eval(config.get('Advanced pre-processing options', 'flux_param_centering'))"
+      }
+    ]
+  },
+  {
+    "package_name": "pyplotrs",
+    "checked_at": "2026-08-20T19:38:15.221837",
+    "download_url": "https://files.pythonhosted.org/packages/22/de/b7da8dd5685e9fb46683c09ae8bcc8dc9b66e271dcc535ad3a2ed08df214/pyplotrs-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyplotrs-0.1.0/tests/test_notebooks.py",
+        "line": 163,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(cell, f\"{path.name}:cell{number}\", \"exec\"), namespace)"
+      },
+      {
+        "file": "pyplotrs-0.1.0/tests/test_regressions.py",
+        "line": 1432,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png = base64.b64decode(embedded.group(1))"
+      },
+      {
+        "file": "pyplotrs-0.1.0/tests/test_regressions.py",
+        "line": 1456,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png = base64.b64decode("
+      },
+      {
+        "file": "pyplotrs-0.1.0/tests/test_regressions.py",
+        "line": 1474,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "b = base64.b64decode(re.search(r'base64,([^\"]+)\"/>', svg).group(1))"
+      },
+      {
+        "file": "pyplotrs-0.1.0/tests/test_richtext.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert eval(repr(s), {\"rich\": pp.rich}) == s"
+      }
+    ]
+  },
+  {
+    "package_name": "baisitong",
+    "checked_at": "2026-08-20T19:38:15.407373",
+    "download_url": "https://files.pythonhosted.org/packages/e6/1c/6a06419a82c223c47718701af81276edc83e8d3b881e3e4f9e915e6a4716/baisitong-1.0.6.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "baisitong-1.0.6/tests/test_api.py",
+        "line": 363,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_delete_document_removes_from_retrieval(self, client):"
+      }
+    ]
   }
 ]
