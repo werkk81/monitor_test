@@ -15710,5 +15710,219 @@
         "code_snippet": "def test_comparison_gates_are_not_labelled_eval():"
       }
     ]
+  },
+  {
+    "package_name": "juntai-iam-contracts",
+    "checked_at": "2026-08-20T20:24:18.584193",
+    "download_url": "https://files.pythonhosted.org/packages/af/71/b199020ae8a9afe9d43c04988ed6cfff1d4fd0678456e026f603e7bd026f/juntai_iam_contracts-1.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "juntai_iam_contracts-1.1.1/tests/test_repository_boundary.py",
+        "line": 35,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect = blocked"
+      },
+      {
+        "file": "juntai_iam_contracts-1.1.1/tests/test_repository_boundary.py",
+        "line": 36,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.bind = blocked"
+      }
+    ]
+  },
+  {
+    "package_name": "openopc-shadow-adapter",
+    "checked_at": "2026-08-20T20:24:18.665505",
+    "download_url": "https://files.pythonhosted.org/packages/e6/31/a9dbbfc9cca6b5ae6db21d00ccc5d3e785254a606be0f47d030874e22c7a/openopc_shadow_adapter-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "openopc_shadow_adapter-1.0.0/shadow_adapter/adapter.py",
+        "line": 179,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "coppeliasim-mcp",
+    "checked_at": "2026-08-20T20:24:18.798798",
+    "download_url": "https://files.pythonhosted.org/packages/92/91/1dee3ef70e288f77b10f6feea5127c9d8e33a9ae3dac5c4997842deffbb5/coppeliasim_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "coppeliasim_mcp-0.1.0/scripts/prueba_humo.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proceso = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "experiential",
+    "checked_at": "2026-08-20T20:24:18.997128",
+    "download_url": "https://files.pythonhosted.org/packages/04/36/3640755ab3b289a881a61ade0fa58e18b2322e058336fb85f5566dd7c988/experiential-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "experiential-0.4.0/exp/conftest.py",
+        "line": 199,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "experiential-0.4.0/exp/cli/tests/terminal_tasks_live_pipeline_test.py",
+        "line": 306,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _wait_for_server(port: int, process: subprocess.Popen[bytes]) -> None:"
+      },
+      {
+        "file": "experiential-0.4.0/exp/cli/tests/terminal_tasks_live_pipeline_test.py",
+        "line": 338,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)"
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local.py",
+        "line": 540,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local.py",
+        "line": 576,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local.py",
+        "line": 695,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes],"
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local.py",
+        "line": 767,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _read_response(self, process: subprocess.Popen[bytes]) -> JsonObject:"
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local.py",
+        "line": 853,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes],"
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local.py",
+        "line": 879,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes],"
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local.py",
+        "line": 919,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _require_process(self) -> subprocess.Popen[bytes]:"
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local.py",
+        "line": 945,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _crash_error(self, process: subprocess.Popen[bytes]) -> LocalProcessCrashError:"
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local_test.py",
+        "line": 183,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "unrelated = subprocess.Popen("
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local_test.py",
+        "line": 430,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/environments/local_test.py",
+        "line": 445,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/gateway/auth.py",
+        "line": 144,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "int(version): base64.b64decode(encoded, validate=True)"
+      },
+      {
+        "file": "experiential-0.4.0/exp/runtime/gateway/tests/launch_test.py",
+        "line": 623,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "experiential-0.4.0/exp/tests/release_test.py",
+        "line": 342,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "experiential-0.4.0/exp/tests/release_test.py",
+        "line": 1359,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "experiential-0.4.0/exp/tests/release_test.py",
+        "line": 1363,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def wait_for_loopback(port: int, process: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "experiential-0.4.0/exp/tests/release_test.py",
+        "line": 1385,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def start_gateway(root: Path) -> tuple[subprocess.Popen[str], int, str]:"
+      },
+      {
+        "file": "experiential-0.4.0/exp/tests/release_test.py",
+        "line": 1395,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "experiential-0.4.0/exp/tests/release_test.py",
+        "line": 1416,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def stop_gateway(process: subprocess.Popen[str]) -> tuple[str, str]:"
+      },
+      {
+        "file": "experiential-0.4.0/exp/tests/release_test.py",
+        "line": 2714,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "router_process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "cortxai",
+    "checked_at": "2026-08-20T20:24:19.087050",
+    "download_url": "https://files.pythonhosted.org/packages/5f/cb/b4b5ede2d5b53c80386b0e93f20485c975200bbfc4dfc3814fb80d57baf9/cortxai-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cortxai-0.2.0/src/cortex/extensions.py",
+        "line": 143,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, f\"{name}.py\", \"exec\"), module.__dict__)  # noqa: S102"
+      },
+      {
+        "file": "cortxai-0.2.0/src/cortex/extensions.py",
+        "line": 166,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, f\"{name}.py\", \"exec\"), module.__dict__)  # noqa: S102"
+      }
+    ]
   }
 ]
