@@ -15102,5 +15102,119 @@
         "code_snippet": "filepath.write_bytes(base64.b64decode(image_b64))"
       }
     ]
+  },
+  {
+    "package_name": "assay-checks",
+    "checked_at": "2026-08-20T18:18:00.894501",
+    "download_url": "https://files.pythonhosted.org/packages/50/9a/4d31fb897c49ed76dd8af9bf506213bcec764b6533febd5a291ddb9014f4/assay_checks-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "assay_checks-0.1.0/assay/sameness.py",
+        "line": 159,
+        "keyword_detected": "eval(",
+        "code_snippet": "ast.literal_eval(node.value)"
+      },
+      {
+        "file": "assay_checks-0.1.0/assay/sameness.py",
+        "line": 438,
+        "keyword_detected": "eval(",
+        "code_snippet": "for i in range(len(ast.literal_eval(inputs[0])) if inputs else 0):"
+      },
+      {
+        "file": "assay_checks-0.1.0/assay/sameness.py",
+        "line": 439,
+        "keyword_detected": "eval(",
+        "code_snippet": "out.append([outcome_of(lambda *a, _i=i: a[_i], ast.literal_eval(src))"
+      },
+      {
+        "file": "assay_checks-0.1.0/assay/worker.py",
+        "line": 37,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<assay-probe>\", \"exec\"), namespace)   # noqa: S102"
+      },
+      {
+        "file": "assay_checks-0.1.0/assay/worker.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "args = ast.literal_eval(src)"
+      },
+      {
+        "file": "assay_checks-0.1.0/tests/test_sameness.py",
+        "line": 71,
+        "keyword_detected": "eval(",
+        "code_snippet": "vector = [S.outcome_of(lambda x: x, ast.literal_eval(s)) for s in inputs]"
+      }
+    ]
+  },
+  {
+    "package_name": "atif-view",
+    "checked_at": "2026-08-20T18:18:01.243440",
+    "download_url": "https://files.pythonhosted.org/packages/de/c5/eccb2f2ea78babcffbb89488e7fea124eeb2614bd601d19bc769553d2243/atif_view-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "atif_view-0.1.0/tests/test_viewer.py",
+        "line": 23,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "atif_view-0.1.0/tests/test_viewer.py",
+        "line": 101,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:"
+      },
+      {
+        "file": "atif_view-0.1.0/tests/test_viewer.py",
+        "line": 116,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "atif-make",
+    "checked_at": "2026-08-20T18:18:01.272139",
+    "download_url": "https://files.pythonhosted.org/packages/dd/d9/95649c6a3e916632807737606bf91f3b29c3cdccf26e037fb7080c5e955f/atif_make-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "atif_make-0.1.0/src/atif_make/parsers/claude_code.py",
+        "line": 258,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(data, validate=False)"
+      },
+      {
+        "file": "atif_make-0.1.0/src/atif_make/parsers/codex.py",
+        "line": 92,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(match.group(2), validate=False)"
+      },
+      {
+        "file": "atif_make-0.1.0/src/atif_make/parsers/codex.py",
+        "line": 296,
+        "keyword_detected": "exec(",
+        "code_snippet": "def parse_codex_exec(path: Path) -> Trajectory:"
+      },
+      {
+        "file": "atif_make-0.1.0/tests/test_archive.py",
+        "line": 17,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "PNG = base64.b64decode("
+      },
+      {
+        "file": "atif_make-0.1.0/tests/test_multimodal.py",
+        "line": 14,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "PNG = base64.b64decode("
+      },
+      {
+        "file": "atif_make-0.1.0/tests/test_spec_compliance.py",
+        "line": 69,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png = base64.b64decode("
+      }
+    ]
   }
 ]
