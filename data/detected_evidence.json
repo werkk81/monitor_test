@@ -16836,5 +16836,125 @@
         "code_snippet": "subprocess.Popen(cmd, shell=True, cwd=\"/home/deepikamaruboina/Desktop/coindcxagent\")"
       }
     ]
+  },
+  {
+    "package_name": "hum-cli",
+    "checked_at": "2026-08-20T22:58:33.486000",
+    "download_url": "https://files.pythonhosted.org/packages/5e/74/b737c9d9de5846ca12a2d3b56ef0e5acfbf7b83709199dbeed702cd470ce/hum_cli-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hum_cli-0.0.1/hum/cli.py",
+        "line": 53,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await ex.exec(cmd, timeout_sec=900)"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/adapters/harbor.py",
+        "line": 42,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, command: str, cwd: str | None = None, timeout_sec: int | None = None) -> ExecResult:"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/adapters/harbor.py",
+        "line": 43,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self.env.exec(command, cwd=cwd or self.cwd, timeout_sec=timeout_sec)"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/adapters/harbor.py",
+        "line": 47,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self.env.exec(f\"base64 -w0 {shlex.quote(path)}\", cwd=self.cwd, timeout_sec=60)"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/adapters/harbor.py",
+        "line": 50,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(r.stdout or \"\")"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/adapters/harbor.py",
+        "line": 54,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await self.env.exec(f\"mkdir -p $(dirname {shlex.quote(path)}) && echo {b64} | base64 -d > {shlex.quote(path)}\", cwd=self.cwd, timeout_sec=60)"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/adapters/harbor.py",
+        "line": 60,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self.env.exec(f\"mkdir -p /tmp/harness_snap && tar czf /tmp/harness_snap/{sid}.tgz -C {shlex.quote(self.cwd)} .\", timeout_sec=600)"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/runtime/executor.py",
+        "line": 60,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, command: str, cwd: str | None = None, timeout_sec: int | None = None) -> ExecResult: ..."
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/runtime/executor.py",
+        "line": 83,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, command: str, cwd: str | None = None, timeout_sec: int | None = None) -> ExecResult:"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/runtime/executor.py",
+        "line": 84,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/runtime/tools.py",
+        "line": 84,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await ex.exec(a[\"command\"], timeout_sec=int(a.get(\"timeout_sec\", 120)))"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/runtime/workspace.py",
+        "line": 20,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await ex.exec(\"git status --porcelain=v1 --untracked-files=all && git diff\", timeout_sec=30)"
+      },
+      {
+        "file": "hum_cli-0.0.1/hum/runtime/workspace.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await ex.exec(\"git status --porcelain=v1 && git diff --stat\", timeout_sec=30)"
+      },
+      {
+        "file": "hum_cli-0.0.1/tests/test_runtime.py",
+        "line": 164,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await ex.exec(\"echo hi\")"
+      }
+    ]
+  },
+  {
+    "package_name": "people-trade-ai",
+    "checked_at": "2026-08-20T22:58:34.107015",
+    "download_url": "https://files.pythonhosted.org/packages/24/40/762c56c501c34ee8118076badf6ad711b7c7ca99322175308fdbae237d44/people_trade_ai-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "people_trade_ai-1.0.0/dashboard_server.py",
+        "line": 1466,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(cmd, shell=True, cwd=\"/home/deepikamaruboina/Desktop/coindcxagent\")"
+      }
+    ]
+  },
+  {
+    "package_name": "repo-conn",
+    "checked_at": "2026-08-20T22:58:34.832059",
+    "download_url": "https://files.pythonhosted.org/packages/2c/08/d8d9d574d32dd6d391708683ecbcbc8ae6ba64d952c3036aeb6f4579ac8a/repo_conn-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "repo_conn-1.1.0/backend/analyzer/github_client.py",
+        "line": 103,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(content).decode(\"utf-8\", errors=\"replace\")"
+      }
+    ]
   }
 ]
