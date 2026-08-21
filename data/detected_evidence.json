@@ -18800,5 +18800,19 @@
         "code_snippet": "original_socket = socket.socket"
       }
     ]
+  },
+  {
+    "package_name": "metaquest-bio",
+    "checked_at": "2026-08-21T22:37:23.545083",
+    "download_url": "https://files.pythonhosted.org/packages/6d/a0/b036561da1a405a0e0b8ee61a592e99f76d3419566c50965bbe69d4c4fc5/metaquest_bio-2.0.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "metaquest_bio-2.0.0a1/src/metaquest/io/output_formatter.py",
+        "line": 342,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
