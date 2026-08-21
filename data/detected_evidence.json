@@ -17010,5 +17010,33 @@
         "code_snippet": "def test_manual_query_and_boolean_regions_resolve_without_eval():"
       }
     ]
+  },
+  {
+    "package_name": "compilers.C",
+    "checked_at": "2026-08-21T19:21:22.468525",
+    "download_url": "https://files.pythonhosted.org/packages/b0/1c/6731eec2d95ee15f5fae6ac8268b614c006983916999444c5a74b7333ffb/compilers_c-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "compilers_c-0.1.0/compilers/C/base.py",
+        "line": 1126,
+        "keyword_detected": "eval(",
+        "code_snippet": "if lib_type not in eval(expected):"
+      }
+    ]
+  },
+  {
+    "package_name": "beamcode",
+    "checked_at": "2026-08-21T19:21:23.167804",
+    "download_url": "https://files.pythonhosted.org/packages/d1/ba/c77403c81da0236c34a1fc4cc8f073d314bfbcc6afc90d3a834b5af8c34d/beamcode-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "beamcode-1.1.0/src/beamcode/crypto.py",
+        "line": 42,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(padded + pad)"
+      }
+    ]
   }
 ]
