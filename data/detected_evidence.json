@@ -17072,5 +17072,565 @@
         "code_snippet": "return session.exec(query).all()"
       }
     ]
+  },
+  {
+    "package_name": "hexastack-fastapi",
+    "checked_at": "2026-08-21T19:57:26.618634",
+    "download_url": "https://files.pythonhosted.org/packages/db/02/1378995ed7e9650f6c02ec7d6099d4221b4a63ebc9fe2b21d9f92c445300/hexastack_fastapi-0.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hexastack_fastapi-0.0.0/src/hexastack_fastapi/testing/server.py",
+        "line": 18,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "hexastack_fastapi-0.0.0/src/hexastack_fastapi/testing/server.py",
+        "line": 42,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc: subprocess.Popen[Any] | None = None"
+      },
+      {
+        "file": "hexastack_fastapi-0.0.0/src/hexastack_fastapi/testing/server.py",
+        "line": 67,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "comfylab",
+    "checked_at": "2026-08-21T19:57:27.456068",
+    "download_url": "https://files.pythonhosted.org/packages/ef/73/f40c46a7110326daa5282682a50605f987aa48cc2444e93776e72d30e591/comfylab-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "comfylab-0.4.0/backend/main.py",
+        "line": 208,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:"
+      },
+      {
+        "file": "comfylab-0.4.0/backend/main.py",
+        "line": 313,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:"
+      },
+      {
+        "file": "comfylab-0.4.0/backend/main.py",
+        "line": 382,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(auth_header[6:]).decode(\"utf-8\")"
+      },
+      {
+        "file": "comfylab-0.4.0/backend/routers/diagnostics.py",
+        "line": 30,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "comfylab-0.4.0/backend/routers/settings.py",
+        "line": 141,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(args, env=os.environ.copy())"
+      },
+      {
+        "file": "comfylab-0.4.0/backend/routers/settings.py",
+        "line": 158,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(args, env=os.environ.copy())"
+      },
+      {
+        "file": "comfylab-0.4.0/backend/routers/workspace.py",
+        "line": 232,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"open\", str(blueprints_dir)])"
+      },
+      {
+        "file": "comfylab-0.4.0/backend/routers/workspace.py",
+        "line": 234,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"xdg-open\", str(blueprints_dir)])"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/base_script.py",
+        "line": 168,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/base_script.py",
+        "line": 213,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/basic_math.py",
+        "line": 517,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(expr_processed, {\"__builtins__\": {}}, eval_namespace)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/cluster.py",
+        "line": 271,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(sub_engine.trigger_exec(start_block_id, start_pin_name, cluster_ctx))"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/cluster.py",
+        "line": 280,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(sub_engine.trigger_exec(nid, pname, cluster_ctx))"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/control_flow.py",
+        "line": 122,
+        "keyword_detected": "exec(",
+        "code_snippet": "await context.engine.trigger_exec(self.id, \"LoopBody\", context)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/control_flow.py",
+        "line": 192,
+        "keyword_detected": "exec(",
+        "code_snippet": "await context.engine.trigger_exec(self.id, \"LoopBody\", context)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/control_flow.py",
+        "line": 275,
+        "keyword_detected": "exec(",
+        "code_snippet": "await context.engine.trigger_exec(self.id, \"LoopBody\", context)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/external_com.py",
+        "line": 43,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/math_fit.py",
+        "line": 299,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(expr_processed, {\"__builtins__\": {}}, {**eval_namespace, **local_vars})"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/publisher.py",
+        "line": 186,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compiled, namespace)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/script.py",
+        "line": 105,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compiled, namespace)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/script_csharp.py",
+        "line": 186,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/script_csharp.py",
+        "line": 254,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/script_lua.py",
+        "line": 245,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/script_rust.py",
+        "line": 200,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/timing.py",
+        "line": 117,
+        "keyword_detected": "exec(",
+        "code_snippet": "await context.engine.trigger_exec(self.id, \"Body\", context)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/timing.py",
+        "line": 245,
+        "keyword_detected": "exec(",
+        "code_snippet": "await context.engine.trigger_exec(self.id, \"Tick\", context)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/blocks/utility.py",
+        "line": 225,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(seq)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/cli.py",
+        "line": 162,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "backend_proc = subprocess.Popen(backend_cmd, cwd=cwd_target, env=env)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/cli.py",
+        "line": 215,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "backend_proc = subprocess.Popen(backend_cmd, cwd=str(source_dir), env=env)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/cli.py",
+        "line": 225,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "frontend_proc = subprocess.Popen(vite_cmd, cwd=str(frontend_dir), env=env)"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/engine/executor.py",
+        "line": 227,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(self.trigger_exec(start_block_id, start_pin_name, context))"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/engine/executor.py",
+        "line": 236,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(self.trigger_exec(block_id, pin_name, context))"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/engine/executor.py",
+        "line": 276,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def trigger_exec(self, block_id: str, pin_name: str, context: ExecutionContext):"
+      },
+      {
+        "file": "comfylab-0.4.0/comfylab/engine/security.py",
+        "line": 130,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "sig_bytes = base64.b64decode(signature_b64.encode(\"utf-8\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "fabrica-context",
+    "checked_at": "2026-08-21T19:57:27.704551",
+    "download_url": "https://files.pythonhosted.org/packages/f8/8a/9796949d3a5b9719c57d466ae30b6f31f924e483fc286d7eb41fe0c1333b/fabrica_context-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/patched_guest_shim.py",
+        "line": 28,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _send(sock: socket.socket, message: dict[str, Any]) -> None:"
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/patched_guest_shim.py",
+        "line": 33,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _recv(sock: socket.socket) -> dict[str, Any]:"
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/patched_guest_shim.py",
+        "line": 41,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _recv_exact(sock: socket.socket, n: int) -> bytes:"
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/patched_guest_shim.py",
+        "line": 53,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _connect_send_ready_and_wait_for_code() -> tuple[socket.socket, dict[str, Any]]:"
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/patched_guest_shim.py",
+        "line": 62,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_VSOCK, socket.SOCK_STREAM)  # type: ignore[attr-defined]"
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/patched_guest_shim.py",
+        "line": 101,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, \"<sandboxed_code>\", \"exec\"), {\"namespace\": namespace})"
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/spike.py",
+        "line": 33,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/spike.py",
+        "line": 44,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/spike.py",
+        "line": 93,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc1 = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-firecracker-snapshot-restore-vsock/spike.py",
+        "line": 176,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc2 = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/specs/archive/spikes/scripts/spike-prx-invocation-latency/spike.py",
+        "line": 89,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/_firecracker_guest_shim.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _send(sock: socket.socket, message: dict[str, Any]) -> None:"
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/_firecracker_guest_shim.py",
+        "line": 60,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _recv(sock: socket.socket) -> dict[str, Any]:"
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/_firecracker_guest_shim.py",
+        "line": 68,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _recv_exact(sock: socket.socket, n: int) -> bytes:"
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/_firecracker_guest_shim.py",
+        "line": 88,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _connect_send_ready_and_wait_for_code() -> tuple[socket.socket, dict[str, Any]]:"
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/_firecracker_guest_shim.py",
+        "line": 107,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_VSOCK, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/_firecracker_guest_shim.py",
+        "line": 152,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, \"<sandboxed_code>\", \"exec\"), {\"namespace\": namespace})"
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/_guest_shim.py",
+        "line": 52,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, \"<sandboxed_code>\", \"exec\"), {\"namespace\": namespace})"
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/_shim_runner.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/firecracker_backend.py",
+        "line": 202,
+        "keyword_detected": "exec(",
+        "code_snippet": "pkill = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/firecracker_backend.py",
+        "line": 220,
+        "keyword_detected": "exec(",
+        "code_snippet": "rm = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/firecracker_backend.py",
+        "line": 241,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/firecracker_backend.py",
+        "line": 265,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/firecracker_backend.py",
+        "line": 502,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/firecracker_backend.py",
+        "line": 612,
+        "keyword_detected": "exec(",
+        "code_snippet": "stage_proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/firecracker_backend.py",
+        "line": 697,
+        "keyword_detected": "exec(",
+        "code_snippet": "#    since without it jailer just exec()s straight into"
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/firecracker_backend.py",
+        "line": 706,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/sandbox/firecracker_backend.py",
+        "line": 849,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/tunnel/cloudflare_provider.py",
+        "line": 119,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/tunnel/cloudflare_provider.py",
+        "line": 183,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/tunnel/tailscale_provider.py",
+        "line": 50,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/tunnel/tailscale_provider.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/src/fabrica/tunnel/tailscale_provider.py",
+        "line": 105,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/tests/tunnel/conftest.py",
+        "line": 14,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "fabrica_context-0.1.0/tests/tunnel/conftest.py",
+        "line": 25,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/tests/tunnel/test_cloudflare_provider.py",
+        "line": 69,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "fabrica_context-0.1.0/tests/tunnel/test_tailscale_provider.py",
+        "line": 63,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "mcp-webexcalling",
+    "checked_at": "2026-08-21T19:57:27.905517",
+    "download_url": "https://files.pythonhosted.org/packages/4b/d6/8a00ace27a3662c7d0ac50a29ed75eccdd5d9f8074b8d5dc6cba28908e0e/mcp_webexcalling-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mcp_webexcalling-0.2.1/mcp_webexcalling/oauth.py",
+        "line": 233,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "probe = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "mcp_webexcalling-0.2.1/mcp_webexcalling/webex_client.py",
+        "line": 35,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(padded).decode(\"utf-8\", errors=\"strict\")"
+      },
+      {
+        "file": "mcp_webexcalling-0.2.1/tests/test_oauth.py",
+        "line": 113,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "mcp_webexcalling-0.2.1/tests/test_oauth.py",
+        "line": 169,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "holder = socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "qwenpaw-data-cli",
+    "checked_at": "2026-08-21T19:57:28.069532",
+    "download_url": "https://files.pythonhosted.org/packages/d6/96/ea5b54b9a8e5030995cb7a9ac1afe939c828e9236bea01b17dff6715dcbd/qwenpaw_data_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qwenpaw_data_cli-0.1.0/src/qwenpaw_data/cli/commands/doctor.py",
+        "line": 245,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "qwenpaw-data-host-core",
+    "checked_at": "2026-08-21T19:57:28.256923",
+    "download_url": "https://files.pythonhosted.org/packages/f9/d5/207517800da04edb5a22bbc10637d23c3083d4124b0bc29136ad74ed6dc2/qwenpaw_data_host_core-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qwenpaw_data_host_core-0.1.0/src/qwenpaw_data/host/core/tools/workspace.py",
+        "line": 126,
+        "keyword_detected": "exec(",
+        "code_snippet": "killer = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "qwenpaw_data_host_core-0.1.0/src/qwenpaw_data/host/core/utils/workspace.py",
+        "line": 41,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(sys.argv[2:], start_new_session=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "qwenpaw-data-context",
+    "checked_at": "2026-08-21T19:57:32.659353",
+    "download_url": "https://files.pythonhosted.org/packages/84/00/7f4a31913a7f162a1abdda002f70aa54c841001cd895e4b3eb2e8ff148c5/qwenpaw_data_context-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qwenpaw_data_context-0.1.0/src/context_manager/api/ctx_pipeline.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "split_facets, meta = semantic_split_for_retrieval("
+      },
+      {
+        "file": "qwenpaw_data_context-0.1.0/src/context_manager/graph/adapters/csv_adapter.py",
+        "line": 33,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "csv_text = base64.b64decode(raw).decode(\"utf-8\")"
+      },
+      {
+        "file": "qwenpaw_data_context-0.1.0/src/context_manager/runtime/semantic_split.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "def semantic_split_for_retrieval("
+      }
+    ]
   }
 ]
