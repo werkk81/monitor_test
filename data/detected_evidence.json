@@ -17038,5 +17038,39 @@
         "code_snippet": "return base64.b64decode(padded + pad)"
       }
     ]
+  },
+  {
+    "package_name": "pyinternet",
+    "checked_at": "2026-08-21T19:43:44.827030",
+    "download_url": "https://files.pythonhosted.org/packages/b3/68/227fd0aeac44da872cef67b8bf02e175dbb756fee60b9581864e3663f2a3/pyinternet-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyinternet-0.1.0/cache/ctx.py",
+        "line": 129,
+        "keyword_detected": "eval(",
+        "code_snippet": "return int(_cache.conn.client.eval(IncrSetTTLScript, 1, key, ttl_ms))"
+      },
+      {
+        "file": "pyinternet-0.1.0/cache/ctx.py",
+        "line": 144,
+        "keyword_detected": "eval(",
+        "code_snippet": "return int(_cache.conn.client.eval(DecrKeepTTLScript, 1, key))"
+      }
+    ]
+  },
+  {
+    "package_name": "python-magicmodels",
+    "checked_at": "2026-08-21T19:43:45.852972",
+    "download_url": "https://files.pythonhosted.org/packages/37/25/0c90288bb22bb08f51cfe74ac0880d1edbcde0bcdeec456594cf0660fb31/python_magicmodels-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "python_magicmodels-0.1.0/magicmodels/generators/fastapi.py",
+        "line": 162,
+        "keyword_detected": "exec(",
+        "code_snippet": "return session.exec(query).all()"
+      }
+    ]
   }
 ]
