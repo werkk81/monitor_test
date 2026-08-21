@@ -18662,5 +18662,57 @@
         "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
       }
     ]
+  },
+  {
+    "package_name": "msgraph-mcp-server",
+    "checked_at": "2026-08-21T21:53:30.007757",
+    "download_url": "https://files.pythonhosted.org/packages/64/67/75fdcb12d57037a4c57ee281645c9e35640f824b002ef6906fbfde48f4b1/msgraph_mcp_server-0.3.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "msgraph_mcp_server-0.3.1/src/msgraph_mcp/tools/mail_read.py",
+        "line": 256,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(content)"
+      },
+      {
+        "file": "msgraph_mcp_server-0.3.1/src/msgraph_mcp/tools/mail_write.py",
+        "line": 66,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(spec[\"content_b64\"], validate=True)"
+      },
+      {
+        "file": "msgraph_mcp_server-0.3.1/tests/test_tools_teams_content.py",
+        "line": 56,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(block.data) == PNG"
+      },
+      {
+        "file": "msgraph_mcp_server-0.3.1/tests/test_tools_teams_content.py",
+        "line": 67,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(result[\"content_base64\"]) == b\"not an image\""
+      }
+    ]
+  },
+  {
+    "package_name": "NSplusthon",
+    "checked_at": "2026-08-21T21:53:30.217567",
+    "download_url": "https://files.pythonhosted.org/packages/ed/63/a685c2d3a0fe96df0abe673a1ac2c8440f923ea9e7104b8fa35ea192f968/nsplusthon-1.1.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nsplusthon-1.1.4/nsplusthon/network/connection/connection.py",
+        "line": 158,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(mode, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nsplusthon-1.1.4/nsplusthon/network/connection/tcpmtproxy.py",
+        "line": 143,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "secret_bytes = base64.b64decode(secret.encode())"
+      }
+    ]
   }
 ]
