@@ -18520,5 +18520,147 @@
         "code_snippet": "ren.eval()"
       }
     ]
+  },
+  {
+    "package_name": "msgraph-mcp-server",
+    "checked_at": "2026-08-21T21:32:56.617617",
+    "download_url": "https://files.pythonhosted.org/packages/64/67/75fdcb12d57037a4c57ee281645c9e35640f824b002ef6906fbfde48f4b1/msgraph_mcp_server-0.3.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "msgraph_mcp_server-0.3.1/src/msgraph_mcp/tools/mail_read.py",
+        "line": 256,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(content)"
+      },
+      {
+        "file": "msgraph_mcp_server-0.3.1/src/msgraph_mcp/tools/mail_write.py",
+        "line": 66,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(spec[\"content_b64\"], validate=True)"
+      },
+      {
+        "file": "msgraph_mcp_server-0.3.1/tests/test_tools_teams_content.py",
+        "line": 56,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(block.data) == PNG"
+      },
+      {
+        "file": "msgraph_mcp_server-0.3.1/tests/test_tools_teams_content.py",
+        "line": 67,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(result[\"content_base64\"]) == b\"not an image\""
+      }
+    ]
+  },
+  {
+    "package_name": "NSplusthon",
+    "checked_at": "2026-08-21T21:32:56.742018",
+    "download_url": "https://files.pythonhosted.org/packages/ed/63/a685c2d3a0fe96df0abe673a1ac2c8440f923ea9e7104b8fa35ea192f968/nsplusthon-1.1.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nsplusthon-1.1.4/nsplusthon/network/connection/connection.py",
+        "line": 158,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(mode, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nsplusthon-1.1.4/nsplusthon/network/connection/tcpmtproxy.py",
+        "line": 143,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "secret_bytes = base64.b64decode(secret.encode())"
+      }
+    ]
+  },
+  {
+    "package_name": "brainpatch",
+    "checked_at": "2026-08-21T21:32:56.922996",
+    "download_url": "https://files.pythonhosted.org/packages/82/9d/67e2a863746fdb12b72a767f952d53cbc9652a8433a45e86c07c68b9d98d/brainpatch-1.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "brainpatch-1.2.0/brainpatch/backends/llamacpp.py",
+        "line": 282,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "brainpatch-1.2.0/brainpatch/backends/transformers_backend.py",
+        "line": 14,
+        "keyword_detected": "eval(",
+        "code_snippet": "**Weights are never modified.** ``requires_grad_(False)`` plus ``eval()``, and"
+      },
+      {
+        "file": "brainpatch-1.2.0/brainpatch/backends/transformers_backend.py",
+        "line": 156,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "brainpatch-1.2.0/brainpatch/research/ml/feature_analysis.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "sae.eval()"
+      },
+      {
+        "file": "brainpatch-1.2.0/brainpatch/research/ml/model.py",
+        "line": 10,
+        "keyword_detected": "eval(",
+        "code_snippet": "2. **The model is frozen.** ``requires_grad_(False)`` plus ``eval()`` on every"
+      },
+      {
+        "file": "brainpatch-1.2.0/brainpatch/research/ml/model.py",
+        "line": 160,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "brainpatch-1.2.0/brainpatch/research/ml/patch_search.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "sae.eval()"
+      },
+      {
+        "file": "brainpatch-1.2.0/brainpatch/research/ml/sae.py",
+        "line": 323,
+        "keyword_detected": "eval(",
+        "code_snippet": "sae.eval()"
+      },
+      {
+        "file": "brainpatch-1.2.0/brainpatch/research/ml/training.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "sae.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "carbon-property-tables",
+    "checked_at": "2026-08-21T21:32:57.011939",
+    "download_url": "https://files.pythonhosted.org/packages/f5/e9/c64dc9f9f2dce1fcc328824e1a75e0536533e951dc2f44f3bde5e6a76412/carbon_property_tables-0.3.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "carbon_property_tables-0.3.3/src/carbon_property_tables/client.py",
+        "line": 164,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded[name] = base64.b64decode(encoded, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "mcp-for-kibana",
+    "checked_at": "2026-08-21T21:32:57.088566",
+    "download_url": "https://files.pythonhosted.org/packages/01/dd/a2e537bd00c69684c9f9c24707acf120bcf863ea4439d5c36ee4cf6985de/mcp_for_kibana-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mcp_for_kibana-0.1.0/tests/unit/test_http_auth_integration.py",
+        "line": 23,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      }
+    ]
   }
 ]
