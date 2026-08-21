@@ -16970,5 +16970,45 @@
         "code_snippet": "return session.exec(query).all()"
       }
     ]
+  },
+  {
+    "package_name": "adtx-attribution",
+    "checked_at": "2026-08-21T18:58:11.568215",
+    "download_url": "https://files.pythonhosted.org/packages/cf/32/9bca29a1ad56d6235323f4e9aa79002d640c4e281ea0c96a565173cebd5c/adtx_attribution-0.6.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "adtx_attribution-0.6.0/src/adtx_attribution/collectors/persona.py",
+        "line": 261,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = base64.b64decode(parts[1])"
+      },
+      {
+        "file": "adtx_attribution-0.6.0/src/adtx_attribution/collectors/persona.py",
+        "line": 394,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "ANYfem",
+    "checked_at": "2026-08-21T18:58:12.281765",
+    "download_url": "https://files.pythonhosted.org/packages/76/0c/b400da2ca453249a4d170daf198f6d3cbaf5e4e37e781a0dc6288cbfcb0a/anyfem-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "anyfem-0.3.0/src/anyfem/scripting.py",
+        "line": 574,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compiled, namespace, namespace)"
+      },
+      {
+        "file": "anyfem-0.3.0/tests/test_commercial_foundations.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_manual_query_and_boolean_regions_resolve_without_eval():"
+      }
+    ]
   }
 ]
