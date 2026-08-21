@@ -18166,5 +18166,89 @@
         "code_snippet": "process = subprocess.Popen(sys.argv[2:], start_new_session=True)"
       }
     ]
+  },
+  {
+    "package_name": "ag2-relay-client",
+    "checked_at": "2026-08-21T20:42:18.020762",
+    "download_url": "https://files.pythonhosted.org/packages/29/31/758b068acddf8c7897454ecc7fe95d6679544afa0863411635ce4e61e33b/ag2_relay_client-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ag2_relay_client-0.1.0/ag2_relay_client/resolver.py",
+        "line": 168,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(family, socktype, proto)"
+      },
+      {
+        "file": "ag2_relay_client-0.1.0/tests/test_events.py",
+        "line": 939,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket()"
+      },
+      {
+        "file": "ag2_relay_client-0.1.0/tests/test_outbound.py",
+        "line": 116,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "check(base64.b64decode(broker.took(\"POST\", MEDIA)[0].json[\"content_b64\"])"
+      },
+      {
+        "file": "ag2_relay_client-0.1.0/tests/test_resolver.py",
+        "line": 200,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket()"
+      },
+      {
+        "file": "ag2_relay_client-0.1.0/tests/test_roomops.py",
+        "line": 232,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "check(base64.b64decode(sent[\"content_b64\"]) == b\"\\x89PNG fake bytes\","
+      },
+      {
+        "file": "ag2_relay_client-0.1.0/tests/test_singleton.py",
+        "line": 265,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "figkit",
+    "checked_at": "2026-08-21T20:42:18.145848",
+    "download_url": "https://files.pythonhosted.org/packages/9c/7d/9ab64faa0be00a3761856d0d54def776b574c8f2055abac79068ed1ef770/figkit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "figkit-0.1.0/figkit/image.py",
+        "line": 146,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self._data = base64.b64decode(payload)"
+      }
+    ]
+  },
+  {
+    "package_name": "discord.ae",
+    "checked_at": "2026-08-21T20:42:18.165102",
+    "download_url": "https://files.pythonhosted.org/packages/46/af/046b1a49362bc5d4a907a2f6e7b94a358eaef116bf30f49b25ebf55e12ed/discord_ae-1.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "discord_ae-1.5.0/discord_ae/cli.py",
+        "line": 271,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(\"\\n\".join(clean_code_lines), global_ns, global_ns)"
+      },
+      {
+        "file": "discord_ae-1.5.0/discord_ae/cli.py",
+        "line": 304,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(wrapped_code, local_ns, local_ns)"
+      },
+      {
+        "file": "discord_ae-1.5.0/discord_ae/cli.py",
+        "line": 315,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(wrapped_code, local_ns, local_ns)"
+      }
+    ]
   }
 ]
