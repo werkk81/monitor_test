@@ -16956,5 +16956,19 @@
         "code_snippet": "return base64.b64decode(content).decode(\"utf-8\", errors=\"replace\")"
       }
     ]
+  },
+  {
+    "package_name": "python-magicmodels",
+    "checked_at": "2026-08-21T18:17:22.055320",
+    "download_url": "https://files.pythonhosted.org/packages/37/25/0c90288bb22bb08f51cfe74ac0880d1edbcde0bcdeec456594cf0660fb31/python_magicmodels-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "python_magicmodels-0.1.0/magicmodels/generators/fastapi.py",
+        "line": 162,
+        "keyword_detected": "exec(",
+        "code_snippet": "return session.exec(query).all()"
+      }
+    ]
   }
 ]
