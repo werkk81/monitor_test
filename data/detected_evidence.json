@@ -18814,5 +18814,277 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "costlens",
+    "checked_at": "2026-08-21T22:55:19.586101",
+    "download_url": "https://files.pythonhosted.org/packages/31/3a/0593ed93810a2a4f557ce2ef793e783ec7cbebdad3daff9ddd3ffd24701a/costlens-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 288,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(stmt)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 290,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, stmt: ast.stmt) -> None:"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 293,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = self._eval(stmt.value)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 308,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = self._eval(stmt.value)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 315,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._eval(stmt.value)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 353,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.scopes[-1][\"__return__\"] = self._eval(stmt.value)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 361,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(child)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 414,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(self, expr: ast.expr):"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 422,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self._eval(expr.value)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 425,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._eval(element)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 428,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._eval(expr.left)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 429,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._eval(expr.right)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 438,
+        "keyword_detected": "eval(",
+        "code_snippet": "base = self._eval(expr.value)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 443,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self._eval(expr.value)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 445,
+        "keyword_detected": "eval(",
+        "code_snippet": "base = self._eval(expr.value)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 449,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self._eval(expr.value) if isinstance(expr.value, ast.Call) else None"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 468,
+        "keyword_detected": "eval(",
+        "code_snippet": "receiver = self._eval(receiver_expr)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 488,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._eval(arg)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 633,
+        "keyword_detected": "eval(",
+        "code_snippet": "other = self._eval(call.args[0]) if call.args else None"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 671,
+        "keyword_detected": "eval(",
+        "code_snippet": "other = self._eval(call.args[0]) if call.args else None"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 676,
+        "keyword_detected": "eval(",
+        "code_snippet": "other = self._eval(call.args[0]) if call.args else None"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 720,
+        "keyword_detected": "eval(",
+        "code_snippet": "right = self._eval(call.args[0]) if call.args else None"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 789,
+        "keyword_detected": "eval(",
+        "code_snippet": "arg = self._eval(call.args[0]) if call.args else None"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 797,
+        "keyword_detected": "eval(",
+        "code_snippet": "arg = self._eval(call.args[0]) if call.args else None"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 810,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._eval(arg)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 828,
+        "keyword_detected": "eval(",
+        "code_snippet": "scope[param] = self._eval(arg_expr)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 833,
+        "keyword_detected": "eval(",
+        "code_snippet": "scope[kw.arg] = self._eval(kw.value) or _const(kw.value)"
+      },
+      {
+        "file": "costlens-0.1.0/src/costlens/analyze.py",
+        "line": 897,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(node)"
+      }
+    ]
+  },
+  {
+    "package_name": "kar-kcm",
+    "checked_at": "2026-08-21T22:55:19.729466",
+    "download_url": "https://files.pythonhosted.org/packages/c9/9a/236ad84625b4eea6b721a2197027207545fc263f26fd8f3523abb9537acb/kar_kcm-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kar_kcm-1.0.0/karkcm/baselines.py",
+        "line": 149,
+        "keyword_detected": "eval(",
+        "code_snippet": "eta.eval()"
+      },
+      {
+        "file": "kar_kcm-1.0.0/karkcm/experiments/backbone.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "net.eval()"
+      },
+      {
+        "file": "kar_kcm-1.0.0/karkcm/experiments/discriminators.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "kar_kcm-1.0.0/karkcm/kar.py",
+        "line": 171,
+        "keyword_detected": "eval(",
+        "code_snippet": "net.eval()"
+      },
+      {
+        "file": "kar_kcm-1.0.0/karkcm/kar.py",
+        "line": 175,
+        "keyword_detected": "eval(",
+        "code_snippet": "net.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "diffav",
+    "checked_at": "2026-08-21T22:55:20.220336",
+    "download_url": "https://files.pythonhosted.org/packages/c2/53/8b70f1379ea33a129cf4c3e3709a837bb641d8ec149cbfac747addcb1060/diffav-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "diffav-0.1.0/src/diffav/api/map_conditioned_trainer.py",
+        "line": 215,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "diffav-0.1.0/src/diffav/api/map_conditioned_trainer.py",
+        "line": 249,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "diffav-0.1.0/src/diffav/data/encoders/agent.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Dropout is disabled by default; nnx ``train()``/``eval()`` toggle this"
+      },
+      {
+        "file": "diffav-0.1.0/src/diffav/data/encoders/fusion.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Dropout is disabled by default; nnx ``train()``/``eval()`` toggle this"
+      },
+      {
+        "file": "diffav-0.1.0/src/diffav/data/encoders/lidar.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Dropout is disabled by default; nnx ``train()``/``eval()`` toggle this"
+      },
+      {
+        "file": "diffav-0.1.0/src/diffav/data/encoders/map.py",
+        "line": 111,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Dropout is disabled by default; nnx ``train()``/``eval()`` toggle this"
+      }
+    ]
+  },
+  {
+    "package_name": "metaquest-bio",
+    "checked_at": "2026-08-21T22:55:20.914888",
+    "download_url": "https://files.pythonhosted.org/packages/6d/a0/b036561da1a405a0e0b8ee61a592e99f76d3419566c50965bbe69d4c4fc5/metaquest_bio-2.0.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "metaquest_bio-2.0.0a1/src/metaquest/io/output_formatter.py",
+        "line": 342,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
