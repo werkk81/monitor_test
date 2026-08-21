@@ -18714,5 +18714,91 @@
         "code_snippet": "secret_bytes = base64.b64decode(secret.encode())"
       }
     ]
+  },
+  {
+    "package_name": "ragfence",
+    "checked_at": "2026-08-21T22:09:45.147181",
+    "download_url": "https://files.pythonhosted.org/packages/c9/42/33ba14da5d8da25ef57119540576d85a9ebca6faafb4a8533fd76458727c/ragfence-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ragfence-0.1.0/src/ragfence/policies/guard.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "def guard_retrieval("
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = guard_retrieval("
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_deleted_document_denied_without_retrieval() -> None:"
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = guard_retrieval("
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 93,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_not_ready_document_denied_without_retrieval() -> None:"
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 103,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = guard_retrieval("
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_cross_tenant_document_denied_without_retrieval() -> None:"
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 125,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = guard_retrieval("
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 137,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_missing_row_denied_without_retrieval() -> None:"
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 144,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = guard_retrieval("
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_guard.py",
+        "line": 173,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = guard_retrieval("
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_protocols.py",
+        "line": 92,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(\"socket.socket\", _boom)"
+      },
+      {
+        "file": "ragfence-0.1.0/tests/test_release_e2e.py",
+        "line": 21,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "original_socket = socket.socket"
+      }
+    ]
   }
 ]
