@@ -20286,5 +20286,25 @@
         "code_snippet": "probe = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
       }
     ]
+  },
+  {
+    "package_name": "mintmark",
+    "checked_at": "2026-08-22T20:13:25.650643",
+    "download_url": "https://files.pythonhosted.org/packages/3a/40/ed85e0b3d6ba65a72728f4c039f2c2ab666c8e498a0dda600db98b7f02c0/mintmark-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mintmark-0.1.3/tests/unit/test_mint_invariants.py",
+        "line": 44,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"\"\"Replaces socket.socket so that any attempt to open one fails loudly.\"\"\""
+      },
+      {
+        "file": "mintmark-0.1.3/tests/unit/test_mint_invariants.py",
+        "line": 78,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket()"
+      }
+    ]
   }
 ]
