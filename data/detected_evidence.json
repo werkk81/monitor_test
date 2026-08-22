@@ -21056,5 +21056,119 @@
         "code_snippet": "subprocess.Popen([\"xdg-open\", str(target)])"
       }
     ]
+  },
+  {
+    "package_name": "zbook",
+    "checked_at": "2026-08-22T22:52:21.668849",
+    "download_url": "https://files.pythonhosted.org/packages/74/81/efc8b8405c1a3c5394415c6d8b876feb08c20af78de6a9b5e7e20b9069b8/zbook-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "zbook-0.1.0/src/zbook/codex.py",
+        "line": 231,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "zbook-0.1.0/src/zbook/kernel_spec.py",
+        "line": 48,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "zbook-0.1.0/src/zbook/uv_env.py",
+        "line": 152,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "zbook-0.1.0/src/zbook/uv_env.py",
+        "line": 170,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "nf-ai-sandbox-cli",
+    "checked_at": "2026-08-22T22:52:21.823817",
+    "download_url": "https://files.pythonhosted.org/packages/c3/2d/34228e7384b536248c126335fc4c953b19038bbbd0dd7605aee4eff86a03/nf_ai_sandbox_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nf_ai_sandbox_cli-0.1.0/tests/test_cli.py",
+        "line": 29,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "claude-contextmesh",
+    "checked_at": "2026-08-22T22:52:22.065763",
+    "download_url": "https://files.pythonhosted.org/packages/e5/e1/ef1f2466495a8154ce980f8fc40c21ada13423ef2f31415a0623efebdce5/claude_contextmesh-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "claude_contextmesh-0.1.1/tests/test_smoke.py",
+        "line": 119,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def test_node_creation_and_retrieval(db: Database):"
+      }
+    ]
+  },
+  {
+    "package_name": "ai-sandbox-platform",
+    "checked_at": "2026-08-22T22:52:22.200112",
+    "download_url": "https://files.pythonhosted.org/packages/6c/7c/eab7978524f21175b7b388b5f0d8dc0e2b70a212303202d562e0d82a1f1e/ai_sandbox_platform-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ai_sandbox_platform-0.1.0/tests/test_client.py",
+        "line": 47,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "watermelon-music",
+    "checked_at": "2026-08-22T22:52:22.612126",
+    "download_url": "https://files.pythonhosted.org/packages/81/4d/fe505b0822dd24fa2c9dabf551a32e51ae11ea73777224a85088ed33c90c/watermelon_music-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "watermelon_music-0.2.0/watermelon/player/audio_engine.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "watermelon_music-0.2.0/watermelon/player/audio_engine.py",
+        "line": 321,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "watermelon_music-0.2.0/watermelon/player/audio_engine.py",
+        "line": 361,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "stapel-runner-protocol",
+    "checked_at": "2026-08-22T22:52:23.005960",
+    "download_url": "https://files.pythonhosted.org/packages/5a/0a/4b914e97f828487b85439cfe1a3ee6180cce6de17cfa7ea65dd75b4969fc/stapel_runner_protocol-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stapel_runner_protocol-0.1.1/subprocess_adapter.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      }
+    ]
   }
 ]
