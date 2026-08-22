@@ -20194,5 +20194,83 @@
         "code_snippet": "def _popen(*args: object, **kwargs: object) -> subprocess.Popen[bytes]:"
       }
     ]
+  },
+  {
+    "package_name": "modus-operandi",
+    "checked_at": "2026-08-22T19:45:51.436750",
+    "download_url": "https://files.pythonhosted.org/packages/ba/e6/06a744d71d7e57895340edc9885b657f6522b53eb969e5be11019b2c912e/modus_operandi-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "modus_operandi-0.1.0/src/modus_operandi/data/pipeline_scripts/feedback_editor.py",
+        "line": 99,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "modus_operandi-0.1.0/src/modus_operandi/data/pipeline_scripts/notify.py",
+        "line": 47,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "modus_operandi-0.1.0/src/modus_operandi/data/pipeline_scripts/pty_spawn.py",
+        "line": 108,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen[str], int | None, threading.Event, threading.Event, threading.Thread | None"
+      },
+      {
+        "file": "modus_operandi-0.1.0/src/modus_operandi/data/pipeline_scripts/pty_spawn.py",
+        "line": 130,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "modus_operandi-0.1.0/src/modus_operandi/data/pipeline_scripts/pty_spawn.py",
+        "line": 147,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "modus_operandi-0.1.0/src/modus_operandi/data/pipeline_scripts/run_finish.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: subprocess.Popen[str],"
+      },
+      {
+        "file": "modus_operandi-0.1.0/src/modus_operandi/data/pipeline_scripts/stdout_reader.py",
+        "line": 71,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: subprocess.Popen[str],"
+      }
+    ]
+  },
+  {
+    "package_name": "oncoshift",
+    "checked_at": "2026-08-22T19:45:51.483394",
+    "download_url": "https://files.pythonhosted.org/packages/b1/63/39c176f7c77db62f2e7f5fcc2dbb10b5ac32aa63d47a9ee9e204ae5345c6/oncoshift-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "oncoshift-0.1.1/oncoshift/auditor.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "driftlessflip",
+    "checked_at": "2026-08-22T19:45:51.568043",
+    "download_url": "https://files.pythonhosted.org/packages/39/36/7bd94df45dfd0114b20069b8847d5f370d83f3f184aa4c521f329628866b/driftlessflip-0.15.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "driftlessflip-0.15.0/src/driftlessflip/ui/app.py",
+        "line": 4996,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      }
+    ]
   }
 ]
