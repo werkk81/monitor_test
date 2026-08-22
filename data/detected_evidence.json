@@ -19156,5 +19156,125 @@
         "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
       }
     ]
+  },
+  {
+    "package_name": "mintmark",
+    "checked_at": "2026-08-22T18:46:18.821481",
+    "download_url": "https://files.pythonhosted.org/packages/d8/3b/92e85f13b9e950d8e0439217f463ef7c974cdc02d683879a90532e26d5cd/mintmark-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mintmark-0.1.2/tests/unit/test_mint_invariants.py",
+        "line": 44,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"\"\"Replaces socket.socket so that any attempt to open one fails loudly.\"\"\""
+      },
+      {
+        "file": "mintmark-0.1.2/tests/unit/test_mint_invariants.py",
+        "line": 78,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "tokentriage",
+    "checked_at": "2026-08-22T18:46:19.269439",
+    "download_url": "https://files.pythonhosted.org/packages/8b/52/6826b5879d7654b3575a18b1eadea0b5aad07f6d62d7624053018ce789af/tokentriage-1.0.0rc1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tokentriage-1.0.0rc1/tests/harness.py",
+        "line": 37,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: subprocess.Popen | None = None"
+      },
+      {
+        "file": "tokentriage-1.0.0rc1/tests/harness.py",
+        "line": 74,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "tokentriage-1.0.0rc1/tests/test_airgap_socketguard.py",
+        "line": 67,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "real_socket = socket.socket"
+      },
+      {
+        "file": "tokentriage-1.0.0rc1/tests/test_airgap_socketguard.py",
+        "line": 82,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "assert socket.socket is guard and real_socket is not guard"
+      },
+      {
+        "file": "tokentriage-1.0.0rc1/tests/e2e/test_containment_e2e.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _socket_guard(*a: object, **kw: object) -> \"socket.socket\":"
+      },
+      {
+        "file": "tokentriage-1.0.0rc1/tests/e2e/test_feedback_e2e.py",
+        "line": 120,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _socket_guard(*a: object, **kw: object) -> \"socket.socket\":"
+      },
+      {
+        "file": "tokentriage-1.0.0rc1/tests/e2e/test_management_e2e.py",
+        "line": 73,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "agent-timetravel",
+    "checked_at": "2026-08-22T18:46:19.993946",
+    "download_url": "https://files.pythonhosted.org/packages/d3/c2/169a70e61979b4eead417f27880e3a916ea4e3ba51f7aeff62863ceaab37/agent_timetravel-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_timetravel-0.2.0/examples/multi_step_coder.py",
+        "line": 56,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(snippet, {\"__name__\": \"__demo__\"})  # noqa: S102"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/scripts/packaging_smoke.py",
+        "line": 133,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/scripts/packaging_smoke.py",
+        "line": 138,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _wait_for_health(url: str, process: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/scripts/packaging_smoke.py",
+        "line": 174,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(  # noqa: S603"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/src/agent_timetravel/eval_api.py",
+        "line": 539,
+        "keyword_detected": "eval(",
+        "code_snippet": "def mount_eval(app: FastAPI) -> None:"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/src/agent_timetravel/receiver.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "mount_eval(app)"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/src/agent_timetravel/rollback/git.py",
+        "line": 33,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "and pass the args list directly to :class:`subprocess.Popen`. The git CLI"
+      }
+    ]
   }
 ]
