@@ -20784,5 +20784,191 @@
         "code_snippet": "dialog (patching exec() so the test doesn't block on a modal"
       }
     ]
+  },
+  {
+    "package_name": "bristlecone-mcp",
+    "checked_at": "2026-08-22T21:51:04.072775",
+    "download_url": "https://files.pythonhosted.org/packages/a7/bc/fcbe54a0244a091b0660c177dbffdf220133d1aeb7268b26cc17bc830181/bristlecone_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "bristlecone_mcp-0.1.0/main.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "res = await redis_conn.eval(METER_LUA, 2, rate_key, balance_key, \"0.01\", \"60\")"
+      },
+      {
+        "file": "bristlecone_mcp-0.1.0/app/api/v1/endpoints/tools.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "res = await redis_conn.eval(METER_LUA, 2, rate_key, balance_key, cost, str(tenant.rate_limit_rpm))"
+      },
+      {
+        "file": "bristlecone_mcp-0.1.0/app/api/v1/endpoints/tools.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "evaluated = ast.literal_eval(raw_clean)"
+      },
+      {
+        "file": "bristlecone_mcp-0.1.0/app/routers/llm.py",
+        "line": 111,
+        "keyword_detected": "eval(",
+        "code_snippet": "res = await redis_conn.eval(METER_LUA, 2, rate_key, balance_key, cost, str(tenant.rate_limit_rpm))"
+      }
+    ]
+  },
+  {
+    "package_name": "dfine-seg",
+    "checked_at": "2026-08-22T21:51:04.619359",
+    "download_url": "https://files.pythonhosted.org/packages/b9/d0/99a3aa4a123e24a72dc392e40873b98ae6f9c0cf8177bf1acfceec7b814b/dfine_seg-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/export.py",
+        "line": 198,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/export.py",
+        "line": 407,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = model.cpu().eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/export.py",
+        "line": 731,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/export.py",
+        "line": 732,
+        "keyword_detected": "eval(",
+        "code_snippet": "raw_model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/train.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model = deepcopy(student).eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/train.py",
+        "line": 468,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/train.py",
+        "line": 527,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/train.py",
+        "line": 737,
+        "keyword_detected": "eval(",
+        "code_snippet": "m.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/infer/sam3_model.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model = self.model.to(self.device).eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/infer/torch_compile_model.py",
+        "line": 149,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/infer/torch_model.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/model/dfine.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/model/dfine.py",
+        "line": 178,
+        "keyword_detected": "eval(",
+        "code_snippet": "caller must re-apply .eval() to the returned modules after every model.train() or"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/conftest.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "label_map = SemSegExportWrapper(model).eval()(x)"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 142,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/unit/test_sem_seg.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "dec.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/unit/test_sem_seg.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "out = dec.eval()(feats, low_level_feat=low)"
+      }
+    ]
+  },
+  {
+    "package_name": "outrage",
+    "checked_at": "2026-08-22T21:51:04.811971",
+    "download_url": "https://files.pythonhosted.org/packages/25/a4/7ed150fe08d47f918f3ff6cd69aa1a74ae45a286e88e89248257d5d368f8/outrage-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "outrage-0.1.0/tests/test_eventlog.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "running = [subprocess.Popen([sys.executable, \"-c\", script]) for _ in range(2)]"
+      }
+    ]
   }
 ]
