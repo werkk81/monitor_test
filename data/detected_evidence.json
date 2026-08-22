@@ -20354,5 +20354,53 @@
         "code_snippet": "exec(compile(code, str(README), \"exec\"), {})  # noqa: S102 - the README is ours"
       }
     ]
+  },
+  {
+    "package_name": "t4l-agent",
+    "checked_at": "2026-08-22T20:56:24.013739",
+    "download_url": "https://files.pythonhosted.org/packages/d5/3e/d07377f28dd6daa8b0f83db3c5ea6f485f71ed200ebd2c6069c08e6719c4/t4l_agent-0.3.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "t4l_agent-0.3.1/src/t4l_agent/server_runner.py",
+        "line": 112,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:"
+      }
+    ]
+  },
+  {
+    "package_name": "clique-panel",
+    "checked_at": "2026-08-22T20:56:24.281472",
+    "download_url": "https://files.pythonhosted.org/packages/d4/ab/e30bdd85b2f59f7398db897093f49a0daa122d84d6cba2d2073f00c4cae4/clique_panel-0.50.54.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "clique_panel-0.50.54/clique/app.py",
+        "line": 1481,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(body.get(\"data\") or \"\", validate=True)"
+      },
+      {
+        "file": "clique_panel-0.50.54/clique/wsproto.py",
+        "line": 72,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def __init__(self, sock: socket.socket) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "topodb",
+    "checked_at": "2026-08-22T20:56:24.616787",
+    "download_url": "https://files.pythonhosted.org/packages/ee/03/c3cc10d0658a0931fc72bfafab6643d48b7a4ddaeb30289f7b787ba2116a/topodb-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "topodb-0.1.0/crates/topodb-py/tests/test_readme_quickstart.py",
+        "line": 22,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, str(README), \"exec\"), {})  # noqa: S102 - the README is ours"
+      }
+    ]
   }
 ]
