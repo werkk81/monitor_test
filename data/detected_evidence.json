@@ -19086,5 +19086,75 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "agent-timetravel",
+    "checked_at": "2026-08-22T18:09:34.282730",
+    "download_url": "https://files.pythonhosted.org/packages/d3/c2/169a70e61979b4eead417f27880e3a916ea4e3ba51f7aeff62863ceaab37/agent_timetravel-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_timetravel-0.2.0/examples/multi_step_coder.py",
+        "line": 56,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(snippet, {\"__name__\": \"__demo__\"})  # noqa: S102"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/scripts/packaging_smoke.py",
+        "line": 133,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/scripts/packaging_smoke.py",
+        "line": 138,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _wait_for_health(url: str, process: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/scripts/packaging_smoke.py",
+        "line": 174,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(  # noqa: S603"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/src/agent_timetravel/eval_api.py",
+        "line": 539,
+        "keyword_detected": "eval(",
+        "code_snippet": "def mount_eval(app: FastAPI) -> None:"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/src/agent_timetravel/receiver.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "mount_eval(app)"
+      },
+      {
+        "file": "agent_timetravel-0.2.0/src/agent_timetravel/rollback/git.py",
+        "line": 33,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "and pass the args list directly to :class:`subprocess.Popen`. The git CLI"
+      }
+    ]
+  },
+  {
+    "package_name": "python-server",
+    "checked_at": "2026-08-22T18:09:34.775235",
+    "download_url": "https://files.pythonhosted.org/packages/74/04/e5710abc7c767cf61c471be162fc54404b4e81ba4fba02842181c462def7/python_server-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "python_server-1.0.0/python_server.py",
+        "line": 57,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(auth_data).decode('utf-8')"
+      },
+      {
+        "file": "python_server-1.0.0/python_server.py",
+        "line": 411,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
   }
 ]
