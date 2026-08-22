@@ -20402,5 +20402,201 @@
         "code_snippet": "exec(compile(code, str(README), \"exec\"), {})  # noqa: S102 - the README is ours"
       }
     ]
+  },
+  {
+    "package_name": "crewai-memorysync",
+    "checked_at": "2026-08-22T21:11:46.954573",
+    "download_url": "https://files.pythonhosted.org/packages/a3/19/1ea8c918143430a1247308990e836a842c2895baacad941dad6986aa9b9d/crewai_memorysync-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "crewai_memorysync-1.0.0/src/crewai_memorysync/storage.py",
+        "line": 67,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(blob.encode(\"ascii\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "dyceum",
+    "checked_at": "2026-08-22T21:11:48.005356",
+    "download_url": "https://files.pythonhosted.org/packages/ba/68/78a377e0d3dd4a2f84b4c8b527db3993ba62509ef82397e687946d2cb23d/dyceum-0.5.0rc5.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 305,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(stmt)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 330,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, stmt: Stmt) -> None:  # ruff: ignore[complex-structure]"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 332,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = self._eval(stmt.expr)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 340,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = self._eval(stmt.value)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 355,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._env[stmt.name] = self._eval(stmt.expr)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 365,
+        "keyword_detected": "eval(",
+        "code_snippet": "raise _ResultReturn(self._eval(stmt.expr))"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 371,
+        "keyword_detected": "eval(",
+        "code_snippet": "if self._is_truthy(self._eval(branch.condition)):"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 373,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(body_stmt)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 377,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(body_stmt)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 380,
+        "keyword_detected": "eval(",
+        "code_snippet": "over = self._eval(stmt.over)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 389,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(body_stmt)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 403,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(self, node: Expr) -> _Val:  # ruff: ignore[complex-structure]"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 411,
+        "keyword_detected": "eval(",
+        "code_snippet": "faces = self._eval(node.faces)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 421,
+        "keyword_detected": "eval(",
+        "code_snippet": "n = self._eval(node.n)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 427,
+        "keyword_detected": "eval(",
+        "code_snippet": "faces = self._eval(node.faces)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 440,
+        "keyword_detected": "eval(",
+        "code_snippet": "n, self._make_die(self._eval(node.faces))"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 451,
+        "keyword_detected": "eval(",
+        "code_snippet": "left = self._eval(node.left)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 452,
+        "keyword_detected": "eval(",
+        "code_snippet": "right = self._eval(node.right)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 457,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self._apply_hash(self._eval(node.expr))"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 459,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self._apply_neg(self._eval(node.expr))"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 461,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self._apply_not(self._eval(node.expr))"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 463,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self._eval(node.expr)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 771,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = self._eval(name)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 818,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._extend_seq_value(values, self._eval(elem.expr), repeat=1)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 820,
+        "keyword_detected": "eval(",
+        "code_snippet": "repeat = self._eval(elem.repeat)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 825,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._extend_seq_value(values, self._eval(elem.expr), repeat=repeat)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 874,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = self._eval(expr)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 892,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._eval(part) for part in call.parts if not isinstance(part, str)"
+      },
+      {
+        "file": "dyceum-0.5.0rc5/dyceum/anydice/interpreter.py",
+        "line": 1228,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(stmt)"
+      }
+    ]
   }
 ]
