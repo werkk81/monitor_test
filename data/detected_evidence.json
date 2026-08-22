@@ -20970,5 +20970,19 @@
         "code_snippet": "running = [subprocess.Popen([sys.executable, \"-c\", script]) for _ in range(2)]"
       }
     ]
+  },
+  {
+    "package_name": "amux-team",
+    "checked_at": "2026-08-22T22:07:22.857884",
+    "download_url": "https://files.pythonhosted.org/packages/07/ce/9b0397071e737ba7dc19ad555c999a7d1bb8c2cfae78f9fb82aafde2d4a3/amux_team-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "amux_team-0.1.0/src/gateway/local.py",
+        "line": 142,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "probe = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
   }
 ]
