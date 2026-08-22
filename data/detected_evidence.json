@@ -20598,5 +20598,191 @@
         "code_snippet": "self._exec(stmt)"
       }
     ]
+  },
+  {
+    "package_name": "dfine-seg",
+    "checked_at": "2026-08-22T21:35:11.130562",
+    "download_url": "https://files.pythonhosted.org/packages/b9/d0/99a3aa4a123e24a72dc392e40873b98ae6f9c0cf8177bf1acfceec7b814b/dfine_seg-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/export.py",
+        "line": 198,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/export.py",
+        "line": 407,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = model.cpu().eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/export.py",
+        "line": 731,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/export.py",
+        "line": 732,
+        "keyword_detected": "eval(",
+        "code_snippet": "raw_model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/train.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model = deepcopy(student).eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/train.py",
+        "line": 468,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/train.py",
+        "line": 527,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/dl/train.py",
+        "line": 737,
+        "keyword_detected": "eval(",
+        "code_snippet": "m.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/infer/sam3_model.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model = self.model.to(self.device).eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/infer/torch_compile_model.py",
+        "line": 149,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/infer/torch_model.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/model/dfine.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/dfine_seg/model/dfine.py",
+        "line": 178,
+        "keyword_detected": "eval(",
+        "code_snippet": "caller must re-apply .eval() to the returned modules after every model.train() or"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/conftest.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "label_map = SemSegExportWrapper(model).eval()(x)"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/integration/test_cpu_forward.py",
+        "line": 142,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/unit/test_sem_seg.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "dec.eval()"
+      },
+      {
+        "file": "dfine_seg-0.3.0/tests/unit/test_sem_seg.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "out = dec.eval()(feats, low_level_feat=low)"
+      }
+    ]
+  },
+  {
+    "package_name": "outrage",
+    "checked_at": "2026-08-22T21:35:11.299936",
+    "download_url": "https://files.pythonhosted.org/packages/25/a4/7ed150fe08d47f918f3ff6cd69aa1a74ae45a286e88e89248257d5d368f8/outrage-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "outrage-0.1.0/tests/test_eventlog.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "running = [subprocess.Popen([sys.executable, \"-c\", script]) for _ in range(2)]"
+      }
+    ]
+  },
+  {
+    "package_name": "ghostmean",
+    "checked_at": "2026-08-22T21:35:12.057469",
+    "download_url": "https://files.pythonhosted.org/packages/4b/eb/67362444b122b1a82fa54e16741d4a7b9f7e8869446009ec3806d27dd405/ghostmean-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ghostmean-1.0.0/ghostmean/gui.py",
+        "line": 555,
+        "keyword_detected": "exec(",
+        "code_snippet": "dlg.exec()"
+      },
+      {
+        "file": "ghostmean-1.0.0/ghostmean/gui.py",
+        "line": 638,
+        "keyword_detected": "exec(",
+        "code_snippet": "box.exec()"
+      },
+      {
+        "file": "ghostmean-1.0.0/ghostmean/gui.py",
+        "line": 905,
+        "keyword_detected": "exec(",
+        "code_snippet": "sys.exit(app.exec())"
+      },
+      {
+        "file": "ghostmean-1.0.0/tests/test_about_dialog.py",
+        "line": 108,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog (patching exec() so the test doesn't block on a modal"
+      }
+    ]
   }
 ]
