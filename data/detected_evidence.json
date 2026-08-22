@@ -20984,5 +20984,77 @@
         "code_snippet": "probe = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
       }
     ]
+  },
+  {
+    "package_name": "watermelon-music",
+    "checked_at": "2026-08-22T22:33:17.253608",
+    "download_url": "https://files.pythonhosted.org/packages/81/4d/fe505b0822dd24fa2c9dabf551a32e51ae11ea73777224a85088ed33c90c/watermelon_music-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "watermelon_music-0.2.0/watermelon/player/audio_engine.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "watermelon_music-0.2.0/watermelon/player/audio_engine.py",
+        "line": 321,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "watermelon_music-0.2.0/watermelon/player/audio_engine.py",
+        "line": 361,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "stapel-runner-protocol",
+    "checked_at": "2026-08-22T22:33:17.386731",
+    "download_url": "https://files.pythonhosted.org/packages/5a/0a/4b914e97f828487b85439cfe1a3ee6180cce6de17cfa7ea65dd75b4969fc/stapel_runner_protocol-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stapel_runner_protocol-0.1.1/subprocess_adapter.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "video-to-llm",
+    "checked_at": "2026-08-22T22:33:17.510762",
+    "download_url": "https://files.pythonhosted.org/packages/14/a5/5127b60bca1ef945ddb32d87db3efba57b418f76454b93fce564e8b29073/video_to_llm-1.0.0rc1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "video_to_llm-1.0.0rc1/app/web/app.py",
+        "line": 2532,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "video_to_llm-1.0.0rc1/app/web/app.py",
+        "line": 2985,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"open\", str(target)])"
+      },
+      {
+        "file": "video_to_llm-1.0.0rc1/app/web/app.py",
+        "line": 2987,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"explorer\", str(target)])"
+      },
+      {
+        "file": "video_to_llm-1.0.0rc1/app/web/app.py",
+        "line": 2989,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"xdg-open\", str(target)])"
+      }
+    ]
   }
 ]
