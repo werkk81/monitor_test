@@ -22218,5 +22218,329 @@
         "code_snippet": "return base64.b64decode(self.content)"
       }
     ]
+  },
+  {
+    "package_name": "llmsafe",
+    "checked_at": "2026-08-23T20:55:11.528158",
+    "download_url": "https://files.pythonhosted.org/packages/c0/42/2a2815369ecd57ce393a3e69761df6bd6eb41556ac75a48ea1859aece476/llmsafe-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "llmsafe-0.2.1/benchmarks/cases/interprocedural_agent.py",
+        "line": 9,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(value)"
+      },
+      {
+        "file": "llmsafe-0.2.1/benchmarks/cases/vulnerable_agent.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(model_output)"
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/catalog.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"Traces user- or model-controlled data into eval() or exec().\","
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/catalog.py",
+        "line": 63,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"Traces user- or model-controlled data into eval() or exec().\","
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/catalog.py",
+        "line": 135,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"Detects eval() calls even when static analysis cannot prove an untrusted source.\","
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/catalog.py",
+        "line": 136,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"Parse the expected data format explicitly; never pass model or user output to eval().\","
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/catalog.py",
+        "line": 143,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"Detects exec() calls even when static analysis cannot prove an untrusted source.\","
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/rules/dataflow.py",
+        "line": 123,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen\","
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/rules/eval.py",
+        "line": 19,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval() executes a string as Python code.\","
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/rules/eval.py",
+        "line": 20,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"Parse the expected data format explicitly; never pass model or user output to eval().\","
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/rules/eval.py",
+        "line": 26,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec() executes arbitrary Python statements.\","
+      },
+      {
+        "file": "llmsafe-0.2.1/llmsafe/rules/shell.py",
+        "line": 18,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen\","
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_baseline.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "source.write_text(\"eval(first)\\neval(second)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_baseline.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "source.write_text(\"eval(first)\\neval(second)\\neval(third)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_baseline.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "source.write_text(\"eval(data)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_baseline.py",
+        "line": 41,
+        "keyword_detected": "eval(",
+        "code_snippet": "source.write_text(\"\\n\\n# moved\\neval(data)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_baseline.py",
+        "line": 51,
+        "keyword_detected": "exec(",
+        "code_snippet": "source.write_text(\"exec(code)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_catalog.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(user_input)"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_catalog.py",
+        "line": 36,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(model_output)"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_cli.py",
+        "line": 31,
+        "keyword_detected": "exec(",
+        "code_snippet": "path.write_text(\"exec(model_output)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_cli.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "path.write_text(\"eval(model_output)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_cli.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "source.write_text(\"eval(existing)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_cli.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "source.write_text(\"eval(existing)\\nexec(new_issue)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_cli.py",
+        "line": 65,
+        "keyword_detected": "exec(",
+        "code_snippet": "source.write_text(\"eval(existing)\\nexec(new_issue)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_dataflow.py",
+        "line": 13,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_traces_model_sdk_response_to_eval(self):"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_dataflow.py",
+        "line": 18,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(generated_code)"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_dataflow.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(value)"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_dataflow.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(expression)"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_dataflow.py",
+        "line": 165,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(values[\"expression\"])"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_dataflow.py",
+        "line": 177,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(left)"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_dataflow.py",
+        "line": 178,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(right)"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_dataflow.py",
+        "line": 195,
+        "keyword_detected": "eval(",
+        "code_snippet": "functions.append(\"def helper_0(value):\\n    return eval(value)\\n\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_rules.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "content = \"import pickle\\neval(payload)\\nexec(code)\\npickle.loads(blob)\\n\""
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_rules.py",
+        "line": 32,
+        "keyword_detected": "exec(",
+        "code_snippet": "content = \"import pickle\\neval(payload)\\nexec(code)\\npickle.loads(blob)\\n\""
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_rules.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.assertEqual(rule_ids(DangerousPythonRule(), \"notes.md\", \"eval(payload)\"), set())"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_sarif.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"def run(model_output):\\n    return eval(model_output)\\n\", encoding=\"utf-8\""
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_sarif.py",
+        "line": 40,
+        "keyword_detected": "exec(",
+        "code_snippet": "source.write_text(\"exec(code)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_sarif.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "source.write_text(\"eval(data)\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_scanner.py",
+        "line": 15,
+        "keyword_detected": "eval(",
+        "code_snippet": "f'key = \"{provider_key}\"\\neval(payload)\\n', encoding=\"utf-8\""
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_scanner.py",
+        "line": 28,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"# llmsafe: ignore[PY001]\\neval(trusted_expression)\\nexec(code)\\n\","
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_scanner.py",
+        "line": 28,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"# llmsafe: ignore[PY001]\\neval(trusted_expression)\\nexec(code)\\n\","
+      },
+      {
+        "file": "llmsafe-0.2.1/tests/test_scanner.py",
+        "line": 41,
+        "keyword_detected": "exec(",
+        "code_snippet": "(generated / \"unsafe.py\").write_text(\"exec(code)\\n\", encoding=\"utf-8\")"
+      }
+    ]
+  },
+  {
+    "package_name": "mtdata-mcp",
+    "checked_at": "2026-08-23T20:55:12.282660",
+    "download_url": "https://files.pythonhosted.org/packages/ed/2b/662b6354791b24330fa5e888ef2883c67b6d9998a5105af52828058ffe39/mtdata_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mtdata_mcp-0.1.0/src/mtdata/core/execution_logging.py",
+        "line": 113,
+        "keyword_detected": "eval(",
+        "code_snippet": "success_value = infer_result_success(result) if success_eval is None else bool(success_eval(result))"
+      },
+      {
+        "file": "mtdata_mcp-0.1.0/src/mtdata/patterns/elliott.py",
+        "line": 939,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _rule_confidence_from_eval(rule_eval: ElliottRuleEvaluation) -> float:"
+      },
+      {
+        "file": "mtdata_mcp-0.1.0/src/mtdata/patterns/elliott.py",
+        "line": 2087,
+        "keyword_detected": "eval(",
+        "code_snippet": "rule_confidence = _rule_confidence_from_eval(scenario.rule_eval)"
+      },
+      {
+        "file": "mtdata_mcp-0.1.0/src/mtdata/patterns/elliott.py",
+        "line": 2301,
+        "keyword_detected": "eval(",
+        "code_snippet": "conf_raw = 0.35 * float(_rule_confidence_from_eval(rule_eval))"
+      },
+      {
+        "file": "mtdata_mcp-0.1.0/src/mtdata/utils/coercion.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(text)"
+      }
+    ]
+  },
+  {
+    "package_name": "subfleet",
+    "checked_at": "2026-08-23T20:55:12.756271",
+    "download_url": "https://files.pythonhosted.org/packages/66/cb/ef0aeeba8bb9ae32b205046213cf284352622269ad9ee6e188c196e8ff81/subfleet-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "subfleet-0.0.1/subfleet/login.py",
+        "line": 199,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen,"
+      },
+      {
+        "file": "subfleet-0.0.1/subfleet/login.py",
+        "line": 249,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "subfleet-0.0.1/subfleet/login.py",
+        "line": 295,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "watch_process = subprocess.Popen("
+      }
+    ]
   }
 ]
