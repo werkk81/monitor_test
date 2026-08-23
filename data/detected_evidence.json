@@ -21170,5 +21170,59 @@
         "code_snippet": "return subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "awmail",
+    "checked_at": "2026-08-23T18:09:49.889138",
+    "download_url": "https://files.pythonhosted.org/packages/68/c0/4bbe080caee9914c85af7f774f55d8b5cda951bf35e70751064df9257839/awmail-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "awmail-0.1.0/tests/test_awmail.py",
+        "line": 54,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sock = socket.socket()"
+      },
+      {
+        "file": "awmail-0.1.0/tests/test_awmail.py",
+        "line": 445,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sock = socket.socket()"
+      },
+      {
+        "file": "awmail-0.1.0/tests/test_awmail.py",
+        "line": 563,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "dead = socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "awkno",
+    "checked_at": "2026-08-23T18:09:50.470176",
+    "download_url": "https://files.pythonhosted.org/packages/10/02/0d29ed2267ac4dfd60e45a69c716a8e779664daa68bb162eda8d0aa3d922/awkno-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "awkno-0.2.0/awkno/cli.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "awbrowse",
+    "checked_at": "2026-08-23T18:09:50.728457",
+    "download_url": "https://files.pythonhosted.org/packages/57/3d/01089d4b9b75d0110d3a0aa2177b9ca54778a028f1765c9712a470b5f80f/awbrowse-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "awbrowse-0.1.0/awbrowse/cli.py",
+        "line": 231,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(page.screenshot, validate=True)"
+      }
+    ]
   }
 ]
