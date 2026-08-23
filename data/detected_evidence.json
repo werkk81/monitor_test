@@ -21224,5 +21224,81 @@
         "code_snippet": "raw = base64.b64decode(page.screenshot, validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "sproxy",
+    "checked_at": "2026-08-23T18:45:13.325326",
+    "download_url": "https://files.pythonhosted.org/packages/2c/8f/c9309f2b7d1058d7a2e62ee1da5f784279961e469b8bc98a2d85ab41f028/sproxy-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sproxy-0.1.0/sproxy/auth.py",
+        "line": 15,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(parts[1], validate=True).decode(\"utf-8\")"
+      },
+      {
+        "file": "sproxy-0.1.0/sproxy/pg.py",
+        "line": 141,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "salt = base64.b64decode(attrs[\"s\"])"
+      },
+      {
+        "file": "sproxy-0.1.0/sproxy/pg.py",
+        "line": 170,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "got = base64.b64decode(attrs[\"v\"])"
+      },
+      {
+        "file": "sproxy-0.1.0/sproxy/runner.py",
+        "line": 595,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "sproxy-0.1.0/sproxy/runner.py",
+        "line": 600,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _wait_port(port: int, proc: subprocess.Popen, timeout: float = 15.0) -> None:"
+      },
+      {
+        "file": "sproxy-0.1.0/sproxy/runner.py",
+        "line": 675,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proxy = subprocess.Popen("
+      },
+      {
+        "file": "sproxy-0.1.0/sproxy/runner.py",
+        "line": 681,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child: subprocess.Popen | None = None"
+      },
+      {
+        "file": "sproxy-0.1.0/sproxy/runner.py",
+        "line": 776,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(command, env=child_env)"
+      },
+      {
+        "file": "sproxy-0.1.0/tests/test_pg.py",
+        "line": 200,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "if base64.b64decode(proof_b64) != expected:"
+      }
+    ]
+  },
+  {
+    "package_name": "anu-cli",
+    "checked_at": "2026-08-23T18:45:13.436434",
+    "download_url": "https://files.pythonhosted.org/packages/a9/dc/8240a2f2e2c04b9a6810429ada95d0008471b0067440fdf2950d194a4388/anu_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "anu_cli-0.1.0/src/anu_client/cli.py",
+        "line": 496,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(encoded, altchars=b\"-_\", validate=True)"
+      }
+    ]
   }
 ]
