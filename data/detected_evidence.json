@@ -21300,5 +21300,39 @@
         "code_snippet": "raw = base64.b64decode(encoded, altchars=b\"-_\", validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "specmod",
+    "checked_at": "2026-08-23T19:04:03.827917",
+    "download_url": "https://files.pythonhosted.org/packages/00/7e/2291a0b6eeb2f9338b63f18cc0d2051d2f54f6d00bd42fb75ef13400b00e/specmod-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "specmod-0.2.0/src/specmod/config/layers.py",
+        "line": 93,
+        "keyword_detected": "eval(",
+        "code_snippet": "value: Any = ast.literal_eval(raw_value)"
+      },
+      {
+        "file": "specmod-0.2.0/tests/test_quadratic.py",
+        "line": 347,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(src, upstream.__file__, \"exec\"), ref.__dict__)"
+      }
+    ]
+  },
+  {
+    "package_name": "fastapi-openbi",
+    "checked_at": "2026-08-23T19:04:03.999245",
+    "download_url": "https://files.pythonhosted.org/packages/a9/84/66d07544dd49015c7da477c47fa6c101ee85590e80383582cfb3bc9c86b2/fastapi_openbi-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fastapi_openbi-1.0.0/open_bi/crypto.py",
+        "line": 36,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(encrypted_b64.encode('utf-8'))"
+      }
+    ]
   }
 ]
