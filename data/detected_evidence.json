@@ -23128,5 +23128,177 @@
         "code_snippet": "exec(compile(source, \"<fake-venv-check>\", \"exec\"), {})"
       }
     ]
+  },
+  {
+    "package_name": "veny",
+    "checked_at": "2026-08-23T22:32:20.459322",
+    "download_url": "https://files.pythonhosted.org/packages/12/d2/307cfc13fcea4dc9ed10c9d3a8181123a55263bed083930862b1fad088f9/veny-0.2.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "veny-0.2.2/src/veny/analysis/imports.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "paths = safe_eval(ast.unparse(node.value), pathlib_aliases=self._aliases)"
+      },
+      {
+        "file": "veny-0.2.2/src/veny/analysis/imports.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "path := safe_eval("
+      },
+      {
+        "file": "veny-0.2.2/src/veny/analysis/literals.py",
+        "line": 196,
+        "keyword_detected": "eval(",
+        "code_snippet": "def safe_eval(expr: str, pathlib_aliases: set[str] | None = None) -> Any | None:  # noqa: ANN401  # Same as _safe_eval_node: the value is whatever literal the expression held."
+      },
+      {
+        "file": "veny-0.2.2/tests/test_cache_search.py",
+        "line": 319,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<fake-venv-check>\", \"exec\"), {})"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 11,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('\"hello\"') == \"hello\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 16,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"[1, 2]\") == [1, 2]"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('os.path.join(\"a\", \"b\")') == \"a/b\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"os.getcwd()\") == os.getcwd()"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = safe_eval('Path(\"a\").joinpath(\"b\", \"c\")', pathlib_aliases={\"Path\"})"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('open(\"x\")') is None"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('Path(\"a\") / \"b\"', pathlib_aliases={\"Path\"}) == \"a/b\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('Path(\"a\")', pathlib_aliases={\"Path\"}) == \"a\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('Path(\"a\").joinpath(\"b\")') is None"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('P(\"a\").joinpath(\"b\")', pathlib_aliases={\"P\"}) == \"a/b\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_split_imports.py",
+        "line": 149,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<fake-venv-check>\", \"exec\"), {})"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_verify.py",
+        "line": 587,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<fake-venv-check>\", \"exec\"), {})"
+      }
+    ]
+  },
+  {
+    "package_name": "mechbench",
+    "checked_at": "2026-08-23T22:32:21.175625",
+    "download_url": "https://files.pythonhosted.org/packages/23/f4/22b484aae7d1a8991b95081c990a1ad950e3f1a6a3e68ab597b5fb81073f/mechbench-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mechbench-0.5.0/mechbench/cli.py",
+        "line": 299,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = _socket.socket(_socket.AF_UNIX, _socket.SOCK_STREAM)"
+      },
+      {
+        "file": "mechbench-0.5.0/mechbench_runner/control.py",
+        "line": 501,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "mechbench-0.5.0/mechbench_runner/supervisor.py",
+        "line": 63,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._child: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "mechbench-0.5.0/mechbench_runner/supervisor.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._child = subprocess.Popen(self.child_argv)  # noqa: S603"
+      },
+      {
+        "file": "mechbench-0.5.0/mechbench_runner/updater.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _reexec(say)"
+      },
+      {
+        "file": "mechbench-0.5.0/mechbench_runner/updater.py",
+        "line": 146,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _reexec(say)"
+      },
+      {
+        "file": "mechbench-0.5.0/mechbench_runner/updater.py",
+        "line": 190,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _reexec(say) -> bool:"
+      },
+      {
+        "file": "mechbench-0.5.0/tests/test_control.py",
+        "line": 87,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "mechbench-0.5.0/tests/test_control.py",
+        "line": 101,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "mechbench-0.5.0/tests/test_control.py",
+        "line": 116,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      }
+    ]
   }
 ]
