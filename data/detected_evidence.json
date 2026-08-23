@@ -22110,5 +22110,113 @@
         "code_snippet": "\"child_dict = json.loads(base64.b64decode(json_str_b64).decode('utf-8')); \"\\"
       }
     ]
+  },
+  {
+    "package_name": "subfleet",
+    "checked_at": "2026-08-23T20:38:51.224222",
+    "download_url": "https://files.pythonhosted.org/packages/66/cb/ef0aeeba8bb9ae32b205046213cf284352622269ad9ee6e188c196e8ff81/subfleet-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "subfleet-0.0.1/subfleet/login.py",
+        "line": 199,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen,"
+      },
+      {
+        "file": "subfleet-0.0.1/subfleet/login.py",
+        "line": 249,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "subfleet-0.0.1/subfleet/login.py",
+        "line": 295,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "watch_process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "dikolab-horde",
+    "checked_at": "2026-08-23T20:38:51.782036",
+    "download_url": "https://files.pythonhosted.org/packages/71/38/63c088129a1aba9161d8ab148ed2c43be56e268b107bf5bcfc25574a47ca/dikolab_horde-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/broker/classes/exec_broker.py",
+        "line": 46,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._running: dict[int, subprocess.Popen[bytes]] = {}"
+      },
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/broker/classes/exec_broker.py",
+        "line": 122,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(  # noqa: S603 - the plugin chooses the program"
+      },
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/broker/classes/exec_broker.py",
+        "line": 153,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes],"
+      },
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/broker/functions/fs_operations.py",
+        "line": 85,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "target.write_bytes(base64.b64decode(file.content))"
+      },
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/dispatch/classes/process_session.py",
+        "line": 146,
+        "keyword_detected": "exec(",
+        "code_snippet": "broker = self._require_exec()"
+      },
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/dispatch/classes/process_session.py",
+        "line": 159,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._require_exec().cancel(ipc.ExecCancelParams.from_dict(raw).exec_id)"
+      },
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/dispatch/classes/process_session.py",
+        "line": 161,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _require_exec(self) -> exec_broker_module.ExecBroker:"
+      },
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/plugin/classes/worker.py",
+        "line": 62,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/plugin/classes/worker.py",
+        "line": 124,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen(  # noqa: S603 - a path horde recorded itself"
+      },
+      {
+        "file": "dikolab_horde-0.0.1/src/dikolab_horde_shared/plugin/classes/worker.py",
+        "line": 194,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _stop(self, process: \"subprocess.Popen[bytes]\") -> int:"
+      }
+    ]
+  },
+  {
+    "package_name": "dikolab-horde-sdk",
+    "checked_at": "2026-08-23T20:38:51.869758",
+    "download_url": "https://files.pythonhosted.org/packages/65/8e/034495ad453426b2d5f072318bdf6bffb33697aea817013f68b94855075e/dikolab_horde_sdk-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dikolab_horde_sdk-0.0.1/src/dikolab_horde_sdk/filesystem/types/payload.py",
+        "line": 35,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(self.content)"
+      }
+    ]
   }
 ]
