@@ -23024,5 +23024,109 @@
         "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
       }
     ]
+  },
+  {
+    "package_name": "veny",
+    "checked_at": "2026-08-23T22:00:26.752222",
+    "download_url": "https://files.pythonhosted.org/packages/12/d2/307cfc13fcea4dc9ed10c9d3a8181123a55263bed083930862b1fad088f9/veny-0.2.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "veny-0.2.2/src/veny/analysis/imports.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "paths = safe_eval(ast.unparse(node.value), pathlib_aliases=self._aliases)"
+      },
+      {
+        "file": "veny-0.2.2/src/veny/analysis/imports.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "path := safe_eval("
+      },
+      {
+        "file": "veny-0.2.2/src/veny/analysis/literals.py",
+        "line": 196,
+        "keyword_detected": "eval(",
+        "code_snippet": "def safe_eval(expr: str, pathlib_aliases: set[str] | None = None) -> Any | None:  # noqa: ANN401  # Same as _safe_eval_node: the value is whatever literal the expression held."
+      },
+      {
+        "file": "veny-0.2.2/tests/test_cache_search.py",
+        "line": 319,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<fake-venv-check>\", \"exec\"), {})"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 11,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('\"hello\"') == \"hello\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 16,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"[1, 2]\") == [1, 2]"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('os.path.join(\"a\", \"b\")') == \"a/b\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"os.getcwd()\") == os.getcwd()"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = safe_eval('Path(\"a\").joinpath(\"b\", \"c\")', pathlib_aliases={\"Path\"})"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('open(\"x\")') is None"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('Path(\"a\") / \"b\"', pathlib_aliases={\"Path\"}) == \"a/b\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('Path(\"a\")', pathlib_aliases={\"Path\"}) == \"a\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('Path(\"a\").joinpath(\"b\")') is None"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_literals.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval('P(\"a\").joinpath(\"b\")', pathlib_aliases={\"P\"}) == \"a/b\""
+      },
+      {
+        "file": "veny-0.2.2/tests/test_split_imports.py",
+        "line": 149,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<fake-venv-check>\", \"exec\"), {})"
+      },
+      {
+        "file": "veny-0.2.2/tests/test_verify.py",
+        "line": 587,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<fake-venv-check>\", \"exec\"), {})"
+      }
+    ]
   }
 ]
