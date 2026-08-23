@@ -21778,5 +21778,197 @@
         "code_snippet": "listener = socket.socket()"
       }
     ]
+  },
+  {
+    "package_name": "quarantine-py",
+    "checked_at": "2026-08-23T19:56:11.507599",
+    "download_url": "https://files.pythonhosted.org/packages/a2/d5/e5941931e464b1e4603bb1606f7b91c4096a800b0395099308b149fe2b79/quarantine_py-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "quarantine_py-0.1.0/tests/test_processes.py",
+        "line": 49,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "poker-tui",
+    "checked_at": "2026-08-23T19:56:12.007314",
+    "download_url": "https://files.pythonhosted.org/packages/9b/3d/df96d74d82023a6b7dd821367d46782ed26b0389f6760e4af1b0d4359121/poker_tui-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "poker_tui-0.2.0/src/poker_gym/agents.py",
+        "line": 345,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "poker_tui-0.2.0/src/poker_gym/explain.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "wish-goldbox",
+    "checked_at": "2026-08-23T19:56:12.481901",
+    "download_url": "https://files.pythonhosted.org/packages/8e/3e/4ba633e3cf8b98b58ef22c7097eb609dbd795ad897681ef02a63a2c29470/wish_goldbox-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wish_goldbox-0.1.0/automap/vice.py",
+        "line": 102,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sock: socket.socket | None = None"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/automap/window.py",
+        "line": 1074,
+        "keyword_detected": "exec(",
+        "code_snippet": "menu.exec(at)"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/automap/window.py",
+        "line": 1243,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/editor/__main__.py",
+        "line": 96,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/editor/iconwidget.py",
+        "line": 159,
+        "keyword_detected": "exec(",
+        "code_snippet": "chosen = menu.exec(event.globalPosition().toPoint())"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/editor/iconwidget.py",
+        "line": 174,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != int(QDialog.DialogCode.Accepted):"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/editor/window.py",
+        "line": 1140,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted.value:"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tests/test_automap.py",
+        "line": 1146,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket()"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tests/test_instance.py",
+        "line": 117,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _holder(pool_dir: Path) -> subprocess.Popen:"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tests/test_instance.py",
+        "line": 118,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tests/test_instance.py",
+        "line": 168,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "victim = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(120)\"],"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tests/test_instance.py",
+        "line": 170,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "bystander = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(120)\"],"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tests/test_packaging.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(SPEC.read_text(encoding=\"utf-8\"), str(SPEC), \"exec\"), env)"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tests/test_preferences.py",
+        "line": 6,
+        "keyword_detected": "exec(",
+        "code_snippet": "is built and inspected, never `exec()`ed. A run that puts a stream of boxes"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tools/dosbox.py",
+        "line": 340,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.xvfb: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tools/dosbox.py",
+        "line": 341,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.dosbox: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tools/dosbox.py",
+        "line": 387,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.xvfb = subprocess.Popen("
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tools/dosbox.py",
+        "line": 401,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.dosbox = subprocess.Popen("
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tools/instance.py",
+        "line": 571,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(args.exec, env=env, start_new_session=True)"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tools/session.py",
+        "line": 92,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.text: socket.socket | None = None"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tools/session.py",
+        "line": 121,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "wish_goldbox-0.1.0/tools/session.py",
+        "line": 579,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "srv = socket.socket()"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/wish/about.py",
+        "line": 47,
+        "keyword_detected": "exec(",
+        "code_snippet": "box(parent).exec()"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/wish/window.py",
+        "line": 315,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "wish_goldbox-0.1.0/wish/window.py",
+        "line": 671,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      }
+    ]
   }
 ]
