@@ -21970,5 +21970,145 @@
         "code_snippet": "return app.exec()"
       }
     ]
+  },
+  {
+    "package_name": "ensemble-launcher",
+    "checked_at": "2026-08-23T20:10:14.068487",
+    "download_url": "https://files.pythonhosted.org/packages/b4/ed/b69bc60259cf19542e14739b96fb764db4f941d0267818df5b02f916f5ae/ensemble_launcher-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/checkpointing/checkpointer.py",
+        "line": 339,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "tasks = cloudpickle.loads(base64.b64decode(tasks_data.tasks_b64))"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/checkpointing/checkpointer.py",
+        "line": 446,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(data.results_b64)"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/comm/pipe/utils.py",
+        "line": 17,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/ensemble/ensemble.py",
+        "line": 317,
+        "keyword_detected": "eval(",
+        "code_snippet": "args = eval(value[len(\"linspace\") :])"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/async_mpi_executor.py",
+        "line": 42,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"task_bytes=base64.b64decode(task_str)\","
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/async_mpi_executor.py",
+        "line": 404,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "f\"p = base64.b64decode('{encoded_path}').decode('utf-8')\\n\""
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/async_mpi_executor.py",
+        "line": 415,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "f\"p = base64.b64decode('{encoded_path}').decode('utf-8')\\n\""
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/async_mpi_executor.py",
+        "line": 418,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "f\"    f.write(base64.b64decode('{encoded_chunk}').decode('utf-8'))\\n\""
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/async_mpi_executor.py",
+        "line": 425,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/async_mpi_executor.py",
+        "line": 444,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "f\"p = base64.b64decode('{encoded_path}').decode('utf-8')\\n\""
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/async_mpi_executor.py",
+        "line": 451,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/async_mpi_executor.py",
+        "line": 516,
+        "keyword_detected": "exec(",
+        "code_snippet": "p = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/async_mpi_pool_executor.py",
+        "line": 133,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._server_proc = subprocess.Popen(cmd, cwd=cwd, env=launch_env)"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/mpi_executor.py",
+        "line": 30,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._processes: Dict[str,subprocess.Popen] = {}"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/mpi_executor.py",
+        "line": 144,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, env=merged_env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/executors/mpi_executor.py",
+        "line": 146,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, env=merged_env)"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/mcp/utils.py",
+        "line": 145,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "local_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/mcp/utils.py",
+        "line": 181,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "local_socket: socket.socket"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/orchestrator/utils.py",
+        "line": 7,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"all_children_dict = json.loads(base64.b64decode(json_str_b64).decode('utf-8')); \"\\"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/orchestrator/utils.py",
+        "line": 24,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"all_children_dict = json.loads(base64.b64decode(json_str_b64).decode('utf-8')); \"\\"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/orchestrator/utils.py",
+        "line": 42,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"child_dict = json.loads(base64.b64decode(json_str_b64).decode('utf-8')); \"\\"
+      },
+      {
+        "file": "ensemble_launcher-0.1.0/ensemble_launcher/orchestrator/utils.py",
+        "line": 55,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"child_dict = json.loads(base64.b64decode(json_str_b64).decode('utf-8')); \"\\"
+      }
+    ]
   }
 ]
