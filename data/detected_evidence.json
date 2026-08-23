@@ -23300,5 +23300,235 @@
         "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
       }
     ]
+  },
+  {
+    "package_name": "jsonata2py",
+    "checked_at": "2026-08-23T22:52:04.133560",
+    "download_url": "https://files.pythonhosted.org/packages/ab/e9/a746d0188450471a58610d02c5dde2d3a756368f67839358bdab0ce0b4b7/jsonata2py-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/loader/loader.py",
+        "line": 7,
+        "keyword_detected": "exec(",
+        "code_snippet": "becomes `compile()` + `exec()`: microseconds to low milliseconds. The"
+      },
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/loader/loader.py",
+        "line": 72,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"{_RUNTIME_IMPORT}\\n\", ns)"
+      },
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/loader/loader.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "Splitting compile() from exec() is what lets the factory cache the"
+      },
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/loader/loader.py",
+        "line": 160,
+        "keyword_detected": "exec(",
+        "code_snippet": "Not thread-unsafe in itself -- compile()/exec() are stateless -- but"
+      },
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/loader/loader.py",
+        "line": 208,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compiled.code, ns)"
+      },
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/runtime/core.py",
+        "line": 1393,
+        "keyword_detected": "eval(",
+        "code_snippet": "def fn_eval(expr: Any, context: Any = MISSING) -> Any:"
+      },
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/runtime/core.py",
+        "line": 1394,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _strings().fn_eval(expr, context)"
+      },
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/runtime/strings/builtins.py",
+        "line": 508,
+        "keyword_detected": "eval(",
+        "code_snippet": "def fn_eval(expr: Any, context: Any = MISSING) -> Any:"
+      },
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/runtime/strings/builtins.py",
+        "line": 554,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(str_, validate=True)"
+      },
+      {
+        "file": "jsonata2py-0.1.0/src/jsonata2py/translator/translator.py",
+        "line": 559,
+        "keyword_detected": "eval(",
+        "code_snippet": "return f\"fn_eval({a[0]}, {ctx.ctx_var})\" if len(a) == 1 else f\"fn_eval({a[0]}, {a[1]})\""
+      },
+      {
+        "file": "jsonata2py-0.1.0/tests/test_concurrency.py",
+        "line": 188,
+        "keyword_detected": "eval(",
+        "code_snippet": "expr = _FACTORY.compile(\"($x := 5; $ignored := $eval('1+1'); $x)\")"
+      },
+      {
+        "file": "jsonata2py-0.1.0/tests/test_concurrency.py",
+        "line": 196,
+        "keyword_detected": "eval(",
+        "code_snippet": "expr = _FACTORY.compile('($x := 5; $eval(\"$exists($x)\"))')"
+      },
+      {
+        "file": "jsonata2py-0.1.0/tests/test_concurrency.py",
+        "line": 244,
+        "keyword_detected": "eval(",
+        "code_snippet": "expr = factory.compile(\"$eval($text)\")"
+      },
+      {
+        "file": "jsonata2py-0.1.0/tests/test_concurrency.py",
+        "line": 271,
+        "keyword_detected": "eval(",
+        "code_snippet": "expr = factory.compile('$eval(\"x * 2\")')"
+      }
+    ]
+  },
+  {
+    "package_name": "w1x-cli",
+    "checked_at": "2026-08-23T22:52:04.366417",
+    "download_url": "https://files.pythonhosted.org/packages/26/ff/be629978b529a9d7a9bc57995a8f130198149723978a841088263beee12b/w1x_cli-3.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "w1x_cli-3.5.0/w1x/testpy.py",
+        "line": 212,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code_text, script_file_path, \"exec\"), global_scope)"
+      },
+      {
+        "file": "w1x_cli-3.5.0/w1x/tools.py",
+        "line": 742,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "agentevolve-optimizer",
+    "checked_at": "2026-08-23T22:52:04.784094",
+    "download_url": "https://files.pythonhosted.org/packages/35/c0/b120586a033acd69a178add4d19fc5f3085cdc4d12cbf5425e77a3668a2c/agentevolve_optimizer-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agentevolve_optimizer-0.5.0/src/agent_evolve/application/campaign_execution.py",
+        "line": 182,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "compressed = base64.b64decode(\"\".join(chunks), validate=True)"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/src/agent_evolve/application/campaign_variation_envelope.py",
+        "line": 547,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "compressed = base64.b64decode(\"\".join(chunks), validate=True)"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/src/agent_evolve/infrastructure/authored_worker.py",
+        "line": 102,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(prelude, \"<harness_prelude>\", \"exec\"), namespace)  # noqa: S102"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/src/agent_evolve/infrastructure/authored_worker.py",
+        "line": 112,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<authored>\", \"exec\"), namespace)  # noqa: S102"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/src/agent_evolve/integrations/botorch/finite_qlognehvi.py",
+        "line": 102,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/src/agent_evolve/integrations/botorch/finite_qlognehvi_batch.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/tests/test_boils_budgeted_v5_support.py",
+        "line": 101,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_exact_c_seed_gate_binds_external_provenance_and_admits_only_one_eval() -> None:"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/tests/test_generator_emit_scaffold.py",
+        "line": 188,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<prelude>\", \"exec\"), first)      # noqa: S102"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/tests/test_generator_emit_scaffold.py",
+        "line": 189,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<prelude>\", \"exec\"), second)     # noqa: S102"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/tests/test_generator_emit_scaffold.py",
+        "line": 229,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(prelude, \"<prelude>\", \"exec\"), namespace)   # noqa: S102"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/tests/test_lineage_codec_m4c.py",
+        "line": 359,
+        "keyword_detected": "eval(",
+        "code_snippet": "exported = tuple(ast.literal_eval(node.value))"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/tests/test_numerical_certification_engine_off_path.py",
+        "line": 239,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source[start:end], str(RUNNER), \"exec\"), namespace)  # noqa: S102"
+      },
+      {
+        "file": "agentevolve_optimizer-0.5.0/tests/test_numerical_certification_engine_off_path.py",
+        "line": 269,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source[start:end], str(RUNNER), \"exec\"), namespace)  # noqa: S102"
+      }
+    ]
+  },
+  {
+    "package_name": "xero-trial-balance-export",
+    "checked_at": "2026-08-23T22:52:05.279525",
+    "download_url": "https://files.pythonhosted.org/packages/96/a6/6d3b9107ec5e0dee88967cefbd950ab71932d3cc1768247d1ce7b58b5e8d/xero_trial_balance_export-0.1.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "xero_trial_balance_export-0.1.4/tests/test_auth.py",
+        "line": 53,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "xero_trial_balance_export-0.1.4/tests/test_auth.py",
+        "line": 80,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "thief = socket.socket()"
+      },
+      {
+        "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+        "line": 112,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(assignments[0].value)"
+      },
+      {
+        "file": "xero_trial_balance_export-0.1.4/xero_client.py",
+        "line": 274,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(document[\"payload\"], validate=True)"
+      }
+    ]
   }
 ]
