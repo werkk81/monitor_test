@@ -24282,5 +24282,179 @@
         "code_snippet": "p = subprocess.Popen(cmd, creationflags=creationflags)"
       }
     ]
+  },
+  {
+    "package_name": "maven-data",
+    "checked_at": "2026-08-24T22:01:26.014600",
+    "download_url": "https://files.pythonhosted.org/packages/7e/54/c6f651c0709637602e25eee42ddadff4fe1ad63a5d130a3a5a6316194a52/maven_data-1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "maven_data-1.0/maven/app.py",
+        "line": 3081,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(copy_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='latin-1')"
+      },
+      {
+        "file": "maven_data-1.0/maven/cli.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, env=env, stdin=None, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, bufsize=1)"
+      },
+      {
+        "file": "maven_data-1.0/maven/remote_register_endpoint.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(copy_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='latin-1')"
+      }
+    ]
+  },
+  {
+    "package_name": "voicemd",
+    "checked_at": "2026-08-24T22:01:26.089834",
+    "download_url": "https://files.pythonhosted.org/packages/02/a0/70463c464ef57d28a53c6815379e2339e52b89f200687d426bde1a5cd946/voicemd-0.1.0a3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "voicemd-0.1.0a3/scripts/verify_pages.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval(\","
+      },
+      {
+        "file": "voicemd-0.1.0a3/scripts/verify_release.py",
+        "line": 1638,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "voicemd-0.1.0a3/src/voicemd/azure_voice/common.py",
+        "line": 512,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(value, validate=True)"
+      },
+      {
+        "file": "voicemd-0.1.0a3/tests/test_runtime_hardening.py",
+        "line": 439,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(completed.stdout).decode(\"utf-8\") == python_output"
+      }
+    ]
+  },
+  {
+    "package_name": "fireredtts3-onnx",
+    "checked_at": "2026-08-24T22:01:26.128206",
+    "download_url": "https://files.pythonhosted.org/packages/ac/62/70cd1a4627b1804a633361186794abe09d9ef299faedb9f721955607a0ce/fireredtts3_onnx-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fireredtts3_onnx-0.2.0/fireredtts3_onnx/core/api.py",
+        "line": 18,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(b64)"
+      }
+    ]
+  },
+  {
+    "package_name": "muse-spark-openrouter-patch",
+    "checked_at": "2026-08-24T22:01:26.166553",
+    "download_url": "https://files.pythonhosted.org/packages/68/69/fdbe983f85685ea0c7dcbee8e371fe637a2e6d9290f0294db1c3177bf27d/muse_spark_openrouter_patch-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "muse_spark_openrouter_patch-0.1.0/src/muse_spark_openrouter/install.py",
+        "line": 292,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "phylos-mcp",
+    "checked_at": "2026-08-24T22:01:26.396896",
+    "download_url": "https://files.pythonhosted.org/packages/aa/fb/96ea4449ee8706b4721d34c377ec9543f0ff1bc465440742067e04b96563/phylos_mcp-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "phylos_mcp-0.2.0/devmcp/monitor_launch.py",
+        "line": 162,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(argv, cwd=str(RAIZ), stdout=subprocess.DEVNULL,"
+      },
+      {
+        "file": "phylos_mcp-0.2.0/devmcp/adapters/cli.py",
+        "line": 127,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "phylos_mcp-0.2.0/devmcp/adapters/mcp_stdio.py",
+        "line": 84,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "phylos_mcp-0.2.0/tools/bootstrap_demo.py",
+        "line": 230,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([ent[\"command\"], *ent[\"args\"]], stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "phylos_mcp-0.2.0/tools/sources_demo.py",
+        "line": 800,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "phylos_mcp-0.2.0/tools/transport_demo.py",
+        "line": 65,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.p = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "defentra",
+    "checked_at": "2026-08-24T22:01:26.459764",
+    "download_url": "https://files.pythonhosted.org/packages/ae/da/0f13c3b05683b0308bd701cf7e3aba226d7a724a3cb4044f9f3fc42e1734/defentra-0.8.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "defentra-0.8.0/defentra/management/protocol.py",
+        "line": 48,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(signature_b64, validate=True)"
+      },
+      {
+        "file": "defentra-0.8.0/defentra/ml/modelhub.py",
+        "line": 88,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(signature, validate=True)"
+      },
+      {
+        "file": "defentra-0.8.0/defentra/signing/feed.py",
+        "line": 168,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "sig = base64.b64decode(b64_sig, validate=True)"
+      },
+      {
+        "file": "defentra-0.8.0/tests/test_detection_content.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = _scan(tmp_path, \"wp-cache.php\", \"<?php eval($_POST['cmd']); ?>\", engine)"
+      },
+      {
+        "file": "defentra-0.8.0/tests/test_detection_content.py",
+        "line": 122,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = _scan(tmp_path, \"health.aspx\", '<%@ Page Language=\"C#\" %>\\\\n<% eval(Request[\"c\"]); %>', engine)"
+      },
+      {
+        "file": "defentra-0.8.0/tests/test_detection_content.py",
+        "line": 127,
+        "keyword_detected": "exec(",
+        "code_snippet": "src = 'String c = request.getParameter(\"cmd\");\\nRuntime.getRuntime().exec(c);'"
+      }
+    ]
   }
 ]
