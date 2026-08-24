@@ -23674,5 +23674,19 @@
         "code_snippet": "model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "ocx-indexbot",
+    "checked_at": "2026-08-24T19:37:11.433079",
+    "download_url": "https://files.pythonhosted.org/packages/c0/a8/929daa3489a9e8f053d191cdb55dedfae3f11625e8053fc53de39e6ac95a/ocx_indexbot-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ocx_indexbot-0.1.0/src/ocx_indexbot/adapters/github_api.py",
+        "line": 97,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(response.json()[\"content\"])"
+      }
+    ]
   }
 ]
