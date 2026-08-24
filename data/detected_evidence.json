@@ -24456,5 +24456,265 @@
         "code_snippet": "src = 'String c = request.getParameter(\"cmd\");\\nRuntime.getRuntime().exec(c);'"
       }
     ]
+  },
+  {
+    "package_name": "tailcyclenet",
+    "checked_at": "2026-08-24T22:36:24.130098",
+    "download_url": "https://files.pythonhosted.org/packages/90/05/ae3f5ae83ee81e3e29149c4e3b3cf13bf2ef68bc096e482bccd94a97ab81/tailcyclenet-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tailcyclenet-0.0.1/tailcyclenet/checkpoints.py",
+        "line": 168,
+        "keyword_detected": "eval(",
+        "code_snippet": "A DualOptimizer exposes eval()/train() even when its Muon half has NO averaged iterate"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tailcyclenet/checkpoints.py",
+        "line": 182,
+        "keyword_detected": "eval(",
+        "code_snippet": "optimizer.eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tailcyclenet/checkpoints.py",
+        "line": 233,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.to(device).eval(), config, registry, path"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tailcyclenet/detector/__init__.py",
+        "line": 162,
+        "keyword_detected": "eval(",
+        "code_snippet": "return (model.to(device).eval(), tuple(wh), str(ckpt.get('dataset', '')),"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tailcyclenet/detector/evaluate.py",
+        "line": 161,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_box_prompt.py",
+        "line": 113,
+        "keyword_detected": "eval(",
+        "code_snippet": "enc = _make(cls).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_box_prompt.py",
+        "line": 123,
+        "keyword_detected": "eval(",
+        "code_snippet": "enc = _make(BoxFilmEncoder).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_box_prompt.py",
+        "line": 137,
+        "keyword_detected": "eval(",
+        "code_snippet": "enc = _make(cls).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_detector.py",
+        "line": 1992,
+        "keyword_detected": "eval(",
+        "code_snippet": "m = YOLOXNano(n_keypoints=3).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_detector.py",
+        "line": 2094,
+        "keyword_detected": "eval(",
+        "code_snippet": "m.eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_detector.py",
+        "line": 2105,
+        "keyword_detected": "eval(",
+        "code_snippet": "m = YOLOXNano().eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_distributed.py",
+        "line": 286,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"\"\"THE MECHANISM. `eval()` and `train()` are two DIFFERENT lerps relying on algebra to land"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_distributed.py",
+        "line": 302,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt.eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_distributed.py",
+        "line": 379,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"\"\"No `eval()`/`train()` means no toggle and no mechanism for this bug -- a plain optimizer"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_infer.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(SMALL, n_keypoints=registry.n_keypoints).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_infer.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(SMALL, n_keypoints=registry.n_keypoints).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_infer.py",
+        "line": 734,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(SMALL, n_keypoints=registry.n_keypoints).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_infer.py",
+        "line": 1259,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(SMALL, n_keypoints=registry.n_keypoints).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_memory_budget.py",
+        "line": 96,
+        "keyword_detected": "eval(",
+        "code_snippet": "return YOLOXNano(n_keypoints=0).eval(), sess, next(iter(sess.groups))"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_memory_budget.py",
+        "line": 367,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(SMALL, n_keypoints=registry.n_keypoints).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_memory_budget.py",
+        "line": 425,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(SMALL, n_keypoints=registry.n_keypoints).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_memory_budget.py",
+        "line": 457,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(SMALL, n_keypoints=registry.n_keypoints).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(small(enc), n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 111,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(small(enc), n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 163,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(SMALL, n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 197,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(SMALL, n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 216,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(small(enc), n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 358,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(small(enc), n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 505,
+        "keyword_detected": "eval(",
+        "code_snippet": "n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 531,
+        "keyword_detected": "eval(",
+        "code_snippet": "n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 554,
+        "keyword_detected": "eval(",
+        "code_snippet": "n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 583,
+        "keyword_detected": "eval(",
+        "code_snippet": "n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 612,
+        "keyword_detected": "eval(",
+        "code_snippet": "n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 630,
+        "keyword_detected": "eval(",
+        "code_snippet": "n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 647,
+        "keyword_detected": "eval(",
+        "code_snippet": "n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 679,
+        "keyword_detected": "eval(",
+        "code_snippet": "m = build_model(small(enc, query='none', gridresid_offset=off), n_keypoints=n_kpt).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_model.py",
+        "line": 793,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = build_model(small(enc, query='prior'), n_keypoints=int(b.kpt_ids.max()) + 1).eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_optim.py",
+        "line": 241,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt.eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_optim.py",
+        "line": 242,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert not torch.equal(m.decoder.mlps[0].weight, y), 'eval() must swap to the averaged iterate'"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_optim.py",
+        "line": 340,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"\"\"`eval()`/`train()` read `train_mode` PER GROUP, so a group added out of phase is lerped the"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_optim.py",
+        "line": 351,
+        "keyword_detected": "eval(",
+        "code_snippet": "opt.eval()"
+      },
+      {
+        "file": "tailcyclenet-0.0.1/tests/test_optim.py",
+        "line": 354,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert torch.equal(p, b), 'eval()+train() must round-trip every group'"
+      }
+    ]
   }
 ]
