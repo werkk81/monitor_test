@@ -23782,5 +23782,59 @@
         "code_snippet": "crashed = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "wystan",
+    "checked_at": "2026-08-24T21:15:48.020995",
+    "download_url": "https://files.pythonhosted.org/packages/ba/eb/377adab9e352cef31808c1c24f3f4c1336dbd8178ca3e662e8daad586b75/wystan-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wystan-0.0.1/wystan/watch/daemon.py",
+        "line": 135,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen with detached flags."
+      },
+      {
+        "file": "wystan-0.0.1/wystan/watch/daemon.py",
+        "line": 185,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, creationflags=creationflags)"
+      }
+    ]
+  },
+  {
+    "package_name": "protorag",
+    "checked_at": "2026-08-24T21:15:48.102810",
+    "download_url": "https://files.pythonhosted.org/packages/17/c5/69b6afd085f7a91c20a8082718d3bf51a0fea03c919008230a802c41f3be/protorag-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "protorag-0.1.0/src/protorag/embeddings/torch_backend.py",
+        "line": 82,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = model.to(device).eval()"
+      },
+      {
+        "file": "protorag-0.1.0/src/protorag/embeddings/torch_backend.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._projection = self._projection.to(device).eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "geocongoai",
+    "checked_at": "2026-08-24T21:15:48.173846",
+    "download_url": "https://files.pythonhosted.org/packages/7a/b6/7d17a383914775c32c674dbacea3b4df3b1d29c7b8e778ef14742febafbb/geocongoai-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "geocongoai-0.1.0/src/geocongoai/ia/prithvi.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      }
+    ]
   }
 ]
