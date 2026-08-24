@@ -23836,5 +23836,451 @@
         "code_snippet": "self.model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "model-dispatcher",
+    "checked_at": "2026-08-24T21:44:28.196050",
+    "download_url": "https://files.pythonhosted.org/packages/91/6b/6bb5c5c7252cef39548cbc603646e01d997e5d406dabbe1ddfcf952e49a9/model_dispatcher-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "model_dispatcher-0.3.0/templates/vercel-app/api/_lib/firebase_app.py",
+        "line": 29,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "info = json.loads(base64.b64decode(stripped))"
+      }
+    ]
+  },
+  {
+    "package_name": "subvectors",
+    "checked_at": "2026-08-24T21:44:28.864507",
+    "download_url": "https://files.pythonhosted.org/packages/18/6e/ef151edf3e2ba925c3a08fdede2855d7ee71e0832f0f10d1a0b479a415af/subvectors-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "subvectors-0.2.0/src/subvectors/cel.py",
+        "line": 277,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(node, claims: dict) -> object:"
+      },
+      {
+        "file": "subvectors-0.2.0/src/subvectors/cel.py",
+        "line": 293,
+        "keyword_detected": "eval(",
+        "code_snippet": "return not _as_bool(_eval(node[1], claims))"
+      },
+      {
+        "file": "subvectors-0.2.0/src/subvectors/cel.py",
+        "line": 295,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _as_bool(_eval(node[1], claims)) and _as_bool(_eval(node[2], claims))"
+      },
+      {
+        "file": "subvectors-0.2.0/src/subvectors/cel.py",
+        "line": 297,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _as_bool(_eval(node[1], claims)) or _as_bool(_eval(node[2], claims))"
+      },
+      {
+        "file": "subvectors-0.2.0/src/subvectors/cel.py",
+        "line": 299,
+        "keyword_detected": "eval(",
+        "code_snippet": "equal = _cel_equal(_eval(node[1], claims), _eval(node[2], claims))"
+      },
+      {
+        "file": "subvectors-0.2.0/src/subvectors/cel.py",
+        "line": 302,
+        "keyword_detected": "eval(",
+        "code_snippet": "needle = _eval(node[1], claims)"
+      },
+      {
+        "file": "subvectors-0.2.0/src/subvectors/cel.py",
+        "line": 303,
+        "keyword_detected": "eval(",
+        "code_snippet": "return any(_cel_equal(needle, _eval(item, claims)) for item in node[2])"
+      },
+      {
+        "file": "subvectors-0.2.0/src/subvectors/cel.py",
+        "line": 305,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _method(node[2], _eval(node[1], claims), _eval(node[3], claims))"
+      },
+      {
+        "file": "subvectors-0.2.0/src/subvectors/cel.py",
+        "line": 322,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _as_bool(_eval(ast, claims))"
+      }
+    ]
+  },
+  {
+    "package_name": "taskuary",
+    "checked_at": "2026-08-24T21:44:29.294869",
+    "download_url": "https://files.pythonhosted.org/packages/6c/cc/16ae1ddeb30e515f597b651abd298716c5fe0dd94fa9004f191bc09e217b/taskuary-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "taskuary-0.2.1/taskuary/agents.py",
+        "line": 146,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/channels.py",
+        "line": 256,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "try: data = base64.b64decode(raw)"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/cli.py",
+        "line": 8,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s: return s.connect_ex((host, port)) == 0"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/desktop.py",
+        "line": 19,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/github.py",
+        "line": 136,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(r.json().get('content') or '').decode('utf-8', 'replace')"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/mcp.py",
+        "line": 16,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.p = subprocess.Popen([cmd] + list(args or []), stdin=subprocess.PIPE, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 345,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, q, p=()):"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 351,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec(f\"INSERT INTO {table} ({','.join(cols)}) VALUES ({','.join('?'*len(cols))})\","
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 373,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('INSERT INTO setting (Name, Value, UpdatedBy) VALUES (?,?,?) '"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 380,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(f\"UPDATE task SET {','.join(f'{c}=?' for c in cols)}, UpdatedBy=?, UpdatedAt=?{closed} WHERE TaskId=?\","
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 385,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"UPDATE review SET Status='superseded', DecidedBy=?, DecidedAt=? \""
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 403,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(q, (task_id,))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 429,
+        "keyword_detected": "exec(",
+        "code_snippet": "def set_message_status(self, mid, status): self._exec('UPDATE message SET Status=? WHERE MessageId=?', (status, mid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 431,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"UPDATE message SET TaskId=?, Status='routed' WHERE MessageId=?\", (task_id, mid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 443,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('DELETE FROM transcript WHERE Sid=?', (sid,))      # one row per session, always the latest"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 444,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec('INSERT INTO transcript (TaskId,Sid,Agent,Cwd,Text,CreatedAt) VALUES (?,?,?,?,?,?)',"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 450,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec('INSERT INTO route (MessageId,TaskId,Decision,Score,Reason,CandidatesJson,RoutedBy,CreatedAt) VALUES (?,?,?,?,?,?,?,?)',"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 454,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec('INSERT INTO comment (TaskId,Actor,ActorType,Body,CreatedAt) VALUES (?,?,?,?,?)',"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 464,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('INSERT INTO audit (EntityType,EntityId,Action,Actor,ActorType,RunId,Detail,PrevHash,RowHash,CreatedAt) VALUES (?,?,?,?,?,?,?,?,?,?)',"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 482,
+        "keyword_detected": "exec(",
+        "code_snippet": "if self.get_agent(name): self._exec('UPDATE agent SET Kind=?, Runner=?, Config=? WHERE Name=?', (kind, runner, config, name))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 483,
+        "keyword_detected": "exec(",
+        "code_snippet": "else: self._exec('INSERT INTO agent (Name,Kind,Runner,Config) VALUES (?,?,?,?)', (name, kind, runner, config))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 485,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec('INSERT INTO run (TaskId,AgentName,Instruction,DispatchedBy,StartedAt) VALUES (?,?,?,?,?)',"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 490,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(f\"UPDATE run SET {','.join(f'{c}=?' for c in cols)}, UpdatedAt=?{fin} WHERE RunId=?\","
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 501,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec('INSERT INTO dispatchq (TaskId,BehindTaskId,Agent,Reason,CreatedAt) VALUES (?,?,?,?,?)',"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 504,
+        "keyword_detected": "exec(",
+        "code_snippet": "def clear_dispatch(self, task_id): self._exec('DELETE FROM dispatchq WHERE TaskId=?', (task_id,))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 514,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('UPDATE review SET Status=?, FinalText=?, DecidedBy=?, DecidedAt=?, DecideNote=? WHERE ReviewId=?',"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 538,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"UPDATE review SET Status='pending', Reason=COALESCE(?, Reason) WHERE ReviewId=?\", (reason, rid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 540,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('UPDATE review SET Reason=?, RunId=COALESCE(?, RunId) WHERE ReviewId=?', (reason, run_id, rid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 542,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('UPDATE review SET DraftText=?, RunId=? WHERE ReviewId=?', (draft, run_id, rid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 551,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(f\"UPDATE policy SET {','.join(f'{c}=?' for c in cols)} WHERE PolicyId=?\", [fields[c] for c in cols] + [pid])"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 560,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(f\"UPDATE source SET {','.join(f'{c}=?' for c in cols)} WHERE SourceId=?\", [fields[c] for c in cols] + [sid])"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 563,
+        "keyword_detected": "exec(",
+        "code_snippet": "def touch_source(self, sid): self._exec('UPDATE source SET LastPolledAt=? WHERE SourceId=?', (_now(), sid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 569,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('UPDATE source SET LastPolledAt=NULL WHERE SourceId=?', (sid,))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 571,
+        "keyword_detected": "exec(",
+        "code_snippet": "def delete_source(self, sid): self._exec('DELETE FROM source WHERE SourceId=?', (sid,))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 572,
+        "keyword_detected": "exec(",
+        "code_snippet": "def delete_agent(self, name): self._exec('DELETE FROM agent WHERE Name=?', (name,))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 585,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(f\"UPDATE connector SET {','.join(f'{c}=?' for c in cols)} WHERE ConnectorId=?\", [fields[c] for c in cols] + [cid])"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 590,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('UPDATE connector SET Secret=NULL, ConfigJson=NULL, Active=0, LastSyncAt=NULL, LastError=NULL, Scope=NULL WHERE ConnectorId=?', (cid,))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 591,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('UPDATE source SET Active=0 WHERE ConnectorId=?', (cid,))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 595,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('UPDATE connector SET ConfigJson=? WHERE ConnectorId=?', (json.dumps(cfg), cid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 597,
+        "keyword_detected": "exec(",
+        "code_snippet": "if error: self._exec('UPDATE connector SET LastError=? WHERE ConnectorId=?', (error[:500], cid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 598,
+        "keyword_detected": "exec(",
+        "code_snippet": "else: self._exec('UPDATE connector SET LastSyncAt=?, LastError=NULL WHERE ConnectorId=?', (_now(), cid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 602,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('INSERT INTO setting (Name, Value, UpdatedBy) VALUES (?,?,?) ON CONFLICT(Name) DO UPDATE SET Value=?, UpdatedBy=?',"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 609,
+        "keyword_detected": "exec(",
+        "code_snippet": "def set_memory_active(self, mid, active): self._exec('UPDATE memory SET Active=? WHERE MemoryId=?', (1 if active else 0, mid))"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/store.py",
+        "line": 615,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec('INSERT INTO doc (Name, Content, UpdatedBy, UpdatedAt) VALUES (?,?,?,?) ON CONFLICT(Name) DO UPDATE SET Content=?, UpdatedBy=?, UpdatedAt=?',"
+      },
+      {
+        "file": "taskuary-0.2.1/taskuary/terminal.py",
+        "line": 74,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.p = subprocess.Popen(argv, cwd=cwd, stdin=slave, stdout=slave, stderr=slave,"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_api.py",
+        "line": 246,
+        "keyword_detected": "exec(",
+        "code_snippet": "s2._exec('UPDATE message SET SentAt=? WHERE ExternalId=?', (utc, 'old'))"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_api.py",
+        "line": 696,
+        "keyword_detected": "exec(",
+        "code_snippet": "server.store._exec('UPDATE source SET LastPolledAt=NULL', ())     # only this source speaks"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_api.py",
+        "line": 697,
+        "keyword_detected": "exec(",
+        "code_snippet": "server.store._exec('UPDATE source SET LastPolledAt=? WHERE SourceId=?', (stamp(0.2), src))"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_api.py",
+        "line": 699,
+        "keyword_detected": "exec(",
+        "code_snippet": "server.store._exec('UPDATE source SET LastPolledAt=? WHERE SourceId=?', (stamp(30), src))"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_api.py",
+        "line": 701,
+        "keyword_detected": "exec(",
+        "code_snippet": "server.store._exec('UPDATE source SET LastPolledAt=? WHERE SourceId=?', (stamp(24 * 10), src))"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_api.py",
+        "line": 703,
+        "keyword_detected": "exec(",
+        "code_snippet": "server.store._exec('UPDATE source SET LastPolledAt=NULL', ())"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_core.py",
+        "line": 390,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with mock.patch('taskuary.agents.subprocess.Popen', side_effect=RuntimeError('stop')) as pop:"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_core.py",
+        "line": 396,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with mock.patch('taskuary.agents.subprocess.Popen', side_effect=RuntimeError('stop')) as pop2:"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_docs_and_llm.py",
+        "line": 38,
+        "keyword_detected": "exec(",
+        "code_snippet": "s._exec(\"UPDATE doc SET Content='OLD SHIPPED TEXT' WHERE Name='triage'\")   # an older release"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_imapmail.py",
+        "line": 151,
+        "keyword_detected": "exec(",
+        "code_snippet": "a._exec(\"INSERT INTO source (Channel, Address, Active) VALUES ('email', 'me@corp.example', 1)\")"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_imapmail.py",
+        "line": 152,
+        "keyword_detected": "exec(",
+        "code_snippet": "a._exec(\"INSERT INTO source (Channel, Address, Active) VALUES ('report', 'Census', 1)\")"
+      },
+      {
+        "file": "taskuary-0.2.1/tests/test_messengers.py",
+        "line": 71,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "fake_get = mock.Mock(return_value=mock.Mock(content=base64.b64decode(PNG)))"
+      }
+    ]
+  },
+  {
+    "package_name": "wystan",
+    "checked_at": "2026-08-24T21:44:30.118737",
+    "download_url": "https://files.pythonhosted.org/packages/ba/eb/377adab9e352cef31808c1c24f3f4c1336dbd8178ca3e662e8daad586b75/wystan-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wystan-0.0.1/wystan/watch/daemon.py",
+        "line": 135,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen with detached flags."
+      },
+      {
+        "file": "wystan-0.0.1/wystan/watch/daemon.py",
+        "line": 185,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, creationflags=creationflags)"
+      }
+    ]
   }
 ]
