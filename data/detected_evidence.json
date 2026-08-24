@@ -23660,5 +23660,19 @@
         "code_snippet": "exec(compile(source, \"README.md\", \"exec\"), namespace)"
       }
     ]
+  },
+  {
+    "package_name": "dafne-sam2-tools",
+    "checked_at": "2026-08-24T19:03:08.471465",
+    "download_url": "https://files.pythonhosted.org/packages/e9/6a/030e5c03c2bea09bdd2212a55a84cfb91b9db3e82e7cd83a6cd3291b6b14/dafne_sam2_tools-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dafne_sam2_tools-0.1.0/src/dafne_sam2/automatic/video_predictor_npz.py",
+        "line": 109,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
   }
 ]
