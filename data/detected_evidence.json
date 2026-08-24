@@ -23530,5 +23530,135 @@
         "code_snippet": "ciphertext = base64.b64decode(document[\"payload\"], validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "datumrag",
+    "checked_at": "2026-08-24T18:19:21.900793",
+    "download_url": "https://files.pythonhosted.org/packages/22/ef/5bf540b8ec398580b7278562df77e447497e22b531b899f7a604e1d85f61/datumrag-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "datumrag-0.1.1/src/datum/cli.py",
+        "line": 135,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(corpus_dir: Path | None, regression_set: Path | None, dsn: str) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "modal-cuda-runner",
+    "checked_at": "2026-08-24T18:19:22.000920",
+    "download_url": "https://files.pythonhosted.org/packages/b3/e1/d66e67cf6b8e39790e226d4d62b6e0af79bf6114b1f947583611d81f85be/modal_cuda_runner-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "modal_cuda_runner-0.1.0/mcr/remote.py",
+        "line": 40,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "run_proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "gpuwm-hex",
+    "checked_at": "2026-08-24T18:19:22.284447",
+    "download_url": "https://files.pythonhosted.org/packages/29/fc/9a03f59d14165a832deb0672ee2f882de39b87ada41f77355aca051c99d0/gpuwm_hex-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gpuwm_hex-0.1.0/src/mpas_port/partition_net_v841.py",
+        "line": 66,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def __init__(self, sock: socket.socket, *, timeout_seconds: float = 300.0) -> None:"
+      },
+      {
+        "file": "gpuwm_hex-0.1.0/src/mpas_port/partition_net_v841.py",
+        "line": 224,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "gpuwm_hex-0.1.0/src/mpas_port/partition_net_v841.py",
+        "line": 243,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "gpuwm_hex-0.1.0/tests/conftest.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "pins = ast.literal_eval(match.group(\"body\"))"
+      },
+      {
+        "file": "gpuwm_hex-0.1.0/tests/test_partition_executor_v841.py",
+        "line": 126,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "gpuwm_hex-0.1.0/tools/cuda_ftz_v841_isolated_bootstrap.py",
+        "line": 273,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, scope)"
+      },
+      {
+        "file": "gpuwm_hex-0.1.0/tools/device_memory_capacity/process_memory_probe.py",
+        "line": 170,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "gpuwm_hex-0.1.0/tools/device_memory_capacity/sibling_contamination_probe.py",
+        "line": 90,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _read_ready(process: subprocess.Popen[str], timeout_seconds: float) -> dict[str, Any]:"
+      },
+      {
+        "file": "gpuwm_hex-0.1.0/tools/device_memory_capacity/sibling_contamination_probe.py",
+        "line": 136,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "gpuwm_hex-0.1.0/tools/run_cuda_jw_dualrun_promotion.py",
+        "line": 146,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, module.__dict__)"
+      }
+    ]
+  },
+  {
+    "package_name": "termux-api-stc",
+    "checked_at": "2026-08-24T18:19:22.769866",
+    "download_url": "https://files.pythonhosted.org/packages/cc/ed/08b774fbbcca25fe30f577fa57b856911c72531b79dd3dfd45fa039dda09/termux_api_stc-2.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "termux_api_stc-2.0.0/termux_api_stc/core.py",
+        "line": 182,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "solveq-ai",
+    "checked_at": "2026-08-24T18:19:22.912262",
+    "download_url": "https://files.pythonhosted.org/packages/0f/af/915339b13823a67cbc781f0e90a55672209f1b53d2f64b45baf7ca4706a5/solveq_ai-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "solveq_ai-0.1.0/tests/test_readme.py",
+        "line": 85,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", blocked)"
+      },
+      {
+        "file": "solveq_ai-0.1.0/tests/test_readme.py",
+        "line": 119,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"README.md\", \"exec\"), namespace)"
+      }
+    ]
   }
 ]
