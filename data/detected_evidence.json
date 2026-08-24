@@ -23730,5 +23730,57 @@
         "code_snippet": "key = base64.b64decode(key_b64)"
       }
     ]
+  },
+  {
+    "package_name": "word2vec-trainer-pytorch",
+    "checked_at": "2026-08-24T20:54:07.020855",
+    "download_url": "https://files.pythonhosted.org/packages/6e/c5/b55712730eb55d5f0171e66872219c70bea70446e2b7c3545ff799f0201d/word2vec_trainer_pytorch-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "word2vec_trainer_pytorch-0.1.0/src/word2vec_trainer/trainer.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "stablemates-workhorse",
+    "checked_at": "2026-08-24T20:54:07.085260",
+    "download_url": "https://files.pythonhosted.org/packages/23/1e/3be2c78e4fa098074fd425e6e6d6917fb22d453b940cdec557fb31415c48/stablemates_workhorse-0.1.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stablemates_workhorse-0.1.0a1/tests/test_worker_process.py",
+        "line": 18,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _start_fixture(mode: str, timeout_ms: int) -> subprocess.Popen[str]:"
+      },
+      {
+        "file": "stablemates_workhorse-0.1.0a1/tests/test_worker_process.py",
+        "line": 19,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "stablemates_workhorse-0.1.0a1/tests/test_worker_process.py",
+        "line": 30,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _finish(process: subprocess.Popen[str]) -> tuple[str, str]:"
+      },
+      {
+        "file": "stablemates_workhorse-0.1.0a1/tests/test_worker_process.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_and_reap(process: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "stablemates_workhorse-0.1.0a1/tests/test_worker_process.py",
+        "line": 122,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "crashed = subprocess.Popen("
+      }
+    ]
   }
 ]
