@@ -24716,5 +24716,19 @@
         "code_snippet": "assert torch.equal(p, b), 'eval()+train() must round-trip every group'"
       }
     ]
+  },
+  {
+    "package_name": "kaggle-vllm",
+    "checked_at": "2026-08-24T22:56:55.324862",
+    "download_url": "https://files.pythonhosted.org/packages/9f/7a/2981d278d8d34708490414957afad68c3bda6d34f137227c204d091aaf8e/kaggle_vllm-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kaggle_vllm-0.1.0/tests/test_llm.py",
+        "line": 64,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "if event.startswith('socket.') or event == 'subprocess.Popen':"
+      }
+    ]
   }
 ]
