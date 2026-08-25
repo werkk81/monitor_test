@@ -24846,5 +24846,61 @@
         "code_snippet": "def _parse_exec(self, record: TraceRecord, name: str, args: str, result: str) -> None:"
       }
     ]
+  },
+  {
+    "package_name": "firedrill",
+    "checked_at": "2026-08-25T19:39:28.898655",
+    "download_url": "https://files.pythonhosted.org/packages/a7/96/8cc4dadaa9c85c60c1872247fd8980157e27c02b511cecfab119792f6ac6/firedrill-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "firedrill-0.2.0/firedrill/docker.py",
+        "line": 172,
+        "keyword_detected": "exec(",
+        "code_snippet": "probe = self.exec("
+      },
+      {
+        "file": "firedrill-0.2.0/firedrill/docker.py",
+        "line": 208,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self, argv: list[str], timeout: int = 3600, user: str = \"postgres\"):"
+      },
+      {
+        "file": "firedrill-0.2.0/firedrill/docker.py",
+        "line": 227,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self.exec("
+      },
+      {
+        "file": "firedrill-0.2.0/firedrill/restore.py",
+        "line": 211,
+        "keyword_detected": "exec(",
+        "code_snippet": "created = container.exec([\"createdb\", \"-U\", \"postgres\", TARGET_DB], timeout=120)"
+      },
+      {
+        "file": "firedrill-0.2.0/firedrill/restore.py",
+        "line": 233,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = container.exec(base + [\"--schema-only\", DUMP_PATH], user=\"root\")"
+      },
+      {
+        "file": "firedrill-0.2.0/firedrill/restore.py",
+        "line": 237,
+        "keyword_detected": "exec(",
+        "code_snippet": "data = container.exec(base + [\"--data-only\", \"-t\", table, DUMP_PATH],"
+      },
+      {
+        "file": "firedrill-0.2.0/firedrill/restore.py",
+        "line": 249,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = container.exec(argv, user=\"root\")"
+      },
+      {
+        "file": "firedrill-0.2.0/tests/test_firedrill.py",
+        "line": 2245,
+        "keyword_detected": "exec(",
+        "code_snippet": "written = container.exec("
+      }
+    ]
   }
 ]
