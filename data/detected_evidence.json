@@ -25142,5 +25142,239 @@
         "code_snippet": "sys.exit(app.exec())"
       }
     ]
+  },
+  {
+    "package_name": "opendice",
+    "checked_at": "2026-08-25T21:14:26.320202",
+    "download_url": "https://files.pythonhosted.org/packages/f3/f6/868618b97865a46506a0b0f8e6d323cc0805d3ab179307b128f7aba8be0e/opendice-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 106,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 136,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 137,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _cartesian(self._func, self.left._eval(), self.right._eval())"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 151,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 152,
+        "keyword_detected": "eval(",
+        "code_snippet": "dist = self.operand._eval()"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 170,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 171,
+        "keyword_detected": "eval(",
+        "code_snippet": "dist = self.operand._eval()"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 195,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 196,
+        "keyword_detected": "eval(",
+        "code_snippet": "dist = self.operand._eval()"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 338,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(self):"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 343,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._cache = self._expr.eval()"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 531,
+        "keyword_detected": "eval(",
+        "code_snippet": "dist = self._eval()"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 546,
+        "keyword_detected": "eval(",
+        "code_snippet": "dist = self._eval()"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 563,
+        "keyword_detected": "eval(",
+        "code_snippet": "dist = self._eval()"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 576,
+        "keyword_detected": "eval(",
+        "code_snippet": "dist = self._eval()"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 588,
+        "keyword_detected": "eval(",
+        "code_snippet": "return min(self._eval().keys())"
+      },
+      {
+        "file": "opendice-0.1.0/src/opendice/die.py",
+        "line": 596,
+        "keyword_detected": "eval(",
+        "code_snippet": "return max(self._eval().keys())"
+      },
+      {
+        "file": "opendice-0.1.0/tests/test_die.py",
+        "line": 236,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_cache_after_eval(self):"
+      }
+    ]
+  },
+  {
+    "package_name": "astro-eval",
+    "checked_at": "2026-08-25T21:14:27.147150",
+    "download_url": "https://files.pythonhosted.org/packages/55/b3/136d8b3942a8111b1dba7f317a7278919c9362fdf3d03b3f63ac37e3c7dd/astro_eval-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "astro_eval-0.1.0/benchmarks/kv_cache_benchmark.py",
+        "line": 56,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/eval/generate.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/generate.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/generate_exp007.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/astro_eval/adapters/astrogpt.py",
+        "line": 78,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/astro_eval/adapters/astrogpt.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/evaluation/runner.py",
+        "line": 103,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/evaluation/runner.py",
+        "line": 343,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/evaluation/adapters/astrogpt.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/model/test_kv_cache.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/model/test_model.py",
+        "line": 119,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/training/train.py",
+        "line": 207,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "astro_eval-0.1.0/src/training/train_50m.py",
+        "line": 219,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "onetaskgraph-sdk",
+    "checked_at": "2026-08-25T21:14:27.296126",
+    "download_url": "https://files.pythonhosted.org/packages/77/34/adb54e2e5c04b7cff15dc76fc395ffa7e8c713aa20e62dc44fe5b6dfe6dc/onetaskgraph_sdk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "onetaskgraph_sdk-0.1.0/src/onetaskgraph_sdk/client.py",
+        "line": 85,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
   }
 ]
