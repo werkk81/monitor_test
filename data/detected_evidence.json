@@ -26720,5 +26720,177 @@
         "code_snippet": "eval_ivcurve = eval(\"{\" + ivcurve[\"IV\"][1:-1] + \"}\")"
       }
     ]
+  },
+  {
+    "package_name": "tidegbm",
+    "checked_at": "2026-08-25T22:26:38.467452",
+    "download_url": "https://files.pythonhosted.org/packages/03/b8/ecd930395ac53e34b62ef2c68083c092b8e75c778d07b9f8c9ddb2462c30/tidegbm-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tidegbm-0.4.0/src/tidegbm/api.py",
+        "line": 236,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = base64.b64decode(payload[\"artifact_b64\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "pyrafuse",
+    "checked_at": "2026-08-25T22:26:39.425974",
+    "download_url": "https://files.pythonhosted.org/packages/e2/47/5326226b164e45f9b9d63be94deb5348233175c77b1de5788a55b0b1ca31/pyrafuse-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/zoo.py",
+        "line": 142,
+        "keyword_detected": "eval(",
+        "code_snippet": ".eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/deploy/trt_export.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": ".eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/deploy/trt_export.py",
+        "line": 132,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/deploy/trt_export.py",
+        "line": 425,
+        "keyword_detected": "eval(",
+        "code_snippet": "enc_w = EncoderWrap(model).to(device).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/deploy/trt_export.py",
+        "line": 426,
+        "keyword_detected": "eval(",
+        "code_snippet": "dec_w = DecoderWrap(model).to(device).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/deploy/trt_export.py",
+        "line": 602,
+        "keyword_detected": "eval(",
+        "code_snippet": "enc_w = EncoderWrap(model).to(device).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/deploy/trt_export.py",
+        "line": 603,
+        "keyword_detected": "eval(",
+        "code_snippet": "dec_w = DecoderWrap(model).to(device).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/encoders.py",
+        "line": 359,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.m = AutoModel.from_pretrained(model_id).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/encoders.py",
+        "line": 391,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.m = AutoModel.from_pretrained(model_id).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/encoders.py",
+        "line": 430,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._joint = joint.eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/encoders.py",
+        "line": 432,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.m.eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/encoders.py",
+        "line": 503,
+        "keyword_detected": "eval(",
+        "code_snippet": "joint = _AM.from_pretrained(model_id).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/encoders.py",
+        "line": 584,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._clip = clip.eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/encoders.py",
+        "line": 677,
+        "keyword_detected": "eval(",
+        "code_snippet": "version=version, progress=False).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/encoders.py",
+        "line": 720,
+        "keyword_detected": "eval(",
+        "code_snippet": "sam = SamModel.from_pretrained(model_id).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/model.py",
+        "line": 296,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.ema = copy.deepcopy(model).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/model.py",
+        "line": 362,
+        "keyword_detected": "eval(",
+        "code_snippet": "config.model_id, token=HF_TOKEN).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/model.py",
+        "line": 370,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.backbone.eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/model.py",
+        "line": 467,
+        "keyword_detected": "eval(",
+        "code_snippet": "base = AutoModel.from_pretrained(source, token=HF_TOKEN).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/model_hybrid.py",
+        "line": 276,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.ema = copy.deepcopy(model).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/model_hybrid.py",
+        "line": 356,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.encoder.eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/model/model_hybrid.py",
+        "line": 545,
+        "keyword_detected": "eval(",
+        "code_snippet": "str(backbone_dir), token=HF_TOKEN).eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/train/trainer.py",
+        "line": 181,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.backbone.eval()  # keep frozen BN/stats in eval"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/train/trainer.py",
+        "line": 247,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval_model.eval()"
+      },
+      {
+        "file": "pyrafuse-1.0.0/pyrafuse/train/trainer.py",
+        "line": 336,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval_model.eval()"
+      }
+    ]
   }
 ]
