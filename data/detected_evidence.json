@@ -24902,5 +24902,139 @@
         "code_snippet": "written = container.exec("
       }
     ]
+  },
+  {
+    "package_name": "ztop",
+    "checked_at": "2026-08-25T19:59:03.734292",
+    "download_url": "https://files.pythonhosted.org/packages/8b/04/fb4485de9b63fb3b2ffeb30deab5c192279512bb231cf0be70804aa1a0ae/ztop-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ztop-1.1.0/tests/test_advanced.py",
+        "line": 379,
+        "keyword_detected": "eval(",
+        "code_snippet": "py_code = b\"import os\\nresult = eval(user_input)\\nexec(payload)\""
+      },
+      {
+        "file": "ztop-1.1.0/tests/test_advanced.py",
+        "line": 379,
+        "keyword_detected": "exec(",
+        "code_snippet": "py_code = b\"import os\\nresult = eval(user_input)\\nexec(payload)\""
+      }
+    ]
+  },
+  {
+    "package_name": "pydoll-kraken",
+    "checked_at": "2026-08-25T19:59:03.836191",
+    "download_url": "https://files.pythonhosted.org/packages/e9/c7/7c3e49b4e6988ba4683d6fc85f2f7c2d862b7e4f207d0cc5e790a052d097/pydoll_kraken-2.25.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pydoll_kraken-2.25.0/pydoll_kraken/browser/managers/browser_process_manager.py",
+        "line": 18,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process_creator: Optional[Callable[[list[str]], subprocess.Popen]] = None,"
+      },
+      {
+        "file": "pydoll_kraken-2.25.0/pydoll_kraken/browser/managers/browser_process_manager.py",
+        "line": 25,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Must accept command list and return subprocess.Popen object."
+      },
+      {
+        "file": "pydoll_kraken-2.25.0/pydoll_kraken/browser/managers/browser_process_manager.py",
+        "line": 29,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "pydoll_kraken-2.25.0/pydoll_kraken/browser/managers/browser_process_manager.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": ") -> subprocess.Popen:"
+      },
+      {
+        "file": "pydoll_kraken-2.25.0/pydoll_kraken/browser/managers/browser_process_manager.py",
+        "line": 68,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _default_process_creator(command: list[str]) -> subprocess.Popen:"
+      },
+      {
+        "file": "pydoll_kraken-2.25.0/pydoll_kraken/browser/managers/browser_process_manager.py",
+        "line": 71,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "pydoll_kraken-2.25.0/pydoll_kraken/browser/requests/har_recorder.py",
+        "line": 432,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content_size = len(base64.b64decode(body))"
+      },
+      {
+        "file": "pydoll_kraken-2.25.0/pydoll_kraken/utils/fingerprint_builder.py",
+        "line": 612,
+        "keyword_detected": "exec(",
+        "code_snippet": "const m = /[\"']([^\"']+)[\"']\\\\s*$/.exec(String(font)) || /(\\\\S+)\\\\s*$/.exec(String(font));"
+      },
+      {
+        "file": "pydoll_kraken-2.25.0/pydoll_kraken/utils/general.py",
+        "line": 115,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(image.encode('utf-8'))"
+      }
+    ]
+  },
+  {
+    "package_name": "spielos",
+    "checked_at": "2026-08-25T19:59:04.139710",
+    "download_url": "https://files.pythonhosted.org/packages/73/47/a31963aa87d994531a0c8bda398cee3adba5bc636f3e1a87ea47b41dee93/spielos-6.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "spielos-6.2.0/company/departments/outbound/workflows/email/providers.py",
+        "line": 159,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/providers.py",
+        "line": 159,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "spielos-6.2.0/company/init_templates/agents/company/runtime/service.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, cwd=self.project_root, env=environment,"
+      },
+      {
+        "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_runner_persistence.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"company.runtime.service.subprocess.Popen\","
+      },
+      {
+        "file": "spielos-6.2.0/company/runtime/service.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, cwd=self.project_root, env=environment,"
+      }
+    ]
+  },
+  {
+    "package_name": "ctt-dual-frequency",
+    "checked_at": "2026-08-25T19:59:04.404368",
+    "download_url": "https://files.pythonhosted.org/packages/44/c7/8dcc4c4e27d18eafba12e46eea79259cbc785e59dcbd43633597abc60839/ctt_dual_frequency-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ctt_dual_frequency-0.2.0/dual_frequency_lzma.py",
+        "line": 152,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
   }
 ]
