@@ -26048,5 +26048,677 @@
         "code_snippet": "eval_ivcurve = eval(\"{\" + ivcurve[\"IV\"][1:-1] + \"}\")"
       }
     ]
+  },
+  {
+    "package_name": "opensighub",
+    "checked_at": "2026-08-25T22:00:10.427256",
+    "download_url": "https://files.pythonhosted.org/packages/61/55/0d77d5f328e49f944a08090f7ff271b919524cf0dbba2efc348112d3ecfa/opensighub-0.3.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "opensighub-0.3.0a1/opensighub/signers.py",
+        "line": 605,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dig_raw = base64.b64decode(dig_b64)"
+      }
+    ]
+  },
+  {
+    "package_name": "nova-ai-pro",
+    "checked_at": "2026-08-25T22:00:11.723853",
+    "download_url": "https://files.pythonhosted.org/packages/ac/cf/1016e60f16598436314310b9ef1f609e47e04254d865b85cd198aec703a5/nova_ai_pro-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/agents/opencode.py",
+        "line": 161,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/agents/opencode.py",
+        "line": 225,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/agents/rlm_repl.py",
+        "line": 218,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, self._namespace)  # noqa: S102"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/agents/hybrid/conductor.py",
+        "line": 127,
+        "keyword_detected": "eval(",
+        "code_snippet": "out[key] = ast.literal_eval(m.group(1))"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/agents/hybrid/mini_swe_agent.py",
+        "line": 237,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/channels/irc_channel.py",
+        "line": 97,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/channels/slack_daemon.py",
+        "line": 212,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/channels/whatsapp_baileys.py",
+        "line": 81,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/channels/whatsapp_baileys.py",
+        "line": 163,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/cli/channels_cmd.py",
+        "line": 73,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/cli/daemon_cmd.py",
+        "line": 87,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/cli/host_cmd.py",
+        "line": 379,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/connectors/oauth.py",
+        "line": 473,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "test_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/connectors/oauth.py",
+        "line": 593,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "test_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/core/config.py",
+        "line": 1664,
+        "keyword_detected": "eval(",
+        "code_snippet": "fld_type = eval(fld_type, vars(_cfg_mod))  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/backends/external/_subprocess_runner.py",
+        "line": 83,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/datasets/adp.py",
+        "line": 66,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(raw)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/datasets/lifelong_agent.py",
+        "line": 113,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(raw)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/datasets/lifelong_agent.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(raw)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/datasets/security_scanner.py",
+        "line": 453,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"    prefs = json.loads(base64.b64decode(raw))\\n\""
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/datasets/simpleqa.py",
+        "line": 121,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(text)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/datasets/toolorchestra.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(raw)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/environments/lifelong_agent_env.py",
+        "line": 493,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/execution/webchorearena_env.py",
+        "line": 397,
+        "keyword_detected": "eval(",
+        "code_snippet": "target_url = eval(func_expr)  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/execution/webchorearena_env.py",
+        "line": 432,
+        "keyword_detected": "eval(",
+        "code_snippet": "selected_element = str(eval(func_expr))  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/coding_assistant.py",
+        "line": 93,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, mod.__dict__)  # noqa: S102"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/coding_assistant.py",
+        "line": 101,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(test_code, {\"__name__\": \"__main__\"})  # noqa: S102"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/coding_task.py",
+        "line": 53,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, namespace)  # noqa: S102"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/coding_task.py",
+        "line": 68,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(test_cases, namespace)  # noqa: S102"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/coding_task.py",
+        "line": 81,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(line, namespace)  # noqa: S102"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/coding_task.py",
+        "line": 86,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(line, namespace)  # noqa: S102"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/lifelong_agent_scorer.py",
+        "line": 605,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = _safe_literal_eval(answer_text)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/lifelong_agent_scorer.py",
+        "line": 626,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _safe_literal_eval(s: str) -> Any:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/lifelong_agent_scorer.py",
+        "line": 630,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(s)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/pinchbench.py",
+        "line": 391,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, namespace)  # noqa: S102"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/evals/scorers/swebench_harness.py",
+        "line": 87,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/learning/intelligence/orchestrator/grpo_trainer.py",
+        "line": 148,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.ref_policy.model.eval()"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/mcp/transport.py",
+        "line": 63,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: Optional[subprocess.Popen[str]] = None"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/mcp/transport.py",
+        "line": 68,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/mining/_miner_loop_main.py",
+        "line": 50,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(header_b64), target"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/mining/_pearl_subprocess.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "gateway: subprocess.Popen"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/mining/_pearl_subprocess.py",
+        "line": 37,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "miner_loop: subprocess.Popen"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/mining/_pearl_subprocess.py",
+        "line": 92,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "gateway = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/mining/_pearl_subprocess.py",
+        "line": 112,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "miner_loop = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/security/signing.py",
+        "line": 94,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(signature_b64)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/security/signing.py",
+        "line": 109,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(raw.strip())"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/security/subprocess_sandbox.py",
+        "line": 127,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/tools/calculator.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": "def safe_eval(expression: str) -> float:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/tools/calculator.py",
+        "line": 153,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = safe_eval(expression)"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/tools/code_interpreter.py",
+        "line": 23,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval(\","
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/tools/code_interpreter.py",
+        "line": 24,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec(\","
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/tools/repl.py",
+        "line": 304,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = eval(compiled, session.namespace)  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/tools/repl.py",
+        "line": 310,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compiled, session.namespace)  # noqa: S102"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/tools/templates/loader.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "# A bare ``eval()`` — even with a restricted ``__builtins__`` — is trivially"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/tools/templates/loader.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Instead of calling ``eval()`` at all, we parse the expression and walk the"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/src/nova_ai/workflow/engine.py",
+        "line": 280,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = str(eval(expr, {\"__builtins__\": {}}, {\"outputs\": outputs}))  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/agents/test_native_openhands.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = eval(match.group(1))  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/agents/test_native_openhands.py",
+        "line": 78,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = eval(expr)  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/agents/test_native_react.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = eval(expr)  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/agents/test_orchestrator.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = eval(expr)  # noqa: S307 — safe in tests"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/agents/test_rlm.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = eval(expr)  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/channels/test_irc_channel.py",
+        "line": 90,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with patch(\"socket.socket\", return_value=mock_sock):"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/channels/test_irc_channel.py",
+        "line": 101,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with patch(\"socket.socket\", return_value=mock_sock):"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/channels/test_irc_channel.py",
+        "line": 120,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with patch(\"socket.socket\", return_value=mock_sock):"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/channels/test_whatsapp_baileys.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "patch(\"subprocess.Popen\", return_value=mock_proc) as mock_popen,"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/cli/test_ask_vision.py",
+        "line": 30,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "_PNG_BYTES = base64.b64decode("
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/evals/comparison/test_subprocess_runner.py",
+        "line": 62,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as MockPopen:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/evals/comparison/test_subprocess_runner.py",
+        "line": 80,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as MockPopen:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/evals/comparison/test_subprocess_runner.py",
+        "line": 100,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as MockPopen:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/evals/comparison/test_subprocess_runner.py",
+        "line": 121,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as MockPopen:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/evals/comparison/test_subprocess_runner.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as MockPopen:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/mining/test_pearl_subprocess.py",
+        "line": 12,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"\"\"A MagicMock standing in for a live subprocess.Popen handle.\"\"\""
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/mining/test_pearl_subprocess.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\", return_value=fake_popen) as mock_popen:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/mining/test_pearl_subprocess.py",
+        "line": 60,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\", return_value=fake_popen) as mock_popen:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/mining/test_pearl_subprocess.py",
+        "line": 68,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\", return_value=fake_popen):"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/mining/test_pearl_subprocess.py",
+        "line": 84,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\", side_effect=[fake_alive, fake_dead]):"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/mining/test_pearl_subprocess.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\", side_effect=[fake_a, fake_b]):"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/mining/test_pearl_subprocess.py",
+        "line": 112,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\", return_value=fake_popen):"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/mining/test_pearl_subprocess.py",
+        "line": 121,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\", return_value=fake_popen) as mock_popen:"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/mining/test_pearl_subprocess.py",
+        "line": 132,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\", return_value=fake_popen):"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/security/test_injection_scanner.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = scanner.scan(\"eval('malicious code here')\")"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/skills/test_tool_translator.py",
+        "line": 9,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_bash_translates_to_shell_exec(self):"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/skills/test_tool_translator.py",
+        "line": 74,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert \"shell_exec(git:*)\" in new_field"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/skills/test_tool_translator.py",
+        "line": 75,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert \"shell_exec(jq:*)\" in new_field"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/test_orchestrator_learning/test_environment.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = str(eval(expr))  # noqa: S307"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 14,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"2 + 3\") == 5"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"10 - 3\") == 7"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 20,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"4 * 5\") == 20"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 23,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"10 / 4\") == 2.5"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"floor(10/3)\") == 3"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 29,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"10 % 3\") == 1"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"2^10\") == 1024"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"-5 + 3\") == -2"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"(2 + 3) * (4 - 1)\") == 15"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 41,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"sqrt(16)\") == 4.0"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert abs(safe_eval(\"ln(e)\") - 1.0) < 1e-10"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert abs(safe_eval(\"pi\") - math.pi) < 1e-10"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert abs(safe_eval(\"sin(0)\")) < 1e-10"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert abs(safe_eval(\"cos(0)\") - 1.0) < 1e-10"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert safe_eval(\"1 / 0\") == math.inf"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "safe_eval(\"2 +\")"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "safe_eval(\"'hello'\")"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "safe_eval(\"exec(1)\")"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "safe_eval(\"exec(1)\")"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_calculator.py",
+        "line": 71,
+        "keyword_detected": "eval(",
+        "code_snippet": "safe_eval(\"x + 1\")"
+      },
+      {
+        "file": "nova_ai_pro-1.1.0/tests/tools/test_code_interpreter.py",
+        "line": 72,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = tool.execute(code=\"eval('2+2')\")"
+      }
+    ]
+  },
+  {
+    "package_name": "hgtd-tools",
+    "checked_at": "2026-08-25T22:00:12.042144",
+    "download_url": "https://files.pythonhosted.org/packages/04/92/9c25d200ff0246ef797078d3d06cd1e3541c992afdf29f52f70599d1b23b/hgtd_tools-3.0.0rc2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hgtd_tools-3.0.0rc2/src/hgtd_tools/util.py",
+        "line": 1451,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval_ivcurve = eval(\"{\" + ivcurve[\"IV\"][1:-1] + \"}\")"
+      }
+    ]
   }
 ]
