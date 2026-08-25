@@ -24770,5 +24770,81 @@
         "code_snippet": "def test_validate_pair_proves_same_agent_and_optional_eval(tmp_path):"
       }
     ]
+  },
+  {
+    "package_name": "graphabi",
+    "checked_at": "2026-08-25T19:01:14.645959",
+    "download_url": "https://files.pythonhosted.org/packages/21/99/a82e81039adbcee2746b1cf5f57ae1da74ec6d3b07f06356062f29f7eaa2/graphabi-0.1.0a3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "graphabi-0.1.0a3/tests/integration/test_openai_agents_adapter.py",
+        "line": 33,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", reject_network)"
+      }
+    ]
+  },
+  {
+    "package_name": "execweave",
+    "checked_at": "2026-08-25T19:01:15.221237",
+    "download_url": "https://files.pythonhosted.org/packages/49/84/0946bf67d60567dbc28044977a5ae860f8ca7a3ed5e5ce4e5218d4eb5a53/execweave-0.6.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "execweave-0.6.0/scripts/emit_claude_hook_smoke.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(child_argv)"
+      },
+      {
+        "file": "execweave-0.6.0/scripts/emit_cursor_hook_smoke.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(child_argv)"
+      },
+      {
+        "file": "execweave-0.6.0/scripts/emit_opencode_plugin_smoke.py",
+        "line": 53,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(child_argv)"
+      },
+      {
+        "file": "execweave-0.6.0/src/execweave/collector.py",
+        "line": 155,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "execweave-0.6.0/src/execweave/collector.py",
+        "line": 158,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, cwd=str(self.watch_root))"
+      },
+      {
+        "file": "execweave-0.6.0/src/execweave/overhead_benchmark.py",
+        "line": 89,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "execweave-0.6.0/src/execweave/strace_backend.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "return str(ast.literal_eval(f'\"{value}\"'))"
+      },
+      {
+        "file": "execweave-0.6.0/src/execweave/strace_backend.py",
+        "line": 264,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._parse_exec(record, name, args, result)"
+      },
+      {
+        "file": "execweave-0.6.0/src/execweave/strace_backend.py",
+        "line": 290,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _parse_exec(self, record: TraceRecord, name: str, args: str, result: str) -> None:"
+      }
+    ]
   }
 ]
