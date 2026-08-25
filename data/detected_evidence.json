@@ -25036,5 +25036,77 @@
         "code_snippet": "model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "scenescript",
+    "checked_at": "2026-08-25T20:24:40.245853",
+    "download_url": "https://files.pythonhosted.org/packages/68/0d/eca29b875fb9747c393a791f7259abd80aa220653cc963e2e27b65603f37/scenescript-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "scenescript-0.1.0/src/scenescript/encoder.py",
+        "line": 63,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen(cmd, stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "scenescript-0.1.0/src/scenescript/videoreader.py",
+        "line": 51,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "browser3",
+    "checked_at": "2026-08-25T20:24:40.507561",
+    "download_url": "https://files.pythonhosted.org/packages/3c/33/8d7a84b27f227e612d9b9d9615abad473a3b607a472031a7fdb09c20b266/browser3-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "browser3-0.1.0/browser3/openpgp.py",
+        "line": 80,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(\"\".join(payload), validate=True)"
+      },
+      {
+        "file": "browser3-0.1.0/browser3/openpgp.py",
+        "line": 85,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "crc = base64.b64decode(checksum, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "aipatrol",
+    "checked_at": "2026-08-25T20:24:40.597488",
+    "download_url": "https://files.pythonhosted.org/packages/c6/1b/03c6f25ce6f2c517fdebd604689ff9f8a7c26e2ee0ece1383d2b17c2a281/aipatrol-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aipatrol-0.2.0/examples/vulnerable-law-agent/agent.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(answer)  # noqa: S307"
+      },
+      {
+        "file": "aipatrol-0.2.0/tests/test_ap002.py",
+        "line": 20,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(answer)"
+      },
+      {
+        "file": "aipatrol-0.2.0/tests/test_ap002.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(allowed[expr])"
+      },
+      {
+        "file": "aipatrol-0.2.0/tests/ai/test_triage.py",
+        "line": 11,
+        "keyword_detected": "eval(",
+        "code_snippet": "SOURCE = 'x = 1\\nanswer = llm(q)\\nresult = eval(answer)\\n'"
+      }
+    ]
   }
 ]
