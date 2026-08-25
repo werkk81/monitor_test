@@ -26892,5 +26892,201 @@
         "code_snippet": "eval_model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "splitgrid",
+    "checked_at": "2026-08-25T22:51:48.759457",
+    "download_url": "https://files.pythonhosted.org/packages/78/ed/878f958dcff4fc595cde773f3bd638204ec14f84f49ceabf5b276fd37c9c/splitgrid-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "splitgrid-0.1.0/src/splitgrid/codec.py",
+        "line": 1191,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "buf.frombytes(base64.b64decode(envelope[\"b64\"].encode(\"ascii\")))"
+      },
+      {
+        "file": "splitgrid-0.1.0/src/splitgrid/codec.py",
+        "line": 1316,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(envelope[\"b64\"].encode(\"ascii\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "amclap",
+    "checked_at": "2026-08-25T22:51:49.290574",
+    "download_url": "https://files.pythonhosted.org/packages/25/c4/c670731469cb36553e31310ca558c2a51204a7a1241219173fbce9a8e50f/amclap-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "amclap-0.1.0/amclap/__init__.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/clap.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.text_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/clap.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.audio_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/clap_jepa.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.text_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/clap_jepa.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.audio_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/lejepa.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.text_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/lejepa.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.audio_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/lpjepa.py",
+        "line": 133,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.text_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/lpjepa.py",
+        "line": 141,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.audio_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/slap.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.text_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/slap.py",
+        "line": 66,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.audio_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/slap.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.audio_encoder_target.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/clap_modules/slap.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.text_encoder_target.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_clap_score.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_dimsim.py",
+        "line": 151,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_fma_small.py",
+        "line": 106,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_fma_small.py",
+        "line": 170,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.text_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_gtzan.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_gtzan.py",
+        "line": 136,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.text_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_jamendo.py",
+        "line": 438,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_mgphot_autotagging.py",
+        "line": 492,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_mgphot_regression.py",
+        "line": 453,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_mtt.py",
+        "line": 421,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_musicaps_clap.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/downstream/downstream_retrieval.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/extract_omarrq_audio_embeddings.py",
+        "line": 110,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/amclap/layerwise_metrics.py",
+        "line": 279,
+        "keyword_detected": "eval(",
+        "code_snippet": "audio_encoder.eval()"
+      },
+      {
+        "file": "amclap-0.1.0/tests/test_models.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "return get_model(model_id=request.param, device=\"cpu\").eval()"
+      }
+    ]
   }
 ]
