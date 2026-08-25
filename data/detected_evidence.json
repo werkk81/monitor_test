@@ -24730,5 +24730,45 @@
         "code_snippet": "if event.startswith('socket.') or event == 'subprocess.Popen':"
       }
     ]
+  },
+  {
+    "package_name": "echoai-helper",
+    "checked_at": "2026-08-25T18:19:12.559397",
+    "download_url": "https://files.pythonhosted.org/packages/fb/85/5197707ac22b182f463e8f3b46826b9e507f8537202edc47534ce47aa2d5/echoai_helper-1.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "echoai_helper-1.2.1/scripts/check_audio.py",
+        "line": 211,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "player = subprocess.Popen("
+      },
+      {
+        "file": "echoai_helper-1.2.1/src/custom_speech_recognition/__init__.py",
+        "line": 278,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(["
+      },
+      {
+        "file": "echoai_helper-1.2.1/src/custom_speech_recognition/audio.py",
+        "line": 245,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "dbt-cortex-agent",
+    "checked_at": "2026-08-25T18:19:13.581831",
+    "download_url": "https://files.pythonhosted.org/packages/91/1c/6a6aa6db6186aecfe9b712c8a8a1f6e6956bd76c3ec051f85a657286723f/dbt_cortex_agent-0.0.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dbt_cortex_agent-0.0.3/tests/test_installed_wheel_verifier.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_validate_pair_proves_same_agent_and_optional_eval(tmp_path):"
+      }
+    ]
   }
 ]
