@@ -27088,5 +27088,63 @@
         "code_snippet": "return get_model(model_id=request.param, device=\"cpu\").eval()"
       }
     ]
+  },
+  {
+    "package_name": "braxton",
+    "checked_at": "2026-08-26T19:27:28.156019",
+    "download_url": "https://files.pythonhosted.org/packages/9d/63/0f7459f6c39116baabe59ec2d14510bdf6de62ed68eb594c152141757c88/braxton-0.1.30.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "braxton-0.1.30/src/braxton/cloud/local.py",
+        "line": 52,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket("
+      },
+      {
+        "file": "braxton-0.1.30/src/braxton/crypto/encoder.py",
+        "line": 11,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data).decode()"
+      },
+      {
+        "file": "braxton-0.1.30/src/braxton/crypto/encoder.py",
+        "line": 21,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "f.write(base64.b64decode(data))"
+      },
+      {
+        "file": "braxton-0.1.30/src/braxton/crypto/get.py",
+        "line": 88,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket("
+      },
+      {
+        "file": "braxton-0.1.30/src/braxton/crypto/send.py",
+        "line": 58,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket("
+      },
+      {
+        "file": "braxton-0.1.30/src/braxton/user/info.py",
+        "line": 19,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "nori-sdk",
+    "checked_at": "2026-08-26T19:27:28.210718",
+    "download_url": "https://files.pythonhosted.org/packages/0b/ff/4ad81826a698782b5e03bdd2027502f94161ee66d45526c05a46925cf082/nori_sdk-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nori_sdk-1.0.0/tests/test_public_api.py",
+        "line": 64,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(\"from nori_sdk import *\", ns)  # noqa: S102 - exercising the real import path"
+      }
+    ]
   }
 ]
