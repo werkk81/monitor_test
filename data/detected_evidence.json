@@ -27146,5 +27146,221 @@
         "code_snippet": "exec(\"from nori_sdk import *\", ns)  # noqa: S102 - exercising the real import path"
       }
     ]
+  },
+  {
+    "package_name": "drillion",
+    "checked_at": "2026-08-26T22:21:54.873428",
+    "download_url": "https://files.pythonhosted.org/packages/3e/41/d2734b9e9fe42ba177b2f986250fa044020163de20f1badc37401962e9e9/drillion-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "drillion-0.1.0/src/drillion/api.py",
+        "line": 541,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"explorer.exe\", url])  # WSL: exit code 1 even when it worked"
+      },
+      {
+        "file": "drillion-0.1.0/tasks/015_typehints/task.py",
+        "line": 43,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<generated>\", \"exec\"), namespace)  # noqa: S102 — builds fixture fns"
+      }
+    ]
+  },
+  {
+    "package_name": "darkformer-pytorch",
+    "checked_at": "2026-08-26T22:21:55.044675",
+    "download_url": "https://files.pythonhosted.org/packages/5a/b5/084c0ddf9f6b8665d1c5c9d14d34ebeaf61d51c82aa6739e5c4764926ae5/darkformer_pytorch-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "darkformer_pytorch-0.1.0/benchmarks/benchmark_attention.py",
+        "line": 205,
+        "keyword_detected": "eval(",
+        "code_snippet": "attention.eval()"
+      },
+      {
+        "file": "darkformer_pytorch-0.1.0/src/darkformer_pytorch/model.py",
+        "line": 596,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "darkformer_pytorch-0.1.0/src/darkformer_pytorch/model.py",
+        "line": 935,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "darkformer_pytorch-0.1.0/tests/test_models.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "darkformer_pytorch-0.1.0/tests/test_models.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "darkformer_pytorch-0.1.0/tests/test_models.py",
+        "line": 264,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "darkformer_pytorch-0.1.0/tests/test_models.py",
+        "line": 284,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "superboard",
+    "checked_at": "2026-08-26T22:21:55.644241",
+    "download_url": "https://files.pythonhosted.org/packages/0c/51/633753e67f02fd816c635ee56e66ac1c5236d77703646cb8a65ec80ec9c2/superboard-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "superboard-0.1.0/scripts/leak_scan.py",
+        "line": 147,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([\"git\", \"cat-file\", \"--batch\"], cwd=ROOT,"
+      },
+      {
+        "file": "superboard-0.1.0/scripts/record-installed-e2e.py",
+        "line": 36,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "superboard-0.1.0/scripts/record-installed-e2e.py",
+        "line": 41,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def wait_for_server(url: str, server: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "superboard-0.1.0/scripts/record-installed-e2e.py",
+        "line": 74,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen("
+      },
+      {
+        "file": "superboard-0.1.0/superboard/gc_runner.py",
+        "line": 1146,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _signal_group(proc: subprocess.Popen, sig: int) -> None:"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/gc_runner.py",
+        "line": 1175,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_proc(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/gc_runner.py",
+        "line": 1191,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def watch_run(proc: subprocess.Popen, tail: StreamTail | None, hard_cap: int,"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/gc_runner.py",
+        "line": 1582,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, cwd=GC_ROOT, stdout=fo, stderr=fe, text=True,"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/gc_runner.py",
+        "line": 2066,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, cwd=GC_ROOT, stdout=fo, stderr=fe, text=True,"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/migrate_diet.py",
+        "line": 37,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/server.py",
+        "line": 3461,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/server.py",
+        "line": 3533,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([\"sh\", str(script), mode], cwd=repo, stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/terminal.py",
+        "line": 191,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/terminal.py",
+        "line": 271,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "superboard-0.1.0/superboard/test_server.py",
+        "line": 2317,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sys.executable, \"-u\", \"-c\", body],"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/test_server.py",
+        "line": 2409,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(120)'])\\n\""
+      },
+      {
+        "file": "superboard-0.1.0/superboard/test_server.py",
+        "line": 2411,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sys.executable, \"-c\", body], start_new_session=True,"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/test_server.py",
+        "line": 2427,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p2 = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(120)\"],"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/test_server.py",
+        "line": 3605,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "old_popen = server.subprocess.Popen"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/test_server.py",
+        "line": 3624,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server.subprocess.Popen = lambda cmd, **kw: (calls.append(list(cmd)) or _FakeProc())"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/test_server.py",
+        "line": 3636,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server.subprocess.Popen = old_popen"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/test_server.py",
+        "line": 4777,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs = [subprocess.Popen([sys.executable, \"-c\", body, str(board), tag, str(n)],"
+      },
+      {
+        "file": "superboard-0.1.0/superboard/test_server.py",
+        "line": 5553,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "belegt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      }
+    ]
   }
 ]
