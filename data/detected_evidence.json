@@ -27362,5 +27362,327 @@
         "code_snippet": "belegt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
       }
     ]
+  },
+  {
+    "package_name": "arenamcp",
+    "checked_at": "2026-08-27T03:23:35.675716",
+    "download_url": "https://files.pythonhosted.org/packages/51/6c/5636883e1bbabf82885aea189a8dd704d86728046b87826f8dfb5677d198/arenamcp-2.8.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "arenamcp-2.8.0/launcher.py",
+        "line": 309,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_child(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "arenamcp-2.8.0/launcher.py",
+        "line": 357,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/windows_integration.py",
+        "line": 490,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": ") -> subprocess.Popen:"
+      },
+      {
+        "file": "arenamcp-2.8.0/windows_integration.py",
+        "line": 516,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(cmd, **kwargs)"
+      },
+      {
+        "file": "arenamcp-2.8.0/windows_integration.py",
+        "line": 519,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def run_setup_wizard() -> subprocess.Popen:"
+      },
+      {
+        "file": "arenamcp-2.8.0/windows_integration.py",
+        "line": 532,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/gre_bridge.py",
+        "line": 177,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/gre_bridge.py",
+        "line": 2302,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/pipe_adapter.py",
+        "line": 303,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([\"clip\"], stdin=subprocess.PIPE, shell=True)"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/proton_launch.py",
+        "line": 206,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/realtime.py",
+        "line": 299,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "audio_bytes = base64.b64decode(audio_b64)"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/self_play.py",
+        "line": 159,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/standalone.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "import subprocess  # noqa: F401  # test contract: monkeypatched via standalone.subprocess.Popen"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/standalone_ui.py",
+        "line": 32,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/standalone_voice.py",
+        "line": 30,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: subprocess.Popen | None = None"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/standalone_voice.py",
+        "line": 91,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn_say(self, text: str) -> subprocess.Popen:"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/standalone_voice.py",
+        "line": 96,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/standalone_voice.py",
+        "line": 109,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn_sapi(self, text: str) -> subprocess.Popen:"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/standalone_voice.py",
+        "line": 118,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/tts.py",
+        "line": 396,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._windows_tts_proc: subprocess.Popen | None = None"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/tts.py",
+        "line": 467,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/app.py",
+        "line": 241,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/audio.py",
+        "line": 88,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "cls._cli_process = subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/coach_tab.py",
+        "line": 1460,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QDialog.Accepted:"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/main_window.py",
+        "line": 542,
+        "keyword_detected": "exec(",
+        "code_snippet": "box.exec()"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/main_window.py",
+        "line": 566,
+        "keyword_detected": "exec(",
+        "code_snippet": "box.exec()"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/main_window.py",
+        "line": 1049,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/main_window.py",
+        "line": 1064,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/main_window.py",
+        "line": 1080,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QDialog.Accepted:"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/runtime.py",
+        "line": 873,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def run_setup_wizard(mode: str | None = None) -> subprocess.Popen[str]:"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/runtime.py",
+        "line": 876,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/runtime.py",
+        "line": 1104,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"/usr/bin/open\", str(app_bundle)])"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/runtime.py",
+        "line": 1108,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"/usr/bin/open\", \"steam://rungameid/2141910\"])"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/runtime.py",
+        "line": 1122,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([steam_bin, \"steam://rungameid/2141910\"])"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/runtime.py",
+        "line": 1124,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([flatpak_bin, \"run\", \"com.valvesoftware.Steam\", \"steam://rungameid/2141910\"])"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/runtime.py",
+        "line": 1126,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([str(executable)])"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/runtime.py",
+        "line": 1146,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"/usr/bin/open\", str(target)])"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/runtime.py",
+        "line": 1150,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([xdg_open, str(target)])"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/tts_manager.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._say_process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/tts_manager.py",
+        "line": 154,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._say_process = subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/src/arenamcp/desktop/tts_manager.py",
+        "line": 167,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._say_process = subprocess.Popen([\"say\", \"-r\", str(wpm)], stdin=subprocess.PIPE)"
+      },
+      {
+        "file": "arenamcp-2.8.0/tests/test_voice_darwin.py",
+        "line": 62,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"\"\"Record every subprocess.Popen call made by standalone._SAPIVoice.\"\"\""
+      },
+      {
+        "file": "arenamcp-2.8.0/tests/test_voice_darwin.py",
+        "line": 214,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"subprocess.Popen\", fake_popen)"
+      },
+      {
+        "file": "arenamcp-2.8.0/tools/training/build_tripwires.py",
+        "line": 177,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_tripwire_eval("
+      },
+      {
+        "file": "arenamcp-2.8.0/tools/training/gate_quiz_local.py",
+        "line": 71,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = model.to(args.device).eval()"
+      },
+      {
+        "file": "arenamcp-2.8.0/tools/training/wp3/run_b5_gate_eval.py",
+        "line": 237,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "arenamcp-2.8.0/tools/training/wp3/run_b5_gate_eval.py",
+        "line": 722,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen("
+      },
+      {
+        "file": "arenamcp-2.8.0/tools/training/wp3/score_tripwires.py",
+        "line": 131,
+        "keyword_detected": "eval(",
+        "code_snippet": "summary = run_tripwire_eval(fixtures, model_fn, verbose=True)"
+      },
+      {
+        "file": "arenamcp-2.8.0/website/app.py",
+        "line": 219,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(auth[6:]).decode()"
+      },
+      {
+        "file": "arenamcp-2.8.0/website/app.py",
+        "line": 1561,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def admin_eval(request: Request, _=Depends(_require_admin)):"
+      }
+    ]
+  },
+  {
+    "package_name": "quickshell-mcp",
+    "checked_at": "2026-08-27T03:23:36.305492",
+    "download_url": "https://files.pythonhosted.org/packages/fe/fd/8999c55bc3975e44cee0c9f001e14077fc560f5dd0452585391b94613322/quickshell_mcp-1.4.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "quickshell_mcp-1.4.1/scripts/smoke_test.py",
+        "line": 24,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      }
+    ]
   }
 ]
