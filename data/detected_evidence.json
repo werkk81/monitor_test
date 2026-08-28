@@ -27684,5 +27684,399 @@
         "code_snippet": "self.proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "qnnx-backend",
+    "checked_at": "2026-08-28T01:47:54.043832",
+    "download_url": "https://files.pythonhosted.org/packages/01/22/d1be4df08aef6399293e351cc554f43c0d491977a9f47b11a55fc1ef1b26/qnnx_backend-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qnnx_backend-0.1.0/src/qnnx_backend/compiler.py",
+        "line": 214,
+        "keyword_detected": "eval(",
+        "code_snippet": "gm.eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_auto_fallback_to_cpu.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = MLP().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_auto_fallback_to_gpu.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = MLP().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_compability.py",
+        "line": 145,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = case.model_factory().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_compability.py",
+        "line": 531,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = case.model_factory().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_compile_mlp_on_gpu.py",
+        "line": 7,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = MLP().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_compile_mlp_on_npu.py",
+        "line": 7,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = MLP().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_freeze_static_inputs.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ParameterModel().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_freeze_static_inputs.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = BufferModel().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_freeze_static_inputs.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ParameterAndBufferModel().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_freeze_static_inputs.py",
+        "line": 140,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = RuntimeInputsModel().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_freeze_static_inputs.py",
+        "line": 157,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ParameterAndBufferModel().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_freeze_static_inputs.py",
+        "line": 188,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_models.py",
+        "line": 20,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = SmallCNN().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_models.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = SmallTransformerBlock().eval()"
+      },
+      {
+        "file": "qnnx_backend-0.1.0/tests/test_relu_on_npu.py",
+        "line": 10,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ReLUModel().eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "convene",
+    "checked_at": "2026-08-28T01:47:54.863281",
+    "download_url": "https://files.pythonhosted.org/packages/27/09/92e9afaf781d6081a0dea3253cf41f699e6fdcb113f2a265501f4dca39c5/convene-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "convene-0.1.0/src/convene/runtime.py",
+        "line": 305,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "convene-0.1.0/src/convene/sessions.py",
+        "line": 288,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_proc: subprocess.Popen | None = field(default=None, repr=False)"
+      },
+      {
+        "file": "convene-0.1.0/src/convene/sessions.py",
+        "line": 306,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "convene-0.1.0/src/convene/sessions.py",
+        "line": 447,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "mt-eval-harness",
+    "checked_at": "2026-08-28T01:47:55.457010",
+    "download_url": "https://files.pythonhosted.org/packages/b5/b9/211251499598bba6583830d2cba3aa799971df29aa7212b81367830400b4/mt_eval_harness-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/methods/local_model.py",
+        "line": 248,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/metrics_metricx.py",
+        "line": 215,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/model_runner.py",
+        "line": 491,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/plugins/fst_installer.py",
+        "line": 339,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "gunzip = subprocess.Popen("
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/plugins/fst_installer.py",
+        "line": 344,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "cpio = subprocess.Popen("
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/queue_runner.py",
+        "line": 1214,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Returns a ``list[str]`` for ``subprocess.Popen`` WITHOUT ``shell=True``."
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/queue_runner.py",
+        "line": 1772,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "running_procs: set[subprocess.Popen] = set()"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/queue_runner.py",
+        "line": 1850,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sandbox_runner.py",
+        "line": 158,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen(env=…) (manual review)\"),"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/ceremony.py",
+        "line": 251,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "share_bytes = base64.b64decode(doc[\"shareB64\"], validate=True)"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 104,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(b64)"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 116,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "der = base64.b64decode(raw, validate=True)"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 267,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(artifact[\"ciphertext\"])"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 275,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ephemeral_pub_der = base64.b64decode(envelope[\"ephemeralPublicKey\"])"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 279,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "aes_key = _hkdf_aes_key(shared, base64.b64decode(envelope[\"salt\"]),"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 283,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(envelope[\"iv\"]),"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 284,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext + base64.b64decode(envelope[\"authTag\"]),"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 334,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(b64)"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 338,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(raw)"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/mt_eval_harness/sovereign/threshold_seal.py",
+        "line": 375,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "pub.verify(base64.b64decode(str(signature_b64)), payload)"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_exporter.py",
+        "line": 109,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_error_message_mentions_mt_eval(self):"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_qualifier_gate.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _py_eval(vector: dict) -> dict:"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_qualifier_gate.py",
+        "line": 188,
+        "keyword_detected": "eval(",
+        "code_snippet": "py_results = [_py_eval(v) for v in VECTORS]"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sandbox_runner.py",
+        "line": 714,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"import subprocess\\nsubprocess.Popen(['x'], env={'A': 'B'})\\n\")"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_ceremony.py",
+        "line": 114,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "share = bytearray(base64.b64decode(doc[\"shareB64\"]))"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_ceremony.py",
+        "line": 134,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "share_bytes = base64.b64decode(doc[\"shareB64\"])"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_ceremony.py",
+        "line": 254,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "share_bytes = base64.b64decode(doc[\"shareB64\"])"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_redteam_consumer.py",
+        "line": 103,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "share_bytes = base64.b64decode(doc[\"shareB64\"])"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_threshold_seal.py",
+        "line": 34,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(key[\"privateKeyDerB64\"]), password=None)"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_threshold_seal.py",
+        "line": 53,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "der = base64.b64decode(key[\"publicKeyDerB64\"])"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_threshold_seal.py",
+        "line": 62,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(pub[\"publicKeyDerB64\"]))"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_threshold_seal.py",
+        "line": 134,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(pair[\"privateKeyDerB64\"]))"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_threshold_seal.py",
+        "line": 171,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ct = bytearray(base64.b64decode(sealed[\"ciphertext\"]))"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_threshold_seal.py",
+        "line": 237,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "priv = base64.b64decode(pair[\"privateKeyDerB64\"])"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_threshold_seal.py",
+        "line": 238,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "pub = base64.b64decode(pair[\"publicKeyDerB64\"])"
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_threshold_seal.py",
+        "line": 250,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert ts.load_key_material(f, want=\"public\") == base64.b64decode("
+      },
+      {
+        "file": "mt_eval_harness-0.1.0/tests/test_sovereign_threshold_seal.py",
+        "line": 252,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert ts.load_key_material(f, want=\"private\") == base64.b64decode("
+      }
+    ]
+  },
+  {
+    "package_name": "durabl",
+    "checked_at": "2026-08-28T01:47:55.881592",
+    "download_url": "https://files.pythonhosted.org/packages/4c/96/f2c2e4cc994a0bf3624ec9217cb06b1b07ab96aadee7c4d7d408217e3676/durabl-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "durabl-0.1.0/tests/test_real_process_kill.py",
+        "line": 53,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "conifer-sdk",
+    "checked_at": "2026-08-28T01:47:56.077493",
+    "download_url": "https://files.pythonhosted.org/packages/82/1b/2eba38bbd916607989fb9a462206d3f398111fff4a8f24657942ddfcfaa9/conifer_sdk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "conifer_sdk-0.1.0/conifer_sdk/client.py",
+        "line": 941,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(value, validate=True)"
+      }
+    ]
   }
 ]
