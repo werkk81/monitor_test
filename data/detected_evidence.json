@@ -28228,5 +28228,221 @@
         "code_snippet": "out[\"data_hex\"] = base64.b64decode(raw_b64, validate=True).hex()"
       }
     ]
+  },
+  {
+    "package_name": "ft-neko",
+    "checked_at": "2026-08-29T22:36:26.696253",
+    "download_url": "https://files.pythonhosted.org/packages/37/7f/8bd0098f34d5e0725bf1cde80413f9d8059d50505ef093368fc7438bd7db/ft_neko-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ft_neko-1.0.0/neko/ft.py",
+        "line": 15,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.socket = socket.socket(type=socket.SOCK_DGRAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "conduit-repo-client",
+    "checked_at": "2026-08-29T22:36:26.779161",
+    "download_url": "https://files.pythonhosted.org/packages/2d/57/27aed533770b1b05d7915f11b2f1d280867868062bcea8dcf8b7b3f2d143/conduit_repo_client-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "conduit_repo_client-0.1.0/src/conduit_repo_client/__init__.py",
+        "line": 249,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(data.get(\"content\") or \"\")"
+      },
+      {
+        "file": "conduit_repo_client-0.1.0/tests/test_repo_client.py",
+        "line": 139,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(captured[\"payload\"][\"content\"]) == b\"# Title\\n\""
+      }
+    ]
+  },
+  {
+    "package_name": "continuity-guard",
+    "checked_at": "2026-08-29T22:36:26.904936",
+    "download_url": "https://files.pythonhosted.org/packages/a8/a4/3a58f3c581980ebee28bfa2e5a60798ad0a033d47109b9c4010de7f5dfc9/continuity_guard-0.5.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "continuity_guard-0.5.1/continuity_guard/actions.py",
+        "line": 180,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _notify_exec(cfg, event, log):"
+      },
+      {
+        "file": "continuity_guard-0.5.1/continuity_guard/actions.py",
+        "line": 187,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/continuity_guard/daemon.py",
+        "line": 102,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sessions: dict[socket.socket, Sess] = {}"
+      },
+      {
+        "file": "continuity_guard-0.5.1/continuity_guard/daemon.py",
+        "line": 103,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.buffers: dict[socket.socket, bytes] = {}"
+      },
+      {
+        "file": "continuity_guard-0.5.1/continuity_guard/supervise.py",
+        "line": 147,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/continuity_guard/transport.py",
+        "line": 60,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "continuity_guard-0.5.1/continuity_guard/transport.py",
+        "line": 69,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "srv = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "continuity_guard-0.5.1/continuity_guard/transport.py",
+        "line": 127,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(fam, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/campaign/burn_claude.py",
+        "line": 89,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/campaign/run_phase.py",
+        "line": 79,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sys.executable, \"-m\", \"continuity_guard.daemon\","
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/campaign/run_phase.py",
+        "line": 141,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/fuzz_protocol.py",
+        "line": 83,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/fuzz_protocol.py",
+        "line": 110,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def connect(self, timeout=2.0) -> socket.socket:"
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/soak_stability.py",
+        "line": 103,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/test_authority.py",
+        "line": 64,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sys.executable, \"-u\", \"-m\", \"continuity_guard.daemon\","
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/test_authority.py",
+        "line": 152,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sys.executable, \"-u\", \"-m\", \"continuity_guard.daemon\","
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/test_authority.py",
+        "line": 154,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "victim = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"])"
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/test_authority.py",
+        "line": 158,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/test_authority.py",
+        "line": 187,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "victim = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(120)\"])"
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/test_authority.py",
+        "line": 190,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "c = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/test_authority.py",
+        "line": 267,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "c = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/test_ceiling_signal.py",
+        "line": 109,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sys.executable, \"-u\", \"-m\", \"continuity_guard.daemon\","
+      },
+      {
+        "file": "continuity_guard-0.5.1/tests/test_wrapup_race.py",
+        "line": 59,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.srv = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "continuity_guard-0.5.1/tools/langgraph_agent_loop.py",
+        "line": 206,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proxy = subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/tools/phase1.py",
+        "line": 75,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/tools/phase1.py",
+        "line": 434,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/tools/real_agent_loop.py",
+        "line": 394,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proxy = subprocess.Popen("
+      },
+      {
+        "file": "continuity_guard-0.5.1/tools/soak.py",
+        "line": 325,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "live: list[tuple[subprocess.Popen, str]] = []"
+      },
+      {
+        "file": "continuity_guard-0.5.1/tools/soak.py",
+        "line": 353,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
