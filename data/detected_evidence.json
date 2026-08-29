@@ -28078,5 +28078,69 @@
         "code_snippet": "raw = base64.b64decode(value, validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "dropcatch",
+    "checked_at": "2026-08-29T01:11:18.621960",
+    "download_url": "https://files.pythonhosted.org/packages/f0/62/1146e17d5358bdab5c6d71f02deab8946b2fce413405468f88160c2747c1/dropcatch-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dropcatch-0.1.0/dropcatch/nask.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "strathmark",
+    "checked_at": "2026-08-29T01:11:18.780903",
+    "download_url": "https://files.pythonhosted.org/packages/e5/6f/00680b052f0867b3b07eff9ca24ae30e37a7e2512c86682fd56bdaf03d54/strathmark-2.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "strathmark-2.0.1/strathmark/auth.py",
+        "line": 438,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value + padding, altchars=b\"-_\", validate=True)"
+      },
+      {
+        "file": "strathmark-2.0.1/tests/postgres_rehearsal.py",
+        "line": 205,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _start_psql(target: RehearsalTarget, dsn: str, sql: str) -> subprocess.Popen[str]:"
+      },
+      {
+        "file": "strathmark-2.0.1/tests/postgres_rehearsal.py",
+        "line": 220,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "strathmark-2.0.1/tests/postgres_rehearsal.py",
+        "line": 233,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[str],"
+      },
+      {
+        "file": "strathmark-2.0.1/tests/postgres_rehearsal.py",
+        "line": 254,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[str],"
+      },
+      {
+        "file": "strathmark-2.0.1/tests/postgres_rehearsal.py",
+        "line": 283,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[str],"
+      },
+      {
+        "file": "strathmark-2.0.1/tests/test_postgres_rehearsal.py",
+        "line": 165,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "assert \"subprocess.Popen\" in source"
+      }
+    ]
   }
 ]
