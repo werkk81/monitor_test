@@ -28142,5 +28142,91 @@
         "code_snippet": "assert \"subprocess.Popen\" in source"
       }
     ]
+  },
+  {
+    "package_name": "asta-cloud",
+    "checked_at": "2026-08-29T20:01:49.944226",
+    "download_url": "https://files.pythonhosted.org/packages/59/3c/5d45d3eb70f0b79e48eb512c8dbd9c1995323f9c9a9bdbb4529bf2702455/asta_cloud-0.9.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "asta_cloud-0.9.0/src/asta_cloud/rules/dangerous_shell.py",
+        "line": 24,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen\","
+      },
+      {
+        "file": "asta_cloud-0.9.0/src/asta_cloud/rules/user_controlled_commands.py",
+        "line": 17,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen\","
+      }
+    ]
+  },
+  {
+    "package_name": "repolens-worker",
+    "checked_at": "2026-08-29T20:01:49.971317",
+    "download_url": "https://files.pythonhosted.org/packages/ed/4e/24632d801911c88dc0389a70778e7b12af511984a14efb352cebaea9673f/repolens_worker-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "repolens_worker-0.1.0/repolens_worker/adapters.py",
+        "line": 40,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "repolens_worker-0.1.0/repolens_worker/adapters.py",
+        "line": 263,
+        "keyword_detected": "eval(",
+        "code_snippet": "return bool(self.client.eval(script, 1, key, json.dumps({\"state\": \"queued\"}), 86400))"
+      },
+      {
+        "file": "repolens_worker-0.1.0/tests/test_adapters.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, script, keys, key, queued, expiry):"
+      }
+    ]
+  },
+  {
+    "package_name": "apiwarden",
+    "checked_at": "2026-08-29T20:01:50.074283",
+    "download_url": "https://files.pythonhosted.org/packages/8c/01/e5a9eb026737f3b7cd54dacd2d28bdcfe69721f94b26b6a3f58ec7ee6ae2/apiwarden-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "apiwarden-0.1.0/tests/test_browser.py",
+        "line": 34,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "apiwarden-0.1.0/tests/test_cli.py",
+        "line": 295,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "holder = socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "chirpstack-mcp-server",
+    "checked_at": "2026-08-29T20:01:50.225241",
+    "download_url": "https://files.pythonhosted.org/packages/35/49/633ec431f9d729d198a54122e14afc66c7f87fd8363ea4759755284cb4b1/chirpstack_mcp_server-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "chirpstack_mcp_server-0.1.0/src/chirpstack_mcp_server/errors.py",
+        "line": 100,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data_base64 or \"\", validate=True)"
+      },
+      {
+        "file": "chirpstack_mcp_server-0.1.0/src/chirpstack_mcp_server/events.py",
+        "line": 123,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "out[\"data_hex\"] = base64.b64decode(raw_b64, validate=True).hex()"
+      }
+    ]
   }
 ]
