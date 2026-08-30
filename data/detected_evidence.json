@@ -28472,5 +28472,57 @@
         "code_snippet": "sock = socket.socket(family, socket.SOCK_DGRAM)"
       }
     ]
+  },
+  {
+    "package_name": "oxhunter",
+    "checked_at": "2026-08-30T20:07:31.429250",
+    "download_url": "https://files.pythonhosted.org/packages/af/ad/61a36c9550cdcc5b3e2b4155db3b9d0efe7755ef5ac57eaeb04e10fe94a2/oxhunter-2.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "oxhunter-2.0.1/core/context_analyzer.py",
+        "line": 59,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"ssti\" : [\"${7*7}\", \"#{7*7}\", \"${Runtime.getRuntime().exec('id')}\"],"
+      },
+      {
+        "file": "oxhunter-2.0.1/integrations/burp_export.py",
+        "line": 167,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "request = base64.b64decode(req_el.text).decode(\"utf-8\",\"ignore\")"
+      },
+      {
+        "file": "oxhunter-2.0.1/modules/lfi.py",
+        "line": 156,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(match).decode('utf-8', errors='ignore')"
+      },
+      {
+        "file": "oxhunter-2.0.1/modules/session_fixation.py",
+        "line": 248,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(session_id + '==').decode('utf-8', errors='ignore')"
+      },
+      {
+        "file": "oxhunter-2.0.1/nuclei_integration.py",
+        "line": 60,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec(*cmd, stdout=asyncio.subprocess.PIPE,"
+      }
+    ]
+  },
+  {
+    "package_name": "autofeeder",
+    "checked_at": "2026-08-30T20:07:31.730693",
+    "download_url": "https://files.pythonhosted.org/packages/89/a7/dee9ee6881da9e69fdaef2212c588898e3f193d34419cf142615799fd20d/autofeeder-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "autofeeder-0.1.1/rss_reader/web.py",
+        "line": 2253,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
