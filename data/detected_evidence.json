@@ -28444,5 +28444,33 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "tool-guardian",
+    "checked_at": "2026-08-30T00:38:18.333375",
+    "download_url": "https://files.pythonhosted.org/packages/a8/44/b9a7996f09de725a0a471e772a8994e9b4e54bfa18be19e1e1ba3580b86b/tool_guardian-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tool_guardian-0.1.0/tool_guardian.py",
+        "line": 188,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "decoded-shredstream",
+    "checked_at": "2026-08-30T00:38:18.466558",
+    "download_url": "https://files.pythonhosted.org/packages/0e/14/bf2e5acdfb3c875d411580199e607b073c2d01e17d516d864bf1fe341b22/decoded_shredstream-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "decoded_shredstream-0.1.0/src/decoded_shredstream/_udp.py",
+        "line": 39,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(family, socket.SOCK_DGRAM)"
+      }
+    ]
   }
 ]
