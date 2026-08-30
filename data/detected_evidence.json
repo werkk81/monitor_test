@@ -28524,5 +28524,31 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "portnoie",
+    "checked_at": "2026-08-30T22:41:34.002577",
+    "download_url": "https://files.pythonhosted.org/packages/cb/05/b6990b9802f7d9b32f9d0f003742f22c002c0ec2cdddc7b6e50d3e9acc31/portnoie-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "portnoie-0.2.1/multioie/model/AllenNLP.py",
+        "line": 1103,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "portnoie-0.2.1/multioie/model/AllenNLP.py",
+        "line": 1221,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval(),"
+      },
+      {
+        "file": "portnoie-0.2.1/src/portnoie/modern_core.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      }
+    ]
   }
 ]
