@@ -28658,5 +28658,33 @@
         "code_snippet": "strings=eval(string)"
       }
     ]
+  },
+  {
+    "package_name": "inflowenger-plugin-sdk",
+    "checked_at": "2026-08-31T22:04:18.964257",
+    "download_url": "https://files.pythonhosted.org/packages/e1/59/f63399e2c134cc7a75259ba49643396d1c2ee49ea7df928a5bc2916b0572/inflowenger_plugin_sdk-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "inflowenger_plugin_sdk-0.1.2/inflow_plugin_sdk/nats_box.py",
+        "line": 30,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.cred = base64.b64decode(self.cred).decode(\"utf-8\")"
+      }
+    ]
+  },
+  {
+    "package_name": "mcpbait",
+    "checked_at": "2026-08-31T22:04:19.206755",
+    "download_url": "https://files.pythonhosted.org/packages/99/b3/07a865f6199b4c3dcbe05cc3837a4279cd50fe24f40192667483ef3466cd/mcpbait-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mcpbait-0.1.0/src/mcpbait/beacon.py",
+        "line": 20,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "PIXEL = base64.b64decode("
+      }
+    ]
   }
 ]
