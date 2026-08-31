@@ -28550,5 +28550,113 @@
         "code_snippet": "self.eval()"
       }
     ]
+  },
+  {
+    "package_name": "mudauth",
+    "checked_at": "2026-08-31T00:50:44.300358",
+    "download_url": "https://files.pythonhosted.org/packages/83/60/3c31481a52a72972bc3db3b0a6ec6dd3d2a6eca77089bb8f62534a14a4cb/mudauth-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mudauth-0.1.0/tests/test_handlers.py",
+        "line": 1425,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "v2portal",
+    "checked_at": "2026-08-31T00:50:44.587489",
+    "download_url": "https://files.pythonhosted.org/packages/0c/af/b0db59dfd3f012f95ee1c72b5b4a3a1e987a7581047eee190802c122b8fa/v2portal-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "v2portal-0.1.0/src/v2raycli/connection.py",
+        "line": 54,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "probe = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "v2portal-0.1.0/src/v2raycli/runner.py",
+        "line": 30,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "v2portal-0.1.0/src/v2raycli/runner.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      },
+      {
+        "file": "v2portal-0.1.0/src/v2raycli/servers.py",
+        "line": 448,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(**kwargs)"
+      },
+      {
+        "file": "v2portal-0.1.0/src/v2raycli/subs/parser.py",
+        "line": 21,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(t)"
+      },
+      {
+        "file": "v2portal-0.1.0/src/v2raycli/subs/share.py",
+        "line": 33,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(s)"
+      },
+      {
+        "file": "v2portal-0.1.0/src/v2raycli/test/latency.py",
+        "line": 451,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _socks_connect(local_port: int, host: str, port: int, timeout: float) -> socket.socket:"
+      },
+      {
+        "file": "v2portal-0.1.0/src/v2raycli/test/latency.py",
+        "line": 628,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      },
+      {
+        "file": "v2portal-0.1.0/tests/test_tui_pty.py",
+        "line": 70,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "idscript",
+    "checked_at": "2026-08-31T00:50:44.809228",
+    "download_url": "https://files.pythonhosted.org/packages/65/bf/e7bbb25c4cf7ae60efba96c51bf78a0399050e435991dface02833646048/idscript-0.0.1a0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "idscript-0.0.1a0/src/IDScript/Builtins/_Python.py",
+        "line": 71,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(code, namespace)"
+      },
+      {
+        "file": "idscript-0.0.1a0/src/IDScript/Builtins/_Python.py",
+        "line": 76,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, namespace)"
+      },
+      {
+        "file": "idscript-0.0.1a0/src/IDScript/interpreter/compiler/simple_stmt.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "writer = eval(repr(obj))"
+      },
+      {
+        "file": "idscript-0.0.1a0/src/IDScript/interpreter/parser/expression.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "strings=eval(string)"
+      }
+    ]
   }
 ]
