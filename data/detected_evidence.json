@@ -28686,5 +28686,293 @@
         "code_snippet": "PIXEL = base64.b64decode("
       }
     ]
+  },
+  {
+    "package_name": "pinnstudio",
+    "checked_at": "2026-09-01T01:12:58.423871",
+    "download_url": "https://files.pythonhosted.org/packages/64/d8/2971aa26b0e676c836792d1e1b917c78603c1535ccd7c179b75128b3c310/pinnstudio-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/core/codegen.py",
+        "line": 342,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(\"{pde_expr_single}\", _eval_ns)"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/core/codegen.py",
+        "line": 345,
+        "keyword_detected": "eval(",
+        "code_snippet": "return [eval(_expr.strip(), _eval_ns) for _expr in _pde_exprs]"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/core/codegen.py",
+        "line": 487,
+        "keyword_detected": "eval(",
+        "code_snippet": "return np.reshape(eval(expr, {{\"np\": np, \"x\": x, \"__builtins__\": __builtins__}}), (-1, 1))"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/core/codegen.py",
+        "line": 659,
+        "keyword_detected": "eval(",
+        "code_snippet": "return np.reshape(eval(expr, {{\"np\": np, \"x\": x, \"__builtins__\": __builtins__}}), (-1, 1))"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/core/codegen.py",
+        "line": 1554,
+        "keyword_detected": "eval(",
+        "code_snippet": "return np.reshape(eval(expr, {{\"np\": np, \"x\": x, \"__builtins__\": __builtins__}}), (-1, 1))"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/core/codegen.py",
+        "line": 1631,
+        "keyword_detected": "eval(",
+        "code_snippet": "return np.reshape(eval(expr, {{\"np\": np, \"x\": x, \"__builtins__\": __builtins__}}), (-1, 1))"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/core/runner.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/main.py",
+        "line": 32,
+        "keyword_detected": "exec(",
+        "code_snippet": "sys.exit(app.exec())"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 1220,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 1318,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 2231,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 2283,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 2404,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, self._tmp],"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 2503,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 2661,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 2856,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, self._tmp],"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 3051,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 3502,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 3684,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 3919,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, self._tmp],"
+      },
+      {
+        "file": "pinnstudio-1.1.0/pinnstudio/ui/main_window.py",
+        "line": 4201,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "oracle-metalenguaje",
+    "checked_at": "2026-09-01T01:12:58.668817",
+    "download_url": "https://files.pythonhosted.org/packages/cd/9d/cfa51fed0c26b57dd58b564866ab48224b737ba1252143f417630c189d8f/oracle_metalenguaje-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "oracle_metalenguaje-0.2.0/nucleo/aislamiento/escalares.py",
+        "line": 89,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _cerrar_proceso(proc: subprocess.Popen | None) -> None:"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/nucleo/aislamiento/escalares.py",
+        "line": 131,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: subprocess.Popen | None = None"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/nucleo/aislamiento/escalares.py",
+        "line": 144,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/nucleo/aislamiento/escalares.py",
+        "line": 360,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen\", \"os.system\", \"os.fork\", \"os.forkpty\","
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/perfiles/python/mutacion_codigo.py",
+        "line": 155,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_PROCESOS_ACTIVOS: set[subprocess.Popen] = set()"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/perfiles/python/mutacion_codigo.py",
+        "line": 376,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminar_proceso(proceso: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/perfiles/python/mutacion_codigo.py",
+        "line": 443,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proceso = subprocess.Popen("
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_aislamiento_escalares.py",
+        "line": 136,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def terminar_subproceso(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_aislamiento_escalares.py",
+        "line": 530,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _lanzar_trabajador(self, raiz: Path, archivo: Path) -> subprocess.Popen:"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_aislamiento_escalares.py",
+        "line": 533,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_aislamiento_escalares.py",
+        "line": 548,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _leer_json(self, proc: subprocess.Popen, *, timeout: float = 5) -> dict:"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_aislamiento_escalares.py",
+        "line": 564,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _enviar(self, proc: subprocess.Popen, pedido) -> dict:"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_aislamiento_escalares.py",
+        "line": 741,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess_bloqueado\": probar(\"subprocess.Popen\", \"cmd\"),"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_aislamiento_escalares.py",
+        "line": 868,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_mutacion_codigo.py",
+        "line": 435,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, str(guion)])"
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_mutacion_codigo.py",
+        "line": 1032,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"import subprocess,sys,time; subprocess.Popen([sys.executable,'-c',{hijo!r}]); \""
+      },
+      {
+        "file": "oracle_metalenguaje-0.2.0/tests/test_proyecto.py",
+        "line": 359,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"    p = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(60)'])\\n\""
+      }
+    ]
+  },
+  {
+    "package_name": "ideapress",
+    "checked_at": "2026-09-01T01:12:58.838531",
+    "download_url": "https://files.pythonhosted.org/packages/9d/f8/e9dea5d0928831e6711fc01e50c001d29eb0de130a51ecde0e33dc4db0ce/ideapress-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ideapress-0.1.0/tests/conftest.py",
+        "line": 23,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "_REAL_SOCKET_CONNECT = socket.socket.connect"
+      },
+      {
+        "file": "ideapress-0.1.0/tests/conftest.py",
+        "line": 35,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _guard(self: socket.socket, address: Any) -> None:"
+      },
+      {
+        "file": "ideapress-0.1.0/tests/conftest.py",
+        "line": 43,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", _guard)"
+      },
+      {
+        "file": "ideapress-0.1.0/tests/integration/test_atomic_commit.py",
+        "line": 263,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(  # noqa: S603 — fixed argv, no shell"
+      },
+      {
+        "file": "ideapress-0.1.0/tests/integration/test_export.py",
+        "line": 243,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect = refuse"
+      },
+      {
+        "file": "ideapress-0.1.0/tests/unit/test_import_boundaries.py",
+        "line": 138,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "if name not in {\"subprocess.run\", \"subprocess.Popen\", \"subprocess.check_output\"}:"
+      }
+    ]
   }
 ]
