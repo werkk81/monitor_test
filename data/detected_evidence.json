@@ -28974,5 +28974,61 @@
         "code_snippet": "if name not in {\"subprocess.run\", \"subprocess.Popen\", \"subprocess.check_output\"}:"
       }
     ]
+  },
+  {
+    "package_name": "jupyter-kernel-cli",
+    "checked_at": "2026-09-01T20:11:13.754636",
+    "download_url": "https://files.pythonhosted.org/packages/26/a3/f8f2577d2e51b47acc2203104d160534b66a60d8dffc410fe1cb106eb574/jupyter_kernel_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jupyter_kernel_cli-0.1.0/src/jupyter_kernel_client/client.py",
+        "line": 82,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(text)"
+      }
+    ]
+  },
+  {
+    "package_name": "montycat-mcp",
+    "checked_at": "2026-09-01T20:11:13.844210",
+    "download_url": "https://files.pythonhosted.org/packages/6e/f6/df82ab6f9f806df69ad2a0e66566af6915b076dfae8783f09afb26d368c3/montycat_mcp-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "montycat_mcp-0.5.0/memocat_mcp/bootstrap.py",
+        "line": 798,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(  # noqa: S603 - our own verified binary"
+      }
+    ]
+  },
+  {
+    "package_name": "pyhealth-scanner",
+    "checked_at": "2026-09-01T20:11:14.019070",
+    "download_url": "https://files.pythonhosted.org/packages/9a/80/a2e7cd398893a813e2b1d5b901d1b1a2ca4a786ce2bdecdca29e5e5e74c4/pyhealth_scanner-2.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyhealth_scanner-2.0.0/pyhealth/analyzers/security.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"Avoid eval() with untrusted input; use ast.literal_eval or a safer\""
+      }
+    ]
+  },
+  {
+    "package_name": "servseal",
+    "checked_at": "2026-09-01T20:11:14.264689",
+    "download_url": "https://files.pythonhosted.org/packages/88/99/67f0b9763e9ca8e56ccfc6dacbd492aac75903a4c68733da32b1f2ade89b/servseal-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "servseal-0.1.0/servseal/runner.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = model.to(device).eval()"
+      }
+    ]
   }
 ]
