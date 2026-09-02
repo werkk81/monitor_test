@@ -29050,5 +29050,31 @@
         "code_snippet": "with socket.socket() as sock:"
       }
     ]
+  },
+  {
+    "package_name": "celery-liveops",
+    "checked_at": "2026-09-02T00:28:59.976787",
+    "download_url": "https://files.pythonhosted.org/packages/1e/c6/d1a072a1f86e837982e974982b9c5fd7680893db8efddf5529b69cde0f11/celery_liveops-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "celery_liveops-0.1.0/tests/test_snapshots_and_api.py",
+        "line": 44,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(stored) == PNG"
+      },
+      {
+        "file": "celery_liveops-0.1.0/tests/test_snapshots_and_api.py",
+        "line": 113,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(liveops.read_snapshot(\"run-6\")) == PNG"
+      },
+      {
+        "file": "celery_liveops-0.1.0/tests/test_snapshots_and_api.py",
+        "line": 119,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(liveops.read_snapshot(\"run-7\")) == PNG"
+      }
+    ]
   }
 ]
