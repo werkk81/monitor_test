@@ -29076,5 +29076,103 @@
         "code_snippet": "assert base64.b64decode(liveops.read_snapshot(\"run-7\")) == PNG"
       }
     ]
+  },
+  {
+    "package_name": "atherdlp-server",
+    "checked_at": "2026-09-02T20:09:38.021829",
+    "download_url": "https://files.pythonhosted.org/packages/66/7c/d44b1f667d5db3df1fc52a97b615da7be182be063438f81d3cf3928480b1/atherdlp_server-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "atherdlp_server-0.1.1/src/atherdlp_server/cli.py",
+        "line": 30,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      }
+    ]
+  },
+  {
+    "package_name": "memq-dqc",
+    "checked_at": "2026-09-02T20:09:38.308635",
+    "download_url": "https://files.pythonhosted.org/packages/99/54/450f3b8caf8f6b662f89a3f7072ff15b704c5da70a650da7ebc1156ba5a5/memq_dqc-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "memq_dqc-0.1.2/src/memq_dqc/network_builder/cli.py",
+        "line": 94,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      }
+    ]
+  },
+  {
+    "package_name": "t1-bootstrap",
+    "checked_at": "2026-09-02T20:09:38.354437",
+    "download_url": "https://files.pythonhosted.org/packages/d7/ee/6033d40511fc5af4409cf543d4e2e24b9cb01fe7fc480ad66435b786987f/t1_bootstrap-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "t1_bootstrap-0.1.0/tests/test_cli.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_shell_init_prints_a_function_to_eval(capsys):"
+      }
+    ]
+  },
+  {
+    "package_name": "graphroute",
+    "checked_at": "2026-09-02T20:09:38.401706",
+    "download_url": "https://files.pythonhosted.org/packages/34/13/46fa36426db7b00ff092f86088a02c189d8c222ec8e9b25e708ee1264388/graphroute-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "graphroute-0.1.0/graphroute/pool.py",
+        "line": 134,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "graphroute-0.1.0/graphroute/pool.py",
+        "line": 472,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "graphroute-0.1.0/graphroute/pool.py",
+        "line": 510,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "graphroute-0.1.0/graphroute/pool_cache.py",
+        "line": 147,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "graphroute-0.1.0/graphroute/run.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.gnn.eval()"
+      },
+      {
+        "file": "graphroute-0.1.0/graphroute/training.py",
+        "line": 351,
+        "keyword_detected": "eval(",
+        "code_snippet": "gnn.eval()"
+      },
+      {
+        "file": "graphroute-0.1.0/graphroute/training.py",
+        "line": 464,
+        "keyword_detected": "eval(",
+        "code_snippet": "gnn.eval()"
+      },
+      {
+        "file": "graphroute-0.1.0/tests/test_gnn_inductive.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      }
+    ]
   }
 ]
