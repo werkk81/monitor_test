@@ -29360,5 +29360,445 @@
         "code_snippet": "feval(x: float, y: float) -> complex"
       }
     ]
+  },
+  {
+    "package_name": "homelab-helper",
+    "checked_at": "2026-09-03T22:34:59.545279",
+    "download_url": "https://files.pythonhosted.org/packages/74/be/93df853fe27f9cdba3b48ae38effa1c43c491719729d5055942cae759840/homelab_helper-0.1.0b1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "homelab_helper-0.1.0b1/src/homelab_helper/adapters/kubernetes.py",
+        "line": 153,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "homelab_helper-0.1.0b1/src/homelab_helper/adapters/talos.py",
+        "line": 124,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "homelab_helper-0.1.0b1/tests/test_cli_discover_network.py",
+        "line": 41,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _start_blocking_tcp_server() -> tuple[socket.socket, int, threading.Thread]:"
+      },
+      {
+        "file": "homelab_helper-0.1.0b1/tests/test_cli_discover_network.py",
+        "line": 51,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "strands-nicla",
+    "checked_at": "2026-09-03T22:34:59.620009",
+    "download_url": "https://files.pythonhosted.org/packages/8d/0e/8b7d810268a7773f3d4f33eebdfba6d22ddcf1a8aba55c6076e0e956bc9a/strands_nicla-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 331,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _h_exec(port: Optional[str], code: str, timeout: float = 10.0) -> Dict[str, Any]:"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 349,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _h_eval(port: Optional[str], expr: str) -> Dict[str, Any]:"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 350,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, f\"print(repr({expr}))\")"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 403,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, code)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 414,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = _h_exec(port, code, timeout=30.0)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 417,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(r[\"stdout\"].strip())"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 450,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, code, timeout=60.0)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 459,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(b64)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 467,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, f\"import os; os.remove({path!r}); print('removed', {path!r})\")"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 471,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, f\"import os; os.mkdir({path!r}); print('mkdir', {path!r})\")"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 477,
+        "keyword_detected": "exec(",
+        "code_snippet": "f\"    exec(f.read())\\n\""
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 479,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, code, timeout=60.0)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 516,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = _h_exec(port, code, timeout=20.0)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 528,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "jpeg = base64.b64decode(b64)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 582,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, code, timeout=10.0)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 599,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, code, timeout=10.0)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 625,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, code, timeout=10.0)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 654,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, code, timeout=5.0)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 689,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = _h_exec(port, code, timeout=15.0)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 768,
+        "keyword_detected": "eval(",
+        "code_snippet": "repl:     exec(code), eval(expr)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 768,
+        "keyword_detected": "exec(",
+        "code_snippet": "repl:     exec(code), eval(expr)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 801,
+        "keyword_detected": "exec(",
+        "code_snippet": "return _h_exec(port, code, timeout=timeout)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/strands_nicla/nicla_tool.py",
+        "line": 804,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _h_eval(port, expr)"
+      },
+      {
+        "file": "strands_nicla-0.1.0/tests/test_boot_sequence.py",
+        "line": 141,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(MAIN_SRC, \"main.py\", \"exec\"), {\"__name__\": \"__main__\"})"
+      },
+      {
+        "file": "strands_nicla-0.1.0/tests/test_firmware_logic.py",
+        "line": 708,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sk = requests.socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "brainbuddy",
+    "checked_at": "2026-09-03T22:34:59.646876",
+    "download_url": "https://files.pythonhosted.org/packages/fd/5d/b438f95479621efdf6d1f5a057484291f7294e1c14a152ebff868bb83e64/brainbuddy-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "brainbuddy-1.0.0/brainbuddy/render.py",
+        "line": 69,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "brainbuddy-1.0.0/tests/test_brainbuddy.py",
+        "line": 456,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"socket.socket = guard\\n\""
+      },
+      {
+        "file": "brainbuddy-1.0.0/tests/test_brainbuddy.py",
+        "line": 463,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"    socket.socket()\\n\""
+      }
+    ]
+  },
+  {
+    "package_name": "maschinist",
+    "checked_at": "2026-09-03T22:34:59.696041",
+    "download_url": "https://files.pythonhosted.org/packages/d0/53/52d89054fb2e6aecbcde99db65cdcbf567ce1fa61a219547e4cd828cb0a8/maschinist-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "maschinist-0.0.1/examples/install-docker/main.py",
+        "line": 22,
+        "keyword_detected": "exec(",
+        "code_snippet": "test_host.exec(\"uname -a\", hide=False)"
+      },
+      {
+        "file": "maschinist-0.0.1/examples/install-docker/main.py",
+        "line": 33,
+        "keyword_detected": "exec(",
+        "code_snippet": "test_host.exec(\"cd /etc/systemd/\")"
+      },
+      {
+        "file": "maschinist-0.0.1/examples/install-docker/main.py",
+        "line": 34,
+        "keyword_detected": "exec(",
+        "code_snippet": "test_host.exec(\"cd /etc/systemd/\")"
+      },
+      {
+        "file": "maschinist-0.0.1/examples/install-docker/main.py",
+        "line": 35,
+        "keyword_detected": "exec(",
+        "code_snippet": "test_host.exec(\"pwd\", hide=False)"
+      },
+      {
+        "file": "maschinist-0.0.1/examples/setup-base-install/main.py",
+        "line": 44,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(\"sshd -t\", sudo=True)"
+      },
+      {
+        "file": "maschinist-0.0.1/examples/setup-base-install/main.py",
+        "line": 50,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"timedatectl set-timezone {timezone}\", sudo=True)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/cron.py",
+        "line": 9,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/docker.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/docker.py",
+        "line": 94,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/docker.py",
+        "line": 102,
+        "keyword_detected": "exec(",
+        "code_snippet": "res = host.exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/docker.py",
+        "line": 109,
+        "keyword_detected": "exec(",
+        "code_snippet": "return host.exec(\"docker --version\", warn=True).return_code == 0"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/docker.py",
+        "line": 113,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(\"docker image prune -f\")"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/docker.py",
+        "line": 117,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(\"docker system prune -f\")"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/docker.py",
+        "line": 126,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/files.py",
+        "line": 14,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"touch {shlex.quote(str(path))}\", sudo=sudo)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/files.py",
+        "line": 28,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/files.py",
+        "line": 35,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"chmod {shlex.quote(str(mode))} {shlex.quote(str(path))}\", sudo=sudo)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/files.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"mkdir -p {shlex.quote(str(path))}\", sudo=sudo)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/files.py",
+        "line": 56,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"rm {'-f ' if force else ''}{shlex.quote(str(path))}\", sudo=sudo)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/files.py",
+        "line": 64,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"rm -r {'-f ' if force else ''}{shlex.quote(str(path))}\", sudo=sudo)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/files.py",
+        "line": 85,
+        "keyword_detected": "exec(",
+        "code_snippet": "temp_file = host.exec(\"mktemp\").stdout.strip()"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/files.py",
+        "line": 90,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/host.py",
+        "line": 59,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/host.py",
+        "line": 117,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/host.py",
+        "line": 121,
+        "keyword_detected": "exec(",
+        "code_snippet": "lambda host: host.exec(command, hide=hide, sudo=sudo, **kwargs)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/os.py",
+        "line": 14,
+        "keyword_detected": "exec(",
+        "code_snippet": "return host.exec('. /etc/os-release && echo \"$VERSION_CODENAME\"').stdout.strip()"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/os.py",
+        "line": 18,
+        "keyword_detected": "exec(",
+        "code_snippet": "return host.exec('. /etc/os-release && echo \"$ID\"').stdout.strip()"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/os.py",
+        "line": 22,
+        "keyword_detected": "exec(",
+        "code_snippet": "return host.exec(\"dpkg --print-architecture\").stdout.strip()"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/os.py",
+        "line": 26,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/ssh.py",
+        "line": 31,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec("
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/systemd.py",
+        "line": 8,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"systemctl start {shlex.quote(unit_name)}\", sudo=True)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/systemd.py",
+        "line": 13,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"systemctl stop {shlex.quote(unit_name)}\", sudo=True)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/systemd.py",
+        "line": 18,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"systemctl enable {shlex.quote(unit_name)}\", sudo=True)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/systemd.py",
+        "line": 23,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"systemctl reload {shlex.quote(unit_name)}\", sudo=True)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/packages/apt.py",
+        "line": 43,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"apt-get install -y {packages_str}\", sudo=True)"
+      },
+      {
+        "file": "maschinist-0.0.1/maschinist/packages/apt.py",
+        "line": 53,
+        "keyword_detected": "exec(",
+        "code_snippet": "host.exec(f\"apt-get {'purge' if purge else 'remove'} -y {packages_str}\", sudo=True)"
+      }
+    ]
   }
 ]
