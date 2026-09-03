@@ -29248,5 +29248,117 @@
         "code_snippet": "box.exec_() if hasattr(box, \"exec_\") else box.exec()"
       }
     ]
+  },
+  {
+    "package_name": "safereach",
+    "checked_at": "2026-09-03T20:10:33.458918",
+    "download_url": "https://files.pythonhosted.org/packages/c3/19/a47fee8b352b70609217211f06140feaeb252ac233c7aeb930259e64f793/safereach-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "safereach-0.1.0/shim/shim_main.py",
+        "line": 394,
+        "keyword_detected": "exec(",
+        "code_snippet": "def handle_exec(payload: str, cfg: dict[str, Any]) -> int:"
+      },
+      {
+        "file": "safereach-0.1.0/shim/shim_main.py",
+        "line": 525,
+        "keyword_detected": "exec(",
+        "code_snippet": "return handle_exec(requested[1:].partition(\" \")[2], cfg)"
+      },
+      {
+        "file": "safereach-0.1.0/tests/test_stdio_clean.py",
+        "line": 65,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "ttapp",
+    "checked_at": "2026-09-03T20:10:33.856696",
+    "download_url": "https://files.pythonhosted.org/packages/08/e2/bbaa57c260d2c18200213d105168b7435c86cb3bd092efb8bb51f34cf348/ttapp-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ttapp-1.0.0/ttapp/cover.py",
+        "line": 923,
+        "keyword_detected": "eval(",
+        "code_snippet": "wmi = abs(func.feval((jx + 1) / inv_a, (jy + 1) / inv_a))"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/demo_function/cerf.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "def feval(x: float, y: float) -> complex:"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/demo_function/cerfc.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "def feval(x: float, y: float) -> complex:"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/demo_function/exp_neg_z2.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "def feval(x: float, y: float) -> complex:"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/demo_function/wofz.py",
+        "line": 6,
+        "keyword_detected": "eval(",
+        "code_snippet": "feval(x, y)        — evaluate w(x+iy) to high precision (103-bit FLINT)"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/demo_function/wofz.py",
+        "line": 100,
+        "keyword_detected": "eval(",
+        "code_snippet": "def feval(x: float, y: float) -> complex:"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/function_interface.py",
+        "line": 9,
+        "keyword_detected": "eval(",
+        "code_snippet": "feval(x: float, y: float) -> complex"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/relerr.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "func          : function module exposing feval(x, y), ideally also feval_acb(x, y)"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/relerr.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "wref = func.feval(x, y)"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/terms.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "func   : function module exposing feval(x, y) -> complex"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/terms.py",
+        "line": 64,
+        "keyword_detected": "eval(",
+        "code_snippet": "wm.append(abs(func.feval(jx / (inv_b / 2), jy / (inv_b / 2))))"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/tests/test_app.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "f_ref = feval(x, y)"
+      },
+      {
+        "file": "ttapp-1.0.0/ttapp/ttapp.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "feval(x: float, y: float) -> complex"
+      }
+    ]
   }
 ]
