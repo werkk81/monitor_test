@@ -29174,5 +29174,79 @@
         "code_snippet": "return model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "markdown-docx",
+    "checked_at": "2026-09-03T00:34:09.057579",
+    "download_url": "https://files.pythonhosted.org/packages/0f/3c/bef3ecaae23e81c6d4972d627d5543af7f9801942e2cccfe947ce5a0d126/markdown_docx-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "markdown_docx-0.1.0/tests/conftest.py",
+        "line": 11,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "PNG_1X1 = base64.b64decode("
+      },
+      {
+        "file": "markdown_docx-0.1.0/tests/test_public_api_capabilities.py",
+        "line": 15,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "PNG_1X1 = base64.b64decode("
+      }
+    ]
+  },
+  {
+    "package_name": "commandants",
+    "checked_at": "2026-09-03T00:34:09.351301",
+    "download_url": "https://files.pythonhosted.org/packages/d6/81/5a6546f85901038293889a2a754737640fc02b256156601c3da8769b262f/commandants-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "commandants-0.2.0/src/commandants/core/runner.py",
+        "line": 340,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "publicly-private",
+    "checked_at": "2026-09-03T00:34:09.916378",
+    "download_url": "https://files.pythonhosted.org/packages/54/c3/46cd5caac873c7ea5bb4ece63c64ab82d62c624f50e6d931f3fd8a5a86c8/publicly_private-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "publicly_private-0.1.0/src/publicly_private/runtime/loader.py",
+        "line": 91,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec("
+      }
+    ]
+  },
+  {
+    "package_name": "atlastrack",
+    "checked_at": "2026-09-03T00:34:10.288904",
+    "download_url": "https://files.pythonhosted.org/packages/36/af/664518542370b1b620a7f52c8c910bc6c173c1a6438cc964cd690e20a72c/atlastrack-0.7.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "atlastrack-0.7.1/src/atlastrack/gui/widgets/ephys_panel.py",
+        "line": 659,
+        "keyword_detected": "exec(",
+        "code_snippet": "dlg.exec()"
+      },
+      {
+        "file": "atlastrack-0.7.1/src/atlastrack/gui/widgets/ephys_panel.py",
+        "line": 840,
+        "keyword_detected": "exec(",
+        "code_snippet": "dlg.exec()"
+      },
+      {
+        "file": "atlastrack-0.7.1/src/atlastrack/gui/widgets/viz_export_panel.py",
+        "line": 637,
+        "keyword_detected": "exec(",
+        "code_snippet": "box.exec_() if hasattr(box, \"exec_\") else box.exec()"
+      }
+    ]
   }
 ]
