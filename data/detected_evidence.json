@@ -29980,5 +29980,121 @@
         "code_snippet": "sock = socket.socket()"
       }
     ]
+  },
+  {
+    "package_name": "notion-automacoes",
+    "checked_at": "2026-09-04T19:55:56.652231",
+    "download_url": "https://files.pythonhosted.org/packages/53/e9/000c99b8e19e46b499ce3f90a48a958e01c5e96e72296bc76df9d8559a4f/notion_automacoes-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "notion_automacoes-0.3.0/cli/unificada.py",
+        "line": 180,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "notion_automacoes-0.3.0/tests/test_cli_unificada.py",
+        "line": 77,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "lambda *args, **kwargs: socket.socket(socket.AF_INET, socket.SOCK_STREAM),"
+      }
+    ]
+  },
+  {
+    "package_name": "notion-workspace-app",
+    "checked_at": "2026-09-04T19:55:56.715049",
+    "download_url": "https://files.pythonhosted.org/packages/13/4b/690e8f0134090e735aa6f36155d14adb523cfc3dfb980647119e7eac7818/notion_workspace_app-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "notion_workspace_app-0.3.0/start_app.py",
+        "line": 178,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(comando, **kwargs)"
+      },
+      {
+        "file": "notion_workspace_app-0.3.0/start_app.py",
+        "line": 183,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"osascript\", \"-e\", script], **kwargs)"
+      },
+      {
+        "file": "notion_workspace_app-0.3.0/start_app.py",
+        "line": 193,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(comando_terminal, **kwargs)"
+      },
+      {
+        "file": "notion_workspace_app-0.3.0/start_app.py",
+        "line": 1063,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _encerrar_processos(processos: list[subprocess.Popen]) -> None:"
+      },
+      {
+        "file": "notion_workspace_app-0.3.0/start_app.py",
+        "line": 1077,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _aguardar_processos(console, processos: list[subprocess.Popen]) -> None:"
+      },
+      {
+        "file": "notion_workspace_app-0.3.0/start_app.py",
+        "line": 1147,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "processos: list[subprocess.Popen] = []"
+      },
+      {
+        "file": "notion_workspace_app-0.3.0/start_app.py",
+        "line": 1153,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "notion_workspace_app-0.3.0/start_app.py",
+        "line": 1170,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "asyncgh",
+    "checked_at": "2026-09-04T19:55:56.819249",
+    "download_url": "https://files.pythonhosted.org/packages/a9/0b/369bc3f1b218ed9bd85259e27dc9db4da13ad6da799848d96bfd4b68d280/asyncgh-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "asyncgh-0.2.0/tests/test_endpoints.py",
+        "line": 102,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decrypted = public.SealedBox(private_key).decrypt(base64.b64decode(ciphertext_b64))"
+      },
+      {
+        "file": "asyncgh-0.2.0/tests/test_endpoints.py",
+        "line": 145,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(body[\"encrypted_value\"])"
+      },
+      {
+        "file": "asyncgh-0.2.0/tests/test_endpoints.py",
+        "line": 172,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(body[\"encrypted_value\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "glypho-ocr",
+    "checked_at": "2026-09-04T19:55:56.863135",
+    "download_url": "https://files.pythonhosted.org/packages/bf/0c/b8bbc2675c8efd77912acf78191bc5af3a3da38bf5b45fe950ae881e4a8f/glypho_ocr-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "glypho_ocr-0.1.0/tests/test_client.py",
+        "line": 11,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "SAMPLE_PNG = base64.b64decode("
+      }
+    ]
   }
 ]
