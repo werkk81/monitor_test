@@ -30096,5 +30096,79 @@
         "code_snippet": "SAMPLE_PNG = base64.b64decode("
       }
     ]
+  },
+  {
+    "package_name": "betwixt-data",
+    "checked_at": "2026-09-04T21:54:35.068120",
+    "download_url": "https://files.pythonhosted.org/packages/46/22/e92dea0af3bc8b29f0c06ffd9314c40b4ffb8a2587d907597d6cccea7999/betwixt_data-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "betwixt_data-0.2.0/src/betwixt/annotations.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "annotation = eval(annotation.__forward_arg__, vars(module) if module else {}, vars(owner))"
+      }
+    ]
+  },
+  {
+    "package_name": "llmveil",
+    "checked_at": "2026-09-04T21:54:35.441106",
+    "download_url": "https://files.pythonhosted.org/packages/17/32/2ffa28750a6305013ac911cc249aca816ffd31fb7f4b5061388bd53f38bf/llmveil-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "llmveil-0.1.0/tests/test_no_network.py",
+        "line": 4,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "A README sentence is not enough: this replaces ``socket.socket`` with something"
+      },
+      {
+        "file": "llmveil-0.1.0/tests/test_no_network.py",
+        "line": 76,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "ball-lang",
+    "checked_at": "2026-09-04T21:54:35.528260",
+    "download_url": "https://files.pythonhosted.org/packages/93/c2/28ca436f0caa9fa02bc1cf9e2feb685dad5ad09d54a384ba56a3d96715b7/ball_lang-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ball_lang-0.1.0/compiler/ball_compiler/compiler.py",
+        "line": 1220,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return f\"bytearray({list(base64.b64decode(lit['bytesValue']))!r})\""
+      },
+      {
+        "file": "ball_lang-0.1.0/engine/ball_engine/loader.py",
+        "line": 74,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return list(base64.b64decode(v))"
+      },
+      {
+        "file": "ball_lang-0.1.0/runtime/ballrt/convert.py",
+        "line": 38,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return list(_base64.b64decode(v))"
+      }
+    ]
+  },
+  {
+    "package_name": "ytascii-player",
+    "checked_at": "2026-09-04T21:54:35.751775",
+    "download_url": "https://files.pythonhosted.org/packages/99/66/820de4fe203edce7c0246d87ac1458dfc0505a35383d02939e66e57f87d2/ytascii_player-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ytascii_player-0.1.0/src/ytascii/cli.py",
+        "line": 150,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "audio_proc = subprocess.Popen("
+      }
+    ]
   }
 ]
