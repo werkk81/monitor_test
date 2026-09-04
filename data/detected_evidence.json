@@ -30170,5 +30170,39 @@
         "code_snippet": "audio_proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "agents-terminal",
+    "checked_at": "2026-09-04T23:27:14.553642",
+    "download_url": "https://files.pythonhosted.org/packages/59/7e/2c8df2cc47cb0900bbfdfbb19627950b7c8c04f0ce6d9b7c8bb7bdfc4d7f/agents_terminal-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agents_terminal-0.0.1/src/agents_terminal/driver.py",
+        "line": 144,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "type-assert",
+    "checked_at": "2026-09-04T23:27:14.647148",
+    "download_url": "https://files.pythonhosted.org/packages/cc/07/607ba9759d6c31cdd8327a77b79992ab92c2d4ea84e2c389d5338829c5ac/type_assert-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "type_assert-0.1.0/type_assert/_cases.py",
+        "line": 61,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(self.setup_code, namespace)  # noqa: S102"
+      },
+      {
+        "file": "type_assert-0.1.0/type_assert/_cases.py",
+        "line": 74,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(case.code, namespace)  # noqa: S102"
+      }
+    ]
   }
 ]
