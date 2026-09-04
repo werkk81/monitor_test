@@ -29800,5 +29800,185 @@
         "code_snippet": "host.exec(f\"apt-get {'purge' if purge else 'remove'} -y {packages_str}\", sudo=True)"
       }
     ]
+  },
+  {
+    "package_name": "sechelix",
+    "checked_at": "2026-09-04T00:18:37.463389",
+    "download_url": "https://files.pythonhosted.org/packages/07/a1/02bcbb0a1d9853248a788bcb71133308bce1bb3b29d494bf9985dfce2e21/sechelix-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sechelix-0.1.0/sechelix_runner/providers/claude_code.py",
+        "line": 80,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen[str] | None = None"
+      },
+      {
+        "file": "sechelix-0.1.0/sechelix_runner/providers/claude_code.py",
+        "line": 116,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen(  # noqa: S603 - list args, shell=False"
+      }
+    ]
+  },
+  {
+    "package_name": "nookwire",
+    "checked_at": "2026-09-04T00:18:37.549205",
+    "download_url": "https://files.pythonhosted.org/packages/56/b6/af0238847998822f9bf30d3179cb43f522176a28c2daeabcf27496d21918/nookwire-2.4.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/cli.py",
+        "line": 255,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = base64.b64decode(parts[1], validate=True)"
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/cli.py",
+        "line": 308,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn(command: list[str], environment: dict[str, str], log: Path) -> subprocess.Popen:"
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/cli.py",
+        "line": 314,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/cli.py",
+        "line": 323,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def launch_server(args, root: Path, port: int, password: str, state: Path) -> subprocess.Popen:"
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/cli.py",
+        "line": 370,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": ") -> subprocess.Popen:"
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/cli.py",
+        "line": 403,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def launch_tunnel_cloudflare(args, port: int, session: str, state: Path) -> subprocess.Popen:"
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/cli.py",
+        "line": 426,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def launch_tunnel_cloudflared(args, state: Path) -> subprocess.Popen:"
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/cli.py",
+        "line": 445,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def launch_tunnel_upterm(args, port: int, state: Path) -> subprocess.Popen:"
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/server.py",
+        "line": 451,
+        "keyword_detected": "exec(",
+        "code_snippet": "child = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/server.py",
+        "line": 542,
+        "keyword_detected": "exec(",
+        "code_snippet": "child = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/upterm.py",
+        "line": 199,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def __init__(self, websocket, ssh_socket: socket.socket, pump_socket: socket.socket):"
+      },
+      {
+        "file": "nookwire-2.4.1/src/nookwire_ssh/upterm.py",
+        "line": 210,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "ssh_socket, pump_socket = socket.socketpair()"
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_cli.py",
+        "line": 77,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_cli.py",
+        "line": 223,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "victim = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"])"
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_cli.py",
+        "line": 337,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_cli.py",
+        "line": 361,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_server.py",
+        "line": 385,
+        "keyword_detected": "exec(",
+        "code_snippet": "ssh = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_server.py",
+        "line": 405,
+        "keyword_detected": "exec(",
+        "code_snippet": "scp = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_server.py",
+        "line": 415,
+        "keyword_detected": "exec(",
+        "code_snippet": "relative = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_server.py",
+        "line": 453,
+        "keyword_detected": "exec(",
+        "code_snippet": "scp = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_tunnel.py",
+        "line": 100,
+        "keyword_detected": "exec(",
+        "code_snippet": "tunnel = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_upterm.py",
+        "line": 23,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(headers[\"Authorization\"].split()[1]), b\"session:node\""
+      },
+      {
+        "file": "nookwire-2.4.1/tests/test_upterm.py",
+        "line": 109,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "ssh_socket, pump_socket = socket.socketpair()"
+      }
+    ]
+  },
+  {
+    "package_name": "minmo",
+    "checked_at": "2026-09-04T00:18:37.734356",
+    "download_url": "https://files.pythonhosted.org/packages/bf/f6/fa2204e865439e73e93a54bbcd585acb6e322eee64e7a756400dfd6e492e/minmo-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "minmo-0.1.0/minmo/agent.py",
+        "line": 166,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      }
+    ]
   }
 ]
