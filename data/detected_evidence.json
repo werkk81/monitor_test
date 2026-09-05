@@ -30218,5 +30218,393 @@
         "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
       }
     ]
+  },
+  {
+    "package_name": "miniapppolis-identity",
+    "checked_at": "2026-09-05T21:37:44.617277",
+    "download_url": "https://files.pythonhosted.org/packages/ab/34/597e61003debc70ebc2b9f9f311e539873d0451bc1019dc150042d85056e/miniapppolis_identity-2.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py",
+        "line": 15,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "out = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py",
+        "line": 28,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "out = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/test_gyp.py",
+        "line": 205,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/MSVSVersion.py",
+        "line": 174,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/MSVSVersion.py",
+        "line": 431,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([\"cygpath\", path], stdout=subprocess.PIPE)"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/common.py",
+        "line": 719,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "out = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/input.py",
+        "line": 176,
+        "keyword_detected": "eval(",
+        "code_snippet": "Note that this is slower than eval() is."
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/input.py",
+        "line": 237,
+        "keyword_detected": "eval(",
+        "code_snippet": "build_file_data = eval(build_file_contents, {\"__builtins__\": {}}, None)"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/input.py",
+        "line": 863,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# it to None to signal to subprocess.Popen that it should run the"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/input.py",
+        "line": 902,
+        "keyword_detected": "eval(",
+        "code_snippet": "contents = eval(contents)"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/input.py",
+        "line": 1179,
+        "keyword_detected": "eval(",
+        "code_snippet": "if eval(ast_code, env, variables):"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/mac_tool.py",
+        "line": 271,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "libtoolout = subprocess.Popen(cmd_list, stderr=subprocess.PIPE, env=env)"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py",
+        "line": 139,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py",
+        "line": 1189,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py",
+        "line": 1214,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen(args, shell=True, stdout=subprocess.PIPE)"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py",
+        "line": 133,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "link = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py",
+        "line": 250,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py",
+        "line": 294,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py",
+        "line": 313,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py",
+        "line": 331,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py",
+        "line": 1559,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "job = subprocess.Popen(cmdlist, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py",
+        "line": 1569,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "job = subprocess.Popen(cmdlist, stdout=subprocess.PIPE)"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/eclipse.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/eclipse.py",
+        "line": 242,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "cpp_proc = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/gypd.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "run \"pprint.pprint(eval(open('source.gyp').read()))\", which will still strip"
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py",
+        "line": 116,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "call = subprocess.Popen("
+      },
+      {
+        "file": "miniapppolis_identity-2.0.1/node_modules/npm/node_modules/node-gyp/gyp/pylib/packaging/_parser.py",
+        "line": 337,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(python_str)"
+      }
+    ]
+  },
+  {
+    "package_name": "orkmind",
+    "checked_at": "2026-09-05T21:37:45.640061",
+    "download_url": "https://files.pythonhosted.org/packages/f5/aa/67e3dd2fd0358d054f481108ce01b18b08af74d41e1f08e02608ec04ac8d/orkmind-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-acentuacao/src/orkmind/core/encryption.py",
+        "line": 157,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-acentuacao/src/orkmind/core/encryption.py",
+        "line": 158,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-acentuacao/src/orkmind/core/encryption.py",
+        "line": 163,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(ciphertext_b64)"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-acentuacao/src/orkmind/core/encryption.py",
+        "line": 164,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "iv = base64.b64decode(meta[\"iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-acentuacao/src/orkmind/core/encryption.py",
+        "line": 188,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-acentuacao/src/orkmind/core/encryption.py",
+        "line": 189,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-acentuacao/tests/unit/test_encryption.py",
+        "line": 70,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(ciphertext)"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-orkmind/src/orkmind/core/encryption.py",
+        "line": 157,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-orkmind/src/orkmind/core/encryption.py",
+        "line": 158,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-orkmind/src/orkmind/core/encryption.py",
+        "line": 163,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(ciphertext_b64)"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-orkmind/src/orkmind/core/encryption.py",
+        "line": 164,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "iv = base64.b64decode(meta[\"iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-orkmind/src/orkmind/core/encryption.py",
+        "line": 188,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-orkmind/src/orkmind/core/encryption.py",
+        "line": 189,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/docs-orkmind/tests/unit/test_encryption.py",
+        "line": 70,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(ciphertext)"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/exploracao-guardrails/src/orkmind/core/encryption.py",
+        "line": 157,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/exploracao-guardrails/src/orkmind/core/encryption.py",
+        "line": 158,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/exploracao-guardrails/src/orkmind/core/encryption.py",
+        "line": 163,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(ciphertext_b64)"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/exploracao-guardrails/src/orkmind/core/encryption.py",
+        "line": 164,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "iv = base64.b64decode(meta[\"iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/exploracao-guardrails/src/orkmind/core/encryption.py",
+        "line": 188,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/exploracao-guardrails/src/orkmind/core/encryption.py",
+        "line": 189,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/exploracao-guardrails/tests/unit/test_encryption.py",
+        "line": 70,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(ciphertext)"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/guardrails/src/orkmind/core/encryption.py",
+        "line": 157,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/guardrails/src/orkmind/core/encryption.py",
+        "line": 158,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/guardrails/src/orkmind/core/encryption.py",
+        "line": 163,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(ciphertext_b64)"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/guardrails/src/orkmind/core/encryption.py",
+        "line": 164,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "iv = base64.b64decode(meta[\"iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/guardrails/src/orkmind/core/encryption.py",
+        "line": 188,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/guardrails/src/orkmind/core/encryption.py",
+        "line": 189,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/.worktrees/guardrails/tests/unit/test_encryption.py",
+        "line": 70,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(ciphertext)"
+      },
+      {
+        "file": "orkmind-0.1.0/src/orkmind/core/encryption.py",
+        "line": 157,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/src/orkmind/core/encryption.py",
+        "line": 158,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/src/orkmind/core/encryption.py",
+        "line": 163,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(ciphertext_b64)"
+      },
+      {
+        "file": "orkmind-0.1.0/src/orkmind/core/encryption.py",
+        "line": 164,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "iv = base64.b64decode(meta[\"iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/src/orkmind/core/encryption.py",
+        "line": 188,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_encrypted = base64.b64decode(meta[\"dek_encrypted\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/src/orkmind/core/encryption.py",
+        "line": 189,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "dek_iv = base64.b64decode(meta[\"dek_iv\"])"
+      },
+      {
+        "file": "orkmind-0.1.0/tests/unit/test_encryption.py",
+        "line": 70,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(ciphertext)"
+      }
+    ]
   }
 ]
