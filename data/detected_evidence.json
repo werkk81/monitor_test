@@ -30204,5 +30204,19 @@
         "code_snippet": "exec(case.code, namespace)  # noqa: S102"
       }
     ]
+  },
+  {
+    "package_name": "oknoll-runtime",
+    "checked_at": "2026-09-05T19:35:35.560911",
+    "download_url": "https://files.pythonhosted.org/packages/7b/33/1b8eb7d45061142634370f2d58bd0abb2383c05e935712c708ae734d54b5/oknoll_runtime-0.4.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "oknoll_runtime-0.4.0a1/src/oknoll_runtime/daemon/lifecycle.py",
+        "line": 100,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
+      }
+    ]
   }
 ]
