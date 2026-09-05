@@ -30606,5 +30606,149 @@
         "code_snippet": "raw = base64.b64decode(ciphertext)"
       }
     ]
+  },
+  {
+    "package_name": "draughtsman-nn",
+    "checked_at": "2026-09-05T23:14:10.905735",
+    "download_url": "https://files.pythonhosted.org/packages/eb/bb/b9cdd2e5c3cd653acb7429d48b36db591aca3f1f75f3c6b98776b5d912fb/draughtsman_nn-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "draughtsman_nn-0.1.2/src/draughtsman/tracing.py",
+        "line": 273,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "draughtsman_nn-0.1.2/tests/test_edge_collisions.py",
+        "line": 194,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(broken, \"edge_collisions_mutated\", \"exec\"), ns)   # noqa: S102"
+      },
+      {
+        "file": "draughtsman_nn-0.1.2/tests/test_run_suite.py",
+        "line": 54,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(broken, \"run_suite_mutated\", \"exec\"), ns)      # noqa: S102"
+      },
+      {
+        "file": "draughtsman_nn-0.1.2/tests/fixtures/branchy.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "m.eval()"
+      },
+      {
+        "file": "draughtsman_nn-0.1.2/tests/fixtures/branchy.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "m.eval()"
+      },
+      {
+        "file": "draughtsman_nn-0.1.2/tools/compare_stack.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "build_whisper_tiny().eval(),"
+      }
+    ]
+  },
+  {
+    "package_name": "sqlalchemy-seerdb",
+    "checked_at": "2026-09-05T23:14:11.069995",
+    "download_url": "https://files.pythonhosted.org/packages/00/ff/7784536c514203e1f93d83ab39c28254b1cc1c92f9037d012165fd71ed0e/sqlalchemy_seerdb-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sqlalchemy_seerdb-0.2.0/sqlalchemy_seerdb/seerdb.py",
+        "line": 116,
+        "keyword_detected": "exec(",
+        "code_snippet": "def pre_exec(self):"
+      },
+      {
+        "file": "sqlalchemy_seerdb-0.2.0/sqlalchemy_seerdb/seerdb.py",
+        "line": 117,
+        "keyword_detected": "exec(",
+        "code_snippet": "super().pre_exec()"
+      },
+      {
+        "file": "sqlalchemy_seerdb-0.2.0/sqlalchemy_seerdb/seerdb.py",
+        "line": 161,
+        "keyword_detected": "exec(",
+        "code_snippet": "def post_exec(self):"
+      },
+      {
+        "file": "sqlalchemy_seerdb-0.2.0/sqlalchemy_seerdb/seerdb.py",
+        "line": 169,
+        "keyword_detected": "exec(",
+        "code_snippet": "super().post_exec()"
+      }
+    ]
+  },
+  {
+    "package_name": "inklet",
+    "checked_at": "2026-09-05T23:14:12.615386",
+    "download_url": "https://files.pythonhosted.org/packages/c3/7b/5cf2a760e2d056c3bf0feec9df64e03206f256b45fb2ef6a7bdf7eb18e2a/inklet-2.6.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "inklet-2.6.0/src/inklet/cli.py",
+        "line": 129,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process=subprocess.Popen(command,stdout=subprocess.PIPE,stderr=subprocess.PIPE,"
+      },
+      {
+        "file": "inklet-2.6.0/tests/test_cookbook.py",
+        "line": 42,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, f\"cookbook.md:block{index + 1}\", \"exec\"), namespace)"
+      },
+      {
+        "file": "inklet-2.6.0/tests/test_docs.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, f\"{relative}:docstring\", \"exec\"), {\"__name__\": \"__doc__\"})"
+      },
+      {
+        "file": "inklet-2.6.0/tests/test_guides.py",
+        "line": 29,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code,f'{relative}:block-{index+1}','exec'),namespace)"
+      },
+      {
+        "file": "inklet-2.6.0/tests/test_guides.py",
+        "line": 42,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code,f'{relative}:block-{index+1}','exec'),namespace)"
+      },
+      {
+        "file": "inklet-2.6.0/tests/test_svg.py",
+        "line": 635,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(href.split(\",\", 1)[1]) == payload"
+      },
+      {
+        "file": "inklet-2.6.0/tests/test_svg.py",
+        "line": 648,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(href.split(\",\", 1)[1]) == payload"
+      },
+      {
+        "file": "inklet-2.6.0/tests/test_svg.py",
+        "line": 663,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert b\"in-memory\" in base64.b64decode(href.split(\",\", 1)[1])"
+      },
+      {
+        "file": "inklet-2.6.0/tests/test_text_on_path.py",
+        "line": 368,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "font = TTFont(BytesIO(base64.b64decode(payload)), lazy=True)"
+      },
+      {
+        "file": "inklet-2.6.0/tests/test_watch_review.py",
+        "line": 29,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process=subprocess.Popen([sys.executable,'-m','inklet','watch',str(script),'--output',str(output),"
+      }
+    ]
   }
 ]
