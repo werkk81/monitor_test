@@ -30904,5 +30904,189 @@
         "code_snippet": "child = subprocess.Popen([sys.executable,\"-m\",\"scientific_workflow.npy\",\"--workflow-dependencies\"], env=env, stdout=subprocess.DEVNULL, stderr=log)"
       }
     ]
+  },
+  {
+    "package_name": "s3view",
+    "checked_at": "2026-09-06T23:10:30.072132",
+    "download_url": "https://files.pythonhosted.org/packages/37/aa/199b7dd36042007744d26acb3bbbb54baf290fc0732775e3c23e810f7c5b/s3view-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "s3view-0.1.0/s3view/cli.py",
+        "line": 20,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "s3view-0.1.0/s3view/cli.py",
+        "line": 30,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "s3view-0.1.0/s3view/server.py",
+        "line": 306,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"open\", \"-a\", app, url],"
+      }
+    ]
+  },
+  {
+    "package_name": "idiotproof",
+    "checked_at": "2026-09-06T23:10:30.176751",
+    "download_url": "https://files.pythonhosted.org/packages/ee/e9/69bcbc377b617cdb6d01ae01589f8c4a8d6c734bb331ffdc71bc710db48b/idiotproof-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "idiotproof-0.5.0/src/idiotproof/media.py",
+        "line": 214,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(text, validate=True)"
+      },
+      {
+        "file": "idiotproof-0.5.0/src/idiotproof/media.py",
+        "line": 758,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "ml-inspector-mcp",
+    "checked_at": "2026-09-06T23:10:30.271513",
+    "download_url": "https://files.pythonhosted.org/packages/b2/86/027bdfc847a7221cb7a89987056d178b20599b07ba464d835d0ee4e6b7ec/ml_inspector_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ml_inspector_mcp-0.1.0/src/ml_inspector/adapters/pytorch.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "obj.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "doxtr-roadmap",
+    "checked_at": "2026-09-06T23:10:30.477426",
+    "download_url": "https://files.pythonhosted.org/packages/cf/e0/a210fa8d7fdce8f866b02148fdd3e96cb2206b4aebb7272a57cb67fa55e6/doxtr_roadmap-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 13,
+        "keyword_detected": "eval(",
+        "code_snippet": "* **No** ``eval()`` / ``exec()`` / ``compile()`` — the AST is walked"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 13,
+        "keyword_detected": "exec(",
+        "code_snippet": "* **No** ``eval()`` / ``exec()`` / ``compile()`` — the AST is walked"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 193,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(node: ast.AST, names: dict) -> Any:"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 200,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _eval(node.body, names)"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 219,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = _eval(val, names)"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 226,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = _eval(val, names)"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 233,
+        "keyword_detected": "eval(",
+        "code_snippet": "return op_fn(_eval(node.operand, names))"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 236,
+        "keyword_detected": "eval(",
+        "code_snippet": "left = _eval(node.left, names)"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 239,
+        "keyword_detected": "eval(",
+        "code_snippet": "right = _eval(comparator, names)"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 246,
+        "keyword_detected": "eval(",
+        "code_snippet": "return [_eval(e, names) for e in node.elts]"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 249,
+        "keyword_detected": "eval(",
+        "code_snippet": "return tuple(_eval(e, names) for e in node.elts)"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 252,
+        "keyword_detected": "eval(",
+        "code_snippet": "return {_eval(e, names) for e in node.elts}"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 277,
+        "keyword_detected": "eval(",
+        "code_snippet": "args = [_eval(a, names) for a in node.args]"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/doxtr_roadmap/safe_query.py",
+        "line": 344,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = _eval(tree, names)"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/tests/test_directive.py",
+        "line": 466,
+        "keyword_detected": "eval(",
+        "code_snippet": "With the old eval()-based approach, ``(1).__class__.__bases__[0] is object``"
+      },
+      {
+        "file": "doxtr_roadmap-0.1.0/tests/test_directive.py",
+        "line": 495,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "hierarchy to reach dangerous classes (subprocess.Popen, os._wrap_close…)."
+      }
+    ]
+  },
+  {
+    "package_name": "noether-physics",
+    "checked_at": "2026-09-06T23:10:30.710181",
+    "download_url": "https://files.pythonhosted.org/packages/3a/c7/291679e081cf36ed1e5b17f5b53374b346f2de56866aa4081db849c57dad/noether_physics-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "noether_physics-0.1.2/src/noether/cassettes.py",
+        "line": 113,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(raw) if data.get(\"encoding\") == \"base64\" else raw.encode(\"utf-8\")"
+      },
+      {
+        "file": "noether_physics-0.1.2/src/noether/cli.py",
+        "line": 430,
+        "keyword_detected": "eval(",
+        "code_snippet": "def bench_retrieval() -> None:"
+      }
+    ]
   }
 ]
