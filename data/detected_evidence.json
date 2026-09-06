@@ -30750,5 +30750,75 @@
         "code_snippet": "process=subprocess.Popen([sys.executable,'-m','inklet','watch',str(script),'--output',str(output),"
       }
     ]
+  },
+  {
+    "package_name": "clipto",
+    "checked_at": "2026-09-06T19:38:14.412460",
+    "download_url": "https://files.pythonhosted.org/packages/f7/3f/5629861c30e92b72a88713dec29080fb292b88347770ddb8c7aa280cf442/clipto-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "clipto-0.1.3/src/clipto/tunnel.py",
+        "line": 20,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def start_cloudflare_tunnel(port: int, timeout: float = 12.0) -> Tuple[str, subprocess.Popen]:"
+      },
+      {
+        "file": "clipto-0.1.3/src/clipto/tunnel.py",
+        "line": 45,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "clipto-0.1.3/src/clipto/tunnel.py",
+        "line": 78,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def start_tunnel(port: int, provider: str = \"auto\") -> Tuple[str, subprocess.Popen]:"
+      },
+      {
+        "file": "clipto-0.1.3/src/clipto/tunnel.py",
+        "line": 91,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def stop_tunnel(proc: Optional[subprocess.Popen]):"
+      },
+      {
+        "file": "clipto-0.1.3/src/clipto/utils.py",
+        "line": 41,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "clipto-0.1.3/src/clipto/utils.py",
+        "line": 46,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "clipto-0.1.3/src/clipto/utils.py",
+        "line": 60,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "agience-crystal",
+    "checked_at": "2026-09-06T19:38:14.557475",
+    "download_url": "https://files.pythonhosted.org/packages/ea/a4/8e539291e9078b68373b458c72b4f6455ab04e1368b40b5f74915636bca4/agience_crystal-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agience_crystal-0.1.1/src/crystal/gateway_middleware.py",
+        "line": 278,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "response_body = base64.b64decode(response_body_b64) if response_body_b64 else b\"\""
+      },
+      {
+        "file": "agience_crystal-0.1.1/tests/test_seed_lattice_no_forcings.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = ast.literal_eval(b)"
+      }
+    ]
   }
 ]
