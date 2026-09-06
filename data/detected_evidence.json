@@ -30820,5 +30820,89 @@
         "code_snippet": "v = ast.literal_eval(b)"
       }
     ]
+  },
+  {
+    "package_name": "tweetnook",
+    "checked_at": "2026-09-06T21:40:23.066437",
+    "download_url": "https://files.pythonhosted.org/packages/ff/41/df3ea83fac9f2c3b487e8defe34160acffa89f6ae43a83f65585d690dc4b/tweetnook-0.0.9.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tweetnook-0.0.9/tweetnook/cli_web.py",
+        "line": 117,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "tweetnook-0.0.9/tweetnook/job_supervisor.py",
+        "line": 54,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "tweetnook-0.0.9/tweetnook/job_supervisor.py",
+        "line": 117,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "tweetnook-0.0.9/tweetnook/job_supervisor.py",
+        "line": 214,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _monitor(self, process: subprocess.Popen[bytes], run_id: str) -> None:"
+      },
+      {
+        "file": "tweetnook-0.0.9/tweetnook/web/address.py",
+        "line": 21,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(family, socket.SOCK_DGRAM) as probe:"
+      }
+    ]
+  },
+  {
+    "package_name": "driftguard-audit",
+    "checked_at": "2026-09-06T21:40:23.121126",
+    "download_url": "https://files.pythonhosted.org/packages/f3/e0/f21c6a3176562ea1a2f26fc9662fa34efebc0b1e0c67e9d5f2765d129773/driftguard_audit-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "driftguard_audit-0.1.1/driftguard/analyzer.py",
+        "line": 52,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen\": (\"process_spawn\", \"high\"), \"subprocess.check_call\": (\"process_spawn\", \"high\"),"
+      },
+      {
+        "file": "driftguard_audit-0.1.1/driftguard/analyzer.py",
+        "line": 54,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"os.popen\": (\"process_spawn\", \"high\"), \"socket.socket\": (\"network_access\", \"high\"),"
+      },
+      {
+        "file": "driftguard_audit-0.1.1/tests/test_analyzer.py",
+        "line": 17,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "new = write_pkg(tmp_path / \"new\", \"import socket\\nimport subprocess\\ndef run():\\n    socket.socket()\\n    subprocess.run(['x'])\\n\")"
+      }
+    ]
+  },
+  {
+    "package_name": "scientific-workflow",
+    "checked_at": "2026-09-06T21:40:23.176668",
+    "download_url": "https://files.pythonhosted.org/packages/ef/09/c717cf245f1398edcf9d759f77d1882b78fc68cec4086a71c39cd9a54035/scientific_workflow-0.4.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "scientific_workflow-0.4.4/tests/test_npy.py",
+        "line": 418,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable,\"-m\",\"scientific_workflow.npy\",\"--workflow-dependencies\"], env=env, stdout=subprocess.DEVNULL, stderr=log)"
+      },
+      {
+        "file": "scientific_workflow-0.4.4/tests/test_npy.py",
+        "line": 470,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable,\"-m\",\"scientific_workflow.npy\",\"--workflow-dependencies\"], env=env, stdout=subprocess.DEVNULL, stderr=log)"
+      }
+    ]
   }
 ]
