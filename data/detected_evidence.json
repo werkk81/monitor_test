@@ -31712,5 +31712,389 @@
         "code_snippet": "return eval(source, {\"__builtins__\": _SAFE_BUILTINS}, local)"
       }
     ]
+  },
+  {
+    "package_name": "dockpilot",
+    "checked_at": "2026-09-07T23:01:10.119161",
+    "download_url": "https://files.pythonhosted.org/packages/8f/06/b2977ec3d03cd102f807a7deefc4efbeae65642d173e3b8ef85be6f0f780/dockpilot-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dockpilot-0.1.0/dockpilot_pkg/app.py",
+        "line": 97,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      },
+      {
+        "file": "dockpilot-0.1.0/dockpilot_pkg/app.py",
+        "line": 245,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "mlverdict",
+    "checked_at": "2026-09-07T23:01:10.485903",
+    "download_url": "https://files.pythonhosted.org/packages/2f/05/1ff94084b95e0850e34ad196ef3e4d2e759f601af7bb15eed9ded82cc25b/mlverdict-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mlverdict-0.1.3/tests/test_candidates_decision.py",
+        "line": 12,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(name, primary, latency, stability=0.8, gen=0.7, complexity=\"medium\", explainable=True, fails=()):"
+      },
+      {
+        "file": "mlverdict-0.1.3/tests/test_candidates_decision.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "cat = _eval(\"CatBoost\", 0.90, 180.0, fails=(\"latency 180.00ms exceeds max_latency_ms=100\",))"
+      },
+      {
+        "file": "mlverdict-0.1.3/tests/test_candidates_decision.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "rf = _eval(\"Random Forest\", 0.87, 30.0)"
+      },
+      {
+        "file": "mlverdict-0.1.3/tests/test_candidates_decision.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "**_eval(\"Shaky Boost\", 0.91, 40.0, stability=0.2).__dict__,"
+      },
+      {
+        "file": "mlverdict-0.1.3/tests/test_candidates_decision.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "**_eval(\"Stable Forest\", 0.88, 35.0, stability=0.95).__dict__,"
+      },
+      {
+        "file": "mlverdict-0.1.3/tests/test_candidates_decision.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "**_eval(\"Slow\", 0.99, 500.0, fails=(\"latency too high\",)).__dict__,"
+      }
+    ]
+  },
+  {
+    "package_name": "memoryos-governance",
+    "checked_at": "2026-09-07T23:01:11.008993",
+    "download_url": "https://files.pythonhosted.org/packages/5b/a6/10697190bdef502f778a46474195999be8c2479d221c72d449b00282967b/memoryos_governance-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "memoryos_governance-1.0.0/fixtures/workflow_adapter_result/runner_fixtures/controlled_adapter.py",
+        "line": 80,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "memoryos_governance-1.0.0/fixtures/workflow_adapter_result/runner_fixtures/controlled_adapter.py",
+        "line": 93,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "memoryos_governance-1.0.0/memoryos/workflow_adapter_runner.py",
+        "line": 891,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "memoryos_governance-1.0.0/tests/workflow/test_workflow_adapter_runner.py",
+        "line": 428,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket(socket.AF_UNIX)"
+      },
+      {
+        "file": "memoryos_governance-1.0.0/tests/workflow/test_workflow_adapter_runner.py",
+        "line": 450,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"client=socket.socket(socket.AF_UNIX); client.connect(sys.argv[1]); \""
+      }
+    ]
+  },
+  {
+    "package_name": "pyspark-client-rust",
+    "checked_at": "2026-09-07T23:01:11.428860",
+    "download_url": "https://files.pythonhosted.org/packages/68/ee/2b55d25fde1e14220725d335fdf142a623e69db844af3de0939cdb928447/pyspark_client_rust-4.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyspark_client_rust-4.2.0/crates/spark-connect/src/wasm_packer.py",
+        "line": 258,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "wasm = base64.b64decode(spec[\"wasm_b64\"])"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/errors/exceptions/tblib.py",
+        "line": 209,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, dict(current.tb_frame.f_globals), dict(current.tb_frame.f_locals))"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/ml/torch/distributor.py",
+        "line": 474,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "task = subprocess.Popen("
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/ml/torch/distributor.py",
+        "line": 675,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/ml/torch/log_communication.py",
+        "line": 69,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as tcp:"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/ml/torch/log_communication.py",
+        "line": 163,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/ml/torch/torch_run_process_wrapper.py",
+        "line": 27,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def clean_and_terminate(task: \"subprocess.Popen\") -> None:"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/ml/torch/torch_run_process_wrapper.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def check_parent_alive(task: \"subprocess.Popen\") -> None:"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/ml/torch/torch_run_process_wrapper.py",
+        "line": 53,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "task = subprocess.Popen("
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/pandas/frame.py",
+        "line": 13222,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, expr: str, inplace: bool = False) -> Optional[DataFrameOrSeries]:"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/pandas/frame.py",
+        "line": 13262,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> df.eval('A + B')"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/pandas/frame.py",
+        "line": 13273,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> df.eval('C = A + B')"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/pandas/frame.py",
+        "line": 13290,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> df.eval('C = A + B', inplace=True)"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/pandas/frame.py",
+        "line": 13319,
+        "keyword_detected": "eval(",
+        "code_snippet": "result_inner = pdf.eval(expr, inplace=inplace)"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/serializers.py",
+        "line": 450,
+        "keyword_detected": "exec(",
+        "code_snippet": "print_exec(sys.stderr)"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/sql/streaming/stateful_processor_api_client.py",
+        "line": 52,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._client_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/sql/streaming/stateful_processor_api_client.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._client_socket = socket.socket()"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/sql/worker/data_source_pushdown_filters.py",
+        "line": 87,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "value = base64.b64decode(variantDict[\"value\"])"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/sql/worker/data_source_pushdown_filters.py",
+        "line": 88,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "metadata = base64.b64decode(variantDict[\"metadata\"])"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/testing/df_golden.py",
+        "line": 553,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, script_path, \"exec\"), namespace)"
+      },
+      {
+        "file": "pyspark_client_rust-4.2.0/python/pyspark/util.py",
+        "line": 33,
+        "keyword_detected": "exec(",
+        "code_snippet": "def print_exec(stream: TextIO) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "mcp-einvoicing-in",
+    "checked_at": "2026-09-07T23:01:11.508809",
+    "download_url": "https://files.pythonhosted.org/packages/81/e9/0004fbd50bbbafc598c23c047adb53c3c7289ff93f1d4a89c858a87d8873/mcp_einvoicing_in-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mcp_einvoicing_in-0.1.0/tests/test_qr.py",
+        "line": 27,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(result)"
+      }
+    ]
+  },
+  {
+    "package_name": "blackbone",
+    "checked_at": "2026-09-07T23:01:12.464109",
+    "download_url": "https://files.pythonhosted.org/packages/9f/a0/2b673ba570be33ca29882c1fc52cd5ccbf3c0b69035a13ac1050f1976d45/blackbone-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "blackbone-0.1.1/boneio/core/cloud/registration.py",
+        "line": 278,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "cert_data = base64.b64decode(data[\"cert\"])"
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/core/cloud/registration.py",
+        "line": 279,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key_data = base64.b64decode(data[\"key\"])"
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/core/manager/update.py",
+        "line": 447,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/hardware/can/interface.py",
+        "line": 34,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/hardware/can/interface.py",
+        "line": 187,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/modbus/entities/derived/numeric.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = eval(code, {\"__builtins__\": {}}, context)"
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/can.py",
+        "line": 96,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/can.py",
+        "line": 252,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/can.py",
+        "line": 403,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/can.py",
+        "line": 451,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/nodered.py",
+        "line": 887,
+        "keyword_detected": "exec(",
+        "code_snippet": "pull_process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/nodered.py",
+        "line": 899,
+        "keyword_detected": "exec(",
+        "code_snippet": "up_process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/system.py",
+        "line": 450,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/system.py",
+        "line": 1261,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/system.py",
+        "line": 1290,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/timezone_sudoers.py",
+        "line": 59,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/timezone_sudoers.py",
+        "line": 135,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/timezone_sudoers.py",
+        "line": 155,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/timezone_sudoers.py",
+        "line": 175,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/routes/tools.py",
+        "line": 179,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "blackbone-0.1.1/boneio/webui/services/logs.py",
+        "line": 170,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
   }
 ]
