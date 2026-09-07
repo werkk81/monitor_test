@@ -31088,5 +31088,629 @@
         "code_snippet": "def bench_retrieval() -> None:"
       }
     ]
+  },
+  {
+    "package_name": "vis-agent",
+    "checked_at": "2026-09-07T20:49:32.913037",
+    "download_url": "https://files.pythonhosted.org/packages/cb/b0/34261d2610fcf44a4525a2d85357b97293b2acd71edfc1390b8af2c218fe/vis_agent-0.1.43.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "vis_agent-0.1.43/src/blockether/vis/_outside.py",
+        "line": 236,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "vis_agent-0.1.43/src/blockether/vis/engine/_local.py",
+        "line": 105,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      },
+      {
+        "file": "vis_agent-0.1.43/src/blockether/vis/engine/_local.py",
+        "line": 165,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(response[\"content\"], validate=True)"
+      },
+      {
+        "file": "vis_agent-0.1.43/tests/test_engine.py",
+        "line": 155,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reservation:"
+      },
+      {
+        "file": "vis_agent-0.1.43/tests/test_engine.py",
+        "line": 162,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "vis_agent-0.1.43/tests/test_providers.py",
+        "line": 316,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(example, \"README.md:providers\", \"exec\"), namespace)"
+      },
+      {
+        "file": "vis_agent-0.1.43/tests/test_registration.py",
+        "line": 121,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(example, \"README.md\", \"exec\"), module.__dict__)"
+      }
+    ]
+  },
+  {
+    "package_name": "eco-suite",
+    "checked_at": "2026-09-07T20:49:33.136605",
+    "download_url": "https://files.pythonhosted.org/packages/d8/8c/7907ca4ed13ac2d86a2eb10c28d533919a35d85ae825a0de29e4b6657c3e/eco_suite-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "eco_suite-0.1.0/eco/alvra/alvra.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(istr)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/alvra/alvra.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "tdev = eval(\"_%s(Id='%s',*args,**kwargs)\" % (eco_type_name, devId))"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/bernina_robot_server/commands.py",
+        "line": 190,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(statement, \"<exec>\", \"exec\"), globals_, self.namespace)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/bernina_robot_server/commands.py",
+        "line": 192,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(compiled, globals_, self.namespace)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/dbase/archiver.py",
+        "line": 864,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "by `DataHub.strip_plot` - deliberately plain `subprocess.Popen`, not"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/dbase/archiver.py",
+        "line": 879,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "`subprocess.Popen` with this explicit command never touches `__main__`"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/dbase/archiver.py",
+        "line": 924,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = process  # a subprocess.Popen, not multiprocessing.Process"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/dbase/archiver.py",
+        "line": 1240,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# subprocess.Popen with an explicit command, deliberately not"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/dbase/archiver.py",
+        "line": 1252,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/dbase/strip_chart.py",
+        "line": 19,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(line, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/PBComm.py",
+        "line": 182,
+        "keyword_detected": "eval(",
+        "code_snippet": "args = eval(\"dict(\" + m.group(1) + \")\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/alvradetectors.py",
+        "line": 68,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(\" \".join(cmd), shell=True)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/cameras_swissfel.py",
+        "line": 170,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/cameras_swissfel.py",
+        "line": 174,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(line, shell=True)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/cameras_swissfel.py",
+        "line": 312,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "this is a plain subprocess.Popen equivalent of the same idea, not"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/cameras_swissfel.py",
+        "line": 325,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Returns the subprocess.Popen handle.\"\"\""
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/cameras_swissfel.py",
+        "line": 344,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(argv, env=env)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/cameras_swissfel.py",
+        "line": 842,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "for the why/trade-off in full; returns its subprocess.Popen handle"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/detectors.py",
+        "line": 58,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(\" \".join(cmd), shell=True)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/motors.py",
+        "line": 790,
+        "keyword_detected": "eval(",
+        "code_snippet": "cid = self.pc.start_eval(f\"{self.name_pshell}.moveAsync({float(value)})&\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/motors.py",
+        "line": 825,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.pc.start_eval(f\"{self.name_pshell}.stop()&\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/newport_xps.py",
+        "line": 129,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "_sock: socket.socket | None = None"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/devices_general/smaract.py",
+        "line": 302,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(\" \".join(cmd), shell=True)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/elements/assembly.py",
+        "line": 1107,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/elements/assembly.py",
+        "line": 1111,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(line, shell=True)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/endstations/bernina_diffractometers.py",
+        "line": 1289,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(\" \".join(cmd), shell=True)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/endstations/bernina_robots.py",
+        "line": 309,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.pc.eval(\":restart\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/endstations/bernina_robots.py",
+        "line": 389,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.pc.eval(\":abort\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/endstations/bernina_robots.py",
+        "line": 680,
+        "keyword_detected": "eval(",
+        "code_snippet": "cid = self.pc.start_eval(f\"{cmd}\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/manual_control/remote/box_link.py",
+        "line": 96,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/manual_control/remote/transport.py",
+        "line": 71,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "a, b = socket.socketpair()"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/manual_control/remote/transport.py",
+        "line": 80,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/motion/deltatau_config/cfgfile.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "args[key] = ast.literal_eval(raw)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/motion/deltatau_config/cli.py",
+        "line": 56,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(cfg)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/motion/deltatau_config/verify.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "exp_num = float(expected) if not isinstance(expected, str) else float(eval(expected, {}, {}))"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/pshell/client.py",
+        "line": 260,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self,statement):"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/pshell/client.py",
+        "line": 290,
+        "keyword_detected": "eval(",
+        "code_snippet": "def start_eval(self,statement):"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/robots/simulation.py",
+        "line": 198,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _cmd_eval(self, args):"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/startup_inline.py",
+        "line": 86,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"import eco.{scope} as {scope}\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/startup_inline.py",
+        "line": 87,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"from eco.{scope} import *\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/tools/screen_panel.py",
+        "line": 28,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# self.proc = subprocess.Popen([\"screen_panel\",\"-console\"],stdout=subprocess.PIPE)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/config.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(f\"obj.{self.sub_name}\").get_current_value()"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/config.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(f\"obj.{self.sub_name}\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/elog.py",
+        "line": 147,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/elog_scilog.py",
+        "line": 192,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/strip_plot.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "`strip_plot` - deliberately plain `subprocess.Popen`, not"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/strip_plot.py",
+        "line": 250,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/svg_interactor.py",
+        "line": 614,
+        "keyword_detected": "exec(",
+        "code_snippet": "QApplication.exec() raises \"Must be called from the main thread\""
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/svg_interactor.py",
+        "line": 621,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec() and blocks until the window is closed."
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/svg_interactor.py",
+        "line": 761,
+        "keyword_detected": "exec(",
+        "code_snippet": "# closing the window returns control. .exec() (not the legacy"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/svg_interactor.py",
+        "line": 763,
+        "keyword_detected": "exec(",
+        "code_snippet": "app.exec()"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/svg_interactor.py",
+        "line": 892,
+        "keyword_detected": "exec(",
+        "code_snippet": "# QApplication.exec() is already running (EcoDesktopApp owns"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/utilities_instruments.py",
+        "line": 28,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(istr)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/utilities/utilities_instruments.py",
+        "line": 29,
+        "keyword_detected": "eval(",
+        "code_snippet": "tdev = eval(\"_%s(Id='%s',*args,**kwargs)\" % (eco_type_name, devId))"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/widgets/app_launchers.py",
+        "line": 115,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "it), or the started subprocess.Popen / None (attached instead of"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/widgets/app_launchers.py",
+        "line": 172,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([\"jupyter\", \"lab\", str(notebook_path)], env=env)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/widgets/app_launchers.py",
+        "line": 208,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Returns the started subprocess.Popen, or None if it attached to an"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/widgets/app_launchers.py",
+        "line": 227,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([\"jupyter\", \"lab\", notebook_path])"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/widgets/app_launchers.py",
+        "line": 248,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Returns the subprocess.Popen (freshly started, or the pre-existing"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/widgets/app_launchers.py",
+        "line": 266,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/widgets/dashboard_qt.py",
+        "line": 416,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"designer\", str(path)])"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/widgets/dashboard_qt.py",
+        "line": 550,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return QtCore.QByteArray(base64.b64decode(s.encode(\"ascii\")))"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco/widgets/desktop_app.py",
+        "line": 116,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return QtCore.QByteArray(base64.b64decode(s.encode(\"ascii\")))"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(cmd, missing_hint):"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 160,
+        "keyword_detected": "exec(",
+        "code_snippet": "_exec("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 182,
+        "keyword_detected": "exec(",
+        "code_snippet": "_exec("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 196,
+        "keyword_detected": "exec(",
+        "code_snippet": "_exec("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 227,
+        "keyword_detected": "exec(",
+        "code_snippet": "_exec("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 372,
+        "keyword_detected": "exec(",
+        "code_snippet": "Process, not a thread): _run_jupyterlab always ends by exec()ing over"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 530,
+        "keyword_detected": "exec(",
+        "code_snippet": "# thread) *before* the exec() calls below replace this process,"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 539,
+        "keyword_detected": "exec(",
+        "code_snippet": "_exec("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 552,
+        "keyword_detected": "exec(",
+        "code_snippet": "_exec("
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 565,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(lab_cmd)"
+      },
+      {
+        "file": "eco_suite-0.1.0/eco_cli.py",
+        "line": 577,
+        "keyword_detected": "exec(",
+        "code_snippet": "_exec("
+      },
+      {
+        "file": "eco_suite-0.1.0/startup.py",
+        "line": 65,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"import eco.{scope} as {scope}\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/startup.py",
+        "line": 66,
+        "keyword_detected": "exec(",
+        "code_snippet": "# exec(f'{scope}.init(lazy=ecocnf.startup_lazy)')"
+      },
+      {
+        "file": "eco_suite-0.1.0/startup.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"from eco.{scope} import *\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/startup_inline.py",
+        "line": 75,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"import eco.{scope} as {scope}\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/startup_inline.py",
+        "line": 76,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"from eco.{scope} import *\")"
+      },
+      {
+        "file": "eco_suite-0.1.0/startup_inline_new.py",
+        "line": 16,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec("
+      },
+      {
+        "file": "eco_suite-0.1.0/tests/test_bernina_robot_server.py",
+        "line": 223,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_move_without_eval(self, client):"
+      },
+      {
+        "file": "eco_suite-0.1.0/tests/test_cameras_swissfel.py",
+        "line": 169,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"subprocess.Popen\", _FakePopen)"
+      },
+      {
+        "file": "eco_suite-0.1.0/tests/test_desktop_app.py",
+        "line": 1431,
+        "keyword_detected": "exec(",
+        "code_snippet": "def fake_exec(self):"
+      },
+      {
+        "file": "eco_suite-0.1.0/tests/test_scan_launcher_qt.py",
+        "line": 219,
+        "keyword_detected": "exec(",
+        "code_snippet": "def fake_exec(self):"
+      },
+      {
+        "file": "eco_suite-0.1.0/tests/test_scan_launcher_qt.py",
+        "line": 537,
+        "keyword_detected": "exec(",
+        "code_snippet": "def fake_exec(dialog_self):"
+      }
+    ]
+  },
+  {
+    "package_name": "slowfw",
+    "checked_at": "2026-09-07T20:49:33.284730",
+    "download_url": "https://files.pythonhosted.org/packages/57/29/6a604d23029ca8f7b3fea3e02572a4091381af11d07e5531af4e4bc02dea/slowfw-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "slowfw-0.1.0/src/slowfw/templating.py",
+        "line": 326,
+        "keyword_detected": "eval(",
+        "code_snippet": "scope[target.strip()] = self._eval(expression.strip(), scope)"
+      },
+      {
+        "file": "slowfw-0.1.0/src/slowfw/templating.py",
+        "line": 343,
+        "keyword_detected": "eval(",
+        "code_snippet": "if self._eval(node.payload, scope):"
+      },
+      {
+        "file": "slowfw-0.1.0/src/slowfw/templating.py",
+        "line": 346,
+        "keyword_detected": "eval(",
+        "code_snippet": "if self._eval(condition, scope):"
+      },
+      {
+        "file": "slowfw-0.1.0/src/slowfw/templating.py",
+        "line": 353,
+        "keyword_detected": "eval(",
+        "code_snippet": "iterable = list(self._eval(node.payload, scope) or [])"
+      },
+      {
+        "file": "slowfw-0.1.0/src/slowfw/templating.py",
+        "line": 368,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = self._eval(expression, scope)"
+      },
+      {
+        "file": "slowfw-0.1.0/src/slowfw/templating.py",
+        "line": 375,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = fn(value, *[self._eval(a, scope) for a in args])"
+      },
+      {
+        "file": "slowfw-0.1.0/src/slowfw/templating.py",
+        "line": 381,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(self, source: str, scope: t.Mapping[str, t.Any]) -> t.Any:"
+      },
+      {
+        "file": "slowfw-0.1.0/src/slowfw/templating.py",
+        "line": 393,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(source, {\"__builtins__\": _SAFE_BUILTINS}, local)"
+      }
+    ]
   }
 ]
