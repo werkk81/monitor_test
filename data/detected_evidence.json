@@ -32196,5 +32196,89 @@
         "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
       }
     ]
+  },
+  {
+    "package_name": "tgrep-deployv",
+    "checked_at": "2026-09-08T22:46:02.694421",
+    "download_url": "https://files.pythonhosted.org/packages/81/ee/edcb9b24d2c6bc93a904066845040275c27b4db65e21acb383778e2c357b/tgrep_deployv-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tgrep_deployv-0.1.1/src/tgrep_deployv/indexer.py",
+        "line": 536,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "gbkomi-filter",
+    "checked_at": "2026-09-08T22:46:03.165409",
+    "download_url": "https://files.pythonhosted.org/packages/ed/6b/1e14245bca8b7add6dff1a599d00272b129082b0f1a79199285e10c2d628/gbkomi_filter-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gbkomi_filter-1.0.0/src/gbkomi_filter/guard.py",
+        "line": 176,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(value, validate=True).decode(\"utf-8\", errors=\"ignore\")"
+      },
+      {
+        "file": "gbkomi_filter-1.0.0/src/gbkomi_filter/guard.py",
+        "line": 186,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(value, validate=True).decode(\"utf-8\", errors=\"ignore\")"
+      },
+      {
+        "file": "gbkomi_filter-1.0.0/src/gbkomi_filter/utils.py",
+        "line": 20,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(text, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "3d-visualizer",
+    "checked_at": "2026-09-08T22:46:03.691198",
+    "download_url": "https://files.pythonhosted.org/packages/58/fb/249758760b8fa7d430cf8dc43f44e66c45c13541dda10553c4f1357618bb/3d_visualizer-0.4.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "3d_visualizer-0.4.2/ply_visualizer/inspection_files.py",
+        "line": 37,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(chunk['data'], validate=True)"
+      },
+      {
+        "file": "3d_visualizer-0.4.2/ply_visualizer/mcp_server.py",
+        "line": 95,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(png, validate=True)"
+      },
+      {
+        "file": "3d_visualizer-0.4.2/ply_visualizer/mcp_server.py",
+        "line": 263,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return Image(data=base64.b64decode(result[\"png\"], validate=True), format=\"png\")"
+      },
+      {
+        "file": "3d_visualizer-0.4.2/tests/test_mcp.py",
+        "line": 116,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertTrue(base64.b64decode(chunk['data']).startswith(b'ply'))"
+      },
+      {
+        "file": "3d_visualizer-0.4.2/tests/test_mcp.py",
+        "line": 145,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertEqual(b''.join(base64.b64decode(chunk.structured_content['data']) for chunk in chunks), payload)"
+      },
+      {
+        "file": "3d_visualizer-0.4.2/tests/test_remote.py",
+        "line": 64,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertEqual(base64.b64decode(data.structured_content[\"data\"]), DATA)"
+      }
+    ]
   }
 ]
