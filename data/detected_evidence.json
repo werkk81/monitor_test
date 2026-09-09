@@ -32280,5 +32280,75 @@
         "code_snippet": "self.assertEqual(base64.b64decode(data.structured_content[\"data\"]), DATA)"
       }
     ]
+  },
+  {
+    "package_name": "ruleofthumb-rot",
+    "checked_at": "2026-09-09T00:39:20.593615",
+    "download_url": "https://files.pythonhosted.org/packages/27/35/fbb264850d192bab18ed9dacae3ebe8e036d8981a1df463f89886296746d/ruleofthumb_rot-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ruleofthumb_rot-0.0.1/src/ruleofthumb/embed.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = model.to(device).eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "nexusaicap",
+    "checked_at": "2026-09-09T00:39:20.842907",
+    "download_url": "https://files.pythonhosted.org/packages/c6/c9/527f564903d95d7935495808e3529f69f96a7115588ff96018ff58206f12/nexusaicap-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nexusaicap-1.0.0/nexusai/tools/crypto_tools.py",
+        "line": 16,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "def b64_decode(self, text: str) -> str: return base64.b64decode(text).decode()"
+      },
+      {
+        "file": "nexusaicap-1.0.0/nexusai/tools/math_tools.py",
+        "line": 10,
+        "keyword_detected": "eval(",
+        "code_snippet": "def evaluate(self, expression: str) -> float: return float(eval(expression, {\"__builtins__\": {}}, {\"math\": math, \"pi\": math.pi, \"e\": math.e, \"sqrt\": math.sqrt, \"sin\": math.sin, \"cos\": math.cos, \"tan\": math.tan, \"log\": math.log, \"log10\": math.log10, \"abs\": abs, \"pow\": pow, \"round\": round}))"
+      },
+      {
+        "file": "nexusaicap-1.0.0/nexusai/tools/network_tools.py",
+        "line": 24,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM); s.settimeout(timeout)"
+      },
+      {
+        "file": "nexusaicap-1.0.0/nexusai/tools/network_tools.py",
+        "line": 37,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "nexusaicap-1.0.0/nexusai/tools/python_tools.py",
+        "line": 25,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compiled, self._globals, self._locals)"
+      },
+      {
+        "file": "nexusaicap-1.0.0/nexusai/tools/python_tools.py",
+        "line": 28,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(compile(last_expr, \"<nexusai>\", \"eval\"), self._globals, self._locals)"
+      },
+      {
+        "file": "nexusaicap-1.0.0/nexusai/tools/python_tools.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(expression, self._globals, self._locals)"
+      },
+      {
+        "file": "nexusaicap-1.0.0/nexusai/tools/shell_tools.py",
+        "line": 31,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, cwd=cwd)"
+      }
+    ]
   }
 ]
