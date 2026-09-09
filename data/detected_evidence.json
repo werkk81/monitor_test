@@ -32350,5 +32350,89 @@
         "code_snippet": "proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, cwd=cwd)"
       }
     ]
+  },
+  {
+    "package_name": "odbc2deltalake2",
+    "checked_at": "2026-09-09T20:05:51.839314",
+    "download_url": "https://files.pythonhosted.org/packages/55/66/d42208f5de3e034681257892acde41f9dc3d138a700a62330beb6b1ddbe8/odbc2deltalake2-0.1.0a0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "odbc2deltalake2-0.1.0a0/odbc2deltalake2/reader/adbc_reader.py",
+        "line": 38,
+        "keyword_detected": "exec(",
+        "code_snippet": "def supports_proc_exec(self):"
+      },
+      {
+        "file": "odbc2deltalake2-0.1.0a0/odbc2deltalake2/reader/odbc_reader.py",
+        "line": 39,
+        "keyword_detected": "exec(",
+        "code_snippet": "def supports_proc_exec(self):"
+      },
+      {
+        "file": "odbc2deltalake2-0.1.0a0/odbc2deltalake2/reader/reader.py",
+        "line": 40,
+        "keyword_detected": "exec(",
+        "code_snippet": "def supports_proc_exec(self) -> bool:"
+      },
+      {
+        "file": "odbc2deltalake2-0.1.0a0/odbc2deltalake2/reader/spark_reader.py",
+        "line": 184,
+        "keyword_detected": "exec(",
+        "code_snippet": "def supports_proc_exec(self):"
+      }
+    ]
+  },
+  {
+    "package_name": "viajante",
+    "checked_at": "2026-09-09T20:05:52.438877",
+    "download_url": "https://files.pythonhosted.org/packages/1a/72/e5c454ec706078b27c7f100a5c3c8ab95063f1ebc8b545a2ad063b76cc15/viajante-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "viajante-1.0.0/tests/test_google_flights.py",
+        "line": 254,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertIn(b\"\\x28\\x02\", base64.b64decode(encoded))"
+      },
+      {
+        "file": "viajante-1.0.0/tests/test_google_flights.py",
+        "line": 266,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "packed = base64.b64decode(encoded)"
+      },
+      {
+        "file": "viajante-1.0.0/tests/test_google_flights.py",
+        "line": 269,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "two_adults = base64.b64decode(GOLDEN_TFS_TWO_ADULTS)"
+      },
+      {
+        "file": "viajante-1.0.0/tests/test_google_flights.py",
+        "line": 286,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "fields = _proto_fields(base64.b64decode(encoded))"
+      },
+      {
+        "file": "viajante-1.0.0/tests/test_google_flights.py",
+        "line": 305,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "fields = _proto_fields(base64.b64decode(encoded))"
+      }
+    ]
+  },
+  {
+    "package_name": "fairtfm",
+    "checked_at": "2026-09-09T20:05:52.559725",
+    "download_url": "https://files.pythonhosted.org/packages/dd/b4/4eb920726c9ce48d0389e9d895b007a7256053688b71790d4cf7fdd10547/fairtfm-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fairtfm-1.0.0/fairtfm/utils.py",
+        "line": 127,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
   }
 ]
