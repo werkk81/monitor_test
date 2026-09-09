@@ -32434,5 +32434,69 @@
         "code_snippet": "model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "insta360-rs",
+    "checked_at": "2026-09-09T22:27:30.644923",
+    "download_url": "https://files.pythonhosted.org/packages/40/67/b140879520527dd925dfde457a1a1a15ebc51d8a5d8229ee44e8f896bfe4/insta360_rs-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "insta360_rs-0.1.0/src-python/tests/test_public_api.py",
+        "line": 40,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(\"from insta360_rs import *\", namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "kaede-bot",
+    "checked_at": "2026-09-09T22:27:30.982590",
+    "download_url": "https://files.pythonhosted.org/packages/12/e2/d179eebd80aaea1daaaffe400229e2e405254037aa0aa120ac86d28d69f0/kaede_bot-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kaede_bot-1.0.0/kaede_bot/audio.py",
+        "line": 106,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "kaede_bot-1.0.0/kaede_bot/client.py",
+        "line": 243,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "samples = base64.b64decode(waveform, validate=True)"
+      },
+      {
+        "file": "kaede_bot-1.0.0/kaede_bot/e2ee.py",
+        "line": 160,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode("
+      },
+      {
+        "file": "kaede_bot-1.0.0/kaede_bot/e2ee.py",
+        "line": 1312,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode("
+      },
+      {
+        "file": "kaede_bot-1.0.0/kaede_bot/e2ee.py",
+        "line": 3047,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode("
+      },
+      {
+        "file": "kaede_bot-1.0.0/kaede_bot/e2ee.py",
+        "line": 3835,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "samples = base64.b64decode(waveform, validate=True)"
+      },
+      {
+        "file": "kaede_bot-1.0.0/kaede_bot/state.py",
+        "line": 205,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode("
+      }
+    ]
   }
 ]
