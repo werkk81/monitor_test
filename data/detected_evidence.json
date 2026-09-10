@@ -32530,5 +32530,127 @@
         "code_snippet": "self._process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "pysonarlint",
+    "checked_at": "2026-09-10T20:07:16.058696",
+    "download_url": "https://files.pythonhosted.org/packages/cf/d6/4e242e3e28a3e19e8cdb8a4a9f907fe5491784935101df5005be88705422/pysonarlint-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pysonarlint-0.1.0/src/pysonarlint/auth.py",
+        "line": 160,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = base64.b64decode(str(outer.get(\"data\", \"\")))"
+      },
+      {
+        "file": "pysonarlint-0.1.0/src/pysonarlint/auth.py",
+        "line": 399,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "pysonarlint-0.1.0/src/pysonarlint/lsp.py",
+        "line": 119,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "pysonarlint-0.1.0/src/pysonarlint/lsp.py",
+        "line": 142,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "elengtis",
+    "checked_at": "2026-09-10T20:07:16.164687",
+    "download_url": "https://files.pythonhosted.org/packages/b4/ce/1d22bb6fc3c2b7975c4fc421a9d1c06d2f43923fd6503c4c2e89bb4e8dcb/elengtis-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "elengtis-0.1.0/src/elengtis/scenario.py",
+        "line": 184,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "snapshot = base64.b64decode(encoded, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "aiqe",
+    "checked_at": "2026-09-10T20:07:16.314891",
+    "download_url": "https://files.pythonhosted.org/packages/dd/a7/17e1a300bcad8ab209e098a50a9855680774f5f628682ce9074798567eb3/aiqe-0.1.0a0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aiqe-0.1.0a0/src/aiqe/gitq.py",
+        "line": 367,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "aiqe-0.1.0a0/src/aiqe/gitwrite.py",
+        "line": 208,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "aiqe-0.1.0a0/src/aiqe/receipt.py",
+        "line": 684,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "display_bytes(base64.b64decode(value))"
+      },
+      {
+        "file": "aiqe-0.1.0a0/src/aiqe/task.py",
+        "line": 473,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return [base64.b64decode(entry[\"path_b64\"]) for entry in record[\"owned_paths\"]]"
+      },
+      {
+        "file": "aiqe-0.1.0a0/src/aiqe/validators.py",
+        "line": 347,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "kpihx-bw",
+    "checked_at": "2026-09-10T20:07:16.590336",
+    "download_url": "https://files.pythonhosted.org/packages/d5/d7/63f68ab397bdfc60e37705076cef1e20fac65fdcb4e0ac54961c9f77b513/kpihx_bw-4.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kpihx_bw-4.0.0/src/k_bw/cli_bridge.py",
+        "line": 155,
+        "keyword_detected": "exec(",
+        "code_snippet": "Build a Typer command wrapper with a DYNAMIC SIGNATURE using exec()."
+      },
+      {
+        "file": "kpihx_bw-4.0.0/src/k_bw/cli_bridge.py",
+        "line": 291,
+        "keyword_detected": "exec(",
+        "code_snippet": "# Pydantic V2: resolved hints injected so TypeAdapter can work inside exec()"
+      },
+      {
+        "file": "kpihx_bw-4.0.0/src/k_bw/cli_bridge.py",
+        "line": 312,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(func_def, namespace)"
+      },
+      {
+        "file": "kpihx_bw-4.0.0/src/k_bw/cli_bridge.py",
+        "line": 333,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(loose_func_def, namespace)"
+      },
+      {
+        "file": "kpihx_bw-4.0.0/src/k_bw/unlock_lease.py",
+        "line": 109,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "session_key=bytearray(base64.b64decode(payload[\"session_key\"])),"
+      }
+    ]
   }
 ]
