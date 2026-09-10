@@ -32652,5 +32652,57 @@
         "code_snippet": "session_key=bytearray(base64.b64decode(payload[\"session_key\"])),"
       }
     ]
+  },
+  {
+    "package_name": "piecolor",
+    "checked_at": "2026-09-10T22:29:42.604291",
+    "download_url": "https://files.pythonhosted.org/packages/47/66/6247a21561b69680fbcf9dc996c3c26162855d28e7bbaae1d8be48ed409d/piecolor-3.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "piecolor-3.1.1/src/piethon/system/processes.py",
+        "line": 127,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = eval('.'.join([\"self\", key.upper()]))"
+      },
+      {
+        "file": "piecolor-3.1.1/src/piethon/system/processes.py",
+        "line": 447,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = eval('.'.join([\"item\", key.upper()]))"
+      },
+      {
+        "file": "piecolor-3.1.1/src/piethon/term/sgr.py",
+        "line": 808,
+        "keyword_detected": "eval(",
+        "code_snippet": "attr = eval('.'.join([\"self\",vname]))"
+      },
+      {
+        "file": "piecolor-3.1.1/src/piethon/term/sgr.py",
+        "line": 809,
+        "keyword_detected": "eval(",
+        "code_snippet": "rtta = eval('.'.join([\"self\",reset.upper()]))"
+      },
+      {
+        "file": "piecolor-3.1.1/src/piethon/term/tee.py",
+        "line": 118,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# tee = subprocess.Popen([\"tee\", \"log.txt\"], stdin=subprocess.PIPE)"
+      }
+    ]
+  },
+  {
+    "package_name": "verimor-sdk",
+    "checked_at": "2026-09-10T22:29:42.795772",
+    "download_url": "https://files.pythonhosted.org/packages/86/6b/03836d38115002558b016b06c91b8e4c8fcb76213fddb7397264e42be4c9/verimor_sdk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "verimor_sdk-0.1.0/tests/test_runtime_contract.py",
+        "line": 262,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      }
+    ]
   }
 ]
