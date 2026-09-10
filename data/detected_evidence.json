@@ -32498,5 +32498,37 @@
         "code_snippet": "key = base64.b64decode("
       }
     ]
+  },
+  {
+    "package_name": "alenia-fuse",
+    "checked_at": "2026-09-10T00:22:34.667275",
+    "download_url": "https://files.pythonhosted.org/packages/b4/81/224df6aa98d1579afafbd6222a18d8bb2354476fb2ba56b6823010173e6f/alenia_fuse-2.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "alenia_fuse-2.0.1/src/fuse/ffmpeg/backend.py",
+        "line": 22,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# We use subprocess.Popen to capture output live if we want to handle progress."
+      },
+      {
+        "file": "alenia_fuse-2.0.1/src/fuse/ffmpeg/backend.py",
+        "line": 26,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "alenia_fuse-2.0.1/src/fuse/jobs/manager.py",
+        "line": 65,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "alenia_fuse-2.0.1/src/fuse/jobs/manager.py",
+        "line": 77,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      }
+    ]
   }
 ]
