@@ -32718,5 +32718,19 @@
         "code_snippet": "exec(code, scope)"
       }
     ]
+  },
+  {
+    "package_name": "doploy-cli",
+    "checked_at": "2026-09-11T20:06:22.773981",
+    "download_url": "https://files.pythonhosted.org/packages/d5/5d/cc2dd915b6b7ed4802f3a18653c175da84a8e24cafe15cbbb8e86d8b834d/doploy_cli-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "doploy_cli-0.2.1/doploy_cli/main.py",
+        "line": 141,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      }
+    ]
   }
 ]
