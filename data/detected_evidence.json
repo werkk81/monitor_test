@@ -32704,5 +32704,19 @@
         "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
       }
     ]
+  },
+  {
+    "package_name": "pictlang",
+    "checked_at": "2026-09-11T00:21:24.037901",
+    "download_url": "https://files.pythonhosted.org/packages/b9/6c/f216da7c4ce7d08bb5b754ca12593cdc04cbec8170bf0417ecadbfe5eab3/pictlang-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pictlang-0.2.1/pictlang/sandbox.py",
+        "line": 59,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, scope)"
+      }
+    ]
   }
 ]
