@@ -32732,5 +32732,39 @@
         "code_snippet": "with socket.socket() as s:"
       }
     ]
+  },
+  {
+    "package_name": "wildlocate",
+    "checked_at": "2026-09-11T22:29:05.447022",
+    "download_url": "https://files.pythonhosted.org/packages/62/51/87c3fb56084c2008052719e81a1adfa157aa52671795197fb58ec90e3112/wildlocate-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wildlocate-0.1.0/wildlocate/gui/app.py",
+        "line": 355,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "wildlocate-0.1.0/wildlocate/gui/app.py",
+        "line": 561,
+        "keyword_detected": "exec(",
+        "code_snippet": "sys.exit(app.exec())"
+      }
+    ]
+  },
+  {
+    "package_name": "rootfig",
+    "checked_at": "2026-09-11T22:29:05.631780",
+    "download_url": "https://files.pythonhosted.org/packages/da/a6/fcb23ee068e8d293cac061cd5507aae214c12719a48645e81ab9a02d029f/rootfig-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rootfig-0.1.0/src/rootfig/expressions/parser.py",
+        "line": 332,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(self._code, {\"__builtins__\": {}}, namespace)  # validated AST"
+      }
+    ]
   }
 ]
