@@ -33492,5 +33492,67 @@
         "code_snippet": "exec(compile(source, 'manifest-check workflow', 'exec'), {})"
       }
     ]
+  },
+  {
+    "package_name": "agentgate-x402",
+    "checked_at": "2026-09-12T21:40:40.018523",
+    "download_url": "https://files.pythonhosted.org/packages/c6/67/875d1567d61331ff0c8819d92bb1f069d4fb0198360b21f2158a7c1efd01/agentgate_x402-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agentgate_x402-1.0.0/agentgate/__init__.py",
+        "line": 64,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "challenge = json.loads(base64.b64decode(challenge_b64))"
+      }
+    ]
+  },
+  {
+    "package_name": "gyomu-python-analysis",
+    "checked_at": "2026-09-12T21:40:40.265895",
+    "download_url": "https://files.pythonhosted.org/packages/bc/f5/04b86179b9af60a59c02657be5e4a074da0aff0ca014a39998db9a1749a1/gyomu_python_analysis-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gyomu_python_analysis-0.2.0/src/gyomu_python_analysis/analysis/analyzers/expression/expr.py",
+        "line": 292,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(value)"
+      },
+      {
+        "file": "gyomu_python_analysis-0.2.0/src/gyomu_python_analysis/analysis/analyzers/expression/expr.py",
+        "line": 302,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(value)"
+      }
+    ]
+  },
+  {
+    "package_name": "pagetrace",
+    "checked_at": "2026-09-12T21:40:40.564058",
+    "download_url": "https://files.pythonhosted.org/packages/e1/0d/84064bdf3d95fdfb38927c417f7f00217c781afd337ec9a4526261039de3/pagetrace-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pagetrace-0.1.0/src/pagetrace/inputs/har.py",
+        "line": 182,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(text, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "nagents-channel-telegram-bot",
+    "checked_at": "2026-09-12T21:40:41.092563",
+    "download_url": "https://files.pythonhosted.org/packages/8b/69/4727cf3c24a1fe6dca6882b1aba793c4e9968dade9c169d15b0c9902f2fd/nagents_channel_telegram_bot-0.1.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nagents_channel_telegram_bot-0.1.0a1/tests/conftest.py",
+        "line": 105,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      }
+    ]
   }
 ]
