@@ -33554,5 +33554,205 @@
         "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
       }
     ]
+  },
+  {
+    "package_name": "agentstreamdeck",
+    "checked_at": "2026-09-12T23:23:44.095019",
+    "download_url": "https://files.pythonhosted.org/packages/7a/ba/b4d5edcb34f68eb6c2a29266f6f3dae14c52e63549fd9c5283fe7cf4e953/agentstreamdeck-2.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agentstreamdeck-2.1.1/ocdeck/harness.py",
+        "line": 73,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "agentstreamdeck-2.1.1/ocdeck/harness.py",
+        "line": 124,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "bridge = subprocess.Popen("
+      },
+      {
+        "file": "agentstreamdeck-2.1.1/ocdeck/harness.py",
+        "line": 167,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(command, cwd=spec[\"cwd\"], env=env)"
+      },
+      {
+        "file": "agentstreamdeck-2.1.1/ocdeck/launcher.py",
+        "line": 88,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "agentstreamdeck-2.1.1/ocdeck/launcher.py",
+        "line": 130,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "agentstreamdeck-2.1.1/tests/test_harness.py",
+        "line": 69,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "bridge = subprocess.Popen("
+      },
+      {
+        "file": "agentstreamdeck-2.1.1/tests/test_system.py",
+        "line": 229,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-c\", \"import time;time.sleep(30)\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "pysqlmut",
+    "checked_at": "2026-09-12T23:23:44.849106",
+    "download_url": "https://files.pythonhosted.org/packages/31/9e/21cfaa3a7f262c5f2fe02939868aed00a715d6f4fa5b30928d94aae20ffa/pysqlmut-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pysqlmut-0.1.0/src/pysqlmut/runner.py",
+        "line": 106,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill(process: subprocess.Popen[Any]) -> None:"
+      },
+      {
+        "file": "pysqlmut-0.1.0/src/pysqlmut/runner.py",
+        "line": 128,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "pysqlmut-0.1.0/src/pysqlmut/runner.py",
+        "line": 135,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(  # noqa: S602 - the user's own test command, run as a shell command on purpose"
+      },
+      {
+        "file": "pysqlmut-0.1.0/src/pysqlmut/runner.py",
+        "line": 193,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: subprocess.Popen[str] | None = None"
+      },
+      {
+        "file": "pysqlmut-0.1.0/src/pysqlmut/runner.py",
+        "line": 196,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _start(self) -> subprocess.Popen[str]:"
+      },
+      {
+        "file": "pysqlmut-0.1.0/src/pysqlmut/runner.py",
+        "line": 201,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen(  # noqa: S603 - the project's own Python, as configured by the user"
+      }
+    ]
+  },
+  {
+    "package_name": "httk-serve",
+    "checked_at": "2026-09-12T23:23:45.327225",
+    "download_url": "https://files.pythonhosted.org/packages/52/4e/0f9b7374cd34a479a1dfffeb454ef53ee9668f9ffc5f0fb46fe017983b9f/httk_serve-2.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "httk_serve-2.1.0/src/httk/serve/http/webhook.py",
+        "line": 180,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(address.family, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "httk_serve-2.1.0/src/httk/serve/web/templating/_legacy_formatter.py",
+        "line": 95,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed_callargs[callarg_idx] = ast.literal_eval(str(parsed_callargs[callarg_idx]))"
+      },
+      {
+        "file": "httk_serve-2.1.0/src/httk/serve/web/widgets/table.py",
+        "line": 803,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(padded, altchars=b\"-_\", validate=True)"
+      },
+      {
+        "file": "httk_serve-2.1.0/tests/test_dsp_schemas.py",
+        "line": 97,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", blocked)"
+      },
+      {
+        "file": "httk_serve-2.1.0/tests/test_dsp_schemas.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_registry_rejects_unknown_schema_without_retrieval() -> None:"
+      },
+      {
+        "file": "httk_serve-2.1.0/tests/test_examples.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(node.value)"
+      }
+    ]
+  },
+  {
+    "package_name": "the-mill",
+    "checked_at": "2026-09-12T23:23:45.727797",
+    "download_url": "https://files.pythonhosted.org/packages/d9/f7/fa76402f6f157200719b84e2d9de2120fe845a8d62e5b0c929d3b3b54173/the_mill-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "the_mill-0.2.0/tests/test_coord.py",
+        "line": 343,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(600)\"])"
+      },
+      {
+        "file": "the_mill-0.2.0/tests/test_coord.py",
+        "line": 394,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(600)\"])"
+      },
+      {
+        "file": "the_mill-0.2.0/tests/test_coord.py",
+        "line": 2406,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dummy = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(600)\"])"
+      },
+      {
+        "file": "the_mill-0.2.0/tests/test_coord.py",
+        "line": 2470,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, str(Path(__file__).resolve())], env=env)"
+      },
+      {
+        "file": "the_mill-0.2.0/tests/test_coord.py",
+        "line": 2518,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def spawn(owner: str, resource: str) -> tuple[subprocess.Popen, Path]:"
+      },
+      {
+        "file": "the_mill-0.2.0/tests/test_coord.py",
+        "line": 2530,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, str(Path(__file__).resolve())], env=env)"
+      },
+      {
+        "file": "the_mill-0.2.0/tests/test_coord.py",
+        "line": 2633,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child_a = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(600)\"])"
+      },
+      {
+        "file": "the_mill-0.2.0/tests/test_coord.py",
+        "line": 2634,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child_b = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(600)\"])"
+      },
+      {
+        "file": "the_mill-0.2.0/tests/test_idle_wake.py",
+        "line": 99,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      }
+    ]
   }
 ]
