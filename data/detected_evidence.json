@@ -33090,5 +33090,407 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "nfit",
+    "checked_at": "2026-09-12T19:41:40.274704",
+    "download_url": "https://files.pythonhosted.org/packages/44/0c/e6ffb0be18f59ecc394aeb386f04822213e79c8f2b96905ba7aa9b433b5f/nfit-0.89.13.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nfit-0.89.13/src/nfit/analysis_gui.py",
+        "line": 267,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/app_updates.py",
+        "line": 268,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/app_updates.py",
+        "line": 296,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/app_updates_gui.py",
+        "line": 126,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/app_updates_gui.py",
+        "line": 194,
+        "keyword_detected": "exec(",
+        "code_snippet": "if box.exec() == QtWidgets.QMessageBox.StandardButton.Yes:"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/brillouin_zone.py",
+        "line": 646,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"    app.exec()\","
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/electronic_matrix.py",
+        "line": 297,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"    app.exec()\","
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/file_dialogs.py",
+        "line": 109,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/metadata_dimensions_gui.py",
+        "line": 439,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/model_geometry.py",
+        "line": 428,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"    app.exec()\","
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/model_plots.py",
+        "line": 1989,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"        app.exec()\","
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/model_plots.py",
+        "line": 2013,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"        app.exec()\","
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/performance_benchmark.py",
+        "line": 214,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdout=log, stderr=log)"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/performance_gui.py",
+        "line": 223,
+        "keyword_detected": "exec(",
+        "code_snippet": "BenchmarkDialog(self, apply=apply).exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_coordinates.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(stripped)"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_dataset_panels.py",
+        "line": 1089,
+        "keyword_detected": "exec(",
+        "code_snippet": ").exec())"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 3105,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self):"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 3106,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self.dialog.exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 6522,
+        "keyword_detected": "exec(",
+        "code_snippet": "return int(self.app.exec())"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 7136,
+        "keyword_detected": "exec(",
+        "code_snippet": "message.exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 7166,
+        "keyword_detected": "exec(",
+        "code_snippet": "message.exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 7193,
+        "keyword_detected": "exec(",
+        "code_snippet": "message.exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 9929,
+        "keyword_detected": "exec(",
+        "code_snippet": "PreferencesDialog(self.window).exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 12452,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.DialogCode.Accepted or dialog.result is None:"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 15465,
+        "keyword_detected": "exec(",
+        "code_snippet": "menu.exec(global_pos)"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 15579,
+        "keyword_detected": "exec(",
+        "code_snippet": "message.exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 18754,
+        "keyword_detected": "exec(",
+        "code_snippet": "drag.exec(QtCore.Qt.DropAction.MoveAction | QtCore.Qt.DropAction.CopyAction)"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 18850,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"open\", \"-R\", str(path)])"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_gui.py",
+        "line": 19658,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(stripped)"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_import_dialogs.py",
+        "line": 128,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_import_dialogs.py",
+        "line": 444,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/project_io.py",
+        "line": 84,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = zlib.decompress(base64.b64decode(payload[\"data\"]))"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/qt_brillouin_zone.py",
+        "line": 59,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/qt_slice_viewer.py",
+        "line": 460,
+        "keyword_detected": "exec(",
+        "code_snippet": "return int(self.app.exec())"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/qt_volume_viewer.py",
+        "line": 105,
+        "keyword_detected": "exec(",
+        "code_snippet": "message.exec()"
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/raw_dgs.py",
+        "line": 951,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval("
+      },
+      {
+        "file": "nfit-0.89.13/src/nfit/raw_dgs.py",
+        "line": 1116,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(compile(tree, \"<idf-logfile>\", \"eval\"), {\"__builtins__\": {}}, {\"value\": float(value)})"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_app_distribution.py",
+        "line": 74,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec((root / \"docs/conf.py\").read_text(), config)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_composite_spectral.py",
+        "line": 144,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"composite.py\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_electronic_builder.py",
+        "line": 374,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"<builder-script>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_electronic_builder.py",
+        "line": 508,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"<hopping-builder-script>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_electronic_response.py",
+        "line": 1180,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"<lindhard-plot>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_electronic_response.py",
+        "line": 1268,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"<lindhard-convergence>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_electronic_response.py",
+        "line": 1924,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"<stoner-rpa-plot>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_electronic_spin.py",
+        "line": 202,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"<spin-builder-script>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_electronic_structure.py",
+        "line": 1040,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, f\"<tight-binding-{plot.key}>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_electronic_structure.py",
+        "line": 1096,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"<tight-binding-tetrahedron-dos>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_metadata_dimensions.py",
+        "line": 129,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"background.py\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_metadata_dimensions.py",
+        "line": 343,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"composite.py\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_performance.py",
+        "line": 195,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script.read_text(), str(script), \"exec\"), {\"__file__\": str(script)})"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_project_explorer.py",
+        "line": 2615,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self):"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_project_explorer.py",
+        "line": 2697,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self):"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_project_models.py",
+        "line": 945,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, \"<tight-binding-structure>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_workflow.py",
+        "line": 457,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(script, namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_workflow.py",
+        "line": 590,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(script, namespace)"
+      },
+      {
+        "file": "nfit-0.89.13/tests/test_workflow.py",
+        "line": 665,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(script, namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "authmate",
+    "checked_at": "2026-09-12T19:41:40.307422",
+    "download_url": "https://files.pythonhosted.org/packages/cc/93/2d02cc85b58da47d0f6f00d1b48ecb08a570d7678ff9e7ea5d3f9cf33fd6/authmate-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "authmate-0.1.0/tests/integration/test_documentation.py",
+        "line": 15,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(block, \"README.md\", \"exec\"), namespace)  # noqa: S102"
+      },
+      {
+        "file": "authmate-0.1.0/tests/integration/test_documentation.py",
+        "line": 24,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(block, \"docs/quickstart.md\", \"exec\"), namespace)  # noqa: S102"
+      }
+    ]
+  },
+  {
+    "package_name": "tiinyapp-farm",
+    "checked_at": "2026-09-12T19:41:40.374928",
+    "download_url": "https://files.pythonhosted.org/packages/d6/be/48c30f82ce53978fea623777e28884a376b655a4f2580731a61c9c004812/tiinyapp_farm-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tiinyapp_farm-0.1.0/farm/farm.py",
+        "line": 864,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, cwd=root, env=env, stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "tiinyapp_farm-0.1.0/tests/test_farm.py",
+        "line": 743,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch('farm.farm.subprocess.Popen') as spawn:"
+      },
+      {
+        "file": "tiinyapp_farm-0.1.0/tests/test_submission.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "'import os as operating\\noperating.system(\"x\")', 'eval(\"1\")',"
+      },
+      {
+        "file": "tiinyapp_farm-0.1.0/tests/test_submission.py",
+        "line": 81,
+        "keyword_detected": "exec(",
+        "code_snippet": "'import builtins as b\\nb.exec(\"x\")', 'exec(\"x\")',"
+      },
+      {
+        "file": "tiinyapp_farm-0.1.0/tests/test_submission.py",
+        "line": 236,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, 'manifest-check workflow', 'exec'), {})"
+      }
+    ]
   }
 ]
