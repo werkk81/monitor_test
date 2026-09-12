@@ -32766,5 +32766,329 @@
         "code_snippet": "result = eval(self._code, {\"__builtins__\": {}}, namespace)  # validated AST"
       }
     ]
+  },
+  {
+    "package_name": "tombstone-erase",
+    "checked_at": "2026-09-12T00:26:48.298381",
+    "download_url": "https://files.pythonhosted.org/packages/09/32/315892e7df8db6cd0f40466343b70e07fd62412fc5624f1e41078c5d09d7/tombstone_erase-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/erase/saga.py",
+        "line": 721,
+        "keyword_detected": "exec(",
+        "code_snippet": "self.rt.lineage._exec(f\"DELETE FROM probes WHERE artifact_id IN ({marks})\", batch)"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/gaps.py",
+        "line": 107,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = lineage._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 128,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, sql: str, params: Sequence[Any] = ()) -> _Result:"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 141,
+        "keyword_detected": "exec(",
+        "code_snippet": "# convention, not a guarantee, and _exec() takes the lock for exactly this reason. An"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 157,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"BEGIN\")"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 164,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"ROLLBACK\")"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 169,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"COMMIT\")"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 179,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(s)"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 180,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 185,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 193,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 199,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec(\"SELECT value FROM counters WHERE name = 'seq'\").fetchone()"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 207,
+        "keyword_detected": "exec(",
+        "code_snippet": "cur = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 249,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 265,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 272,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 284,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 293,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 302,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 315,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 327,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 338,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 365,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 372,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 385,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 410,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 418,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 429,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 436,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 442,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 448,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 454,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 465,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 471,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 477,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec(\"SELECT name, payload FROM pins ORDER BY pinned_seq ASC\").fetchall()"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 495,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 506,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 520,
+        "keyword_detected": "exec(",
+        "code_snippet": "row = self._exec(\"SELECT payload FROM traces WHERE trace_id = ?\", (trace_id,)).fetchone()"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 528,
+        "keyword_detected": "exec(",
+        "code_snippet": "node_rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 534,
+        "keyword_detected": "exec(",
+        "code_snippet": "edge_rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/lineage/store.py",
+        "line": 547,
+        "keyword_detected": "exec(",
+        "code_snippet": "mention_rows = self._exec("
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/train/ensemble.py",
+        "line": 86,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.pm.eval()"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/train/ensemble.py",
+        "line": 237,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self) -> ShardEnsemble:"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/train/finetune.py",
+        "line": 198,
+        "keyword_detected": "eval(",
+        "code_snippet": "pm.eval()"
+      },
+      {
+        "file": "tombstone_erase-0.1.0/src/tombstone/train/unlearn.py",
+        "line": 148,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = copy.deepcopy(pm).eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "cancelreq",
+    "checked_at": "2026-09-12T00:26:49.371320",
+    "download_url": "https://files.pythonhosted.org/packages/ef/f4/47cf76fa8f5c7442631df926e025efebd8096dd6b49df4dffa5ac88f312e/cancelreq-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cancelreq-0.1.0/cancelreq/connection.py",
+        "line": 27,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._sock: socket.socket | None = None"
+      },
+      {
+        "file": "cancelreq-0.1.0/cancelreq/connection.py",
+        "line": 43,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(family, kind, proto)"
+      },
+      {
+        "file": "cancelreq-0.1.0/cancelreq/connection.py",
+        "line": 122,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _wait(self, sock: socket.socket, *, read: bool = False, write: bool = False) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "rexs",
+    "checked_at": "2026-09-12T00:26:49.650791",
+    "download_url": "https://files.pythonhosted.org/packages/ec/76/73d57b680722a22e7e736fbd9a35d30806f944d0d4c43eb9ee1c81532236/rexs-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rexs-0.1.0/src/rexs/server.py",
+        "line": 272,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "credentials = base64.b64decode(token, validate=True)"
+      },
+      {
+        "file": "rexs-0.1.0/src/rexs/server.py",
+        "line": 396,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
