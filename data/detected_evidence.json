@@ -33920,5 +33920,159 @@
         "code_snippet": "member.eval()"
       }
     ]
+  },
+  {
+    "package_name": "fruitfly-hashtag",
+    "checked_at": "2026-09-13T23:37:22.839781",
+    "download_url": "https://files.pythonhosted.org/packages/46/2d/c44c8f557b91beb160c42bf614aae656cb2d0839d46b647b85db7689e823/fruitfly_hashtag-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fruitfly_hashtag-0.2.0/lab_flight.py",
+        "line": 20,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "fruitfly_hashtag-0.2.0/lab_server.py",
+        "line": 313,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-u\", str(ROOT / \"lab_train.py\"), \"--steps\", str(steps), \"--seed\", str(seed), '--task', task],"
+      },
+      {
+        "file": "fruitfly_hashtag-0.2.0/tests/test_distribution.py",
+        "line": 144,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "fruitfly_hashtag-0.2.0/tests/test_distribution.py",
+        "line": 148,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-m\", \"fruitfly_lab\", \"--home\", directory,"
+      },
+      {
+        "file": "fruitfly_hashtag-0.2.0/src/fruitfly_lab/portal.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "personal-instagram-library",
+    "checked_at": "2026-09-13T23:37:23.009217",
+    "download_url": "https://files.pythonhosted.org/packages/2f/4c/95704875459e60c18219461b1f1c1fab7d09eba5daf16d2bfdbabaadf055/personal_instagram_library-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "personal_instagram_library-0.1.1/src/pil/export_pwa.py",
+        "line": 183,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"    s = socket.socket()\" & return & ¬"
+      },
+      {
+        "file": "personal_instagram_library-0.1.1/src/pil/export_pwa.py",
+        "line": 189,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen([sys.executable, '-c', 'from http.server import ThreadingHTTPServer as S, SimpleHTTPRequestHandler as H; S(('127.0.0.1', %d), H).serve_forever()' % port], cwd=pwa, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)\" & return & ¬"
+      }
+    ]
+  },
+  {
+    "package_name": "tmux-swap",
+    "checked_at": "2026-09-13T23:37:23.178369",
+    "download_url": "https://files.pythonhosted.org/packages/ba/3d/18cb8575a71042e7d7b788d7e7033aeb872552ac7109ef5e4e152743fbd5/tmux_swap-1.0.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tmux_swap-1.0.2/tmux_swap/main.py",
+        "line": 45,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "pymte",
+    "checked_at": "2026-09-13T23:37:23.441357",
+    "download_url": "https://files.pythonhosted.org/packages/70/ad/e6ed1ce6fd365e4aafc85c31d9f923fb1d9e98bc2c384eb9d444254bb560/pymte-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pymte-1.0.0/src/pymte/design.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "rows = np.asarray(data.eval(subset), dtype=bool)"
+      },
+      {
+        "file": "pymte-1.0.0/src/pymte/mst.py",
+        "line": 459,
+        "keyword_detected": "eval(",
+        "code_snippet": "and all(len(np.unique(np.asarray(sample.eval(e)))) > 1 for e in exprs)"
+      },
+      {
+        "file": "pymte-1.0.0/src/pymte/mtr.py",
+        "line": 302,
+        "keyword_detected": "eval(",
+        "code_snippet": "sp = eval(  # noqa: S307 - the expression comes from the formula"
+      },
+      {
+        "file": "pymte-1.0.0/src/pymte/testfunctions_covariates.py",
+        "line": 40,
+        "keyword_detected": "eval(",
+        "code_snippet": "return {e: float(np.asarray(distribution.eval(e), dtype=float) @ w) for e in exprs}"
+      }
+    ]
+  },
+  {
+    "package_name": "metrolith",
+    "checked_at": "2026-09-13T23:37:24.217995",
+    "download_url": "https://files.pythonhosted.org/packages/90/8d/c409663087abaed990a0969d7a64f3c21c874c7969cfe211bf8ba0486840/metrolith-4.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "metrolith-4.0.0/tests/test_phase_a_cli.py",
+        "line": 83,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process=subprocess.Popen([sys.executable,'-B','-c','import pipeline; pipeline.main()','policy','metrics'],stdout=subprocess.PIPE,stderr=subprocess.PIPE,env=env)"
+      },
+      {
+        "file": "metrolith-4.0.0/tests/test_release_verification.py",
+        "line": 319,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "real_popen = release_verify.subprocess.Popen"
+      },
+      {
+        "file": "metrolith-4.0.0/tests/test_reproduce_preflight_v35.py",
+        "line": 88,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "real_connect = socket.socket.connect"
+      },
+      {
+        "file": "metrolith-4.0.0/tests/test_reproduce_preflight_v35.py",
+        "line": 94,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with patch.object(socket.socket, \"connect\", spy):"
+      },
+      {
+        "file": "metrolith-4.0.0/tools/release_verify.py",
+        "line": 214,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen("
+      },
+      {
+        "file": "metrolith-4.0.0/validation/artifact_io/legacy_cells.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(raw)"
+      },
+      {
+        "file": "metrolith-4.0.0/validation/scripts/independent_inventory_check.py",
+        "line": 88,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      }
+    ]
   }
 ]
