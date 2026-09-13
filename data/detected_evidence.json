@@ -33754,5 +33754,113 @@
         "code_snippet": "sock = socket.socket()"
       }
     ]
+  },
+  {
+    "package_name": "chap-analytics",
+    "checked_at": "2026-09-13T19:54:00.373132",
+    "download_url": "https://files.pythonhosted.org/packages/e3/7a/5435f355b50802fe3d18adf88c0fe0d11e438e0279b416866858835e9c58/chap_analytics-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "chap_analytics-0.1.0/tests/test_notebook.py",
+        "line": 35,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, f\"<cell {i}>\", \"exec\"), namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "cairn-remembers",
+    "checked_at": "2026-09-13T19:54:00.814398",
+    "download_url": "https://files.pythonhosted.org/packages/6c/51/be2cee4e094ab891915743ffe70e7d05f2582f0e359bf43d8be41891dfcb/cairn_remembers-0.3.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cairn_remembers-0.3.3/cairn/compact_hook.py",
+        "line": 133,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# subprocess.Popen detaches from this process"
+      },
+      {
+        "file": "cairn_remembers-0.3.3/cairn/compact_hook.py",
+        "line": 135,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "cairn_remembers-0.3.3/cairn/garden.py",
+        "line": 507,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "cairn_remembers-0.3.3/cairn/garden.py",
+        "line": 2766,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(payload[\"image_b64\"], validate=False)"
+      }
+    ]
+  },
+  {
+    "package_name": "local-agent-chat",
+    "checked_at": "2026-09-13T19:54:01.583244",
+    "download_url": "https://files.pythonhosted.org/packages/cf/e3/bbaee982573863c972e4c7781494e84bedcf942cfe13d0c33168e076b873/local_agent_chat-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "local_agent_chat-0.1.0/local_agent_chat/cli.py",
+        "line": 206,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET6 if \":\" in host else socket.AF_INET) as probe:"
+      },
+      {
+        "file": "local_agent_chat-0.1.0/local_agent_chat/cli.py",
+        "line": 240,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(arguments, start_new_session=True)"
+      },
+      {
+        "file": "local_agent_chat-0.1.0/scripts/check_distribution.py",
+        "line": 96,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "local_agent_chat-0.1.0/scripts/check_distribution.py",
+        "line": 198,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "local_agent_chat-0.1.0/tests/test_cli_shutdown.py",
+        "line": 40,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "local_agent_chat-0.1.0/tests/test_cli_shutdown.py",
+        "line": 47,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as client:"
+      },
+      {
+        "file": "local_agent_chat-0.1.0/tests/test_cli_shutdown.py",
+        "line": 53,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "local_agent_chat-0.1.0/tests/test_server_smoke.py",
+        "line": 16,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "local_agent_chat-0.1.0/tests/test_server_smoke.py",
+        "line": 28,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
