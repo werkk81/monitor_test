@@ -33862,5 +33862,63 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "tabextract",
+    "checked_at": "2026-09-13T21:49:27.601925",
+    "download_url": "https://files.pythonhosted.org/packages/82/8c/825c51c77e5994ec85dfda454df4ad6525e6bd9a23a7694dc0a9af01ca62/tabextract-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tabextract-0.1.0/tabextract/sampling.py",
+        "line": 90,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "flexray",
+    "checked_at": "2026-09-13T21:49:27.670199",
+    "download_url": "https://files.pythonhosted.org/packages/be/7d/0ee5593825f1d496f75d9551a4f1ba1c0a4cc63ed6c18bc4079f9fa544ed/flexray-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "flexray-1.0.0/src/fxr/experiment/callbacks.py",
+        "line": 119,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.experiment.model.eval()"
+      },
+      {
+        "file": "flexray-1.0.0/src/fxr/experiment/callbacks.py",
+        "line": 407,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.experiment.model.eval()"
+      },
+      {
+        "file": "flexray-1.0.0/src/fxr/experiment/train.py",
+        "line": 714,
+        "keyword_detected": "eval(",
+        "code_snippet": "if phase == \"val\" and not self._should_eval(epoch, eval_freq, epochs):"
+      },
+      {
+        "file": "flexray-1.0.0/src/fxr/experiment/train.py",
+        "line": 738,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _should_eval(epoch: int, eval_freq: int, epochs: int) -> bool:"
+      },
+      {
+        "file": "flexray-1.0.0/src/fxr/inference/runner.py",
+        "line": 147,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "flexray-1.0.0/src/fxr/inference/segmenter.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "member.eval()"
+      }
+    ]
   }
 ]
