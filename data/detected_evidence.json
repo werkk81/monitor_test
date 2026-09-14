@@ -34074,5 +34074,179 @@
         "code_snippet": "self.process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "dotbrain",
+    "checked_at": "2026-09-14T21:04:12.396661",
+    "download_url": "https://files.pythonhosted.org/packages/77/5a/1bd32a989070e163bdb7e920c644a5eac4aa9f5616dcaf259b4e1bc6bec2/dotbrain-0.3.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dotbrain-0.3.4/src/dotbrain/updater.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "HaltingMachine",
+    "checked_at": "2026-09-14T21:04:12.446698",
+    "download_url": "https://files.pythonhosted.org/packages/c6/38/622a3b41a880e0cc56c628bf92f4e6d14a93df48936ceefbc3cb9f4444dc/haltingmachine-0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "haltingmachine-0.1/machine/field.py",
+        "line": 48,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"osascript\", \"-e\", f'tell application \"Terminal\" to do script \"{line}\"'])"
+      },
+      {
+        "file": "haltingmachine-0.1/machine/field.py",
+        "line": 49,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "else: subprocess.Popen(terminal_command(cmd), env=env)"
+      },
+      {
+        "file": "haltingmachine-0.1/machine/observer.py",
+        "line": 45,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "nanofold",
+    "checked_at": "2026-09-14T21:04:12.497513",
+    "download_url": "https://files.pythonhosted.org/packages/51/1e/bd11d27129a71296a6be630b5496070dd863dddf203bfda4b133632554ec/nanofold-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nanofold-0.1.0/src/nanofold/calibrate.py",
+        "line": 101,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_calibrate_stream.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "net = Net().eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_calibrate_stream.py",
+        "line": 29,
+        "keyword_detected": "eval(",
+        "code_snippet": "net = Net().eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_calibrate_stream.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "net = Net().eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_calibrate_stream.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "net = Net().eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_calibrate_stream.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "net = Net().eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_calibrate_stream.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "net = Net().eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_calibrate_stream.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "net = Net().eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_model.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "return TinyNet().eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_model.py",
+        "line": 40,
+        "keyword_detected": "eval(",
+        "code_snippet": "net = TinyNet().eval()"
+      },
+      {
+        "file": "nanofold-0.1.0/tests/test_model.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "fresh = TinyNet().eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "boardctl",
+    "checked_at": "2026-09-14T21:04:12.546201",
+    "download_url": "https://files.pythonhosted.org/packages/77/e9/2edc732bb69c86b9aba41b57b65285643d1123ad3eb40f598da45f0877b8/boardctl-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "boardctl-0.1.0/boardctl/tftp_server.py",
+        "line": 100,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "boardctl-0.1.0/boardctl/plugins/transport/loady.py",
+        "line": 49,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sender, os.path.abspath(path)],"
+      },
+      {
+        "file": "boardctl-0.1.0/boardctl/plugins/transport/tftp.py",
+        "line": 27,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "t = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "boardctl-0.1.0/boardctl/plugins/transport/tftp.py",
+        "line": 65,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "srv = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "rdocx",
+    "checked_at": "2026-09-14T21:04:12.805114",
+    "download_url": "https://files.pythonhosted.org/packages/4e/d2/46b6ea2b9b97a27ba083c34bd56bfff30c0309f1cc864c29812c56571f0a/rdocx-0.13.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rdocx-0.13.1/crates/rdocx-py/tests/test_python_docx_parity.py",
+        "line": 551,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(_example_body(example, \"rdocx\"), namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "deltachat-claude-code",
+    "checked_at": "2026-09-14T21:04:12.830940",
+    "download_url": "https://files.pythonhosted.org/packages/71/27/bc1eef4ceb04f7fce26dadaee5704a0c3b31b7eeab650fdd95b6df32228c/deltachat_claude_code-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "deltachat_claude_code-0.1.1/agentbot/session.py",
+        "line": 87,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      }
+    ]
   }
 ]
