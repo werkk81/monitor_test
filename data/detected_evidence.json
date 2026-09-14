@@ -34248,5 +34248,117 @@
         "code_snippet": "self.proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "ai4-constrain",
+    "checked_at": "2026-09-14T23:49:23.986901",
+    "download_url": "https://files.pythonhosted.org/packages/07/6c/3f89d2c51a56754be15ec0239e22bc08149fa4d66d4105234282ae727d25/ai4_constrain-0.7.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ai4_constrain-0.7.0/ai4/constrain/_v07_3a/rebuild.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _score_map_from_eval(evaluation: Evaluation) -> dict[str, float]:"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/ai4/constrain/_v07_3a/rebuild.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": "det_from_eval = _score_map_from_eval(det_eval)"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 96,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _det_eval("
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 231,
+        "keyword_detected": "eval(",
+        "code_snippet": "det = _det_eval(_scores(truth=0.9), passed={shard_id: True for shard_id in REQUIRED_IDS})"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 241,
+        "keyword_detected": "eval(",
+        "code_snippet": "det = _det_eval(_scores(truth=0.5))"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 249,
+        "keyword_detected": "eval(",
+        "code_snippet": "det = _det_eval()"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 273,
+        "keyword_detected": "eval(",
+        "code_snippet": "det = _det_eval()"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 283,
+        "keyword_detected": "eval(",
+        "code_snippet": "det = _det_eval(det_scores)"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 291,
+        "keyword_detected": "eval(",
+        "code_snippet": "det = _det_eval(_scores(truth=0.8))"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 312,
+        "keyword_detected": "eval(",
+        "code_snippet": "det = _det_eval(_scores(truth=0.9))"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 333,
+        "keyword_detected": "eval(",
+        "code_snippet": "rebuilt = rebuild_fused_evaluation(_det_eval(det_map), result)"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_hybrid_primitives_v07_3a.py",
+        "line": 348,
+        "keyword_detected": "eval(",
+        "code_snippet": "rebuild_fused_evaluation(_det_eval(), _fuse_result(_scores()), install=True)  # type: ignore[call-arg]"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_identity_isolation.py",
+        "line": 180,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", blocked)"
+      },
+      {
+        "file": "ai4_constrain-0.7.0/tests/test_identity_resolve.py",
+        "line": 167,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", blocked)"
+      }
+    ]
+  },
+  {
+    "package_name": "pya3eda",
+    "checked_at": "2026-09-14T23:49:24.296797",
+    "download_url": "https://files.pythonhosted.org/packages/5e/a5/7354327bb31f41db1525874ca0364e1e073952a7bad39cd6155e5233fc28/pya3eda-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pya3eda-0.1.0/src/pya3eda/runner/backend.py",
+        "line": 109,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._procs: dict[str, tuple[subprocess.Popen[bytes], IO[bytes]]] = {}"
+      },
+      {
+        "file": "pya3eda-0.1.0/src/pya3eda/runner/backend.py",
+        "line": 129,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
