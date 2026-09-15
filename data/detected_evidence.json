@@ -34608,5 +34608,57 @@
         "code_snippet": "exec(\"def helper(value):\\n    return value * 3\", source)  # a cell-defined function"
       }
     ]
+  },
+  {
+    "package_name": "assay-ui",
+    "checked_at": "2026-09-15T23:01:32.288910",
+    "download_url": "https://files.pythonhosted.org/packages/df/85/7c14304a4ac09b892233bda48385c2d7266f99511dd6e702dbb04389b804/assay_ui-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "assay_ui-0.1.0/src/assay/browser.py",
+        "line": 524,
+        "keyword_detected": "eval(",
+        "code_snippet": "#: `function eval()`, replacing the global the driver evaluates through,"
+      },
+      {
+        "file": "assay_ui-0.1.0/src/assay/run.py",
+        "line": 237,
+        "keyword_detected": "eval(",
+        "code_snippet": "# that replaces a global the driver evaluates through (`function eval()`"
+      },
+      {
+        "file": "assay_ui-0.1.0/src/assay/run.py",
+        "line": 1418,
+        "keyword_detected": "eval(",
+        "code_snippet": "# `function eval()`, so every reading comes back as whatever that"
+      },
+      {
+        "file": "assay_ui-0.1.0/tests/test_end_to_end.py",
+        "line": 582,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"\"\"One generated calculator declares `function eval()`."
+      },
+      {
+        "file": "assay_ui-0.1.0/tests/test_end_to_end.py",
+        "line": 597,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"<script>function eval() { return 1; }\""
+      }
+    ]
+  },
+  {
+    "package_name": "plotsalot",
+    "checked_at": "2026-09-15T23:01:32.621941",
+    "download_url": "https://files.pythonhosted.org/packages/db/fb/dc8387214d2c8f5f04dd313b51c109967fa59a0096bcf76aa9a70e3920ed/plotsalot-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "plotsalot-0.1.1/tests/test_documentation_examples.py",
+        "line": 32,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(block, document.name, \"exec\"), namespace)"
+      }
+    ]
   }
 ]
