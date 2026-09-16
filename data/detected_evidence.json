@@ -34660,5 +34660,135 @@
         "code_snippet": "exec(compile(block, document.name, \"exec\"), namespace)"
       }
     ]
+  },
+  {
+    "package_name": "minilink",
+    "checked_at": "2026-09-16T20:28:42.061695",
+    "download_url": "https://files.pythonhosted.org/packages/73/62/12905d02de78dd4b0844a9fbcdbc260289330af470a536ddcdbd5a66f495/minilink-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "minilink-0.1.0/benchmarks/run_study.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "presets.run_f_eval(plant=plant, n_calls=args.n_calls or 1000)"
+      },
+      {
+        "file": "minilink-0.1.0/benchmarks/run_study.py",
+        "line": 96,
+        "keyword_detected": "eval(",
+        "code_snippet": "presets.run_step_eval(plant=plant, n_calls=args.n_calls)"
+      },
+      {
+        "file": "minilink-0.1.0/benchmarks/studies/presets.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_f_eval(*, plant: str, n_calls: int = 1000) -> None:"
+      },
+      {
+        "file": "minilink-0.1.0/benchmarks/studies/presets.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_step_eval(*, plant: str, n_calls: int | None = None) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "ember-shell",
+    "checked_at": "2026-09-16T20:28:42.360138",
+    "download_url": "https://files.pythonhosted.org/packages/35/a5/c8ea49da7a9cdda4512791c2a34a5b0676d1c7b493a5013d90c977405233/ember_shell-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ember_shell-0.2.0/src/ember/config.py",
+        "line": 46,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(value)"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/ipython/shell.py",
+        "line": 267,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._shell.ns[name] = eval(name, frame.f_globals, frame.f_locals)"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/ipython/shell.py",
+        "line": 341,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(cmd, self._shell.ns)"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/ipython/shell.py",
+        "line": 344,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(expr, self._shell.ns)"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/magics/core.py",
+        "line": 298,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = eval(args, shell.ns) if args.strip() else shell.ns.get(\"_\")"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/magics/history.py",
+        "line": 295,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = shell.ns.get(name) if name in shell.ns else eval(name, shell.ns)"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/magics/namespace.py",
+        "line": 157,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(expr, shell.ns)"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/magics/osm.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/magics/osm.py",
+        "line": 359,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen(argv, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/shell.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "obj = eval(expr, self._shell.ns)"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/shell.py",
+        "line": 395,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self._run_coroutine(eval(code, ns))"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/shell.py",
+        "line": 396,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(code, ns)"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/utils.py",
+        "line": 172,
+        "keyword_detected": "eval(",
+        "code_snippet": "return str(eval(token, ns))"
+      },
+      {
+        "file": "ember_shell-0.2.0/src/ember/utils.py",
+        "line": 178,
+        "keyword_detected": "eval(",
+        "code_snippet": "return str(eval(m.group(1), ns))"
+      },
+      {
+        "file": "ember_shell-0.2.0/tests/test_signature.py",
+        "line": 21,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec("
+      }
+    ]
   }
 ]
