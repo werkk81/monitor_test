@@ -34790,5 +34790,99 @@
         "code_snippet": "exec("
       }
     ]
+  },
+  {
+    "package_name": "apikeyvault",
+    "checked_at": "2026-09-16T23:07:21.381716",
+    "download_url": "https://files.pythonhosted.org/packages/07/b5/418edc878c80920fba5524209cf30f002a2bafc21a7d63789fcbf6b552c8/apikeyvault-1.10.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "apikeyvault-1.10.1/apivault/crypto.py",
+        "line": 69,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "salt = base64.b64decode(lines[1], validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "design-graph",
+    "checked_at": "2026-09-16T23:07:21.518480",
+    "download_url": "https://files.pythonhosted.org/packages/50/1d/22b30cdba5b8969414bc164d1358a7a703f2a1314160a99b469d6fc60c94/design_graph-0.34.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "design_graph-0.34.0/src/design_graph/parsing/source_loader.py",
+        "line": 158,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(val[\"data\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "codefence",
+    "checked_at": "2026-09-16T23:07:21.647495",
+    "download_url": "https://files.pythonhosted.org/packages/92/a7/d3e94ff1f3b0fe2921720ec6482cfd8ca081ad23e1b6d6d5490578ebb63b/codefence-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "codefence-1.0.1/codefence.py",
+        "line": 436,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.run\", \"subprocess.call\", \"subprocess.Popen\","
+      },
+      {
+        "file": "codefence-1.0.1/samples/bad_python.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(expr)"
+      },
+      {
+        "file": "codefence-1.0.1/tests/test_rules.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_r003_eval(tmp_py, all_rules):"
+      },
+      {
+        "file": "codefence-1.0.1/tests/test_rules.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "p = tmp_py(\"result = eval(user_input)\\n\")"
+      },
+      {
+        "file": "codefence-1.0.1/tests/test_rules.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"import ast\\nresult = ast.literal_eval(user_input)\\n\""
+      }
+    ]
+  },
+  {
+    "package_name": "aquacrop-grid",
+    "checked_at": "2026-09-16T23:07:21.734692",
+    "download_url": "https://files.pythonhosted.org/packages/73/51/92a1b3b440f5fed5a65cc4d93b3a5a9e688a6f731f6a2231314bddac2f17/aquacrop_grid-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aquacrop_grid-0.1.1/src/aquacrop_grid/kernels/loader.py",
+        "line": 42,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, ns)"
+      }
+    ]
+  },
+  {
+    "package_name": "chemlibrary-chempy",
+    "checked_at": "2026-09-16T23:07:21.767121",
+    "download_url": "https://files.pythonhosted.org/packages/b5/9d/8a5c735992552c10d9f3ad1d76e38a7c2c6931d77952fa005c2a7c957ce3/chemlibrary_chempy-2.1.6.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "chemlibrary_chempy-2.1.6/src/chempy/cloak.py",
+        "line": 60,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(ciphertext)"
+      }
+    ]
   }
 ]
