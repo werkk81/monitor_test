@@ -34884,5 +34884,59 @@
         "code_snippet": "ciphertext = base64.b64decode(ciphertext)"
       }
     ]
+  },
+  {
+    "package_name": "turbine-csm",
+    "checked_at": "2026-09-17T20:35:56.761992",
+    "download_url": "https://files.pythonhosted.org/packages/c5/a2/b5960058f35706f0961c453de32f64f8f965f93168623546a0d54b12e764/turbine_csm-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "turbine_csm-0.0.1/csm/tools/experimental/build_custom_model.py",
+        "line": 942,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, f\"<{class_name}>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "turbine_csm-0.0.1/csm/tools/experimental/build_custom_model.py",
+        "line": 1899,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, f\"<{class_name}>\", \"exec\"), namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "ring-sandbox",
+    "checked_at": "2026-09-17T20:35:56.989721",
+    "download_url": "https://files.pythonhosted.org/packages/af/97/0eec5a9f1002919781d4442d6bc4a2b28be07c9ff5fec283547133a538df/ring_sandbox-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ring_sandbox-0.1.0/tests/test_chaos.py",
+        "line": 18,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "ring_sandbox-0.1.0/tests/test_scenarios_live.py",
+        "line": 21,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "pennsieve-ai-utils",
+    "checked_at": "2026-09-17T20:35:57.054994",
+    "download_url": "https://files.pythonhosted.org/packages/c9/55/a3ebfb0f060d6943fb252cf61512bb550f989f6da727303f7a1a54293daf/pennsieve_ai_utils-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pennsieve_ai_utils-0.2.0/src/pennsieve_ai_utils/workflow.py",
+        "line": 170,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, env=env, stdout=output, stderr=subprocess.STDOUT, start_new_session=True)"
+      }
+    ]
   }
 ]
