@@ -34938,5 +34938,127 @@
         "code_snippet": "process = subprocess.Popen(command, env=env, stdout=output, stderr=subprocess.STDOUT, start_new_session=True)"
       }
     ]
+  },
+  {
+    "package_name": "agnview",
+    "checked_at": "2026-09-17T23:02:37.759821",
+    "download_url": "https://files.pythonhosted.org/packages/7d/73/af51c632b74f63718210e5bd221e27663563d442248ea7ec7a68ced8422f/agnview-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agnview-0.1.0/agent_relay/cli/main.py",
+        "line": 138,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "agnview-0.1.0/agent_relay/core/certs.py",
+        "line": 89,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "der_bytes = base64.b64decode(b64_body)"
+      },
+      {
+        "file": "agnview-0.1.0/agent_relay/core/network.py",
+        "line": 47,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "agnview-0.1.0/agent_relay/core/notifications.py",
+        "line": 59,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "#   webhook_url: \"https://discord.com/api/webhooks/...\""
+      },
+      {
+        "file": "agnview-0.1.0/agent_relay/core/runner.py",
+        "line": 188,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "agnview-0.1.0/agent_relay/core/runner.py",
+        "line": 250,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "agnview-0.1.0/agent_relay/core/runner.py",
+        "line": 324,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "agnview-0.1.0/agent_relay/core/runner.py",
+        "line": 447,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "agnview-0.1.0/agent_relay/core/runner.py",
+        "line": 508,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "agnview-0.1.0/tests/test_notifications.py",
+        "line": 23,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "webhook_url: https://discord.com/api/webhooks/123/secret_token_abc"
+      }
+    ]
+  },
+  {
+    "package_name": "tissage-cosmique",
+    "checked_at": "2026-09-17T23:02:38.174594",
+    "download_url": "https://files.pythonhosted.org/packages/dc/4a/99b73ed09a820f381747e01ce8afcf998cd478d818f3a84af5ddcfb62bee/tissage_cosmique-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tissage_cosmique-0.0.1/src/tissage_cosmique/emulators/backends/pytorch.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._model.eval()"
+      },
+      {
+        "file": "tissage_cosmique-0.0.1/src/tissage_cosmique/emulators/backends/pytorch.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._model.eval()"
+      },
+      {
+        "file": "tissage_cosmique-0.0.1/src/tissage_cosmique/emulators/backends/pytorch.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": "emu._model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "reflex-nivo",
+    "checked_at": "2026-09-17T23:02:38.705591",
+    "download_url": "https://files.pythonhosted.org/packages/15/64/8c30defe3fa00eabdb7017433b30b57e39c931df4b6fda434155c65d6ece/reflex_nivo-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "reflex_nivo-0.1.0/custom_components/reflex_nivo/base.py",
+        "line": 111,
+        "keyword_detected": "exec(",
+        "code_snippet": "while ((match = tagPattern.exec(marked)) !== null) {"
+      }
+    ]
+  },
+  {
+    "package_name": "mfluxible-mcp",
+    "checked_at": "2026-09-17T23:02:38.790501",
+    "download_url": "https://files.pythonhosted.org/packages/c3/78/4bd16438bdbe907e6219de589cec3c47df87d32e02e3be39c17bf87f69b7/mfluxible_mcp-0.9.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mfluxible_mcp-0.9.0/mfluxible_mcp/server.py",
+        "line": 379,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "full = base64.b64decode(event[\"data\"])"
+      }
+    ]
   }
 ]
