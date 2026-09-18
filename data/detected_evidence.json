@@ -35190,5 +35190,95 @@
         "code_snippet": "result = run_locomo_eval(str(data_path))"
       }
     ]
+  },
+  {
+    "package_name": "allopockets",
+    "checked_at": "2026-09-18T22:29:41.505110",
+    "download_url": "https://files.pythonhosted.org/packages/db/2b/ec625f065388661175b6cc700d61e2351917f07a5bbc60b79d70b4f1cef9/allopockets-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "allopockets-1.0.0/allopockets/ml/metrics.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "def compute_topk_retrieval("
+      },
+      {
+        "file": "allopockets-1.0.0/allopockets/ml/train.py",
+        "line": 178,
+        "keyword_detected": "eval(",
+        "code_snippet": "retrieval_metrics = compute_topk_retrieval("
+      },
+      {
+        "file": "allopockets-1.0.0/allopockets/ml/train.py",
+        "line": 239,
+        "keyword_detected": "eval(",
+        "code_snippet": "test_retrieval = compute_topk_retrieval("
+      },
+      {
+        "file": "allopockets-1.0.0/tests/test_ml_pipeline.py",
+        "line": 77,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_topk_retrieval():"
+      },
+      {
+        "file": "allopockets-1.0.0/tests/test_ml_pipeline.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "ret = compute_topk_retrieval(df, pdb_col=\"pdb\", label_col=\"label\", score_col=\"score\")"
+      }
+    ]
+  },
+  {
+    "package_name": "agent-bridge-orchestrator",
+    "checked_at": "2026-09-18T22:29:41.554474",
+    "download_url": "https://files.pythonhosted.org/packages/f8/3d/188af1430eeb1658f2e21515fd6ed21953a9cc399a6b01e1784da23eca08/agent_bridge_orchestrator-0.3.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_bridge_orchestrator-0.3.1/src/bridge/adapter.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "agent_bridge_orchestrator-0.3.1/src/bridge/client.py",
+        "line": 88,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def connect(socket_path: Path) -> socket.socket:"
+      },
+      {
+        "file": "agent_bridge_orchestrator-0.3.1/src/bridge/client.py",
+        "line": 105,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def open_connection(socket_path: Path) -> socket.socket:"
+      },
+      {
+        "file": "agent_bridge_orchestrator-0.3.1/src/bridge/client.py",
+        "line": 106,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "connection = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "agent_bridge_orchestrator-0.3.1/src/bridge/client.py",
+        "line": 128,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "abench",
+    "checked_at": "2026-09-18T22:29:41.619028",
+    "download_url": "https://files.pythonhosted.org/packages/f3/db/8b99824f2fce5e7dae9c03fe709b4f1c6372ea916127125fe854ff4c2534/abench-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "abench-0.1.0/src/abench/runtime/worker.py",
+        "line": 272,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
