@@ -35060,5 +35060,135 @@
         "code_snippet": "full = base64.b64decode(event[\"data\"])"
       }
     ]
+  },
+  {
+    "package_name": "kokoro-pi",
+    "checked_at": "2026-09-18T20:01:27.475870",
+    "download_url": "https://files.pythonhosted.org/packages/1f/92/474a9fa6fe6fea5c45c6a8674935011132d35eaa83680b2241d89da65398/kokoro_pi-1.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kokoro_pi-1.2.0/src/kokoro_pi/__main__.py",
+        "line": 110,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with response, subprocess.Popen(command, stdin=subprocess.PIPE) as sink:"
+      }
+    ]
+  },
+  {
+    "package_name": "command-gate",
+    "checked_at": "2026-09-18T20:01:27.610051",
+    "download_url": "https://files.pythonhosted.org/packages/3b/4e/fbd1fbb3c446e1d559c8a0a55f4dc408e666dbb3aa3636636a89359a1453/command_gate-0.2.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "command_gate-0.2.4/src/cgate/update.py",
+        "line": 231,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "command_gate-0.2.4/src/cgate/cli/uninstall.py",
+        "line": 390,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "command_gate-0.2.4/src/cgate/cli/update.py",
+        "line": 484,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "command_gate-0.2.4/src/cgate/cli/update.py",
+        "line": 497,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "command_gate-0.2.4/tests/test_update.py",
+        "line": 690,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as popen:"
+      },
+      {
+        "file": "command_gate-0.2.4/tests/test_update.py",
+        "line": 702,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as popen:"
+      },
+      {
+        "file": "command_gate-0.2.4/tests/test_update.py",
+        "line": 714,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\", side_effect=OSError(\"nope\")):"
+      },
+      {
+        "file": "command_gate-0.2.4/tests/test_update_cli.py",
+        "line": 34,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as popen:"
+      },
+      {
+        "file": "command_gate-0.2.4/tests/test_update_cli.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as popen:"
+      }
+    ]
+  },
+  {
+    "package_name": "galet-tools",
+    "checked_at": "2026-09-18T20:01:27.669672",
+    "download_url": "https://files.pythonhosted.org/packages/3a/23/4f5cb6706fad6156ec6ecceefe5927034dc592668cd1a1859382880b13f8/galet_tools-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "galet_tools-0.1.0/tests/test_generate_image_handler.py",
+        "line": 54,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(b64_data)"
+      },
+      {
+        "file": "galet_tools-0.1.0/tests/test_generate_image_handler.py",
+        "line": 111,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(b64_data)[:8] == b\"\\x89PNG\\r\\n\\x1a\\n\""
+      }
+    ]
+  },
+  {
+    "package_name": "perusal",
+    "checked_at": "2026-09-18T20:01:27.721582",
+    "download_url": "https://files.pythonhosted.org/packages/eb/01/cea5a038dfee580e48443cdb1c695d28e5440c3a70ea4b55fe0fb38028e0/perusal-0.0.5.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "perusal-0.0.5/src/perusal/devtools.py",
+        "line": 262,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:"
+      }
+    ]
+  },
+  {
+    "package_name": "contextflow-engine",
+    "checked_at": "2026-09-18T20:01:27.927366",
+    "download_url": "https://files.pythonhosted.org/packages/55/ee/2c52902ad828db69b3c096f4faf7d6f65e640ced7fa3885afdf825bf78df/contextflow_engine-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "contextflow_engine-0.1.0/src/contextflow/connectors/github/connector.py",
+        "line": 87,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(data.get(\"content\", \"\")).decode(\"utf-8\", errors=\"ignore\")"
+      },
+      {
+        "file": "contextflow_engine-0.1.0/tests/test_locomo_adapter.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = run_locomo_eval(str(data_path))"
+      }
+    ]
   }
 ]
