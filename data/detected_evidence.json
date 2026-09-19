@@ -35280,5 +35280,51 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "pagelore",
+    "checked_at": "2026-09-19T19:37:17.219847",
+    "download_url": "https://files.pythonhosted.org/packages/3c/26/aeb6862565bfa50ea4d93a621d3a6755b86bf54121617ecac5e22ba8fc4a/pagelore-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pagelore-0.4.0/tests/test_concurrency.py",
+        "line": 110,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dead = subprocess.Popen([sys.executable, \"-c\", \"pass\"])"
+      },
+      {
+        "file": "pagelore-0.4.0/tests/test_concurrency.py",
+        "line": 132,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "holder = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(30)\"])"
+      },
+      {
+        "file": "pagelore-0.4.0/tests/test_concurrency.py",
+        "line": 179,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dead = subprocess.Popen([sys.executable, \"-c\", \"pass\"])"
+      },
+      {
+        "file": "pagelore-0.4.0/tests/test_index.py",
+        "line": 230,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dead = subprocess.Popen([sys.executable, \"-c\", \"pass\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "meshers",
+    "checked_at": "2026-09-19T19:37:17.455310",
+    "download_url": "https://files.pythonhosted.org/packages/78/43/ade3895e5fa031d659b1b434e1b3c9294e153cf1c01491d29ba6be06e27f/meshers-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "meshers-0.1.0/meshers-python/tests/test_compiled.py",
+        "line": 88,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen=forbidden"
+      }
+    ]
   }
 ]
