@@ -35822,5 +35822,83 @@
         "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
       }
     ]
+  },
+  {
+    "package_name": "sigantry",
+    "checked_at": "2026-09-19T23:34:21.682791",
+    "download_url": "https://files.pythonhosted.org/packages/a7/d1/a8834e532c1f4a06f7137b2b031d157497cf035297ef8c03e58643ba9e13/sigantry-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sigantry-1.0.0/sigantry_core/deploy/notebook_binding.py",
+        "line": 203,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "notebook = json.loads(base64.b64decode(content_part[\"payload\"]))"
+      },
+      {
+        "file": "sigantry-1.0.0/sigantry_core/sync/errors.py",
+        "line": 138,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "when ``base64.b64decode(payload, validate=True)`` raises"
+      },
+      {
+        "file": "sigantry-1.0.0/sigantry_core/sync/pull.py",
+        "line": 319,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(payload_b64, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "bulwark-scanner",
+    "checked_at": "2026-09-19T23:34:21.721568",
+    "download_url": "https://files.pythonhosted.org/packages/3d/d2/a5af36c381632ecf704dc7280565c3de946665b04dae3af6eae367ef5f77/bulwark_scanner-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "bulwark_scanner-0.1.0/src/bulwark/analyzers/text.py",
+        "line": 319,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(padded, validate=True)"
+      },
+      {
+        "file": "bulwark_scanner-0.1.0/src/bulwark/mcp/client.py",
+        "line": 83,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "bulwark_scanner-0.1.0/src/bulwark/mcp/client.py",
+        "line": 107,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "bulwark_scanner-0.1.0/src/bulwark/proxy/guard.py",
+        "line": 518,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "agent-alibi",
+    "checked_at": "2026-09-19T23:34:21.868634",
+    "download_url": "https://files.pythonhosted.org/packages/06/92/1b69a91b21865aea75781e5937cac7717747930205c262d54c95038fca41/agent_alibi-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_alibi-0.1.0/src/alibi/cli.py",
+        "line": 137,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _eval(args)"
+      },
+      {
+        "file": "agent_alibi-0.1.0/src/alibi/cli.py",
+        "line": 266,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(args: argparse.Namespace) -> int:"
+      }
+    ]
   }
 ]
