@@ -35928,5 +35928,79 @@
         "code_snippet": "with subprocess.Popen(  # noqa: S603"
       }
     ]
+  },
+  {
+    "package_name": "pykeepassgate",
+    "checked_at": "2026-09-20T21:56:22.802893",
+    "download_url": "https://files.pythonhosted.org/packages/03/df/22008579aa86d178490036c95bdeeda0e2398bb5e22abb36f42aa820e3e9/pykeepassgate-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pykeepassgate-0.0.1/src/pykeepassgate/client.py",
+        "line": 392,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value)"
+      },
+      {
+        "file": "pykeepassgate-0.0.1/src/pykeepassgate/credentials.py",
+        "line": 321,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value, validate=True)"
+      },
+      {
+        "file": "pykeepassgate-0.0.1/src/pykeepassgate/pairing.py",
+        "line": 251,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "jevloss",
+    "checked_at": "2026-09-20T21:56:22.855149",
+    "download_url": "https://files.pythonhosted.org/packages/4e/92/99229a8dd1ab57fb2b06cf74cb5cd47210854fb6988e2a9dc1c63bbb07bc/jevloss-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jevloss-0.1.0/jevloss/core.py",
+        "line": 148,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.to(self.device).eval().requires_grad_(False)"
+      },
+      {
+        "file": "jevloss-0.1.0/jevloss/layerwise.py",
+        "line": 434,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "overdraft",
+    "checked_at": "2026-09-20T21:56:22.892104",
+    "download_url": "https://files.pythonhosted.org/packages/1b/ed/3d04a78faa6227850534f91fd92b7e883b730653503279a24f61ea5f4dab/overdraft-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "overdraft-0.4.0/src/localbot/proxy_manager.py",
+        "line": 114,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "kglobal-analysis",
+    "checked_at": "2026-09-20T21:56:23.245720",
+    "download_url": "https://files.pythonhosted.org/packages/db/72/5ed9a738c9ef7d44b85f38f19b8c1b6e7fb3e68768b3f176a0a32a5205f1/kglobal_analysis-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kglobal_analysis-0.1.0/tests/test_package.py",
+        "line": 85,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with patch('builtins.open', guarded), patch('socket.socket', side_effect=AssertionError('network')), \\\\"
+      }
+    ]
   }
 ]
