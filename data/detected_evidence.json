@@ -36002,5 +36002,127 @@
         "code_snippet": "with patch('builtins.open', guarded), patch('socket.socket', side_effect=AssertionError('network')), \\\\"
       }
     ]
+  },
+  {
+    "package_name": "pyvizion",
+    "checked_at": "2026-09-20T23:41:38.979564",
+    "download_url": "https://files.pythonhosted.org/packages/cd/e7/d5385a5ff4c35fcccbdcb320e3e850bba843fb67483953c7dd9cb14f60a2/pyvizion-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyvizion-0.3.0/src/vizion/desktop/windows.py",
+        "line": 10,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def launch(command: str | Sequence[str]) -> subprocess.Popen[bytes]:"
+      },
+      {
+        "file": "pyvizion-0.3.0/src/vizion/desktop/windows.py",
+        "line": 14,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(list(args))"
+      }
+    ]
+  },
+  {
+    "package_name": "hyphaeon-core",
+    "checked_at": "2026-09-20T23:41:39.012037",
+    "download_url": "https://files.pythonhosted.org/packages/c9/b2/0e6499583513a18a6accca53877bbf8d4a8f0632be393d65eb7228b1e478/hyphaeon_core-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hyphaeon_core-0.1.0/src/aeon_core/inference.py",
+        "line": 179,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "hyphaeon_core-0.1.0/src/aeon_core/splits.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "hyphaeon_core-0.1.0/tests/test_splits.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "skeyd",
+    "checked_at": "2026-09-20T23:41:39.154590",
+    "download_url": "https://files.pythonhosted.org/packages/c6/d8/1cba1a73f0c974c7debf1fed3c934d791c3a3ec92e7875602471b4094d9b/skeyd-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "skeyd-0.1.0/src/skeyd/crypto.py",
+        "line": 74,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(text.encode(\"ascii\"), validate=True)"
+      },
+      {
+        "file": "skeyd-0.1.0/src/skeyd/execution.py",
+        "line": 183,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate(process: subprocess.Popen[bytes]) -> int | None:"
+      },
+      {
+        "file": "skeyd-0.1.0/src/skeyd/execution.py",
+        "line": 300,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, **popen_kwargs)"
+      },
+      {
+        "file": "skeyd-0.1.0/tests/test_crypto.py",
+        "line": 76,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = bytearray(base64.b64decode(payload[\"ciphertext\"]))"
+      },
+      {
+        "file": "skeyd-0.1.0/tests/test_crypto.py",
+        "line": 243,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert len(base64.b64decode(material)) == KEY_LENGTH"
+      },
+      {
+        "file": "skeyd-0.1.0/tests/test_execution.py",
+        "line": 207,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"subprocess.Popen([sys.executable,'-c',\\\"import time;time.sleep(6);open(r'{marker}','w').write('alive')\\\"])\\n\""
+      },
+      {
+        "file": "skeyd-0.1.0/tests/test_keys.py",
+        "line": 39,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert len(base64.b64decode(material.reveal())) == KEY_LENGTH"
+      }
+    ]
+  },
+  {
+    "package_name": "openbundle",
+    "checked_at": "2026-09-20T23:41:39.190349",
+    "download_url": "https://files.pythonhosted.org/packages/9f/f4/93eef5a36563fb3862098367b48a8896163c5e201c10aee2197aa27bf266/openbundle-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "openbundle-0.1.0/src/openbundle/adapters/construct.py",
+        "line": 308,
+        "keyword_detected": "eval(",
+        "code_snippet": "def try_deepeval() -> Constructed:"
+      },
+      {
+        "file": "openbundle-0.1.0/src/openbundle/adapters/construct.py",
+        "line": 502,
+        "keyword_detected": "eval(",
+        "code_snippet": "return try_deepeval()"
+      },
+      {
+        "file": "openbundle-0.1.0/src/openbundle/kb/select.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self) -> str:"
+      }
+    ]
   }
 ]
