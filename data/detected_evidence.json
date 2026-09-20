@@ -35900,5 +35900,33 @@
         "code_snippet": "def _eval(args: argparse.Namespace) -> int:"
       }
     ]
+  },
+  {
+    "package_name": "s3-testing",
+    "checked_at": "2026-09-20T19:51:24.123293",
+    "download_url": "https://files.pythonhosted.org/packages/94/67/ff972a2403c290151740b42607e7c70007fc89835b576de584fc36a46585/s3_testing-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "s3_testing-0.0.1/src/s3_testing/__init__.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "pyflyrail",
+    "checked_at": "2026-09-20T19:51:24.479059",
+    "download_url": "https://files.pythonhosted.org/packages/66/ce/3470b9374fba3d398c9991c5cf03341ba6c69f6de63bd1cb5fc6d0b529fe/pyflyrail-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyflyrail-0.1.0/tests/test_hook_execution.py",
+        "line": 382,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(  # noqa: S603"
+      }
+    ]
   }
 ]
