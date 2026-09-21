@@ -36124,5 +36124,3243 @@
         "code_snippet": "def eval(self) -> str:"
       }
     ]
+  },
+  {
+    "package_name": "rush-one",
+    "checked_at": "2026-09-21T21:15:39.042418",
+    "download_url": "https://files.pythonhosted.org/packages/e9/f7/7679d835760aa6331d29a79598d3ad90e329d9b4e4b0296f23c356ac8713/rush_one-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "deep_trunk.eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "probe_rush.eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "baseline_scorer.eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 201,
+        "keyword_detected": "eval(",
+        "code_snippet": "option_bank.eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 285,
+        "keyword_detected": "eval(",
+        "code_snippet": "modernbert_gpu = nn.TransformerEncoder(trunk_layer, num_layers=28).to(device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 295,
+        "keyword_detected": "eval(",
+        "code_snippet": "modernbert_cpu = nn.TransformerEncoder(trunk_layer, num_layers=28).to(\"cpu\").eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 326,
+        "keyword_detected": "eval(",
+        "code_snippet": "student_gpu = student_gpu.to(device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 327,
+        "keyword_detected": "eval(",
+        "code_snippet": "student_cpu = student_cpu.to(\"cpu\").eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 428,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_conformal_eval():"
+      },
+      {
+        "file": "rush_one-0.1.0/benchmarks/harness.py",
+        "line": 465,
+        "keyword_detected": "eval(",
+        "code_snippet": "pointer_head.eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/agent.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.trunk = AutoModel.from_pretrained(model_name).to(self.device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/agent.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.trunk = nn.TransformerEncoder(encoder_layer, num_layers=4).to(self.device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/agent.py",
+        "line": 103,
+        "keyword_detected": "eval(",
+        "code_snippet": ").to(self.device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/agent.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": ").to(self.device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/agent.py",
+        "line": 113,
+        "keyword_detected": "eval(",
+        "code_snippet": ").to(self.device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/agent.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "4: ProportionalOddsHead(hidden_dim=self.hidden_dim, num_classes=4).to(self.device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/agent.py",
+        "line": 155,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.option_bank.eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/agent.py",
+        "line": 165,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.span_pointer.eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/agent.py",
+        "line": 298,
+        "keyword_detected": "eval(",
+        "code_snippet": ").to(self.device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/train/train_banking77.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "backbone = AutoModel.from_pretrained(\"answerdotai/ModernBERT-base\").to(device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/train/train_banking77.py",
+        "line": 121,
+        "keyword_detected": "eval(",
+        "code_snippet": "option_bank.eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/train/train_banking77.py",
+        "line": 159,
+        "keyword_detected": "eval(",
+        "code_snippet": "option_bank.eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/train/train_span_pointer.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "backbone = AutoModel.from_pretrained(\"answerdotai/ModernBERT-base\").to(device).eval()"
+      },
+      {
+        "file": "rush_one-0.1.0/rush/train/train_span_pointer.py",
+        "line": 165,
+        "keyword_detected": "eval(",
+        "code_snippet": "pointer.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "reconhound",
+    "checked_at": "2026-09-21T21:15:39.166321",
+    "download_url": "https://files.pythonhosted.org/packages/34/d8/b786e2405ad1707c233a905de3cac074772662d24a733f3e67fb64890743/reconhound-3.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "reconhound-3.0.0/reconexec/modules/masscan.py",
+        "line": 358,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "reconhound-3.0.0/reconexec/modules/nuclei.py",
+        "line": 114,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "reconhound-3.0.0/reconexec/modules/nuclei.py",
+        "line": 260,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "reconhound-3.0.0/reconexec/modules/zone_transfer.py",
+        "line": 65,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "reconhound-3.0.0/reconexec/modules/zone_transfer.py",
+        "line": 81,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "reconhound-3.0.0/reconexec/modules/zone_transfer.py",
+        "line": 112,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "reconhound-3.0.0/reconexec/utils/logger.py",
+        "line": 252,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "reconhound-3.0.0/reconexec/web/process_manager.py",
+        "line": 183,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "flowmaticcache",
+    "checked_at": "2026-09-21T21:15:39.591065",
+    "download_url": "https://files.pythonhosted.org/packages/5e/3a/0e07f8419e19a343a6b8c847f1edb4c498a6010b03a48d56df3f82fe140a/flowmaticcache-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "flowmaticcache-1.0.0/src/flowmaticcache/backends/_flowmaticdb.py",
+        "line": 41,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return pickle.loads(base64.b64decode(row[\"value\"]))"
+      }
+    ]
+  },
+  {
+    "package_name": "peno",
+    "checked_at": "2026-09-21T21:15:39.788753",
+    "download_url": "https://files.pythonhosted.org/packages/a6/a3/d3ea2b1ec8a9baa7bbb2cee866f2e5015685cf1d3f52ff558b2f72a6d67d/peno-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 15,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"1 + 41\")"
+      },
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"1\")  # warm up the isolate before timing"
+      },
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "warm_runtime.eval(\"1 + 41\")"
+      },
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 41,
+        "keyword_detected": "eval(",
+        "code_snippet": "warm_runtime.eval(\"1 + 41\")"
+      },
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "return warm_runtime.eval(\"double(21)\")"
+      },
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"while(true){}\")"
+      },
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "benchmark(lambda: warm_runtime.eval(\"1 + 41\"))"
+      },
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 96,
+        "keyword_detected": "eval(",
+        "code_snippet": "isolate.eval(\"1\")  # warm up before timing"
+      },
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 102,
+        "keyword_detected": "eval(",
+        "code_snippet": "def pooled_eval():"
+      },
+      {
+        "file": "peno-0.1.1/benches_py/test_bench_runtime.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "return isolate.eval(\"1 + 41\")"
+      },
+      {
+        "file": "peno-0.1.1/benchmarks/bench_memory.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"(() => 1 + 1)()\")"
+      },
+      {
+        "file": "peno-0.1.1/benchmarks/bench_memory.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"1 + 1\")"
+      },
+      {
+        "file": "peno-0.1.1/benchmarks/bench_regex.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "count = runtime.eval(code)"
+      },
+      {
+        "file": "peno-0.1.1/benchmarks/bench_startup.py",
+        "line": 14,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"2 + 2\")"
+      },
+      {
+        "file": "peno-0.1.1/benchmarks/bench_threading.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "return runtime.eval(code)"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/__init__.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(code: str) -> Any:"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 518,
+        "keyword_detected": "eval(",
+        "code_snippet": "...     runtime.eval(\"throw new TypeError('Invalid value')\")"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 560,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, code: str) -> Any:"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 580,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> result = runtime.eval(\"1 + 1\")"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 700,
+        "keyword_detected": "eval(",
+        "code_snippet": "``unsendable`` pyclass. To kill a runaway ``eval()`` from a watchdog"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 714,
+        "keyword_detected": "eval(",
+        "code_snippet": "synchronous ``eval()`` call blocking the runtime's owning thread."
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 722,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> runtime.eval(\"while(true){}\")  # raises within ~2s, no panic"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 751,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> runtime.eval(\"add(1, 2)\")"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 802,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> runtime.eval(\"api.value\")"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 965,
+        "keyword_detected": "eval(",
+        "code_snippet": "synchronous ``eval()`` call."
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 973,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval() call (on its owning thread) returns/raises shortly after."
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 1041,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, code: str) -> Any:"
+      },
+      {
+        "file": "peno-0.1.1/docs/stubs/peno/_peno.py",
+        "line": 1077,
+        "keyword_detected": "eval(",
+        "code_snippet": "...     isolate.eval(\"1 + 41\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/arrow_ipc_dataframes.py",
+        "line": 160,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(TEXT_CODEC_POLYFILLS)"
+      },
+      {
+        "file": "peno-0.1.1/examples/arrow_ipc_dataframes.py",
+        "line": 163,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(bundle)  # one-time cost per Runtime"
+      },
+      {
+        "file": "peno-0.1.1/examples/arrow_ipc_dataframes.py",
+        "line": 171,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(ARROW_SCRIPT)"
+      },
+      {
+        "file": "peno-0.1.1/examples/arrow_ipc_dataframes.py",
+        "line": 188,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(JSON_SCRIPT)"
+      },
+      {
+        "file": "peno-0.1.1/examples/basic_eval.py",
+        "line": 13,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(\"2 + 2 =\", peno.eval(\"2 + 2\"))"
+      },
+      {
+        "file": "peno-0.1.1/examples/basic_eval.py",
+        "line": 14,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(\"Math.sqrt(25) =\", peno.eval(\"Math.sqrt(25)\"))"
+      },
+      {
+        "file": "peno-0.1.1/examples/basic_eval.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"globalThis.counter = 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/basic_eval.py",
+        "line": 19,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(\"counter ->\", peno.eval(\"++counter\"))"
+      },
+      {
+        "file": "peno-0.1.1/examples/basic_eval.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(\"2 + 2 =\", rt.eval(\"2 + 2\"))"
+      },
+      {
+        "file": "peno-0.1.1/examples/basic_eval.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"globalThis.counter = 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/basic_eval.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(\"counter ->\", rt.eval(\"++counter\"))"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 23,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"greet('Alice')\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"add(1, 2) = {runtime.eval('add(1, 2)')}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"add(1, 2, 3) = {runtime.eval('add(1, 2, 3)')}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"getUser(123)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"config.debug\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"config.apiUrl + '/users'\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"data.numbers.reduce((a, b) => a + b)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 78,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"data.user.name.toUpperCase()\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 136,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 145,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"features.maxFileSize / 1_000_000 + 'MB'\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 166,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"calculate(5, 3)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 169,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"process_items(['hello', 'world'])\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 177,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"getUserInfo(456)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 192,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"counter.value = 100\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/bindings_basic.py",
+        "line": 204,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"getCounter().value\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 20,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"\"\"Simplest way to use peno - just call peno.eval().\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"2 + 2\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"Math.sqrt(144)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"let counter = 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"counter++;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"counter++;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 34,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"counter\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"greet('World')\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"config.version\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"config.debug && config.timeout > 0\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 100,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(f\"globalThis.taskId = {task_id};\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 101,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"globalThis.counter = 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"counter++;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "counter = peno.eval(\"counter\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": "tid = peno.eval(\"taskId\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 129,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"globalThis.data = []\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"data.push(1, 2, 3)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 132,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Or continue using peno.eval() - same runtime"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 133,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"data.push(4, 5)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/context_local_api.py",
+        "line": 135,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"data\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/fastapi_multitenant.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(script)"
+      },
+      {
+        "file": "peno-0.1.1/examples/inspector.py",
+        "line": 34,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"globalThis.counter = 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/inspector.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"++counter\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/inspector.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"debugger; counter += 10; counter;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/markdown_parser.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(marked_js)"
+      },
+      {
+        "file": "peno-0.1.1/examples/markdown_parser.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "parse_markdown = runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/examples/resource_limits.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"const small = new Array(1000).fill(42)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/resource_limits.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/resource_limits.py",
+        "line": 56,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/resource_limits.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"const x = ;\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/resource_limits.py",
+        "line": 137,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"nonexistent.property\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/resource_limits.py",
+        "line": 144,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"throw new Error('Something went wrong')\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/resource_limits.py",
+        "line": 164,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"null.toString()\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/resource_limits.py",
+        "line": 190,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(code)"
+      },
+      {
+        "file": "peno-0.1.1/examples/resource_limits.py",
+        "line": 239,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(f\"globalThis.TENANT_ID = {tenant_id}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"VERSION: {runtime.eval('VERSION')}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"APP_NAME: {runtime.eval('APP_NAME')}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"utils.double(5): {runtime.eval('utils.double(5)')}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 63,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"utils.square(7): {runtime.eval('utils.square(7)')}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"myLib.version\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 111,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"myLib.chunk([1, 2, 3, 4, 5, 6], 2)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"myLib.capitalize('hello')\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"myLib.clamp(150, 0, 100)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 157,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(init_code)"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 212,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(f\"globalThis.TENANT_ID = {i}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 214,
+        "keyword_detected": "eval(",
+        "code_snippet": "version = runtime.eval(\"TENANT_VERSION\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 215,
+        "keyword_detected": "eval(",
+        "code_snippet": "tenant = runtime.eval(\"TENANT_ID\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/snapshot_example.py",
+        "line": 216,
+        "keyword_detected": "eval(",
+        "code_snippet": "log = runtime.eval(\"logEvent('startup')\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/threading_gil.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_peno_eval():"
+      },
+      {
+        "file": "peno-0.1.1/examples/threading_gil.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/tool_bridge.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "classified = runtime.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/tool_bridge.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "refused = runtime.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/tool_bridge.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "again = runtime.eval('tools.get_weather(\"Oslo\")')"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"42\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"3.14\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"'hello'\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"true\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"false\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"null\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"undefined\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"[1, 2, 3, 4, 5]\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"({ name: 'Alice', age: 30, active: true })\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"new Set([1, 2, 3, 2, 1])\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 93,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"BigInt('9007199254740991')\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"new Date('2024-01-15T10:30:00.000Z')\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 103,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"undefined\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"new Uint8Array([72, 101, 108, 108, 111])\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 138,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"data.number + 10\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 141,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"data.text.toUpperCase()\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 144,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"data.items.map(x => x * 2)\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 147,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"data.user.name\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"Array.from(data.tags).sort()\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 153,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"data.timestamp.toISOString()\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 156,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"data.binary[0]\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 181,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"test.value\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 195,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"NaN\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 200,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"Infinity\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 205,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"-Infinity\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 219,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"  [] → {runtime.eval('[]')}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 220,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"  {{}} → {runtime.eval('({})')}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 221,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"  new Set() → {runtime.eval('new Set()')}\\n\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 225,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"{ a: { b: { c: { d: 'deep' } } } }\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 230,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"  Number.MAX_SAFE_INTEGER: {runtime.eval('Number.MAX_SAFE_INTEGER')}\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 231,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"  BigInt for larger: {runtime.eval('BigInt(Number.MAX_SAFE_INTEGER) + 1n')}\\n\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/type_conversion.py",
+        "line": 235,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"'Hello 世界 🌍'\")"
+      },
+      {
+        "file": "peno-0.1.1/examples/vendored_npm_libraries.py",
+        "line": 129,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(BASE64_POLYFILLS)"
+      },
+      {
+        "file": "peno-0.1.1/examples/vendored_npm_libraries.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(bundle)"
+      },
+      {
+        "file": "peno-0.1.1/examples/vendored_npm_libraries.py",
+        "line": 132,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(b64)"
+      },
+      {
+        "file": "peno-0.1.1/examples/vendored_npm_libraries.py",
+        "line": 139,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(bundle)"
+      },
+      {
+        "file": "peno-0.1.1/examples/vendored_npm_libraries.py",
+        "line": 141,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(b64)"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/__init__.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(code: str) -> Any:"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/__init__.py",
+        "line": 169,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> peno.eval(\"2 + 2\")"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/__init__.py",
+        "line": 171,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> peno.eval(\"Math.sqrt(16)\")"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/__init__.py",
+        "line": 174,
+        "keyword_detected": "eval(",
+        "code_snippet": "return get_default_runtime().eval(code)"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/__init__.py",
+        "line": 218,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> peno.eval(\"add(2, 3)\")"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/__init__.py",
+        "line": 234,
+        "keyword_detected": "eval(",
+        "code_snippet": ">>> peno.eval(\"config.version\")"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/__main__.py",
+        "line": 40,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval(args.command)"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/__main__.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval(code)"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/_tools.py",
+        "line": 89,
+        "keyword_detected": "eval(",
+        "code_snippet": "...     rt.eval(\"tools.add(2, 3)\")"
+      },
+      {
+        "file": "peno-0.1.1/python/peno/_tools.py",
+        "line": 101,
+        "keyword_detected": "eval(",
+        "code_snippet": "...     rt.eval(\"try { tools.lookup('x') } catch (e) { e.name }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"console.log('hello from the sandbox'); void 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 72,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"console.log('n', 42, 1.5, true, [1, 2], {a: {b: 3}}); void 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"console.log(null, undefined); void 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"for (let i = 0; i < 5; i++) console.log(i); void 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"console.log(); void 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 133,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 174,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"console.log('x'); 'still-here'\") == \"still-here\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 179,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 196,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"console.log('captured anyway'); void 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 202,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"console.log('both'); void 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"typeof console.log\") == \"function\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 209,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"console.log('nowhere')\") is undefined"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 242,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"console.log('calling'); double(21)\") == 42"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 250,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt_a.eval(\"console.log('to-a'); void 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 251,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt_b.eval(\"console.log('to-b'); void 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 271,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"console.log('x'); 'ok'\") == \"ok\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_console_capture.py",
+        "line": 279,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"console.log('before the throw'); throw new Error('boom')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 14,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval(\"(x) => x * 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval(\"(a, b, c) => a + b + c\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 28,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval(\"(name) => ({ greeting: 'Hello, ' + name })\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval(\"async (x) => { return x * 3; }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"globalThis.__pendingResolvers = []\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"__pendingResolvers.shift()(21)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval(\"(x) => x + 1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval(\"(x) => { throw new Error('Test error: ' + x); }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 100,
+        "keyword_detected": "eval(",
+        "code_snippet": "apply_fn = rt.eval(\"(fn, arg) => fn(arg)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 101,
+        "keyword_detected": "eval(",
+        "code_snippet": "multiply = rt.eval(\"(x) => x * 3\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": "obj = rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 123,
+        "keyword_detected": "eval(",
+        "code_snippet": "apply_fn = rt.eval(\"(fn) => fn(5)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "multiply = rt.eval(\"(x) => x * 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 134,
+        "keyword_detected": "eval(",
+        "code_snippet": "apply_fn = rt.eval(\"(fn) => fn(5)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 135,
+        "keyword_detected": "eval(",
+        "code_snippet": "multiply = rt.eval(\"(x) => x * 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 147,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval(\"(x) => x * 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 157,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval(\"async (x) => x * 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 164,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_func = rt.eval(\"(x) => x + 1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 180,
+        "keyword_detected": "eval(",
+        "code_snippet": "fn_a = rt.eval(\"(x) => x\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_function.py",
+        "line": 181,
+        "keyword_detected": "eval(",
+        "code_snippet": "fn_b = rt.eval(\"(x) => x * 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 109,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"echo(produce())\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval(\"produce()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 144,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"echo(produce())\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 155,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval(\"produce()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 171,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(code)"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 284,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(f\"try {{ sink('{escaped}') }} catch (e) {{ 0 }}\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 294,
+        "keyword_detected": "eval(",
+        "code_snippet": "got = rt.eval(f\"sink(...Array.from({{length: {count}}}, (_, i) => i))\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 310,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(script)"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 342,
+        "keyword_detected": "eval(",
+        "code_snippet": "out = rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 363,
+        "keyword_detected": "eval(",
+        "code_snippet": "isolate.eval(code)"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 375,
+        "keyword_detected": "eval(",
+        "code_snippet": "isolate.eval(\"[\" * depth + \"]\" * depth)"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 399,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"JSON.stringify(Object.keys(produce()))\") == ("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 403,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"produce().isAdmin\") is undefined"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 405,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"Object.getPrototypeOf(produce()) === Object.prototype\") is True"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 408,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"Object.prototype.hasOwnProperty.call(produce(), '__proto__')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 416,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 442,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"JSON.stringify(Object.keys(data.value))\") == '[\"ok\"]'"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 444,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"({}).isAdmin\") is undefined"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 445,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"Object.prototype.isAdmin\") is undefined"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 451,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"cfg.isAdmin\") is undefined"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 463,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"produce()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 470,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"produce()\") == \"\\u0001ValueError: not really\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 471,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"typeof produce()\") == \"string\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_fuzz_eval_boundary.py",
+        "line": 478,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"1 + 1\") == 2"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_gil_and_limits.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "lambda rt: lambda: rt.eval(f\"(() => {{ {_BUSY_BODY} }})()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_gil_and_limits.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "fn = rt.eval(f\"(() => {{ {_BUSY_BODY} }})\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_gil_and_limits.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"1 + 1\") == 2"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_gil_and_limits.py",
+        "line": 123,
+        "keyword_detected": "eval(",
+        "code_snippet": "echo = rt.eval(\"(...args) => args.length\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_gil_and_limits.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "echo = rt.eval(\"(...args) => args.length\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_gil_and_limits.py",
+        "line": 145,
+        "keyword_detected": "eval(",
+        "code_snippet": "echo = rt.eval(\"(...args) => args.length\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_gil_and_limits.py",
+        "line": 154,
+        "keyword_detected": "eval(",
+        "code_snippet": "echo = rt.eval(\"(...args) => args.length\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_gil_and_limits.py",
+        "line": 165,
+        "keyword_detected": "eval(",
+        "code_snippet": "echo = rt.eval(\"(...args) => args.length\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert isolate.eval(\"1 + 41\") == 42"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert isolate.eval(\"'a' + 'b'\") == \"ab\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 41,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert isolate.eval(\"6 * 7\") == 42"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "isolate.eval(\"1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert overflow.eval(\"2 + 2\") == 4"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 72,
+        "keyword_detected": "eval(",
+        "code_snippet": "isolate.eval(\"throw new Error('boom')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 83,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert first.eval(\"globalThis.leaked = 'secret'; globalThis.leaked\") == \"secret\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert second.eval(\"typeof leaked\") == \"undefined\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"\"\"Even within a single checkout, `eval()` is stateless across calls --"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "isolate.eval(\"var counter = 1;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_isolate_pool.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert isolate.eval(\"typeof counter\") == \"undefined\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 72,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"%DebugPrint(1)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 101,
+        "keyword_detected": "eval(",
+        "code_snippet": "source = rt.eval(\"secretOp.toString()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"typeof Deno\") == \"undefined\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"publicOp(21)\") == 42"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt_b.eval(\"typeof leakMe\") == \"undefined\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 119,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt_a.eval(\"globalThis.__marker = 'a-only'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt_b.eval(\"typeof globalThis.__marker\") == \"undefined\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 134,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert first.eval(\"globalThis.token = 'sk-secret'; globalThis.token\") == ("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 140,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert second.eval(\"typeof token\") == \"undefined\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 141,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert second.eval(\"typeof globalThis.token\") == \"undefined\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 158,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"action('x')\") == \"ok:x\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 160,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert secret not in rt.eval(\"action.toString()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 161,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"Object.keys(action).length\") == 0"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 199,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(probe) == \"undefined\", ("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 227,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"readFile('/data/ok.txt')\") == \"contents\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 230,
+        "keyword_detected": "eval(",
+        "code_snippet": "outcome = rt.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 251,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"globalThis.readFile = () => 'forged'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 256,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 281,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"throw new Error('boom')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 302,
+        "keyword_detected": "eval(",
+        "code_snippet": "details = rt.eval(\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 336,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"while (true) {}\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 342,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"const a = []; while (true) a.push('x'.repeat(10000));\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 348,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"while (true) {}\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_known_escape_techniques.py",
+        "line": 352,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert fresh.eval(\"1 + 1\") == 2"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_large_script_eval.py",
+        "line": 46,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval(_filler(size_bytes) + \"\\n1 + 1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_large_script_eval.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"1 + 1\") == 2"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_large_script_eval.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = rt.eval(src)"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_large_script_eval.py",
+        "line": 139,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"fromSnapshot\") == 42"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "allowed = runtime.eval(f\"__host_op_sync__({op_id}, '/tmp/allowed.txt')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "denied = runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 222,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 241,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 293,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(f\"__host_op_sync__({op_id}, new Uint8Array([1, 2, 3]))\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 307,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(f\"__host_op_sync__({op_id})\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 323,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(f\"__host_op_sync__({op_id}, new Date(1704067200000))\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 338,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(f\"__host_op_sync__({op_id})\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 354,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(f\"__host_op_sync__({op_id}, new Set([1, 2, 3]))\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 368,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(f\"Array.from(__host_op_sync__({op_id}))\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 384,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(f\"__host_op_sync__({op_id}, 2n ** 64n)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 398,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(f\"typeof __host_op_sync__({op_id})\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 413,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(f\"__host_op_sync__({op_id}, undefined)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 427,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(f\"__host_op_sync__({op_id}) === undefined\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 444,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"addValues(2, 3)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 479,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"api.value\") == 123"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 480,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"api.add(2, 3)\") == 5"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 510,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = runtime.eval(f\"safeApi[{json.dumps(evil_key)}]\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 512,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"globalThis.__pwn === undefined\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 521,
+        "keyword_detected": "eval(",
+        "code_snippet": "observed = runtime.eval(f\"globalThis[{json.dumps(global_name)}].value\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 542,
+        "keyword_detected": "eval(",
+        "code_snippet": "allowed = runtime.eval(f\"__host_op_sync__({op_id}, '/tmp/data')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 545,
+        "keyword_detected": "eval(",
+        "code_snippet": "denied = runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 568,
+        "keyword_detected": "eval(",
+        "code_snippet": "count = runtime.eval(\"__host_op_sync__({0}, 'a', 'b')\".format(op_id))"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 570,
+        "keyword_detected": "eval(",
+        "code_snippet": "count = runtime.eval(\"__host_op_sync__({0}, 'c')\".format(op_id))"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 634,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"typeof __host_op_sync__\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_ops.py",
+        "line": 637,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"typeof __host_op_async__\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"2 + 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"Math.sqrt(16)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"'hello'.toUpperCase()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"({a: 1, b: 2})\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"[1, 2, 3].map(x => x * 2)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"add(2, 3)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"multiply(4, 5)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"get_data()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert peno.eval(\"config.version\") == \"1.0\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert peno.eval(\"config.debug\") is True"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 123,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert peno.eval(\"settings.api.url\") == \"https://api.example.com\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert peno.eval(\"settings.api.timeout\") == 30"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 129,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert peno.eval(\"data.items\") == [1, 2, 3]"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert peno.eval(\"data.count\") == 3"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 158,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"globalThis.taskId = 'task1'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 159,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"globalThis.taskId\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 168,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"globalThis.taskId = 'task2'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 169,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"globalThis.taskId\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 187,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(f\"globalThis.threadId = '{thread_id}'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 188,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"globalThis.threadId\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 209,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(f\"globalThis.value = {value}\"),"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 210,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"globalThis.value\"),"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 234,
+        "keyword_detected": "eval(",
+        "code_snippet": "result1 = peno.eval(\"2 + 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 243,
+        "keyword_detected": "eval(",
+        "code_snippet": "result2 = peno.eval(\"3 + 3\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 252,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"globalThis.test = 'original'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 253,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert peno.eval(\"globalThis.test\") == \"original\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 260,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = peno.eval(\"globalThis.test\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 270,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"globalThis.source = 'module'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 274,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"globalThis.source = 'explicit'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 275,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"globalThis.source\") == \"explicit\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 278,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert peno.eval(\"globalThis.source\") == \"module\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 300,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"invalid syntax!\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_peno_api.py",
+        "line": 305,
+        "keyword_detected": "eval(",
+        "code_snippet": "peno.eval(\"throw new Error('test error')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_runtime_stats_after_eval(self):"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"Array.from({length: 1_000}).reduce((a, b) => a + b, 0)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"Array(10).fill(0).map((_, i) => i).join(',')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 78,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_fn = runtime.eval(\"(a, b) => a + b\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "async_fn = runtime.eval(\"async (value) => value * 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 157,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"typeof Deno\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 166,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"2 + 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 175,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"'hello world'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 184,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"Math.max(10, 20, 30)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 194,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 217,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 260,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"1 + 1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 271,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"var x = 10;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 272,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"x\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 275,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"x = 20;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 276,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"x\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 285,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"function add(a, b) { return a + b; }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 286,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"add(5, 7)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 295,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"var obj = {name: 'test', value: 42};\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 296,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"obj.name\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 299,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"obj.value\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 302,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"obj.value = 100;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 303,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"obj.value\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 312,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"var counter = 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 315,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"counter++;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 316,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"counter\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 328,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"3 + 3\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 338,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"5 * 5\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 351,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"var x = 1;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 381,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"1 + 1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 420,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"2 + 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 438,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 472,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime1.eval(\"var x = 'runtime1';\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 473,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime2.eval(\"var x = 'runtime2';\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 475,
+        "keyword_detected": "eval(",
+        "code_snippet": "result1 = runtime1.eval(\"x\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 476,
+        "keyword_detected": "eval(",
+        "code_snippet": "result2 = runtime2.eval(\"x\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 489,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(f\"{i} * 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 500,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"new Uint8Array([1, 2, 3, 4])\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 507,
+        "keyword_detected": "eval(",
+        "code_snippet": "echo = runtime.eval(\"(input) => input\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 516,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"new Date(1704067200000)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 525,
+        "keyword_detected": "eval(",
+        "code_snippet": "millis = runtime.eval(\"(value) => value.getTime()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 534,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"new Set([1, 2, 3, 4])\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 541,
+        "keyword_detected": "eval(",
+        "code_snippet": "to_array = runtime.eval(\"(value) => Array.from(value)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 550,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"undefined\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 558,
+        "keyword_detected": "eval(",
+        "code_snippet": "check = runtime.eval(\"(value) => value === undefined\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 566,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"2n ** 200n\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 573,
+        "keyword_detected": "eval(",
+        "code_snippet": "check = runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 584,
+        "keyword_detected": "eval(",
+        "code_snippet": "identity = runtime.eval(\"(value) => value\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 594,
+        "keyword_detected": "eval(",
+        "code_snippet": "identity = runtime.eval(\"(value) => value\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 608,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"'x'.repeat(64)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 616,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"({a: {b: {c: 1}}})\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 630,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"add(2, 3)\") == 5"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 642,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"pyAdd(4, 6)\") == 10"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 655,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"multiply(3, 4)\") == 12"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 700,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"undefined\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 709,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"null\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 718,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"true\") is True"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 719,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"false\") is False"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 727,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"[1, 2, 3]\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 737,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"({a: 1, b: 2})\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 747,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 844,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"while (true) {}\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 851,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"2 + 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 859,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"throw new Error('immediate error')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 874,
+        "keyword_detected": "eval(",
+        "code_snippet": "results[name] = rt.eval(code)"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1041,
+        "keyword_detected": "eval(",
+        "code_snippet": "fn = runtime.eval(\"(x) => x * 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1077,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def test_mixed_sync_async_eval(self):"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1081,
+        "keyword_detected": "eval(",
+        "code_snippet": "sync_result = runtime.eval(\"10 + 10\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1089,
+        "keyword_detected": "eval(",
+        "code_snippet": "final_result = runtime.eval(\"5 * 5\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1097,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"var asyncCounter = 0;\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1105,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"asyncCounter\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1230,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"bootstrapped\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1241,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"typeof bootstrapped\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1398,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"configured\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1407,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"2 + 2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1434,
+        "keyword_detected": "eval(",
+        "code_snippet": "result1 = runtime1.eval(\"instance1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1438,
+        "keyword_detected": "eval(",
+        "code_snippet": "result2 = runtime1.eval(\"typeof instance2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1442,
+        "keyword_detected": "eval(",
+        "code_snippet": "result1 = runtime2.eval(\"instance2\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1446,
+        "keyword_detected": "eval(",
+        "code_snippet": "result2 = runtime2.eval(\"typeof instance1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1458,
+        "keyword_detected": "eval(",
+        "code_snippet": "console_type = runtime.eval(\"typeof console\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1465,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"console.log('test')\")  # Should not raise"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1466,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"console.error('test')\")  # Should not raise"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1467,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"console.warn('test')\")  # Should not raise"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1478,
+        "keyword_detected": "eval(",
+        "code_snippet": "console_type = runtime.eval(\"typeof console\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1482,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"typeof console.log\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1486,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"console.log('test')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1487,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"console.error('test')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1488,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"console.warn('test')\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1499,
+        "keyword_detected": "eval(",
+        "code_snippet": "console_type = runtime.eval(\"typeof console\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1506,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"console.log('test')\")  # Should not raise"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1507,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"console.error('test')\")  # Should not raise"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1508,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"console.warn('test')\")  # Should not raise"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1533,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(source)"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1558,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"function() { return 42; }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1567,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"var obj = {}; obj.self = obj; void 0\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1570,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"obj\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1579,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(f\"{2**63}n\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1586,
+        "keyword_detected": "eval(",
+        "code_snippet": "nan_result = runtime.eval(\"NaN\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1589,
+        "keyword_detected": "eval(",
+        "code_snippet": "pos_inf_result = runtime.eval(\"Infinity\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1592,
+        "keyword_detected": "eval(",
+        "code_snippet": "neg_inf_result = runtime.eval(\"-Infinity\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1607,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"__host_op_sync__(0, NaN)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1618,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"__host_op_sync__(0, Infinity)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1629,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"__host_op_sync__(0)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1643,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"__host_op_sync__(0)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1658,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"__host_op_sync__(0)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1672,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"__host_op_sync__(0)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1717,
+        "keyword_detected": "eval(",
+        "code_snippet": "setter = runtime.eval(\"(stream) => { globalThis.py_stream = stream; }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1749,
+        "keyword_detected": "eval(",
+        "code_snippet": "setter = runtime.eval(\"(stream) => { globalThis.py_faulty = stream; }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1785,
+        "keyword_detected": "eval(",
+        "code_snippet": "setter = runtime.eval(\"(stream) => { globalThis.py_cancel = stream; }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1806,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_stream = runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1830,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"_js_stream_cancelled\") is True"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1838,
+        "keyword_detected": "eval(",
+        "code_snippet": "js_stream = runtime.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_runtime.py",
+        "line": 1870,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"answer\") == 42"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "iso.eval(\"1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 83,
+        "keyword_detected": "eval(",
+        "code_snippet": "iso.eval(\"const o = {{a:1,b:[1,2,3]}}; JSON.stringify(o).length\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 102,
+        "keyword_detected": "eval(",
+        "code_snippet": "iso.eval(\"1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 106,
+        "keyword_detected": "eval(",
+        "code_snippet": "iso.eval(\"const o = {{a:1}}; JSON.stringify(o).length\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 155,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert isolate.eval(f\"{i} * 2\") == i * 2"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 162,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert isolate.eval(\"typeof leaked\") == \"undefined\", ("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 165,
+        "keyword_detected": "eval(",
+        "code_snippet": "isolate.eval(\"globalThis.leaked = 'secret'\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 188,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = rt.eval(f\"double({n})\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 213,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 218,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"f()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 235,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert isolate.eval(f\"{i} + 1\") == i + 1"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_stress_concurrency.py",
+        "line": 256,
+        "keyword_detected": "eval(",
+        "code_snippet": "isolate.eval(\"1\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 23,
+        "keyword_detected": "eval(",
+        "code_snippet": "loop, and eval() must return/raise promptly.\"\"\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval(\"while(true){}\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert raised is not None, \"eval() should have raised after termination\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert elapsed < 10.0, f\"eval() took too long to return: {elapsed:.2f}s\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "print(f\"    eval() returned after {elapsed:.2f}s, raised={raised!r}\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_regression_basic_eval() -> None:"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"1 + 1\") == 2"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert runtime.eval(\"'a' + 'b'\") == \"ab\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"hostFn(21)\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_termination_handle.py",
+        "line": 83,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(snippet)"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.add(2, 3)\") == 5"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.upper('abc')\") == \"ABC\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"host.ping()\") == \"pong\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"typeof tools\") == \"undefined\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"ping()\") == \"pong\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.quick()\") == \"sync-result\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert a.eval(\"tools.ping()\") == 1"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert b.eval(\"tools.ping()\") == 1"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "out = rt.eval(\"tools.summarize([{name:'a'},{name:'b'}])\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.tool()\") == \"ran\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.tool()\") == \"ran\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "name = rt.eval(\"try { tools.tool(); 'no-throw' } catch (e) { e.name }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 126,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.a()\") == 1"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 127,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.b()\") == 2"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.a()\") == 1"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 129,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"try { tools.b(); 'no' } catch (e) { e.name }\") == ("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 137,
+        "keyword_detected": "eval(",
+        "code_snippet": "msg = rt.eval(\"try { tools.get_weather('Zurich') } catch (e) { e.message }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 147,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"let n = 0; for (let i=0;i<50;i++) n += tools.ping(); n\") == 50"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 155,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"tools.ping(); tools.ping()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 163,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.ping()\") == 1"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 164,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"try { tools.ping(); 'no' } catch (e) { e.name }\") == ("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 168,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.ping()\") == 1"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 180,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.tool()\") == \"ran\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 182,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"tools.tool() === null || tools.tool() === undefined\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 228,
+        "keyword_detected": "eval(",
+        "code_snippet": "name = rt.eval(\"try { tools.failing(); 'no-throw' } catch (e) { e.name }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 255,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(script) == \"ok:found|not-found|bad-args\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 265,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"try { tools.failing() } catch (e) { e instanceof Error }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 276,
+        "keyword_detected": "eval(",
+        "code_snippet": "msg = rt.eval(\"try { tools.failing() } catch (e) { e.message }\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 289,
+        "keyword_detected": "eval(",
+        "code_snippet": "out = rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 305,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval(\"tools.failing()\")"
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 375,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert rt.eval(\"typeof tools.forbidden\") == \"undefined\""
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 377,
+        "keyword_detected": "eval(",
+        "code_snippet": "rt.eval("
+      },
+      {
+        "file": "peno-0.1.1/tests/test_tool_bridge.py",
+        "line": 425,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert isolate.eval(\"1 + 41\") == 42"
+      }
+    ]
+  },
+  {
+    "package_name": "graba-reunion",
+    "checked_at": "2026-09-21T21:15:39.880950",
+    "download_url": "https://files.pythonhosted.org/packages/0c/0e/6bcb183516876be41a8f35143639ed6c04adcacc57d5e29b300d9dea947d/graba_reunion-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "graba_reunion-0.5.0/src/graba_reunion/recording.py",
+        "line": 50,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc_holder: dict[str, subprocess.Popen | None] = {\"process\": None}"
+      },
+      {
+        "file": "graba_reunion-0.5.0/src/graba_reunion/recording.py",
+        "line": 67,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command)"
+      }
+    ]
   }
 ]
