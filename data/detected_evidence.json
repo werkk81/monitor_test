@@ -39804,5 +39804,53 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "isnady",
+    "checked_at": "2026-09-22T20:30:23.541213",
+    "download_url": "https://files.pythonhosted.org/packages/e3/26/613c65b15615fa8a4bdf709bd5a285f540e796b0a393ef98a4a4fcb7908c/isnady-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "isnady-0.0.1/src/isnady/main.py",
+        "line": 20,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      }
+    ]
+  },
+  {
+    "package_name": "sys1bench",
+    "checked_at": "2026-09-22T20:30:23.803980",
+    "download_url": "https://files.pythonhosted.org/packages/7d/69/e9c7dffe85db6c16ce910bb3fe38ea5bc272714e865d698007b4cfbe485f/sys1bench-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sys1bench-0.3.0/src/sys1bench/adapters/encoder_finetuned.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AutoModelForSequenceClassification.from_pretrained(path).to(dev).eval()"
+      },
+      {
+        "file": "sys1bench-0.3.0/src/sys1bench/adapters/encoder_finetuned.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "blazecrawl-core",
+    "checked_at": "2026-09-22T20:30:23.980002",
+    "download_url": "https://files.pythonhosted.org/packages/a1/a1/3fe298f26deb15c6cba0e0e349df6ba6300f43bce9da0902f521f9110bae/blazecrawl_core-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "blazecrawl_core-0.1.1/blazecrawl_core/network/browser_proxy.py",
+        "line": 96,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket("
+      }
+    ]
   }
 ]
