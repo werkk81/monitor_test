@@ -39362,5 +39362,447 @@
         "code_snippet": "process = subprocess.Popen(command)"
       }
     ]
+  },
+  {
+    "package_name": "benchling-v3-sdk-python",
+    "checked_at": "2026-09-22T00:07:45.044760",
+    "download_url": "https://files.pythonhosted.org/packages/36/3c/8b71808a457b1388d35ad3a7082b1799261d23e1e4bd1cb53ea37396fd51/benchling_v3_sdk_python-5.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "benchling_v3_sdk_python-5.0.0/src/benchling_v3_sdk/apps/helpers/webhook_verification.py",
+        "line": 143,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return [base64.b64decode(signature) for signature in encoded]"
+      }
+    ]
+  },
+  {
+    "package_name": "langchain-godaddy",
+    "checked_at": "2026-09-22T00:07:45.281452",
+    "download_url": "https://files.pythonhosted.org/packages/9a/df/295b773c26998d62778b7573ae210d06e19b539e7064cb686fbffa260d3b/langchain_godaddy-0.0.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "langchain_godaddy-0.0.4/tests/test_retriever.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def test_async_retrieval(httpx_mock):"
+      }
+    ]
+  },
+  {
+    "package_name": "guideme",
+    "checked_at": "2026-09-22T00:07:45.549215",
+    "download_url": "https://files.pythonhosted.org/packages/73/97/6f31d12a399de67889b40eb8d9e79a085580620e36e5795acd5489fc6af9/guideme-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "guideme-0.1.0/tests/conftest.py",
+        "line": 256,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      }
+    ]
+  },
+  {
+    "package_name": "matchypatchy",
+    "checked_at": "2026-09-22T00:07:45.916290",
+    "download_url": "https://files.pythonhosted.org/packages/fb/a9/65450718612d3f27037e5d8c53705bc388d21ffa29e2405abba4058f5aa4/matchypatchy-0.2.1rc1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/__main__.py",
+        "line": 69,
+        "keyword_detected": "exec(",
+        "code_snippet": "exit_code = app.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_config.py",
+        "line": 314,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_config.py",
+        "line": 383,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_import_folder.py",
+        "line": 98,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_individual.py",
+        "line": 97,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_media_edit.py",
+        "line": 257,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_media_edit.py",
+        "line": 280,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_media_edit.py",
+        "line": 307,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_media_edit.py",
+        "line": 571,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_media_edit.py",
+        "line": 650,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_pairx.py",
+        "line": 74,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_station.py",
+        "line": 75,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_station.py",
+        "line": 89,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_station.py",
+        "line": 100,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_survey.py",
+        "line": 80,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_survey.py",
+        "line": 109,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() and dialog.accepted:"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_survey.py",
+        "line": 131,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_uploads.py",
+        "line": 192,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_uploads.py",
+        "line": 211,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.rejected:"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/dialogs/popup_uploads.py",
+        "line": 221,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.rejected:"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 185,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 202,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 208,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 224,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 234,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 243,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 253,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Rejected:"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 264,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = ml_options_dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 310,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 339,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_base.py",
+        "line": 351,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_compare.py",
+        "line": 248,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_compare.py",
+        "line": 259,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_compare.py",
+        "line": 483,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_compare.py",
+        "line": 509,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_compare.py",
+        "line": 711,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_compare.py",
+        "line": 749,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_compare.py",
+        "line": 757,
+        "keyword_detected": "exec(",
+        "code_snippet": "# if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_media.py",
+        "line": 156,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_media.py",
+        "line": 168,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_media.py",
+        "line": 179,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_media.py",
+        "line": 275,
+        "keyword_detected": "exec(",
+        "code_snippet": "cont = dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_media.py",
+        "line": 301,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_media.py",
+        "line": 535,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_media.py",
+        "line": 550,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_media.py",
+        "line": 563,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/display_media.py",
+        "line": 578,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec():"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 203,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 214,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 223,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 234,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Rejected:"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 252,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 257,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 294,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 329,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 336,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 343,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 351,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 364,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 370,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "matchypatchy-0.2.1rc1/src/matchypatchy/gui/main_gui.py",
+        "line": 376,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      }
+    ]
+  },
+  {
+    "package_name": "dualsphysics-mcp",
+    "checked_at": "2026-09-22T00:07:46.038369",
+    "download_url": "https://files.pythonhosted.org/packages/45/2b/35e5094da8358b70512abbaa9f0fd9e5794ee981ead4247c0194fd1e89bd/dualsphysics_mcp-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dualsphysics_mcp-0.1.1/src/dualsphysics_mcp/tools/runner.py",
+        "line": 5,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "* ``run_case`` spawns the CPU solver with :class:`subprocess.Popen`"
+      },
+      {
+        "file": "dualsphysics_mcp-0.1.1/src/dualsphysics_mcp/tools/runner.py",
+        "line": 50,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_PROCS: dict[str, subprocess.Popen[bytes]] = {}"
+      },
+      {
+        "file": "dualsphysics_mcp-0.1.1/src/dualsphysics_mcp/tools/runner.py",
+        "line": 175,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
