@@ -39852,5 +39852,471 @@
         "code_snippet": "sock = socket.socket("
       }
     ]
+  },
+  {
+    "package_name": "decision-maker",
+    "checked_at": "2026-09-22T23:13:03.225810",
+    "download_url": "https://files.pythonhosted.org/packages/2f/e4/180df8fcc3b319d8f46a7cbd814be4dd32fd456fc90c5f6f98f9afd647ba/decision_maker-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "decision_maker-0.1.0/src/decisors/bridge.py",
+        "line": 149,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "decision_maker-0.1.0/src/decisors/bridge.py",
+        "line": 165,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "agent2-core",
+    "checked_at": "2026-09-22T23:13:03.678189",
+    "download_url": "https://files.pythonhosted.org/packages/4f/b3/577aef560bfb4f1e7266431aa19e239684ef660fda01e34499c27287ddaf/agent2_core-0.1.3.25.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent2_core-0.1.3.25/examples/02_tool_use.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(expression, {\"__builtins__\": {}}, allowed)"
+      },
+      {
+        "file": "agent2_core-0.1.3.25/src/agent2/tools/__init__.py",
+        "line": 9,
+        "keyword_detected": "eval(",
+        "code_snippet": "return str(eval(expression))"
+      },
+      {
+        "file": "agent2_core-0.1.3.25/src/agent2/tools/builtin/python_exec.py",
+        "line": 13,
+        "keyword_detected": "exec(",
+        "code_snippet": "def python_exec(code: str) -> str:"
+      },
+      {
+        "file": "agent2_core-0.1.3.25/src/agent2/tools/builtin/python_exec.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, restricted_globals)"
+      },
+      {
+        "file": "agent2_core-0.1.3.25/src/agent2/tools/builtin/shell_exec.py",
+        "line": 13,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def shell_exec(command: str, timeout: float = 30.0) -> str:"
+      }
+    ]
+  },
+  {
+    "package_name": "agent-harness-adk",
+    "checked_at": "2026-09-22T23:13:03.805250",
+    "download_url": "https://files.pythonhosted.org/packages/86/8a/c546ea191a817532b2939fd3485cb4d3d9ce4d44a1ac90391b2ce2bd167b/agent_harness_adk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_harness_adk-0.1.0/src/agent_harness/mcp/client.py",
+        "line": 80,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "agent_harness_adk-0.1.0/src/agent_harness/runtime/workspace.py",
+        "line": 237,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "agent_harness_adk-0.1.0/src/agent_harness/toolkits/basics.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(node: ast.AST) -> float:"
+      },
+      {
+        "file": "agent_harness_adk-0.1.0/src/agent_harness/toolkits/basics.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "exponent = _eval(node.right)"
+      },
+      {
+        "file": "agent_harness_adk-0.1.0/src/agent_harness/toolkits/basics.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _OPS[type(node.op)](_eval(node.left), _eval(node.right))"
+      },
+      {
+        "file": "agent_harness_adk-0.1.0/src/agent_harness/toolkits/basics.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _OPS[type(node.op)](_eval(node.operand))"
+      },
+      {
+        "file": "agent_harness_adk-0.1.0/src/agent_harness/toolkits/basics.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "return _eval(tree.body)"
+      },
+      {
+        "file": "agent_harness_adk-0.1.0/src/agent_harness/tools.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(annotation, getattr(fn, \"__globals__\", {}), {})  # noqa: S307"
+      }
+    ]
+  },
+  {
+    "package_name": "vfs-federation-studio",
+    "checked_at": "2026-09-22T23:13:04.074366",
+    "download_url": "https://files.pythonhosted.org/packages/7b/fa/9b42190501003214496ba2f3c0623d7a953153d7284fa9f3a4d7543b7771/vfs_federation_studio-1.1.5.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "vfs_federation_studio-1.1.5/scripts/signed_agent_adversarial_proof.py",
+        "line": 307,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_signature = bytearray(base64.b64decode(signature[\"signature_b64\"]))"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/app/bootstrap.py",
+        "line": 135,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/assistant/candidate.py",
+        "line": 73,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/supervisor/main.py",
+        "line": 35,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/assistant_configuration.py",
+        "line": 499,
+        "keyword_detected": "exec(",
+        "code_snippet": "OfflineHelpDialog(self, context_id=self._HELP_CONTEXTS[index]).exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/assistant_workbench.py",
+        "line": 411,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/assistant_workbench.py",
+        "line": 428,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/assistant_workbench.py",
+        "line": 506,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/assistant_workbench.py",
+        "line": 692,
+        "keyword_detected": "exec(",
+        "code_snippet": "OfflineHelpDialog(self, context_id=\"assistant.workflow\").exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 633,
+        "keyword_detected": "exec(",
+        "code_snippet": "if picker.exec() != picker.DialogCode.Accepted or picker.selected_path() is None:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 649,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 685,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 727,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 899,
+        "keyword_detected": "exec(",
+        "code_snippet": "if picker.exec() != picker.DialogCode.Accepted or picker.selected_path() is None:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 928,
+        "keyword_detected": "exec(",
+        "code_snippet": "if picker.exec() != picker.DialogCode.Accepted or picker.selected_path() is None:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 975,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 1016,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 1051,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/chronicle_center.py",
+        "line": 1079,
+        "keyword_detected": "exec(",
+        "code_snippet": "OfflineHelpDialog(self, context_id=context_id).exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/save_vfs.py",
+        "line": 140,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != ConfirmationDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 650,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 664,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 684,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 693,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 712,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 734,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 743,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 759,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 786,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 795,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 816,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 853,
+        "keyword_detected": "exec(",
+        "code_snippet": "if confirm.exec() != confirm.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_authoring.py",
+        "line": 880,
+        "keyword_detected": "exec(",
+        "code_snippet": "OfflineHelpDialog(self, context_id=\"workspace.authoring\").exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/dialogs/workspace_build.py",
+        "line": 326,
+        "keyword_detected": "exec(",
+        "code_snippet": "OfflineHelpDialog(self, context_id=\"build.export\").exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 523,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 546,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != dialog.DialogCode.Accepted or dialog.selected_path() is None:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 579,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 590,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 611,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 743,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == dialog.DialogCode.Accepted and dialog.selected_path() is not None:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 751,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 773,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == dialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 801,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 851,
+        "keyword_detected": "exec(",
+        "code_snippet": "OfflineHelpDialog(self).exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 854,
+        "keyword_detected": "exec(",
+        "code_snippet": "OfflineHelpDialog(self, context_id=context_id).exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/ui/main_window.py",
+        "line": 857,
+        "keyword_detected": "exec(",
+        "code_snippet": "AboutDialog(self).exec()"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/workers/entrypoint.py",
+        "line": 53,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(str(inputs[\"image_b64\"]), validate=True)"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/workers/entrypoint.py",
+        "line": 98,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(task.inputs[\"data_b64\"], validate=True)"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/workers/entrypoint.py",
+        "line": 111,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "entries[path] = base64.b64decode(encoded, validate=True)"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/workspace/agent_trust.py",
+        "line": 113,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(text.encode(\"ascii\"), validate=True)"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/workspace/model.py",
+        "line": 118,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(self.public_key_b64.encode(\"ascii\"), validate=True)"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/src/vfs_federation_studio/workspace/model.py",
+        "line": 597,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(self.state_b64.encode(\"ascii\"), validate=True)"
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/tests/integration/test_perl_v2_parity.py",
+        "line": 139,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "vfs_federation_studio-1.1.5/tests/unit/test_agent_actions.py",
+        "line": 284,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_signature = bytearray(base64.b64decode(signature[\"signature_b64\"]))"
+      }
+    ]
+  },
+  {
+    "package_name": "flywheel-canon",
+    "checked_at": "2026-09-22T23:13:04.333025",
+    "download_url": "https://files.pythonhosted.org/packages/91/c7/b563aeee541634c55168fb425fd18d1dfc8c5328b7d080bb77c2b78d1f82/flywheel_canon-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "flywheel_canon-0.2.0/src/canon/canonmd.py",
+        "line": 116,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(padded.encode(\"ascii\"), altchars=b\"-_\", validate=True)"
+      },
+      {
+        "file": "flywheel_canon-0.2.0/tests/test_concurrency.py",
+        "line": 898,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      }
+    ]
   }
 ]
