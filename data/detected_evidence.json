@@ -40470,5 +40470,33 @@
         "code_snippet": "rc, _ = self._exec("
       }
     ]
+  },
+  {
+    "package_name": "cotwatcher",
+    "checked_at": "2026-09-23T23:09:55.071016",
+    "download_url": "https://files.pythonhosted.org/packages/7b/ee/670b57bb500c720f430491c82acd357b7ef30dce3cd18a2d34f05122a124/cotwatcher-0.1.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cotwatcher-0.1.0a1/evals/probe/activations.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model = AutoModelForCausalLM.from_pretrained(model_id, dtype=self.dtype).to(self.device).eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "motionmcp-client-sdk",
+    "checked_at": "2026-09-23T23:09:55.725473",
+    "download_url": "https://files.pythonhosted.org/packages/63/f1/37214a9e71050023ed73d217724ec0073d6530a5be70cec1bf7abfea4ef6/motionmcp_client_sdk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "motionmcp_client_sdk-0.1.0/motionmcp_client/gltf_parser.py",
+        "line": 289,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw.append(base64.b64decode(data_part))"
+      }
+    ]
   }
 ]
