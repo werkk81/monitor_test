@@ -40318,5 +40318,157 @@
         "code_snippet": "server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
       }
     ]
+  },
+  {
+    "package_name": "sentinelcore-ai",
+    "checked_at": "2026-09-23T20:43:30.275207",
+    "download_url": "https://files.pythonhosted.org/packages/30/39/c60d90c8826a00f54f245521da71c6c576babebdcbc8a4c638d7e0afe28d/sentinelcore_ai-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/redteam/transforms.py",
+        "line": 165,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"base64_payload\": lambda s: base64.b64decode(s.split(\": \", 1)[1]).decode(\"utf-8\"),"
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 154,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, sql: str, params=(), fetch: str | None = None):"
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 180,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 213,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows, cols = self._exec(sql, params, fetch=\"all\")"
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 228,
+        "keyword_detected": "exec(",
+        "code_snippet": "row, _ = self._exec(\"SELECT COUNT(*) FROM scan_events WHERE tenant = %s\","
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 239,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"INSERT INTO approvals (id, scan_id, tool_name, arguments_digest, risk_score, \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 252,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"UPDATE approvals SET status='expired' WHERE status='pending' \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 254,
+        "keyword_detected": "exec(",
+        "code_snippet": "row, cols = self._exec(\"SELECT * FROM approvals WHERE id = %s AND tenant = %s\","
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 262,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"UPDATE approvals SET status='expired' WHERE status='pending' \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 264,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows, cols = self._exec(\"SELECT * FROM approvals WHERE status='pending' \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 301,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec(\"INSERT INTO feedback (id, scan_id, verdict, note, submitted_by, \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 313,
+        "keyword_detected": "exec(",
+        "code_snippet": "rc, _ = self._exec(\"UPDATE feedback SET text=%s, text_supplied=1 \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 323,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows, cols = self._exec(\"SELECT * FROM feedback WHERE verdict=%s AND tenant=%s \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 327,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows, cols = self._exec(\"SELECT * FROM feedback WHERE tenant=%s \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 336,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows, _ = self._exec(\"SELECT verdict, COUNT(*) FROM feedback WHERE tenant=%s \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 346,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 364,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows, cols = self._exec(\"SELECT * FROM mcp_pins WHERE server=%s AND tenant=%s \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 368,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows, cols = self._exec(\"SELECT * FROM mcp_pins WHERE tenant=%s \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 377,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._exec("
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 393,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows, cols = self._exec(\"SELECT * FROM mcp_changes WHERE tenant=%s \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 397,
+        "keyword_detected": "exec(",
+        "code_snippet": "rows, cols = self._exec(\"SELECT * FROM mcp_changes WHERE acknowledged=%s \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 407,
+        "keyword_detected": "exec(",
+        "code_snippet": "rc, _ = self._exec(\"UPDATE mcp_changes SET acknowledged=1 WHERE id=%s AND \""
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 427,
+        "keyword_detected": "exec(",
+        "code_snippet": "rc, _ = self._exec(f\"DELETE FROM {table} WHERE {col} < %s AND tenant = %s\","
+      },
+      {
+        "file": "sentinelcore_ai-0.4.0/sentinelcore/storage/postgres_backend.py",
+        "line": 432,
+        "keyword_detected": "exec(",
+        "code_snippet": "rc, _ = self._exec("
+      }
+    ]
   }
 ]
