@@ -40498,5 +40498,31 @@
         "code_snippet": "raw.append(base64.b64decode(data_part))"
       }
     ]
+  },
+  {
+    "package_name": "pulse-viewers",
+    "checked_at": "2026-09-24T20:49:01.084117",
+    "download_url": "https://files.pythonhosted.org/packages/19/5a/5329f87e7288b4296bd1115c7a4202e4ccab9bf71f38b96a6ddef403fcf8/pulse_viewers-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pulse_viewers-0.1.0/src/inventzia/pulse/viewers/event_viewer.py",
+        "line": 693,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "pulse_viewers-0.1.0/tests/test_live_following.py",
+        "line": 21,
+        "keyword_detected": "exec(",
+        "code_snippet": "loop.exec()"
+      },
+      {
+        "file": "pulse_viewers-0.1.0/tests/test_regressions.py",
+        "line": 25,
+        "keyword_detected": "exec(",
+        "code_snippet": "loop.exec()"
+      }
+    ]
   }
 ]
