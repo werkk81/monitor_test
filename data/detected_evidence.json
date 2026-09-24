@@ -40524,5 +40524,71 @@
         "code_snippet": "loop.exec()"
       }
     ]
+  },
+  {
+    "package_name": "actrone-memory",
+    "checked_at": "2026-09-24T23:31:31.774292",
+    "download_url": "https://files.pythonhosted.org/packages/83/e8/e4fd14a910de56d32dd71400f43d5789c8bf47b1ff7309a744e1ea60d4ce/actrone_memory-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "actrone_memory-0.2.0/src/actrone_memory/benchmark/__main__.py",
+        "line": 13,
+        "keyword_detected": "eval(",
+        "code_snippet": "report = await run_eval()"
+      },
+      {
+        "file": "actrone_memory-0.2.0/src/actrone_memory/benchmark/harness.py",
+        "line": 89,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def run_eval("
+      }
+    ]
+  },
+  {
+    "package_name": "rayito",
+    "checked_at": "2026-09-24T23:31:31.842198",
+    "download_url": "https://files.pythonhosted.org/packages/47/99/dc9bb1631298d610e0684efe95cd816c8e3575574e08dbc77b2383533169/rayito-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rayito-0.3.0/src/rayito/_payload.py",
+        "line": 50,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "secret = base64.b64decode(padded, altchars=b\"-_\", validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "context-engineering-cli",
+    "checked_at": "2026-09-24T23:31:31.922865",
+    "download_url": "https://files.pythonhosted.org/packages/f2/d3/bbec2bc3a4f73c5f0a90298b6e58a40d3f7c84fa53d6efde377117421b57/context_engineering_cli-2.6.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "context_engineering_cli-2.6.0/src/context_engineering/analysis/backfill.py",
+        "line": 163,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "context_engineering_cli-2.6.0/src/context_engineering/analysis/backfill.py",
+        "line": 257,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(args, cwd=repo, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "context_engineering_cli-2.6.0/src/context_engineering/infra/git_evidence.py",
+        "line": 80,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes],"
+      },
+      {
+        "file": "context_engineering_cli-2.6.0/src/context_engineering/infra/git_evidence.py",
+        "line": 326,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
