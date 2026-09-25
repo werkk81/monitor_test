@@ -40656,5 +40656,93 @@
         "code_snippet": "return self._draft(base64.b64decode(request.content))"
       }
     ]
+  },
+  {
+    "package_name": "enzomotive",
+    "checked_at": "2026-09-25T23:35:39.306359",
+    "download_url": "https://files.pythonhosted.org/packages/9c/e3/84f3718eaf88fce833816824b151cf1a1ea6b0d8bf743c8c93e2f826e85e/enzomotive-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "enzomotive-0.1.0/mcp_servers/plant/tests/test_modbus_roundtrip.py",
+        "line": 24,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "enzomotive-0.1.0/mcp_servers/plant/tests/test_server.py",
+        "line": 18,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      }
+    ]
+  },
+  {
+    "package_name": "scanmate-ink",
+    "checked_at": "2026-09-25T23:35:39.600112",
+    "download_url": "https://files.pythonhosted.org/packages/60/88/acf8f62d9e874408c2d73fd8a023be0696ae104ffde8faf314d3cb9e4333/scanmate_ink-0.24.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "scanmate_ink-0.24.1/scanmate_ink/raster_codec/test_image_codec_client.py",
+        "line": 64,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(_GOLDEN[\"pngBase64\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "dock-timelapse",
+    "checked_at": "2026-09-25T23:35:39.724927",
+    "download_url": "https://files.pythonhosted.org/packages/bb/84/3d7d646451a1c6963804968d757400583510f3e7a560700afd06e3e41059/dock_timelapse-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dock_timelapse-0.2.0/src/dock_timelapse/video.py",
+        "line": 40,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)"
+      }
+    ]
+  },
+  {
+    "package_name": "astrarecon",
+    "checked_at": "2026-09-25T23:35:39.974915",
+    "download_url": "https://files.pythonhosted.org/packages/a4/d2/8c1c5c572544e7ea57a3895c60842d55f7a9d5bd970a4aed70a5838496eb/astrarecon-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "astrarecon-0.1.0/astrarecon/core/execution/process.py",
+        "line": 64,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "astrarecon-0.1.0/astrarecon/core/execution/process.py",
+        "line": 74,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "solera",
+    "checked_at": "2026-09-25T23:35:40.183378",
+    "download_url": "https://files.pythonhosted.org/packages/04/ae/8def7c6dfa4433a315ac10522af298c2ceeef5e487411f21c42e6bf61b3d/solera-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "solera-0.0.1/apps/server/src/solera_server/placements/local.py",
+        "line": 70,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "solera-0.0.1/apps/server/src/solera_server/placements/local.py",
+        "line": 154,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
   }
 ]
