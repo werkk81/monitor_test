@@ -40590,5 +40590,71 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "cheeto",
+    "checked_at": "2026-09-25T20:46:37.945410",
+    "download_url": "https://files.pythonhosted.org/packages/42/a6/04659f42a30a88f58192fbaf22f2b8c48b14f6c851ebaf8daf743f4a54f1/cheeto-2.6.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cheeto-2.6.1/cheeto/tests/conftest.py",
+        "line": 225,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "cheeto-2.6.1/cheeto/tests/conftest.py",
+        "line": 576,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "benethos-mailbox-mcp",
+    "checked_at": "2026-09-25T20:46:38.087109",
+    "download_url": "https://files.pythonhosted.org/packages/5a/34/b74fde7f55b33cf1b95c44d4501c3b6cbb74672056b92c1f4e4fff151bf2/benethos_mailbox_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "benethos_mailbox_mcp-0.1.0/tests/test_attachments.py",
+        "line": 115,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png_size(base64.b64decode(images[0].data))  # type: ignore[attr-defined]"
+      },
+      {
+        "file": "benethos_mailbox_mcp-0.1.0/tests/test_attachments.py",
+        "line": 130,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(image.data) == picture  # type: ignore[attr-defined]"
+      }
+    ]
+  },
+  {
+    "package_name": "benethos-mailbox-service",
+    "checked_at": "2026-09-25T20:46:38.229206",
+    "download_url": "https://files.pythonhosted.org/packages/59/f1/50e00a2840d19cf263b6e46098f8b3cf97192f2866c64689d616d9c50df5/benethos_mailbox_service-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "benethos_mailbox_service-0.1.0/src/benethos_mailbox_service/data/providers/microsoft/provider.py",
+        "line": 328,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(content)"
+      },
+      {
+        "file": "benethos_mailbox_service-0.1.0/tests/graph_fake.py",
+        "line": 103,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.sent.append(base64.b64decode(request.content))"
+      },
+      {
+        "file": "benethos_mailbox_service-0.1.0/tests/graph_fake.py",
+        "line": 248,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return self._draft(base64.b64decode(request.content))"
+      }
+    ]
   }
 ]
