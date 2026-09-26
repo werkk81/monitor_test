@@ -40744,5 +40744,85 @@
         "code_snippet": "process = await asyncio.create_subprocess_exec("
       }
     ]
+  },
+  {
+    "package_name": "coderifts-verifier",
+    "checked_at": "2026-09-26T20:13:39.570201",
+    "download_url": "https://files.pythonhosted.org/packages/a1/fb/bcc1f445a87b583cf7dc7645f16d521aecb78688c98744f278c5e1606734/coderifts_verifier-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "coderifts_verifier-0.1.0/coderifts_verifier/dsse.py",
+        "line": 128,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "statement = json.loads(base64.b64decode(str(raw), validate=True).decode(\"utf-8\"))"
+      },
+      {
+        "file": "coderifts_verifier-0.1.0/tests/test_verifier.py",
+        "line": 172,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return json.loads(base64.b64decode(envelope[\"payload\"]).decode(\"utf-8\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "PyECLOUD",
+    "checked_at": "2026-09-26T20:13:39.639121",
+    "download_url": "https://files.pythonhosted.org/packages/95/74/517b1daffe135d4f733b182e1d7c992a79f1f86fcc3da8aa4bec46409bd1/pyecloud-8.7.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyecloud-8.7.2/PyECLOUD/beam_and_timing.py",
+        "line": 113,
+        "keyword_detected": "exec(",
+        "code_snippet": "# exec(f.read())"
+      },
+      {
+        "file": "pyecloud-8.7.2/release.py",
+        "line": 40,
+        "keyword_detected": "eval(",
+        "code_snippet": "return metadata[\"project\"][\"name\"], ast.literal_eval(node.value)"
+      }
+    ]
+  },
+  {
+    "package_name": "jkctl",
+    "checked_at": "2026-09-26T20:13:39.713260",
+    "download_url": "https://files.pythonhosted.org/packages/1c/a7/b6d339cedc7da8364d8803e7316946575741300a48db583bccc642f805d9/jkctl-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jkctl-0.1.0/tools/screenshot.py",
+        "line": 62,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "jkctl-0.1.0/tools/screenshot.py",
+        "line": 74,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen("
+      },
+      {
+        "file": "jkctl-0.1.0/tools/screenshot.py",
+        "line": 100,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def wait_for(url: str, proc: subprocess.Popen, timeout: float = 20.0) -> None:"
+      }
+    ]
+  },
+  {
+    "package_name": "llgs-simulation",
+    "checked_at": "2026-09-26T20:13:39.785645",
+    "download_url": "https://files.pythonhosted.org/packages/f4/fb/d4572ad3d6f9f2ee893726190faaf28ef274ffb5d49ca5f816ed144bf313/llgs_simulation-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "llgs_simulation-0.1.0/src/llgs/lattice.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(cond_str, {\"__builtins__\": {}}, condition_values),"
+      }
+    ]
   }
 ]
