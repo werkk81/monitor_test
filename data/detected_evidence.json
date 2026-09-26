@@ -40824,5 +40824,47 @@
         "code_snippet": "eval(cond_str, {\"__builtins__\": {}}, condition_values),"
       }
     ]
+  },
+  {
+    "package_name": "jsonpit",
+    "checked_at": "2026-09-26T22:51:04.311415",
+    "download_url": "https://files.pythonhosted.org/packages/aa/34/8cf24b946ad5f33eacdb424d5c30f6bb6dca479bb3e6a72c54b6700b1a85/jsonpit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jsonpit-0.1.0/jsonpit/cli.py",
+        "line": 37,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "logicroot",
+    "checked_at": "2026-09-26T22:51:04.527878",
+    "download_url": "https://files.pythonhosted.org/packages/30/8d/4330bf33ac752ed5a74e1728dd449a54ee73206d04988fa53a937fa2b1f9/logicroot-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "logicroot-0.2.0/src/logicroot/network/interfaces.py",
+        "line": 173,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "mcts-agent",
+    "checked_at": "2026-09-26T22:51:04.595734",
+    "download_url": "https://files.pythonhosted.org/packages/e5/cd/4fa55dd325829435b75640d268040036ed425ee6408631c10c98d2020a4b/mcts_agent-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mcts_agent-0.1.0/agent/logger.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "def emit_eval(self, node: Any) -> None:"
+      }
+    ]
   }
 ]
