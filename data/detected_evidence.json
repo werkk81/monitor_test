@@ -41124,5 +41124,53 @@
         "code_snippet": "assert base64.b64decode(decrypt(reply[\"chunks\"][0], KEY)) == b\"hello\""
       }
     ]
+  },
+  {
+    "package_name": "evalrouter",
+    "checked_at": "2026-09-27T23:13:41.993131",
+    "download_url": "https://files.pythonhosted.org/packages/e9/66/54c3957eb18d0aa01c8dbd216fecb76f76ee7652bf0fc0f11b023bfdbd8b/evalrouter-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "evalrouter-0.3.0/src/kimpton_evalrouter/_resources.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, ref: str, *, options: RequestOptions | None = None) -> types.EvalRecord:"
+      }
+    ]
+  },
+  {
+    "package_name": "locdex",
+    "checked_at": "2026-09-27T23:13:42.282759",
+    "download_url": "https://files.pythonhosted.org/packages/a2/7e/7eb289d35b966bbcbbfddbf548547401d64183903a5c77bb964f06f4b65c/locdex-1.3.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "locdex-1.3.1/src/locdex/safety.py",
+        "line": 60,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen\","
+      },
+      {
+        "file": "locdex-1.3.1/tests/test_safety_v12.py",
+        "line": 10,
+        "keyword_detected": "eval(",
+        "code_snippet": "flags = check_ast_security(\"def f(x):\\n    return eval(x)\\n\")"
+      }
+    ]
+  },
+  {
+    "package_name": "dfshrink",
+    "checked_at": "2026-09-27T23:13:43.451844",
+    "download_url": "https://files.pythonhosted.org/packages/9b/94/a8d05b991391361ac3d0229665648147e90225be8617bbf686ea06274759/dfshrink-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dfshrink-0.1.0/src/dfshrink/_render.py",
+        "line": 34,
+        "keyword_detected": "eval(",
+        "code_snippet": "Postcondition: ``eval(render_code(frame))`` -- with only ``polars as pl`` in"
+      }
+    ]
   }
 ]
