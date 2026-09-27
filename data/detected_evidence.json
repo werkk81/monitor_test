@@ -40866,5 +40866,263 @@
         "code_snippet": "def emit_eval(self, node: Any) -> None:"
       }
     ]
+  },
+  {
+    "package_name": "ziomek",
+    "checked_at": "2026-09-27T20:29:09.796157",
+    "download_url": "https://files.pythonhosted.org/packages/a0/13/9c89f21d93f776c8b3d2caf3b43188a2f337b3e0e5e6f22b83832c159f91/ziomek-0.1.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ziomek-0.1.2/src/ziomek/api/avatar.py",
+        "line": 104,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "wav_bytes = base64.b64decode(audio_b64)"
+      },
+      {
+        "file": "ziomek-0.1.2/src/ziomek/api/tts.py",
+        "line": 61,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "wav_bytes = base64.b64decode(audio_b64)"
+      },
+      {
+        "file": "ziomek-0.1.2/tests/tts/test_generate.py",
+        "line": 41,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "wav_bytes = base64.b64decode(audio_b64)"
+      }
+    ]
+  },
+  {
+    "package_name": "ragsentry",
+    "checked_at": "2026-09-27T20:29:10.305403",
+    "download_url": "https://files.pythonhosted.org/packages/0c/f1/d72cb837d84d4399b07fc3d79a918deac6e3e17e946db6423569437b64c5/ragsentry-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ragsentry-0.1.0/ragsentry/cli.py",
+        "line": 182,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_result = run_eval("
+      },
+      {
+        "file": "ragsentry-0.1.0/ragsentry/runner.py",
+        "line": 13,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_eval("
+      }
+    ]
+  },
+  {
+    "package_name": "aaw-core",
+    "checked_at": "2026-09-27T20:29:10.538607",
+    "download_url": "https://files.pythonhosted.org/packages/c3/20/55a76e9f2816bd44302536e800bf8aeb246347b3e8783d20e3b99d303f7e/aaw_core-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aaw_core-0.1.0/aaw_core/encryption.py",
+        "line": 39,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "if len(base64.b64decode(key_b64)) != KEY_BYTES:"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/encryption.py",
+        "line": 51,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(key_b64)"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/encryption.py",
+        "line": 68,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(key_b64)"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/encryption.py",
+        "line": 69,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "nonce = base64.b64decode(d[\"iv\"])"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/encryption.py",
+        "line": 70,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ct = base64.b64decode(d[\"ct\"]) + base64.b64decode(d[\"tag\"])"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/host/cli.py",
+        "line": 409,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(args, stdin=subprocess.PIPE)"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/host/sessions.py",
+        "line": 225,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdout=log, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/host/sessions.py",
+        "line": 286,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 214,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, sql: str, params: tuple = ()) -> None:"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 236,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"DELETE FROM events WHERE expires_at < ?\", (now,))"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 237,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"DELETE FROM commands WHERE expires_at < ?\", (now,))"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 264,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"UPDATE devices SET last_seen=? WHERE token=?\", (_now_s(), conn.token))"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 289,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec("
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 299,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"UPDATE devices SET computer_name=?, last_seen=? WHERE token=?\","
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 313,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"UPDATE devices SET platform=?, push_token=?, last_seen=? WHERE token=?\","
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 317,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"UPDATE devices SET platform=?, last_seen=? WHERE token=?\","
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 357,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec("
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 442,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"UPDATE devices SET push_token='' WHERE push_token=?\", (stale.push_token,))"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 451,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(insert_sql, (*key, json.dumps(doc)))"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 503,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec("
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 519,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"UPDATE commands SET doc=?, consumed=? WHERE id=?\","
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 526,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec(\"DELETE FROM commands WHERE id=? AND computer_id=?\", (command_id, conn.computer_id))"
+      },
+      {
+        "file": "aaw_core-0.1.0/aaw_core/relay/server.py",
+        "line": 550,
+        "keyword_detected": "exec(",
+        "code_snippet": "await self._exec("
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_encryption.py",
+        "line": 43,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert len(base64.b64decode(env[\"iv\"])) == 12"
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_encryption.py",
+        "line": 44,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert len(base64.b64decode(env[\"tag\"])) == 16"
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_encryption.py",
+        "line": 67,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "tampered = dict(env, ct=base64.b64encode(b\"\\x00\" * len(base64.b64decode(env[\"ct\"]))).decode())"
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_encryption.py",
+        "line": 86,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert len(base64.b64decode(key)) == KEY_BYTES"
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_encryption.py",
+        "line": 97,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert len(base64.b64decode(generate_key_b64())) == KEY_BYTES"
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_fs.py",
+        "line": 55,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(res[\"chunks\"][0]) == b\"# notes\\n\""
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_fs.py",
+        "line": 66,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert b\"\".join(base64.b64decode(c) for c in res[\"chunks\"]) == b\"# notes\\n\""
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_relay.py",
+        "line": 306,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_sessions.py",
+        "line": 29,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(30)\"])"
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_sessions.py",
+        "line": 48,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "fake = subprocess.Popen([sys.executable, \"-c\","
+      },
+      {
+        "file": "aaw_core-0.1.0/tests/test_supervisor.py",
+        "line": 76,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(decrypt(reply[\"chunks\"][0], KEY)) == b\"hello\""
+      }
+    ]
   }
 ]
