@@ -41172,5 +41172,25 @@
         "code_snippet": "Postcondition: ``eval(render_code(frame))`` -- with only ``polars as pl`` in"
       }
     ]
+  },
+  {
+    "package_name": "modelrelay",
+    "checked_at": "2026-09-28T22:39:06.425165",
+    "download_url": "https://files.pythonhosted.org/packages/97/0e/39faa15a7f1fa3ba6f114c9a01d33353aab531b799f231fdc9e029f6dd7b/modelrelay-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "modelrelay-0.2.0/src/modelrelay/types.py",
+        "line": 33,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return cls(data=base64.b64decode(b64), mime_type=mime)"
+      },
+      {
+        "file": "modelrelay-0.2.0/tests/test_openai_compatible.py",
+        "line": 82,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "img.write_bytes(base64.b64decode(\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==\"))"
+      }
+    ]
   }
 ]
