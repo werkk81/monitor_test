@@ -41192,5 +41192,51 @@
         "code_snippet": "img.write_bytes(base64.b64decode(\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==\"))"
       }
     ]
+  },
+  {
+    "package_name": "gills",
+    "checked_at": "2026-09-29T02:16:30.278423",
+    "download_url": "https://files.pythonhosted.org/packages/0f/15/cc73dffcb80e06c10d4bc039256f723f2e7f7745a814c494b413f8aac0f7/gills-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gills-0.1.0/src/gills/network.py",
+        "line": 74,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(family, kind, protocol)"
+      }
+    ]
+  },
+  {
+    "package_name": "ionoNISAR",
+    "checked_at": "2026-09-29T02:16:30.543304",
+    "download_url": "https://files.pythonhosted.org/packages/65/61/008d333960efe8bcccf467507a820c8d571fdb0985a77055a81769fd38ab/iononisar-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "iononisar-0.1.0/src/ionoNISAR/coregister.py",
+        "line": 672,
+        "keyword_detected": "eval(",
+        "code_snippet": "fd = float(d2.eval(r2.sensing_start + (sa0 + na / 2) / r2.prf,"
+      },
+      {
+        "file": "iononisar-0.1.0/src/ionoNISAR/coregister.py",
+        "line": 725,
+        "keyword_detected": "eval(",
+        "code_snippet": "fd = float(d2.eval(r2.sensing_start + (sa0 + na / 2) / r2.prf,"
+      },
+      {
+        "file": "iononisar-0.1.0/src/ionoNISAR/routes.py",
+        "line": 272,
+        "keyword_detected": "eval(",
+        "code_snippet": "fd = float(O.sampled_doppler(O.load_slc(a.sec, \"A\", a.pol)[\"dop\"], r2.prf).eval("
+      },
+      {
+        "file": "iononisar-0.1.0/src/ionoNISAR/screens/split.py",
+        "line": 266,
+        "keyword_detected": "eval(",
+        "code_snippet": "O.load_slc(sec_h5, freq, args.pol)[\"dop\"], r2.prf).eval("
+      }
+    ]
   }
 ]
