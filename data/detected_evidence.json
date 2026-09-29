@@ -41238,5 +41238,47 @@
         "code_snippet": "O.load_slc(sec_h5, freq, args.pol)[\"dop\"], r2.prf).eval("
       }
     ]
+  },
+  {
+    "package_name": "mailhive",
+    "checked_at": "2026-09-29T21:32:45.386453",
+    "download_url": "https://files.pythonhosted.org/packages/4b/ae/f446cac5b0480bc57ab4f2090a9285d4933e1ee333701e3f737aab9cbd59/mailhive-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mailhive-0.1.0/tests/conftest.py",
+        "line": 21,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([\"node\", str(MOCK_SERVER), \"--port\", \"0\"], stdout=subprocess.PIPE, text=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "practice-sdoml-joaquin",
+    "checked_at": "2026-09-29T21:32:45.471916",
+    "download_url": "https://files.pythonhosted.org/packages/7d/af/d1a1c9c7a66aa2fa1f6cb0753f98c8563bad12e202857f3bd66cbf512787/practice_sdoml_joaquin-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "practice_sdoml_joaquin-0.1.0/practice_sdoml/modeling/evaluate.py",
+        "line": 23,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "capo-lambda-core",
+    "checked_at": "2026-09-29T21:32:45.776274",
+    "download_url": "https://files.pythonhosted.org/packages/4a/51/96eaefb0d5317d25428c62e8520b7bff491303bd9b44f4880b13656a4042/capo_lambda_core-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "capo_lambda_core-0.1.0/src/capo_lambda_core/types/_prelude/blob.py",
+        "line": 12,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data)"
+      }
+    ]
   }
 ]
