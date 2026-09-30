@@ -41374,5 +41374,93 @@
         "code_snippet": "outs = self._guard(t, \"eval\", lambda: _outputs(t, t.eval(ctx, *ins), n))"
       }
     ]
+  },
+  {
+    "package_name": "onp-node",
+    "checked_at": "2026-09-30T21:32:56.435081",
+    "download_url": "https://files.pythonhosted.org/packages/9d/d4/b545299e55413c63ccbb809f3045e7867357cbc9ad0eafc22cf62062ed18/onp_node-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "onp_node-0.1.0/tests/test_e2e.py",
+        "line": 80,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "onp_node-0.1.0/tests/test_e2e.py",
+        "line": 103,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.registry_proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "wirely",
+    "checked_at": "2026-09-30T21:32:56.510806",
+    "download_url": "https://files.pythonhosted.org/packages/24/70/c46c085c6e0e4e8e73a28e2813656ba99487fd105adee212e98e953d2256/wirely-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wirely-0.1.0/wirely/ast.py",
+        "line": 294,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.value = ast.literal_eval(val)"
+      },
+      {
+        "file": "wirely-0.1.0/wirely/knx/connection_config.py",
+        "line": 24,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "local_socket, remote_socket = socket.socketpair()"
+      },
+      {
+        "file": "wirely-0.1.0/wirely/knx/connection_config.py",
+        "line": 33,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "wirely-0.1.0/wirely/native/ext_prog.py",
+        "line": 75,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec('/bin/sh', '-c', self.data.shell_command)"
+      },
+      {
+        "file": "wirely-0.1.0/wirely/test.py",
+        "line": 214,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([knxd_path, config_path])"
+      },
+      {
+        "file": "wirely-0.1.0/wirely/test.py",
+        "line": 219,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "wirely-0.1.0/wirely/test.py",
+        "line": 237,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monitor_process = subprocess.Popen("
+      },
+      {
+        "file": "wirely-0.1.0/wirely/test.py",
+        "line": 297,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([mosquitto_path, '-c', config_path])"
+      },
+      {
+        "file": "wirely-0.1.0/wirely/test.py",
+        "line": 302,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "wirely-0.1.0/wirely/test.py",
+        "line": 319,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monitor_process = subprocess.Popen(['mosquitto_sub', '--unix', socket_path, '-v', '-t', '#'])"
+      }
+    ]
   }
 ]
