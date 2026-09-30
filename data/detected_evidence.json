@@ -41280,5 +41280,99 @@
         "code_snippet": "return base64.b64decode(data)"
       }
     ]
+  },
+  {
+    "package_name": "inspect-openshell-sandbox",
+    "checked_at": "2026-09-30T00:43:42.438586",
+    "download_url": "https://files.pythonhosted.org/packages/e6/eb/a2ab7b96d48678671f33a219bb8abe57d2abcf230533d5a294652c23eea0/inspect_openshell_sandbox-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/scripts/smoke.py",
+        "line": 31,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await sb.exec([\"python3\", \"hello.py\"])"
+      },
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/scripts/smoke.py",
+        "line": 34,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await sb.exec([\"pwd\"])"
+      },
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/scripts/smoke.py",
+        "line": 37,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await sb.exec([\"sh\", \"-c\", \"exit 7\"])"
+      },
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/scripts/smoke.py",
+        "line": 50,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await sb.exec([\"cat\"], input=\"piped\\n\")"
+      },
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/scripts/smoke.py",
+        "line": 63,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await sb.exec([\"sh\", \"-c\", probe])"
+      },
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/scripts/smoke.py",
+        "line": 78,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await sb.exec([\"sh\", \"-c\", audit])"
+      },
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/scripts/smoke.py",
+        "line": 81,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = await sb.exec([\"sh\", \"-c\", \"id -u; echo HOME=$HOME; echo env-names: $(env | grep -i -E 'sandbox|openshell' | cut -d= -f1 | tr '\\\\n' ' '); echo root: $(ls / | tr '\\\\n' ' ')\"])"
+      },
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/src/inspect_openshell/_sandbox.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/src/inspect_openshell/_sandbox.py",
+        "line": 196,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec("
+      },
+      {
+        "file": "inspect_openshell_sandbox-0.1.0/src/inspect_openshell/_sandbox.py",
+        "line": 255,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(result.stdout)"
+      }
+    ]
+  },
+  {
+    "package_name": "pijl",
+    "checked_at": "2026-09-30T00:43:42.820421",
+    "download_url": "https://files.pythonhosted.org/packages/48/f6/807fe706c41c8c232cc409c23379e1d2b68494258ffbbbce215b94b8c6a7/pijl-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pijl-0.1.0/src/pijl/parts/contract.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, ctx: Ctx, *ins):"
+      },
+      {
+        "file": "pijl-0.1.0/src/pijl/parts/contract.py",
+        "line": 123,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, ctx: Ctx, *ins):"
+      },
+      {
+        "file": "pijl-0.1.0/src/pijl/sim/circuit.py",
+        "line": 418,
+        "keyword_detected": "eval(",
+        "code_snippet": "outs = self._guard(t, \"eval\", lambda: _outputs(t, t.eval(ctx, *ins), n))"
+      }
+    ]
   }
 ]
