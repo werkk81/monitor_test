@@ -41462,5 +41462,203 @@
         "code_snippet": "monitor_process = subprocess.Popen(['mosquitto_sub', '--unix', socket_path, '-v', '-t', '#'])"
       }
     ]
+  },
+  {
+    "package_name": "remax-rl",
+    "checked_at": "2026-10-01T00:47:29.392573",
+    "download_url": "https://files.pythonhosted.org/packages/8b/c9/c0a153aea6cc90f640e823ef10c81532f7273a7faf0acaf1da44add08fc2/remax_rl-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "remax_rl-0.1.1/ops/gpu_smoke.py",
+        "line": 210,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monitor = subprocess.Popen("
+      },
+      {
+        "file": "remax_rl-0.1.1/ops/gpu_smoke.py",
+        "line": 224,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen("
+      },
+      {
+        "file": "remax_rl-0.1.1/ops/resume_gpu.py",
+        "line": 76,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/actor.py",
+        "line": 762,
+        "keyword_detected": "eval(",
+        "code_snippet": "def generate_and_maybe_eval("
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/actor.py",
+        "line": 781,
+        "keyword_detected": "eval(",
+        "code_snippet": "return super().generate_and_maybe_eval("
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/experiments/oat/grpo.py",
+        "line": 156,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/experiments/setpo_embedder.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/integrations/oat/replay.py",
+        "line": 15,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/integrations/oat/sampling.py",
+        "line": 139,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/integrations/oat/sampling.py",
+        "line": 420,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/integrations/oat/scoring.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/integrations/oat/sync.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/math_grader.py",
+        "line": 756,
+        "keyword_detected": "eval(",
+        "code_snippet": "def latex_eval(latex):"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/math_grader.py",
+        "line": 830,
+        "keyword_detected": "eval(",
+        "code_snippet": "sym1, val1 = latex_eval(str1)"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/math_grader.py",
+        "line": 831,
+        "keyword_detected": "eval(",
+        "code_snippet": "sym2, val2 = latex_eval(str2)"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/math_grader.py",
+        "line": 839,
+        "keyword_detected": "eval(",
+        "code_snippet": "sym1, val1 = latex_eval(norm1)"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/math_grader.py",
+        "line": 840,
+        "keyword_detected": "eval(",
+        "code_snippet": "sym2, val2 = latex_eval(norm2)"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/math_grader.py",
+        "line": 1094,
+        "keyword_detected": "eval(",
+        "code_snippet": "def should_allow_eval(expr: str):"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/math_grader.py",
+        "line": 1114,
+        "keyword_detected": "eval(",
+        "code_snippet": "if should_allow_eval(expr):"
+      },
+      {
+        "file": "remax_rl-0.1.1/src/remax/math_grader_process.py",
+        "line": 50,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      },
+      {
+        "file": "remax_rl-0.1.1/tests/test_verifier_workers.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "real_popen = subprocess.Popen"
+      },
+      {
+        "file": "remax_rl-0.1.1/tests/test_verifier_workers.py",
+        "line": 64,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "real_popen = subprocess.Popen"
+      },
+      {
+        "file": "remax_rl-0.1.1/tests/test_verifier_workers.py",
+        "line": 93,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "real_popen = subprocess.Popen"
+      }
+    ]
+  },
+  {
+    "package_name": "modebench",
+    "checked_at": "2026-10-01T00:47:29.639410",
+    "download_url": "https://files.pythonhosted.org/packages/fa/ce/fc95292b76abb25373c37d08cb5a46f34da83efdae0d2da3e45a33f3b094/modebench-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "modebench-0.4.0/src/modebench/domains/python_factors/verifier.py",
+        "line": 224,
+        "keyword_detected": "eval(",
+        "code_snippet": "function = eval(code, {\"__builtins__\": {}}, {})  # noqa: S307"
+      },
+      {
+        "file": "modebench-0.4.0/src/modebench/worker_process.py",
+        "line": 45,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen(self.worker_command(), stdin=subprocess.PIPE,"
+      }
+    ]
+  },
+  {
+    "package_name": "nxtlinq-mcp-proxy",
+    "checked_at": "2026-10-01T00:47:29.796948",
+    "download_url": "https://files.pythonhosted.org/packages/3f/1d/0fe35c3de6c06d90d79ed8436cfc93e39f64351089723827e90e4749da47/nxtlinq_mcp_proxy-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nxtlinq_mcp_proxy-0.1.0/src/nxtlinq_mcp_proxy/desktop.py",
+        "line": 73,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, str(Path(__file__).resolve()), '--window'],"
+      },
+      {
+        "file": "nxtlinq_mcp_proxy-0.1.0/src/nxtlinq_mcp_proxy/wizard.py",
+        "line": 65,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "nxtlinq_mcp_proxy-0.1.0/tests/test_multi.py",
+        "line": 228,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(args[5], {})"
+      },
+      {
+        "file": "nxtlinq_mcp_proxy-0.1.0/tests/test_policy.py",
+        "line": 24,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      }
+    ]
   }
 ]
