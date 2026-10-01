@@ -41660,5 +41660,63 @@
         "code_snippet": "sock = socket.socket()"
       }
     ]
+  },
+  {
+    "package_name": "leakkill",
+    "checked_at": "2026-10-01T22:01:47.919153",
+    "download_url": "https://files.pythonhosted.org/packages/da/a0/bd290f34f1880859fa7a6a51a55642bbe81a467eb5eca863a5a66be14de8/leakkill-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "leakkill-0.3.0/tests/test_providers.py",
+        "line": 80,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "url = \"https://discord.com/api/webhooks/1/abc\""
+      },
+      {
+        "file": "leakkill-0.3.0/tests/test_scanner.py",
+        "line": 13,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "def test_discord():     assert \"Discord webhook\" in kinds(\"https://discord.com/api/webhooks/123456/\" + \"a\" * 68)"
+      }
+    ]
+  },
+  {
+    "package_name": "hanzo-tools-devserver",
+    "checked_at": "2026-10-01T22:01:48.024956",
+    "download_url": "https://files.pythonhosted.org/packages/e3/af/3ebc46280ce579d1faf34645ac4b53eae8c9607b6c7cff0def8f1b151020/hanzo_tools_devserver-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hanzo_tools_devserver-0.1.0/tests/conftest.py",
+        "line": 33,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      },
+      {
+        "file": "hanzo_tools_devserver-0.1.0/tests/conftest.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-c\", SERVER], stdout=subprocess.PIPE, text=True)"
+      },
+      {
+        "file": "hanzo_tools_devserver-0.1.0/tests/conftest.py",
+        "line": 74,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      },
+      {
+        "file": "hanzo_tools_devserver-0.1.0/tests/test_discovery.py",
+        "line": 87,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      },
+      {
+        "file": "hanzo_tools_devserver-0.1.0/tests/test_discovery.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
