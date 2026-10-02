@@ -41750,5 +41750,265 @@
         "code_snippet": "base64.b64decode(encoded_data)"
       }
     ]
+  },
+  {
+    "package_name": "gpyui",
+    "checked_at": "2026-10-02T21:27:24.284536",
+    "download_url": "https://files.pythonhosted.org/packages/e3/b8/2d34d4895172aa4d302a74a69c094d1828227b3b9b7d6f30716c96332a26/gpyui-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gpyui-0.1.0/examples/component_catalog.py",
+        "line": 362,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(SAMPLES[name].code, f\"<component sample: {name}>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "gpyui-0.1.0/scripts/capture-components.py",
+        "line": 29,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "app = subprocess.Popen("
+      },
+      {
+        "file": "gpyui-0.1.0/scripts/record-workspace.py",
+        "line": 21,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def observe(path: Path, process: subprocess.Popen, predicate=lambda _: True, timeout=20):"
+      },
+      {
+        "file": "gpyui-0.1.0/scripts/record-workspace.py",
+        "line": 78,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "xvfb = subprocess.Popen("
+      },
+      {
+        "file": "gpyui-0.1.0/scripts/record-workspace.py",
+        "line": 100,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "app = subprocess.Popen("
+      },
+      {
+        "file": "gpyui-0.1.0/scripts/record-workspace.py",
+        "line": 116,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "video = subprocess.Popen("
+      },
+      {
+        "file": "gpyui-0.1.0/tests/test_components_native.py",
+        "line": 42,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "gpyui-0.1.0/tests/test_native.py",
+        "line": 74,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "arcasleep",
+    "checked_at": "2026-10-02T21:27:24.332982",
+    "download_url": "https://files.pythonhosted.org/packages/de/56/39430d40ce2ede6d744c5dfffdb884d98891eee3e1636901bd7739bc4a4a/arcasleep-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "arcasleep-0.1.1/bidoze/src/arcasleep_bidoze/training.py",
+        "line": 306,
+        "keyword_detected": "eval(",
+        "code_snippet": "fit_refs, eval_refs = split_train_eval("
+      },
+      {
+        "file": "arcasleep-0.1.1/core/src/arcasleep/artifacts/provenance.py",
+        "line": 80,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value).hex()"
+      },
+      {
+        "file": "arcasleep-0.1.1/core/src/arcasleep/training/balanced.py",
+        "line": 28,
+        "keyword_detected": "eval(",
+        "code_snippet": "def split_train_eval("
+      },
+      {
+        "file": "arcasleep-0.1.1/unet/src/arcasleep_unet/training.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "fit_refs, eval_refs = split_train_eval("
+      },
+      {
+        "file": "arcasleep-0.1.1/unet/tests/test_training.py",
+        "line": 94,
+        "keyword_detected": "eval(",
+        "code_snippet": "fit, held = split_train_eval(refs, 0.3, split_seed=0)"
+      },
+      {
+        "file": "arcasleep-0.1.1/unet/tests/test_training.py",
+        "line": 100,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert split_train_eval(refs, 0.3, split_seed=0) == (fit, held)"
+      }
+    ]
+  },
+  {
+    "package_name": "tensorderiv",
+    "checked_at": "2026-10-02T21:27:24.463110",
+    "download_url": "https://files.pythonhosted.org/packages/38/7c/238b49d81554d1604d6a0d96514e893d02b10d76f8e8f89f6f1c9bbff63f/tensorderiv-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tensorderiv-0.1.0/tests/test_operators.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "jl.seval(\"import DiscreteTensorDerivatives\")"
+      },
+      {
+        "file": "tensorderiv-0.1.0/tests/test_operators.py",
+        "line": 206,
+        "keyword_detected": "eval(",
+        "code_snippet": "julia_operator = jl.seval(\"\"\""
+      },
+      {
+        "file": "tensorderiv-0.1.0/tests/test_stencils.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "jl.seval(\"import DiscreteTensorDerivatives\")"
+      },
+      {
+        "file": "tensorderiv-0.1.0/tests/test_stencils.py",
+        "line": 77,
+        "keyword_detected": "eval(",
+        "code_snippet": "julia_stencils = jl.seval(\"\"\""
+      },
+      {
+        "file": "tensorderiv-0.1.0/tests/test_weights.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "jl.seval(\"import DiscreteTensorDerivatives\")"
+      },
+      {
+        "file": "tensorderiv-0.1.0/tests/test_weights.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "julia_weights = jl.seval("
+      }
+    ]
+  },
+  {
+    "package_name": "toolpass",
+    "checked_at": "2026-10-02T21:27:24.603057",
+    "download_url": "https://files.pythonhosted.org/packages/c1/e6/86a167a3944dd86940bd6856b728d4ac13b2441b99c5f2cd4d66394c8673/toolpass-0.7.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "toolpass-0.7.0/src/toolpass/_checks.py",
+        "line": 111,
+        "keyword_detected": "eval(",
+        "code_snippet": "ann = eval(ann, globalns, {})"
+      },
+      {
+        "file": "toolpass-0.7.0/src/toolpass/server.py",
+        "line": 141,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def __init__(self, f: Any, sock: socket.socket) -> None:"
+      },
+      {
+        "file": "toolpass-0.7.0/src/toolpass/authx/util.py",
+        "line": 389,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "p.bytes = base64.b64decode(b64, validate=True)"
+      },
+      {
+        "file": "toolpass-0.7.0/src/toolpass/integrations/salesforce/soql.py",
+        "line": 182,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(raw, validate=True)"
+      },
+      {
+        "file": "toolpass-0.7.0/src/toolpass/net/httpx.py",
+        "line": 277,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "der = base64.b64decode(b\"\".join(b\"\".join(body).split()), validate=True)"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/test_cli.py",
+        "line": 78,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/contract/test_prism.py",
+        "line": 212,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/contract/test_prism.py",
+        "line": 249,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(args, stdout=logf, stderr=logf, stdin=subprocess.DEVNULL, start_new_session=True)"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/core/test_catalog.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "out += ast.literal_eval('b\"' + part + '\"')"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/core/test_catalog.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "out += ast.literal_eval('\"' + part + '\"').encode(\"utf-8\")"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/frameworks/test_mcp.py",
+        "line": 424,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/frameworks/test_strands.py",
+        "line": 227,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/harness/__init__.py",
+        "line": 232,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "user, _, pw = base64.b64decode(h[6:]).decode().partition(\":\")"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/integrations/zendesk/test_zendesk.py",
+        "line": 201,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(h.removeprefix(\"Basic \"), validate=True)"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/net/test_httpx.py",
+        "line": 519,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _pipe(a: socket.socket, b: socket.socket) -> None:"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/net/test_httpx.py",
+        "line": 706,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/net/test_httpx.py",
+        "line": 830,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "lsock = socket.socket()"
+      },
+      {
+        "file": "toolpass-0.7.0/tests/toolkit/test_fail_closed.py",
+        "line": 217,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec("
+      }
+    ]
   }
 ]
