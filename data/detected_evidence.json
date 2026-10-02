@@ -41718,5 +41718,37 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "isaivam",
+    "checked_at": "2026-10-02T01:34:50.666121",
+    "download_url": "https://files.pythonhosted.org/packages/47/4b/5557ec9e670b912912919e5c4ee58658b348362d60dc7c0865aab3eddbf0/isaivam-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "isaivam-0.1.0/src/isaivam/integrations/langchain.py",
+        "line": 143,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _validate_langsmith_eval(self, run: Run, example: t.Optional[Example]) -> None:"
+      },
+      {
+        "file": "isaivam-0.1.0/src/isaivam/integrations/langchain.py",
+        "line": 184,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._validate_langsmith_eval(run, example)"
+      },
+      {
+        "file": "isaivam-0.1.0/src/isaivam/metrics/collections/multi_modal_faithfulness/util.py",
+        "line": 115,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(encoded_data)"
+      },
+      {
+        "file": "isaivam-0.1.0/src/isaivam/prompt/multi_modal_prompt.py",
+        "line": 335,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(encoded_data)"
+      }
+    ]
   }
 ]
