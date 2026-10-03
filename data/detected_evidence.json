@@ -42010,5 +42010,77 @@
         "code_snippet": "exec("
       }
     ]
+  },
+  {
+    "package_name": "rssd-fs",
+    "checked_at": "2026-10-03T00:35:05.014487",
+    "download_url": "https://files.pythonhosted.org/packages/05/35/4d66565ca3c8da87d204630c5efe8c7009e387009a21b41182bda49a97da/rssd_fs-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rssd_fs-0.1.0/src/rssd/readercli.py",
+        "line": 370,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "rssd_fs-0.1.0/src/rssd/tui/app.py",
+        "line": 683,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "hearthstone-cli",
+    "checked_at": "2026-10-03T00:35:05.891431",
+    "download_url": "https://files.pythonhosted.org/packages/f2/6f/fb2418781314e86622d8a376dcdb34ec12f33047ea28984b91ea2516a534/hearthstone_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hearthstone_cli-0.1.0/src/hearthstone_cli/deck.py",
+        "line": 247,
+        "keyword_detected": "eval(",
+        "code_snippet": "if args.get(\"cost\") and not eval(str(cost) + args[\"cost\"].replace(\"<=\", \"<=\").replace(\">=\", \">=\")):"
+      },
+      {
+        "file": "hearthstone_cli-0.1.0/src/hearthstone_cli/deck.py",
+        "line": 267,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(code)"
+      },
+      {
+        "file": "hearthstone_cli-0.1.0/src/hearthstone_cli/watch_worker.py",
+        "line": 403,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "chaos-trader",
+    "checked_at": "2026-10-03T00:35:06.086216",
+    "download_url": "https://files.pythonhosted.org/packages/6d/04/5fe94ddcb2f1d7a718eae7c1364e272abd4e31336ae9f33d5dd962363e5e/chaos_trader-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "chaos_trader-0.1.0/tests/test_outcome_tick.py",
+        "line": 36,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with closing(socket.socket()) as s:"
+      },
+      {
+        "file": "chaos_trader-0.1.0/tests/test_write_boundary.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = eval(expr, vars(importlib.import_module(module)))"
+      },
+      {
+        "file": "chaos_trader-0.1.0/tests/test_write_boundary.py",
+        "line": 166,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.assertNotRegex(ast.literal_eval(o[\"default\"]), r\"[\\\\/]|\\.\\.\", o)"
+      }
+    ]
   }
 ]
