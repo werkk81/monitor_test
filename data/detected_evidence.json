@@ -42082,5 +42082,87 @@
         "code_snippet": "self.assertNotRegex(ast.literal_eval(o[\"default\"]), r\"[\\\\/]|\\.\\.\", o)"
       }
     ]
+  },
+  {
+    "package_name": "persistbench",
+    "checked_at": "2026-10-03T20:14:14.768620",
+    "download_url": "https://files.pythonhosted.org/packages/16/b1/76f352c2400102a8543a2c6e17179939c47973fe5e454656561586aca26d/persistbench-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "persistbench-0.1.0/src/persistbench/_legacy/model_server/launcher.py",
+        "line": 124,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._processes: Dict[str, subprocess.Popen] = {}"
+      },
+      {
+        "file": "persistbench-0.1.0/src/persistbench/_legacy/model_server/launcher.py",
+        "line": 313,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "persistbench-0.1.0/src/persistbench/_legacy/model_server/modules/dinov3_model.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": ").cuda().eval()"
+      },
+      {
+        "file": "persistbench-0.1.0/src/persistbench/_legacy/scores/appearance_preservation.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "self._model.eval()"
+      },
+      {
+        "file": "persistbench-0.1.0/src/persistbench/_legacy/utils/qwen_utils.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(response_str)"
+      },
+      {
+        "file": "persistbench-0.1.0/src/persistbench/runtime.py",
+        "line": 93,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "persistbench-0.1.0/tests/smoke_backend.py",
+        "line": 12,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as socket_probe:"
+      },
+      {
+        "file": "persistbench-0.1.0/tests/test_release.py",
+        "line": 161,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "workers = [subprocess.Popen(command + ['--split-id', str(i)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True) for i in range(2)]"
+      },
+      {
+        "file": "persistbench-0.1.0/tests/test_release.py",
+        "line": 417,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "worker = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "wos-deploy",
+    "checked_at": "2026-10-03T20:14:14.913423",
+    "download_url": "https://files.pythonhosted.org/packages/2a/50/f17f9b125102512ffcbfded8bc638037eb96048be4535386a5f172190af7/wos_deploy-2.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wos_deploy-2.1.0/src/wos_deploy/templates/wos-deploy.py",
+        "line": 1416,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "wos_deploy-2.1.0/src/wos_deploy/templates/wos-deploy.py",
+        "line": 1536,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
