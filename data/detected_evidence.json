@@ -42164,5 +42164,33 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "garage-rag",
+    "checked_at": "2026-10-03T23:04:20.885694",
+    "download_url": "https://files.pythonhosted.org/packages/b4/0c/c8725fbd2836edeb459ec589981a333cb185aff99aef7b690bf6842e363c/garage_rag-1.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "garage_rag-1.5.0/src/garage_rag/service/server.py",
+        "line": 1628,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as probe:"
+      }
+    ]
+  },
+  {
+    "package_name": "audio-as-code",
+    "checked_at": "2026-10-03T23:04:21.406576",
+    "download_url": "https://files.pythonhosted.org/packages/2e/f9/650921a3c14ddc7cdd5a2a438e707c7596f05fd59ba9540ef251eacd2df7/audio_as_code-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "audio_as_code-0.1.0/.github/scripts/check_distribution.py",
+        "line": 161,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(statement.value)"
+      }
+    ]
   }
 ]
