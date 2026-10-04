@@ -42464,5 +42464,121 @@
         "code_snippet": "[log] = eval(task, model=model, display=\"none\")"
       }
     ]
+  },
+  {
+    "package_name": "mintid-verifier-sdk",
+    "checked_at": "2026-10-04T23:32:15.524965",
+    "download_url": "https://files.pythonhosted.org/packages/e9/98/e298ced3cb0c943936d08d9efa80dc656d50985f197acb4ea4eda2f1a369/mintid_verifier_sdk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mintid_verifier_sdk-0.1.0/src/verifier_core/a2a/signing.py",
+        "line": 147,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "signature=base64.b64decode(raw[\"signature\"], validate=True),"
+      },
+      {
+        "file": "mintid_verifier_sdk-0.1.0/src/verifier_core/chain_client/rpc.py",
+        "line": 88,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "value = base64.b64decode(response.get(\"value\") or \"\")"
+      },
+      {
+        "file": "mintid_verifier_sdk-0.1.0/src/verifier_core/chain_client/rpc.py",
+        "line": 93,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key=base64.b64decode(op[\"key\"]),"
+      },
+      {
+        "file": "mintid_verifier_sdk-0.1.0/src/verifier_core/chain_client/rpc.py",
+        "line": 94,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data=base64.b64decode(op[\"data\"]),"
+      },
+      {
+        "file": "mintid_verifier_sdk-0.1.0/src/verifier_core/chain_client/rpc.py",
+        "line": 181,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(response[\"value\"])"
+      },
+      {
+        "file": "mintid_verifier_sdk-0.1.0/src/verifier_core/console/app.py",
+        "line": 261,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "given = base64.b64decode(header[6:].strip(), validate=True)"
+      },
+      {
+        "file": "mintid_verifier_sdk-0.1.0/src/verifier_core/portal/app.py",
+        "line": 550,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "given = base64.b64decode(header[6:].strip(), validate=True)"
+      },
+      {
+        "file": "mintid_verifier_sdk-0.1.0/src/verifier_core/x402/payment_rule.py",
+        "line": 221,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(text + \"=\" * (-len(text) % 4), altchars=b\"-_\")"
+      },
+      {
+        "file": "mintid_verifier_sdk-0.1.0/src/verifier_core/x402/web_bot_auth.py",
+        "line": 224,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value[1:-1], validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "mintid-proof-core",
+    "checked_at": "2026-10-04T23:32:15.595192",
+    "download_url": "https://files.pythonhosted.org/packages/ed/ab/1b7f6785a340c6f91eeaf9f217b0ce29f234351cbb550fb73502f95fffe7/mintid_proof_core-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mintid_proof_core-0.3.0/src/proof_core/chain.py",
+        "line": 200,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(value, validate=True) if value else b\"\""
+      },
+      {
+        "file": "mintid_proof_core-0.3.0/src/proof_core/chain.py",
+        "line": 224,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value, validate=True) if value else b\"\""
+      }
+    ]
+  },
+  {
+    "package_name": "pinhaul",
+    "checked_at": "2026-10-04T23:32:15.618865",
+    "download_url": "https://files.pythonhosted.org/packages/4d/0d/7d3efa0ea75888a91d92928898674091eed11f54dfcd0237f37c26a2ea8e/pinhaul-0.4.5.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pinhaul-0.4.5/tests/test_scanners.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"code\": \"eval(user_input)\","
+      },
+      {
+        "file": "pinhaul-0.4.5/tests/test_scanners.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.assertNotIn(\"eval(user_input)\", dumped)"
+      }
+    ]
+  },
+  {
+    "package_name": "TikPipe",
+    "checked_at": "2026-10-04T23:32:15.832930",
+    "download_url": "https://files.pythonhosted.org/packages/24/d6/44c663234a761b32cc11912ab0d03929043a619455ca5a9de80edefff2c9/tikpipe-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tikpipe-1.0.1/tikpipe/cli.py",
+        "line": 47,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(["
+      }
+    ]
   }
 ]
