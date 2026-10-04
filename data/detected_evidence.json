@@ -42192,5 +42192,277 @@
         "code_snippet": "value = ast.literal_eval(statement.value)"
       }
     ]
+  },
+  {
+    "package_name": "emoji-toolkit",
+    "checked_at": "2026-10-04T20:30:48.571965",
+    "download_url": "https://files.pythonhosted.org/packages/3c/cb/143d7f19536e948b2839f81b0a3debcbd09d904f15c87d0540be93fa742c/emoji_toolkit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "emoji_toolkit-0.1.0/src/emoji_dataset/format.py",
+        "line": 71,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(url[len(prefix) :], validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "unrent",
+    "checked_at": "2026-10-04T20:30:48.688275",
+    "download_url": "https://files.pythonhosted.org/packages/76/9c/e2c8bd5169d89a41d588b4f5d1b4b9cda9ac1f84c1e9fb957856d36bae64/unrent-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "unrent-0.2.0/unrent/detect.py",
+        "line": 1825,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, cwd=root, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)"
+      }
+    ]
+  },
+  {
+    "package_name": "infra-health-check",
+    "checked_at": "2026-10-04T20:30:48.887717",
+    "download_url": "https://files.pythonhosted.org/packages/c8/07/01262dea12dd4f102718744dd4d745a84bbcc30ed99d653a13e4cc73eb19/infra_health_check-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "infra_health_check-0.1.0/tests/local_servers.py",
+        "line": 76,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "infra_health_check-0.1.0/tests/local_servers.py",
+        "line": 100,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "louped",
+    "checked_at": "2026-10-04T20:30:49.053588",
+    "download_url": "https://files.pythonhosted.org/packages/08/63/b0a72bf14894afdb78291b043a385208e513fa96a374d9317f97006830c1/louped-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "louped-0.1.3/src/louped/circuits.py",
+        "line": 45,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True,"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/grid.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "[log] = eval(task, model=target, model_roles=_roles(args), log_dir=str(logs_dir()),"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/judge.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "[log] = eval(pairwise(path_a, path_b, criterion), model=model, limit=limit,"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/sweep.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "[log] = eval("
+      },
+      {
+        "file": "louped-0.1.3/src/louped/models/adapters.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/models/diffusion.py",
+        "line": 149,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Diffusion(model.eval(), tok, *load_mask(model, tok))"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/models/tiny.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "return load(model.eval(), tokenizer=tok)"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/models/tiny.py",
+        "line": 111,
+        "keyword_detected": "eval(",
+        "code_snippet": "return BertForMaskedLM(cfg).eval(), tok"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/server/launch.py",
+        "line": 344,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.procs: dict[str, subprocess.Popen[bytes]] = {}"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/server/launch.py",
+        "line": 432,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(job.argv, cwd=_root(), env=os.environ | self.env,"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/templates/example/does-pushback-flip-answers/run.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "return lm._model.eval(), lm.tokenizer"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/templates/example/does-pushback-flip-answers/run.py",
+        "line": 82,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.to(\"cuda\" if torch.cuda.is_available() else \"cpu\").eval(), tok"
+      },
+      {
+        "file": "louped-0.1.3/src/louped/train/reft.py",
+        "line": 141,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(command(job_file), env=env)"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_agent.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval([\"yes\", \"no\"], tags=[\"experiment:pressure\"])"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_agent.py",
+        "line": 34,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval([\"yes\", \"yes\"], tags=[\"experiment:pressure\"])"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_domains.py",
+        "line": 337,
+        "keyword_detected": "eval(",
+        "code_snippet": "[state] = eval(task, log_dir=str(logs_dir()), model=f\"louped/{name}\","
+      },
+      {
+        "file": "louped-0.1.3/tests/test_domains.py",
+        "line": 339,
+        "keyword_detected": "eval(",
+        "code_snippet": "[prompt_only] = eval(task, log_dir=str(logs_dir()), model=f\"louped/{name}\", display=\"none\")"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_domains.py",
+        "line": 341,
+        "keyword_detected": "eval(",
+        "code_snippet": "[again] = eval(rag(items, index, k=1, mode=\"bm25\", every=2), model=f\"louped/{name}\","
+      },
+      {
+        "file": "louped-0.1.3/tests/test_domains.py",
+        "line": 586,
+        "keyword_detected": "eval(",
+        "code_snippet": "[log] = eval(cases(path), model=model, log_dir=str(logs_dir()), display=\"none\")"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_heads.py",
+        "line": 151,
+        "keyword_detected": "eval(",
+        "code_snippet": "[log] = eval(task, model=\"louped/tiny-heads\", model_args={\"interventions\": {"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_interp.py",
+        "line": 804,
+        "keyword_detected": "eval(",
+        "code_snippet": "[log] = eval(task, model=\"louped/tiny-agent\", log_dir=str(logs_dir()), display=\"none\")"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_judge.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(answers, tags=[\"experiment:pressure\"])"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_remote.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(task, model=get_model(\"mockllm/model\", custom_outputs=out), tags=[\"experiment:hello\"],"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_server.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(Task(dataset=[Sample(input=\"hi\", target=\"hi\")]), model=\"mockllm/model\","
+      },
+      {
+        "file": "louped-0.1.3/tests/test_server.py",
+        "line": 241,
+        "keyword_detected": "eval(",
+        "code_snippet": "[log] = eval(task, model=\"mockllm/model\", limit=3, log_dir=str(logs_dir()), display=\"none\")"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_stores.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_eval(answers: list[str], tags: list[str] | None = None) -> None:"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_stores.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval("
+      },
+      {
+        "file": "louped-0.1.3/tests/test_stores.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval([\"yes\", \"no\", \"yes\"])"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_stores.py",
+        "line": 94,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval([\"yes\"], tags=[\"experiment:pressure\"])"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_stores.py",
+        "line": 95,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval([\"yes\"])"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_stores.py",
+        "line": 168,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval([\"yes\"])"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_stores.py",
+        "line": 200,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval([\"yes\", \"no\", \"no\", \"no\", \"yes\", \"no\"], tags=[\"side:a\"])"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_stores.py",
+        "line": 201,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval([\"yes\", \"yes\", \"yes\", \"no\", \"no\", \"yes\"], tags=[\"side:b\"])"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_tool_scorers.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "[log] = eval(task, model=model, display=\"none\", log_dir=\"logs-unused\")"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_train.py",
+        "line": 176,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_the_same_check_scores_an_inspect_eval() -> None:"
+      },
+      {
+        "file": "louped-0.1.3/tests/test_train.py",
+        "line": 191,
+        "keyword_detected": "eval(",
+        "code_snippet": "[log] = eval(task, model=model, display=\"none\")"
+      }
+    ]
   }
 ]
