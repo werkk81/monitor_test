@@ -42580,5 +42580,107 @@
         "code_snippet": "process = subprocess.Popen(["
       }
     ]
+  },
+  {
+    "package_name": "agno-aer1",
+    "checked_at": "2026-10-05T23:22:36.219276",
+    "download_url": "https://files.pythonhosted.org/packages/11/b9/f302c5412dab88c0107aa2bbe35ae5a9e7b9ef72a72df0c0528a425255f2/agno_aer1-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agno_aer1-0.1.0/src/agno_aer1/__init__.py",
+        "line": 116,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(receipt[\"canonical_bytes\"], validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "openmv-ota",
+    "checked_at": "2026-10-05T23:22:37.276333",
+    "download_url": "https://files.pythonhosted.org/packages/a0/30/eea44dcb33d750bb5360c09431e6069025f4be179483c43d324de0030316/openmv_ota-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/build/device/openmv_ota/__init__.py",
+        "line": 1482,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(ai[0], ai[1], ai[2])"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/build/device/openmv_ota/__init__.py",
+        "line": 1798,
+        "keyword_detected": "exec(",
+        "code_snippet": "# exec()'ing the ~1000-line installer source is one unsplittable compile+exec that can exceed a"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/build/device/openmv_ota/__init__.py",
+        "line": 1803,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(_read_file(here + \"/data/installer.py\", \"r\"), ns)  # noqa: S102 - signed ROMFS"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/build/device/openmv_ota/__init__.py",
+        "line": 1870,
+        "keyword_detected": "exec(",
+        "code_snippet": "have to be whole to exec()/parse. Still bounded: these are fixed build"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/build/device/openmv_ota/data/installer.py",
+        "line": 11,
+        "keyword_detected": "exec(",
+        "code_snippet": "step) so ``openmv_ota.install()`` can ``exec()`` it into RAM before the target slot"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/build/device/openmv_ota/data/installer.py",
+        "line": 1272,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(ai[0], ai[1], ai[2])"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/build/device/openmv_rtc.py",
+        "line": 250,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/build/romfs.py",
+        "line": 427,
+        "keyword_detected": "exec(",
+        "code_snippet": "# reads + exec()s it into RAM (it can't run from the slot it's erasing), so"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/flash/flash.py",
+        "line": 275,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "catcher = subprocess.Popen(imx.catcher_argv(python3, usb, \"claim\", timeout_s=wait),"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/flash/flash.py",
+        "line": 291,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([*_mpremote(mpremote), \"connect\", cam.port,"
+      },
+      {
+        "file": "openmv_ota-1.0.1/src/openmv_ota/project/keybackup.py",
+        "line": 43,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return {name: base64.b64decode(b64) for name, b64 in json.loads(payload).items()}"
+      }
+    ]
+  },
+  {
+    "package_name": "strands-couchbase",
+    "checked_at": "2026-10-05T23:22:37.622215",
+    "download_url": "https://files.pythonhosted.org/packages/fe/78/8d5c8de560b044d6b751af73ce9238ef8e56296d506e60607e0d70183df1/strands_couchbase-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "strands_couchbase-0.1.0/tests/test_memory_store.py",
+        "line": 656,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", no_socket)"
+      }
+    ]
   }
 ]
