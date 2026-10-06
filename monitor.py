@@ -33,7 +33,7 @@ def get_download_url(package_name):
                 if file_info.get("packagetype") == "sdist" and file_info.get("url").endswith(".tar.gz"):
                     return file_info.get("url")
     except Exception as e:
-        print(f"❌ {package_name} API 조회 실패: {e}")
+        print(f"{package_name} API 조회 실패: {e}")
     return None
 
 
@@ -64,7 +64,7 @@ def analyze_package_code(download_url):
                                             "code_snippet": line_content.strip()
                                         })
     except Exception as e:
-        print(f"❌ 소스 코드 다운로드/분석 중 에러: {e}")
+        print(f"소스 코드 다운로드/분석 중 에러: {e}")
     return evidences
 
 
@@ -74,12 +74,12 @@ def check_pypi_new_packages():
 
     for entry in feed.entries[:10]:  # 최근 등록된 10개 패키지 순회
         package_name = entry.title.split()[0]
-        print(f"🔍 검사 시작: {package_name}")
+        print(f"검사 시작: {package_name}")
 
         # 1. 다운로드 URL 확보
         download_url = get_download_url(package_name)
         if not download_url:
-            print(f"⏩ 소스 코드가 없는 패키지이므로 스킵한다: {package_name}")
+            print(f"소스 코드가 없는 패키지이므로 스킵한다: {package_name}")
             continue
 
         # 2. 정적 검사 실행하여 근거(Evidence) 추출
@@ -96,7 +96,7 @@ def check_pypi_new_packages():
                 "evidences": evidences
             })
         else:
-            print(f"🟢 [안전] {package_name} 특이사항 없음")
+            print(f"[안전] {package_name} 특이사항 없음")
 
     # 4. 탐지된 데이터가 있다면 안전하게 JSON 파일로 저장
     if detected_list:
@@ -116,7 +116,7 @@ def check_pypi_new_packages():
         
         with open(result_file, "w", encoding="utf-8") as f:
             json.dump(existing_data, f, indent=2, ensure_ascii=False)
-        print(f"\n💾 총 {len(detected_list)}개의 악성 의심 근거가 '{result_file}'에 안전하게 누적 저장되었습니다!")
+        print(f"\n총 {len(detected_list)}개의 악성 의심 근거가 '{result_file}'에 안전하게 누적 저장되었습니다!")
 
 
 if __name__ == "__main__":
