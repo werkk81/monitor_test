@@ -42682,5 +42682,113 @@
         "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", no_socket)"
       }
     ]
+  },
+  {
+    "package_name": "veridex-mcp",
+    "checked_at": "2026-10-06T21:55:01.641165",
+    "download_url": "https://files.pythonhosted.org/packages/ef/55/5b9f5f5f134d6ddb186599b82750096fe78a06f59c7d692e870a6328456e/veridex_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "veridex_mcp-0.1.0/src/veridex_mcp/client.py",
+        "line": 74,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = json.loads(base64.b64decode(padded).decode(\"utf-8\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "openhub-bo-fx",
+    "checked_at": "2026-10-06T21:55:01.766237",
+    "download_url": "https://files.pythonhosted.org/packages/de/c8/dbca69fd586ade6487eb68246752cde88bec13026df19759e60a6bb62840/openhub_bo_fx-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "openhub_bo_fx-0.1.0/python/openhub_bo/fx/models.py",
+        "line": 69,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(self.image_base64)"
+      }
+    ]
+  },
+  {
+    "package_name": "openhub-bo-qr",
+    "checked_at": "2026-10-06T21:55:01.880352",
+    "download_url": "https://files.pythonhosted.org/packages/1d/fe/ef782b56b295b559f9fc86de27e73d39c94788b2a82a199d79c409389046/openhub_bo_qr-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "openhub_bo_qr-0.1.0/python/openhub_bo/qr/models.py",
+        "line": 76,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(self.qr_image_base64)"
+      }
+    ]
+  },
+  {
+    "package_name": "fayda-mcp",
+    "checked_at": "2026-10-06T21:55:02.236278",
+    "download_url": "https://files.pythonhosted.org/packages/67/84/05d00ef185c1845cad2ce163e20a53886a5a95fda1199b14bff0c6460457/fayda_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fayda_mcp-0.1.0/src/fayda_mcp/secrets/keys.py",
+        "line": 34,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(text).decode(\"utf-8\").strip()"
+      }
+    ]
+  },
+  {
+    "package_name": "strata-plf",
+    "checked_at": "2026-10-06T21:55:02.564385",
+    "download_url": "https://files.pythonhosted.org/packages/ec/9c/15afb6429da9a0092ac905bda36fc2ea9ab5c72c02a55cc811d70113ea00/strata_plf-2026.10.6.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "strata_plf-2026.10.6/tests/unit/native_types/test_build_sources.py",
+        "line": 40,
+        "keyword_detected": "eval(",
+        "code_snippet": "lists[target.id] = ast.literal_eval(node.value)"
+      },
+      {
+        "file": "strata_plf-2026.10.6/tests/unit/native_types/test_build_sources.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "name = ast.literal_eval(node.args[0])"
+      },
+      {
+        "file": "strata_plf-2026.10.6/tests/unit/native_types/test_build_sources.py",
+        "line": 96,
+        "keyword_detected": "eval(",
+        "code_snippet": "extensions[name] = ast.literal_eval(macros) if macros is not None else []"
+      },
+      {
+        "file": "strata_plf-2026.10.6/tests/unit/native_types/test_serializer_contract.py",
+        "line": 726,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec("
+      },
+      {
+        "file": "strata_plf-2026.10.6/tests/unit/native_types/test_training_scope.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(match.group(1))"
+      }
+    ]
+  },
+  {
+    "package_name": "tenzan-nfe-python-sdk",
+    "checked_at": "2026-10-06T21:55:02.765762",
+    "download_url": "https://files.pythonhosted.org/packages/db/de/c3b7e51ce8554f536badc4d8553309d23d23696c4ffe3efdba9482645e8e/tenzan_nfe_python_sdk-2.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tenzan_nfe_python_sdk-2.0.0/tests/test_client.py",
+        "line": 114,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "raw_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      }
+    ]
   }
 ]
