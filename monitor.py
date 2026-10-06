@@ -79,7 +79,7 @@ def check_pypi_new_packages():
         # 1. 다운로드 URL 확보
         download_url = get_download_url(package_name)
         if not download_url:
-            print(f"소스 코드가 없는 패키지이므로 스킵한다: {package_name}")
+            print(f"소스 코드가 없는 패키지이므로 스킵: {package_name}")
             continue
 
         # 2. 정적 검사 실행하여 근거(Evidence) 추출
@@ -87,7 +87,7 @@ def check_pypi_new_packages():
 
         # 3. 근거가 하나라도 발견되면 악성 의심으로 판단 및 기록
         if evidences:
-            print(f"🚨 [위험] 의심스러운 패키지 감지됨: {package_name}")
+            print(f"[위험] 의심스러운 패키지 감지됨: {package_name}")
             detected_list.append({
                 "package_name": package_name,
                 "checked_at": datetime.now().isoformat(),
@@ -116,7 +116,7 @@ def check_pypi_new_packages():
         
         with open(result_file, "w", encoding="utf-8") as f:
             json.dump(existing_data, f, indent=2, ensure_ascii=False)
-        print(f"\n총 {len(detected_list)}개의 악성 의심 근거가 '{result_file}'에 안전하게 누적 저장되었습니다!")
+        print(f"\n총 {len(detected_list)}개의 악성 의심 근거가 '{result_file}'에 안전하게 누적 저장되었습니다")
 
 
 if __name__ == "__main__":
