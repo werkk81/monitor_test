@@ -43738,5 +43738,99 @@
         "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
       }
     ]
+  },
+  {
+    "package_name": "aer1-strands",
+    "checked_at": "2026-10-07T22:18:54.735546",
+    "download_url": "https://files.pythonhosted.org/packages/71/57/772c356e343be81bd399fe1feb910a44a90b2ebb45cebbf8c1eaa33104c5/aer1_strands-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aer1_strands-0.1.0/aer1_strands/anchor.py",
+        "line": 521,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(f[\"ots_b64\"])"
+      },
+      {
+        "file": "aer1_strands-0.1.0/tests/test_verdicts.py",
+        "line": 86,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"verdicts.py\", \"exec\"), mod.__dict__)"
+      }
+    ]
+  },
+  {
+    "package_name": "epub-tr",
+    "checked_at": "2026-10-07T22:18:54.857997",
+    "download_url": "https://files.pythonhosted.org/packages/ee/df/1d91c7c1be6a01832cffa32ecd44be0493cab798a45ae6a7f6a0f76c73f2/epub_tr-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "epub_tr-1.1.0/epub_tr/engines/llm.py",
+        "line": 114,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(cmd, cwd=d, env=env_, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,"
+      }
+    ]
+  },
+  {
+    "package_name": "aer1-langchain",
+    "checked_at": "2026-10-07T22:18:54.990498",
+    "download_url": "https://files.pythonhosted.org/packages/6e/e5/6b5464ca02424306a5ba1a6d18095539ecb3eafaed250bf1898e93bd8d05/aer1_langchain-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aer1_langchain-0.1.0/aer1_langchain/anchor.py",
+        "line": 521,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(f[\"ots_b64\"])"
+      },
+      {
+        "file": "aer1_langchain-0.1.0/tests/test_verdicts.py",
+        "line": 86,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"verdicts.py\", \"exec\"), mod.__dict__)"
+      }
+    ]
+  },
+  {
+    "package_name": "stwrd-auth",
+    "checked_at": "2026-10-07T22:18:55.297831",
+    "download_url": "https://files.pythonhosted.org/packages/9a/57/9972da287c2031e4541aebf87f2c8add559d3286b616f8e0577b967dbc85/stwrd_auth-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stwrd_auth-0.1.0/tests/test_management.py",
+        "line": 186,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(token.headers[\"Authorization\"].split(\" \")[1]).decode()"
+      },
+      {
+        "file": "stwrd_auth-0.1.0/tests/test_postgres_store.py",
+        "line": 284,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "stwrd_auth-0.1.0/tests/test_readme.py",
+        "line": 59,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(_block(heading), f\"README.md [{heading}]\", \"exec\"), namespace)  # noqa: S102"
+      }
+    ]
+  },
+  {
+    "package_name": "gorkha",
+    "checked_at": "2026-10-07T22:18:55.926238",
+    "download_url": "https://files.pythonhosted.org/packages/8d/94/1fb9c153c2d48ca9bcc0e14c9e1cc1711387d0c0291f775dfecdb60d024a/gorkha-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gorkha-0.0.1/src/gorkha/gnn.py",
+        "line": 131,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
   }
 ]
