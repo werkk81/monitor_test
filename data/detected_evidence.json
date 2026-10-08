@@ -43958,5 +43958,95 @@
         "code_snippet": "def eval(self): return self"
       }
     ]
+  },
+  {
+    "package_name": "opshield",
+    "checked_at": "2026-10-08T22:30:50.446400",
+    "download_url": "https://files.pythonhosted.org/packages/f6/66/dcab0fb4918bed3767f62e37dbde4195f657d0aa8e7ad4860989a731d0d2/opshield-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "opshield-0.2.0/tests/test_phase5.py",
+        "line": 137,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"calc\": lambda expression: f\"= {eval(expression)}\","
+      }
+    ]
+  },
+  {
+    "package_name": "deep-cnv",
+    "checked_at": "2026-10-08T22:30:50.596647",
+    "download_url": "https://files.pythonhosted.org/packages/f6/36/a4253df238c25d38ef55bfd71661cfb888d8df9bc1acda703eb06c73c79f/deep_cnv-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "deep_cnv-0.0.1/src/deep_cnv/inference/predict.py",
+        "line": 16,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return np.frombuffer(base64.b64decode(encoded), dtype=dtype).reshape(shape)"
+      },
+      {
+        "file": "deep_cnv-0.0.1/src/deep_cnv/inference/predict.py",
+        "line": 39,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "n_bytes = len(base64.b64decode(raw))"
+      }
+    ]
+  },
+  {
+    "package_name": "agproxy",
+    "checked_at": "2026-10-08T22:30:50.937329",
+    "download_url": "https://files.pythonhosted.org/packages/fa/a7/c7821bd1cea3342bed6798144ca33e36b23e5acee88aa5f1dd0412bdfc53/agproxy-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agproxy-0.1.3/agproxy_cli.py",
+        "line": 94,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "show(base64.b64decode(required).decode(\"utf-8\", \"replace\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "agpay",
+    "checked_at": "2026-10-08T22:30:51.093729",
+    "download_url": "https://files.pythonhosted.org/packages/e6/ba/2b9018143159f31c181e02cd263d18898250536d81e164a57fdb3ae8e5f7/agpay-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agpay-0.1.3/agpay_cli.py",
+        "line": 94,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "show(base64.b64decode(required).decode(\"utf-8\", \"replace\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "agmail",
+    "checked_at": "2026-10-08T22:30:51.240824",
+    "download_url": "https://files.pythonhosted.org/packages/05/82/9f7d554beba35a023d9ba7fa1ea7454950adf298edf1fd7d1590fdf2de3a/agmail-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agmail-0.1.3/agmail_cli.py",
+        "line": 94,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "show(base64.b64decode(required).decode(\"utf-8\", \"replace\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "agdata",
+    "checked_at": "2026-10-08T22:30:51.392243",
+    "download_url": "https://files.pythonhosted.org/packages/97/d5/6920a41318d9b3e43c8013533e871e44a0438de622659395788f7d021645/agdata-0.1.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agdata-0.1.3/agdata_cli.py",
+        "line": 94,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "show(base64.b64decode(required).decode(\"utf-8\", \"replace\"))"
+      }
+    ]
   }
 ]
