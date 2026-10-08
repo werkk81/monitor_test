@@ -43832,5 +43832,131 @@
         "code_snippet": "model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "mlx-reason-ct",
+    "checked_at": "2026-10-08T02:00:36.349885",
+    "download_url": "https://files.pythonhosted.org/packages/9d/6f/83cefcfcd987298d08fa9fc0f0bae521d07d561d467456f80c3af4ebf94e/mlx_reason_ct-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/api.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(logit, *cache.arrays())"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/api.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(logit, *cache.arrays())"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/chunk_delta.py",
+        "line": 77,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(attn)"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/chunk_delta.py",
+        "line": 83,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(values, keys, decay)"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/chunk_delta.py",
+        "line": 94,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(part, state)"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/mlx_model.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(*self.weights.values())"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/mlx_model.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(result)"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/mlx_model.py",
+        "line": 157,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(part)"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/mlx_model.py",
+        "line": 162,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(x)"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/mlx_model.py",
+        "line": 169,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(features, embeddings)"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/mlx_model.py",
+        "line": 287,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(part)"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/mlx_model.py",
+        "line": 290,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(x, *cache.layers[i].values())"
+      },
+      {
+        "file": "mlx_reason_ct-0.1.0/src/mlx_reason_ct/mlx_model.py",
+        "line": 293,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(x)"
+      }
+    ]
+  },
+  {
+    "package_name": "windows-monitor",
+    "checked_at": "2026-10-08T02:00:36.535002",
+    "download_url": "https://files.pythonhosted.org/packages/73/03/35b0e4451ee7f6bb0014c95f907bbc40e1af27dd3d39b31a8da777126121/windows_monitor-2.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "windows_monitor-2.0.0/src/windowsmonitor/__main__.py",
+        "line": 2039,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      }
+    ]
+  },
+  {
+    "package_name": "rastermoves",
+    "checked_at": "2026-10-08T02:00:36.600941",
+    "download_url": "https://files.pythonhosted.org/packages/ca/75/cba8f09d4b5327a9ab9c77591cd213a7e6abc110317ec42e85fa21e5d9d6/rastermoves-0.3.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "rastermoves-0.3.1/scripts/release_tools.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "versions = [ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign)"
+      },
+      {
+        "file": "rastermoves-0.3.1/src/rastermoves/backends/spandrel_backend.py",
+        "line": 117,
+        "keyword_detected": "eval(",
+        "code_snippet": "descriptor.eval()"
+      },
+      {
+        "file": "rastermoves-0.3.1/tests/test_backend_adapters.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self): return self"
+      }
+    ]
   }
 ]
