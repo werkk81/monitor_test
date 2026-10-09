@@ -44048,5 +44048,163 @@
         "code_snippet": "show(base64.b64decode(required).decode(\"utf-8\", \"replace\"))"
       }
     ]
+  },
+  {
+    "package_name": "switchdeck",
+    "checked_at": "2026-10-09T02:30:30.424034",
+    "download_url": "https://files.pythonhosted.org/packages/d1/dd/774b208c7fbc53afcc88cc3952a356cfd4c6b58c7818fe78c8c2cb622944/switchdeck-2026.10.9.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 175,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "if base64.b64decode(envelope.get(\"aad\", \"\")) != aad:"
+      },
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 177,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = AESGCM(key).decrypt(base64.b64decode(envelope[\"nonce\"]), base64.b64decode(envelope[\"ciphertext\"]), aad)"
+      },
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 947,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "files = {name: base64.b64decode(value, validate=True) for name, value in account[\"files\"].items()}"
+      },
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 995,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(item[\"content\"])"
+      },
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 1036,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(account[\"config\"], validate=True)"
+      },
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 1040,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(encoded, validate=True) if encoded else json_bytes(account[\"auth\"])"
+      },
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 1142,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "saved_hash = digest(base64.b64decode(encoded, validate=True))"
+      },
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 1150,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "matches = config_matches(base64.b64decode(row[\"config\"], validate=True), current_config, root)"
+      },
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 1404,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "planned_desired = {name: base64.b64decode(data) for name, data in plan[\"desired\"].items()}"
+      },
+      {
+        "file": "switchdeck-2026.10.9.1/lib/switchboard.py",
+        "line": 1567,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(item[\"content\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "ezmd-converters",
+    "checked_at": "2026-10-09T02:30:30.732381",
+    "download_url": "https://files.pythonhosted.org/packages/ea/ed/3e2c4fbe56b1bdc90a6087f6541645b8919fee85dcfacb3dbb9429e5b584/ezmd_converters-0.1.0rc1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ezmd_converters-0.1.0rc1/src/ezmd_converters/ebooks/notebook.py",
+        "line": 331,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "else base64.b64decode(payload, validate=False)"
+      }
+    ]
+  },
+  {
+    "package_name": "tf-rewardkit",
+    "checked_at": "2026-10-09T02:30:31.235231",
+    "download_url": "https://files.pythonhosted.org/packages/eb/82/157a404bfdcbc2be15b1c2af2b42c066bb3352f82d2d6839413f38036ed4/tf_rewardkit-1.6.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tf_rewardkit-1.6.3/src/rewardkit/agents.py",
+        "line": 174,
+        "keyword_detected": "exec(",
+        "code_snippet": "create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "khala",
+    "checked_at": "2026-10-09T02:30:33.865114",
+    "download_url": "https://files.pythonhosted.org/packages/a4/c7/5a7ca198e7ce39ddef3d7dc6eb1687e79b4380276f2b304aac2958897e5e/khala-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "khala-0.3.0/tests/test_catalog.py",
+        "line": 45,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertEqual(json.loads(base64.b64decode(cursor[\"config\"][0])), {\"url\": URL})"
+      },
+      {
+        "file": "khala-0.3.0/tests/test_catalog.py",
+        "line": 54,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertEqual(json.loads(base64.b64decode(lm[\"config\"][0])), {\"url\": URL})"
+      },
+      {
+        "file": "khala-0.3.0/tests/test_connect_cli.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen([sys.executable, \"-m\", \"khala.cli\", \"--env\", str(root / \"khala.env\"), \"serve\","
+      },
+      {
+        "file": "khala-0.3.0/tests/test_connect_cli.py",
+        "line": 109,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "cli = subprocess.Popen([sys.executable, \"-m\", \"khala.cli\", \"connect\", \"cursor\", \"--url\", base, \"--token\","
+      },
+      {
+        "file": "khala-0.3.0/tests/test_local.py",
+        "line": 34,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"khala.cli\", \"--env\", str(self.root / \"khala.env\"), \"serve\","
+      },
+      {
+        "file": "khala-0.3.0/tests/test_local.py",
+        "line": 105,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen([sys.executable, \"-m\", \"khala.cli\", \"--env\", str(root / \"khala.env\"), \"serve\","
+      },
+      {
+        "file": "khala-0.3.0/tests/test_local.py",
+        "line": 149,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "khala-0.3.0/tests/test_proxy.py",
+        "line": 20,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "khala-0.3.0/tests/test_proxy.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"khala.cli\", \"serve\", \"--port\", str(port)], env=env,"
+      }
+    ]
   }
 ]
