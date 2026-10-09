@@ -44206,5 +44206,735 @@
         "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"khala.cli\", \"serve\", \"--port\", str(port)], env=env,"
       }
     ]
+  },
+  {
+    "package_name": "sniffmcp-cli",
+    "checked_at": "2026-10-09T21:53:32.141245",
+    "download_url": "https://files.pythonhosted.org/packages/16/db/90529ff7726f1abd5e3539a04eaf44577b7562fe0533074acaa31b5d2c98/sniffmcp_cli-0.4.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sniffmcp_cli-0.4.1/tests/test_checks.py",
+        "line": 217,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_execute_as_namespace_is_not_exec():"
+      }
+    ]
+  },
+  {
+    "package_name": "zog",
+    "checked_at": "2026-10-09T21:53:33.708823",
+    "download_url": "https://files.pythonhosted.org/packages/a3/51/295e351fe03a47657a9a1fa3cf00046ecacc7e35cafe8868d30aa1a31348/zog-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "zog-0.1.0/components/archive-mirror/integration/persistent-station/fixture-http-test.py",
+        "line": 27,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "keys={name:Ed25519PublicKey.from_public_bytes(base64.b64decode(value)) for name,value in k['keys'].items()}"
+      },
+      {
+        "file": "zog-0.1.0/components/archive-mirror/tests/runtime_acceptance.py",
+        "line": 27,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]"
+      },
+      {
+        "file": "zog-0.1.0/components/archive-mirror/tests/runtime_acceptance.py",
+        "line": 31,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "processes.append(subprocess.Popen([sys.executable,'-m','zog.archive_mirror',*arguments],env=environment,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE))"
+      },
+      {
+        "file": "zog-0.1.0/components/box-control/tests/test_registration_recovery.py",
+        "line": 95,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "client_peer, server_peer = socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/box-control/tests/test_registration_recovery.py",
+        "line": 101,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr('zog.box_control.runtime.root_control.socket.socket', lambda *a: Connected())"
+      },
+      {
+        "file": "zog-0.1.0/components/box-control/tests/test_registration_recovery.py",
+        "line": 117,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr('zog.box_control.runtime.root_control.socket.socket', lambda *a: Missing())"
+      },
+      {
+        "file": "zog-0.1.0/components/box-control/tests/test_registration_recovery.py",
+        "line": 157,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "mutation_client, mutation_server=socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/box-control/tests/test_registration_recovery.py",
+        "line": 158,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "inspect_client, inspect_server=socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/box-control/tests/test_station.py",
+        "line": 222,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "client,server=socket.socketpair();clients.append(client)"
+      },
+      {
+        "file": "zog-0.1.0/components/box-control/tests/test_systemd_integration.py",
+        "line": 47,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "daemon = subprocess.Popen(["
+      },
+      {
+        "file": "zog-0.1.0/components/box-control/tests/test_systemd_integration.py",
+        "line": 211,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, str(worker), str(project.path),"
+      },
+      {
+        "file": "zog-0.1.0/components/build-trace/tests/test_materials.py",
+        "line": 131,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(source.read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/host-deploy/tests/test_bulk.py",
+        "line": 24,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(arguments[2],'<transfer>','exec'),{})"
+      },
+      {
+        "file": "zog-0.1.0/components/host-deploy/tests/test_discovery.py",
+        "line": 136,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(PROBE, '<remote-beacon-probe>', 'exec'), {})"
+      },
+      {
+        "file": "zog-0.1.0/components/host-deploy/tests/test_transfer.py",
+        "line": 85,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "if 'base64.b64decode' in script:"
+      },
+      {
+        "file": "zog-0.1.0/components/host-discover/tests/test_supervised_beacon.py",
+        "line": 193,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "left,right=socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/host-discover/tests/test_supervised_beacon.py",
+        "line": 252,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "left,right=socket.socketpair();parent=tmp_path/'runtime';parent.mkdir(mode=0o755)"
+      },
+      {
+        "file": "zog-0.1.0/components/host-install/tests/test_admission_listener.py",
+        "line": 17,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "path=str(tmp_path/'listener.sock');listener=socket.socket(socket.AF_UNIX,socket.SOCK_STREAM);listener.bind(path);listener.listen(4)"
+      },
+      {
+        "file": "zog-0.1.0/components/host-install/tests/test_admission_listener.py",
+        "line": 33,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX,socket.SOCK_STREAM) as c:"
+      },
+      {
+        "file": "zog-0.1.0/components/host-install/tests/test_state_admission.py",
+        "line": 132,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server,client=socket.socketpair();errors=[]"
+      },
+      {
+        "file": "zog-0.1.0/components/host-install/tests/test_state_admission.py",
+        "line": 155,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_sock,client_sock=socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/host-install/tests/test_state_admission.py",
+        "line": 208,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "left,right=socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/host-install/tests/test_state_admission.py",
+        "line": 212,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "left,right=socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/host-install/tests/test_state_admission.py",
+        "line": 218,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "left,right=socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/host-install/tests/test_state_admission.py",
+        "line": 226,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "left,right=socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/project/bootstrap/native-environment-checks.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "'assert ast.literal_eval(\\'{\"answer\": 42}\\')[\\'answer\\'] == 42\\n'"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/project/package/host-discover/stages/final/build.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "' exec(\"import json, tempfile, uuid\\\\nfrom pathlib import Path\\\\nfrom unittest.mock '"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/project/package/host-identify/stages/final/build.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "\" exec('import json, stat, tempfile, time, uuid\\\\nfrom pathlib import Path\\\\nfrom \""
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/project/package/host-install/stages/final/build.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "' exec(\"from importlib.metadata import version\\\\nimport host_install.state_contract, '"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/project/package/m4/stages/native-verification/build.py",
+        "line": 9,
+        "keyword_detected": "eval(",
+        "code_snippet": "'printf \"eval(6*7)\\\\n\" | upstream/m4-1.4.21/src/m4 | grep -x 42']],"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/project/package/python/stages/final/build.py",
+        "line": 49,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "'    with socket.socket(socket.AF_RDS, socket.SOCK_SEQPACKET) as receiver, '"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/project/package/python/stages/final/build.py",
+        "line": 50,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "'socket.socket(socket.AF_RDS, socket.SOCK_SEQPACKET) as sender:\\n'"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/project/package/python-cryptography/stages/final/build.py",
+        "line": 70,
+        "keyword_detected": "exec(",
+        "code_snippet": "' exec(\"import hashlib, pathlib, ssl, subprocess\\\\nimport cryptography\\\\nfrom '"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_artifacts.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "steps=ast.literal_eval(path.read_text());steps['build']=[['compile','consumer','revised']];path.write_text(repr(steps))"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_automake_results.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "commands=ast.literal_eval(recipe.read_text())['test']"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_barrier_acceptance.py",
+        "line": 10,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "probe = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_barrier_acceptance.py",
+        "line": 21,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as server:"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_barrier_acceptance.py",
+        "line": 25,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as server:"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_build_environment.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "data=ast.literal_eval(target.read_text());data['build']=[['/bin/false']];target.write_text(repr(data))"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_compiler_environment.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "integration=ast.literal_eval((stage/'integration.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_compiler_environment.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "build=ast.literal_eval((stage/'build.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_cryptography_fixture.py",
+        "line": 11,
+        "keyword_detected": "eval(",
+        "code_snippet": "recipe = ast.literal_eval((PROJECT / 'package/python-cryptography/stages/final/build.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_cryptography_fixture.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert ast.literal_eval(calls[0].args[0]) == installed"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_cryptography_fixture.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "encoded = ast.literal_eval(assignment.value.args[0])"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_gcc_pin_build.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "source = ast.literal_eval((recipe/'sources.py').read_text())[0]"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_gcc_pin_build.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "license_record = ast.literal_eval((recipe/'license.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_gcc_pin_build.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "build = ast.literal_eval((root/'project/package/gcc/stages/final/build.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_gcc_pin_build.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "sources = ast.literal_eval((stage/'sources.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_gcc_pin_build.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "integration = ast.literal_eval((stage/'integration.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_gcc_pin_build.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "pin = ast.literal_eval((root/'project/pins/2026-10-01/commit-pin.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_generation_provenance.py",
+        "line": 34,
+        "keyword_detected": "eval(",
+        "code_snippet": "monthly = ast.literal_eval(s.original.read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_generation_provenance.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "selected = ast.literal_eval((tmp_path/'package/commit-pin.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_native_tools.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "manifest=ast.literal_eval((PROJECT/'package/rust/stages/final/produce-manifest.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_pins.py",
+        "line": 23,
+        "keyword_detected": "eval(",
+        "code_snippet": "source = ast.literal_eval(path.read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_provenance.py",
+        "line": 201,
+        "keyword_detected": "eval(",
+        "code_snippet": "monthly=ast.literal_eval(s.original.read_text());monthly['packages']['dependency']=monthly['packages']['fixture']"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_provenance.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "selected=ast.literal_eval((tmp_path/'package/commit-pin.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_python_enrollment.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(script, '<reviewed-wheel-check>', 'exec'), {})"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_python_runtime.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "old=ast.literal_eval((ROOT/'package/python/stages/native-environment/sources.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_remote_operations.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(pin.read_text()) if pin.exists() else {"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_source_build.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "pins = ast.literal_eval(pin_path.read_text()) if pin_path.exists() else {'schema': 1, 'date': '2026-10-01', 'packages': {}}"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_source_provenance.py",
+        "line": 21,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(path.read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_source_provenance.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert ast.literal_eval((s.provenance.root/'artifacts'/descriptor['digest'][7:]).read_text())==value"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_sqlite_acceptance.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "command=ast.literal_eval(RECIPE.read_text())['test'][0][-1]"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_systemd_core.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "license = ast.literal_eval((package/'license.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/components/image-build/tests/test_systemd_core.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "source = ast.literal_eval((package/'stages/final/sources.py').read_text())[0]"
+      },
+      {
+        "file": "zog-0.1.0/components/root-control/tests/test_journal_barrier.py",
+        "line": 53,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "client,server=socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/components/root-control/tests/test_systemd_jobs.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "daemon = subprocess.Popen([executable, \"--session\", \"--nofork\", \"--print-address=1\"],"
+      },
+      {
+        "file": "zog-0.1.0/components/root-control/tests/test_workspace_backend.py",
+        "line": 22,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "probe = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "zog-0.1.0/components/root-control/tests/test_workspace_backend.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "zog-0.1.0/components/station-access/tools/test-frontend-installation.py",
+        "line": 76,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen([sys.executable, str(SOURCE / 'tools/frontend-probe.py'), '--directory', str(firstdir), '--serve-installation', str(root)], stdout=subprocess.PIPE, stderr=log, text=True)"
+      },
+      {
+        "file": "zog-0.1.0/components/version-share/tests/test_publication.py",
+        "line": 50,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(body['content'])"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/archive_mirror/runtime.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child=subprocess.Popen([sys.executable,'-m','zog.archive_mirror','refresh'],start_new_session=True)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/archive_mirror/source_notices.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "record = ast.literal_eval(raw.decode('utf-8'))"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/archive_mirror/views.py",
+        "line": 19,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return {name:Ed25519PublicKey.from_public_bytes(base64.b64decode(encoded,validate=True)) for name,encoded in value['keys'].items()}"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/box_control/runtime/root_control.py",
+        "line": 72,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/build_trace/model.py",
+        "line": 96,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "saved = json.loads(base64.b64decode(cursor, altchars=b'-_', validate=True))"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_deploy/job_worker.py",
+        "line": 73,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child=subprocess.Popen(manifest['recipe']['command'],cwd=root/'source',env=environment,"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_deploy/reboot_remote.py",
+        "line": 114,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(recipe['command'], cwd=root/'source', env=environment,"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_deploy/runner.py",
+        "line": 71,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data.extend(base64.b64decode(self.command('python3 -c '+shlex.quote(code)), validate=True))"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_deploy/station.py",
+        "line": 43,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "command = 'python3 -c ' + shlex.quote('import base64,zlib;exec(zlib.decompress(base64.b64decode('+repr(payload)+')))')"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_deploy/station.py",
+        "line": 43,
+        "keyword_detected": "exec(",
+        "code_snippet": "command = 'python3 -c ' + shlex.quote('import base64,zlib;exec(zlib.decompress(base64.b64decode('+repr(payload)+')))')"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_deploy/transfer.py",
+        "line": 29,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "command(host,f\"import os,base64; f=open({temporary!r},'r+b'); f.seek({start}); f.write(base64.b64decode({encoded!r})); f.flush(); os.fsync(f.fileno()); f.close()\")"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_deploy/transfer.py",
+        "line": 48,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data=base64.b64decode(encoded,validate=True)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_discover/gateway.py",
+        "line": 24,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX,socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_discover/supervisor.py",
+        "line": 228,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as c:"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_identify/signatures.py",
+        "line": 32,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(value, validate=True)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/host_install/state_admission.py",
+        "line": 165,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as connection:"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/archive_mirror.py",
+        "line": 68,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(encoded, validate=True)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/developer/seed_build.py",
+        "line": 37,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "python3 -c 'import socket; s=socket.socket(); s.settimeout(1); r=s.connect_ex((\"1.1.1.1\",53)); assert r != 0, \"network unexpectedly reachable\"'"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/developer/seed_build.py",
+        "line": 163,
+        "keyword_detected": "eval(",
+        "code_snippet": "commands = [['/bin/bash', '-c', \"set -eu; /usr/bin/m4 --version | grep '1.4.21'; printf 'eval(6*7)\\\\n' | /usr/bin/m4 | grep -x 42\"]]"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/final_compiler.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as server:"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/final_compiler.py",
+        "line": 197,
+        "keyword_detected": "eval(",
+        "code_snippet": "'printf \"eval(6*7)\\\\n\" | /selfhost-m4/usr/bin/m4 | grep -x 42', {'compiler': compiler.generation, 'm4': m4.generation})"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/integration_observations.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(artifact(p,files[name]).decode()) if name in files else None"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/metadata.py",
+        "line": 20,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(Path(path).read_text())"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/native.py",
+        "line": 134,
+        "keyword_detected": "eval(",
+        "code_snippet": "verify(builder,state/'image-build/attempts'/(operation_name+'-m4-verification'),probe,[['/bin/bash','-eu','-c','test \"$(pwd -P)\" = /image-build/source; printf \"eval(6*7)\\\\n\" | /native-m4/usr/bin/m4 | grep -x 42; printf \"Native M4 acceptance passed\\\\n\" | tee /image-build/output/acceptance.txt']],{'native':native.generation,'m4':m4.generation})"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/provenance.py",
+        "line": 86,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(raw.decode())"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/provenance.py",
+        "line": 233,
+        "keyword_detected": "eval(",
+        "code_snippet": "original = ast.literal_eval(pin_raw.decode())"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/provenance.py",
+        "line": 234,
+        "keyword_detected": "eval(",
+        "code_snippet": "selected = ast.literal_eval((builder.package_dir/'commit-pin.py').read_text())"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/python_runtime.py",
+        "line": 42,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "a, b = socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/retained_compiler.py",
+        "line": 127,
+        "keyword_detected": "eval(",
+        "code_snippet": "'printf \"eval(6*7)\\\\n\" | /selfhost-m4/usr/bin/m4 | grep -x 42']],"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/image_build/temporary.py",
+        "line": 17,
+        "keyword_detected": "eval(",
+        "code_snippet": "printf 'eval(6*7)\\n' | m4 | grep -x 42"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/root_control/daemon.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as server:"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/root_control/journal.py",
+        "line": 20,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as child:"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/root_control/journal.py",
+        "line": 96,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded=json.loads(base64.b64decode(cursor,altchars=b'-_',validate=True))"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/root_control/journal_barrier.py",
+        "line": 75,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "a,b = socket.socketpair()"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/root_control/journal_barrier.py",
+        "line": 95,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/root_control/workspace.py",
+        "line": 127,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "client = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/station_access/host_registry/cloud_configuration.py",
+        "line": 36,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(row.ciphertext, validate=True)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/station_access/host_registry/setup_configuration.py",
+        "line": 41,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "_,keys=vault.keyring();raw=base64.b64decode(row.ciphertext,validate=True)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/station_access/host_registry/vault.py",
+        "line": 27,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "keys={k:base64.b64decode(v,validate=True) for k,v in config['keys'].items()}"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/station_access/host_registry/vault.py",
+        "line": 38,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw=base64.b64decode(record.ciphertext,validate=True)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/version_share/archives.py",
+        "line": 74,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(item['content'])"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/version_share/archives.py",
+        "line": 121,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "'bytes': len(base64.b64decode(item['content']))} for name, item in sorted(files.items())],"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/version_share/core.py",
+        "line": 217,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(''.join(blob['content'].split()), validate=True)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/version_share/handoffs.py",
+        "line": 61,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(''.join(result['content'].split()), validate=True)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/version_share/publication.py",
+        "line": 98,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(item['content'])"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/version_share/publication.py",
+        "line": 142,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "guard_secret(name.encode() + b'\\0' + base64.b64decode(item['content']), client._token)"
+      },
+      {
+        "file": "zog-0.1.0/src/zog/version_share/review.py",
+        "line": 19,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(''.join(blob['content'].split()), validate=True)"
+      }
+    ]
   }
 ]
