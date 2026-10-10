@@ -45464,5 +45464,83 @@
         "code_snippet": "exec(compile(block, \"docs/python.md\", \"exec\"), {})"
       }
     ]
+  },
+  {
+    "package_name": "carbotek",
+    "checked_at": "2026-10-10T23:51:14.186081",
+    "download_url": "https://files.pythonhosted.org/packages/38/df/cc549c7629751e0b8368efc6078820a27c83e07bda980baf052a41410a33/carbotek-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "carbotek-0.1.0/src/carbotek/features/fetch.py",
+        "line": 124,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _expire_connection(connection: http.client.HTTPConnection, active_socket: list[socket.socket | None]) -> None:"
+      },
+      {
+        "file": "carbotek-0.1.0/src/carbotek/features/fetch.py",
+        "line": 187,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "active_socket: list[socket.socket | None] = [None]"
+      }
+    ]
+  },
+  {
+    "package_name": "overleaf-mcp-integration",
+    "checked_at": "2026-10-10T23:51:14.501609",
+    "download_url": "https://files.pythonhosted.org/packages/0f/7e/a344106b2b31624f7602591e9c5380c2c70ad478ea8c3c51ba0789beb172/overleaf_mcp_integration-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "overleaf_mcp_integration-0.1.0/tests/test_client_integration.py",
+        "line": 199,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png = base64.b64decode("
+      }
+    ]
+  },
+  {
+    "package_name": "jeni-py",
+    "checked_at": "2026-10-10T23:51:15.338326",
+    "download_url": "https://files.pythonhosted.org/packages/28/87/f58cc87d12b4758cb908410d2b0f46866451ce686bcefc083a5e79fc661a/jeni_py-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jeni_py-0.1.0/desktop.py",
+        "line": 83,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket( socket.AF_INET, socket.SOCK_STREAM ) as sock:"
+      },
+      {
+        "file": "jeni_py-0.1.0/desktop.py",
+        "line": 112,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def wait_for_server( process: subprocess.Popen, port: int ) -> None:"
+      },
+      {
+        "file": "jeni_py-0.1.0/desktop.py",
+        "line": 116,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process (subprocess.Popen): Streamlit child process."
+      },
+      {
+        "file": "jeni_py-0.1.0/desktop.py",
+        "line": 156,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen( command, cwd=working_directory, stdout=log, stderr=log,"
+      },
+      {
+        "file": "jeni_py-0.1.0/gemini.py",
+        "line": 2044,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.decoded_image = base64.b64decode( self.output_image_data )"
+      },
+      {
+        "file": "jeni_py-0.1.0/gemini.py",
+        "line": 3143,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.pcm_bytes = base64.b64decode( self.encoded_audio )"
+      }
+    ]
   }
 ]
