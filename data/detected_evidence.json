@@ -44936,5 +44936,151 @@
         "code_snippet": "content = base64.b64decode(''.join(blob['content'].split()), validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "graph-ted-db",
+    "checked_at": "2026-10-10T01:20:01.343276",
+    "download_url": "https://files.pythonhosted.org/packages/b5/63/fe383b019f8a5f86d90276414b27fc64f57dfe153f806750e53db60c3ddd/graph_ted_db-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "graph_ted_db-0.1.0/graph_ted_db/store/records.py",
+        "line": 299,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(self.vec_b64, validate=True)"
+      },
+      {
+        "file": "graph_ted_db-0.1.0/graph_ted_db/store/records.py",
+        "line": 357,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(vec, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "django-template-oxide",
+    "checked_at": "2026-10-10T01:20:01.701556",
+    "download_url": "https://files.pythonhosted.org/packages/76/95/90ed1cab3a2a98c1f7504bd71d6486d677a752f239c8020f8033f1e5bcd1/django_template_oxide-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "django_template_oxide-0.1.0/scripts/fuzz_differential.py",
+        "line": 100,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _eval(backend, src):"
+      },
+      {
+        "file": "django_template_oxide-0.1.0/scripts/fuzz_differential.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "ox_status, ox_out = _eval(OXIDE, src)"
+      },
+      {
+        "file": "django_template_oxide-0.1.0/scripts/fuzz_differential.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "sk_status, sk_out = _eval(STOCK, src)"
+      },
+      {
+        "file": "django_template_oxide-0.1.0/tests/django_template_tests/test_smartif.py",
+        "line": 8,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.assertEqual(expected, IfParser(tokens).parse().eval({}))"
+      },
+      {
+        "file": "django_template_oxide-0.1.0/tests/django_template_tests/test_smartif.py",
+        "line": 16,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.assertTrue(var.eval({}))"
+      },
+      {
+        "file": "django_template_oxide-0.1.0/tests/django_template_tests/test_smartif.py",
+        "line": 18,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.assertFalse(IfParser([\"not\", True]).parse().eval({}))"
+      },
+      {
+        "file": "django_template_oxide-0.1.0/tests/django_template_tests/test_smartif.py",
+        "line": 23,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.assertTrue(var.eval({}))"
+      }
+    ]
+  },
+  {
+    "package_name": "search-clanker-history",
+    "checked_at": "2026-10-10T01:20:01.958670",
+    "download_url": "https://files.pythonhosted.org/packages/6e/ee/19a3768e9826fcba53455d1795231d7f2ae1f065cdf52c5df9c394ea1caa/search_clanker_history-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "search_clanker_history-0.2.0/src/search_clanker_history/cli.py",
+        "line": 471,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)"
+      }
+    ]
+  },
+  {
+    "package_name": "powerquant-cli",
+    "checked_at": "2026-10-10T01:20:02.264885",
+    "download_url": "https://files.pythonhosted.org/packages/4f/f2/898121f131146128b5a2bbbfe22fcc48208b8cb5e892454e15ed8f6bafa8/powerquant_cli-0.2.6.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "powerquant_cli-0.2.6/examples/cached_factor_screen.py",
+        "line": 107,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with patch(\"socket.socket\", side_effect=AssertionError(\"offline computation used network\")):"
+      },
+      {
+        "file": "powerquant_cli-0.2.6/examples/local_quant_validation.py",
+        "line": 46,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with patch(\"socket.socket\", side_effect=AssertionError(\"离线计算禁止网络\")):"
+      },
+      {
+        "file": "powerquant_cli-0.2.6/examples/published_definition_validation.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "patch('socket.socket', side_effect=AssertionError('Offline network access')),"
+      },
+      {
+        "file": "powerquant_cli-0.2.6/examples/unified_snapshot_validation.py",
+        "line": 50,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "patch('socket.socket', side_effect=AssertionError('Offline network access')),"
+      },
+      {
+        "file": "powerquant_cli-0.2.6/tests/integration/test_local_quant_storage.py",
+        "line": 153,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "powerquant_cli-0.2.6/bundled/quant_core/app/factor/computation/factor_source_loader.py",
+        "line": 11,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<factors>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "powerquant_cli-0.2.6/bundled/quant_core/app/factor/computation/python_factor_executor.py",
+        "line": 23,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compiled[source], namespace)"
+      },
+      {
+        "file": "powerquant_cli-0.2.6/bundled/quant_core/app/research/service/research_service.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<research>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "powerquant_cli-0.2.6/bundled/quant_core/app/strategy/service/python_strategy_service.py",
+        "line": 19,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(spec.python_source, \"<strategy>\", \"exec\"), namespace)"
+      }
+    ]
   }
 ]
