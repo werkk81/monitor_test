@@ -45542,5 +45542,103 @@
         "code_snippet": "self.pcm_bytes = base64.b64decode( self.encoded_audio )"
       }
     ]
+  },
+  {
+    "package_name": "claudecodestreaming",
+    "checked_at": "2026-10-11T21:05:47.342937",
+    "download_url": "https://files.pythonhosted.org/packages/ed/0c/9a2746764f6e7eecc4af0441f4fdc82a960415af9f12aaf35071f2ab07d7/claudecodestreaming-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "claudecodestreaming-0.1.0/stream.py",
+        "line": 327,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "atlantic-games",
+    "checked_at": "2026-10-11T21:05:47.485230",
+    "download_url": "https://files.pythonhosted.org/packages/bb/03/056a2bb7bf9256c126d192b579cdc8b596bf5cfb07126226f26f5a888238/atlantic_games-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "atlantic_games-0.1.0/src/atlgames/amuse.py",
+        "line": 63,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return json.loads(base64.b64decode(text + \"=\" * (-len(text) % 4)).decode(\"utf-8\"))"
+      },
+      {
+        "file": "atlantic_games-0.1.0/tests/test_amuse.py",
+        "line": 31,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "json.loads(base64.b64decode(rawc + \"=\" * (-len(rawc) % 4)))"
+      }
+    ]
+  },
+  {
+    "package_name": "pyscopegui",
+    "checked_at": "2026-10-11T21:05:47.930022",
+    "download_url": "https://files.pythonhosted.org/packages/b9/84/729777adde924e946122952277b4e48371a6441b25c98488759abe734131/pyscopegui-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyscopegui-0.1.0/pyscopegui/__main__.py",
+        "line": 184,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "pyscopegui-0.1.0/pyscopegui/core/layout.py",
+        "line": 53,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(encoded)"
+      },
+      {
+        "file": "pyscopegui-0.1.0/pyscopegui/ui/help_menu.py",
+        "line": 506,
+        "keyword_detected": "exec(",
+        "code_snippet": "LicenceDialog(self.window).exec()"
+      },
+      {
+        "file": "pyscopegui-0.1.0/pyscopegui/ui/help_menu.py",
+        "line": 509,
+        "keyword_detected": "exec(",
+        "code_snippet": "AboutDialog(self.window).exec()"
+      },
+      {
+        "file": "pyscopegui-0.1.0/pyscopegui/ui/main_window.py",
+        "line": 867,
+        "keyword_detected": "exec(",
+        "code_snippet": "menu.exec(self.log.viewport().mapToGlobal(at))"
+      },
+      {
+        "file": "pyscopegui-0.1.0/pyscopegui/ui/messages.py",
+        "line": 38,
+        "keyword_detected": "exec(",
+        "code_snippet": "return Button(box.exec())"
+      },
+      {
+        "file": "pyscopegui-0.1.0/pyscopegui/ui/persist.py",
+        "line": 130,
+        "keyword_detected": "exec(",
+        "code_snippet": "header.customContextMenuRequested.connect(lambda where: menu.exec(header.mapToGlobal(where)))"
+      }
+    ]
+  },
+  {
+    "package_name": "sqllocks-shape-simulation",
+    "checked_at": "2026-10-11T21:05:48.154604",
+    "download_url": "https://files.pythonhosted.org/packages/7d/09/14bb2bbcc2ba232237592e66ead0904a25925aa1f0063f9bf01d46f8b0a3/sqllocks_shape_simulation-0.9.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sqllocks_shape_simulation-0.9.1/src/shape_simulation/cli_patterns.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(text)"
+      }
+    ]
   }
 ]
