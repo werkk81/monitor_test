@@ -45640,5 +45640,183 @@
         "code_snippet": "return ast.literal_eval(text)"
       }
     ]
+  },
+  {
+    "package_name": "s-bike-training-hub",
+    "checked_at": "2026-10-12T00:26:47.646634",
+    "download_url": "https://files.pythonhosted.org/packages/6f/8c/1e981e8f8010ddd1034f66b9aa358051ee0bb8a82b452061c96b23eaea68/s_bike_training_hub-1.11.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/artwork.py",
+        "line": 26,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "try:raw=base64.b64decode(encoded,validate=True)"
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/mcp_server.py",
+        "line": 46,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-c\", \"from s_bike_hub.cli import hub; hub()\", \"--port\", str(port), *extra], stdout=out, stderr=out,"
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/mcp_server.py",
+        "line": 387,
+        "keyword_detected": "eval(",
+        "code_snippet": "def t_lift_eval(a):"
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/menubar.py",
+        "line": 153,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"launchctl\", \"bootout\", f\"gui/{os.getuid()}/com.sbikehub.menubar\"])"
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/musicfolder.py",
+        "line": 97,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"open\", str(f)])"
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/musicfolder.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"xdg-open\", str(f)])"
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/planner.py",
+        "line": 49,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/remote.py",
+        "line": 145,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/workout_imports.py",
+        "line": 124,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "for page in out['pages']:page['image']=base64.b64decode(page['image'])"
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/workout_imports.py",
+        "line": 132,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "try:raw=base64.b64decode(data,validate=True)"
+      },
+      {
+        "file": "s_bike_training_hub-1.11.0/s_bike_hub/workout_imports.py",
+        "line": 163,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "req=json.loads(sys.stdin.read(14_001_000));out=_read_file(base64.b64decode(req['data'],validate=True),req['name'])"
+      }
+    ]
+  },
+  {
+    "package_name": "matchapi",
+    "checked_at": "2026-10-12T00:26:47.830721",
+    "download_url": "https://files.pythonhosted.org/packages/3f/8a/b1bb0b847ff1680b1d1de36e47ffab555ee384eb89a9f59fc9474276752e/matchapi-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "matchapi-0.1.0/tests/test_matchapi.py",
+        "line": 467,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "matchapi-0.1.0/tests/test_matchapi.py",
+        "line": 471,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(  # noqa: S603"
+      }
+    ]
+  },
+  {
+    "package_name": "reprobe-agents",
+    "checked_at": "2026-10-12T00:26:48.155182",
+    "download_url": "https://files.pythonhosted.org/packages/a2/45/039bdf946ea6f8306c4fd7842ad225c616318747d38c90c63a475cbeabb6/reprobe_agents-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "reprobe_agents-0.1.0/src/reprobe/canary.py",
+        "line": 67,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(candidate, validate=True).decode(\"utf-8\", \"ignore\")"
+      },
+      {
+        "file": "reprobe_agents-0.1.0/src/reprobe/export/pytest_export.py",
+        "line": 301,
+        "keyword_detected": "eval(",
+        "code_snippet": "out[target.id] = ast.literal_eval(node.value)"
+      },
+      {
+        "file": "reprobe_agents-0.1.0/src/reprobe/sandbox/docker_sandbox.py",
+        "line": 325,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"import socket,sys;s=socket.socket();\""
+      }
+    ]
+  },
+  {
+    "package_name": "ground-control-cli",
+    "checked_at": "2026-10-12T00:26:48.432916",
+    "download_url": "https://files.pythonhosted.org/packages/58/22/22457e2b6ed963d84a93f78fc4dd9f8b046ecf4c20bca2a9ba274263deca/ground_control_cli-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ground_control_cli-0.2.0/probes/health.py",
+        "line": 65,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _start(command: str, root) -> subprocess.Popen:"
+      },
+      {
+        "file": "ground_control_cli-0.2.0/probes/health.py",
+        "line": 67,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "pyc-revive",
+    "checked_at": "2026-10-12T00:26:48.699259",
+    "download_url": "https://files.pythonhosted.org/packages/b5/20/c5443e0a40b97e097dba1f282c9d9e367c58b0ea0c19574591bba756bdf9/pyc_revive-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyc_revive-1.0.0/pyc_revive/emitter.py",
+        "line": 360,
+        "keyword_detected": "eval(",
+        "code_snippet": "key = _ast.literal_eval(k.strip())"
+      },
+      {
+        "file": "pyc_revive-1.0.0/pyc_revive/pycdas_parser.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(s)"
+      },
+      {
+        "file": "pyc_revive-1.0.0/pyc_revive/pycdas_parser.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(s)"
+      },
+      {
+        "file": "pyc_revive-1.0.0/pyc_revive/pycdas_parser.py",
+        "line": 152,
+        "keyword_detected": "eval(",
+        "code_snippet": "vals = [ast.literal_eval(t) for t in items]"
+      },
+      {
+        "file": "pyc_revive-1.0.0/pyc_revive/translator.py",
+        "line": 652,
+        "keyword_detected": "exec(",
+        "code_snippet": "push(f\"exec({codev}, {glob}, {loc})\")"
+      }
+    ]
   }
 ]
