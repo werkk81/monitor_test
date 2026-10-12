@@ -45818,5 +45818,119 @@
         "code_snippet": "push(f\"exec({codev}, {glob}, {loc})\")"
       }
     ]
+  },
+  {
+    "package_name": "tuning-client",
+    "checked_at": "2026-10-12T23:50:36.471992",
+    "download_url": "https://files.pythonhosted.org/packages/9a/5b/a7773214dd13504930ddfb483f019932b3be9c3a6a2ec194c82778319886/tuning_client-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tuning_client-0.1.0/tuning_client/sdk.py",
+        "line": 284,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "result = json.loads(base64.b64decode(response[\"data\"], validate=True))"
+      },
+      {
+        "file": "tuning_client-0.1.0/tuning_demo/training.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "tuning_client-0.1.0/tuning_demo/training.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "squid-core",
+    "checked_at": "2026-10-12T23:50:36.925076",
+    "download_url": "https://files.pythonhosted.org/packages/93/be/4cd3cb4ebe1d2a47ab32c39b73df60d10367bd746b257cf331bca586fd40/squid_core-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "squid_core-0.1.0/squid_core/tools/builtins/run_command.py",
+        "line": 94,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "squid_core-0.1.0/squid_core/tools/builtins/run_command.py",
+        "line": 197,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen,"
+      },
+      {
+        "file": "squid_core-0.1.0/squid_core/tools/builtins/run_command.py",
+        "line": 221,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen,"
+      },
+      {
+        "file": "squid_core-0.1.0/squid_core/tools/builtins/run_command.py",
+        "line": 273,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "taskkill = subprocess.Popen("
+      },
+      {
+        "file": "squid_core-0.1.0/squid_core/tools/builtins/run_command.py",
+        "line": 287,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_direct_process(process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "squid_core-0.1.0/squid_core/tools/builtins/run_command.py",
+        "line": 295,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _bounded_process_wait(process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "squid_core-0.1.0/squid_core/tools/builtins/run_command.py",
+        "line": 302,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _wait_bounded(process: subprocess.Popen, timeout: float) -> None:"
+      },
+      {
+        "file": "squid_core-0.1.0/squid_core/tools/builtins/run_command.py",
+        "line": 309,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _close_process_pipes(process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "squid_core-0.1.0/squid_core/tools/builtins/run_command.py",
+        "line": 350,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _create_windows_job(process: subprocess.Popen) -> _WindowsJob | None:"
+      },
+      {
+        "file": "squid_core-0.1.0/tests/test_tools.py",
+        "line": 1208,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"subprocess.Popen([sys.executable, r'{child}'])\\n\""
+      },
+      {
+        "file": "squid_core-0.1.0/tests/test_tools.py",
+        "line": 1243,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"subprocess.Popen([sys.executable, r'{child}'])\\n\""
+      }
+    ]
+  },
+  {
+    "package_name": "brandman",
+    "checked_at": "2026-10-12T23:50:37.186105",
+    "download_url": "https://files.pythonhosted.org/packages/1f/73/298026c6dc33b1577b0f1849a8bc945649fabbdc9827769fdff21679e9b2/brandman-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "brandman-0.1.0/scripts/check_dashboard_package.py",
+        "line": 23,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "if event == \"subprocess.Popen\":"
+      }
+    ]
   }
 ]
