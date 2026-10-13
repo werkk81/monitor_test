@@ -45932,5 +45932,213 @@
         "code_snippet": "if event == \"subprocess.Popen\":"
       }
     ]
+  },
+  {
+    "package_name": "weather-skills-core",
+    "checked_at": "2026-10-13T21:59:51.756085",
+    "download_url": "https://files.pythonhosted.org/packages/b0/79/cbe6799c1b45d3d5c438946eecfeaa5b4198cf6de2713d8f55bfae77a6a5/weather_skills_core-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "weather_skills_core-0.1.0/src/weather_skills_core/linting/extract.py",
+        "line": 96,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(node)"
+      }
+    ]
+  },
+  {
+    "package_name": "stateous",
+    "checked_at": "2026-10-13T21:59:51.883239",
+    "download_url": "https://files.pythonhosted.org/packages/d9/c6/4b614e58df3c38eb77e075b20c64bcd7dbbc104a6361771bb525161c4aff/stateous-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stateous-0.1.0/src/stateous/cli/serving.py",
+        "line": 104,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def bound(host: str, port: int) -> socket.socket:"
+      },
+      {
+        "file": "stateous-0.1.0/src/stateous/cli/serving.py",
+        "line": 251,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener: socket.socket"
+      },
+      {
+        "file": "stateous-0.1.0/src/stateous/cli/serving.py",
+        "line": 336,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _listen(host: str, port: int) -> socket.socket:"
+      },
+      {
+        "file": "stateous-0.1.0/src/stateous/cli/serving.py",
+        "line": 383,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _url(host: str, listener: socket.socket) -> str:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/e2e/test_example.py",
+        "line": 66,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "started: list[subprocess.Popen[bytes]] = field(default_factory=list[subprocess.Popen[bytes]])"
+      },
+      {
+        "file": "stateous-0.1.0/tests/e2e/test_example.py",
+        "line": 93,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def start(self, *args: str, cwd: Path, log: Path) -> subprocess.Popen[bytes]:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/e2e/test_example.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "stateous-0.1.0/tests/e2e/test_example.py",
+        "line": 107,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "stateous-0.1.0/tests/e2e/test_example.py",
+        "line": 119,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def interrupt(process: subprocess.Popen[bytes]) -> None:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/e2e/test_example.py",
+        "line": 127,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def stop_tree(process: subprocess.Popen[bytes]) -> None:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/e2e/test_example.py",
+        "line": 145,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/conftest.py",
+        "line": 79,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/supervising.py",
+        "line": 89,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_client.py",
+        "line": 25,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_prepare_serve.py",
+        "line": 35,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_prepare_serve.py",
+        "line": 171,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as taken:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_prepare_serve.py",
+        "line": 199,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as again:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_prepare_serve.py",
+        "line": 211,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def broken(host: str, listener: socket.socket) -> str:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_prepare_serve.py",
+        "line": 221,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as again:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_prepare_serve.py",
+        "line": 242,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as again:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_prepare_serve.py",
+        "line": 253,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def loopback(host: str, port: int) -> socket.socket:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_serve_command.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_serve_command.py",
+        "line": 48,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as taken:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_serve_command.py",
+        "line": 95,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def wait_for_health(url: str, process: subprocess.Popen[str]) -> None:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_serve_command.py",
+        "line": 109,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def start_serve(tmp_path: Path, graph: Path, port: int) -> subprocess.Popen[str]:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_serve_command.py",
+        "line": 117,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_supervise_process.py",
+        "line": 78,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def started(args: list[str], log: Path) -> Generator[subprocess.Popen[bytes]]:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_supervise_process.py",
+        "line": 84,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_supervise_process.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def interrupt(process: subprocess.Popen[bytes]) -> None:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/integration/test_token_commands.py",
+        "line": 24,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
+      },
+      {
+        "file": "stateous-0.1.0/tests/unit/cli/test_closed_output.py",
+        "line": 22,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
