@@ -46140,5 +46140,145 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "lucen-device",
+    "checked_at": "2026-10-14T00:52:56.741469",
+    "download_url": "https://files.pythonhosted.org/packages/b3/f3/889e7b74d8a2d2081092af50c0e2e2c9026227cb5182247e969ad2381e4e/lucen_device-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "lucen_device-0.3.0/src/lucen_device/adapters/command.py",
+        "line": 192,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "lucen_device-0.3.0/src/lucen_device/adapters/command.py",
+        "line": 326,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      },
+      {
+        "file": "lucen_device-0.3.0/src/lucen_device/adapters/command.py",
+        "line": 402,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _signal(process: subprocess.Popen[bytes], signum: int) -> None:"
+      },
+      {
+        "file": "lucen_device-0.3.0/src/lucen_device/stage_process.py",
+        "line": 68,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._popen: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "lucen_device-0.3.0/src/lucen_device/stage_process.py",
+        "line": 82,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._popen = subprocess.Popen("
+      },
+      {
+        "file": "lucen_device-0.3.0/src/lucen_device/stage_process.py",
+        "line": 109,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._popen = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "arxivdigest",
+    "checked_at": "2026-10-14T00:52:57.377851",
+    "download_url": "https://files.pythonhosted.org/packages/2c/b3/a8f5820250241518d53a98754c7ec38feccfc7a14d7f48f4176dc8a58a70/arxivdigest-0.4.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "arxivdigest-0.4.1/examples/9b-attention-is-all-you-need/scaffold-project/evaluate.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "arxivdigest-0.4.1/examples/9b-attention-is-all-you-need/scaffold-project/src/attention_is_all_you_need/_config.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "config[key] = ast.literal_eval(val)"
+      },
+      {
+        "file": "arxivdigest-0.4.1/paperdigest/scaffold.py",
+        "line": 344,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(templates.CONFIG_PY, ns)  # our own trusted template, not model output"
+      },
+      {
+        "file": "arxivdigest-0.4.1/paperdigest/templates.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": "config[key] = ast.literal_eval(val)"
+      },
+      {
+        "file": "arxivdigest-0.4.1/tests/test_scaffold_stages.py",
+        "line": 255,
+        "keyword_detected": "eval(",
+        "code_snippet": "'eval(\"x\")\\n',"
+      },
+      {
+        "file": "arxivdigest-0.4.1/tests/test_templates.py",
+        "line": 21,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(templates.CONFIG_PY, ns)"
+      },
+      {
+        "file": "arxivdigest-0.4.1/tests/test_templates.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(templates.CONFIG_PY, ns)"
+      }
+    ]
+  },
+  {
+    "package_name": "agenthealth",
+    "checked_at": "2026-10-14T00:52:57.941192",
+    "download_url": "https://files.pythonhosted.org/packages/d1/05/05ff31429286bdde7441800ca643aef7631698db64403a48b7a490e852a9/agenthealth-0.13.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agenthealth-0.13.2/src/agenthealth/client.py",
+        "line": 70,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "webpygame",
+    "checked_at": "2026-10-14T00:52:58.257160",
+    "download_url": "https://files.pythonhosted.org/packages/ea/05/695faab403a0e23bf5d3ece24690505c277ce18ce3b7d575f58e7380b82d/webpygame-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "webpygame-1.0.0/webpy/engine.py",
+        "line": 65,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:"
+      },
+      {
+        "file": "webpygame-1.0.0/webpy/engine.py",
+        "line": 168,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([exe, \"tunnel\", \"--url\", f\"http://127.0.0.1:{settings.port}\", \"--no-autoupdate\"],"
+      },
+      {
+        "file": "webpygame-1.0.0/webpy/engine.py",
+        "line": 385,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "webpygame-1.0.0/webpy/engine.py",
+        "line": 397,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([sys.executable] + sys.argv, env=env, **kw)"
+      }
+    ]
   }
 ]
