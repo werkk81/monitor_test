@@ -46280,5 +46280,315 @@
         "code_snippet": "return subprocess.Popen([sys.executable] + sys.argv, env=env, **kw)"
       }
     ]
+  },
+  {
+    "package_name": "pytestmut",
+    "checked_at": "2026-10-14T21:00:24.360680",
+    "download_url": "https://files.pythonhosted.org/packages/d8/49/30010a0324874247240a3ecca4344aeeadb9b2c9daff8296d21cd6cd3b8f/pytestmut-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pytestmut-0.1.0/pytestmut/exec/proc_posix.py",
+        "line": 61,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes]"
+      },
+      {
+        "file": "pytestmut-0.1.0/pytestmut/exec/proc_posix.py",
+        "line": 103,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pytestmut-0.1.0/pytestmut/exec/proc_windows.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes]"
+      },
+      {
+        "file": "pytestmut-0.1.0/pytestmut/exec/proc_windows.py",
+        "line": 105,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pytestmut-0.1.0/pytestmut/exec/supervisor.py",
+        "line": 206,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes]"
+      },
+      {
+        "file": "pytestmut-0.1.0/tests/test_processes.py",
+        "line": 86,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"child = subprocess.Popen([sys.executable, '-c', sleeper])\\n\""
+      },
+      {
+        "file": "pytestmut-0.1.0/tests/test_processes.py",
+        "line": 102,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"child = subprocess.Popen([sys.executable, '-c', sleeper])\\n\""
+      },
+      {
+        "file": "pytestmut-0.1.0/tests/test_processes.py",
+        "line": 178,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "frugal-blender-mcp",
+    "checked_at": "2026-10-14T21:00:24.434563",
+    "download_url": "https://files.pythonhosted.org/packages/e0/70/b6a733ee49b921bc59e74c6a7c8df6fc2d25577be0549d69b85f4dea3be1/frugal_blender_mcp-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "frugal_blender_mcp-0.2.0/addon/compact_blender/extended.py",
+        "line": 157,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(s[\"code\"], \"<frugal-mcp>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "frugal_blender_mcp-0.2.0/addon/compact_blender/transport.py",
+        "line": 37,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "frugal_blender_mcp-0.2.0/tests/conftest.py",
+        "line": 26,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "frugal_blender_mcp-0.2.0/tests/test_ui.py",
+        "line": 26,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "autonomous-agent-algos",
+    "checked_at": "2026-10-14T21:00:24.620296",
+    "download_url": "https://files.pythonhosted.org/packages/35/a5/1c50751ccbed5687e421aa42ee7c64ba6c622a99c546c46ac28d9890cb61/autonomous_agent_algos-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "autonomous_agent_algos-0.1.0/src/aaa/events/redis.py",
+        "line": 224,
+        "keyword_detected": "eval(",
+        "code_snippet": "await self.r.eval("
+      },
+      {
+        "file": "autonomous_agent_algos-0.1.0/tests/conftest.py",
+        "line": 23,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "autonomous_agent_algos-0.1.0/tests/conftest.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "autonomous_agent_algos-0.1.0/tests/conftest.py",
+        "line": 77,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "autonomous_agent_algos-0.1.0/tests/conftest.py",
+        "line": 135,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "autonomous_agent_algos-0.1.0/tests/unit/test_mcp.py",
+        "line": 237,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "autonomous_agent_algos-0.1.0/tests/unit/test_multiprocess.py",
+        "line": 25,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "autonomous_agent_algos-0.1.0/tests/unit/test_recovery.py",
+        "line": 320,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(  # noqa: ASYNC220 - short-lived test helper process"
+      }
+    ]
+  },
+  {
+    "package_name": "inboxtrue",
+    "checked_at": "2026-10-14T21:00:24.694929",
+    "download_url": "https://files.pythonhosted.org/packages/33/6e/01e7c27e27f03198e186ee6f1ab0bb8fd843e43fe7f5733be85f5bb75c51/inboxtrue-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "inboxtrue-0.1.0/tests/test_release_regressions.py",
+        "line": 18,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as listener:"
+      }
+    ]
+  },
+  {
+    "package_name": "local-coding-agent",
+    "checked_at": "2026-10-14T21:00:24.938115",
+    "download_url": "https://files.pythonhosted.org/packages/77/5d/28e1d9495cba87fd9dce835a400255d60a9ff33452194c5ee255f0e5b537/local_coding_agent-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/benchmark_oracle_worker.py",
+        "line": 113,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, str(path), \"exec\"), namespace)"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/benchmark_oracle_worker.py",
+        "line": 146,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(oracle_source, \"<benchmark-oracle>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/cli/_input.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed_ast = ast.literal_eval(val_str)"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/desktop/server/_handlers.py",
+        "line": 601,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _wait_for_ready(self, url: str, proc: subprocess.Popen, backend: str, timeout: float = 30.0) -> dict:"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/desktop/server/_handlers.py",
+        "line": 640,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/desktop/server/_handlers.py",
+        "line": 687,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/desktop/server/_handlers.py",
+        "line": 736,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/desktop/server/_handlers.py",
+        "line": 959,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/desktop/server/_handlers.py",
+        "line": 1041,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _wait_for_model_loaded(self, proc: subprocess.Popen, backend: str, timeout: float = 90.0) -> dict:"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/desktop/server/_server.py",
+        "line": 54,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.spawned_processes: dict[str, subprocess.Popen[Any]] = {}"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/lsp/_client.py",
+        "line": 41,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/lsp/_client.py",
+        "line": 54,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/repository_tools.py",
+        "line": 36,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _posix_preexec(timeout_seconds: int) -> Any:"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/repository_tools.py",
+        "line": 249,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes] = subprocess.Popen("
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/repository_tools.py",
+        "line": 347,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate(self, process: subprocess.Popen) -> str | None:"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/repository_tools.py",
+        "line": 371,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_tree(process: subprocess.Popen) -> tuple[bool, str | None]:"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/repository_tools.py",
+        "line": 473,
+        "keyword_detected": "exec(",
+        "code_snippet": "return {\"preexec_fn\": _posix_preexec(timeout_seconds)}"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/terminal/_session.py",
+        "line": 94,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "local_coding_agent-1.1.0/local_coding_agent/terminal/_session.py",
+        "line": 136,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen(cmd_args, **kwargs)"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/tests/test_cli.py",
+        "line": 371,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with mock.patch(\"local_coding_agent.repository_tools.subprocess.Popen\", side_effect=OSError(\"runner unavailable\")):"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/tests/test_desktop_app.py",
+        "line": 1263,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "fake_proc = subprocess.Popen.__new__(subprocess.Popen)"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/tests/test_desktop_app.py",
+        "line": 1295,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "fake_proc = subprocess.Popen.__new__(subprocess.Popen)"
+      },
+      {
+        "file": "local_coding_agent-1.1.0/tests/test_terminal.py",
+        "line": 369,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"p = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(30)'])\\n\""
+      },
+      {
+        "file": "local_coding_agent-1.1.0/tests/test_terminal.py",
+        "line": 375,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, str(script_path)])"
+      }
+    ]
   }
 ]
