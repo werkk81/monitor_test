@@ -46590,5 +46590,385 @@
         "code_snippet": "proc = subprocess.Popen([sys.executable, str(script_path)])"
       }
     ]
+  },
+  {
+    "package_name": "openlab-research",
+    "checked_at": "2026-10-14T23:52:10.334049",
+    "download_url": "https://files.pythonhosted.org/packages/3a/0e/d1a3281d5e24bdb99fe374c23d1c93292b9c1c5fcfb2b1ebcbc6a5ed5336/openlab_research-1.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "openlab_research-1.3.0/openlab/agents/hooks.py",
+        "line": 222,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"exec(b64decode(...))) hides what it does\", \"run the plain command\")"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/agents/remote.py",
+        "line": 99,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def serve(proc: subprocess.Popen, host: str, out=None, unlock=None) -> int:"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/agents/remote.py",
+        "line": 119,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "msg = base64.b64decode(req[\"msg\"])"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/agents/remote.py",
+        "line": 151,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True, bufsize=1)"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/agents/spawn.py",
+        "line": 233,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "sup = subprocess.Popen([sys.executable, \"-m\", \"openlab.agents.supervisor\", str(root), id],"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/agents/store.py",
+        "line": 594,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([*map(str, cmd), text], stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/agents/supervisor.py",
+        "line": 317,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/agents/supervisor.py",
+        "line": 417,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen(cmd, cwd=a[\"cwd\"] or str(self.root), stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/app/server.py",
+        "line": 622,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(shlex.split(cmd), stdin=slave, stdout=slave, stderr=slave, cwd=str(ctx.root), env=env,"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/engine/proof.py",
+        "line": 310,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _reeval(expr):"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/engine/proof.py",
+        "line": 314,
+        "keyword_detected": "eval(",
+        "code_snippet": "args = [_reeval(a) for a in expr.args]           # one bottom-up pass (linear in the tree size)"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/engine/proof.py",
+        "line": 648,
+        "keyword_detected": "eval(",
+        "code_snippet": "expr = _reeval(expr)"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/engine/proof.py",
+        "line": 701,
+        "keyword_detected": "eval(",
+        "code_snippet": "e = _lower_factorials(_double_factorials(Prover.split_sums(_reeval(expr))))"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/engine/proof.py",
+        "line": 2527,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = P.eval(t)"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/engine/semantics.py",
+        "line": 109,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(cls, body, u, n, a):"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/engine/semantics.py",
+        "line": 612,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(cls, *args):"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/engine/transform.py",
+        "line": 123,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(cls, x, n):"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/engine/transform.py",
+        "line": 259,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(cls, c, value, neutral):"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/study/custody.py",
+        "line": 137,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "P = pl.read_parquet(io.BytesIO(base64.b64decode(exported[\"predictions\"])))"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/study/custody.py",
+        "line": 156,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return json.loads(base64.b64decode(text.encode(\"ascii\")))"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/study/detached.py",
+        "line": 136,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"openlab.study.detached\", str(folder), str(spec)],"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/study/mirror.py",
+        "line": 90,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-m\", \"openlab.study.mirror\", \"push\", str(study.folder), run.id],"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/study/personkey.py",
+        "line": 33,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(text.encode(\"ascii\"), validate=True)"
+      },
+      {
+        "file": "openlab_research-1.3.0/openlab/study/sandbox.py",
+        "line": 166,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,"
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_agents_person.py",
+        "line": 249,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"python3 -c \\\"import base64;exec(base64.b64decode('cHJpbnQoMSk='))\\\"\","
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_agents_person.py",
+        "line": 249,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"python3 -c \\\"import base64;exec(base64.b64decode('cHJpbnQoMSk='))\\\"\","
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_agents_person.py",
+        "line": 265,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_the_hooks_deny_config_moves_env_overrides_and_decode_exec(cmd):"
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_app_server.py",
+        "line": 96,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(); sock.bind((\"127.0.0.1\", 0)); port = sock.getsockname()[1]; sock.close()"
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_oracle.py",
+        "line": 28,
+        "keyword_detected": "eval(",
+        "code_snippet": "reeval_val = reeval(parse_expr(case.src)[0])"
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_show_e2e.py",
+        "line": 29,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_show_e2e.py",
+        "line": 107,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"openlab\", \"show\", \"--root\", str(h), \"--port\", str(port), \"--token\", \"tok\"],"
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_show_e2e.py",
+        "line": 129,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([CHROME, \"--headless=new\", \"--disable-gpu\", \"--no-sandbox\", f\"--remote-debugging-port={port}\","
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_study_admission.py",
+        "line": 123,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([sys.executable, \"-c\", code, str(box)], stdout=subprocess.PIPE, text=True,"
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_study_detached.py",
+        "line": 42,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "caller = subprocess.Popen([sys.executable, \"-c\", ("
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_study_detached.py",
+        "line": 99,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "gone = subprocess.Popen([sys.executable, \"-c\", \"pass\"])"
+      },
+      {
+        "file": "openlab_research-1.3.0/tests/test_study_machine.py",
+        "line": 88,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "holder = subprocess.Popen([sys.executable, \"-c\", \"import fcntl, sys, time; f = open(sys.argv[1], 'a+'); \""
+      }
+    ]
+  },
+  {
+    "package_name": "maxwell-bloch-solver",
+    "checked_at": "2026-10-14T23:52:10.715848",
+    "download_url": "https://files.pythonhosted.org/packages/d8/c1/d72194394fdec8ce649c2af26f5403a34776bcc681c4aad158e3661b0e21/maxwell_bloch_solver-9.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/app/main_window.py",
+        "line": 1207,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/app/parameter_tabs.py",
+        "line": 198,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/app/plot.py",
+        "line": 616,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/app/update_checker.py",
+        "line": 129,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/app/velocity_bar_controller.py",
+        "line": 542,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/io/data_io.py",
+        "line": 300,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dlg.exec() == QDialog.Accepted:"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/io/parameter_io.py",
+        "line": 232,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/main.py",
+        "line": 64,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/dialogs.py",
+        "line": 190,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dlg.exec() == QDialog.Accepted:"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/dialogs.py",
+        "line": 203,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/solver_step_viewer.py",
+        "line": 359,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/splash_screen.py",
+        "line": 180,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/widgets/initial_conditions.py",
+        "line": 244,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/widgets/pulse_function.py",
+        "line": 544,
+        "keyword_detected": "exec(",
+        "code_snippet": "dlg.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/widgets/pulse_function.py",
+        "line": 906,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/widgets/sample_properties.py",
+        "line": 254,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/widgets/scaling_parameters.py",
+        "line": 355,
+        "keyword_detected": "exec(",
+        "code_snippet": "dlg.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/widgets/scaling_parameters.py",
+        "line": 390,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/widgets/step_function.py",
+        "line": 654,
+        "keyword_detected": "exec(",
+        "code_snippet": "dlg.exec()"
+      },
+      {
+        "file": "maxwell_bloch_solver-9.0.0/src/mbsolver/ui/widgets/step_function.py",
+        "line": 1049,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      }
+    ]
+  },
+  {
+    "package_name": "sendermap",
+    "checked_at": "2026-10-14T23:52:11.423413",
+    "download_url": "https://files.pythonhosted.org/packages/d3/a3/0b18ad7e56fbbbcdb9752c76669c727f758f8df376a4b37eadcef31b457a/sendermap-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sendermap-0.1.0/sendermap/sources/dkim.py",
+        "line": 62,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(\"\".join(p.split()), validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "marocolor",
+    "checked_at": "2026-10-14T23:52:11.522990",
+    "download_url": "https://files.pythonhosted.org/packages/de/c4/e3a756e48a816f0b63ecaa13edf9522410efb2f077bceeee95a98f988496/marocolor-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "marocolor-1.0.0/marocolor/core.py",
+        "line": 27,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      }
+    ]
   }
 ]
