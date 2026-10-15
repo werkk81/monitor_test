@@ -46970,5 +46970,65 @@
         "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
       }
     ]
+  },
+  {
+    "package_name": "viscosity-step",
+    "checked_at": "2026-10-15T20:34:08.501843",
+    "download_url": "https://files.pythonhosted.org/packages/22/fa/eca111d4697e9d85eba3941d63c31452f776e12951d391d63bbfeddc7474/viscosity_step-2026.10.15.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "viscosity_step-2026.10.15/versioneer.py",
+        "line": 399,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "viscosity_step-2026.10.15/versioneer.py",
+        "line": 508,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([c] + args, cwd=cwd, env=env,"
+      }
+    ]
+  },
+  {
+    "package_name": "lockwire",
+    "checked_at": "2026-10-15T20:34:09.147756",
+    "download_url": "https://files.pythonhosted.org/packages/ab/00/c20da08e338c7fd713458e480b4b42b0e88a090445d02817adfc6cba5511/lockwire-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "lockwire-0.2.0/src/lockwire/scene.py",
+        "line": 141,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data_part)"
+      }
+    ]
+  },
+  {
+    "package_name": "repoharvester",
+    "checked_at": "2026-10-15T20:34:09.683525",
+    "download_url": "https://files.pythonhosted.org/packages/00/a4/06673cadb2d3b5fc5d08dceeaca3ccb95e48a6bacb5199f14b9458edbbb1/repoharvester-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "repoharvester-0.2.1/repoharvester.py",
+        "line": 204,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_tree(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "repoharvester-0.2.1/repoharvester.py",
+        "line": 216,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(cmd, stderr=subprocess.PIPE, text=True, start_new_session=True) as proc:"
+      },
+      {
+        "file": "repoharvester-0.2.1/repoharvester_gui.py",
+        "line": 88,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"open\" if sys.platform == \"darwin\" else \"xdg-open\", str(path)])"
+      }
+    ]
   }
 ]
