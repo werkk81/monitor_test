@@ -47030,5 +47030,207 @@
         "code_snippet": "subprocess.Popen([\"open\" if sys.platform == \"darwin\" else \"xdg-open\", str(path)])"
       }
     ]
+  },
+  {
+    "package_name": "aether-cache",
+    "checked_at": "2026-10-15T23:14:01.588969",
+    "download_url": "https://files.pythonhosted.org/packages/8d/a5/49f3f54eea81f5e290a994ba09728eaa1e858fd8e062c4aab01ad5d8c36b/aether_cache-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aether_cache-0.1.0/aether_cache/engine.py",
+        "line": 193,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=log, stderr=subprocess.STDOUT,"
+      }
+    ]
+  },
+  {
+    "package_name": "exp-runtime-creator",
+    "checked_at": "2026-10-15T23:14:02.069442",
+    "download_url": "https://files.pythonhosted.org/packages/22/4c/0fa7abb05b1a25728083fca9c4864c169c17f2429d9d6a38cbc9c52520b0/exp_runtime_creator-0.6.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/media.py",
+        "line": 104,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(request['data'], validate=True)"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/model.py",
+        "line": 350,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "asset.data = base64.b64decode(asset.data, validate=True)"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/native.py",
+        "line": 17,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return {int(key): base64.b64decode(value, validate=True)"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/panels.py",
+        "line": 30,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/panels.py",
+        "line": 100,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/ui.py",
+        "line": 654,
+        "keyword_detected": "exec(",
+        "code_snippet": "if browser.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/ui.py",
+        "line": 906,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/ui.py",
+        "line": 915,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/ui.py",
+        "line": 922,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted: self.set_node('params', dialog.value)"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/ui.py",
+        "line": 951,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/ui.py",
+        "line": 975,
+        "keyword_detected": "exec(",
+        "code_snippet": "dialog.exec()"
+      },
+      {
+        "file": "exp_runtime_creator-0.6.0/src/exp_runtime/creator/ui.py",
+        "line": 1041,
+        "keyword_detected": "exec(",
+        "code_snippet": "app.exec()"
+      }
+    ]
+  },
+  {
+    "package_name": "agent-evidence-observer",
+    "checked_at": "2026-10-15T23:14:02.348471",
+    "download_url": "https://files.pythonhosted.org/packages/4c/4e/f90c44c917134a2400a166ff0997e7ce7ec50befd5e4e1810a1f6fbcbf6b/agent_evidence_observer-0.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_evidence_observer-0.0.1/src/probity_observer/crypto.py",
+        "line": 169,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(signature, validate=True)"
+      },
+      {
+        "file": "agent_evidence_observer-0.0.1/src/probity_observer/native_reader.py",
+        "line": 260,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "agent_evidence_observer-0.0.1/src/probity_observer/probe_agent.py",
+        "line": 29,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "agent_evidence_observer-0.0.1/src/probity_observer/protected_probe.py",
+        "line": 25,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "agent_evidence_observer-0.0.1/src/probity_observer/selection_profile.py",
+        "line": 99,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(checker_bytes, \"retained-finite-checker\", \"exec\"), namespace)  # noqa: S102"
+      },
+      {
+        "file": "agent_evidence_observer-0.0.1/tests/test_protected_dispatch.py",
+        "line": 486,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      }
+    ]
+  },
+  {
+    "package_name": "translatorio-sdk",
+    "checked_at": "2026-10-15T23:14:02.563259",
+    "download_url": "https://files.pythonhosted.org/packages/5f/f4/ac43926e0092e2afa572ac0324d2f1beffd58041563b2bace7430839455d/translatorio_sdk-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "translatorio_sdk-1.0.0/tests/test_client.py",
+        "line": 417,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertEqual(raw, base64.b64decode(body[\"data\"], validate=True))"
+      },
+      {
+        "file": "translatorio_sdk-1.0.0/translatorio/client.py",
+        "line": 149,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(cleaned, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "loom-torch",
+    "checked_at": "2026-10-15T23:14:02.711203",
+    "download_url": "https://files.pythonhosted.org/packages/de/ad/502e4af428503ea8b13dcb075de09aa34066c2817d0c49c96c822e250d9b/loom_torch-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "loom_torch-0.1.0/src/loom/runner.py",
+        "line": 229,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_eval() -> None:"
+      },
+      {
+        "file": "loom_torch-0.1.0/src/loom/runner.py",
+        "line": 262,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval()"
+      },
+      {
+        "file": "loom_torch-0.1.0/src/loom/runner.py",
+        "line": 340,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval()"
+      },
+      {
+        "file": "loom_torch-0.1.0/src/loom/runner.py",
+        "line": 347,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval()"
+      },
+      {
+        "file": "loom_torch-0.1.0/src/loom/runner.py",
+        "line": 393,
+        "keyword_detected": "eval(",
+        "code_snippet": "task.eval()"
+      },
+      {
+        "file": "loom_torch-0.1.0/src/loom/runner.py",
+        "line": 437,
+        "keyword_detected": "eval(",
+        "code_snippet": "task.eval()"
+      }
+    ]
   }
 ]
