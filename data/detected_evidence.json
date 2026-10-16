@@ -47556,5 +47556,203 @@
         "code_snippet": "return TimestralForecaster(model.eval())"
       }
     ]
+  },
+  {
+    "package_name": "tinkerbox-ane",
+    "checked_at": "2026-10-16T22:46:40.133762",
+    "download_url": "https://files.pythonhosted.org/packages/4a/82/c0fcea650b8ebd728b3a2a4225c7789ac6abbc00bf4d41b2fb0d02545fae/tinkerbox_ane-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tinkerbox_ane-1.0.0/scripts/build_reference.py",
+        "line": 139,
+        "keyword_detected": "eval(",
+        "code_snippet": "dtype=torch.float32).eval().cpu()"
+      },
+      {
+        "file": "tinkerbox_ane-1.0.0/src/tinkerbox_ane/d1/export.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = FusedBackbone(backbone, capacity).eval()"
+      },
+      {
+        "file": "tinkerbox_ane-1.0.0/src/tinkerbox_ane/d1/guard.py",
+        "line": 72,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdout=sink, stderr=subprocess.STDOUT,"
+      },
+      {
+        "file": "tinkerbox_ane-1.0.0/src/tinkerbox_ane/d1/host.py",
+        "line": 40,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen([str(BINARY), str(asset)],"
+      },
+      {
+        "file": "tinkerbox_ane-1.0.0/src/tinkerbox_ane/d1/model.py",
+        "line": 322,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.requires_grad_(False).eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "smart-astro",
+    "checked_at": "2026-10-16T22:46:40.270917",
+    "download_url": "https://files.pythonhosted.org/packages/b8/d3/45af65ae163a5c254af5e7df739ccb3387a50644f67149f0ed93b65b3917/smart_astro-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/apogee/lsf.py",
+        "line": 66,
+        "keyword_detected": "eval(",
+        "code_snippet": "lsf= eval(xlsf,fiber=fiber, wav=apwave)"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/apogee/lsf.py",
+        "line": 134,
+        "keyword_detected": "eval(",
+        "code_snippet": "#        lsf= eval(xlsf,fiber=fiber, wav=apwave)"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/apogee/lsf.py",
+        "line": 222,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(x,fiber='combo',sparse=False, wav=None):"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/apogee/lsf.py",
+        "line": 277,
+        "keyword_detected": "eval(",
+        "code_snippet": "#def eval(x,fiber='combo',sparse=False, wav=None):"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science.py",
+        "line": 288,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[6].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science.py",
+        "line": 290,
+        "keyword_detected": "eval(",
+        "code_snippet": "fringe_param   = ast.literal_eval(lines[7].split('fringe ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science.py",
+        "line": 297,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[4].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science_binary.py",
+        "line": 285,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[6].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science_binary.py",
+        "line": 289,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[4].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science_binary_igrins.py",
+        "line": 289,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[6].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science_binary_igrins.py",
+        "line": 293,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[4].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science_binary_igrins.py",
+        "line": 297,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[6].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science_igrins.py",
+        "line": 291,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[6].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science_igrins.py",
+        "line": 295,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[4].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_science_igrins.py",
+        "line": 300,
+        "keyword_detected": "eval(",
+        "code_snippet": "priors         = ast.literal_eval(lines[6].split('priors ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_telluric_airmass_pwv.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "fringe_param   = ast.literal_eval(lines[4].split('fringe ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_telluric_airmass_pwv_no_wave_offset.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "fringe_param   = ast.literal_eval(lines[4].split('fringe ')[1])"
+      },
+      {
+        "file": "smart_astro-1.0.0/smart/forward_model/run_mcmc_telluric_airmass_pwv_noise.py",
+        "line": 113,
+        "keyword_detected": "eval(",
+        "code_snippet": "fringe_param   = ast.literal_eval(lines[4].split('fringe ')[1])"
+      }
+    ]
+  },
+  {
+    "package_name": "eden-graspgenx",
+    "checked_at": "2026-10-16T22:46:40.396022",
+    "download_url": "https://files.pythonhosted.org/packages/3f/13/b03a95708997f72416a3567b7848fd782795291320f3925f5e95cfec040c/eden_graspgenx-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "eden_graspgenx-0.1.0/graspgenx/grasp_server.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "eden_graspgenx-0.1.0/graspgenx/grasp_server.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model = model.cuda().eval()"
+      },
+      {
+        "file": "eden_graspgenx-0.1.0/tests/test_inference_installation.py",
+        "line": 133,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = GraspGen.from_config(gen_cfg, disc_cfg).to(device).eval()"
+      },
+      {
+        "file": "eden_graspgenx-0.1.0/tests/test_inference_perf.py",
+        "line": 257,
+        "keyword_detected": "eval(",
+        "code_snippet": "base_model = GraspGen.from_config(gen_cfg, disc_cfg).to(device).eval()"
+      },
+      {
+        "file": "eden_graspgenx-0.1.0/tests/test_ptv3_vanilla.py",
+        "line": 155,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_deterministic_eval(self, model):"
+      },
+      {
+        "file": "eden_graspgenx-0.1.0/tests/test_ptv3_vanilla.py",
+        "line": 163,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
   }
 ]
