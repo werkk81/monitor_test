@@ -47232,5 +47232,329 @@
         "code_snippet": "task.eval()"
       }
     ]
+  },
+  {
+    "package_name": "nudemos",
+    "checked_at": "2026-10-16T20:08:03.108269",
+    "download_url": "https://files.pythonhosted.org/packages/be/ba/773b7733a6ca137565ef4dfb1b9f2179cac6a8b754f972b12358d18c3024/nudemos-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nudemos-0.1.0/src/nudemos/memes/chain.py",
+        "line": 257,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "out.append(base64.b64decode(line[len(_LOG) :]))"
+      },
+      {
+        "file": "nudemos-0.1.0/src/nudemos/mnist/reader.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "nudemos-0.1.0/src/nudemos/mnist/trainer.py",
+        "line": 280,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "nudemos-0.1.0/src/nudemos/mnist/trainer.py",
+        "line": 299,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "pytest-mockrot",
+    "checked_at": "2026-10-16T20:08:03.337216",
+    "download_url": "https://files.pythonhosted.org/packages/2d/fa/82098177f6c4c0807743f7f6f356654e6bd5116146c7be7b6219f24bb2cf/pytest_mockrot-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pytest_mockrot-0.1.0/src/mockrot/extractor.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "resolved = eval(raw_ret, globalns)"
+      }
+    ]
+  },
+  {
+    "package_name": "liquid-structure-step",
+    "checked_at": "2026-10-16T20:08:03.476695",
+    "download_url": "https://files.pythonhosted.org/packages/3e/cc/dbdbe2dc223222700e813f1f64774876784f3f93d66fca9cd83734a360d5/liquid_structure_step-2026.10.16.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "liquid_structure_step-2026.10.16/versioneer.py",
+        "line": 399,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "liquid_structure_step-2026.10.16/versioneer.py",
+        "line": 508,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen([c] + args, cwd=cwd, env=env,"
+      }
+    ]
+  },
+  {
+    "package_name": "cadjoint",
+    "checked_at": "2026-10-16T20:08:03.727345",
+    "download_url": "https://files.pythonhosted.org/packages/dc/c5/183d2e8fe4d0682706f69bd0825d43a39b47c0f6a832df222710bf0287c0/cadjoint-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cadjoint-0.1.0/cadjoint/backends/wgsl/_culling.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "``sdf_eval(p, free, fixed) -> distance``;"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/backends/wgsl/_culling.py",
+        "line": 157,
+        "keyword_detected": "eval(",
+        "code_snippet": "def sdf_eval(p, free, fixed, _fn=pure_sdf):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/backends/wgsl/_culling.py",
+        "line": 167,
+        "keyword_detected": "eval(",
+        "code_snippet": "def sdf_eval(p, free, fixed, _ch=sdf_children, _union=is_union):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/backends/wgsl/_culling.py",
+        "line": 205,
+        "keyword_detected": "eval(",
+        "code_snippet": "def sdf_eval(p, free, fixed, _fn=pure_sdf, _ch=sdf_children):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/backends/wgsl/_culling.py",
+        "line": 219,
+        "keyword_detected": "eval(",
+        "code_snippet": "def sdf_eval(p, free, fixed, _fn=pure_sdf, _polar=is_polar):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/backends/wgsl/_culling.py",
+        "line": 271,
+        "keyword_detected": "eval(",
+        "code_snippet": "def sdf_eval(p, free, fixed, _fn=pure_sdf):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/fem/tesseracts/elastic_calculix/tesseract_api.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "def abstract_eval(abstract_inputs):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/fem/tesseracts/elastic_jaxfem/tesseract_api.py",
+        "line": 195,
+        "keyword_detected": "eval(",
+        "code_snippet": "def abstract_eval(abstract_inputs):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/fem/tesseracts/flow_brinkman/tesseract_api.py",
+        "line": 164,
+        "keyword_detected": "eval(",
+        "code_snippet": "def abstract_eval(abstract_inputs):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/fem/tesseracts/mesher/tesseract_api.py",
+        "line": 212,
+        "keyword_detected": "eval(",
+        "code_snippet": "def abstract_eval(abstract_inputs):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/fem/tesseracts/tet_gmsh/tesseract_api.py",
+        "line": 215,
+        "keyword_detected": "eval(",
+        "code_snippet": "def abstract_eval(abstract_inputs):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/fem/tesseracts/tetfill/tesseract_api.py",
+        "line": 238,
+        "keyword_detected": "eval(",
+        "code_snippet": "def abstract_eval(abstract_inputs):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/fem/tesseracts/thermal_jaxfem/tesseract_api.py",
+        "line": 172,
+        "keyword_detected": "eval(",
+        "code_snippet": "def abstract_eval(abstract_inputs):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/functionalize.py",
+        "line": 353,
+        "keyword_detected": "eval(",
+        "code_snippet": "For SDF nodes:   sdf_eval(p, free, fixed) -> distance"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/functionalize.py",
+        "line": 354,
+        "keyword_detected": "eval(",
+        "code_snippet": "mat_eval(p, free, fixed) -> material dict"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/functionalize.py",
+        "line": 356,
+        "keyword_detected": "eval(",
+        "code_snippet": "mat_eval(free, fixed) -> raw param dict  ← no p"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/functionalize.py",
+        "line": 393,
+        "keyword_detected": "eval(",
+        "code_snippet": "def sdf_eval(p, free, fixed, _nid=node_id, _ps=ps, _fn=pure_sdf, _static=static):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/functionalize.py",
+        "line": 396,
+        "keyword_detected": "eval(",
+        "code_snippet": "def mat_eval(_p, free, fixed, _mpf=mat_pf):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/functionalize.py",
+        "line": 413,
+        "keyword_detected": "eval(",
+        "code_snippet": "def sdf_eval("
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/functionalize.py",
+        "line": 420,
+        "keyword_detected": "eval(",
+        "code_snippet": "def mat_eval(p, free, fixed, _nid=node_id, _ps=ps, _ch=sdf_ch, _static=static):"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/functionalize.py",
+        "line": 442,
+        "keyword_detected": "eval(",
+        "code_snippet": "def sdf_eval("
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/functionalize.py",
+        "line": 448,
+        "keyword_detected": "eval(",
+        "code_snippet": "def mat_eval("
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/_jobs.py",
+        "line": 172,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/_jobs.py",
+        "line": 187,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def attach(self, process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/_jobs.py",
+        "line": 223,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill(process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/_jobs.py",
+        "line": 318,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _sample_loop(self, process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/_jobs.py",
+        "line": 440,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def attach_process(process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/_worker_client.py",
+        "line": 91,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/_worker_client.py",
+        "line": 175,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/_worker_client.py",
+        "line": 238,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _readline_within(process: subprocess.Popen, timeout: float) -> Any:"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/_worker_client.py",
+        "line": 499,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/source_map/elements.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(node)"
+      },
+      {
+        "file": "cadjoint-0.1.0/cadjoint/viewer/worker/scene.py",
+        "line": 55,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, PLAYGROUND_FILENAME, \"exec\"), namespace, namespace)"
+      },
+      {
+        "file": "cadjoint-0.1.0/tests/test_optimize.py",
+        "line": 286,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, str(STARTER), \"exec\"), namespace, namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "langchain-ivoire",
+    "checked_at": "2026-10-16T20:08:03.864380",
+    "download_url": "https://files.pythonhosted.org/packages/44/58/2e249759cc752a89ab3b13fdf34515bb206c18d258f618ccaa5d2a31f95b/langchain_ivoire-0.1.0a3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "langchain_ivoire-0.1.0a3/langchain_ivoire/audio.py",
+        "line": 114,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "out = base64.b64decode(s, validate=True)"
+      },
+      {
+        "file": "langchain_ivoire-0.1.0a3/tests/unit_tests/test_mcp_server.py",
+        "line": 78,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(audio.data)[:4] == b\"RIFF\""
+      }
+    ]
+  },
+  {
+    "package_name": "timecopilot-timestral",
+    "checked_at": "2026-10-16T20:08:04.110544",
+    "download_url": "https://files.pythonhosted.org/packages/51/95/76978ffd279865cf3a86fa69d00cc5e626cc756ebd0bfddafde56e382f6f/timecopilot_timestral-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "timecopilot_timestral-0.1.0/src/timestral/forecaster.py",
+        "line": 311,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "timecopilot_timestral-0.1.0/src/timestral/loading.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "timecopilot_timestral-0.1.0/tests/test_forecaster.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "return TimestralForecaster(model.eval())"
+      }
+    ]
   }
 ]
