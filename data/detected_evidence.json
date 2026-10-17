@@ -47754,5 +47754,169 @@
         "code_snippet": "model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "socmintelligence",
+    "checked_at": "2026-10-17T00:47:19.049450",
+    "download_url": "https://files.pythonhosted.org/packages/b2/5e/450e7e25944220fd9567292c227f9aff870cb2663cbd77a2b9d1803a8dfd/socmintelligence-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "socmintelligence-1.1.0/backend/app/core/adapter.py",
+        "line": 277,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "socmintelligence-1.1.0/backend/app/core/adapter.py",
+        "line": 331,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "socmintelligence-1.1.0/backend/app/core/tool_runner.py",
+        "line": 122,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "socmintelligence-1.1.0/backend/app/modules/instagram.py",
+        "line": 173,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "socmintelligence-1.1.0/backend/app/modules/snapchat.py",
+        "line": 460,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png_bytes = base64.b64decode(cached[\"png_base64\"])"
+      },
+      {
+        "file": "socmintelligence-1.1.0/backend/app/modules/snapchat.py",
+        "line": 482,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "socmintelligence-1.1.0/backend/app/modules/tiktok.py",
+        "line": 454,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png_bytes = base64.b64decode(cached[\"png_base64\"])"
+      },
+      {
+        "file": "socmintelligence-1.1.0/backend/app/modules/tiktok.py",
+        "line": 470,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "socmintelligence-1.1.0/backend/app/tools/github_osint.py",
+        "line": 464,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(match)"
+      }
+    ]
+  },
+  {
+    "package_name": "zrb-face",
+    "checked_at": "2026-10-17T00:47:19.321442",
+    "download_url": "https://files.pythonhosted.org/packages/af/8b/1dba354a85f4b05747a7c454454ced72b7333f94a81d7a240b27df55ee94/zrb_face-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "zrb_face-0.1.0/zrb_face/__main__.py",
+        "line": 69,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "zrb_face-0.1.0/zrb_face/__main__.py",
+        "line": 75,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "zrb_face-0.1.0/zrb_face/server.py",
+        "line": 76,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, text=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "summit-scanner",
+    "checked_at": "2026-10-17T00:47:19.486015",
+    "download_url": "https://files.pythonhosted.org/packages/d5/5c/68e1f5bdb1694f075815aa9d3b67afb9546350ad72dcad790742c148a073/summit_scanner-0.6.7.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "summit_scanner-0.6.7/summit/proxy/server.py",
+        "line": 32,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._server: socket.socket | None = None"
+      },
+      {
+        "file": "summit_scanner-0.6.7/summit/proxy/server.py",
+        "line": 61,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "summit_scanner-0.6.7/summit/proxy/server.py",
+        "line": 79,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _handle(self, conn: socket.socket) -> None:"
+      },
+      {
+        "file": "summit_scanner-0.6.7/summit/proxy/server.py",
+        "line": 97,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _read_head(conn: socket.socket, limit: int = 65536) -> bytes:"
+      },
+      {
+        "file": "summit_scanner-0.6.7/summit/proxy/server.py",
+        "line": 106,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _handle_connect(self, conn: socket.socket, target: str) -> None:"
+      },
+      {
+        "file": "summit_scanner-0.6.7/summit/proxy/server.py",
+        "line": 125,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _pipe(src: socket.socket, dst: socket.socket) -> None:"
+      },
+      {
+        "file": "summit_scanner-0.6.7/summit/proxy/server.py",
+        "line": 135,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _handle_http(self, conn: socket.socket, method: str, target: str, head: bytes) -> None:"
+      },
+      {
+        "file": "summit_scanner-0.6.7/summit/toolkit.py",
+        "line": 24,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(padded, validate=True).decode(\"utf-8\")"
+      },
+      {
+        "file": "summit_scanner-0.6.7/tests/test_v06.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "name = re.sub(r\"\\{\\{(\\d+\\s*[\\+\\-\\*/]\\s*\\d+)\\}\\}\", lambda m: str(eval(m.group(1))), name)"
+      }
+    ]
+  },
+  {
+    "package_name": "lionlock",
+    "checked_at": "2026-10-17T00:47:19.826909",
+    "download_url": "https://files.pythonhosted.org/packages/6b/9d/31ea4d023689046957668725a635f4571a27a79ded75629eff17021ed671/lionlock-1.0.0b1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "lionlock-1.0.0b1/tests/test_telemetry_privacy_regressions.py",
+        "line": 1357,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
   }
 ]
