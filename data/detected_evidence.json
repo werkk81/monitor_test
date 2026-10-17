@@ -48006,5 +48006,19 @@
         "code_snippet": "return base64.b64decode(s, validate=True)"
       }
     ]
+  },
+  {
+    "package_name": "ttprism",
+    "checked_at": "2026-10-17T21:45:00.047297",
+    "download_url": "https://files.pythonhosted.org/packages/f4/de/9b2de4be6c204d5a9772151789acf1cbe3222ebe61840ac3612611dab5d3/ttprism-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ttprism-0.1.0/tests/test_cli.py",
+        "line": 556,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
