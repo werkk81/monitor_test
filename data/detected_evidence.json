@@ -48020,5 +48020,217 @@
         "code_snippet": "proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "antibody",
+    "checked_at": "2026-10-17T23:26:28.582506",
+    "download_url": "https://files.pythonhosted.org/packages/4c/5c/38fc4500e59854ee3cb13790ad1e16f1534107f952eb9f56847cb036e96c/antibody-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "antibody-0.2.0/tests/test_fixtures.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"    pattern: eval(...)\\n\""
+      },
+      {
+        "file": "antibody-0.2.0/tests/test_fixtures.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "good.write_text(\"# ruleid: r1\\neval(x)\\n# ok: r1\\nint(x)\\n\")"
+      },
+      {
+        "file": "antibody-0.2.0/tests/test_fixtures.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "bad.write_text(\"# ok: r1\\neval(x)\\n# ruleid: r1\\nint(x)\\n\")"
+      }
+    ]
+  },
+  {
+    "package_name": "dothedev-sandbox",
+    "checked_at": "2026-10-17T23:26:28.905905",
+    "download_url": "https://files.pythonhosted.org/packages/33/52/7bcd3971de6dd5d1e700c8627591116cc51885a70924ddc7f318da78fef6/dothedev_sandbox-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dothedev_sandbox-0.1.0/tests/test_client.py",
+        "line": 58,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.files[item[\"path\"]] = base64.b64decode(item[\"content\"])"
+      },
+      {
+        "file": "dothedev_sandbox-0.1.0/src/dothedev_sandbox/client.py",
+        "line": 313,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content=base64.b64decode(item[\"content\"]) if item[\"content\"] is not None else None,"
+      }
+    ]
+  },
+  {
+    "package_name": "common-encryption",
+    "checked_at": "2026-10-17T23:26:29.394728",
+    "download_url": "https://files.pythonhosted.org/packages/25/fc/8519d6b3ecec3c7dba947dedf07771827f7560ea53115677e23999e58a49/common_encryption-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "common_encryption-1.0.1/common_encryption/bean/crypto_key_utils.py",
+        "line": 62,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return _do_decrypt(base64.b64decode(value), key, instance_type).decode(UTF8)"
+      },
+      {
+        "file": "common_encryption-1.0.1/common_encryption/bean/crypto_key_utils.py",
+        "line": 135,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(value).decode(UTF8)"
+      },
+      {
+        "file": "common_encryption-1.0.1/common_encryption/commons/key_utility.py",
+        "line": 50,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return load_der_public_key(base64.b64decode(public_key))"
+      },
+      {
+        "file": "common_encryption-1.0.1/common_encryption/commons/key_utility.py",
+        "line": 64,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return load_der_private_key(base64.b64decode(private_key), password=None)"
+      },
+      {
+        "file": "common_encryption-1.0.1/common_encryption/hmac/crypto_hmac_utils.py",
+        "line": 45,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return self._verify(token, field_key, base64.b64decode)"
+      },
+      {
+        "file": "common_encryption-1.0.1/common_encryption/pkcs12/crypto_pkcs12_utils.py",
+        "line": 98,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ephemeral_public_der = base64.b64decode(parts[0])"
+      },
+      {
+        "file": "common_encryption-1.0.1/common_encryption/pkcs12/crypto_pkcs12_utils.py",
+        "line": 99,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "nonce = base64.b64decode(parts[1])"
+      },
+      {
+        "file": "common_encryption-1.0.1/common_encryption/pkcs12/crypto_pkcs12_utils.py",
+        "line": 100,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ciphertext = base64.b64decode(parts[2])"
+      },
+      {
+        "file": "common_encryption-1.0.1/common_encryption/signature/signature_key_utils.py",
+        "line": 98,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(signed), check_text.encode(), _padding(digest, is_rsa), digest"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_aes_hmac.py",
+        "line": 61,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(token).decode() != token, \"extra Base64 layer\""
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_aes_hmac.py",
+        "line": 106,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(token.split(\".\")[0]).decode() == '{\"key\":\"idUser\",\"value\":\"città € 1\"}'"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_config.py",
+        "line": 180,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "der = base64.b64decode("
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_jks.py",
+        "line": 48,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(token).decode().count(\".\") != 2, \"extra Base64 layer is not a PKCS12 token\""
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_jks.py",
+        "line": 64,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "der = base64.b64decode(jks_utils.public_key_base64())"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_model_annotations.py",
+        "line": 84,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert json.loads(base64.b64decode(envelope)) == {\"key\": \"idUser\", \"value\": \"value\"}"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_pkcs12.py",
+        "line": 29,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(head, validate=True)"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_pkcs12.py",
+        "line": 30,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert len(base64.b64decode(nonce)) == 12"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_pkcs12.py",
+        "line": 32,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert len(base64.b64decode(tail)) > len(SECRET.encode())"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_pkcs12.py",
+        "line": 47,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert captured[\"salt\"] == base64.b64decode(token.split(\".\")[1]), \"salt is the GCM nonce\""
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_pkcs12.py",
+        "line": 52,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "nonce = base64.b64decode(token.split(\".\")[1])"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_pkcs12.py",
+        "line": 73,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(token).decode().count(\".\") == 2"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_pkcs12.py",
+        "line": 74,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert pkcs12_utils.decrypt_value(base64.b64decode(token).decode()) == SECRET"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_pkcs12.py",
+        "line": 85,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "flipped = bytearray(base64.b64decode(tail))"
+      },
+      {
+        "file": "common_encryption-1.0.1/tests/test_pubkey_signature.py",
+        "line": 99,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(signature_utils.public_key()).startswith(b\"\\x30\")"
+      }
+    ]
+  },
+  {
+    "package_name": "no-ai-marks",
+    "checked_at": "2026-10-17T23:26:29.490364",
+    "download_url": "https://files.pythonhosted.org/packages/14/06/068909a06fe4800f2647bc4df30ab86bd6b5139b6a710b1dfdcb6fcc2412/no_ai_marks-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "no_ai_marks-0.2.1/no_ai_marks/git.py",
+        "line": 171,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      }
+    ]
   }
 ]
