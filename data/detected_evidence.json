@@ -48432,5 +48432,51 @@
         "code_snippet": "process = await asyncio.create_subprocess_exec("
       }
     ]
+  },
+  {
+    "package_name": "loopcut",
+    "checked_at": "2026-10-18T21:53:54.868086",
+    "download_url": "https://files.pythonhosted.org/packages/d4/9c/5242745ab7e201cad76f25cfb9f6dee17620a948298467188427f442c127/loopcut-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "loopcut-0.1.0/tests/test_service_mock.py",
+        "line": 50,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      }
+    ]
+  },
+  {
+    "package_name": "kintsua",
+    "checked_at": "2026-10-18T21:53:54.949188",
+    "download_url": "https://files.pythonhosted.org/packages/9c/ba/f2f5930acac7f11b15151888bbedcdb3f70734f4f5c1d3ef4a43746b8986/kintsua-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kintsua-0.1.0/kintsua/fixer/sandbox.py",
+        "line": 591,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _preexec(self):"
+      },
+      {
+        "file": "kintsua-0.1.0/kintsua/fixer/sandbox.py",
+        "line": 631,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(  # noqa: S603 - fixed argv, no shell unless asked"
+      },
+      {
+        "file": "kintsua-0.1.0/kintsua/fixer/sandbox.py",
+        "line": 639,
+        "keyword_detected": "exec(",
+        "code_snippet": "preexec_fn=self._preexec(),"
+      },
+      {
+        "file": "kintsua-0.1.0/kintsua/fixer/sandbox.py",
+        "line": 714,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_group(proc: subprocess.Popen[bytes]) -> None:"
+      }
+    ]
   }
 ]
