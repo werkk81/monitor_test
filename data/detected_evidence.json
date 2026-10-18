@@ -48232,5 +48232,205 @@
         "code_snippet": "self._proc = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "hodlodds",
+    "checked_at": "2026-10-18T19:43:03.511749",
+    "download_url": "https://files.pythonhosted.org/packages/66/42/3d1d8603bf281c7f19c8e012282e9c9e69bfab9e2d0870a35d1fb98934cb/hodlodds-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hodlodds-0.2.0/tests/test_client.py",
+        "line": 817,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "tx = VersionedTransaction.from_bytes(base64.b64decode(payload.payload[\"transaction\"]))"
+      }
+    ]
+  },
+  {
+    "package_name": "pylolka",
+    "checked_at": "2026-10-18T19:43:04.503497",
+    "download_url": "https://files.pythonhosted.org/packages/02/08/0f691bcb4654ff7717d933c1b714febcec363cc69cfedbc37cef77a3cbd0/pylolka-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pylolka-0.1.0/lolka/player.py",
+        "line": 191,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen = MISSING"
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/player.py",
+        "line": 215,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn_process(self, args: Any, **subprocess_kwargs: Any) -> subprocess.Popen:"
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/player.py",
+        "line": 219,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/player.py",
+        "line": 717,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/sinks/m4a.py",
+        "line": 86,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/sinks/mka.py",
+        "line": 79,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/sinks/mkv.py",
+        "line": 79,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/sinks/mp3.py",
+        "line": 79,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/sinks/mp4.py",
+        "line": 86,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/sinks/ogg.py",
+        "line": 79,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/utils.py",
+        "line": 1384,
+        "keyword_detected": "eval(",
+        "code_snippet": "evaluated = eval(tp, globals, locals)"
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/voice/state.py",
+        "line": 246,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.socket: socket.socket = MISSING"
+      },
+      {
+        "file": "pylolka-0.1.0/lolka/voice/state.py",
+        "line": 755,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "wavvon-sdk",
+    "checked_at": "2026-10-18T19:43:04.749086",
+    "download_url": "https://files.pythonhosted.org/packages/fe/83/401ff743a94f2e47cefaf3157300db6dfb57e3ddfa047d8604552ed8c4b6/wavvon_sdk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wavvon_sdk-0.1.0/scripts/smoke_local.py",
+        "line": 46,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "async def setup(hub_url: str, owner: WavvonClient, hub: subprocess.Popen[bytes]) -> dict[str, Any]:"
+      },
+      {
+        "file": "wavvon_sdk-0.1.0/scripts/smoke_local.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "hub = subprocess.Popen([str(binary)], cwd=cwd, env=env, stdout=log, stderr=subprocess.STDOUT)"
+      },
+      {
+        "file": "wavvon_sdk-0.1.0/tests/smoke.py",
+        "line": 85,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "diffbutler",
+    "checked_at": "2026-10-18T19:43:04.912304",
+    "download_url": "https://files.pythonhosted.org/packages/d8/83/0a5cc16ffe94a251d9da77aecffae22b7f82048662124a69f40e1ac3e3cf/diffbutler-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/forges/github/auth.py",
+        "line": 13,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/reviewers/native.py",
+        "line": 158,
+        "keyword_detected": "exec(",
+        "code_snippet": "asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/reviewers/process.py",
+        "line": 18,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/sources/fetch.py",
+        "line": 159,
+        "keyword_detected": "exec(",
+        "code_snippet": "asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/sources/git.py",
+        "line": 288,
+        "keyword_detected": "exec(",
+        "code_snippet": "asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/sources/git.py",
+        "line": 412,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/sources/remotes.py",
+        "line": 46,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/ui/cli/editor.py",
+        "line": 22,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec(*command, str(path))"
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/ui/tui/browser.py",
+        "line": 18,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/ui/tui/foreground.py",
+        "line": 47,
+        "keyword_detected": "exec(",
+        "code_snippet": "asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "diffbutler-0.5.0/src/diffbutler/ui/tui/handoff_probe.py",
+        "line": 91,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
   }
 ]
