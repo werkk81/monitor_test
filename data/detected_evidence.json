@@ -48478,5 +48478,19 @@
         "code_snippet": "def _kill_group(proc: subprocess.Popen[bytes]) -> None:"
       }
     ]
+  },
+  {
+    "package_name": "imagegeneration",
+    "checked_at": "2026-10-18T23:45:03.565966",
+    "download_url": "https://files.pythonhosted.org/packages/b5/f0/a7a8b23b46e71a8b31d0d165a26f30a779155767355e45405cba94eee5c5/imagegeneration-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "imagegeneration-0.1.0/src/imagegeneration/foundry.py",
+        "line": 277,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "img_bytes = base64.b64decode(image_b64)"
+      }
+    ]
   }
 ]
