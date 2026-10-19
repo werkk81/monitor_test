@@ -48492,5 +48492,65 @@
         "code_snippet": "img_bytes = base64.b64decode(image_b64)"
       }
     ]
+  },
+  {
+    "package_name": "xrdwms",
+    "checked_at": "2026-10-19T21:45:40.035582",
+    "download_url": "https://files.pythonhosted.org/packages/10/12/3b2fee5ade48b729d0bb0ec4070205eb87bbe8ad0b68aa019a604df67478/xrdwms-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "xrdwms-0.4.0/tests/test_arc.py",
+        "line": 236,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "xrdwms-0.4.0/tests/stress/test_stress_dask.py",
+        "line": 270,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "servchart-agent",
+    "checked_at": "2026-10-19T21:45:40.115230",
+    "download_url": "https://files.pythonhosted.org/packages/f1/f3/5ee521d3fe8035c7533aae861de2b97cf19f2139d2a2ac906c42d89cdece/servchart_agent-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "servchart_agent-0.2.0/servchart_agent/docker_api.py",
+        "line": 28,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "xrdarc",
+    "checked_at": "2026-10-19T21:45:40.740770",
+    "download_url": "https://files.pythonhosted.org/packages/94/76/65bb4f59d3fffedfa25436199534e7cf3be0ba877dea382ade15a0114867/xrdarc-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "xrdarc-0.4.0/tests/_client_helpers.py",
+        "line": 36,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "xrdarc-0.4.0/tests/test_proxy.py",
+        "line": 244,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_side, client_side = socket.socketpair()"
+      },
+      {
+        "file": "xrdarc-0.4.0/tests/test_transport.py",
+        "line": 41,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      }
+    ]
   }
 ]
