@@ -48774,5 +48774,261 @@
         "code_snippet": "model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "coval-agent-sdk",
+    "checked_at": "2026-10-20T23:30:38.579590",
+    "download_url": "https://files.pythonhosted.org/packages/36/c2/962e00f881fb50e9728a2e505ae1c6bc1f57c1af5c4759b587ea7cfe9b25/coval_agent_sdk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "coval_agent_sdk-0.1.0/scripts/check_architecture.py",
+        "line": 158,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(node.value)"
+      }
+    ]
+  },
+  {
+    "package_name": "tiktok-shop-api",
+    "checked_at": "2026-10-20T23:30:38.971420",
+    "download_url": "https://files.pythonhosted.org/packages/f5/d4/8df8169bbd26392cc611961341f67dae572468098cde3483452ea25bda14/tiktok_shop_api-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tiktok_shop_api-0.1.0/tests/test_auth.py",
+        "line": 198,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "tiktok_shop_api-0.1.0/tests/test_client.py",
+        "line": 234,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "tiktok_shop_api-0.1.0/tests/test_client.py",
+        "line": 253,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sock = socket.socket()"
+      },
+      {
+        "file": "tiktok_shop_api-0.1.0/tests/test_consistency.py",
+        "line": 23,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "tiktok_shop_api-0.1.0/tests/test_consistency.py",
+        "line": 32,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sock = socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "journey-test-hellospy",
+    "checked_at": "2026-10-20T23:30:39.117296",
+    "download_url": "https://files.pythonhosted.org/packages/99/ec/6053b6ab96b42bb688a8ddfb600fa80ba549fcb8c0554a2a8a5af784b153/journey_test_hellospy-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "journey_test_hellospy-0.1.1/setup.py",
+        "line": 60,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "astraform-conformance",
+    "checked_at": "2026-10-20T23:30:39.523902",
+    "download_url": "https://files.pythonhosted.org/packages/dd/3b/5206d1c05bd520e378da881c53ac1815311a6820fc0a2c9ab100cb74a718/astraform_conformance-0.3.5.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "astraform_conformance-0.3.5/src/astraform/remote_domain/conformance/runner.py",
+        "line": 224,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "writer_process: subprocess.Popen[Any]"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/src/astraform/remote_domain/conformance/runner.py",
+        "line": 225,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "contender_process: subprocess.Popen[Any]"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/src/astraform/remote_domain/conformance/runner.py",
+        "line": 234,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "if not isinstance(process, subprocess.Popen) or process.pid is None:"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/src/astraform/remote_domain/conformance/runner.py",
+        "line": 235,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "raise ValueError(f\"{field} must be a started subprocess.Popen\")"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/src/astraform/remote_domain/conformance/runner.py",
+        "line": 244,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[Any]"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/src/astraform/remote_domain/conformance/runner.py",
+        "line": 248,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "if not isinstance(self.process, subprocess.Popen) or self.process.pid is None:"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/src/astraform/remote_domain/conformance/runner.py",
+        "line": 249,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "raise ValueError(\"process must be a started subprocess.Popen\")"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 511,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "payload = base64.b64decode(attestation[\"payload\"])"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 512,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "signature = base64.b64decode(attestation[\"signatures\"][0][\"sig\"])"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 617,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "payload = base64.b64decode(attestation[\"payload\"])"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 619,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(attestation[\"signatures\"][0][\"sig\"]),"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 1311,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "fake_process = object.__new__(subprocess.Popen)"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 1981,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._processes: list[subprocess.Popen] = []"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 1982,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._provider_processes: list[subprocess.Popen] = []"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 2020,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "writer = subprocess.Popen("
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 2045,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "contender = subprocess.Popen("
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 2251,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content=base64.b64decode(attempt[\"content\"]),"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 2262,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def provider_processes(self) -> tuple[subprocess.Popen, ...]:"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 2275,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _launch_provider(self, *, restarted: bool = False) -> tuple[subprocess.Popen, str]:"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 2276,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as listener:"
+      },
+      {
+        "file": "astraform_conformance-0.3.5/tests/test_runner.py",
+        "line": 2279,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "mangosta",
+    "checked_at": "2026-10-20T23:30:39.942009",
+    "download_url": "https://files.pythonhosted.org/packages/83/29/2e4b01005e187d6210919a96105b450f6fe7812817f17725577b6a4dd8e2/mangosta-0.1.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mangosta-0.1.0a1/examples/cnn_checkpoint_resume.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "mangosta-0.1.0a1/examples/cnn_checkpoint_resume.py",
+        "line": 152,
+        "keyword_detected": "eval(",
+        "code_snippet": "fresh_model.eval()"
+      },
+      {
+        "file": "mangosta-0.1.0a1/examples/multitask_onnx_export.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "mangosta-0.1.0a1/src/mangosta/artifacts/loader.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "mangosta-0.1.0a1/src/mangosta/artifacts/loader.py",
+        "line": 131,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "mangosta-0.1.0a1/src/mangosta/core/schema.py",
+        "line": 244,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "mangosta-0.1.0a1/src/mangosta/export/onnx.py",
+        "line": 140,
+        "keyword_detected": "eval(",
+        "code_snippet": "base_model.eval()"
+      },
+      {
+        "file": "mangosta-0.1.0a1/src/mangosta/export/onnx.py",
+        "line": 149,
+        "keyword_detected": "eval(",
+        "code_snippet": "export_model.eval()"
+      }
+    ]
   }
 ]
