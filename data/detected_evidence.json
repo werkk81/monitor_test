@@ -48662,5 +48662,117 @@
         "code_snippet": "proc = subprocess.Popen(tempfile, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)"
       }
     ]
+  },
+  {
+    "package_name": "syntropion",
+    "checked_at": "2026-10-20T20:55:39.382463",
+    "download_url": "https://files.pythonhosted.org/packages/f6/69/0ef05e4a63de04e9de782eaaa82830c234599d4c28e7a3641e6af88a611f/syntropion-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "syntropion-1.0.0/foundry_core/code_synthesizer.py",
+        "line": 16,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"eval\", \"exec\", \"compile\", \"__import__\", \"os.system\", \"subprocess.Popen\", \"subprocess.run\""
+      },
+      {
+        "file": "syntropion-1.0.0/foundry_core/plugin_loader.py",
+        "line": 42,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code_str, mod.__dict__)"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_api.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_proposal_submission_and_retrieval():"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer.py",
+        "line": 29,
+        "keyword_detected": "eval(",
+        "code_snippet": "unsafe_eval = \"def exploit():\\n    return eval('2 + 2')\""
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 10,
+        "keyword_detected": "eval(",
+        "code_snippet": "3.  eval()/exec()/__import__() → ValueError ( 'Forbidden call: <ad>()')"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 10,
+        "keyword_detected": "exec(",
+        "code_snippet": "3.  eval()/exec()/__import__() → ValueError ( 'Forbidden call: <ad>()')"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 171,
+        "keyword_detected": "eval(",
+        "code_snippet": "validate_python_code_ast(\"import os\\neval('1')\\nos.system('x')\\n\")"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 173,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert \"Forbidden call: eval()\" in mesaj"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 179,
+        "keyword_detected": "exec(",
+        "code_snippet": "validate_python_code_ast(\"def f():\\n    return exec('1')\\n\")"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 190,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "(\"import subprocess\\nsubprocess.Popen(['ls'])\\n\", \"subprocess.Popen\"),"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 196,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Sabit-küme {'compile','subprocess.Popen','subprocess.run',...} advisory"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 207,
+        "keyword_detected": "eval(",
+        "code_snippet": "validator.visit(ast.parse(\"eval('x')\\n\"))"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert validator.violations == [\"Forbidden call: eval()\"]"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_code_synthesizer_dallar.py",
+        "line": 784,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "assert \"subprocess.Popen\" in cs.FORBIDDEN_AST_NODES"
+      },
+      {
+        "file": "syntropion-1.0.0/tests/test_plugin_loader_dallar.py",
+        "line": 64,
+        "keyword_detected": "eval(",
+        "code_snippet": "GUVENLIKSIZ_KOD = \"eval('1')\\nrouter = APIRouter()\\n\""
+      }
+    ]
+  },
+  {
+    "package_name": "erislib",
+    "checked_at": "2026-10-20T20:55:39.839182",
+    "download_url": "https://files.pythonhosted.org/packages/4d/d2/8b59a5621cc6d3ba44c67740a66829211ba47e16f3d5c65236bbcc0f54db/erislib-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "erislib-0.1.0/eris/core/learned/backends/gearnet/native_model.py",
+        "line": 169,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      }
+    ]
   }
 ]
