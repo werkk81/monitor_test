@@ -48552,5 +48552,115 @@
         "code_snippet": "with socket.socket() as probe:"
       }
     ]
+  },
+  {
+    "package_name": "redis-flow",
+    "checked_at": "2026-10-20T00:40:41.189567",
+    "download_url": "https://files.pythonhosted.org/packages/f7/fe/00ebe0ead20993027359010bd427a95c2f009b6a01984a0e2f4c2aa8cf59/redis_flow-0.3.6.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "redis_flow-0.3.6/rf/utils/redis_lock.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.redis_conn.eval(self._RELEASE, 1, self.lock_key, self._token)"
+      },
+      {
+        "file": "redis_flow-0.3.6/rf/utils/redis_lock.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "renewed = self.redis_conn.eval(self._RENEW, 1, self.lock_key, self._token, 5)"
+      },
+      {
+        "file": "redis_flow-0.3.6/tests/integration/test_reliability.py",
+        "line": 204,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "codecraftai-uia",
+    "checked_at": "2026-10-20T00:40:41.468835",
+    "download_url": "https://files.pythonhosted.org/packages/70/e2/fff482694f69bed6e498b2dc58aca28fb23cb5d3910cce72480fee1b067f/codecraftai_uia-1.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "codecraftai_uia-1.5.0/source/packages/ccai/uia/cli/cmdtree/mapping/monitor.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(app_command, shell=True)"
+      },
+      {
+        "file": "codecraftai_uia-1.5.0/source/packages/ccai/uia/model/declarative.py",
+        "line": 509,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(shlex.split(cls.APPLICATION_COMMAND))"
+      },
+      {
+        "file": "codecraftai_uia-1.5.0/source/packages/ccai/uia/platforms/linux/agents/wayland/gnome/broker_client.py",
+        "line": 52,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "client = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "codecraftai_uia-1.5.0/source/packages/ccai/uia/platforms/macos/wrappers/uiaworkspace.py",
+        "line": 152,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"open\", \"-a\", application_name])"
+      }
+    ]
+  },
+  {
+    "package_name": "codecraftai-agent-kit",
+    "checked_at": "2026-10-20T00:40:41.715248",
+    "download_url": "https://files.pythonhosted.org/packages/cc/0f/2a1248767c2b8e985960a9d9cb39711678fbee1450475c3a65cb3a08aa89/codecraftai_agent_kit-1.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "codecraftai_agent_kit-1.3.0/source/packages/ccai/agentkit/platform/services/storageobject.py",
+        "line": 147,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "content = base64.b64decode(data[\"content\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "codecraftai-taskplus",
+    "checked_at": "2026-10-20T00:40:42.040049",
+    "download_url": "https://files.pythonhosted.org/packages/43/b6/6bb64b33df5ab07d8d10d6d01458282d65b283566bbc895c0259c35d342f/codecraftai_taskplus-1.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "codecraftai_taskplus-1.3.0/source/packages/ccai/taskplus/model/flowengine.py",
+        "line": 34,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval_result = eval(if_expr)"
+      },
+      {
+        "file": "codecraftai_taskplus-1.3.0/source/packages/ccai/taskplus/tasks/createenvironment.py",
+        "line": 68,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(var_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True, env=command_env)"
+      },
+      {
+        "file": "codecraftai_taskplus-1.3.0/source/packages/ccai/taskplus/tasks/embeddedpython.py",
+        "line": 45,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(script_content, globals(), locals())"
+      },
+      {
+        "file": "codecraftai_taskplus-1.3.0/source/packages/ccai/taskplus/tasks/runcommand.py",
+        "line": 47,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(self._command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)"
+      },
+      {
+        "file": "codecraftai_taskplus-1.3.0/source/packages/ccai/taskplus/tasks/shellscript.py",
+        "line": 64,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(tempfile, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)"
+      }
+    ]
   }
 ]
