@@ -49030,5 +49030,183 @@
         "code_snippet": "export_model.eval()"
       }
     ]
+  },
+  {
+    "package_name": "nodeeditor-qtpy",
+    "checked_at": "2026-10-21T20:55:51.544664",
+    "download_url": "https://files.pythonhosted.org/packages/a7/e4/d6446c089da5e7d5485a59746b102c99585d719508d831dd731f87b13a84/nodeeditor_qtpy-0.8.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_node_base.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "val1 = i1.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_node_base.py",
+        "line": 129,
+        "keyword_detected": "eval(",
+        "code_snippet": "val2 = i2.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_node_base.py",
+        "line": 172,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_node_base.py",
+        "line": 193,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_sub_window.py",
+        "line": 56,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = node.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_sub_window.py",
+        "line": 77,
+        "keyword_detected": "eval(",
+        "code_snippet": "node.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_sub_window.py",
+        "line": 127,
+        "keyword_detected": "exec(",
+        "code_snippet": "action = context_menu.exec(self.mapToGlobal(event.pos()))"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_sub_window.py",
+        "line": 299,
+        "keyword_detected": "exec(",
+        "code_snippet": "action = context_menu.exec(self.mapToGlobal(event.pos()))"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_sub_window.py",
+        "line": 330,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = selected.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_sub_window.py",
+        "line": 377,
+        "keyword_detected": "exec(",
+        "code_snippet": "action = context_menu.exec(self.mapToGlobal(event.pos()))"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/calc_sub_window.py",
+        "line": 418,
+        "keyword_detected": "exec(",
+        "code_snippet": "action = context_menu.exec(self.mapToGlobal(event.pos()))"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/nodes/check.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/nodes/input.py",
+        "line": 40,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/nodes/multi_input.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/nodes/output.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "val = input_node.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/examples/example_calculator/nodes/output.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "#     val = input_node.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/nodeeditor/node_graphics_edge.py",
+        "line": 130,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket_type_start = self.edge.start_socket.socket_type"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/nodeeditor/node_graphics_edge.py",
+        "line": 131,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket_type_end = self.edge.end_socket.socket_type"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/nodeeditor/node_graphics_socket.py",
+        "line": 79,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "return self.socket.socket_type"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/nodeeditor/node_graphics_view.py",
+        "line": 231,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "print(\"MMB DEBUG:\", item.socket, \"socket_type:\", item.socket.socket_type,"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/nodeeditor/node_group.py",
+        "line": 1051,
+        "keyword_detected": "exec(",
+        "code_snippet": "action = menu.exec(event.screenPos())"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/nodeeditor/node_multi_input_node.py",
+        "line": 180,
+        "keyword_detected": "eval(",
+        "code_snippet": "values.append(node.eval())"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/nodeeditor/node_node.py",
+        "line": 588,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, index: int = 0) -> int:"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/nodeeditor/node_node.py",
+        "line": 597,
+        "keyword_detected": "eval(",
+        "code_snippet": "node.eval()"
+      },
+      {
+        "file": "nodeeditor_qtpy-0.8.1/tests/test_100_multi_input.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      }
+    ]
+  },
+  {
+    "package_name": "sonicmatch-mcp",
+    "checked_at": "2026-10-21T20:55:51.771128",
+    "download_url": "https://files.pythonhosted.org/packages/32/93/c15949b8a62a17ec61fa704b31cdab61fc420228390d07968f5d4a3eab58/sonicmatch_mcp-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sonicmatch_mcp-0.2.1/src/sonicmatch/hosted/__main__.py",
+        "line": 42,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "upstream = subprocess.Popen("
+      },
+      {
+        "file": "sonicmatch_mcp-0.2.1/tests/test_hosted_gate.py",
+        "line": 24,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = json.loads(base64.b64decode(config_b64()))"
+      }
+    ]
   }
 ]
