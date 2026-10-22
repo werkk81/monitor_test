@@ -49512,5 +49512,325 @@
         "code_snippet": "decoded = base64.b64decode(thumb_b64)"
       }
     ]
+  },
+  {
+    "package_name": "qtpy-mcp",
+    "checked_at": "2026-10-22T23:41:30.747820",
+    "download_url": "https://files.pythonhosted.org/packages/b1/3b/1e672c5a561856e47a3747d0e0c22ad69de1493ed8f937ee0217726561fe/qtpy_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qtpy_mcp-0.1.0/src/qtpy_mcp/server/mcp_server.py",
+        "line": 344,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "frames = [(base64.b64decode(f[\"png\"]), float(f[\"t\"])) for f in rec[\"frames\"]]"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/conftest.py",
+        "line": 22,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_multiprocess.py",
+        "line": 47,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_multiprocess.py",
+        "line": 74,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "app.proc = subprocess.Popen("
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_multiprocess.py",
+        "line": 174,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return Image.open(io.BytesIO(base64.b64decode(block.data))).convert(\"RGB\")"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_multiprocess.py",
+        "line": 265,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "gif = read_gif(base64.b64decode(block.data))"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_multiprocess.py",
+        "line": 288,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "gif = read_gif(base64.b64decode(block.data))"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_recording.py",
+        "line": 76,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "frames = [(base64.b64decode(f[\"png\"]), float(f[\"t\"])) for f in result[\"frames\"]]"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 25,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def listener() -> Iterator[socket.socket]:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 26,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 43,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_register_and_list_round_trip(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 52,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_public_view_hides_the_token(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 59,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_registry_files_are_owner_only(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 64,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_many_instances_listed_oldest_first(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 74,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_long_unreachable_entry_is_pruned(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 84,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_recent_unreachable_entry_is_hidden_but_kept(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 93,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_dead_pid_is_pruned(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 99,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_prune_can_be_disabled(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_registry.py",
+        "line": 105,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_unregister_is_idempotent(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_rpc_server.py",
+        "line": 18,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_rpc_server.py",
+        "line": 36,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_screenshotter.py",
+        "line": 25,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png_bytes = base64.b64decode(result[\"image\"])"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_screenshotter.py",
+        "line": 34,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png_bytes = base64.b64decode(result[\"image\"])"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_screenshotter.py",
+        "line": 57,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "img_bytes = base64.b64decode(result[\"image\"])"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_semantic_tools.py",
+        "line": 59,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(result.content[0].data).startswith(b\"\\x89PNG\")"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_semantic_tools.py",
+        "line": 189,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "gif = read_gif(base64.b64decode(result.content[0].data))"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_semantic_tools.py",
+        "line": 216,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert read_gif(base64.b64decode(stopped.content[0].data)).n_frames == 3"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/test_semantic_tools.py",
+        "line": 249,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(result.content[0].data)"
+      },
+      {
+        "file": "qtpy_mcp-0.1.0/tests/fixtures/dcc_stub.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "return int(app.exec() if hasattr(app, \"exec\") else app.exec_())"
+      }
+    ]
+  },
+  {
+    "package_name": "virtual-key-mapper",
+    "checked_at": "2026-10-22T23:41:30.821752",
+    "download_url": "https://files.pythonhosted.org/packages/c2/da/1c1f9eedd9f66f8b67877f4bb35dc45c30bea3e9c7cca354d9c8ca393518/virtual_key_mapper-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "virtual_key_mapper-0.1.0/src/virtual_key_mapper/auth/forwarded.py",
+        "line": 66,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _connect(path: str) -> socket.socket:"
+      },
+      {
+        "file": "virtual_key_mapper-0.1.0/src/virtual_key_mapper/auth/forwarded.py",
+        "line": 71,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "connection = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "virtual_key_mapper-0.1.0/src/virtual_key_mapper/auth/forwarded.py",
+        "line": 78,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "connect: Callable[[str], socket.socket] | None = None) -> dict:"
+      },
+      {
+        "file": "virtual_key_mapper-0.1.0/src/virtual_key_mapper/auth/forwarded.py",
+        "line": 119,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "connect: Callable[[str], socket.socket] | None = None) -> None:"
+      },
+      {
+        "file": "virtual_key_mapper-0.1.0/tests/test_forwarded.py",
+        "line": 29,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "client, server = socket.socketpair()"
+      },
+      {
+        "file": "virtual_key_mapper-0.1.0/tests/test_forwarded.py",
+        "line": 101,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "virtual_key_mapper-0.1.0/tests/test_tools_native.py",
+        "line": 242,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "decisionnode-edge",
+    "checked_at": "2026-10-22T23:41:31.257414",
+    "download_url": "https://files.pythonhosted.org/packages/ff/2e/731a4132bcca0641f7bd41f938ee0fe53ae191637bb1d19914b52557697b/decisionnode_edge-0.9.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/backends.py",
+        "line": 326,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.mx.eval(h)"
+      },
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/backends.py",
+        "line": 344,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/backends.py",
+        "line": 353,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen(command, stdout=self.output, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/backends.py",
+        "line": 391,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _stop(process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/build.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "full = AutoModelForImageTextToText.from_pretrained(model, dtype=torch.float32).to(device).eval()"
+      },
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/build.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "text = LastHidden(full.model.language_model).eval()"
+      },
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/model.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "backbone = AutoModelForImageTextToText.from_pretrained(path, dtype=dtype).to(device).eval()"
+      },
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/model.py",
+        "line": 239,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "source = image[\"path\"] if image.get(\"path\") is not None else io.BytesIO(base64.b64decode(image[\"data\"]))"
+      },
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/model.py",
+        "line": 262,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "source = image[\"path\"] if image.get(\"path\") is not None else io.BytesIO(base64.b64decode(image[\"data\"]))"
+      },
+      {
+        "file": "decisionnode_edge-0.9.2/src/decisionnode_edge/systemone.py",
+        "line": 101,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = base64.b64decode(head[: len(head) - len(head) % 4])"
+      }
+    ]
+  },
+  {
+    "package_name": "ermes-cli",
+    "checked_at": "2026-10-22T23:41:31.367124",
+    "download_url": "https://files.pythonhosted.org/packages/23/13/55878fe1274f2db9d4f5abce34e84cd158f1a5544b1376ee3276d89b9151/ermes_cli-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ermes_cli-1.0.0/ermes_cli/mcp_server.py",
+        "line": 122,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(src, ns)"
+      },
+      {
+        "file": "ermes_cli-1.0.0/tests/test_mcp_server.py",
+        "line": 57,
+        "keyword_detected": "exec(",
+        "code_snippet": "# exec() produces string annotations; resolve via get_type_hints."
+      }
+    ]
   }
 ]
