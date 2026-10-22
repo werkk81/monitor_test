@@ -49452,5 +49452,65 @@
         "code_snippet": "p = subprocess.Popen(cmd, start_new_session=True)"
       }
     ]
+  },
+  {
+    "package_name": "fss-cli",
+    "checked_at": "2026-10-22T20:52:02.503417",
+    "download_url": "https://files.pythonhosted.org/packages/e8/bc/11b1f784ca6d38a62a16c9f594dd9dbd85a8b7694b24b12045f98620c1a0/fss_cli-0.11.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fss_cli-0.11.0/src/fss_cli/_content.py",
+        "line": 32,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "digest = base64.b64decode(value, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "openajazz",
+    "checked_at": "2026-10-22T20:52:02.578513",
+    "download_url": "https://files.pythonhosted.org/packages/ab/8e/2599b2b9ec12e8acccea447ebec2dd4360cb4716b02250078ddddb05cb06/openajazz-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "openajazz-0.4.0/openajazz/music.py",
+        "line": 44,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,"
+      },
+      {
+        "file": "openajazz-0.4.0/openajazz/service.py",
+        "line": 68,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(argv, stdin=subprocess.DEVNULL, stdout=log,"
+      }
+    ]
+  },
+  {
+    "package_name": "ramappy",
+    "checked_at": "2026-10-22T20:52:02.652872",
+    "download_url": "https://files.pythonhosted.org/packages/c3/00/7f29d458999c0c2c876817dc83249b0036e83999d7b41f821223fd9f770a/ramappy-0.1.2rc1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ramappy-0.1.2rc1/ramappy/core/_spectral_map/functional.py",
+        "line": 51,
+        "keyword_detected": "exec(",
+        "code_snippet": "results = parallel_exec(delayed(func)(d, **kwargs) for d in progress_wrapper(data))"
+      },
+      {
+        "file": "ramappy-0.1.2rc1/ramappy/utils/image.py",
+        "line": 118,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return PIL.Image.open(BytesIO(base64.b64decode(img)))"
+      },
+      {
+        "file": "ramappy-0.1.2rc1/tests/io/test_zarr_history.py",
+        "line": 233,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(thumb_b64)"
+      }
+    ]
   }
 ]
