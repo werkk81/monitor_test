@@ -49986,5 +49986,147 @@
         "code_snippet": "loop.exec()"
       }
     ]
+  },
+  {
+    "package_name": "agent-egress-guard",
+    "checked_at": "2026-10-23T23:31:37.907075",
+    "download_url": "https://files.pythonhosted.org/packages/2f/d0/179876bbcaed0fb1e925e140f58eab3f7138894a9c3fd6a57cfa57f1e057/agent_egress_guard-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agent_egress_guard-0.1.0/src/agent_egress_guard/doctor.py",
+        "line": 58,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as listener:"
+      },
+      {
+        "file": "agent_egress_guard-0.1.0/src/agent_egress_guard/session.py",
+        "line": 248,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "nativelayout",
+    "checked_at": "2026-10-23T23:31:38.093318",
+    "download_url": "https://files.pythonhosted.org/packages/47/ec/b5344b606452c18fae4b1cf044c9832edeec056e29c4d1b4b4eaaa359105/nativelayout-1.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nativelayout-1.2.0/android/nativelayout/host/kivy_host.py",
+        "line": 379,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return CoreImage(io.BytesIO(base64.b64decode(payload)), ext=ext).texture"
+      }
+    ]
+  },
+  {
+    "package_name": "quietos-sentinel",
+    "checked_at": "2026-10-23T23:31:38.373209",
+    "download_url": "https://files.pythonhosted.org/packages/f6/31/3439af7b92b0da63e1122a48d6792eb2be70b87c5a28b5708f59c56f133c/quietos_sentinel-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "quietos_sentinel-0.1.0/src/sentinel/rules.py",
+        "line": 228,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(tok, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "i2c-api",
+    "checked_at": "2026-10-23T23:31:38.783621",
+    "download_url": "https://files.pythonhosted.org/packages/4c/41/006214ecc40d2f58146346618f1d86d04a9f012381c098317714da263949/i2c_api-0.20.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/language.py",
+        "line": 9,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self, transaction: \"I2CTransaction\", device_address: int = -1) -> ExecResults: ..."
+      },
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/language.py",
+        "line": 11,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, transaction: \"I2CTransaction\", device_address: int = -1) -> ExecResults: ..."
+      },
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/language.py",
+        "line": 21,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self, master: I2CMaster, device_address: int = -1) -> ExecResults:"
+      },
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/language.py",
+        "line": 49,
+        "keyword_detected": "exec(",
+        "code_snippet": "return master.exec(get_transaction())"
+      },
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/master.py",
+        "line": 90,
+        "keyword_detected": "exec(",
+        "code_snippet": "I2CTransactionBuilder().start().address(address).write([b.uint for b in data_out]).stop().exec(self)"
+      },
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/master.py",
+        "line": 114,
+        "keyword_detected": "exec(",
+        "code_snippet": "data, is_success = I2CTransactionBuilder().start().address(address).read(num_bytes).stop().exec(self)"
+      },
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/master.py",
+        "line": 127,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self, transaction: I2CTransaction, device_address: int = -1) -> ExecResults:"
+      },
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/master.py",
+        "line": 146,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec(transaction, device_address)"
+      },
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/master.py",
+        "line": 149,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, transaction: I2CTransaction, device_address: int = -1) -> ExecResults:"
+      },
+      {
+        "file": "i2c_api-0.20.0/src/i2c_api/master.py",
+        "line": 202,
+        "keyword_detected": "exec(",
+        "code_snippet": ".exec(self)"
+      }
+    ]
+  },
+  {
+    "package_name": "texas2step",
+    "checked_at": "2026-10-23T23:31:39.537840",
+    "download_url": "https://files.pythonhosted.org/packages/83/9d/a64c8d7e0bf126cc4d3238147799d9333ec43071d95523352551a50e1860/texas2step-2.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "texas2step-2.0.0/src/texas2step/cluster.py",
+        "line": 204,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "texas2step-2.0.0/src/texas2step/rtc.py",
+        "line": 64,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _bind_in_range(address: str, ports: tuple[int, int]) -> socket.socket | None:"
+      },
+      {
+        "file": "texas2step-2.0.0/src/texas2step/rtc.py",
+        "line": 76,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(family, socket.SOCK_DGRAM)"
+      }
+    ]
   }
 ]
