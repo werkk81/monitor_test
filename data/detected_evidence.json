@@ -49832,5 +49832,159 @@
         "code_snippet": "# exec() produces string annotations; resolve via get_type_hints."
       }
     ]
+  },
+  {
+    "package_name": "nucleuswatch",
+    "checked_at": "2026-10-23T20:40:56.449808",
+    "download_url": "https://files.pythonhosted.org/packages/5d/a7/19b2944c5537550d9a8a8d100c78480cfc5daeb192b779deec5888892b77/nucleuswatch-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nucleuswatch-1.0.0/src/nucleuswatch/brokers/_lsst.py",
+        "line": 28,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(value)  # literals only; never executes code"
+      }
+    ]
+  },
+  {
+    "package_name": "dotmorph",
+    "checked_at": "2026-10-23T20:40:56.712189",
+    "download_url": "https://files.pythonhosted.org/packages/f0/95/17b6463183bb6f3d8bea235708035f3927a2a434e89276af280ed6356c9d/dotmorph-2.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/core/common.py",
+        "line": 91,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_group(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/core/common.py",
+        "line": 124,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/daemon.py",
+        "line": 33,
+        "keyword_detected": "exec(",
+        "code_snippet": "f\"Exec={desktop_exec('daemon')}\\n\""
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/daemon.py",
+        "line": 52,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/daemon.py",
+        "line": 130,
+        "keyword_detected": "exec(",
+        "code_snippet": "code = menu.app.exec()"
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/hotkey.py",
+        "line": 72,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(text)"
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/integrate.py",
+        "line": 191,
+        "keyword_detected": "exec(",
+        "code_snippet": "f\"Exec={desktop_exec('%F')}\\nIcon-Name=dotmorph\\nSelection=notnone\\n\""
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/integrate.py",
+        "line": 199,
+        "keyword_detected": "exec(",
+        "code_snippet": "f\"Exec={desktop_exec('convert', '--to', q.target, '--notify', '-q', '%F')}\\n\""
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/integrate.py",
+        "line": 220,
+        "keyword_detected": "exec(",
+        "code_snippet": "f\"Exec={desktop_exec('%F')}\","
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/integrate.py",
+        "line": 228,
+        "keyword_detected": "exec(",
+        "code_snippet": "f\"Exec={desktop_exec('convert', '--to', q.target, '--notify', '-q', '%F')}\","
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/ipc.py",
+        "line": 37,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/notify.py",
+        "line": 75,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/notify.py",
+        "line": 83,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/linux/paths.py",
+        "line": 62,
+        "keyword_detected": "exec(",
+        "code_snippet": "def desktop_exec(*args: str) -> str:"
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/ui/bridge.py",
+        "line": 177,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/ui/settings_window.py",
+        "line": 294,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([\"xdg-open\", str(path)], stdout=subprocess.DEVNULL,"
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/ui/settings_window.py",
+        "line": 366,
+        "keyword_detected": "exec(",
+        "code_snippet": "code = app.exec()"
+      },
+      {
+        "file": "dotmorph-2.0.0/src/dotmorph/ui/window.py",
+        "line": 156,
+        "keyword_detected": "exec(",
+        "code_snippet": "code = menu.app.exec()"
+      },
+      {
+        "file": "dotmorph-2.0.0/tests/test_gui.py",
+        "line": 63,
+        "keyword_detected": "exec(",
+        "code_snippet": "loop.exec()"
+      },
+      {
+        "file": "dotmorph-2.0.0/tests/test_linux.py",
+        "line": 32,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert paths.desktop_exec(\"convert\", \"%F\") == '\"/opt/Dot Morph/bin/dotmorph\" convert %F'"
+      },
+      {
+        "file": "dotmorph-2.0.0/tests/test_linux.py",
+        "line": 232,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"dotmorph\", \"daemon\"], env=env,"
+      },
+      {
+        "file": "dotmorph-2.0.0/tests/test_settings_ui.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "loop.exec()"
+      }
+    ]
   }
 ]
