@@ -50128,5 +50128,105 @@
         "code_snippet": "sock = socket.socket(family, socket.SOCK_DGRAM)"
       }
     ]
+  },
+  {
+    "package_name": "agentledger-cli",
+    "checked_at": "2026-10-24T19:52:12.374844",
+    "download_url": "https://files.pythonhosted.org/packages/26/58/a1ed6562de6fbd0e8927e806e54ce0a226af0f505025983565c53ef30b8a/agentledger_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agentledger_cli-0.1.0/src/agentledger/git_context.py",
+        "line": 231,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "cirrusmachine",
+    "checked_at": "2026-10-24T19:52:12.756125",
+    "download_url": "https://files.pythonhosted.org/packages/01/59/ac27179f8fb2a2a399da80411dee359765016f7341b6e1d183845a2bb739/cirrusmachine-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "select_j12_iso = (j1 <= j2) * eval(C11_criteria)"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 153,
+        "keyword_detected": "eval(",
+        "code_snippet": "select_j12 = (j1 <= j2) * eval(C11_criteria)"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 228,
+        "keyword_detected": "eval(",
+        "code_snippet": "if eval(j1j2_criteria):"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 275,
+        "keyword_detected": "eval(",
+        "code_snippet": "if eval(j1j2_criteria):"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 384,
+        "keyword_detected": "eval(",
+        "code_snippet": "if eval(j1j2_criteria):"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 437,
+        "keyword_detected": "eval(",
+        "code_snippet": "if eval(j1j2_criteria):"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 478,
+        "keyword_detected": "eval(",
+        "code_snippet": "if eval(j1j2_criteria):"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 745,
+        "keyword_detected": "eval(",
+        "code_snippet": "if eval(C11_criteria):"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 1005,
+        "keyword_detected": "eval(",
+        "code_snippet": "if eval(C11_criteria):"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 1288,
+        "keyword_detected": "eval(",
+        "code_snippet": "select_3 = (j1 <= j2) * (j2 <= j3) * eval(C11_criteria)"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 1290,
+        "keyword_detected": "eval(",
+        "code_snippet": "select_3 = (j1 <= j2) * (j2 <= j3) * eval(C11_criteria) * ~((l1==l2)*(j1==j2))"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 1301,
+        "keyword_detected": "eval(",
+        "code_snippet": "select_3_iso = (j1 <= j2) * (j2 <= j3) * eval(C11_criteria)"
+      },
+      {
+        "file": "cirrusmachine-0.1.0/src/cirrusmachine/_vendor/scattering/Scattering2d.py",
+        "line": 1303,
+        "keyword_detected": "eval(",
+        "code_snippet": "select_3_iso = (j1 <= j2) * (j2 <= j3) * eval(C11_criteria) * ~((l2==0)*(j1==j2))"
+      }
+    ]
   }
 ]
