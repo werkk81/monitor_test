@@ -50228,5 +50228,179 @@
         "code_snippet": "select_3_iso = (j1 <= j2) * (j2 <= j3) * eval(C11_criteria) * ~((l2==0)*(j1==j2))"
       }
     ]
+  },
+  {
+    "package_name": "riskhub-engine",
+    "checked_at": "2026-10-24T22:00:12.725141",
+    "download_url": "https://files.pythonhosted.org/packages/61/a1/918e047f198605631954afd2ff1e7eb364af73eb342ba06afdcbc2f48468/riskhub_engine-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "riskhub_engine-0.1.0/tests/test_api.py",
+        "line": 31,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, \"README.md\", \"exec\"), {})"
+      }
+    ]
+  },
+  {
+    "package_name": "connex-ai",
+    "checked_at": "2026-10-24T22:00:13.307373",
+    "download_url": "https://files.pythonhosted.org/packages/ce/53/1f07205105eca93e697066ff51326027201bcb17bfa2dee3aa5676ea86e0/connex_ai-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "connex_ai-0.1.1/connex/adapters/sglang/pd_backend.py",
+        "line": 192,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "connex_ai-0.1.1/connex/pp/hooks.py",
+        "line": 40,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(fam, socket.SOCK_DGRAM) as s:"
+      },
+      {
+        "file": "connex_ai-0.1.1/connex/pp/transports.py",
+        "line": 130,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_directory.py",
+        "line": 13,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_elastic.py",
+        "line": 17,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_engine_fixes.py",
+        "line": 76,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(src[b:e], \"inlined\", \"exec\"), ns)"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_epc_client.py",
+        "line": 41,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_fast_handover.py",
+        "line": 30,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_pipelining.py",
+        "line": 257,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[fn], type_ignores=[]), \"w\", \"exec\"), ns)"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_pp_core.py",
+        "line": 326,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_reprefill.py",
+        "line": 117,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(src[b:e], \"inlined\", \"exec\"), ns)"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_reprefill.py",
+        "line": 150,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, ns)"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_rl_engines.py",
+        "line": 180,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ctl = sglang_ext.parse_control(pickle.loads(base64.b64decode("
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_stage0_inflight.py",
+        "line": 82,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=body, type_ignores=[]), \"x\", \"exec\"), ns)"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_transport.py",
+        "line": 12,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_transport.py",
+        "line": 122,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "blocker = socket.socket()"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_ucx_fixes.py",
+        "line": 29,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_ucx_fixes.py",
+        "line": 169,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[fn], type_ignores=[]), path, \"exec\"), ns)"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_ucx_fixes.py",
+        "line": 264,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(); s.bind((\"127.0.0.1\", 0)); p = s.getsockname()[1]; s.close(); return p"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_vllm_patches.py",
+        "line": 84,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(src[b:e], \"inlined\", \"exec\"), ns)"
+      },
+      {
+        "file": "connex_ai-0.1.1/tests/test_warmup_logprobs.py",
+        "line": 74,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(_block(src), \"block\", \"exec\"), ns)"
+      }
+    ]
+  },
+  {
+    "package_name": "connex-rs",
+    "checked_at": "2026-10-24T22:00:13.395553",
+    "download_url": "https://files.pythonhosted.org/packages/ba/71/43473ef7c25032576cfb847b59f69a0dbcf8c2589f90b410d9a3a1a07e04/connex_rs-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "connex_rs-0.1.1/python/churn_peer.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(args, stdout=subprocess.PIPE, text=True)"
+      },
+      {
+        "file": "connex_rs-0.1.1/python/rma_bench.py",
+        "line": 110,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)"
+      },
+      {
+        "file": "connex_rs-0.1.1/python/test_binding.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, __file__, \"client\", str(port)])"
+      }
+    ]
   }
 ]
