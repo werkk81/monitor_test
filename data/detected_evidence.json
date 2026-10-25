@@ -50402,5 +50402,139 @@
         "code_snippet": "child = subprocess.Popen([sys.executable, __file__, \"client\", str(port)])"
       }
     ]
+  },
+  {
+    "package_name": "noc-ops",
+    "checked_at": "2026-10-25T00:13:54.644207",
+    "download_url": "https://files.pythonhosted.org/packages/5f/a6/e2d51f1bc545a93bc37485f1b492d76418e13161f51c1de33ef923c993c0/noc_ops-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "noc_ops-0.1.0/src/noc_ops/agent.py",
+        "line": 168,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def ssh_exec(args: dict) -> dict:"
+      },
+      {
+        "file": "noc_ops-0.1.0/src/noc_ops/license.py",
+        "line": 194,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return serialization.load_pem_private_key(base64.b64decode(r.stdout.strip()), password=None)"
+      },
+      {
+        "file": "noc_ops-0.1.0/src/noc_ops/dashboard/server.py",
+        "line": 278,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "noc_ops-0.1.0/src/noc_ops/dashboard/server.py",
+        "line": 355,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "noc_ops-0.1.0/src/noc_ops/dashboard/server.py",
+        "line": 410,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-m\", \"noc_ops.dashboard.server\", \"_serve\", \"--port\", str(port)],"
+      }
+    ]
+  },
+  {
+    "package_name": "fmri-qctoolkit",
+    "checked_at": "2026-10-25T00:13:54.768392",
+    "download_url": "https://files.pythonhosted.org/packages/f8/59/143f36687dee1e0f9e0feae625000bf67cf41ad52442dd5aa823e81126f2/fmri_qctoolkit-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fmri_qctoolkit-1.0.0/fMRI_QCtoolkit/utils/port_utils.py",
+        "line": 14,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(family, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "fmri_qctoolkit-1.0.0/tests/test_port_utils.py",
+        "line": 24,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET6, socket.SOCK_STREAM) as sock:"
+      }
+    ]
+  },
+  {
+    "package_name": "astra-substrate",
+    "checked_at": "2026-10-25T00:13:54.981783",
+    "download_url": "https://files.pythonhosted.org/packages/bb/97/e518e99aae3f0dbdc054faf4c18f01ee55288e1ab2bce544a75c400a0e04/astra_substrate-1.0.3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "astra_substrate-1.0.3/astra/mlx/tensor.py",
+        "line": 23,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(b)"
+      },
+      {
+        "file": "astra_substrate-1.0.3/astra/mlx/tensor.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(c)"
+      },
+      {
+        "file": "astra_substrate-1.0.3/astra/mlx/tensor.py",
+        "line": 40,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(c)"
+      }
+    ]
+  },
+  {
+    "package_name": "esplink",
+    "checked_at": "2026-10-25T00:13:55.344332",
+    "download_url": "https://files.pythonhosted.org/packages/5d/90/f80d650f9db4c58cf64d678ef9066b41473555c8f87dc0e400e3a03ef929/esplink-1.0.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "esplink-1.0.2/esplink/transports/tcp.py",
+        "line": 41,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "*, connect_timeout: float = 5.0, sock: socket.socket | None = None):"
+      },
+      {
+        "file": "esplink-1.0.2/esplink/transports/tcp.py",
+        "line": 103,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "esplink-1.0.2/esplink/transports/tcp.py",
+        "line": 165,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "esplink-1.0.2/examples/system/multi_client.py",
+        "line": 39,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "esplink-1.0.2/examples/system/multi_client.py",
+        "line": 61,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "owner = subprocess.Popen("
+      },
+      {
+        "file": "esplink-1.0.2/tests/test_wifi_link.py",
+        "line": 21,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _pump(fw: FakeFirmware, conn: socket.socket) -> None:"
+      },
+      {
+        "file": "esplink-1.0.2/tests/test_wifi_link.py",
+        "line": 42,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sock = socket.socket()"
+      }
+    ]
   }
 ]
