@@ -50536,5 +50536,213 @@
         "code_snippet": "self.sock = socket.socket()"
       }
     ]
+  },
+  {
+    "package_name": "ichnois",
+    "checked_at": "2026-10-25T20:01:16.941113",
+    "download_url": "https://files.pythonhosted.org/packages/c2/63/04a2a89279e479924459b3c37704b7c6f56bab7e29b468b26824b61d1bda/ichnois-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/socket.py",
+        "line": 53,
+        "keyword_detected": "socket.socket",
+        "code_snippet": ") -> \"socket.socket\":"
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/stdlib.py",
+        "line": 523,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "old_popen_init = subprocess.Popen.__init__"
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/stdlib.py",
+        "line": 527,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self: \"subprocess.Popen[Any]\", *a: \"Any\", **kw: \"Any\""
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/stdlib.py",
+        "line": 606,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen.__init__ = sentry_patched_popen_init  # type: ignore"
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/stdlib.py",
+        "line": 608,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "old_popen_wait = subprocess.Popen.wait"
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/stdlib.py",
+        "line": 612,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self: \"subprocess.Popen[Any]\", *a: \"Any\", **kw: \"Any\""
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/stdlib.py",
+        "line": 635,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen.wait = sentry_patched_popen_wait  # type: ignore"
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/stdlib.py",
+        "line": 637,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "old_popen_communicate = subprocess.Popen.communicate"
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/stdlib.py",
+        "line": 641,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self: \"subprocess.Popen[Any]\", *a: \"Any\", **kw: \"Any\""
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/integrations/stdlib.py",
+        "line": 664,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen.communicate = sentry_patched_popen_communicate  # type: ignore"
+      },
+      {
+        "file": "ichnois-1.0.0/sentry_sdk/utils.py",
+        "line": 138,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "ichnois-1.0.0/tests/conftest.py",
+        "line": 1705,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_INET, type=socket.SOCK_STREAM)"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/aws_lambda/test_aws_lambda.py",
+        "line": 49,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/socket/test_socket.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "assert dns_span[\"attributes\"][\"sentry.origin\"] == \"auto.socket.socket\""
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/socket/test_socket.py",
+        "line": 134,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "assert connect_span[\"attributes\"][\"sentry.origin\"] == \"auto.socket.socket\""
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/socket/test_socket.py",
+        "line": 137,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "assert dns_span[\"attributes\"][\"sentry.origin\"] == \"auto.socket.socket\""
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/socket/test_socket.py",
+        "line": 149,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "assert event[\"spans\"][0][\"origin\"] == \"auto.socket.socket\""
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/socket/test_socket.py",
+        "line": 152,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "assert event[\"spans\"][1][\"origin\"] == \"auto.socket.socket\""
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/starlette/test_starlette.py",
+        "line": 200,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(credentials).decode(\"ascii\")"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_httplib.py",
+        "line": 411,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_sock, client_sock = socket.socketpair()"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_httplib.py",
+        "line": 524,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_sock, client_sock = socket.socketpair()"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_httplib.py",
+        "line": 622,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_sock, client_sock = socket.socketpair()"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_httplib.py",
+        "line": 754,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "server_sock, client_sock = socket.socketpair()"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_subprocess.py",
+        "line": 104,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen(*a)"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_subprocess.py",
+        "line": 115,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen(**kw)"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_subprocess.py",
+        "line": 207,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen(*a)"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_subprocess.py",
+        "line": 218,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen(**kw)"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_subprocess.py",
+        "line": 334,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(1)"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_subprocess.py",
+        "line": 363,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen(**kw)"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/integrations/stdlib/test_subprocess.py",
+        "line": 400,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = subprocess.Popen(**kw)"
+      },
+      {
+        "file": "ichnois-1.0.0/tests/utils/test_general.py",
+        "line": 62,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, {})"
+      }
+    ]
+  },
+  {
+    "package_name": "calisero",
+    "checked_at": "2026-10-25T20:01:17.504652",
+    "download_url": "https://files.pythonhosted.org/packages/14/44/ebb11cd8cff2b808c6b3c4a240c6ac283464882f97222f5ca5c700088ef7/calisero-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "calisero-1.0.1/tests/support/local_server.py",
+        "line": 210,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
+      }
+    ]
   }
 ]
