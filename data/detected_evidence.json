@@ -50744,5 +50744,181 @@
         "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:"
       }
     ]
+  },
+  {
+    "package_name": "chameleon-zunclient",
+    "checked_at": "2026-10-25T22:27:35.743724",
+    "download_url": "https://files.pythonhosted.org/packages/19/66/a4e41434464fe2109ccbcd0193f6839b05e88cc7fcefb95eb3e5a35a622a/chameleon_zunclient-2025.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "chameleon_zunclient-2025.1.1/zunclient/common/utils.py",
+        "line": 401,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data)"
+      },
+      {
+        "file": "chameleon_zunclient-2025.1.1/zunclient/common/websocketclient/websocketclient.py",
+        "line": 398,
+        "keyword_detected": "exec(",
+        "code_snippet": "def do_exec(zunclient, url, container_id, exec_id, escape, close_wait):"
+      },
+      {
+        "file": "chameleon_zunclient-2025.1.1/zunclient/osc/v1/containers.py",
+        "line": 633,
+        "keyword_detected": "exec(",
+        "code_snippet": "websocketclient.do_exec(client, url, container, exec_id, \"~\", 0.5)"
+      },
+      {
+        "file": "chameleon_zunclient-2025.1.1/zunclient/v1/containers_shell.py",
+        "line": 540,
+        "keyword_detected": "exec(",
+        "code_snippet": "def do_exec(cs, args):"
+      },
+      {
+        "file": "chameleon_zunclient-2025.1.1/zunclient/v1/containers_shell.py",
+        "line": 551,
+        "keyword_detected": "exec(",
+        "code_snippet": "websocketclient.do_exec(cs, url, args.container, exec_id, \"~\", 0.5)"
+      }
+    ]
+  },
+  {
+    "package_name": "fingerprintchecker",
+    "checked_at": "2026-10-25T22:27:35.872864",
+    "download_url": "https://files.pythonhosted.org/packages/40/0e/55877378ba92c8742061f90852d5294bbec5ea4e9380f7a486af72a30270/fingerprintchecker-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fingerprintchecker-0.1.0/src/fpchecker/sealed.py",
+        "line": 25,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(value, validate=True)"
+      },
+      {
+        "file": "fingerprintchecker-0.1.0/tests/test_sealed.py",
+        "line": 64,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(VECTORS[\"keys\"][\"b\"]) not in str(ei.value).encode()"
+      },
+      {
+        "file": "fingerprintchecker-0.1.0/tests/test_sealed.py",
+        "line": 73,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(key_b64)"
+      }
+    ]
+  },
+  {
+    "package_name": "invariant-workspace",
+    "checked_at": "2026-10-25T22:27:36.033598",
+    "download_url": "https://files.pythonhosted.org/packages/07/6c/d7c7e37195d0cd837ffffb01f7dae2a7de5f6cc18abe2a24694322145b9d/invariant_workspace-0.3.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "invariant_workspace-0.3.1/docker/bootstrap.py",
+        "line": 16,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(domain, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/docker/bootstrap.py",
+        "line": 37,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX)"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/assets/experiment-check.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(['/bin/sh','-c',command], cwd=cwd, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/codex_rpc.py",
+        "line": 42,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen(command, stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/experiments/cli.py",
+        "line": 222,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "print(inert(base64.b64decode(frame['data']['data_base64']).decode('utf-8', errors='replace')), end='', flush=True)"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/experiments/lifecycle.py",
+        "line": 74,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, '-I', '-c', bootstrap, package,"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/experiments/logs.py",
+        "line": 22,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "parsed = json.loads(base64.b64decode(value + '=' * (-len(value) % 4), altchars=b'-_', validate=True))"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/experiments/runners.py",
+        "line": 184,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([executable, 'start', '--attach', context.owner_token],"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/guardrails.py",
+        "line": 29,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "try: s=socket.socket(family,socket.SOCK_STREAM)"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/rpc_host.py",
+        "line": 18,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(sys.argv[2:], stdin=sys.stdin.buffer, stdout=sys.stdout.buffer,"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/workspace.py",
+        "line": 414,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/invariant/workspace.py",
+        "line": 464,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as connection:"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/scripts/guided_demo.py",
+        "line": 229,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.child = subprocess.Popen(self.run_command[\"command\"], stdout=self.run_stream,"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/sdk/python/invariant_client.py",
+        "line": 105,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "body = base64.b64decode(reply[\"body_base64\"], validate=True)"
+      },
+      {
+        "file": "invariant_workspace-0.3.1/sdk/python/invariant_client.py",
+        "line": 197,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as connection:"
+      }
+    ]
+  },
+  {
+    "package_name": "scrollgauge",
+    "checked_at": "2026-10-25T22:27:36.638830",
+    "download_url": "https://files.pythonhosted.org/packages/da/54/4f3cab8588cd61e60d218d72b7e5ea8822ca03334951557b35474f7cf14c/scrollgauge-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "scrollgauge-0.1.1/scrollgauge/extension.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(text.removeprefix(\"@a{sd} \"))"
+      }
+    ]
   }
 ]
