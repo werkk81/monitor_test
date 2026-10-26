@@ -50920,5 +50920,45 @@
         "code_snippet": "return ast.literal_eval(text.removeprefix(\"@a{sd} \"))"
       }
     ]
+  },
+  {
+    "package_name": "agentmemdb",
+    "checked_at": "2026-10-26T00:30:44.162939",
+    "download_url": "https://files.pythonhosted.org/packages/77/8d/0044dd170edb28cc22e7e8a42685a753c8cb03040a8349a1021725af3caa/agentmemdb-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "agentmemdb-0.1.0/tests/test_e2e.py",
+        "line": 82,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "agentmemdb-0.1.0/tests/test_e2e.py",
+        "line": 85,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "neonbox-runtime",
+    "checked_at": "2026-10-26T00:30:44.590412",
+    "download_url": "https://files.pythonhosted.org/packages/39/93/5f1f0cf5fe11b8a9f4f40d2be0704ba12cca5b27e8fdcc702e4ff207c631/neonbox_runtime-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "neonbox_runtime-1.0.0/neonbox/memory_watchdog.py",
+        "line": 14,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen,"
+      },
+      {
+        "file": "neonbox_runtime-1.0.0/neonbox/runtime.py",
+        "line": 84,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
   }
 ]
