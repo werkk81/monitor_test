@@ -51374,5 +51374,117 @@
         "code_snippet": "mx.eval(prediction)"
       }
     ]
+  },
+  {
+    "package_name": "quantbom",
+    "checked_at": "2026-10-27T21:29:52.151953",
+    "download_url": "https://files.pythonhosted.org/packages/13/b3/513dddc1a14f3a37104ca36a38554cc87edf9280b38da4336eaaeec15347/quantbom-0.6.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "quantbom-0.6.0/quantbom/_verify.py",
+        "line": 221,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "payload = base64.b64decode(envelope[\"payload\"])"
+      },
+      {
+        "file": "quantbom-0.6.0/quantbom/_verify.py",
+        "line": 223,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "public_key.verify(base64.b64decode(envelope[\"signatures\"][0][\"sig\"]), _pae(payload))"
+      },
+      {
+        "file": "quantbom-0.6.0/quantbom/_verify.py",
+        "line": 388,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "payload = base64.b64decode(envelope[\"payload\"])"
+      },
+      {
+        "file": "quantbom-0.6.0/quantbom/_verify.py",
+        "line": 389,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "sig = base64.b64decode(envelope[\"signatures\"][0][\"sig\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "codetrail-cli",
+    "checked_at": "2026-10-27T21:29:53.365017",
+    "download_url": "https://files.pythonhosted.org/packages/2d/51/2b6ae5f050cdc2f75ef7629944f3bc78963e418347c27404e930c215ed3f/codetrail_cli-1.4.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "codetrail_cli-1.4.1/src/codetrail/assistant/runner.py",
+        "line": 79,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(  # noqa: S603  # the command is a resolved provider program and fixed arguments"
+      },
+      {
+        "file": "codetrail_cli-1.4.1/src/codetrail/repo/git.py",
+        "line": 37,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(  # noqa: S603"
+      },
+      {
+        "file": "codetrail_cli-1.4.1/src/codetrail/repo/secrets.py",
+        "line": 103,
+        "keyword_detected": "exec(",
+        "code_snippet": "# it): a template's exec() can start commands that outlive mise."
+      },
+      {
+        "file": "codetrail_cli-1.4.1/src/codetrail/repo/secrets.py",
+        "line": 104,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(  # noqa: S603"
+      }
+    ]
+  },
+  {
+    "package_name": "run-harness",
+    "checked_at": "2026-10-27T21:29:53.541392",
+    "download_url": "https://files.pythonhosted.org/packages/2d/cd/8ee1180dc4c08825232e42b531d6218348ccb16bef1092d637909fd32838/run_harness-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "run_harness-0.1.0/src/run_harness/runner.py",
+        "line": 63,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "soma-shades",
+    "checked_at": "2026-10-27T21:29:53.790056",
+    "download_url": "https://files.pythonhosted.org/packages/c6/3d/2d081f25b154174e103c19d37681112a2d3e74ab696488e4a6da9d925a63/soma_shades-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "soma_shades-1.0.0/tests/test_mosquitto.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "soma_shades-1.0.0/tests/test_mosquitto.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([MOSQUITTO, \"-p\", str(port)], stderr=subprocess.DEVNULL)"
+      }
+    ]
+  },
+  {
+    "package_name": "redblack-python-sdk",
+    "checked_at": "2026-10-27T21:29:54.129570",
+    "download_url": "https://files.pythonhosted.org/packages/3f/1e/e13c4ade2a2b970e7603d71dfde19b8a486789b82c0594f63e76096e2216/redblack_python_sdk-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "redblack_python_sdk-0.2.0/tests/conftest.py",
+        "line": 23,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", blocked_connect)"
+      }
+    ]
   }
 ]
