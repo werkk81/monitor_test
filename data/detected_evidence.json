@@ -51160,5 +51160,219 @@
         "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:"
       }
     ]
+  },
+  {
+    "package_name": "unfold-map",
+    "checked_at": "2026-10-27T00:58:57.367450",
+    "download_url": "https://files.pythonhosted.org/packages/b3/a8/8cdb38afb986ab41a068038e1f326a9b3af24b016c1b240036d31c2f7371/unfold_map-0.4.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "unfold_map-0.4.1/tests/test_e2e_canvas.py",
+        "line": 17,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "PNG = base64.b64decode(\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==\")"
+      },
+      {
+        "file": "unfold_map-0.4.1/tests/test_e2e_page.py",
+        "line": 367,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "png.write_bytes(base64.b64decode(\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==\"))"
+      }
+    ]
+  },
+  {
+    "package_name": "mlxradiomics",
+    "checked_at": "2026-10-27T00:58:57.706962",
+    "download_url": "https://files.pythonhosted.org/packages/9d/57/09c6bd2d095af9e58801c00a9602da8a2a3272ef1d875aec23ee5b09ac86/mlxradiomics-0.1.0.dev3.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mlxradiomics-0.1.0.dev3/src/mlxradiomics/_typing.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self) -> Evaluate: ..."
+      }
+    ]
+  },
+  {
+    "package_name": "lung-nodule-mlx",
+    "checked_at": "2026-10-27T00:58:58.070040",
+    "download_url": "https://files.pythonhosted.org/packages/a8/86/dbb6430c26e7c96804a27945f8e85c3f782a609d8e1f844be8c2f1bbf757/lung_nodule_mlx-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "lung_nodule_mlx-0.2.1/src/lung_nodule_mlx/_typing.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, *args: array | Mapping[str, array] | Sequence[array]) -> None: ..."
+      },
+      {
+        "file": "lung_nodule_mlx-0.2.1/src/lung_nodule_mlx/medmlx.py",
+        "line": 347,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(weights)"
+      },
+      {
+        "file": "lung_nodule_mlx-0.2.1/src/lung_nodule_mlx/mlx_model.py",
+        "line": 109,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(y)"
+      },
+      {
+        "file": "lung_nodule_mlx-0.2.1/src/lung_nodule_mlx/mlx_model.py",
+        "line": 112,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(out)"
+      },
+      {
+        "file": "lung_nodule_mlx-0.2.1/src/lung_nodule_mlx/mlx_model.py",
+        "line": 141,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(x)"
+      },
+      {
+        "file": "lung_nodule_mlx-0.2.1/src/lung_nodule_mlx/mlx_model.py",
+        "line": 157,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(x)"
+      },
+      {
+        "file": "lung_nodule_mlx-0.2.1/src/lung_nodule_mlx/mlx_model.py",
+        "line": 212,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(x)"
+      },
+      {
+        "file": "lung_nodule_mlx-0.2.1/src/lung_nodule_mlx/mlx_model.py",
+        "line": 239,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(out)"
+      }
+    ]
+  },
+  {
+    "package_name": "swin-unetr-mlx",
+    "checked_at": "2026-10-27T00:58:58.163369",
+    "download_url": "https://files.pythonhosted.org/packages/b9/7f/95ff8f9b68112a427a6a1d1309aa48d93920c858c0fb1f25942a1b60b848/swin_unetr_mlx-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "swin_unetr_mlx-0.2.1/src/swin_unetr_mlx/_types.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, *args: Array | Mapping[str, Array] | Sequence[Array]) -> None: ..."
+      },
+      {
+        "file": "swin_unetr_mlx-0.2.1/src/swin_unetr_mlx/inference.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(result)"
+      },
+      {
+        "file": "swin_unetr_mlx-0.2.1/src/swin_unetr_mlx/weights.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(weights)"
+      }
+    ]
+  },
+  {
+    "package_name": "mlx-segment-ct",
+    "checked_at": "2026-10-27T00:58:58.537294",
+    "download_url": "https://files.pythonhosted.org/packages/25/fd/584022d6ba3b5ab18f8ded3e99f2ba62c0ec8c0cdf948fe7a10c31e96cc5/mlx_segment_ct-0.2.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/_types.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, *args: ArrayT | Sequence[ArrayT] | Mapping[str, ArrayT]) -> None: ..."
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/_types.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, *args: array | Mapping[str, array] | Sequence[array]) -> None: ..."
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/_types.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "def async_eval(self, *args: ArrayTree) -> None: ..."
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/medmlx.py",
+        "line": 457,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(logits)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/medmlx.py",
+        "line": 731,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(weights)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/medmlx.py",
+        "line": 756,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(weights)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/mlx_network.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.mx.async_eval(x)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/mlx_network.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.mx.async_eval(x)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/mlx_network.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(self.embedding)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/mlx_network.py",
+        "line": 163,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.mx.async_eval(features)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/mlx_point.py",
+        "line": 136,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.mx.async_eval(queries, keys)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/mlx_point_window.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.mx.eval(automatic)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/mlx_point_window.py",
+        "line": 248,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(logits)"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/mlx_upsample.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval([packed for phase in self.weights for _, packed in phase])"
+      },
+      {
+        "file": "mlx_segment_ct-0.2.1/src/mlx_segment_ct/streaming.py",
+        "line": 302,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(prediction)"
+      }
+    ]
   }
 ]
