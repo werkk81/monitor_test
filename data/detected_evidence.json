@@ -51486,5 +51486,65 @@
         "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", blocked_connect)"
       }
     ]
+  },
+  {
+    "package_name": "bulk-bg-remove",
+    "checked_at": "2026-10-28T00:39:00.689838",
+    "download_url": "https://files.pythonhosted.org/packages/29/81/aae3443188f25b8d357368c53a1f1d2ddcf4172ae5cb8b2c02f2b47f975b/bulk_bg_remove-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "bulk_bg_remove-0.1.0/scripts/bench.py",
+        "line": 56,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)"
+      },
+      {
+        "file": "bulk_bg_remove-0.1.0/src/bulk_bg_remove/ui/launch.py",
+        "line": 19,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "bulk_bg_remove-0.1.0/src/bulk_bg_remove/ui/server.py",
+        "line": 85,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)"
+      },
+      {
+        "file": "bulk_bg_remove-0.1.0/tests/test_session_and_cli.py",
+        "line": 206,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "veilleur-discord-mcp",
+    "checked_at": "2026-10-28T00:39:01.015782",
+    "download_url": "https://files.pythonhosted.org/packages/d9/ce/f238b0753f2f2fc462362e6149b13d05b8900978a7aa82fbf199b16d8c8b/veilleur_discord_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "veilleur_discord_mcp-0.1.0/veilleur/server.py",
+        "line": 77,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([str(python), \"-m\", \"veilleur.approve\", plan_id], cwd=ROOT,"
+      }
+    ]
+  },
+  {
+    "package_name": "oblitus",
+    "checked_at": "2026-10-28T00:39:01.174718",
+    "download_url": "https://files.pythonhosted.org/packages/81/d4/764d0c02cd55c5fa192660a33cf61e62b6dd850d54732df3b2faaed1edcd/oblitus-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "oblitus-0.4.0/tests/test_key_generation.py",
+        "line": 147,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert len(base64.b64decode(capsys.readouterr().out.strip())) == 32"
+      }
+    ]
   }
 ]
