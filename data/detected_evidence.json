@@ -51546,5 +51546,173 @@
         "code_snippet": "assert len(base64.b64decode(capsys.readouterr().out.strip())) == 32"
       }
     ]
+  },
+  {
+    "package_name": "kifone",
+    "checked_at": "2026-10-28T21:55:08.957051",
+    "download_url": "https://files.pythonhosted.org/packages/ff/aa/635e1b7e3348583121c3694741cb9c3df94c35f57e6345829e22037e6520/kifone-3.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kifone-3.0.0/kifone/common/process.py",
+        "line": 100,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.subprocess.create_subprocess_exec("
+      },
+      {
+        "file": "kifone-3.0.0/kifone/routes/subsonic.py",
+        "line": 204,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data_dict = json.loads(base64.b64decode(b64.encode().translate(URLSAFE_DECODE)).decode())"
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/auth.py",
+        "line": 69,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "salt=base64.b64decode(hash_dict[\"salt\"]),"
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/auth.py",
+        "line": 74,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return hmac.compare_digest(hash_bytes, base64.b64decode(hash_dict[\"hash\"]))"
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/auth.py",
+        "line": 463,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "credentials = base64.b64decode(credentials).decode()"
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/downloader.py",
+        "line": 57,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.subprocess.create_subprocess_exec("
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/webauthn.py",
+        "line": 30,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "client_data = json.loads(base64.b64decode(client_data_str))"
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/webauthn.py",
+        "line": 46,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "public_key = base64.b64decode(public_key_str)"
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/webauthn.py",
+        "line": 54,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "authenticator_data = base64.b64decode(data[\"authenticator_data\"])"
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/webauthn.py",
+        "line": 55,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "client_data_bytes = base64.b64decode(data[\"client_data\"])"
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/webauthn.py",
+        "line": 57,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "signature = base64.b64decode(data[\"signature\"])"
+      },
+      {
+        "file": "kifone-3.0.0/kifone/server/webauthn.py",
+        "line": 58,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "user_id = int(base64.b64decode(data[\"user_handle\"]).decode())"
+      }
+    ]
+  },
+  {
+    "package_name": "xtr-workflow",
+    "checked_at": "2026-10-28T21:55:09.284456",
+    "download_url": "https://files.pythonhosted.org/packages/2c/f8/7dbbc7448585ff1228cb7b11e26a70109e9d9ccc43ca750ae0ba72fe13aa/xtr_workflow-5.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "xtr_workflow-5.1.0/src/xtr_workflow/bundle/_marked_constants.py",
+        "line": 139,
+        "keyword_detected": "eval(",
+        "code_snippet": "return cast(\"object\", eval(source, dict(vars(owner)), module))  # noqa: S307 — the class's own annotation, read as typing.get_type_hints reads one"
+      },
+      {
+        "file": "xtr_workflow-5.1.0/src/xtr_workflow/marking_store/method_marking_store.py",
+        "line": 275,
+        "keyword_detected": "eval(",
+        "code_snippet": "return cast(\"object\", eval(annotation, namespace))  # noqa: S307 — the subject's own annotation, read as typing.get_type_hints reads one"
+      }
+    ]
+  },
+  {
+    "package_name": "sandloom",
+    "checked_at": "2026-10-28T21:55:09.859957",
+    "download_url": "https://files.pythonhosted.org/packages/09/50/b1e0578e9b7a93919b79ca56452903faf6bb58736de0609814f797327691/sandloom-0.7.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/eventing/streams_consume.py",
+        "line": 573,
+        "keyword_detected": "eval(",
+        "code_snippet": "lost = await client.eval("
+      },
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/eventing/streams_groups.py",
+        "line": 359,
+        "keyword_detected": "eval(",
+        "code_snippet": "return bool(await client.eval(script, 1, key, old, new))"
+      },
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/idempotency/replay.py",
+        "line": 50,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(stored.get(\"body\", \"\") or \"\")"
+      },
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/testing/resources.py",
+        "line": 291,
+        "keyword_detected": "eval(",
+        "code_snippet": "flushed = client.eval("
+      },
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/testing/resources.py",
+        "line": 341,
+        "keyword_detected": "eval(",
+        "code_snippet": "if client.eval("
+      },
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/testing/served.py",
+        "line": 85,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._sock: socket.socket | None = None"
+      },
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/testing/served.py",
+        "line": 89,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/testing/served.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: subprocess.Popen[bytes]"
+      },
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/testing/served.py",
+        "line": 164,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(  # noqa: S603 - fixed argv, test harness"
+      },
+      {
+        "file": "sandloom-0.7.0a1/sandloom/core/testing/served.py",
+        "line": 254,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(fileno=args.fd)"
+      }
+    ]
   }
 ]
