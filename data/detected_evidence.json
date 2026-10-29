@@ -51800,5 +51800,405 @@
         "code_snippet": "def test_no_eval_exec():"
       }
     ]
+  },
+  {
+    "package_name": "chelamux",
+    "checked_at": "2026-10-29T22:03:13.157221",
+    "download_url": "https://files.pythonhosted.org/packages/bd/3a/0bf40a350a39da64a3fe1a21843452b41679d3b42c81411f6865b3224f92/chelamux-0.19.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "chelamux-0.19.0/chela/collab_host.py",
+        "line": 135,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _peer_uid(conn: socket.socket) -> int | None:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/collab_host.py",
+        "line": 173,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _serve_conn(conn: socket.socket) -> None:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/collab_host.py",
+        "line": 193,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def serve(stop: threading.Event) -> socket.socket:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/collab_host.py",
+        "line": 201,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "srv = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/collab_host.py",
+        "line": 231,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/dispatcher.py",
+        "line": 3101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "chelamux-0.19.0/chela/judge.py",
+        "line": 3886,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "chelamux-0.19.0/chela/keeper_schedule.py",
+        "line": 76,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def spawn(wf_path: Path) -> subprocess.Popen:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/keeper_schedule.py",
+        "line": 80,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(spawn_argv(wf_path), stdin=subprocess.DEVNULL, stdout=fh,"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/keeper_schedule.py",
+        "line": 93,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.children: dict[str, subprocess.Popen] = {}"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/messenger.py",
+        "line": 705,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/messenger.py",
+        "line": 731,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _await_receipt(server: socket.socket, msg_id: str) -> str:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/messenger.py",
+        "line": 875,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "reply_server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/messenger.py",
+        "line": 887,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/ops.py",
+        "line": 780,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def spawn(prev: subprocess.Popen | None = None) -> subprocess.Popen:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/ops.py",
+        "line": 788,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(spawn_argv(), stdin=subprocess.DEVNULL, stdout=log,"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/procguard.py",
+        "line": 63,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "chelamux-0.19.0/chela/procguard.py",
+        "line": 100,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _drain(proc: subprocess.Popen, grace: float) -> tuple[str, str]:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/procguard.py",
+        "line": 160,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, shell=True, cwd=cwd, env=env, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/procguard.py",
+        "line": 238,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(argv, preexec_fn=lambda: _set_pdeathsig(signal.SIGKILL, me))"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/share_web_proxy.py",
+        "line": 203,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def connect_pinned(addrs: list[str], port: int, timeout: float = CONNECT_TIMEOUT_S) -> socket.socket:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/share_web_proxy.py",
+        "line": 363,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _relay(client: socket.socket, upstream: socket.socket) -> tuple[int, int]:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/sweep.py",
+        "line": 902,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _start_guardian(worktree: Path) -> subprocess.Popen | None:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/sweep.py",
+        "line": 907,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(_guardian_argv(worktree), stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/sweep.py",
+        "line": 914,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _stop_guardian(proc: subprocess.Popen | None) -> None:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/sweep_nightly.py",
+        "line": 240,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def spawn(wf_path: Path, chela_dir: Path | None = None) -> subprocess.Popen:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/sweep_nightly.py",
+        "line": 248,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([\"sh\", \"-c\", cmd], stdin=subprocess.DEVNULL, stdout=fh,"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/sweep_nightly.py",
+        "line": 253,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def daemon_tick(workflows, prev: subprocess.Popen | None, now: datetime | None = None,"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/sweep_nightly.py",
+        "line": 254,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "chela_dir: Path | None = None) -> subprocess.Popen | None:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/worktree_gc.py",
+        "line": 348,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def spawn(prev: subprocess.Popen | None = None) -> subprocess.Popen:"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/worktree_gc.py",
+        "line": 355,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(spawn_argv(), stdin=subprocess.DEVNULL, stdout=fh,"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/judge_eval/cli.py",
+        "line": 153,
+        "keyword_detected": "eval(",
+        "code_snippet": "payload = evaluate.run_eval("
+      },
+      {
+        "file": "chelamux-0.19.0/chela/judge_eval/evaluate.py",
+        "line": 142,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_eval(repo: Path, cases: list[ds.Case], *, split: str, risks: tuple[str, ...],"
+      },
+      {
+        "file": "chelamux-0.19.0/chela/telegram/parser.py",
+        "line": 204,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(data)"
+      }
+    ]
+  },
+  {
+    "package_name": "vimniscient",
+    "checked_at": "2026-10-29T22:03:13.332133",
+    "download_url": "https://files.pythonhosted.org/packages/4f/67/8cd619b6509426cc9fbb3557d8bb025ad6c1edef5ba0388843dad2aab8f7/vimniscient-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "vimniscient-0.2.0/src/vimniscient/drills.py",
+        "line": 139,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.drill_window: subprocess.Popen | None = None"
+      },
+      {
+        "file": "vimniscient-0.2.0/src/vimniscient/drills.py",
+        "line": 164,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.drill_window = subprocess.Popen("
+      },
+      {
+        "file": "vimniscient-0.2.0/tests/live_drills.py",
+        "line": 21,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "terminal: list[subprocess.Popen] = []"
+      },
+      {
+        "file": "vimniscient-0.2.0/tests/live_drills.py",
+        "line": 24,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "terminal.append(subprocess.Popen([\"foot\", \"--app-id\", \"vimniscient-test\", \"sh\", \"-c\", \"sleep 30\"]))"
+      }
+    ]
+  },
+  {
+    "package_name": "qal-scribe",
+    "checked_at": "2026-10-29T22:03:13.527074",
+    "download_url": "https://files.pythonhosted.org/packages/4a/7b/934db11ef6864ecc9ea52cfc1774b13e3dfbaa977a2ba123aa16aacdcb80/qal_scribe-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qal_scribe-1.0.0/src/qal_scribe/engine.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model = model.eval().to(self.device)"
+      },
+      {
+        "file": "qal_scribe-1.0.0/src/qal_scribe/ipc.py",
+        "line": 43,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as probe:"
+      },
+      {
+        "file": "qal_scribe-1.0.0/src/qal_scribe/ipc.py",
+        "line": 52,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _bind(path: Path) -> socket.socket:"
+      },
+      {
+        "file": "qal_scribe-1.0.0/src/qal_scribe/ipc.py",
+        "line": 53,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "srv = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "qal_scribe-1.0.0/src/qal_scribe/ipc.py",
+        "line": 72,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _handle(conn: socket.socket, on_toggle: Callable[[Mode], None]) -> None:"
+      },
+      {
+        "file": "qal_scribe-1.0.0/src/qal_scribe/ipc.py",
+        "line": 87,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _accept_loop(srv: socket.socket, on_toggle: Callable[[Mode], None]) -> None:"
+      },
+      {
+        "file": "qal_scribe-1.0.0/src/qal_scribe/ipc.py",
+        "line": 97,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "_servers: list[tuple[socket.socket, Path]] = []  # what serve() opened, for stop()"
+      },
+      {
+        "file": "qal_scribe-1.0.0/src/qal_scribe/ipc.py",
+        "line": 120,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "qal_scribe-1.0.0/src/qal_scribe/translate.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AutoModelForSeq2SeqLM.from_pretrained(path, dtype=dtype).eval()"
+      },
+      {
+        "file": "qal_scribe-1.0.0/tests/test_engine_cache.py",
+        "line": 100,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      },
+      {
+        "file": "qal_scribe-1.0.0/tests/test_ipc.py",
+        "line": 49,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "stale = socket.socket(socket.AF_UNIX)"
+      },
+      {
+        "file": "qal_scribe-1.0.0/tests/test_ipc.py",
+        "line": 81,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX) as c:"
+      },
+      {
+        "file": "qal_scribe-1.0.0/tests/test_translate.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self):"
+      }
+    ]
+  },
+  {
+    "package_name": "train-commute-companion",
+    "checked_at": "2026-10-29T22:03:13.713896",
+    "download_url": "https://files.pythonhosted.org/packages/e7/6c/390a1ca1db4d3016e07750930d171b8860598caedd0cfd23455c7f43b25a/train_commute_companion-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "train_commute_companion-0.1.0/app/tcc_app/web.py",
+        "line": 119,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded = base64.b64decode(token.strip(), validate=True)"
+      },
+      {
+        "file": "train_commute_companion-0.1.0/src/train_commute_companion/webhook.py",
+        "line": 91,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(secret[6:], validate=True)"
+      },
+      {
+        "file": "train_commute_companion-0.1.0/tests/webhook_receiver.py",
+        "line": 24,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(match.group(1), scope)  # noqa: S102 (our own docs, so receivers copy tested code)"
+      },
+      {
+        "file": "train_commute_companion-0.1.0/tests_app/test_main.py",
+        "line": 36,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "train_commute_companion-0.1.0/tests_app/test_web.py",
+        "line": 240,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "raw = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "train_commute_companion-0.1.0/tests_app/test_web.py",
+        "line": 263,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "dead = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "isotile",
+    "checked_at": "2026-10-29T22:03:14.129698",
+    "download_url": "https://files.pythonhosted.org/packages/40/70/234bf61dcfa6e4a46a64ed10cf5c044788742d91566fb881202109c25763/isotile-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "isotile-0.1.0/tests/test_docs_examples.py",
+        "line": 30,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(block, f\"{page}, block {number}\", \"exec\"), namespace)  # noqa: S102"
+      },
+      {
+        "file": "isotile-0.1.0/tests/test_editor_api.py",
+        "line": 167,
+        "keyword_detected": "eval(",
+        "code_snippet": "same_state(eval(text, {\"IsohedralTiling\": IsohedralTiling}), t)  # noqa: S307"
+      },
+      {
+        "file": "isotile-0.1.0/tests/test_readme.py",
+        "line": 16,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code.group(1), \"README.md\", \"exec\"), {})  # noqa: S102"
+      }
+    ]
   }
 ]
