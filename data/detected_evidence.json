@@ -51714,5 +51714,91 @@
         "code_snippet": "sock = socket.socket(fileno=args.fd)"
       }
     ]
+  },
+  {
+    "package_name": "qso-graph-sim",
+    "checked_at": "2026-10-29T01:18:52.236591",
+    "download_url": "https://files.pythonhosted.org/packages/d9/fb/20cf56fdba81aea8f811300880b828c1bc68f54b0484debe42b6d5d78b72/qso_graph_sim-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qso_graph_sim-0.1.0/src/qso_graph_sim/cli.py",
+        "line": 118,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(family, socket.SOCK_DGRAM) as sock:"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/src/qso_graph_sim/player.py",
+        "line": 42,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock: socket.socket"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 19,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def receiver() -> Iterator[socket.socket]:"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 20,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 28,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "receiver: socket.socket, log: alltxt.Log, speed: float"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 29,
+        "keyword_detected": "socket.socket",
+        "code_snippet": ") -> tuple[Player, socket.socket]:"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 30,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sender = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 40,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _until_close(receiver: socket.socket) -> list[wsjtx.Message]:"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 50,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_the_sample_plays_as_wsjtx_would_send_it(receiver: socket.socket) -> None:"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 78,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_replay_resends_the_window_as_not_new(receiver: socket.socket) -> None:"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 100,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_only_the_receiver_it_was_pointed_at_is_heard(receiver: socket.socket) -> None:"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_player.py",
+        "line": 108,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def test_a_replay_for_another_instance_is_ignored(receiver: socket.socket) -> None:"
+      },
+      {
+        "file": "qso_graph_sim-0.1.0/tests/test_security.py",
+        "line": 78,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_no_eval_exec():"
+      }
+    ]
   }
 ]
