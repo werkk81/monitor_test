@@ -52326,5 +52326,165 @@
         "code_snippet": "exec(compile(ast.Module(body=[helper], type_ignores=[]), str(source), \"exec\"), namespace)"
       }
     ]
+  },
+  {
+    "package_name": "docassemble-simulator",
+    "checked_at": "2026-10-30T21:42:16.480521",
+    "download_url": "https://files.pythonhosted.org/packages/06/d5/8e70b391a49c1f8acb45b5f10f08a50cf9292da7ce2a6cef9de9656c31bf/docassemble_simulator-26.10.9.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/_runtime.py",
+        "line": 1331,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(name, current)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/_screen_actions.py",
+        "line": 52,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(encoded + \"=\" * (-len(encoded) % 4), validate=True)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/_submission.py",
+        "line": 395,
+        "keyword_detected": "eval(",
+        "code_snippet": "return True, eval(candidate, namespace)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/_submission.py",
+        "line": 1046,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(variable, namespace)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/_submission.py",
+        "line": 1163,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(raw)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/catalog.py",
+        "line": 995,
+        "keyword_detected": "eval(",
+        "code_snippet": "live = all(bool(eval(guard, namespace)) for guard in guards)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/demo_corpus.py",
+        "line": 732,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_process(process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/demo_corpus.py",
+        "line": 760,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/demo_corpus.py",
+        "line": 850,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"import socket; s=socket.socket(); s.connect(('127.0.0.1', 1))\","
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/describe.py",
+        "line": 31,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(padded).decode(\"utf-8\")"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/describe.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = bool(eval(showif, user_dict))"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/describe.py",
+        "line": 116,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = eval(from_safeid_safe(extras[\"show_if_var\"]), user_dict)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/describe.py",
+        "line": 161,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "code = marshal.loads(base64.b64decode(code))"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/describe.py",
+        "line": 172,
+        "keyword_detected": "eval(",
+        "code_snippet": "return bool(eval(required[\"compute\"], user_dict))"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/describe.py",
+        "line": 440,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(encoded + \"=\" * (-len(encoded) % 4))"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/execution.py",
+        "line": 1103,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = eval(operation.expression, namespace)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/execution.py",
+        "line": 1129,
+        "keyword_detected": "eval(",
+        "code_snippet": "values[name] = _safe_repr(eval(name, namespace))"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/execution.py",
+        "line": 1648,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(variable, namespace)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/execution.py",
+        "line": 1991,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(variable, namespace)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/render.py",
+        "line": 249,
+        "keyword_detected": "eval(",
+        "code_snippet": "eval(var, context)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/render.py",
+        "line": 316,
+        "keyword_detected": "eval(",
+        "code_snippet": "namespace[name] = eval(expression, namespace)"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/runner.py",
+        "line": 188,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "docassemble_simulator-26.10.9/src/docassemble_simulator/runner.py",
+        "line": 384,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "emg-tools",
+    "checked_at": "2026-10-30T21:42:16.644093",
+    "download_url": "https://files.pythonhosted.org/packages/48/28/9e299eb985af772be93375ef8835cefd6207ffa63e188dab5f3439443815/emg_tools-2.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "emg_tools-2.0.0/tests/test_freq.py",
+        "line": 19,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_get_psd_parseval(make_tone, emg, fs, welch):"
+      }
+    ]
   }
 ]
