@@ -52200,5 +52200,131 @@
         "code_snippet": "exec(compile(code.group(1), \"README.md\", \"exec\"), {})  # noqa: S102"
       }
     ]
+  },
+  {
+    "package_name": "opencode-agora",
+    "checked_at": "2026-10-30T01:51:31.004966",
+    "download_url": "https://files.pythonhosted.org/packages/36/54/452ef9d88cfa9ffbcfcfcfed2ce45d62230a3b5b786e846b34ff8ab54a15/opencode_agora-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "opencode_agora-0.1.0/agorad/core/gate.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, shell=True, cwd=env_dir,"
+      },
+      {
+        "file": "opencode_agora-0.1.0/tests/test_agora_wait.py",
+        "line": 127,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "opencode_agora-0.1.0/tests/test_board_tui.py",
+        "line": 731,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      },
+      {
+        "file": "opencode_agora-0.1.0/tests/test_main.py",
+        "line": 81,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "equiframe-benchmark",
+    "checked_at": "2026-10-30T01:51:31.373231",
+    "download_url": "https://files.pythonhosted.org/packages/0e/05/053a080375aca46faa6d52d6f5ad23469bb333ec403fc4c08f1a23cdcd0e/equiframe_benchmark-0.12.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "equiframe_benchmark-0.12.4/src/equiframe_benchmark/scale_process.py",
+        "line": 396,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def child(self, probe: _Process, process: subprocess.Popen[bytes]) -> bool:"
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/src/equiframe_benchmark/scale_process.py",
+        "line": 548,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes] | None,"
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/src/equiframe_benchmark/scale_process.py",
+        "line": 652,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _child_exited(process: subprocess.Popen[bytes]) -> bool:"
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/src/equiframe_benchmark/scale_process.py",
+        "line": 834,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_and_wait(process: subprocess.Popen[bytes], measurements: _Measurements) -> bool:"
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/src/equiframe_benchmark/scale_process.py",
+        "line": 870,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self, process: subprocess.Popen[bytes], deadline: float, measurements: _Measurements"
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/src/equiframe_benchmark/scale_process.py",
+        "line": 949,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/src/equiframe_benchmark/scale_process.py",
+        "line": 980,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/src/equiframe_benchmark/scale_process.py",
+        "line": 1030,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen[bytes],"
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/tests/test_scale_process.py",
+        "line": 275,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"child = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(2)']); \""
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/tests/test_scale_process.py",
+        "line": 308,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"child = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(2)']); \""
+      },
+      {
+        "file": "equiframe_benchmark-0.12.4/tests/test_scale_process.py",
+        "line": 321,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-c\", \"pass\"], cwd=tmp_path, start_new_session=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "equiframe",
+    "checked_at": "2026-10-30T01:51:31.701899",
+    "download_url": "https://files.pythonhosted.org/packages/2a/78/d2a03f31c72b3c89d048e2936848af7b728444050c249511a9c87577afab/equiframe-0.12.4.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "equiframe-0.12.4/src/equiframe/r_review.py",
+        "line": 502,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "equiframe-0.12.4/tests/test_distribution_python_target.py",
+        "line": 22,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[helper], type_ignores=[]), str(source), \"exec\"), namespace)"
+      }
+    ]
   }
 ]
