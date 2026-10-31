@@ -52752,5 +52752,45 @@
         "code_snippet": "procs = [subprocess.Popen([sys.executable, \"-c\", code, self.home], cwd=REPO,"
       }
     ]
+  },
+  {
+    "package_name": "preflight-sdk",
+    "checked_at": "2026-10-31T23:45:45.747899",
+    "download_url": "https://files.pythonhosted.org/packages/99/4c/0da1e0fd3c18bbc44fdec1822f83a979de9906d5ba3326996dedb71fa35a/preflight_sdk-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "preflight_sdk-1.0.0/tests/test_client.py",
+        "line": 243,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "srv = socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "ksefik",
+    "checked_at": "2026-10-31T23:45:46.482925",
+    "download_url": "https://files.pythonhosted.org/packages/d1/a2/dce77c6e4539775baa8ee147d2dce6fbb3788ea274e19bd0ac7ad72ea6bc/ksefik-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ksefik-0.2.0/src/ksefik/crypto.py",
+        "line": 29,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "cert = x509.load_der_x509_certificate(base64.b64decode(cert_der_b64))"
+      },
+      {
+        "file": "ksefik-0.2.0/src/ksefik/ui/invoice_screens.py",
+        "line": 69,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "digest = base64.b64decode(invoice_hash_b64)"
+      },
+      {
+        "file": "ksefik-0.2.0/src/ksefik/xades.py",
+        "line": 243,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "cert = x509.load_der_x509_certificate(base64.b64decode(der_b64))"
+      }
+    ]
   }
 ]
