@@ -52486,5 +52486,63 @@
         "code_snippet": "def test_get_psd_parseval(make_tone, emg, fs, welch):"
       }
     ]
+  },
+  {
+    "package_name": "aux-py",
+    "checked_at": "2026-10-31T01:04:10.434272",
+    "download_url": "https://files.pythonhosted.org/packages/e1/71/b806535fd26ee959480f9f07c2badd6d9ea75fcf60728baf2c7c4f11ccda/aux_py-0.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aux_py-0.0.0/crates/python/tests/test_parity.py",
+        "line": 102,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertEqual(len(base64.b64decode(local_signed[\"tx_info\"][\"Sig\"])), 80)"
+      },
+      {
+        "file": "aux_py-0.0.0/crates/python/tests/test_parity.py",
+        "line": 105,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertTrue(payload.verify(base64.b64decode(local_signed[\"tx_info\"][\"Sig\"]).hex(), local.public_key))"
+      },
+      {
+        "file": "aux_py-0.0.0/crates/python/tests/test_parity.py",
+        "line": 419,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.assertTrue(all(len(base64.b64decode(v[\"Sig\"])) == 80 for v in infos))"
+      }
+    ]
+  },
+  {
+    "package_name": "cloudex",
+    "checked_at": "2026-10-31T01:04:10.545611",
+    "download_url": "https://files.pythonhosted.org/packages/d9/03/d1979a753055bf8aa17c1962cce01272f0751c4959df1da19d5d905bff5f/cloudex-0.1.11.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cloudex-0.1.11/src/cloudex/__init__.py",
+        "line": 10,
+        "keyword_detected": "exec(",
+        "code_snippet": "print(box.exec(\"uname -a\").stdout)"
+      },
+      {
+        "file": "cloudex-0.1.11/src/cloudex/__init__.py",
+        "line": 272,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec("
+      },
+      {
+        "file": "cloudex-0.1.11/tests/test_cloudex.py",
+        "line": 101,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = box.exec([\"echo\", \"it's\", \"a b\"], root=True, timeout_sec=5)"
+      },
+      {
+        "file": "cloudex-0.1.11/tests/test_cloudex.py",
+        "line": 104,
+        "keyword_detected": "exec(",
+        "code_snippet": "box.exec(\"ls | wc -l\")"
+      }
+    ]
   }
 ]
