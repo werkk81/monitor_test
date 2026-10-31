@@ -52544,5 +52544,213 @@
         "code_snippet": "box.exec(\"ls | wc -l\")"
       }
     ]
+  },
+  {
+    "package_name": "snpdenspy",
+    "checked_at": "2026-10-31T20:42:10.453146",
+    "download_url": "https://files.pythonhosted.org/packages/61/6d/50b54c88477515e32d3e20c67a65cf964eb7a62242151b7475f87bbcd8dd/snpdenspy-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/hermite/hermite_funcs.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "def hermite_polys_eval(N, x):"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_distribution.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "return pdf_std_eval(z, c_coeffs=c_arr) / scale"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_distribution.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "return log_pdf_std_eval(z, c_coeffs=c_arr) - np.log(scale)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_distribution.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "return cdf_std_eval(z, c_coeffs=c_arr)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_distribution.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "return cdf_std_eval(z, c_coeffs=c_arr) - target"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_eval_functions.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "def pdf_std_eval(z, c_coeffs):"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_eval_functions.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "H_z = hermite_polys_eval(len(c_coeffs), z)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_eval_functions.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "def cdf_std_eval(z, c_coeffs):"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_eval_functions.py",
+        "line": 77,
+        "keyword_detected": "eval(",
+        "code_snippet": "H_z = hermite_polys_eval(len(d_coeffs) - 1, z)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_eval_functions.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "def log_pdf_std_eval(z, c_coeffs):"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_eval_functions.py",
+        "line": 93,
+        "keyword_detected": "eval(",
+        "code_snippet": "H_z = hermite_polys_eval(len(c_coeffs), z)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_fit_mle.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "H = hermite_polys_eval(K, z)  # shape: (K+1, n)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_fit_mle.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "H = hermite_polys_eval(c.size, z)  # shape: (K+1, n)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_moments.py",
+        "line": 93,
+        "keyword_detected": "eval(",
+        "code_snippet": "acc += d[n] * E_zr_Hn_eval(r, n)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_rv_continuous.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "return pdf_std_eval(z, c_coeffs=c_coeffs)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_rv_continuous.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "return log_pdf_std_eval(z, c_coeffs=c_coeffs)"
+      },
+      {
+        "file": "snpdenspy-0.1.0/snpdenspy/snp/snp_rv_continuous.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "return cdf_std_eval(z, c_coeffs=c_coeffs)"
+      }
+    ]
+  },
+  {
+    "package_name": "stuntkey",
+    "checked_at": "2026-10-31T20:42:10.612180",
+    "download_url": "https://files.pythonhosted.org/packages/87/0c/ea495637c90a9689a1b8b006d0dd5c6ff45e02ed7c697e51bce47f6cadc0/stuntkey-0.9.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stuntkey-0.9.0/stuntkey/gitscan.py",
+        "line": 255,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)"
+      },
+      {
+        "file": "stuntkey-0.9.0/stuntkey/keychain.py",
+        "line": 448,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen or subprocess.Popen)"
+      },
+      {
+        "file": "stuntkey-0.9.0/stuntkey/runner.py",
+        "line": 95,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def run_redacted(cmd: list[str], child_env: dict, secrets, popen=subprocess.Popen,"
+      },
+      {
+        "file": "stuntkey-0.9.0/stuntkey/scrub.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/_isolation.py",
+        "line": 133,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "_real_connect = _socket.socket.connect"
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/_isolation.py",
+        "line": 144,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "_socket.socket.connect = _local_only_connect"
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/test_review_security.py",
+        "line": 282,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "other = socket.socket()"
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/test_round4_fixes.py",
+        "line": 215,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "srv = socket.socket()"
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/test_round4_fixes.py",
+        "line": 635,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "sent = base64.b64decode(sent.split(\" \", 1)[1]).decode()"
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/test_round5_fixes.py",
+        "line": 782,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/test_run_and_interrupt.py",
+        "line": 443,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/test_run_and_interrupt.py",
+        "line": 466,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/test_scan.py",
+        "line": 76,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "p = mock.patch.object(socket.socket, target, boom)"
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/test_tunnel.py",
+        "line": 161,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "stuntkey-0.9.0/tests/test_wave1_broker.py",
+        "line": 144,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs = [subprocess.Popen([sys.executable, \"-c\", code, self.home], cwd=REPO,"
+      }
+    ]
   }
 ]
