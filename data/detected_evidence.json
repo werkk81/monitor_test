@@ -52792,5 +52792,2377 @@
         "code_snippet": "cert = x509.load_der_x509_certificate(base64.b64decode(der_b64))"
       }
     ]
+  },
+  {
+    "package_name": "querywarden-cli",
+    "checked_at": "2026-11-01T21:23:17.788878",
+    "download_url": "https://files.pythonhosted.org/packages/90/44/0ee299bfcceed30e6ec8b23867a202e33ef9f411121151fa22b2a0e74514/querywarden_cli-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "querywarden_cli-0.1.0/tests/test_providers.py",
+        "line": 366,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(\"socket.socket.connect\", forbidden)"
+      }
+    ]
+  },
+  {
+    "package_name": "jigkit",
+    "checked_at": "2026-11-01T21:23:17.978325",
+    "download_url": "https://files.pythonhosted.org/packages/6b/db/9ab8192da3db2923bfd7cf098ea726bf48475b628fbf911de7a6725c1d27/jigkit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "jigkit-0.1.0/src/jigkit/testing/__init__.py",
+        "line": 67,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "real_connect = socket.socket.connect"
+      },
+      {
+        "file": "jigkit-0.1.0/src/jigkit/testing/__init__.py",
+        "line": 68,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "real_connect_ex = socket.socket.connect_ex"
+      },
+      {
+        "file": "jigkit-0.1.0/src/jigkit/testing/__init__.py",
+        "line": 71,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def guarded_connect(self: socket.socket, address: Any) -> None:"
+      },
+      {
+        "file": "jigkit-0.1.0/src/jigkit/testing/__init__.py",
+        "line": 76,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def guarded_connect_ex(self: socket.socket, address: Any) -> int:"
+      },
+      {
+        "file": "jigkit-0.1.0/src/jigkit/testing/__init__.py",
+        "line": 87,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", guarded_connect)"
+      },
+      {
+        "file": "jigkit-0.1.0/src/jigkit/testing/__init__.py",
+        "line": 88,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect_ex\", guarded_connect_ex)"
+      },
+      {
+        "file": "jigkit-0.1.0/tests/test_testing_plugin.py",
+        "line": 21,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock,"
+      },
+      {
+        "file": "jigkit-0.1.0/tests/test_testing_plugin.py",
+        "line": 29,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock,"
+      },
+      {
+        "file": "jigkit-0.1.0/tests/test_testing_plugin.py",
+        "line": 42,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as listener:"
+      },
+      {
+        "file": "jigkit-0.1.0/tests/test_testing_plugin.py",
+        "line": 47,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "jigkit-0.1.0/tests/test_testing_plugin.py",
+        "line": 49,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "jigkit-0.1.0/tests/test_testing_plugin.py",
+        "line": 58,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as listener,"
+      },
+      {
+        "file": "jigkit-0.1.0/tests/test_testing_plugin.py",
+        "line": 63,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      }
+    ]
+  },
+  {
+    "package_name": "Pyjo-MCP",
+    "checked_at": "2026-11-01T21:23:18.525435",
+    "download_url": "https://files.pythonhosted.org/packages/4e/fb/70d0381ab1f8822ca93a684d623aae7d1d9c1e5e448678cc7e865e0b0a6d/pyjo_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyjo_mcp-0.1.0/Pyjo/MCP/Server.py",
+        "line": 1477,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(match[1], validate=True).decode()"
+      },
+      {
+        "file": "pyjo_mcp-0.1.0/t/sdk/MCP_SDK.py",
+        "line": 36,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "pyjo_mcp-0.1.0/t/sdk/MCP_SDK.py",
+        "line": 237,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "server = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "metal-woof",
+    "checked_at": "2026-11-01T21:23:23.158603",
+    "download_url": "https://files.pythonhosted.org/packages/b6/e3/a78f26b8378246181fa2a741c37bb7c1e635f0ec55354478955eba6cf33a/metal_woof-1.1.5.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_background_checkpoint.py",
+        "line": 121,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[hook], type_ignores=[]), str(source_path), \"exec\"), env)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_background_checkpoint.py",
+        "line": 187,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[hook], type_ignores=[]), str(source_path),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_bridge_versioned_staging.py",
+        "line": 467,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_chain_stage_env.py",
+        "line": 81,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "assert source.count(\"subprocess.Popen(\") == 1"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_chem_cams_credentials.py",
+        "line": 88,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, 'connect', refused)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_chem_cams_fetch.py",
+        "line": 126,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, 'connect', refused)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_command_output_dead_child.py",
+        "line": 199,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"p = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(120)'])\\n\""
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_continuous_status.py",
+        "line": 60,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, '-c', program, str(root), plan['review_sha256']],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_da_hydrometeor_analysis.py",
+        "line": 181,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert ast.literal_eval(keywords[\"choices\"]) == PRECIP_ANALYSIS_MODES"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_da_hydrometeor_analysis.py",
+        "line": 182,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert ast.literal_eval(keywords[\"default\"]) == \"off\""
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_da_hydrometeor_analysis.py",
+        "line": 545,
+        "keyword_detected": "eval(",
+        "code_snippet": "retrieved, _, _ = ha.thompson_retrieval(cp.asarray(t), cp.asarray(p),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_da_member_orphans.py",
+        "line": 67,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "controller = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_da_member_orphans.py",
+        "line": 166,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(wave._launch_argv([sys.executable, \"-c\", code]))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_da_member_pool_dispatch.py",
+        "line": 67,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_da_member_wave.py",
+        "line": 215,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "original=wave.subprocess.Popen"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_da_nested_acoustic_adaptation.py",
+        "line": 286,
+        "keyword_detected": "eval(",
+        "code_snippet": "chosen = eval(compile(expression, \"cycle-labels\", \"eval\"), {"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_da_nowcast_auto.py",
+        "line": 855,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_every_run_flag_survives_the_re_exec(self, tmp_path):"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_diffusion_drivers_wrf471_parity.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "return next(ast.literal_eval(node.value) for node in module.body"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_diffusion_drivers_wrf471_parity.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(device).decode() if device.startswith((\"b'\",'b\"')) else device"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_doctor_cuda_headers.py",
+        "line": 282,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(doctor._NVRTC_HEADER_PROBE, {})"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_doctor_dynamical_asos.py",
+        "line": 36,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", refuse)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_doctor_energy.py",
+        "line": 33,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", refuse)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_doctor_energy.py",
+        "line": 204,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(\"def main(args):\\n\""
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_downscale_stop.py",
+        "line": 119,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_earth2_export.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "vocabulary = next(ast.literal_eval(n.value) for n in module.body"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_earth2_export.py",
+        "line": 27,
+        "keyword_detected": "eval(",
+        "code_snippet": "and ('u100m' in ast.literal_eval(n.value)))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_energy_hindcast_deploy.py",
+        "line": 156,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "userdata = base64.b64decode("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_energy_hindcast_deploy.py",
+        "line": 185,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "userdata = base64.b64decode("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_energy_hindcast_queue.py",
+        "line": 687,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "workers = [subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_energy_hindcast_queue.py",
+        "line": 691,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "workers += [subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_energy_worker_packing.py",
+        "line": 217,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_energy_worker_packing.py",
+        "line": 679,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "host_a = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_batch_physics.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "original = next(ast.literal_eval(node.value) for node in tree.body if isinstance(node, ast.Assign)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_calibration_admission.py",
+        "line": 113,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect = forbid(\"network connect\")"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_calibration_admission.py",
+        "line": 115,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "spawn, original = forbid(\"process spawn\"), subprocess.Popen.__init__"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_calibration_admission.py",
+        "line": 124,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen.__init__ = popen"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_cfl_member.py",
+        "line": 21,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=functions, type_ignores=[]), str(path), \"exec\"), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_go_door_gpu.py",
+        "line": 162,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_member_inputs.py",
+        "line": 773,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect = blocked"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_member_stream.py",
+        "line": 171,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[function], type_ignores=[]), str(path), \"exec\"), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_native_forecast.py",
+        "line": 302,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(code, str(path), \"exec\"), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_prepared_route_wave.py",
+        "line": 286,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert ast.literal_eval(dispatch[0].body) == {}"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_product_consumer.py",
+        "line": 192,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"child = subprocess.Popen([sys.executable, '-c', sys.argv[1], sys.argv[2]])\","
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_product_worker.py",
+        "line": 188,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"child = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(30)'])\","
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_product_worker.py",
+        "line": 192,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-c\", script, str(os.getpid()), str(ready)], start_new_session=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_soil_receipt_contract.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(compile(ast.Expression(expressions[0]), 'mapped-head-metadata', 'eval'), values)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_soil_receipt_contract.py",
+        "line": 64,
+        "keyword_detected": "eval(",
+        "code_snippet": "user = eval(compile(ast.Expression(expression), 'chained-root-metadata', 'eval'), scope)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ensemble_supervised_devices.py",
+        "line": 69,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = supervisor.subprocess.Popen"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_fastfix_runner.py",
+        "line": 167,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(runner().SOURCE_PROBE, {})"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_fastfix_runner.py",
+        "line": 175,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(runner().SOURCE_PROBE, {})"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_fastfix_runner.py",
+        "line": 180,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(runner().SOURCE_PROBE, {})"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_fetch.py",
+        "line": 98,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "real_connect = socket.socket.connect"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_fetch.py",
+        "line": 106,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", connect)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_fetch_geog.py",
+        "line": 1415,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", refuse)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_fetch_guard.py",
+        "line": 145,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_fetch_hardening.py",
+        "line": 236,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_fetch_rust_backbone.py",
+        "line": 787,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", no_network)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gdt101_real_bytes.py",
+        "line": 78,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "header = base64.b64decode(row[\"header_base64\"])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_go_chain.py",
+        "line": 913,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"\"\"A ``subprocess.Popen`` double over this file's ``fake_run`` doubles."
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_go_chain_events.py",
+        "line": 63,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "download.  Every chain here replaces ``subprocess.Popen`` with a"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_grib2_live.py",
+        "line": 208,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(30)\"])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_machines.py",
+        "line": 709,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(30)\"])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_mapviewer_requests.py",
+        "line": 78,
+        "keyword_detected": "exec(",
+        "code_snippet": "const m = /pictures\\/list\\?product=(.*)$/.exec(path);"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_mapviewer_requests.py",
+        "line": 89,
+        "keyword_detected": "exec(",
+        "code_snippet": "export function domainNumber(token) { const m = /^d(\\d+)/.exec(token || \"\"); return m ? Number(m[1]) : null; }"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_process_identity.py",
+        "line": 46,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(SLEEP, stdin=subprocess.DEVNULL, start_new_session=os.name != \"nt\","
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_process_identity.py",
+        "line": 340,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"woof.mcp.jobs.subprocess.Popen\", broken)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_process_identity.py",
+        "line": 354,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "holder = subprocess.Popen([sys.executable, \"-c\", ("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_queue_ownership.py",
+        "line": 65,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _sleeper(seconds: float = 60) -> subprocess.Popen:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_queue_ownership.py",
+        "line": 66,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([sys.executable, \"-c\", f\"import time; time.sleep({seconds})\"], stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_queue_ownership.py",
+        "line": 70,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _launched(process: subprocess.Popen, identity=None):"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_queue_ownership.py",
+        "line": 183,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _claiming_server(queue, owner, *, stale: bool = False, step: str = \"claimed\") -> subprocess.Popen:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_queue_ownership.py",
+        "line": 186,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-c\", _CLAIMING_SERVER, str(queue.root), str(owner),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_queue_ownership.py",
+        "line": 206,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _end(child: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_queue_ownership.py",
+        "line": 304,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.processes: list[subprocess.Popen] = []"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_gui_server.py",
+        "line": 740,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "busy = socket.socket()"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_hrrr_island_donor.py",
+        "line": 59,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "bits = np.frombuffer(zlib.decompress(base64.b64decode(_HRRR_LAND)),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_hrrr_pipeline.py",
+        "line": 167,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(["
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_hrrr_pipeline.py",
+        "line": 193,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(\"tools.hrrr_pipeline.subprocess.Popen\", fake_popen)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_hrrr_pipeline_full_filesystem.py",
+        "line": 3,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "Every other test of this producer replaces ``subprocess.Popen`` with a"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_hrrr_vertical_disposition.py",
+        "line": 54,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "labels = np.frombuffer(zlib.decompress(base64.b64decode("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_hrrr_vertical_disposition.py",
+        "line": 467,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "labels = np.frombuffer(zlib.decompress(base64.b64decode("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_hrrr_vertical_disposition.py",
+        "line": 527,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "labels = np.frombuffer(zlib.decompress(base64.b64decode("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_hydro_initial_state.py",
+        "line": 60,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([sys.executable, '-B', '-c', _CONCURRENT_PREPARATION,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_icon_d2.py",
+        "line": 240,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "header = base64.b64decode(row[\"header_base64\"])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_icon_d2.py",
+        "line": 326,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "parts = _sections(base64.b64decode(row[\"header_base64\"]))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_install_platform.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(words, stdin=stdin, stdout=stdout, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_install_platform.py",
+        "line": 52,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([sys.executable, \"-c\", script], stdin=stdin, stdout=stdout,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_install_platform.py",
+        "line": 64,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([sys.executable, \"-c\", script], stdin=stdin, stdout=stdout,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_install_platform.py",
+        "line": 84,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(words, stdin=stdin, stdout=stdout, stderr=subprocess.PIPE, preexec_fn=limit)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_install_platform.py",
+        "line": 685,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "ended = subprocess.Popen([sys.executable, \"-c\", \"pass\"])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_interrupt_contract.py",
+        "line": 87,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "-- which brings no ``subprocess.Popen`` stand-in of its own -- died"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_interrupt_contract.py",
+        "line": 93,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "``subprocess.Popen`` wholesale, which incidentally blinds the gate's"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_interrupt_contract.py",
+        "line": 123,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "the two tests that patch ``subprocess.Popen`` stayed green and only"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_interrupt_contract.py",
+        "line": 220,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(go_cli.subprocess.Popen, \"kill\","
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_interrupt_contract.py",
+        "line": 222,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "monkeypatch.setattr(go_cli.subprocess.Popen, \"terminate\","
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_job_cancel_keeps_claim_when_stop_fails.py",
+        "line": 100,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _sleeper() -> subprocess.Popen:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_job_cancel_keeps_claim_when_stop_fails.py",
+        "line": 106,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"], **options)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_kernel_manifest.py",
+        "line": 320,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(values[0])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_kernel_plan.py",
+        "line": 872,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "opener = subprocess.Popen([sys.executable, \"-c\", _POOL_OPENER, end], stdout=subprocess.PIPE, text=True,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_lake_f64cr.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _device_eval(fname, x, y):"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_lake_f64cr.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "got = _device_eval(fname, x, y).view(np.uint64)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_lake_f64cr.py",
+        "line": 113,
+        "keyword_detected": "eval(",
+        "code_snippet": "sgot = _device_eval(fname, sx, sy)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_live_render_memory_admission.py",
+        "line": 451,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"child = subprocess.Popen([sys.executable, '-c', {held!r}])\\n\""
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_live_render_memory_admission.py",
+        "line": 454,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-c\", script])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_mapped_projected_grid.py",
+        "line": 707,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<retained-source-adapter-baseline>\", \"exec\"), baseline.__dict__)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_mapped_projected_grid.py",
+        "line": 726,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<retained-frame-header-baseline>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_metal_launch_ordering.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.async_eval(snap._st.arr)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_mynn_dmp_sibling.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(dispatch, str(path), \"exec\"), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_no_forecast_gate.py",
+        "line": 149,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_no_forecast_gate.py",
+        "line": 187,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_no_forecast_gate.py",
+        "line": 272,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_no_undefined_names.py",
+        "line": 132,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"from {module_name} import *\", namespace)  # noqa: S102"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_noahmp_bareflux.py",
+        "line": 287,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(src.replace(old, new), path, \"exec\"), module.__dict__)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_noahmp_bareflux.py",
+        "line": 391,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(src.replace(old, \"    state.ch2 = f32(-12345.0)\"),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_noahmp_frame_provenance.py",
+        "line": 814,
+        "keyword_detected": "eval(",
+        "code_snippet": "rendered = eval(text.strip().rstrip(\",\"), namespace)  # noqa: S307 -- our own text"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_nomads_governor.py",
+        "line": 244,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_nwpsuite_runtime.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "first = subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_nwpsuite_runtime.py",
+        "line": 127,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-c\", code, str(pinned), str(root), phase])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_on_demand_artifacts.py",
+        "line": 247,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[node], type_ignores=[]), str(path), \"exec\"), scope)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_output_claim_ownership.py",
+        "line": 58,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_owned_process_signals.py",
+        "line": 36,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "POPEN = subprocess.Popen"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_owned_process_signals.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _sleeper(*, group: bool = False, child: bool = False) -> subprocess.Popen:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_owned_process_signals.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(60)'])\\ntime.sleep(60)\\n\")"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_owned_process_signals.py",
+        "line": 125,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _record(home: Path, process: subprocess.Popen, port: int = 8089) -> None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_parent_death.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "go = subprocess.Popen([sys.executable, \"-c\", launcher], cwd=tmp_path,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_parent_death.py",
+        "line": 134,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-c\", {child!r}], env=env)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_parent_death.py",
+        "line": 137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "launcher = subprocess.Popen([sys.executable, \"-c\", middle], cwd=tmp_path,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_parent_death.py",
+        "line": 154,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "gone = subprocess.Popen([sys.executable, \"-c\", \"pass\"])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_parent_death.py",
+        "line": 177,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_child_binds_its_death_signal_after_exec(tmp_path):"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_parent_death.py",
+        "line": 209,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_launchers_run_no_python_between_fork_and_exec(tmp_path):"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_parity_sweep_logging.py",
+        "line": 62,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_preflight.py",
+        "line": 1501,
+        "keyword_detected": "eval(",
+        "code_snippet": "node.targets[0].id: ast.literal_eval(node.value)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_preflight.py",
+        "line": 1572,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, {\"declared_follower_slots\": declared_follower_slots,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_preflight.py",
+        "line": 2476,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert list(eval(compile(ast.Expression(chained.comparators[0]), \"<six-mass-membership>\", \"eval\"), pf.__dict__)) == [6, 8, 9, 10, 16, 18, 24, 28, 106], (  # Lin (2) and FAST_SBM (30) own arms; TEMPO is a named row"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_preflight.py",
+        "line": 3164,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(bind, env)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_preflight.py",
+        "line": 3196,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(recheck, env)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_preflight.py",
+        "line": 3209,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(recheck, env)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_preflight.py",
+        "line": 3214,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(recheck, env)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_prepare_hrrr_wrf.py",
+        "line": 294,
+        "keyword_detected": "exec(",
+        "code_snippet": "f\"exec(compile(open({str(script)!r}, 'rb').read(), \""
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_prepare_worker_exit_with_parent.py",
+        "line": 59,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "parent = subprocess.Popen([sys.executable, str(script)], cwd=tmp_path, env=env,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_preprocess_device_probe.py",
+        "line": 75,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(preflight._DEVICE_MEMORY_PROBE_SOURCE, \"device_probe\","
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_process_records.py",
+        "line": 59,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "launchers = [subprocess.Popen([sys.executable, str(script), str(tmp_path), label], env=env, creationflags=flags)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_process_records.py",
+        "line": 102,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "running = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"], stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_radar_inloop.py",
+        "line": 193,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[function], type_ignores=[]), \"writer-hook\", \"exec\"), scope)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_radar_inloop.py",
+        "line": 216,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[selector, submit], type_ignores=[]), \"history-clock\", \"exec\"), scope)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_radar_inloop.py",
+        "line": 267,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_acquisition_binding.py",
+        "line": 47,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(next(f[\"data\"] for f in document[\"files\"] if f[\"name\"] == name))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_cli.py",
+        "line": 205,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = rc.subprocess.Popen"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_completion_transition.py",
+        "line": 121,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX) as ready:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_completion_transition.py",
+        "line": 136,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "write, popen = rw._write, rw.subprocess.Popen"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_completion_transition.py",
+        "line": 161,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "rw.subprocess.Popen, rw._write = Child, barrier_write"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_completion_transition.py",
+        "line": 214,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket(socket.AF_UNIX)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_completion_transition.py",
+        "line": 246,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "c.wrapper = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_completion_transition.py",
+        "line": 550,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "stranger = subprocess.Popen([sys.executable, \"-c\", \"import sys;print('R',flush=True);sys.stdin.buffer.read(1)\"],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_completion_transition.py",
+        "line": 1154,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-c\", sys.argv[3]], stdin=subprocess.DEVNULL)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_completion_transition.py",
+        "line": 1214,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "wrapper = subprocess.Popen([sys.executable, \"-c\", PLAIN_WRAPPER, str(directory)],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_plan.py",
+        "line": 46,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(next(f[\"data\"] for f in document[\"files\"] if f[\"name\"] == name))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_worker_linux.py",
+        "line": 119,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-u\", str(controller), str(REPO), disconnect],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_worker_linux.py",
+        "line": 166,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, '-u', str(Path(__file__).parent / 'descendant.py')],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_worker_linux.py",
+        "line": 173,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, '-u', {str(intermediary if descendant_mode == 'orphan-cleared-environment' else child)!r}],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_worker_linux.py",
+        "line": 178,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "unrelated = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_remote_worker_linux.py",
+        "line": 227,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "unrelated = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"], start_new_session=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_render_layout.py",
+        "line": 808,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(recipe, str(_DOC), \"exec\"), namespace)      # noqa: S102"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_render_worker_timeout.py",
+        "line": 71,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _running_process(worker) -> subprocess.Popen:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_renderer_launchers.py",
+        "line": 105,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([str(launcher), \"block\", str(pid_file)])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_route_round_trip_fields.py",
+        "line": 165,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert ast.literal_eval(node.value) == DIFF6_FACTOR2_FORK_DEFAULT"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_ruc_default_selection.py",
+        "line": 105,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(HISTORICAL_IRRIGATION, '<pre-switch-irrigation>', 'exec'), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_runplan_stops_both_renders.py",
+        "line": 43,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _process_of(worker) -> subprocess.Popen:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_sfclayrev_wrf461_parity.py",
+        "line": 179,
+        "keyword_detected": "eval(",
+        "code_snippet": "pins = ast.literal_eval(node.value)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_shape_oracle_routing.py",
+        "line": 38,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.Module(body=[function], type_ignores=[]), '<native-selector>', 'exec'), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_simulated_radar.py",
+        "line": 500,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(120)\"])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_single_core_gate.py",
+        "line": 123,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"ps = [subprocess.Popen([sys.executable, '-c', {SPIN.format(s=2.5)!r}]) for _ in range({n})]\\n\""
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_stage_seams.py",
+        "line": 764,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "# socket.socket, and would break under a poisoned class) all complete."
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_stage_seams.py",
+        "line": 776,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect = _refuse"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_stage_seams.py",
+        "line": 777,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect_ex = _refuse"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_static_highres_fetch_retry.py",
+        "line": 415,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_supervisor.py",
+        "line": 95,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_surface_q2_cap_lineage.py",
+        "line": 76,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(_final_surface_writer(), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_tables_public.py",
+        "line": 175,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "pid = subprocess.Popen([sys.executable, \"-c\", \"pass\"])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_thompson_fork_tables_lock.py",
+        "line": 182,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "children = [subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_tui_worker.py",
+        "line": 26,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_urban_prepared_fraction.py",
+        "line": 102,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source.replace(statement, \"frc_urb2d = None\"),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_verification_visuals.py",
+        "line": 717,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# subprocess.Popen); the stand-in Popen above is the detached worker's"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_verify_lanes_stack_conflicts.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "keys = [ast.literal_eval(key) for key in assignment.value.keys]"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_version_cli.py",
+        "line": 308,
+        "keyword_detected": "eval(",
+        "code_snippet": "namespace = None if args is None else eval(args)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_vertical_nesting_config.py",
+        "line": 272,
+        "keyword_detected": "eval(",
+        "code_snippet": "values[node.targets[0].id] = ast.literal_eval(node.value)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_warm_kernels_static_plan.py",
+        "line": 146,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-c\", child], stdin=subprocess.DEVNULL, stdout=log,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_wdm6.py",
+        "line": 558,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(patched, mt.__file__, \"exec\"), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_windfarm_coupling.py",
+        "line": 615,
+        "keyword_detected": "eval(",
+        "code_snippet": "found[node.targets[0].id] = ast.literal_eval(node.value)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tests/test_wrf_instrumented.py",
+        "line": 204,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(encoded, validate=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/carried_physics_channel.py",
+        "line": 159,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(value[\"base64\"], validate=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/da_nowcast.py",
+        "line": 1837,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/da_object_fetch.py",
+        "line": 51,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([str(binary), command, \"--request\", str(source)],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/da_object_fetch.py",
+        "line": 88,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([os.sys.executable, \"-m\", \"tools.da_object_fetch\","
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/da_probe_procs.py",
+        "line": 176,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs = [subprocess.Popen(child_args, env=env,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/da_recent_observations.py",
+        "line": 807,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdout=log, stderr=subprocess.STDOUT,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/da_recent_run.py",
+        "line": 156,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(row[\"argv\"], env=env, stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/da_recent_score.py",
+        "line": 155,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, cwd=ROOT, env=env, stdout=output, stderr=subprocess.STDOUT,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/da_solve_ab.py",
+        "line": 888,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(cmd, stdout=handle, stderr=subprocess.STDOUT,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/earth2_example_proof.py",
+        "line": 75,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(command, stdout=output, stderr=subprocess.STDOUT)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/hrrr_pipeline.py",
+        "line": 776,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/hrrr_pipeline.py",
+        "line": 891,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/hrrr_single_domain_benchmark.py",
+        "line": 4276,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(["
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/hrrr_two_domain_forecast.py",
+        "line": 379,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "seal_process = subprocess.Popen(["
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/literal_division_scan.py",
+        "line": 300,
+        "keyword_detected": "eval(",
+        "code_snippet": "return float(eval(compile(tree, \"<divisor>\", \"eval\"),  # noqa: S307"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/promote_prepared_release.py",
+        "line": 494,
+        "keyword_detected": "eval(",
+        "code_snippet": "filters = ast.literal_eval(node.value)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/promote_prepared_release.py",
+        "line": 496,
+        "keyword_detected": "eval(",
+        "code_snippet": "declaration_only = tuple(ast.literal_eval(node.value))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/transcribe_urban_bem.py",
+        "line": 259,
+        "keyword_detected": "eval(",
+        "code_snippet": "return int(eval(s, {'__builtins__':{}}, env))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/transcribe_urban_bem.py",
+        "line": 645,
+        "keyword_detected": "eval(",
+        "code_snippet": "size*=int(eval(b,{'__builtins__':{}},dimenv))-int(eval(a,{'__builtins__':{}},dimenv))+1"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/walk_capture.py",
+        "line": 122,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "straight to :func:`subprocess.Popen` as a list, so a path containing"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/walk_capture.py",
+        "line": 634,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_tree(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/tools/walk_capture.py",
+        "line": 801,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/facade/_array.py",
+        "line": 141,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.async_eval(out)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/facade/_array.py",
+        "line": 156,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(self.arr)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/facade/_array.py",
+        "line": 158,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(arr)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/facade/_array.py",
+        "line": 170,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(self.arr)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/facade/_array.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.async_eval(*arrays)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/facade/_array.py",
+        "line": 378,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(values)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/facade/cuda.py",
+        "line": 29,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(*arrays)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/facade/cuda.py",
+        "line": 254,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(st.arr)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/metal/loader.py",
+        "line": 152,
+        "keyword_detected": "eval(",
+        "code_snippet": "mx.eval(*outputs)       # ... and finish before anything after it"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/translate/__init__.py",
+        "line": 734,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = self.const_eval(init[-1])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/translate/__init__.py",
+        "line": 2427,
+        "keyword_detected": "eval(",
+        "code_snippet": "if inner.kind.name in (\"FLOATING_LITERAL\", \"INTEGER_LITERAL\") or self.const_eval(inner) is not None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/translate/__init__.py",
+        "line": 2527,
+        "keyword_detected": "eval(",
+        "code_snippet": "def const_eval(self, node):"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/translate/__init__.py",
+        "line": 2540,
+        "keyword_detected": "eval(",
+        "code_snippet": "inner = self.const_eval(kids[0])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/translate/__init__.py",
+        "line": 2561,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = self.const_eval(inits[-1])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/translate/__init__.py",
+        "line": 2567,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = self.const_eval(kids[0])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/translate/__init__.py",
+        "line": 2578,
+        "keyword_detected": "eval(",
+        "code_snippet": "a, b = self.const_eval(kids[0]), self.const_eval(kids[1])"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/backend/translate/__init__.py",
+        "line": 2632,
+        "keyword_detected": "eval(",
+        "code_snippet": "v = self.const_eval(node)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/command_output.py",
+        "line": 262,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/core/rrtmg_sw.py",
+        "line": 4327,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "low, high = (np.frombuffer(base64.b64decode(_STATIC_TABLES[k][2]), dtype=\"<f4\")"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/core/rrtmg_sw.py",
+        "line": 4335,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "ngb = np.frombuffer(base64.b64decode(_STATIC_TABLES[\"wvn/ngb\"][2]), dtype=\"<i4\")"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/hydrometeor_analysis.py",
+        "line": 319,
+        "keyword_detected": "eval(",
+        "code_snippet": "extern \"C\" __global__ void ha_thompson_retrieval("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/hydrometeor_analysis.py",
+        "line": 956,
+        "keyword_detected": "eval(",
+        "code_snippet": "def thompson_retrieval(temperature, pressure, reflectivity):"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/member_transport.py",
+        "line": 29,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _seconds_since_exec() -> float | None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/member_transport.py",
+        "line": 44,
+        "keyword_detected": "exec(",
+        "code_snippet": "_SINCE_EXEC_AT_IMPORT = _seconds_since_exec()"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/member_wave.py",
+        "line": 240,
+        "keyword_detected": "eval(",
+        "code_snippet": "header = ast.literal_eval(encoded.decode(\"utf-8\"))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/member_wave.py",
+        "line": 628,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/member_wave.py",
+        "line": 779,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/member_wave.py",
+        "line": 966,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(_launch_argv(job[\"argv\"]), cwd=job.get(\"cwd\"),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/spread_vts_ram.py",
+        "line": 114,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "stream = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/da/spread_vts_ram.py",
+        "line": 270,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.listener = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/earth2_diagnostic_runner.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/earth2_job.py",
+        "line": 78,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(record[\"command\"], stdout=stream, stderr=subprocess.STDOUT, env=environment)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/energy/run.py",
+        "line": 242,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(argv, cwd=cwd, stdout=log,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/energy/run.py",
+        "line": 251,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _stop(process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/energy/worker.py",
+        "line": 287,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _signal_group(process: subprocess.Popen, signum: int) -> None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/energy/worker.py",
+        "line": 339,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/energy/worker.py",
+        "line": 1287,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/energy/worker.py",
+        "line": 1297,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/ensemble/automatic_preparation.py",
+        "line": 305,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=stream,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/ensemble/batch_moist.py",
+        "line": 153,
+        "keyword_detected": "eval(",
+        "code_snippet": "options = tuple(ast.literal_eval(declarations[0]))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/ensemble/batch_physics.py",
+        "line": 700,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(tree, \"<admitted-thompson-column-adapter>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/ensemble/batch_physics.py",
+        "line": 1345,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(tree, \"<admitted-default-ysu-column-driver>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/ensemble/batch_physics_init.py",
+        "line": 229,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(tree, \"<admitted-member-legacy-radiation>\", \"exec\"), namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/ensemble/product_consumer.py",
+        "line": 54,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, env=environment, stdout=log,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/first_products.py",
+        "line": 355,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_RUNNING: dict[int, subprocess.Popen] = {}"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/first_products.py",
+        "line": 463,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/first_products.py",
+        "line": 492,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill(process: subprocess.Popen, *, own_group: bool) -> None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/first_products.py",
+        "line": 641,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _render_processes(renders) -> list[subprocess.Popen]:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/forecast_readiness.py",
+        "line": 150,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, \"<gpuwm-readiness-probe>\", \"exec\"), {})"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/free_threading.py",
+        "line": 239,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(command, env=env)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/geog_assets.py",
+        "line": 1604,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/go_cli.py",
+        "line": 3045,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "_STAGE_PROCESSES: dict[int, subprocess.Popen] = {}"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/go_cli.py",
+        "line": 3289,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/go_cli.py",
+        "line": 6054,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/go_job.py",
+        "line": 827,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/go_job.py",
+        "line": 846,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen(list(argv), cwd=cwd, env=environment,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/grib2_export.py",
+        "line": 165,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([str(exe), \"--request\", str(path)], stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/grib2_live.py",
+        "line": 97,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/add_nest_door.py",
+        "line": 317,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn(argv: Sequence[str], log: Path, *, env: dict[str, str] | None = None) -> subprocess.Popen:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/add_nest_door.py",
+        "line": 322,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([str(a) for a in argv], stdout=stream, stderr=subprocess.STDOUT,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/add_nest_door.py",
+        "line": 333,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _stop(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/add_nest_door.py",
+        "line": 593,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def watch_nest(procs: dict[str, subprocess.Popen], *, clicked: float, budget_seconds: float | None,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/add_nest_door.py",
+        "line": 724,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs: dict[str, subprocess.Popen] = {\"export\": export, \"posting\": posting}"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/add_nest_door.py",
+        "line": 968,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "children: list[subprocess.Popen] = []"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/card_fit.py",
+        "line": 669,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen(self.argv, stdout=self._output, stderr=subprocess.STDOUT,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/card_fit.py",
+        "line": 738,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(list(argv), stdout=output, stderr=subprocess.STDOUT,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/cuda_backend/aot.py",
+        "line": 380,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = lzma.decompress(base64.b64decode(row[\"cubin_xz_base64\"], validate=True))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/cuda_backend/aot.py",
+        "line": 382,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = base64.b64decode(row[\"cubin_base64\"], validate=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/cuda_backend/aot.py",
+        "line": 395,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = lzma.decompress(base64.b64decode(row[\"cubin_xz_base64\"], validate=True))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/cuda_backend/aot.py",
+        "line": 397,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = base64.b64decode(row[\"cubin_base64\"], validate=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/cuda_backend/aot_build.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(compile(ast.Expression(node), str(path), \"eval\"), binding)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/drivers/contract_hostprep.py",
+        "line": 48,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([str(engine())], stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/drivers/samehost_rank_group_v841.py",
+        "line": 884,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "link = Link(socket.socket(fileno=int(spec[\"step\"])), timeout=idle, name=f\"step-{rank}-0\")"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/drivers/samehost_rank_group_v841.py",
+        "line": 887,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket(fileno=int(spec[\"output\"])).close()"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/drivers/samehost_rank_group_v841.py",
+        "line": 974,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "links = {int(peer): (socket.socket(fileno=int(sock_fd)), int(flag_fd))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/export_door.py",
+        "line": 748,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen(self.argv, stdout=stream, stderr=subprocess.STDOUT)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/first_look.py",
+        "line": 150,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.running: dict[subprocess.Popen, dict] = {}"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/first_look.py",
+        "line": 227,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(argv, stdout=stream, stderr=subprocess.STDOUT)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/forecast_batch.py",
+        "line": 455,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(_worker_command(),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/forecast_door.py",
+        "line": 3368,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/global_cycle.py",
+        "line": 475,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-m\", \"woof.hex.cli\", *self.door_argv(cycle, run_dir)],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/history_writer.py",
+        "line": 312,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._child = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/hostprep_processes.py",
+        "line": 95,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "procs.append(subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/mixing_v842_les.py",
+        "line": 3824,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"\"\"Evaluate the fixed native dimension grammar without eval().\"\"\""
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/moving_members.py",
+        "line": 1137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(command, stdout=stream, stderr=subprocess.STDOUT,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/moving_run.py",
+        "line": 125,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen = popen or subprocess.Popen"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/moving_run.py",
+        "line": 276,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(argv, stdout=stdout, stderr=subprocess.STDOUT, env=env, cwd=cwd,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/mpasphys/pool_v842.py",
+        "line": 623,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "launched.append(subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/mpasphys/process_ranks_v842.py",
+        "line": 271,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "step_link = Link(socket.socket(fileno=int(spec['step'])), timeout=timeout, name=f'step-{rank}-0')"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/mpasphys/process_ranks_v842.py",
+        "line": 272,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "output_link = Link(socket.socket(fileno=int(spec['output'])), timeout=timeout, name=f'output-{rank}-0')"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/mpasphys/process_ranks_v842.py",
+        "line": 284,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "halo_links[int(peer)] = (socket.socket(fileno=int(sock_fd)), int(flag_fd))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/mpasphys/resources_build.py",
+        "line": 1487,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "cubin = lzma.decompress(base64.b64decode(compiled[\"cubin_xz_base64\"]))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/mpasphys/rrfs/ruc_lsm_8c9f1a8.py",
+        "line": 5631,
+        "keyword_detected": "eval(",
+        "code_snippet": "scope[name] = eval(value, {'__builtins__': {}}, {})"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/mpasphys/rrfs/ruc_lsm_8c9f1a8.py",
+        "line": 5632,
+        "keyword_detected": "eval(",
+        "code_snippet": "vals = [eval(x, {'__builtins__': {}}, scope) for x in exprs]"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/observation_scorecard.py",
+        "line": 1017,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-m\", \"woof.hex.observation_scorecard\", \"watch\", str(run), str(plan)],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/partition_net_v841.py",
+        "line": 66,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def __init__(self, sock: socket.socket, *, timeout_seconds: float = 300.0) -> None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/partition_net_v841.py",
+        "line": 224,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/partition_net_v841.py",
+        "line": 243,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/partition_process_transport_v841.py",
+        "line": 235,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "links: Mapping[int, tuple[socket.socket, int]], *, xp: Any, timeout: float = 1800.0,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/rank_processes.py",
+        "line": 244,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def __init__(self, sock: socket.socket, *, timeout: float, name: str = \"link\"):"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/rank_processes.py",
+        "line": 537,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.processes: dict[int, subprocess.Popen] = {}"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/rank_processes.py",
+        "line": 550,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.halo_sockets: dict[int, socket.socket] = {}   # rank 0's ends, by peer"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/rank_processes.py",
+        "line": 568,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "parent_end, child_end = socket.socketpair(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/rank_processes.py",
+        "line": 575,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "low_end, high_end = socket.socketpair(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/rank_processes.py",
+        "line": 600,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.processes[rank] = subprocess.Popen(command, pass_fds=tuple(child_fds[rank]), env=environment,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/rank_processes.py",
+        "line": 617,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _watch(self, rank: int, process: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/rust_hostprep.py",
+        "line": 67,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([str(engine), \"--protocol\", \"hex-hostprep-v1\"],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/hex/vertical.py",
+        "line": 330,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([str(engine), \"--protocol\", \"hex-vertical-v2\"], stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/ingest/real.py",
+        "line": 2023,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "compressed = base64.b64decode(encoded, validate=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/ingest/stream_resume.py",
+        "line": 473,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(list(producer_argv), env=environment,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/kernel_aot.py",
+        "line": 350,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = lzma.decompress(base64.b64decode(row[\"cubin_xz_base64\"], validate=True))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/kernel_aot.py",
+        "line": 352,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = base64.b64decode(row[\"cubin_base64\"], validate=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/kernel_aot.py",
+        "line": 365,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = lzma.decompress(base64.b64decode(row[\"cubin_xz_base64\"], validate=True))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/kernel_aot.py",
+        "line": 367,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "blob = base64.b64decode(row[\"cubin_base64\"], validate=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/mapped_engine_bridge.py",
+        "line": 1957,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/ml_export.py",
+        "line": 489,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/multi_run.py",
+        "line": 1816,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen: Callable[..., subprocess.Popen] | None = None,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/multi_run.py",
+        "line": 1824,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "launch = subprocess.Popen if popen is None else popen"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/multi_run.py",
+        "line": 1826,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "active: list[tuple[ProcessRecord, subprocess.Popen, object]] = []"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/multi_run.py",
+        "line": 1829,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "pending_process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/multi_run.py",
+        "line": 1875,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "remaining: list[tuple[ProcessRecord, subprocess.Popen, object]] = []"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/multi_run.py",
+        "line": 2519,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "popen: Callable[..., subprocess.Popen] | None = None,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/multi_run.py",
+        "line": 2546,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "launch = subprocess.Popen if popen is None else popen"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/multi_run.py",
+        "line": 2549,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "live: dict[str, list[tuple[int, ProcessRecord, subprocess.Popen,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/multi_run.py",
+        "line": 2555,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "pending_process: subprocess.Popen | None = None"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/nwpsuite/cli.py",
+        "line": 38,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(argv, stdout=log, stderr=log, stdin=subprocess.DEVNULL, start_new_session=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/nwpsuite/prepare.py",
+        "line": 95,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(command, stdout=subprocess.PIPE, text=True) as door:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/nwpsuite/run.py",
+        "line": 252,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-m\", \"woof.nwpsuite.worker\", str(folder)],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/nwpsuite/worker.py",
+        "line": 56,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child_process = subprocess.Popen(intent[\"argv\"], cwd=intent.get(\"cwd\"),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/race.py",
+        "line": 531,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, start_new_session=(os.name == \"posix\"))"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_artifacts.py",
+        "line": 1116,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_cli.py",
+        "line": 167,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_input_transfer.py",
+        "line": 154,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_native_plots.py",
+        "line": 445,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-I\", str(Path(__file__).resolve()), \"--workspace\", str(workspace),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_plan.py",
+        "line": 543,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "payload = base64.b64decode(entry[\"data\"], validate=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_preparation_v2.py",
+        "line": 125,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-I\", str(Path(__file__).resolve()),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_processed.py",
+        "line": 151,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-I\", \"-m\", \"woof.remote_processed\","
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_processed_v2.py",
+        "line": 631,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-I\", \"-m\", \"woof.remote_processed_v2\", \"--workspace\", str(workspace)],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_worker.py",
+        "line": 950,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([*command, \"--run\", str(directory), \"--token\", record[\"token\"]],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/remote_worker.py",
+        "line": 1228,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(record[\"argv\"], cwd=record[\"cwd\"], env=child_env,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/render_compare.py",
+        "line": 323,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/rustwx.py",
+        "line": 427,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([str(binary), \"--request\", str(request_path)],"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/rustwx.py",
+        "line": 2137,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/rustwx_fetch.py",
+        "line": 440,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/rustwx_static.py",
+        "line": 445,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/signal_report.py",
+        "line": 418,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "re-entrant.  Descriptor 2 is also what :func:`subprocess.Popen`"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/soundings.py",
+        "line": 215,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([str(exe), str(path)], stderr=subprocess.PIPE, text=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/supervisor.py",
+        "line": 2085,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _terminate_fresh_worker(process: subprocess.Popen, *, timeout: float = 10.0"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/supervisor.py",
+        "line": 2557,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/timeline/parallelism.py",
+        "line": 172,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/timeline/parallelism.py",
+        "line": 350,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(command)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/timeline/parallelism.py",
+        "line": 604,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"ps = [subprocess.Popen([sys.executable, '-c', {SERIAL.format(s=seconds)!r}]) for _ in range({n})]\\n\""
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/verification_visuals.py",
+        "line": 1096,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, \"-m\", \"woof.verification_visuals\","
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/verify/spectral_compare.py",
+        "line": 469,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _parseval(windowed: np.ndarray, transform: np.ndarray) -> dict[str, float]:"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/verify/spectral_compare.py",
+        "line": 721,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"left_parseval\": _parseval(left_windowed, left_fft),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/verify/spectral_compare.py",
+        "line": 722,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"reference_parseval\": _parseval(reference_windowed, reference_fft),"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/verify/spectral_compare.py",
+        "line": 797,
+        "keyword_detected": "eval(",
+        "code_snippet": "def _vector_parseval(u_windowed: np.ndarray, v_windowed: np.ndarray,"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/verify/spectral_compare.py",
+        "line": 943,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"left_parseval\": _vector_parseval("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/verify/spectral_compare.py",
+        "line": 945,
+        "keyword_detected": "eval(",
+        "code_snippet": "\"reference_parseval\": _vector_parseval("
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/verify/urban_ucm_ref.py",
+        "line": 284,
+        "keyword_detected": "exec(",
+        "code_snippet": "try: exec(self.code,namespace)"
+      },
+      {
+        "file": "metal_woof-1.1.5.2/woof/zarr_bridge.py",
+        "line": 80,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([os.fspath(executable), \"extract\","
+      }
+    ]
   }
 ]
