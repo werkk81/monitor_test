@@ -55164,5 +55164,535 @@
         "code_snippet": "process = subprocess.Popen([os.fspath(executable), \"extract\","
       }
     ]
+  },
+  {
+    "package_name": "pip-vm",
+    "checked_at": "2026-11-02T00:54:09.368472",
+    "download_url": "https://files.pythonhosted.org/packages/28/31/7bce547ddd35f3b80a9186de60c56a3d433764090ee3af8cff11393a5bdf/pip_vm-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pip_vm-0.1.1/pipvm/vm.py",
+        "line": 18,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/vm.py",
+        "line": 82,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen(self.command(), stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/vm.py",
+        "line": 129,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(self.run_command(argv, user, tty, x_socket))"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/cli.py",
+        "line": 98,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "client = subprocess.Popen(command, env=environment)"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/connect_filter.py",
+        "line": 128,
+        "keyword_detected": "exec(",
+        "code_snippet": "def install_and_exec(send_fd, argv):"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/connect_filter.py",
+        "line": 130,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sender = socket.socket(fileno=send_fd)"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/connect_filter.py",
+        "line": 288,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"\"\"subprocess.Popen(argv, **kwargs), with every connect() it makes decided by policy(Address) -> bool."
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/connect_filter.py",
+        "line": 292,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "receiver, sender = socket.socketpair()"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/connect_filter.py",
+        "line": 294,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, '-I', os.path.abspath(__file__), str(sender.fileno()), '--', *argv],"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/connect_filter.py",
+        "line": 316,
+        "keyword_detected": "exec(",
+        "code_snippet": "install_and_exec(int(sys.argv[1]), sys.argv[3:])"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/lazy.py",
+        "line": 52,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.listener = socket.socket(socket.AF_UNIX)"
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/lazy.py",
+        "line": 70,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.server = subprocess.Popen("
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/native.py",
+        "line": 49,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"\"\"subprocess.Popen(argv, **kwargs) under ordered ('allow'|'deny', POSIX ERE) connect rules."
+      },
+      {
+        "file": "pip_vm-0.1.1/pipvm/xephyr_run/native.py",
+        "line": 56,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen([str(binary()), *flags, '--', *argv], **kwargs)"
+      }
+    ]
+  },
+  {
+    "package_name": "nexus-lite",
+    "checked_at": "2026-11-02T00:54:10.988750",
+    "download_url": "https://files.pythonhosted.org/packages/7c/74/2aeb77ef7bf4ca48fb73a0525a98bb1e7733e8151d206f5f0e6bb6f9731d/nexus_lite-0.2.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/_proc.py",
+        "line": 9,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def reap_in_background(proc: \"subprocess.Popen\") -> \"subprocess.Popen\":"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/colab/tunnel.py",
+        "line": 70,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/colab/tunnel.py",
+        "line": 846,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self, cmd: Optional[str] = None, python: Optional[str] = None) -> dict:"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/colab/tunnel.py",
+        "line": 1234,
+        "keyword_detected": "exec(",
+        "code_snippet": "res = client.exec(cmd=args.cmd)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/compute.py",
+        "line": 146,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "SPEC = json.loads(zlib.decompress(base64.b64decode({spec_zlib_b64!r})).decode(\"utf-8\"))"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/compute.py",
+        "line": 169,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(BUNDLE_B64)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/compute.py",
+        "line": 233,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(SPEC[\"python\"], str(job_dir / \"inline_task.py\"), \"exec\"), ns, ns)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/compute.py",
+        "line": 453,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "runner_path.write_bytes(base64.b64decode(opts[\"runner_b64\"]))"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/compute.py",
+        "line": 659,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _post_exec(py_snippet: str) -> dict[str, Any]:"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/compute.py",
+        "line": 668,
+        "keyword_detected": "exec(",
+        "code_snippet": "raw = _post_exec(runner_src)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/compute.py",
+        "line": 680,
+        "keyword_detected": "exec(",
+        "code_snippet": "_post_exec(stage_py)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/compute.py",
+        "line": 686,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"    py_p.write_bytes(base64.b64decode(b64_p.read_text(encoding='ascii')))\\n\""
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/compute.py",
+        "line": 695,
+        "keyword_detected": "exec(",
+        "code_snippet": "raw = _post_exec(run_py)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/core.py",
+        "line": 50,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_group_and_collect(proc: \"subprocess.Popen\", grace: float = 5.0) -> tuple[str, str]:"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/core.py",
+        "line": 303,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/core.py",
+        "line": 460,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "runner = subprocess.Popen("
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/demos/orchestration.py",
+        "line": 40,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/loom.py",
+        "line": 224,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _exec(self, args: List[str], trace_path: Optional[str]) -> LoomResult:"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/loom.py",
+        "line": 275,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec([\"run\", \"--task-file\", tf, *flags], trace_path)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/loom.py",
+        "line": 276,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec([\"run\", \"--task-file\", str(task), *flags], trace_path)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/loom.py",
+        "line": 282,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._exec([\"-p\", instruction, *flags], trace_path)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/pty.py",
+        "line": 229,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/pty.py",
+        "line": 291,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/pty.py",
+        "line": 316,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "reap_in_background(subprocess.Popen("
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/pty.py",
+        "line": 497,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "reap_in_background(subprocess.Popen("
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/pty.py",
+        "line": 522,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/pty.py",
+        "line": 558,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/pty.py",
+        "line": 614,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/nexus_lite/pty.py",
+        "line": 653,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "nexus_lite-0.2.2/tests/test_colab_storage.py",
+        "line": 62,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "victim = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"])"
+      },
+      {
+        "file": "nexus_lite-0.2.2/tests/test_colab_tunnel_secure.py",
+        "line": 176,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "victim = subprocess.Popen([sys.executable, \"-c\", \"import time; time.sleep(60)\"])"
+      },
+      {
+        "file": "nexus_lite-0.2.2/tests/test_colab_tunnel_secure.py",
+        "line": 190,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "sub = subprocess.Popen(["
+      },
+      {
+        "file": "nexus_lite-0.2.2/tests/test_colab_tunnel_secure.py",
+        "line": 285,
+        "keyword_detected": "exec(",
+        "code_snippet": "res = client.exec(python=\"print(10 + 20)\")"
+      },
+      {
+        "file": "nexus_lite-0.2.2/tests/test_loom_install.py",
+        "line": 80,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"u.urlopen = boom; socket.socket.connect = boom\\n\""
+      },
+      {
+        "file": "nexus_lite-0.2.2/tests/test_nexus_lite.py",
+        "line": 1275,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "dead = subprocess.Popen([\"true\"]); dead.wait()"
+      },
+      {
+        "file": "nexus_lite-0.2.2/tests/test_nexus_lite.py",
+        "line": 1313,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"subprocess.Popen(['sh', '-c', 'sleep 31 #{marker}'], start_new_session=True); \""
+      },
+      {
+        "file": "nexus_lite-0.2.2/tests/test_phi_gate.py",
+        "line": 52,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "real = core.subprocess.Popen"
+      }
+    ]
+  },
+  {
+    "package_name": "auth-guide",
+    "checked_at": "2026-11-02T00:54:11.746987",
+    "download_url": "https://files.pythonhosted.org/packages/40/d4/be55c111fd559882a125f436a0271041b868a3af4411771256188a4d50d6/auth_guide-0.5.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "auth_guide-0.5.0/src/auth_guide/accounts/__init__.py",
+        "line": 265,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(encoded_key, validate=True)"
+      },
+      {
+        "file": "auth_guide-0.5.0/src/auth_guide/cli/__init__.py",
+        "line": 416,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "auth_guide-0.5.0/src/auth_guide/system_trust.py",
+        "line": 49,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "memjudge",
+    "checked_at": "2026-11-02T00:54:12.270946",
+    "download_url": "https://files.pythonhosted.org/packages/0d/a1/8ab65f8024e2dcef6042c3b62917d57706ee878718301c5230807055a0ab/memjudge-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "memjudge-0.1.0/connectors/baselines/bm25/connector.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\")"
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/baselines/bm25/connector.py",
+        "line": 112,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\\n\".join(item.text for item in items), items=items)"
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/letta/cloud/connector.py",
+        "line": 110,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\", usage=Usage(api_calls=0))"
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/letta/cloud/connector.py",
+        "line": 145,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval("
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/mem0/oss/connector.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\", usage=Usage(api_calls=0))"
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/mem0/oss/connector.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval("
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/mem0/platform/connector.py",
+        "line": 83,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval("
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/offline/replay/connector.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\\n\".join(i.text for i in items), items=items)"
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/recalld/cloud/connector.py",
+        "line": 214,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\")"
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/recalld/cloud/connector.py",
+        "line": 226,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval("
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/supermemory/cloud/connector.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval("
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/zep/cloud/connector.py",
+        "line": 121,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\\n\\n\".join(parts), items=items, usage=Usage(api_calls=2))"
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/zep/graphiti/connector.py",
+        "line": 94,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\", usage=Usage(api_calls=0))"
+      },
+      {
+        "file": "memjudge-0.1.0/connectors/zep/graphiti/connector.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\\n\\n\".join(parts), items=items, usage=Usage(api_calls=2))"
+      },
+      {
+        "file": "memjudge-0.1.0/runner/src/memjudge_runner/retrieve.py",
+        "line": 84,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _relay(proc: subprocess.Popen[str], name: str) -> None:"
+      },
+      {
+        "file": "memjudge-0.1.0/runner/src/memjudge_runner/retrieve.py",
+        "line": 96,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "memjudge-0.1.0/runner/tests/fakes.py",
+        "line": 32,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(box[\"data\"])"
+      },
+      {
+        "file": "memjudge-0.1.0/runner/tests/test_flow.py",
+        "line": 390,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(\"one\\u2028two\\u2029three\\n\" + found.context, found.items, found.usage)"
+      },
+      {
+        "file": "memjudge-0.1.0/runner/tests/test_units.py",
+        "line": 185,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(body[\"content\"]) == b\"{}\" and \"sha\" not in body  # create only"
+      },
+      {
+        "file": "memjudge-0.1.0/runner/tests/test_units.py",
+        "line": 297,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"import socket, sys, time; s = socket.socket(); s.bind(('127.0.0.1', int(sys.argv[1]))); \""
+      },
+      {
+        "file": "memjudge-0.1.0/runner/tests/test_units.py",
+        "line": 303,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "memjudge-0.1.0/src/memjudge/signing.py",
+        "line": 102,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "value = base64.b64decode(sig[\"value\"], validate=True)"
+      },
+      {
+        "file": "memjudge-0.1.0/tests/test_harness.py",
+        "line": 86,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_each_size_gets_its_own_retrieval(tiny_path: Path, tmp_path: Path) -> None:"
+      },
+      {
+        "file": "memjudge-0.1.0/tests/test_harness.py",
+        "line": 103,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=f\"{top_k} items\")"
+      },
+      {
+        "file": "memjudge-0.1.0/tests/test_harness.py",
+        "line": 149,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"Biscuit \" * 500)"
+      },
+      {
+        "file": "memjudge-0.1.0/tests/test_harness.py",
+        "line": 224,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\")"
+      },
+      {
+        "file": "memjudge-0.1.0/tests/test_harness.py",
+        "line": 252,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\")"
+      },
+      {
+        "file": "memjudge-0.1.0/tests/test_harness.py",
+        "line": 473,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\")"
+      },
+      {
+        "file": "memjudge-0.1.0/tests/test_harness.py",
+        "line": 544,
+        "keyword_detected": "eval(",
+        "code_snippet": "return Retrieval(context=\"\")"
+      }
+    ]
   }
 ]
