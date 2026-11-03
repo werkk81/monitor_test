@@ -55694,5 +55694,77 @@
         "code_snippet": "return Retrieval(context=\"\")"
       }
     ]
+  },
+  {
+    "package_name": "opencdr-fleet-manager",
+    "checked_at": "2026-11-03T00:04:38.657596",
+    "download_url": "https://files.pythonhosted.org/packages/19/e5/e674c2efae6d5e21cf4fd6f1a89126d627a0838aa6e6e675e7c83b3db636/opencdr_fleet_manager-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "opencdr_fleet_manager-0.1.0/src/opencdr_fleet/api.py",
+        "line": 125,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(raw, validate=True).decode()"
+      },
+      {
+        "file": "opencdr_fleet_manager-0.1.0/src/opencdr_fleet/models.py",
+        "line": 156,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(value + \"=\" * (-len(value) % 4), altchars=b\"-_\", validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "os-optics-kit",
+    "checked_at": "2026-11-03T00:04:39.326421",
+    "download_url": "https://files.pythonhosted.org/packages/e1/83/cf3560c68d716bb6f0c7f5d77c29ef6456e5a1f9da17a2b4b7eeaeacbc7b/os_optics_kit-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "os_optics_kit-0.1.0/tests/test_contrib.py",
+        "line": 232,
+        "keyword_detected": "eval(",
+        "code_snippet": "return {k.value: v for k, v in zip(node.keys, [__import__(\"ast\").literal_eval(v) for v in node.values])}"
+      }
+    ]
+  },
+  {
+    "package_name": "langbot-sdk",
+    "checked_at": "2026-11-03T00:04:39.636868",
+    "download_url": "https://files.pythonhosted.org/packages/ae/90/68453858db199abdb3e63150ba6fc07a3b852ef1135c6d74b09fd1b5b022/langbot_sdk-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "langbot_sdk-0.1.0/src/langbot/polymarket_trading.py",
+        "line": 173,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(secret_key)"
+      },
+      {
+        "file": "langbot_sdk-0.1.0/src/langbot/receipts.py",
+        "line": 388,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return sha256_hex(base64.b64decode(public_key_b64))[:16]"
+      },
+      {
+        "file": "langbot_sdk-0.1.0/src/langbot/receipts.py",
+        "line": 393,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return Ed25519PublicKey.from_public_bytes(base64.b64decode(public_key_b64))"
+      },
+      {
+        "file": "langbot_sdk-0.1.0/src/langbot/receipts.py",
+        "line": 401,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key.verify(base64.b64decode(signature_b64), message.encode(\"utf-8\"))"
+      },
+      {
+        "file": "langbot_sdk-0.1.0/src/langbot/x402.py",
+        "line": 138,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return json.loads(base64.b64decode(raw, validate=False))"
+      }
+    ]
   }
 ]
