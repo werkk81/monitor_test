@@ -55766,5 +55766,175 @@
         "code_snippet": "return json.loads(base64.b64decode(raw, validate=False))"
       }
     ]
+  },
+  {
+    "package_name": "onetrace-auto",
+    "checked_at": "2026-11-03T22:36:14.204194",
+    "download_url": "https://files.pythonhosted.org/packages/7a/82/c7ab9d5c5d93e33c0d2fb95325f331026f99e9b564305d28186da25579d2/onetrace_auto-0.7.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "onetrace_auto-0.7.0/src/onetrace/auto/launcher.py",
+        "line": 71,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(command, env=env)"
+      }
+    ]
+  },
+  {
+    "package_name": "opensemantic.batteries",
+    "checked_at": "2026-11-03T22:36:15.386480",
+    "download_url": "https://files.pythonhosted.org/packages/73/6c/355d30483f9d3f268b5aa981bdca4f1ae374a21a0c8c074e499368fc2834/opensemantic_batteries-1.5.0.post1000004007000.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "opensemantic_batteries-1.5.0.post1000004007000/docs/media/_screenshot_utils.py",
+        "line": 420,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "einstein-tiling",
+    "checked_at": "2026-11-03T22:36:16.032156",
+    "download_url": "https://files.pythonhosted.org/packages/41/66/929fe68e36495b99ce70b0ac47baa278de627bd6c225269d33cfb76c6f3c/einstein_tiling-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "einstein_tiling-0.1.0/tests/test_cli.py",
+        "line": 11,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "fincas",
+    "checked_at": "2026-11-03T22:36:18.166323",
+    "download_url": "https://files.pythonhosted.org/packages/a2/3b/5bad1fb0286b8d5b1dda4cef9d9b348abe3a7d88d9c49ece45964e6fed42/fincas-0.4.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "fincas-0.4.1/core/release_notes.py",
+        "line": 283,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(node.value)"
+      },
+      {
+        "file": "fincas-0.4.1/core/testing/no_network.py",
+        "line": 11,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "- ``socket.socket.connect`` / ``connect_ex`` raise :class:`LiveSocketError`"
+      },
+      {
+        "file": "fincas-0.4.1/core/testing/no_network.py",
+        "line": 123,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _address_allowed(sock: socket.socket, address: Any) -> bool:"
+      },
+      {
+        "file": "fincas-0.4.1/core/testing/no_network.py",
+        "line": 218,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "connect=socket.socket.connect,"
+      },
+      {
+        "file": "fincas-0.4.1/core/testing/no_network.py",
+        "line": 219,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "connect_ex=socket.socket.connect_ex,"
+      },
+      {
+        "file": "fincas-0.4.1/core/testing/no_network.py",
+        "line": 224,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect = _guarded_connect"
+      },
+      {
+        "file": "fincas-0.4.1/core/testing/no_network.py",
+        "line": 225,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect_ex = _guarded_connect_ex"
+      },
+      {
+        "file": "fincas-0.4.1/core/testing/no_network.py",
+        "line": 235,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect = _ORIGINALS[\"connect\"]"
+      },
+      {
+        "file": "fincas-0.4.1/core/testing/no_network.py",
+        "line": 236,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.connect_ex = _ORIGINALS[\"connect_ex\"]"
+      },
+      {
+        "file": "fincas-0.4.1/core/testing/no_network.py",
+        "line": 246,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "return bool(_ORIGINALS) and socket.socket.connect is _guarded_connect"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 49,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 56,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 61,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 66,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET6, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 103,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 117,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as server:"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 120,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as client:"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 160,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 184,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "guarded = socket.socket.connect"
+      },
+      {
+        "file": "fincas-0.4.1/core/tests/test_no_network.py",
+        "line": 188,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.assertIsNot(socket.socket.connect, guarded)"
+      }
+    ]
   }
 ]
