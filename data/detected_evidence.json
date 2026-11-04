@@ -55936,5 +55936,243 @@
         "code_snippet": "self.assertIsNot(socket.socket.connect, guarded)"
       }
     ]
+  },
+  {
+    "package_name": "socratic-mcp",
+    "checked_at": "2026-11-04T02:39:37.331844",
+    "download_url": "https://files.pythonhosted.org/packages/b6/39/1e3ff1061c9fc9b840404baf22a6470038732447286cfc2868863940e42e/socratic_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "socratic_mcp-0.1.0/tests/test_server.py",
+        "line": 47,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"socratic_mcp.server\"],"
+      }
+    ]
+  },
+  {
+    "package_name": "nlalpha-family-cta",
+    "checked_at": "2026-11-04T02:39:37.691386",
+    "download_url": "https://files.pythonhosted.org/packages/79/73/5eee7788dab7e3fc1f5899f9df12f95fd9d96d64b099d7bfb8ceafeb7434/nlalpha_family_cta-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "nlalpha_family_cta-0.4.0/tests/test_contract.py",
+        "line": 57,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(\"from __future__ import annotations\\n\" + declaration, namespace)"
+      },
+      {
+        "file": "nlalpha_family_cta-0.4.0/tests/test_contract.py",
+        "line": 76,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(ast.parse(textwrap.dedent(examples[0])), \"<cta-confess>\", \"exec\"), namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "bifrost-photonics",
+    "checked_at": "2026-11-04T02:39:37.928935",
+    "download_url": "https://files.pythonhosted.org/packages/e8/35/cf0c7e7a6bdd6d97cba73613ba0e6540c0d1e1c2f7588b236baa5ef95c4e/bifrost_photonics-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "bifrost_photonics-0.1.0/bifrost/viewer/widget.py",
+        "line": 844,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(encoded, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "c-spikes",
+    "checked_at": "2026-11-04T02:39:38.640591",
+    "download_url": "https://files.pythonhosted.org/packages/fe/42/e41c375dbd82769d5be82029d7a03aaaeda36a0ab080b093db20672654cc/c_spikes-0.2.0rc1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "c_spikes-0.2.0rc1/scripts/test_wheel.py",
+        "line": 24,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(command, env=env, cwd=cwd) as process:"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/src/c_spikes/ens2/ENS2.py",
+        "line": 733,
+        "keyword_detected": "eval(",
+        "code_snippet": "C.eval()"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/src/c_spikes/gui/app.py",
+        "line": 2137,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.Accepted:"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/src/c_spikes/gui/app.py",
+        "line": 2365,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.Accepted:"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/src/c_spikes/gui/app.py",
+        "line": 2507,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.Accepted:"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/src/c_spikes/gui/app.py",
+        "line": 2607,
+        "keyword_detected": "exec(",
+        "code_snippet": "if preview.exec() != QtWidgets.QDialog.Accepted:"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/src/c_spikes/gui/app.py",
+        "line": 2651,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() != QtWidgets.QDialog.Accepted:"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/src/c_spikes/gui/app.py",
+        "line": 4267,
+        "keyword_detected": "exec(",
+        "code_snippet": "app.exec()"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/src/c_spikes/pgas/pool.py",
+        "line": 282,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen(argv, cwd=attempt, env=env, stdout=log,"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/tests/native/contracts/processes.py",
+        "line": 9,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p=subprocess.Popen(args,cwd=cwd,stdout=so,stderr=se,stdin=subprocess.PIPE if ready else subprocess.DEVNULL,start_new_session=True,pass_fds=(rw,) if ready else ())"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/tests/native/contracts/run_supplemental.py",
+        "line": 71,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(row['argv'], cwd=cwd, stdout=stdout, stderr=stderr,"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/tests/pgas_fake_worker.py",
+        "line": 26,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(40)'])"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/tests/test_gui_oasis_app.py",
+        "line": 37,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(module, str(app_path), \"exec\"), namespace)"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/tests/test_mps_gate.py",
+        "line": 127,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "clients=[subprocess.Popen([sys.executable,str(child),str(config),'one','0','ok'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL),"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/tests/test_mps_gate.py",
+        "line": 128,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable,str(child),str(config),'two','.3','fail' if mode=='partner_failure' else 'ok'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)]"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/tests/test_pgas_queue.py",
+        "line": 200,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "sentinel = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(40)'])"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/tests/test_pgas_queue.py",
+        "line": 202,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen(argv, stdout=log, stderr=log)"
+      },
+      {
+        "file": "c_spikes-0.2.0rc1/tests/test_pgas_queue.py",
+        "line": 282,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, str(driver), str(FAKE), str(source), str(root)],"
+      }
+    ]
+  },
+  {
+    "package_name": "teapottrainer",
+    "checked_at": "2026-11-04T02:39:38.889192",
+    "download_url": "https://files.pythonhosted.org/packages/c1/bb/84fabf608ba1c11fed358c28794c2715380766716fc5bf1d978b5011e23b/teapottrainer-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/evals.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/evals.py",
+        "line": 235,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/evals.py",
+        "line": 261,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/evals.py",
+        "line": 515,
+        "keyword_detected": "eval(",
+        "code_snippet": "scored = score_ifeval(row, prediction)"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/formatting.py",
+        "line": 570,
+        "keyword_detected": "eval(",
+        "code_snippet": "def format_ifeval(row: dict) -> tuple[str, str] | None:"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/formatting.py",
+        "line": 604,
+        "keyword_detected": "eval(",
+        "code_snippet": "def format_alpaca_eval(row: dict) -> tuple[str, str] | None:"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/ifeval.py",
+        "line": 259,
+        "keyword_detected": "eval(",
+        "code_snippet": "def score_ifeval(row: dict, prediction: str) -> dict[str, float]:"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/metrics.py",
+        "line": 308,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = eval(compile(tree, \"<calculator>\", \"eval\"), {\"__builtins__\": {}}, {})"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/trainer.py",
+        "line": 96,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "cpu = torch.tensor(list(base64.b64decode(payload[\"cpu\"])), dtype=torch.uint8)"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/trainer.py",
+        "line": 99,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "cuda = torch.tensor(list(base64.b64decode(payload[\"cuda\"])), dtype=torch.uint8)"
+      },
+      {
+        "file": "teapottrainer-0.1.0/teapottrainer/trainer.py",
+        "line": 408,
+        "keyword_detected": "eval(",
+        "code_snippet": "unwrapped.eval()"
+      }
+    ]
   }
 ]
