@@ -56174,5 +56174,251 @@
         "code_snippet": "unwrapped.eval()"
       }
     ]
+  },
+  {
+    "package_name": "simple-module-oidc",
+    "checked_at": "2026-11-04T22:55:28.458512",
+    "download_url": "https://files.pythonhosted.org/packages/6a/dd/41aae94eed3c4b3b3bbab1a60892d5b931047637b08e44c164f8a0466c49/simple_module_oidc-0.0.43.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "simple_module_oidc-0.0.43/tests/test_oidc_endpoint_auth.py",
+        "line": 52,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(encoded).decode() == \"app+%3A%2B%C3%A9:secret+%3A%2B%C3%A9\""
+      },
+      {
+        "file": "simple_module_oidc-0.0.43/tests/test_oidc_keycloak_flow.py",
+        "line": 23,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return json.loads(base64.b64decode(TimestampSigner(\"test-secret-key\").unsign(value)))"
+      },
+      {
+        "file": "simple_module_oidc-0.0.43/tests/test_oidc_logout.py",
+        "line": 51,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert \"oidc_refresh_token\" not in json.loads(base64.b64decode(data))"
+      },
+      {
+        "file": "simple_module_oidc-0.0.43/tests/test_oidc_session_transaction.py",
+        "line": 180,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "payload = json.loads(base64.b64decode(cookie.split(\"=\", 1)[1].split(\".\", 1)[0]))"
+      }
+    ]
+  },
+  {
+    "package_name": "instabox-sdk",
+    "checked_at": "2026-11-04T22:55:28.536591",
+    "download_url": "https://files.pythonhosted.org/packages/88/db/623610e2357ae11861566ae953ed944c8afd7cedd9f480ff4bff40b57c18/instabox_sdk-0.3.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "instabox_sdk-0.3.1/src/instabox/_client.py",
+        "line": 714,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec("
+      },
+      {
+        "file": "instabox_sdk-0.3.1/src/instabox/_client.py",
+        "line": 904,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = self._c.machines.exec(machine, [\"rm\", \"-rf\", \"--\", path])"
+      },
+      {
+        "file": "instabox_sdk-0.3.1/tests/test_client.py",
+        "line": 1055,
+        "keyword_detected": "exec(",
+        "code_snippet": "def test_exec(command: Any, sent: Dict[str, Any]) -> None:"
+      },
+      {
+        "file": "instabox_sdk-0.3.1/tests/test_client.py",
+        "line": 1058,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = client(rec).machines.exec(\"box\", command, cwd=\"/tmp\", env={\"A\": \"1\"}, stdin=\"in\", timeout=5)"
+      },
+      {
+        "file": "instabox_sdk-0.3.1/tests/test_client.py",
+        "line": 1076,
+        "keyword_detected": "exec(",
+        "code_snippet": "client(rec).machines.exec(MID, [])"
+      },
+      {
+        "file": "instabox_sdk-0.3.1/tests/test_client.py",
+        "line": 1084,
+        "keyword_detected": "exec(",
+        "code_snippet": "client(rec).machines.exec(MID, [\"\", \"-la\"])"
+      },
+      {
+        "file": "instabox_sdk-0.3.1/tests/test_client.py",
+        "line": 1092,
+        "keyword_detected": "exec(",
+        "code_snippet": "client(rec).machines.exec(MID, [\"printf\", b\"x\"])  # type: ignore[list-item]"
+      },
+      {
+        "file": "instabox_sdk-0.3.1/tests/test_client.py",
+        "line": 1094,
+        "keyword_detected": "exec(",
+        "code_snippet": "client(rec).machines.exec(MID, [\"sleep\", 5])  # type: ignore[list-item]"
+      },
+      {
+        "file": "instabox_sdk-0.3.1/tests/test_client.py",
+        "line": 1100,
+        "keyword_detected": "exec(",
+        "code_snippet": "r = client(lambda r: httpx.Response(200, json=result)).machines.exec(MID, \"sleep 9\", timeout=1)"
+      },
+      {
+        "file": "instabox_sdk-0.3.1/tests/test_live.py",
+        "line": 47,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert c.machines.exec(box.id, \"printf sdk-ok\").stdout == \"sdk-ok\""
+      },
+      {
+        "file": "instabox_sdk-0.3.1/tests/test_live.py",
+        "line": 48,
+        "keyword_detected": "exec(",
+        "code_snippet": "argv = c.machines.exec(box.id, [\"printf\", \"%s|\", \"a b\", \"$HOME\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "socpuppet",
+    "checked_at": "2026-11-04T22:55:28.998541",
+    "download_url": "https://files.pythonhosted.org/packages/31/19/95513f1b7f9dee5046122bd48cfa131e67ef60943b4554a3956806fd9061/socpuppet-0.0.1rc1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "socpuppet-0.0.1rc1/examples/linux_cable.py",
+        "line": 90,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/examples/linux_cable.py",
+        "line": 120,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/python/socpuppet/pytest_plugin.py",
+        "line": 314,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/python/socpuppet/pytest_plugin.py",
+        "line": 400,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child: subprocess.Popen[str], report_file: IO[bytes], timeout: float"
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/python/socpuppet/pytest_plugin.py",
+        "line": 502,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _stop(child: subprocess.Popen[str]) -> tuple[str, str]:"
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/processes.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/processes.py",
+        "line": 88,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/pseudo_terminal.py",
+        "line": 40,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/sockets.py",
+        "line": 29,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "probe = held.enter_context(socket.socket())"
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/sockets.py",
+        "line": 42,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/test_interactive.py",
+        "line": 233,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/test_sockets.py",
+        "line": 34,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as taken:"
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/test_ssh_over_the_cable.py",
+        "line": 132,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "command = subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/test_twister_boards.py",
+        "line": 309,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/python/this_machine.py",
+        "line": 160,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "command = subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/tooling/conftest.py",
+        "line": 207,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/tooling/test_ci.py",
+        "line": 180,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/tooling/test_ci_workflow.py",
+        "line": 787,
+        "keyword_detected": "eval(",
+        "code_snippet": "return eval(python, {\"__builtins__\": {}}, {\"results\": results})"
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tests/tooling/test_released_images.py",
+        "line": 540,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(path.read_text(), defined)"
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tools/ci.py",
+        "line": 1255,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.processes: dict[str, subprocess.Popen[bytes]] = {}"
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tools/ci.py",
+        "line": 1372,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "socpuppet-0.0.1rc1/tools/pciem_guest.py",
+        "line": 237,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "qemu = subprocess.Popen("
+      }
+    ]
   }
 ]
