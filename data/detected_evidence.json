@@ -56420,5 +56420,125 @@
         "code_snippet": "qemu = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "pants-backend-distroless",
+    "checked_at": "2026-11-05T22:56:08.351763",
+    "download_url": "https://files.pythonhosted.org/packages/94/28/48b5455a61c47d5b9844b0d874e4df51c888885b195414492be0e7515066/pants_backend_distroless-0.1.0rc0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pants_backend_distroless-0.1.0rc0/pants_backend_distroless/openpgp.py",
+        "line": 55,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "packets += base64.b64decode(encoded, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "Pyjo-Reactor-Trio",
+    "checked_at": "2026-11-05T22:56:08.784246",
+    "download_url": "https://files.pythonhosted.org/packages/3e/55/cdda39d9ea3948d74b46598a553f90b34295a768608527896b47529ba342/pyjo_reactor_trio-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 470,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "first, first_peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 471,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "second, second_peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 499,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "first, peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 562,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "a, a_peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 563,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "b, b_peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 600,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "first, peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 628,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "first, peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 657,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "first, peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 707,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "first, peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/Reactor_Trio.py",
+        "line": 762,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "first, peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/examples.py",
+        "line": 18,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/examples.py",
+        "line": 47,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([sys.executable, script], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/docs/Reactor_Trio.py",
+        "line": 10,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "first, peer = socket.socketpair()"
+      },
+      {
+        "file": "pyjo_reactor_trio-0.1.0/t/docs/Reactor_Trio.py",
+        "line": 11,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "second, other = socket.socketpair()"
+      }
+    ]
+  },
+  {
+    "package_name": "item-appraiser",
+    "checked_at": "2026-11-05T22:56:08.922815",
+    "download_url": "https://files.pythonhosted.org/packages/47/66/bf7cd29a406ca4f23dfab6cc7dc777042c0d6619a6d78e12779c961381ac/item_appraiser-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "item_appraiser-0.1.0/tests/conftest.py",
+        "line": 13,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", refuse)"
+      }
+    ]
   }
 ]
