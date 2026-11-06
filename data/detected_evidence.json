@@ -56540,5 +56540,251 @@
         "code_snippet": "monkeypatch.setattr(socket.socket, \"connect\", refuse)"
       }
     ]
+  },
+  {
+    "package_name": "ironshell",
+    "checked_at": "2026-11-06T22:26:43.706486",
+    "download_url": "https://files.pythonhosted.org/packages/72/0a/46d9415b3b118423ad4a6b0bf68724cade74c043c486007689177eb5826f/ironshell-1.5.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ironshell-1.5.1/python/ironshell/__init__.py",
+        "line": 159,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = self._runtime.eval(code)"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/__init__.py",
+        "line": 204,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = self._runtime.eval(code)"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/__init__.py",
+        "line": 433,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, code: str) -> Any:"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/__init__.py",
+        "line": 604,
+        "keyword_detected": "eval(",
+        "code_snippet": "return runtime.eval(code)"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/__init__.py",
+        "line": 660,
+        "keyword_detected": "eval(",
+        "code_snippet": "return rt.eval(self.to_code())"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 109,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = client.eval('[1,2,3] | map(fn(x) => x * 2)')"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 135,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self, code: str) -> Any:"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 212,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = self.runtime.eval(code)"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 272,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = self.runtime.eval(code)"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 464,
+        "keyword_detected": "eval(",
+        "code_snippet": "lambda d, code=s.get(\"code\", \"x\"): self.runtime.eval("
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 477,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.runtime.eval(f'let x = {_ironshell_value(item)}; {map_code}')"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 480,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.runtime.eval("
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 547,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.runtime.eval(f'let x = {_ironshell_value(item)}; {map_expr}')"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 550,
+        "keyword_detected": "eval(",
+        "code_snippet": "return self.runtime.eval(f'let a = {_ironshell_value(a)}; let b = {_ironshell_value(b)}; {reduce_expr}')"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 602,
+        "keyword_detected": "eval(",
+        "code_snippet": "return lambda d: self.runtime.eval(f'let x = {_ironshell_value(d)}; {code}')"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 882,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = self.client.eval(code)"
+      },
+      {
+        "file": "ironshell-1.5.1/python/ironshell/langchain.py",
+        "line": 914,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = self.client.eval(params.get(\"code\", \"\"))"
+      },
+      {
+        "file": "ironshell-1.5.1/tests/test_agent_call.py",
+        "line": 140,
+        "keyword_detected": "eval(",
+        "code_snippet": "def test_refusal_happens_before_any_eval(self):"
+      },
+      {
+        "file": "ironshell-1.5.1/tests/test_sdk.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval('[1, 2, 3] | map(fn(x) => x * 2)')"
+      },
+      {
+        "file": "ironshell-1.5.1/tests/test_sdk.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval('{\"name\": \"test\", \"value\": 42}')"
+      },
+      {
+        "file": "ironshell-1.5.1/tests/test_sdk.py",
+        "line": 77,
+        "keyword_detected": "eval(",
+        "code_snippet": "runtime.eval('invalid code {{{{')"
+      },
+      {
+        "file": "ironshell-1.5.1/tests/test_sdk.py",
+        "line": 284,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"1 + 2\")"
+      },
+      {
+        "file": "ironshell-1.5.1/tests/test_sdk.py",
+        "line": 290,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = runtime.eval(\"[1, 2, 3]\")"
+      }
+    ]
+  },
+  {
+    "package_name": "eo-fetch-api",
+    "checked_at": "2026-11-06T22:26:44.055302",
+    "download_url": "https://files.pythonhosted.org/packages/91/51/b0e0b2093caaddd71c231c279506b10b7a7e98cfbde65e64858ac8c06aea/eo_fetch_api-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "eo_fetch_api-1.0.0/src/eo_fetch/backends/marine.py",
+        "line": 138,
+        "keyword_detected": "eval(",
+        "code_snippet": "request = ast.literal_eval(item.meta[\"request\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "givememd",
+    "checked_at": "2026-11-06T22:26:44.108465",
+    "download_url": "https://files.pythonhosted.org/packages/9a/f1/557600b268e251a3b6e9316121925f7896f2490736caf3ccda3d8fc68cb8/givememd-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "givememd-0.1.0/tests/test_live.py",
+        "line": 15,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket(); s.bind(('127.0.0.1', 0)); port = s.getsockname()[1]; s.close()"
+      }
+    ]
+  },
+  {
+    "package_name": "arkivector",
+    "checked_at": "2026-11-06T22:26:44.230478",
+    "download_url": "https://files.pythonhosted.org/packages/9f/f0/c3e7fd2ca4e24b0933719aaccfed93d90d067c108f8bff9e6f26e1a4f2d1/arkivector-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "arkivector-1.0.0/src/arkivector/client.py",
+        "line": 960,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_b = base64.b64decode(t_val)"
+      },
+      {
+        "file": "arkivector-1.0.0/src/arkivector/client.py",
+        "line": 1037,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_vb = base64.b64decode(str(e_vec_bytes))"
+      },
+      {
+        "file": "arkivector-1.0.0/src/arkivector/models.py",
+        "line": 72,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(str(self.value))"
+      },
+      {
+        "file": "arkivector-1.0.0/src/arkivector/models.py",
+        "line": 538,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.vector = vectorbytes_decode_any(base64.b64decode(self.vector_bytes))"
+      },
+      {
+        "file": "arkivector-1.0.0/src/arkivector/models.py",
+        "line": 616,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "self.vector = vectorbytes_decode_any(base64.b64decode(self.vector_bytes))"
+      }
+    ]
+  },
+  {
+    "package_name": "betterportal",
+    "checked_at": "2026-11-06T22:26:44.383755",
+    "download_url": "https://files.pythonhosted.org/packages/99/8c/5c858b08ea6df47cbd7de06a3240f8a49fd3c12191a5da82bf8f68af5de5/betterportal-11.0.7.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "betterportal-11.0.7/betterportal/encryption.py",
+        "line": 36,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(value + (\"=\" * (-len(value) % 4) if url else \"\"), altchars=b\"-_\" if url else None, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "cocat-rs",
+    "checked_at": "2026-11-06T22:26:44.532639",
+    "download_url": "https://files.pythonhosted.org/packages/e6/d9/df45aa6ceab2b551eeb10a1dda17a8fec64b5731e4e1317c8b4a81580d3b/cocat_rs-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cocat_rs-0.1.0/crates/cocat-py/tests/conftest.py",
+        "line": 20,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "cocat_rs-0.1.0/crates/cocat-py/tests/conftest.py",
+        "line": 77,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
   }
 ]
