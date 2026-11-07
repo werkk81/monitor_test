@@ -56786,5 +56786,2027 @@
         "code_snippet": "process = subprocess.Popen("
       }
     ]
+  },
+  {
+    "package_name": "tractable",
+    "checked_at": "2026-11-07T02:05:24.526963",
+    "download_url": "https://files.pythonhosted.org/packages/a1/13/22879f3281815ff183207b42e69e7d052677dc96a1799ab0f953ab01d237/tractable-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tractable-1.0.0/src/tractable/git_store.py",
+        "line": 602,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "tractable-1.0.0/tests/test_git_store.py",
+        "line": 481,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "maintainer = subprocess.Popen([sys.executable, \"-c\", MAINTAINER, str(store.ns), str(stop)],"
+      },
+      {
+        "file": "tractable-1.0.0/tests/test_git_store.py",
+        "line": 484,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable, \"-c\", WORKER, ref.remote, str(cache), f\"w{n}\", \"3\"],"
+      },
+      {
+        "file": "tractable-1.0.0/tests/test_mcp_stdio.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": ") -> subprocess.Popen:"
+      },
+      {
+        "file": "tractable-1.0.0/tests/test_mcp_stdio.py",
+        "line": 66,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "tractable-1.0.0/tests/test_mcp_stdio.py",
+        "line": 77,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _rpc(proc: subprocess.Popen, method: str, params: dict | None = None, req_id: int = 1) -> dict:"
+      },
+      {
+        "file": "tractable-1.0.0/tests/test_mcp_stdio.py",
+        "line": 90,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _initialize(proc: subprocess.Popen, name: str = \"codex-mcp-client\") -> None:"
+      },
+      {
+        "file": "tractable-1.0.0/tests/test_mcp_stdio.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _call_tool(proc: subprocess.Popen, name: str, arguments: dict, req_id: int) -> dict:"
+      }
+    ]
+  },
+  {
+    "package_name": "dsh-operator-agent",
+    "checked_at": "2026-11-07T02:05:24.790324",
+    "download_url": "https://files.pythonhosted.org/packages/90/63/191c4e3409b25ee1f5609a7853031953935d1ce149289361ffe56a84da04/dsh_operator_agent-0.7.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/decide/anticheat.py",
+        "line": 535,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(kernel_code, ns)   # kernel 内 import torch"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/decide/calibration.py",
+        "line": 112,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(source, f\"<calibration:{name}>\", \"exec\"), ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/decide/quality_preflight.py",
+        "line": 263,
+        "keyword_detected": "exec(",
+        "code_snippet": "output = inner._ssh_exec(command, stdin_data=source)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/decide/reference.py",
+        "line": 40,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(source, ns, ns)  # noqa: S102 — 与候选 kernel 同信任边界, 见模块 docstring"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/decide/remote_input_fidelity.py",
+        "line": 27,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(data, validate=True)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/decide/session_inputs.py",
+        "line": 157,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(data, validate=True)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 19,
+        "keyword_detected": "exec(",
+        "code_snippet": "│        stdout/stderr → child.log)       ─→ ③ ns = {}; exec(code, ns); kernel(**inputs)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 37,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "| `RLIMIT_NPROC` (7) | `setrlimit(8,8)` → **rc=0**；随后 `subprocess.Popen` 60 次**全部** `BlockingIOError [Errno 35]` | ⚠️ 管用，但**是 per-UID 的**：该 UID 当时已有 >8 个进程，所以「设 8」= 立刻一个也起不来。它不是「本进程最多 8 个子进程」 |"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 152,
+        "keyword_detected": "exec(",
+        "code_snippet": "#: 跑候选：`exec(code)` 之后调 `kernel(**inputs)`（`run_candidate` 的语义，逐字未变）。"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 154,
+        "keyword_detected": "exec(",
+        "code_snippet": "#: 只做编译期那一步：`exec(code)`，**不调用** `kernel`（`run_compile`）。"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 164,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def start_background_worker(argv, *, cwd, log_path, env=None) -> subprocess.Popen:"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 182,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 196,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(list(argv), cwd=os.fspath(cwd), stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 199,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(list(argv), cwd=os.fspath(cwd), stdin=subprocess.DEVNULL,"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 585,
+        "keyword_detected": "exec(",
+        "code_snippet": "# run 模式永远是空 dict ⇒ `exec(code, {})` 与搬进子进程之前逐字等价。"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 588,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(job[\"code\"], ns)                      # 与今天逐字等价: 空 ns (run 模式)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 595,
+        "keyword_detected": "exec(",
+        "code_snippet": "# Read the reconstructed tensors BEFORE exec(candidate), not the"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 836,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc: Optional[subprocess.Popen] = None) -> None:"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 959,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(_CHILD_SOURCE, \"<exec_guard_child>\", \"exec\"),"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 1037,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"\"\"**编译模式**的受控执行：`exec(code)` 之后不调用 `kernel`（§22.2 的「编译超时」）。"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/exec_guard.py",
+        "line": 1127,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/mock_gpu.py",
+        "line": 154,
+        "keyword_detected": "exec(",
+        "code_snippet": "- Python 代码: exec() 检查语法和可导入性"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/mock_gpu.py",
+        "line": 156,
+        "keyword_detected": "exec(",
+        "code_snippet": "⚠️ 2026-10-06（§22.2 第一项「编译超时」）: 「`exec()` 检查语法和可导入性」这一步"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/mock_gpu.py",
+        "line": 319,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(kernel_code, ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/mock_gpu.py",
+        "line": 433,
+        "keyword_detected": "exec(",
+        "code_snippet": "WHY（2026-10-04，§22.2 最小一块）: 这一处原先就是本进程内 `exec(kernel_code, {})`"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/mock_gpu.py",
+        "line": 547,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(kernel_code, ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/mock_gpu.py",
+        "line": 605,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(kernel_code, local_ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 236,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: Optional[subprocess.Popen] = None"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 255,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 697,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _ssh_exec(self, remote_cmd: str, stdin_data: Optional[str] = None) -> str:"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 766,
+        "keyword_detected": "exec(",
+        "code_snippet": "out = self._ssh_exec("
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 857,
+        "keyword_detected": "exec(",
+        "code_snippet": "output = self._ssh_exec(remote_cmd, stdin_data=json_str)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1004,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec(f\"mkdir -p {self.work_dir}\")"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1011,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec(fix_cmd)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1027,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec(f\"mkdir -p {self.work_dir}\")"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1034,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec(\"test -f ~/.local/bin/uv\")"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1039,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec(\"curl -LsSf https://astral.sh/uv/install.sh | sh\")"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1046,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec(f\"test -f {self.work_dir}/pyproject.toml\")"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1051,
+        "keyword_detected": "exec(",
+        "code_snippet": "python_path = self._ssh_exec(\"which python3\").strip()"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1052,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec("
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1064,
+        "keyword_detected": "exec(",
+        "code_snippet": "pyver = self._ssh_exec("
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1067,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec("
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1081,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec("
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1158,
+        "keyword_detected": "exec(",
+        "code_snippet": "out = self._ssh_exec(f\"{py} -c {shlex.quote(script)}\")"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1185,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec(f'test -x {_remote_path(self.work_dir)}/.venv/bin/python')"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1195,
+        "keyword_detected": "exec(",
+        "code_snippet": "output = self._ssh_exec('python3 -c '+shlex.quote(source))"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1253,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec(\"echo ok\")"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1307,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._ssh_exec("
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1781,
+        "keyword_detected": "exec(",
+        "code_snippet": "`exec(kernel_code, ns)` —— 没有墙钟、没有 rlimit、没有进程组，候选在模块顶层写一个"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1811,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(kernel_code, ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/execute/remote_executor.py",
+        "line": 1847,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(kernel_code, ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/operator_agent/generate/single_candidate_coder.py",
+        "line": 224,
+        "keyword_detected": "eval(",
+        "code_snippet": "ast.literal_eval(node.value)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/remote_scripts/run_kernel.py",
+        "line": 463,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(source, ns, ns)  # noqa: S102"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/remote_scripts/run_kernel.py",
+        "line": 854,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/remote_scripts/run_kernel.py",
+        "line": 875,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/remote_scripts/run_kernel.py",
+        "line": 1557,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/remote_scripts/run_kernel.py",
+        "line": 1573,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, ns)"
+      },
+      {
+        "file": "dsh_operator_agent-0.7.2/remote_scripts/run_kernel_xpu.py",
+        "line": 256,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(source, ns, ns)  # noqa: S102"
+      }
+    ]
+  },
+  {
+    "package_name": "hilt-core",
+    "checked_at": "2026-11-07T02:05:25.844739",
+    "download_url": "https://files.pythonhosted.org/packages/94/d5/e4b9c78ed653768514a58e8a3dfe01abd178f297d3b2f993b9f7b6b56fb9/hilt_core-1.0.0rc1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "hilt_core-1.0.0rc1/bench/can_pair.py",
+        "line": 22,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _open(interface: str) -> socket.socket:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/can_pair.py",
+        "line": 23,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_CAN, socket.SOCK_RAW, socket.CAN_RAW)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/can_pair.py",
+        "line": 32,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _roundtrip(tx: socket.socket, rx: socket.socket, can_id: int, payload: bytes) -> str:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/pihole.py",
+        "line": 131,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await shell.exec(\"pihole -v\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/pihole.py",
+        "line": 137,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await shell.exec(\"pihole status\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/qemu_ssh.py",
+        "line": 246,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname -sr\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/qemu_ssh.py",
+        "line": 252,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\". /etc/os-release && echo $PRETTY_NAME\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/qemu_ssh.py",
+        "line": 256,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"sh -c 'echo to-stderr >&2; exit 3'\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/serial_pair.py",
+        "line": 39,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/serial_pair.py",
+        "line": 45,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"fail\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/serial_pair.py",
+        "line": 51,
+        "keyword_detected": "exec(",
+        "code_snippet": "parked = asyncio.create_task(transport.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/serial_pair.py",
+        "line": 81,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _wait_for_links(proc: subprocess.Popen[bytes], links: tuple[Path, ...]) -> None:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/serial_pair.py",
+        "line": 91,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": ") -> subprocess.Popen[Any]:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/serial_pair.py",
+        "line": 93,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/serial_pair.py",
+        "line": 147,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "console_proc = subprocess.Popen("
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 108,
+        "keyword_detected": "exec(",
+        "code_snippet": "state = (await utils.exec(\"systemctl is-system-running\")).stdout.strip()"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 120,
+        "keyword_detected": "exec(",
+        "code_snippet": "kernel = (await utils.exec(\"uname -r\")).stdout.strip()"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 121,
+        "keyword_detected": "exec(",
+        "code_snippet": "os_release = (await utils.exec(\". /etc/os-release && echo $PRETTY_NAME\")).stdout.strip()"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 122,
+        "keyword_detected": "exec(",
+        "code_snippet": "uptime = (await utils.exec(\"cut -d' ' -f1 /proc/uptime\")).stdout"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 163,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"uname -rm\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 178,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(f\"systemctl is-active {unit}\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 187,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"df --output=pcent / | tail -n 1\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 203,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"awk '/MemAvailable/ {print $2}' /proc/meminfo\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 220,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"cat /proc/sys/kernel/random/entropy_avail\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 240,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"date +%s.%N\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 259,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"sudo -n journalctl -n 20 --no-pager -o short-iso\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/guest_acceptance.py",
+        "line": 264,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"cut -d' ' -f1 /proc/loadavg\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/pihole_rack.py",
+        "line": 80,
+        "keyword_detected": "exec(",
+        "code_snippet": "versions = await utils.exec(\"pihole -v\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/pihole_rack.py",
+        "line": 96,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"pihole status\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/pihole_rack.py",
+        "line": 112,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"tail -n 30 /var/log/pihole/FTL.log\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/pihole_rack.py",
+        "line": 318,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(f\"dig +time=2 +tries=1 +stats {name} @127.0.0.1\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/serial_console.py",
+        "line": 97,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/serial_console.py",
+        "line": 119,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"fail\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/serial_console.py",
+        "line": 133,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(f\"dump {wanted}\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/bench/suites/serial_console.py",
+        "line": 155,
+        "keyword_detected": "exec(",
+        "code_snippet": "parked = asyncio.create_task(utils.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/hardware_device_lifecycle.py",
+        "line": 30,
+        "keyword_detected": "exec(",
+        "code_snippet": "Replace the constructor values with `utils.exec()` reads in a real suite; the hook"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/networked_device.py",
+        "line": 132,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(f\"curl -sf http://{ip}/api/version\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/networked_device.py",
+        "line": 228,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"true\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/pi_hole_server.py",
+        "line": 170,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"pihole -v\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/pi_hole_server.py",
+        "line": 215,
+        "keyword_detected": "exec(",
+        "code_snippet": "*(utils.exec(f\"tail -n 50 {path}\") for _key, path in _LOG_TAILS)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/pi_hole_server.py",
+        "line": 238,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"uptime\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/pi_hole_server.py",
+        "line": 268,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"systemctl status pihole-FTL\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/pi_hole_server.py",
+        "line": 295,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"dmesg --level=emerg,alert,crit\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/pi_hole_server.py",
+        "line": 324,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"pihole status\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/remote_device_ssh.py",
+        "line": 7,
+        "keyword_detected": "exec(",
+        "code_snippet": "descendants to a remote peer. After that line, every claim's `utils.exec(\"...\")`"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/remote_device_ssh.py",
+        "line": 120,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"uptime -p\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/remote_device_ssh.py",
+        "line": 128,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"df -h /\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/run_data_evidence.py",
+        "line": 30,
+        "keyword_detected": "exec(",
+        "code_snippet": "machine. A real suite would take them with `utils.exec()` inside the test method;"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/ssh_tunneling.py",
+        "line": 11,
+        "keyword_detected": "exec(",
+        "code_snippet": "given, `ctx[\"target\"].exec(...)`, and says so in the code."
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/ssh_tunneling.py",
+        "line": 146,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.ctx[\"target\"].exec(\"uname -r\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/test_composition.py",
+        "line": 18,
+        "keyword_detected": "exec(",
+        "code_snippet": "any development machine. A real suite takes them with `utils.exec()` or a hardware"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/test_composition.py",
+        "line": 69,
+        "keyword_detected": "exec(",
+        "code_snippet": "# claims take no reading; a real one would call `utils.exec()` here."
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/examples/wait_for_patterns.py",
+        "line": 30,
+        "keyword_detected": "exec(",
+        "code_snippet": "Replace them with `utils.exec()` or another asynchronous hardware read in a real"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/arp.py",
+        "line": 209,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(f\"ping -c {self._ping_count} {ip}\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/mock.py",
+        "line": 43,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"\"\"Make `exec(command)` return `result` once the transport is open.\"\"\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/mock.py",
+        "line": 47,
+        "keyword_detected": "exec(",
+        "code_snippet": "\"\"\"Hold `exec(command)` until the transport is cancelled or closed.\"\"\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/mock.py",
+        "line": 95,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/remote.py",
+        "line": 196,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/remote.py",
+        "line": 206,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._exec(command)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/remote.py",
+        "line": 248,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/routing.py",
+        "line": 57,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/routing.py",
+        "line": 64,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._exec(command)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/routing.py",
+        "line": 259,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/routing.py",
+        "line": 261,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await self._exec(command)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/routing.py",
+        "line": 401,
+        "keyword_detected": "exec(",
+        "code_snippet": "def exec(self) -> ExecFn:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/serial.py",
+        "line": 400,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/serial.py",
+        "line": 428,
+        "keyword_detected": "exec(",
+        "code_snippet": "return self._settle_exec(sent, outcome)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/serial.py",
+        "line": 430,
+        "keyword_detected": "exec(",
+        "code_snippet": "def _settle_exec(self, sent: str, outcome: _Read) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/ssh.py",
+        "line": 251,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/utils.py",
+        "line": 1223,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/src/hilt/utils.py",
+        "line": 1240,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await self._runtime.routing.exec(command)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_abort_phase_matrix.py",
+        "line": 188,
+        "keyword_detected": "exec(",
+        "code_snippet": "asyncio.create_task(probe.transport.exec(\"firmware write\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_abort_phase_matrix.py",
+        "line": 247,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def observe_exec(transport: MockTransport, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_abort_phase_matrix.py",
+        "line": 249,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await original_exec(transport, command)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_arp.py",
+        "line": 309,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def slow_exec(_command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_arp.py",
+        "line": 340,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def gated_exec(_command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_author_error_messages.py",
+        "line": 89,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_author_error_messages.py",
+        "line": 725,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_check_immutable_self.py",
+        "line": 79,
+        "keyword_detected": "exec(",
+        "code_snippet": "async with utils.exec(\"x\") as self._result:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_check_no_swallowed_cancel.py",
+        "line": 34,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"true\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_check_no_swallowed_cancel.py",
+        "line": 52,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"true\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_check_no_swallowed_cancel.py",
+        "line": 58,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"true\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_check_no_swallowed_cancel.py",
+        "line": 64,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"true\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_check_no_swallowed_cancel.py",
+        "line": 76,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"poweroff\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_check_no_swallowed_cancel.py",
+        "line": 78,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"sync\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_check_no_swallowed_cancel.py",
+        "line": 89,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"true\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_check_no_swallowed_cancel.py",
+        "line": 103,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"start\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_credential_containment.py",
+        "line": 152,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"hello\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_credential_containment.py",
+        "line": 277,
+        "keyword_detected": "exec(",
+        "code_snippet": "agent = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_credential_containment.py",
+        "line": 288,
+        "keyword_detected": "exec(",
+        "code_snippet": "added = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_examples.py",
+        "line": 705,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _scripted_local_exec(self: LocalExec, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_in_flight_termination.py",
+        "line": 53,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(ssh.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_in_flight_termination.py",
+        "line": 166,
+        "keyword_detected": "exec(",
+        "code_snippet": "await ssh.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_in_flight_termination.py",
+        "line": 195,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def test_owner_hard_close_collapses_tunneled_in_flight_exec("
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_integration_hooks.py",
+        "line": 92,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_integration_hooks.py",
+        "line": 510,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"flash\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_integration_hooks.py",
+        "line": 555,
+        "keyword_detected": "exec(",
+        "code_snippet": "seen[\"flash\"] = await utils.exec(\"flash\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_integration_hooks.py",
+        "line": 562,
+        "keyword_detected": "exec(",
+        "code_snippet": "seen[\"cleanup\"] = await utils.exec(\"id\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_integration_hooks.py",
+        "line": 613,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"flash\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_lsp_actions.py",
+        "line": 172,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = utils.exec(\"status\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_lsp_actions.py",
+        "line": 213,
+        "keyword_detected": "exec(",
+        "code_snippet": "if utils.exec(\"reset\").exit_code != 0:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 35,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 44,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def test_abort_during_main_hard_closes_and_rejects_later_exec(self) -> None:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 49,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(transport.exec(\"flash\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 62,
+        "keyword_detected": "exec(",
+        "code_snippet": "await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 70,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"echo\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 74,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def test_commands_records_every_exec(self) -> None:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 78,
+        "keyword_detected": "exec(",
+        "code_snippet": "await transport.exec(\"one\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 79,
+        "keyword_detected": "exec(",
+        "code_snippet": "await transport.exec(\"two\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 99,
+        "keyword_detected": "exec(",
+        "code_snippet": "left = asyncio.create_task(transport.exec(\"a\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_mock.py",
+        "line": 100,
+        "keyword_detected": "exec(",
+        "code_snippet": "right = asyncio.create_task(transport.exec(\"b\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_operator_interrupt.py",
+        "line": 283,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"flash\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_operator_interrupt.py",
+        "line": 337,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"sleep 30\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_parent_route.py",
+        "line": 53,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"probe\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_parent_route.py",
+        "line": 82,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(f\"probe {self.name}\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_parent_route.py",
+        "line": 114,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"deep probe\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_parent_route.py",
+        "line": 158,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"routed probe\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_parent_route.py",
+        "line": 171,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"local probe\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_parent_route.py",
+        "line": 216,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"probe\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_parent_route.py",
+        "line": 277,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"second probe\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_rack_scale.py",
+        "line": 100,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"probe\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 35,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 54,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 72,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 107,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"at\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 114,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"fail\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 153,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await transport.exec(\"at\")).exit_code == 0"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 166,
+        "keyword_detected": "exec(",
+        "code_snippet": "await transport.exec(\"at\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 174,
+        "keyword_detected": "exec(",
+        "code_snippet": "await transport.exec(\"at\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 182,
+        "keyword_detected": "exec(",
+        "code_snippet": "await transport.exec(\"at\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 207,
+        "keyword_detected": "exec(",
+        "code_snippet": "await transport.exec(\"at\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 212,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(transport.exec(\"block\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 224,
+        "keyword_detected": "exec(",
+        "code_snippet": "await transport.exec(\"at\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_remote.py",
+        "line": 263,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 66,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 111,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 159,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await router.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 170,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await router.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 185,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 199,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await harness.routing.exec(\"id\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 215,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def test_policy_only_inherit_false_forces_local_exec(self) -> None:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 221,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await child.routing.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 236,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await child.routing.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 242,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def test_get_shell_opens_an_endpoint_without_rebinding_exec(self) -> None:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 245,
+        "keyword_detected": "exec(",
+        "code_snippet": "routed = await harness.routing.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 246,
+        "keyword_detected": "exec(",
+        "code_snippet": "extra = await shell.exec(\"id\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 279,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await child.routing.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 292,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await child.routing.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 300,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await harness.routing.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 311,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await child.routing.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 455,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await harness.routing.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 512,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await shell.exec(\"uname\")).stdout == \"local:uname\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 581,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await child.routing.exec(\"uname\")).stdout == \"ttyUSB0:uname\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 585,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def test_get_serial_opens_a_console_without_rebinding_exec(self) -> None:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 590,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await aux.exec(\"uname\")).stdout == \"ttyUSB1:uname\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 591,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await harness.routing.exec(\"uname\")).stdout == \"local:uname\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 641,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await shell.exec(\"uname\")).exit_code == -1"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_routing.py",
+        "line": 705,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await routing.exec(\"uname\")).stdout == \"uname\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 125,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 136,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"fail\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 149,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 166,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 176,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 186,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 208,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 229,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 249,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 255,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def test_the_prompt_the_poke_earns_does_not_shadow_the_first_exec(self) -> None:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 262,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"fail\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 274,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 287,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 301,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(transport.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 309,
+        "keyword_detected": "exec(",
+        "code_snippet": "await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 319,
+        "keyword_detected": "exec(",
+        "code_snippet": "parked = asyncio.create_task(transport.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 326,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await again.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 336,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"flood\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 360,
+        "keyword_detected": "exec(",
+        "code_snippet": "asyncio.create_task(transport.exec(command))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 384,
+        "keyword_detected": "exec(",
+        "code_snippet": "results = await asyncio.gather(*(transport.exec(\"delay 0.3\") for _ in range(3)))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 397,
+        "keyword_detected": "exec(",
+        "code_snippet": "parked = asyncio.create_task(transport.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 398,
+        "keyword_detected": "exec(",
+        "code_snippet": "queued = asyncio.create_task(transport.exec(\"uname\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 436,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 462,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(transport.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 470,
+        "keyword_detected": "exec(",
+        "code_snippet": "hop_result = await hop.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 566,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await transport.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_serial.py",
+        "line": 573,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await hop.exec(\"uname\")).exit_code == 0"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 142,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await ssh.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 162,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(ssh.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 170,
+        "keyword_detected": "exec(",
+        "code_snippet": "await ssh.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 179,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "probe = socket.socket()"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 199,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await ssh.exec(\"hello\")).stdout == \"hello\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 218,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await ssh.exec(\"id\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 240,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await ssh.exec(\"id\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 253,
+        "keyword_detected": "exec(",
+        "code_snippet": "agent = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 264,
+        "keyword_detected": "exec(",
+        "code_snippet": "added = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 287,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await ssh.exec(\"id\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 320,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await target.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 349,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(target.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 439,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await target.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 444,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await jump.exec(\"id\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 514,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(target.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 522,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await jump.exec(\"id\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 588,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await target.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 593,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await jump.exec(\"id\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 613,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def local_exec(command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 630,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await shell.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 696,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await ssh.exec(\"still here\")).stdout == \"still here\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 714,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await ssh.exec(\"one\")).stdout == \"one\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 721,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await ssh.exec(\"two\")).stdout == \"two\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 745,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await ssh.exec(\"back\")).stdout == \"back\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 958,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await utils.exec(\"uname\")).exit_code == 0"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1002,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await ssh.exec(\"dump 16\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1024,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await ssh.exec(\"dump 10000\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1045,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await ssh.exec(\"dump-err 200\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1074,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await asyncio.wait_for(ssh.exec(\"flood\"), timeout=5)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1079,
+        "keyword_detected": "exec(",
+        "code_snippet": "follow = await ssh.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1097,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(ssh.exec(\"say-sleep hello-partial 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1119,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(ssh.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1125,
+        "keyword_detected": "exec(",
+        "code_snippet": "follow = await ssh.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1153,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await ssh.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_ssh.py",
+        "line": 1176,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await opened.exec(\"dump 200\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_time_budget.py",
+        "line": 55,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_time_budget.py",
+        "line": 689,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"park\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_time_budget.py",
+        "line": 723,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"park\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_time_budget.py",
+        "line": 854,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"park\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_time_budget.py",
+        "line": 903,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"sleep 30\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 53,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def start_blocked_exec(self) -> asyncio.Task[ExecResult]:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 55,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(self.transport.exec(self.block))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 180,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await peer.transport.exec(peer.success)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 200,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await peer.transport.exec(peer.success)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 207,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await peer.transport.exec(peer.fail)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 236,
+        "keyword_detected": "exec(",
+        "code_snippet": "await peer.transport.exec(peer.success)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 242,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = await peer.start_blocked_exec()"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 249,
+        "keyword_detected": "exec(",
+        "code_snippet": "await peer.transport.exec(peer.success)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 255,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = await peer.start_blocked_exec()"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 265,
+        "keyword_detected": "exec(",
+        "code_snippet": "await peer.transport.exec(peer.success)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_contract.py",
+        "line": 276,
+        "keyword_detected": "exec(",
+        "code_snippet": "await peer.transport.exec(peer.success)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_faults.py",
+        "line": 65,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "probe = socket.socket()"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_faults.py",
+        "line": 130,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(ssh.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_faults.py",
+        "line": 147,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(ssh.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_faults.py",
+        "line": 164,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(ssh.exec(\"stall\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_faults.py",
+        "line": 182,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await asyncio.wait_for(ssh.exec(\"non-utf8\"), timeout=_SETTLE_SECONDS)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_faults.py",
+        "line": 197,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await asyncio.wait_for(ssh.exec(\"binary\"), timeout=_SETTLE_SECONDS)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_faults.py",
+        "line": 212,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await asyncio.wait_for(ssh.exec(\"dump-err 65536\"), timeout=_SETTLE_SECONDS)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_faults.py",
+        "line": 228,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await asyncio.wait_for(ssh.exec(\"dump 10000\"), timeout=_SETTLE_SECONDS)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_transport_faults.py",
+        "line": 245,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(leaf.exec(\"sleep 30\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 57,
+        "keyword_detected": "exec(",
+        "code_snippet": "async def _exec(self, command: str) -> ExecResult:"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 376,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await TestUtils().exec(\"echo hello\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 383,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await TestUtils().exec(\"exit 7\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 388,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await TestUtils().exec(\"echo err >&2\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 394,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await TestUtils().exec(\"hilt-no-such-command-on-purpose\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 402,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await TestUtils().exec(\"kill -TERM $$\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 409,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(utils.exec(_HostChild.pid_sleep_command(pid_path)))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 421,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(utils.exec(_HostChild.pid_sleep_command(pid_path)))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 434,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"exit 1\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 452,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"echo observed\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 486,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 502,
+        "keyword_detected": "exec(",
+        "code_snippet": "task = asyncio.create_task(utils.exec(\"flash\"))"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 527,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await shell.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 558,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"uname\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 588,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"fail\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 625,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(command)"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 675,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await aux.exec(\"uname\")).stdout == \"uname\""
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 690,
+        "keyword_detected": "exec(",
+        "code_snippet": "assert (await utils.exec(\"uname\")).exit_code == -1"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 824,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"head -c 65536 /dev/zero\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 866,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"head -c 4096 /dev/zero\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/test_utils.py",
+        "line": 876,
+        "keyword_detected": "exec(",
+        "code_snippet": "await utils.exec(\"head -c 4096 /dev/zero\")"
+      },
+      {
+        "file": "hilt_core-1.0.0rc1/tests/fixtures/hilt_check/seeded_seams.py",
+        "line": 32,
+        "keyword_detected": "exec(",
+        "code_snippet": "result = await utils.exec(\"true\")"
+      }
+    ]
   }
 ]
