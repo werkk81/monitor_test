@@ -58808,5 +58808,25 @@
         "code_snippet": "result = await utils.exec(\"true\")"
       }
     ]
+  },
+  {
+    "package_name": "winlog-hunter",
+    "checked_at": "2026-11-07T21:06:23.939455",
+    "download_url": "https://files.pythonhosted.org/packages/27/12/e9738e157b657712b625f86ec5e0f1c3fb93c4f9966f9b25d88dd72d602f/winlog_hunter-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "winlog_hunter-0.2.0/src/winlog_hunter/rules.py",
+        "line": 593,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(payload + \"=\" * (-len(payload) % 4))"
+      },
+      {
+        "file": "winlog_hunter-0.2.0/src/winlog_hunter/rules.py",
+        "line": 896,
+        "keyword_detected": "exec(",
+        "code_snippet": "def smb_remote_exec(events: list[Event], cfg: Config) -> Iterator[Hit]:"
+      }
+    ]
   }
 ]
