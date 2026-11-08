@@ -58828,5 +58828,87 @@
         "code_snippet": "def smb_remote_exec(events: list[Event], cfg: Config) -> Iterator[Hit]:"
       }
     ]
+  },
+  {
+    "package_name": "harar",
+    "checked_at": "2026-11-08T00:26:08.122775",
+    "download_url": "https://files.pythonhosted.org/packages/e7/7b/7d35dc5503c7d19e85a11d985414d08563975c21f97732262985fc530e88/harar-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "harar-0.2.0/src/harar/__init__.py",
+        "line": 31,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with _socket.socket(_socket.AF_UNIX, _socket.SOCK_STREAM) as conn:"
+      },
+      {
+        "file": "harar-0.2.0/tests/test_vault.py",
+        "line": 22,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)"
+      }
+    ]
+  },
+  {
+    "package_name": "pycdhit4",
+    "checked_at": "2026-11-08T00:26:08.164203",
+    "download_url": "https://files.pythonhosted.org/packages/17/30/dd44d151a203e53a00feb1de0e10220c9b9ef9b79c7d791db19249c3a668/pycdhit4-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pycdhit4-0.1.0/vendor/cdhit/usecases/Miseq-16S/NG-Omics-WF.py",
+        "line": 625,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "p = subprocess.Popen(['/bin/bash', t_sample_job['sh_file']], shell=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "adafruit-circuitpython-ogg",
+    "checked_at": "2026-11-08T00:26:08.201107",
+    "download_url": "https://files.pythonhosted.org/packages/d9/51/8afa752b92728597c608e76c27c6f8a4720b64cefc9c54214bf1c1750284/adafruit_circuitpython_ogg-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "adafruit_circuitpython_ogg-1.0.1/tests/viper_shim.py",
+        "line": 58,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(_SRC.read_text(), str(_SRC), \"exec\"), mod.__dict__)  # noqa: S102"
+      }
+    ]
+  },
+  {
+    "package_name": "adafruit-circuitpython-flac",
+    "checked_at": "2026-11-08T00:26:08.245225",
+    "download_url": "https://files.pythonhosted.org/packages/bd/72/b1614ab50aad6496f2e8cf9be3ee6e0b734ce01615ed7a1e38adb75d50a0/adafruit_circuitpython_flac-1.0.2.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "adafruit_circuitpython_flac-1.0.2/adafruit_flac/__init__.py",
+        "line": 359,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(\"\\n\".join(lines), ns)"
+      }
+    ]
+  },
+  {
+    "package_name": "Wyngthon",
+    "checked_at": "2026-11-08T00:26:08.407055",
+    "download_url": "https://files.pythonhosted.org/packages/1f/52/9c4ba66ca491f3e32148202ce276c5d93652a7ae50ae2e9553da992981e7/wyngthon-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wyngthon-1.0.0/wyngthon/network/connection/connection.py",
+        "line": 158,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(mode, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "wyngthon-1.0.0/wyngthon/network/connection/tcpmtproxy.py",
+        "line": 143,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "secret_bytes = base64.b64decode(secret.encode())"
+      }
+    ]
   }
 ]
