@@ -58910,5 +58910,273 @@
         "code_snippet": "secret_bytes = base64.b64decode(secret.encode())"
       }
     ]
+  },
+  {
+    "package_name": "mcp-linter",
+    "checked_at": "2026-11-08T21:23:13.400117",
+    "download_url": "https://files.pythonhosted.org/packages/f2/a3/ba9bb9de505b645f70905b7a0cc80baf3d92e5e1d6cc3cc547f11a163460/mcp_linter-1.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "mcp_linter-1.2.0/src/mcp_lint/eval.py",
+        "line": 319,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_eval(tasks: list[Task], conditions: list[str], runs: int, results: Path, *,"
+      },
+      {
+        "file": "mcp_linter-1.2.0/src/mcp_lint/eval.py",
+        "line": 592,
+        "keyword_detected": "eval(",
+        "code_snippet": "stats = run_eval(tasks, conditions, args.runs, Path(args.results), model=args.model, base=base,"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 226,
+        "keyword_detected": "eval(",
+        "code_snippet": "def run_eval(self, runner, tasks, runs=2):"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 227,
+        "keyword_detected": "eval(",
+        "code_snippet": "return run_eval(tasks, [\"baseline\", \"fixed\"], runs, self.results, base=self.base,"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 232,
+        "keyword_detected": "eval(",
+        "code_snippet": "stats = self.run_eval(MarkerRunner(tasks), tasks)"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 244,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.run_eval(MarkerRunner(tasks), tasks, runs=1)"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 246,
+        "keyword_detected": "eval(",
+        "code_snippet": "stats = self.run_eval(runner, tasks, runs=2)"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 252,
+        "keyword_detected": "eval(",
+        "code_snippet": "stats = self.run_eval(MarkerRunner(tasks, limit_after=2), tasks, runs=1)"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 257,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.run_eval(runner, tasks, runs=1)"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 267,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(tasks, [\"fixed\"], 1, self.results, base=self.base, runner=broken, log=lambda _: None)"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 272,
+        "keyword_detected": "eval(",
+        "code_snippet": "run_eval(tasks, [\"fixed\"], 1, self.results, base=self.base, runner=runner, log=lambda _: None)"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 279,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.run_eval(MarkerRunner(fake_tasks()), fake_tasks())"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_eval.py",
+        "line": 281,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.run_eval(MarkerRunner(fake_tasks()), fake_tasks(), runs=1)"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_http.py",
+        "line": 49,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_http.py",
+        "line": 68,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, DEMO_SERVER, \"--http\", str(port), *extra],"
+      },
+      {
+        "file": "mcp_linter-1.2.0/tests/test_http.py",
+        "line": 594,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sock = socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "flshbd",
+    "checked_at": "2026-11-08T21:23:14.005403",
+    "download_url": "https://files.pythonhosted.org/packages/ea/c8/1e1ccf6fc961fa4b7cfbad9ed835e0744e8c3dde02a5acfb90f305f7a5aa/flshbd-0.0.9.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "flshbd-0.0.9/src/flshbd/cli/process.py",
+        "line": 142,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "flshbd-0.0.9/src/flshbd/cli/process.py",
+        "line": 207,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_cli_process.py",
+        "line": 229,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "@patch(\"subprocess.Popen\")"
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_cli_process.py",
+        "line": 237,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# Mock subprocess.Popen"
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_cli_process.py",
+        "line": 255,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "@patch(\"subprocess.Popen\")"
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_cli_process.py",
+        "line": 263,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# Mock subprocess.Popen"
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_cli_process.py",
+        "line": 274,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "@patch(\"subprocess.Popen\")"
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_cli_process.py",
+        "line": 306,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with patch(\"subprocess.Popen\") as mock_popen:"
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_secret_key.py",
+        "line": 147,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "# Patch subprocess.Popen"
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_secret_key.py",
+        "line": 150,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "original_popen = subprocess.Popen"
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_secret_key.py",
+        "line": 151,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen = mock_popen"
+      },
+      {
+        "file": "flshbd-0.0.9/tests/test_dash/test_secret_key.py",
+        "line": 167,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen = original_popen"
+      }
+    ]
+  },
+  {
+    "package_name": "noisycompany",
+    "checked_at": "2026-11-08T21:23:14.373568",
+    "download_url": "https://files.pythonhosted.org/packages/33/3a/441553e887c1888f53fa37a2e1a7be000c8ce812b180c16088077e221461/noisycompany-2.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "noisycompany-2.1.0/src/noisycompany/web.py",
+        "line": 63,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _pinned_socket(host: str, port: int, timeout, source_address=None) -> socket.socket:"
+      }
+    ]
+  },
+  {
+    "package_name": "ventforge",
+    "checked_at": "2026-11-08T21:23:14.610141",
+    "download_url": "https://files.pythonhosted.org/packages/fa/da/acac2426ae6539f4f857ebd4ed5d328e59d2379fba37e2d8f7e82508dfc8/ventforge-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ventforge-0.1.0/ventforge/gui.py",
+        "line": 1553,
+        "keyword_detected": "exec(",
+        "code_snippet": "return dlg.exec() == QDialog.Accepted"
+      },
+      {
+        "file": "ventforge-0.1.0/ventforge/gui.py",
+        "line": 1663,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      },
+      {
+        "file": "ventforge-0.1.0/ventforge/mcp_server.py",
+        "line": 197,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(cmd, creationflags=flags)"
+      }
+    ]
+  },
+  {
+    "package_name": "llmsetup",
+    "checked_at": "2026-11-08T21:23:14.881093",
+    "download_url": "https://files.pythonhosted.org/packages/e3/df/6311a382b13c2f09baf0117d2f7d56609c23c82543aaf10b4cc6bb095c4e/llmsetup-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "llmsetup-0.1.1/src/llmsetup/runtimes/base.py",
+        "line": 37,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: Any = None            # subprocess.Popen when we launched it"
+      },
+      {
+        "file": "llmsetup-0.1.1/src/llmsetup/util/http.py",
+        "line": 127,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:"
+      },
+      {
+        "file": "llmsetup-0.1.1/src/llmsetup/util/proc.py",
+        "line": 103,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": ") -> subprocess.Popen:"
+      },
+      {
+        "file": "llmsetup-0.1.1/src/llmsetup/util/proc.py",
+        "line": 115,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen(list(cmd), stdout=handle, stderr=handle, env=merged, cwd=cwd)"
+      },
+      {
+        "file": "llmsetup-0.1.1/src/llmsetup/util/proc.py",
+        "line": 116,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "llmsetup-0.1.1/tests/test_ollama_live.py",
+        "line": 57,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen([str(binary), \"serve\"], env=env,"
+      }
+    ]
   }
 ]
