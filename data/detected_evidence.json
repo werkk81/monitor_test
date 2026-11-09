@@ -59178,5 +59178,113 @@
         "code_snippet": "process = subprocess.Popen([str(binary), \"serve\"], env=env,"
       }
     ]
+  },
+  {
+    "package_name": "kedi-debugger",
+    "checked_at": "2026-11-09T01:01:41.234809",
+    "download_url": "https://files.pythonhosted.org/packages/f1/e1/0d5d804219f235155b8c7a9d74ce49fb804e06d28564ae1026fcf281896d/kedi_debugger-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kedi_debugger-0.1.0/src/kedi_debugger/server.py",
+        "line": 211,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._process: subprocess.Popen[bytes] | None = None"
+      },
+      {
+        "file": "kedi_debugger-0.1.0/src/kedi_debugger/server.py",
+        "line": 390,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "permtracker",
+    "checked_at": "2026-11-09T01:01:41.453899",
+    "download_url": "https://files.pythonhosted.org/packages/a0/62/7d22a3c2cf238fca32b98800f224ebac9843b2d955d806bc7dffc3233178/permtracker-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "permtracker-0.3.0/permtracker/__init__.py",
+        "line": 290,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(secret[len(\"whsec_\"):], validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "readwebform",
+    "checked_at": "2026-11-09T01:01:41.728174",
+    "download_url": "https://files.pythonhosted.org/packages/49/fa/69409dd8eb6467b9aebfd13bf9c9d2d343495512af9c172d9590f97b3d53/readwebform-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "readwebform-0.4.0/src/readwebform/browser.py",
+        "line": 70,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _spawn_detached(argv: list) -> subprocess.Popen:"
+      },
+      {
+        "file": "readwebform-0.4.0/src/readwebform/browser.py",
+        "line": 72,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "return subprocess.Popen("
+      },
+      {
+        "file": "readwebform-0.4.0/src/readwebform/server.py",
+        "line": 79,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._connections: set[socket.socket] = set()"
+      },
+      {
+        "file": "readwebform-0.4.0/src/readwebform/server.py",
+        "line": 90,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def track_connection(self, conn: socket.socket) -> None:"
+      },
+      {
+        "file": "readwebform-0.4.0/src/readwebform/server.py",
+        "line": 94,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def untrack_connection(self, conn: socket.socket) -> None:"
+      },
+      {
+        "file": "readwebform-0.4.0/src/readwebform/server.py",
+        "line": 345,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(family, socket.SOCK_DGRAM) as probe:"
+      },
+      {
+        "file": "readwebform-0.4.0/tests/test_https.py",
+        "line": 497,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "readwebform-0.4.0/tests/test_integration.py",
+        "line": 613,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "readwebform-0.4.0/tests/test_integration.py",
+        "line": 697,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "readwebform-0.4.0/tests/test_server_hardening.py",
+        "line": 207,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "readwebform-0.4.0/tests/test_server_hardening.py",
+        "line": 372,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "probe = socket.socket(socket.AF_INET6)"
+      }
+    ]
   }
 ]
