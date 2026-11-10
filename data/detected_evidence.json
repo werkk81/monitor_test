@@ -59374,5 +59374,33 @@
         "code_snippet": "length = len(base64.b64decode(message[\"data\"][\"audio\"]))"
       }
     ]
+  },
+  {
+    "package_name": "innovaccer-hmcp",
+    "checked_at": "2026-11-10T22:34:51.908894",
+    "download_url": "https://files.pythonhosted.org/packages/78/0f/3b88badade92cfd1951f3a38be6f41299fa521f4c7833cbb984795829514/innovaccer_hmcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "innovaccer_hmcp-0.1.0/tests/hmcp/auth/test_exceptions.py",
+        "line": 22,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(\"from hmcp.shared.auth import *\", namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "gist-sampling",
+    "checked_at": "2026-11-10T22:34:52.381305",
+    "download_url": "https://files.pythonhosted.org/packages/c3/2a/31980e3e12cdfc4326305056b7e2826f017b7d2bd8ca360a6f1a31e9d54d/gist_sampling-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "gist_sampling-0.2.0/tests/test_readme.py",
+        "line": 17,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(block, namespace)  # blocks build on one another, as a reader would run them"
+      }
+    ]
   }
 ]
