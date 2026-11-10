@@ -59286,5 +59286,93 @@
         "code_snippet": "probe = socket.socket(socket.AF_INET6)"
       }
     ]
+  },
+  {
+    "package_name": "textinsight-nlp",
+    "checked_at": "2026-11-10T00:53:08.251619",
+    "download_url": "https://files.pythonhosted.org/packages/d3/f5/c83738b0d8e379a0d7eafd55e88128055d5fd3be489335ac4ecb37613a0e/textinsight_nlp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "textinsight_nlp-0.1.0/src/textinsight/sentiment/hybrid.py",
+        "line": 89,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "textinsight_nlp-0.1.0/tests/test_sentiment.py",
+        "line": 259,
+        "keyword_detected": "eval(",
+        "code_snippet": "def eval(self) -> Encoder:"
+      }
+    ]
+  },
+  {
+    "package_name": "pipecat-spatialreal",
+    "checked_at": "2026-11-10T00:53:08.519638",
+    "download_url": "https://files.pythonhosted.org/packages/c0/48/ff33d48db8c56b208f4f2b9e63f0ce9d22a071103f1bf38e2b50cc46012f/pipecat_spatialreal-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_driven.py",
+        "line": 77,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as probe:"
+      },
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_envelope.py",
+        "line": 29,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert b\"\".join(base64.b64decode(m[\"frames\"][\"data\"]) for m in msgs) == wire"
+      },
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_envelope.py",
+        "line": 146,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "chunks = [base64.b64decode(m[\"frames\"][\"data\"]) for m in msgs]"
+      },
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_envelope.py",
+        "line": 220,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "chunks = [base64.b64decode(m[\"turn_envelope\"][\"values\"]) for m in msgs]"
+      },
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_processor.py",
+        "line": 2176,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "values += base64.b64decode(run[\"values\"])"
+      },
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_processor.py",
+        "line": 2216,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "sent[run[\"turn_id\"]] += len(base64.b64decode(run[\"values\"]))"
+      },
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_processor.py",
+        "line": 2311,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert run[\"first_index\"] == 0 and len(base64.b64decode(run[\"values\"])) == values_for(48000)"
+      },
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_processor.py",
+        "line": 2527,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert run[\"first_index\"] == 0 and len(base64.b64decode(run[\"values\"])) == 7"
+      },
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_processor.py",
+        "line": 3044,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "values = base64.b64decode(run[\"values\"])"
+      },
+      {
+        "file": "pipecat_spatialreal-0.1.0/tests/test_rtvi_smoke.py",
+        "line": 158,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "length = len(base64.b64decode(message[\"data\"][\"audio\"]))"
+      }
+    ]
   }
 ]
