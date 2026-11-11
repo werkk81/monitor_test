@@ -59402,5 +59402,153 @@
         "code_snippet": "exec(block, namespace)  # blocks build on one another, as a reader would run them"
       }
     ]
+  },
+  {
+    "package_name": "pinboard-sdk",
+    "checked_at": "2026-11-11T23:44:17.183242",
+    "download_url": "https://files.pythonhosted.org/packages/30/17/edce523046e08ce6fd7a3976adcec63a93fcaa13e787305a9bda79130285/pinboard_sdk-0.18.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pinboard_sdk-0.18.0/src/pinboard/sim/coprocess.py",
+        "line": 47,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc = subprocess.Popen("
+      },
+      {
+        "file": "pinboard_sdk-0.18.0/tests/conftest.py",
+        "line": 17,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      },
+      {
+        "file": "pinboard_sdk-0.18.0/tests/test_e2e_tray_durability.py",
+        "line": 52,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(*args, **kwargs)"
+      },
+      {
+        "file": "pinboard_sdk-0.18.0/tests/test_pinboard_integration.py",
+        "line": 52,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "pinboard_sdk-0.18.0/tests/test_pinboard_integration.py",
+        "line": 62,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "dbt-spark-on-k8s",
+    "checked_at": "2026-11-11T23:44:18.008760",
+    "download_url": "https://files.pythonhosted.org/packages/17/01/9fbb85d046537c789857b6af4b4b5e49619afde238520f4f0ca8aad8f066/dbt_spark_on_k8s-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dbt_spark_on_k8s-0.1.0/src/spark_on_k8s_dbt/forward.py",
+        "line": 39,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "tungoai",
+    "checked_at": "2026-11-11T23:44:18.358904",
+    "download_url": "https://files.pythonhosted.org/packages/e9/7d/b96fbd296367715d1113c3b7475777cc587e450d7717be0120b084b3759b/tungoai-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "tungoai-0.2.0/examples/webhooks.py",
+        "line": 62,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "digest = hmac.new(base64.b64decode(secret[6:]), b\"msg_1.\" + timestamp.encode() + b\".\" + raw_body, hashlib.sha256)"
+      },
+      {
+        "file": "tungoai-0.2.0/src/tungoai/_webhooks.py",
+        "line": 80,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "key = base64.b64decode(encoded, validate=True)"
+      },
+      {
+        "file": "tungoai-0.2.0/src/tungoai/_webhooks.py",
+        "line": 113,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "candidate = base64.b64decode(value, validate=True)"
+      },
+      {
+        "file": "tungoai-0.2.0/tests/test_conformance.py",
+        "line": 91,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "body = base64.b64decode(case[\"body_base64\"])"
+      },
+      {
+        "file": "tungoai-0.2.0/tests/test_conformance.py",
+        "line": 106,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "body = base64.b64decode(case[\"body_base64\"])"
+      },
+      {
+        "file": "tungoai-0.2.0/tests/test_conformance.py",
+        "line": 258,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(case[\"raw_base64\"])"
+      },
+      {
+        "file": "tungoai-0.2.0/tests/test_conformance.py",
+        "line": 263,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert sse_events(SSEDecoder(), [base64.b64decode(chunk) for chunk in case[\"chunks_base64\"]]) == expected"
+      }
+    ]
+  },
+  {
+    "package_name": "pytest-stream-lifecycle",
+    "checked_at": "2026-11-11T23:44:19.011276",
+    "download_url": "https://files.pythonhosted.org/packages/54/de/5395013a8c441741de5103b2ae1e4562e133a6ebc5e371a058b00a2e778f/pytest_stream_lifecycle-0.1.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "pytest_stream_lifecycle-0.1.0a1/src/pytest_stream_lifecycle/server.py",
+        "line": 95,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock: socket.socket,"
+      },
+      {
+        "file": "pytest_stream_lifecycle-0.1.0a1/src/pytest_stream_lifecycle/server.py",
+        "line": 225,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)"
+      },
+      {
+        "file": "pytest_stream_lifecycle-0.1.0a1/tests/test_server.py",
+        "line": 659,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock, pytest.raises(ServerError) as caught:"
+      },
+      {
+        "file": "pytest_stream_lifecycle-0.1.0a1/tests/test_streams.py",
+        "line": 227,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as reserved:"
+      }
+    ]
+  },
+  {
+    "package_name": "ovicore",
+    "checked_at": "2026-11-11T23:44:19.356560",
+    "download_url": "https://files.pythonhosted.org/packages/32/bb/09f3546f5e0b60c97d6866c795911bdee0810fe7172fb220999f10e1c1c8/ovicore-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ovicore-0.1.0/ovicore/io.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "return ast.literal_eval(valor)"
+      }
+    ]
   }
 ]
