@@ -59550,5 +59550,175 @@
         "code_snippet": "return ast.literal_eval(valor)"
       }
     ]
+  },
+  {
+    "package_name": "kei-animator",
+    "checked_at": "2026-11-12T22:54:02.033999",
+    "download_url": "https://files.pythonhosted.org/packages/8e/ae/3e799273314b217bf9f3eceb0c56dd5609f26026ae46e21597943733ba0a/kei_animator-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "kei_animator-0.1.0/kei/seats.py",
+        "line": 55,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _kill_tree(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "file": "kei_animator-0.1.0/kei/seats.py",
+        "line": 102,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([exe, *self.spec.cmd[1:]], cwd=str(workdir), stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "kei_animator-0.1.0/kei/apps/maya_side/kei_tools.py",
+        "line": 800,
+        "keyword_detected": "eval(",
+        "code_snippet": "mel.eval(line)"
+      },
+      {
+        "file": "kei_animator-0.1.0/kei/apps/maya_side/kei_tools.py",
+        "line": 806,
+        "keyword_detected": "eval(",
+        "code_snippet": "mel.eval('FBXExport -f \"%s\" -s' % path.replace(\"\\\\\", \"/\"))"
+      },
+      {
+        "file": "kei_animator-0.1.0/kei/live/serve.py",
+        "line": 154,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen(cmd, **kw)"
+      },
+      {
+        "file": "kei_animator-0.1.0/kei/models/gltf_read.py",
+        "line": 101,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "out.append(base64.b64decode(uri.split(\",\", 1)[1], validate=False))"
+      },
+      {
+        "file": "kei_animator-0.1.0/kei/models/gltf_read.py",
+        "line": 127,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(img[\"uri\"].split(\",\", 1)[1])"
+      },
+      {
+        "file": "kei_animator-0.1.0/kei/review/lesson_routes.py",
+        "line": 167,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "pngs[key] = base64.b64decode(data, validate=True)"
+      },
+      {
+        "file": "kei_animator-0.1.0/kei/review/signoff_routes.py",
+        "line": 129,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "pngs[key] = base64.b64decode(data, validate=True)"
+      },
+      {
+        "file": "kei_animator-0.1.0/tests/test_maya_session_live.py",
+        "line": 31,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([str(py), str(REPO / \"tests\" / \"maya\" / \"host_in_batch.py\"), str(d), str(root)],"
+      },
+      {
+        "file": "kei_animator-0.1.0/tests/test_unreal_client.py",
+        "line": 72,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "kei_animator-0.1.0/tests/fakes/fake_claireon.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "inputs = json.loads(ast.literal_eval(m2.group(1)))"
+      }
+    ]
+  },
+  {
+    "package_name": "charmlibs-interfaces-smtp",
+    "checked_at": "2026-11-12T22:54:02.108110",
+    "download_url": "https://files.pythonhosted.org/packages/f8/d4/ff8479143c4441c66b1d5b6da94a0f97734f8a518450b14fd691a51d24a9/charmlibs_interfaces_smtp-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "charmlibs_interfaces_smtp-1.0.0/src/charmlibs/interfaces/smtp/_smtp.py",
+        "line": 226,
+        "keyword_detected": "eval(",
+        "code_snippet": "return literal_eval("
+      },
+      {
+        "file": "charmlibs_interfaces_smtp-1.0.0/tests/unit/test_smtp.py",
+        "line": 253,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert harness.charm.events[0].skip_ssl_verify == literal_eval("
+      },
+      {
+        "file": "charmlibs_interfaces_smtp-1.0.0/tests/unit/test_smtp.py",
+        "line": 268,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert retrieved_relation_data.skip_ssl_verify == literal_eval("
+      },
+      {
+        "file": "charmlibs_interfaces_smtp-1.0.0/tests/unit/test_smtp.py",
+        "line": 300,
+        "keyword_detected": "eval(",
+        "code_snippet": "assert relation_data.skip_ssl_verify == literal_eval(SAMPLE_RELATION_DATA[\"skip_ssl_verify\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "ragas-ng",
+    "checked_at": "2026-11-12T22:54:03.584166",
+    "download_url": "https://files.pythonhosted.org/packages/24/be/7e6cb40ed212f5b5451d3aba4b72b11adcc29725ed5b98f13e950602c1ff/ragas_ng-2026.11.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ragas_ng-2026.11.0/src/ragas/metrics/collections/image_sources.py",
+        "line": 187,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(match.group(2), validate=True)"
+      },
+      {
+        "file": "ragas_ng-2026.11.0/tests/unit/test_image_sources.py",
+        "line": 96,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(result[\"encoded_data\"]) == PNG"
+      },
+      {
+        "file": "ragas_ng-2026.11.0/tests/unit/test_legacy_boundary.py",
+        "line": 191,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"from ragas.metrics import {old}\", {})"
+      },
+      {
+        "file": "ragas_ng-2026.11.0/tests/unit/test_legacy_boundary.py",
+        "line": 209,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(f\"from ragas.metrics import {base}\", {})"
+      },
+      {
+        "file": "ragas_ng-2026.11.0/tests/unit/test_multi_modal_faithfulness_collections.py",
+        "line": 77,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(result[\"encoded_data\"])"
+      }
+    ]
+  },
+  {
+    "package_name": "blockmetric",
+    "checked_at": "2026-11-12T22:54:03.934457",
+    "download_url": "https://files.pythonhosted.org/packages/a0/ea/6c16f93afe5f5420cb76ca38a4673c7e96ae750e2799c43b75cc907c3756/blockmetric-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "blockmetric-0.3.0/blockmetric/client.py",
+        "line": 237,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _socket_of(res: Any) -> Optional[socket.socket]:"
+      },
+      {
+        "file": "blockmetric-0.3.0/blockmetric/client.py",
+        "line": 826,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def watch(sock: Optional[socket.socket] = sock, done: threading.Event = done) -> None:"
+      }
+    ]
   }
 ]
