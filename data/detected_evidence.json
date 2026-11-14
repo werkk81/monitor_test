@@ -59720,5 +59720,99 @@
         "code_snippet": "def watch(sock: Optional[socket.socket] = sock, done: threading.Event = done) -> None:"
       }
     ]
+  },
+  {
+    "package_name": "eaveswatch",
+    "checked_at": "2026-11-14T21:41:35.101437",
+    "download_url": "https://files.pythonhosted.org/packages/ff/24/9d92e50330cbb4cee197935cfb3558f04f6b2fbb39b541eefbb903b0f4d9/eaveswatch-0.8.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "eaveswatch-0.8.0/tests/test_eaveswatch.py",
+        "line": 483,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "child = subprocess.Popen([sys.executable, \"-c\","
+      },
+      {
+        "file": "eaveswatch-0.8.0/tests/test_eaveswatch.py",
+        "line": 485,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "\"s=socket.socket(); s.bind(('127.0.0.1',0)); s.listen(); print(s.getsockname()[1], flush=True); time.sleep(120)\","
+      }
+    ]
+  },
+  {
+    "package_name": "cobrala",
+    "checked_at": "2026-11-14T21:41:35.342162",
+    "download_url": "https://files.pythonhosted.org/packages/05/08/3e0a369c81cee5a0e292ca9b91fafd5cd2bb92208b5fd5f404800510bea9/cobrala-1.0.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "cobrala-1.0.1/tests/conftest.py",
+        "line": 97,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      }
+    ]
+  },
+  {
+    "package_name": "robotframework-lint-lsp",
+    "checked_at": "2026-11-14T21:41:35.749966",
+    "download_url": "https://files.pythonhosted.org/packages/9b/c2/e7504fa8ef70f7de08d16b17feed380437d03737e0b54af74f3aac8d04d7/robotframework_lint_lsp-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "robotframework_lint_lsp-1.0.0/tests/test_lsp.py",
+        "line": 35,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"robotframework_lint.lsp\"],"
+      },
+      {
+        "file": "robotframework_lint_lsp-1.0.0/tests/test_lsp.py",
+        "line": 133,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"robotframework_lint.lsp\"],"
+      },
+      {
+        "file": "robotframework_lint_lsp-1.0.0/tests/test_lsp_navigation.py",
+        "line": 33,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, \"-m\", \"robotframework_lint.lsp\"],"
+      }
+    ]
+  },
+  {
+    "package_name": "ownapi",
+    "checked_at": "2026-11-14T21:41:35.908408",
+    "download_url": "https://files.pythonhosted.org/packages/2a/1d/52166148eb0c955ea09323ccc76e68fdf5bb3782d48704432f90ee61c140/ownapi-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ownapi-1.0.0/core/hitl_queue.py",
+        "line": 210,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw_bytes = base64.b64decode(clean_b64)"
+      },
+      {
+        "file": "ownapi-1.0.0/healer.py",
+        "line": 264,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "qontain",
+    "checked_at": "2026-11-14T21:41:36.029366",
+    "download_url": "https://files.pythonhosted.org/packages/2b/a6/98ddeca4c9c58066cf2dc8edcc6d940dc18e28990fb1178077c2c13a7824/qontain-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "qontain-0.1.0/tests/test_sdk.py",
+        "line": 162,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as s:"
+      }
+    ]
   }
 ]
