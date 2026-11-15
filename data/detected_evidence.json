@@ -59922,5 +59922,2929 @@
         "code_snippet": "def get_request(self) -> tuple[socket.socket, Any]:"
       }
     ]
+  },
+  {
+    "package_name": "aixand-suite-orchestration-mcp",
+    "checked_at": "2026-11-15T22:07:43.649767",
+    "download_url": "https://files.pythonhosted.org/packages/25/e0/b713c64927779c9ebc43e6047e632f8c4722defedd624bbd6994fba91331/aixand_suite_orchestration_mcp-0.1.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aixand_suite_orchestration_mcp-0.1.0a1/tests/carrier_support.py",
+        "line": 15,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket()"
+      },
+      {
+        "file": "aixand_suite_orchestration_mcp-0.1.0a1/tests/test_bundle_catalog.py",
+        "line": 68,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec(getattr(sys, '_base_executable', sys.executable), '-I', '-X', 'utf8=0', str(executable),"
+      },
+      {
+        "file": "aixand_suite_orchestration_mcp-0.1.0a1/tests/test_bundle_wire.py",
+        "line": 55,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec(getattr(sys, '_base_executable', sys.executable), '-I', '-X', 'utf8=0', str(executable),"
+      },
+      {
+        "file": "aixand_suite_orchestration_mcp-0.1.0a1/tests/test_execution_groups.py",
+        "line": 290,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "daemon = subprocess.Popen("
+      },
+      {
+        "file": "aixand_suite_orchestration_mcp-0.1.0a1/tests/test_execution_groups.py",
+        "line": 331,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "if b\"TERMINAL_READY\" in base64.b64decode("
+      },
+      {
+        "file": "aixand_suite_orchestration_mcp-0.1.0a1/tests/test_execution_groups.py",
+        "line": 347,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(output[\"data\"][\"data\"])"
+      },
+      {
+        "file": "aixand_suite_orchestration_mcp-0.1.0a1/tests/test_execution_workflows.py",
+        "line": 48,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "runner = subprocess.Popen("
+      },
+      {
+        "file": "aixand_suite_orchestration_mcp-0.1.0a1/tests/test_execution_workflows.py",
+        "line": 188,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "runner = subprocess.Popen("
+      },
+      {
+        "file": "aixand_suite_orchestration_mcp-0.1.0a1/tests/test_task_reports.py",
+        "line": 165,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "imagehub",
+    "checked_at": "2026-11-15T22:07:44.900638",
+    "download_url": "https://files.pythonhosted.org/packages/1e/ab/512a9f35ced1a48aaceb34d7f8d330b53a59ebafd9fc6f68aaaad93dc3a1/imagehub-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "imagehub-0.1.0/imagehub/checkpoints.py",
+        "line": 407,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/tokenization_emu3.py",
+        "line": 29,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "base64.b64decode(token): int(rank)"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/tokenization_t5.py",
+        "line": 23,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(encoded) if isinstance(encoded, str) else encoded"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/bagel.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval(),"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/bagel.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae.to(device=device, dtype=dtype).eval(),"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/dreamlite.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/emu3.py",
+        "line": 137,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/emu3.py",
+        "line": 139,
+        "keyword_detected": "eval(",
+        "code_snippet": "vision.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/hart.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/ideogram4.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/ideogram4.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/infinity.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/kandinsky5.py",
+        "line": 100,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/krea2.py",
+        "line": 141,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/llamagen.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/nextstep.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval(),"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/nextstep.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae.to(device=device, dtype=dtype).eval(),"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/pixeldit.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "text_encoder.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/pixeldit.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "transformer.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/qwen_image.py",
+        "line": 106,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/sana.py",
+        "line": 447,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/backends/show_o.py",
+        "line": 194,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.to(device=device, dtype=dtype).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/models/ideogram4_text.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/training/trainer.py",
+        "line": 123,
+        "keyword_detected": "eval(",
+        "code_snippet": "module.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/training/trainer.py",
+        "line": 331,
+        "keyword_detected": "eval(",
+        "code_snippet": "trained.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/imagehub/training/trainer.py",
+        "line": 358,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.trained.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/helpers.py",
+        "line": 42,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "\"payload = pickle.loads(base64.b64decode(sys.argv[1]))\","
+      },
+      {
+        "file": "imagehub-0.1.0/tests/infinity_driver.py",
+        "line": 177,
+        "keyword_detected": "eval(",
+        "code_snippet": "encoder = T5EncoderModel.from_pretrained(text_root, torch_dtype=torch.float32).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/infinity_driver.py",
+        "line": 224,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = _ReferenceVAE(decoder.eval())"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/infinity_driver.py",
+        "line": 255,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/llamagen_driver.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_auraflow_transformer.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AuraFlowTransformer2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_auraflow_transformer.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AuraFlowTransformer2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_autoencoder_dc.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AutoencoderDC(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_autoencoder_kl.py",
+        "line": 78,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = AutoencoderKL(TINY_VAE_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_autoencoder_kl.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = AutoencoderKL(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_bagel.py",
+        "line": 86,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = BagelModel(_tiny_config()).bfloat16().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_bagel.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "BagelAutoencoder({\"ch\": 32, \"ch_mult\": [1, 1, 1, 1], \"num_res_blocks\": 1}).bfloat16().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_chatglm.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ChatGLMModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_clip_text.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = CLIPTextModel(TINY_TEXT_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_clip_text.py",
+        "line": 134,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = CLIPTextModelWithProjection(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_clip_text.py",
+        "line": 157,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = CLIPTextModelWithProjection(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_cogview3_plus_transformer.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = CogView3PlusTransformer2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_emu3.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Emu3ForCausalLM(GENERATOR_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_emu3.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Emu3VisionVQ(VQ_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_ernie_image_transformer.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ErnieImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_flux_kontext_inputs.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = AutoencoderKL(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_gemma.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = GemmaModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_gemma.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = GemmaModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_gemma2.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Gemma2Model(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_gemma2.py",
+        "line": 119,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Gemma2Model(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_glm.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = GlmModel(CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_hart.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = HARTTransformer(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_hart.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Qwen2Model(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_hidream_o1.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = HiDreamO1Model(TINY_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_hidream_o1.py",
+        "line": 147,
+        "keyword_detected": "eval(",
+        "code_snippet": "components = HiDreamO1Components(_TinyTokenizer(), HiDreamO1Model(TINY_CONFIG).eval())  # type: ignore[arg-type]"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_infinity_models.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = InfinityTransformer(TINY_TRANSFORMER).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_infinity_models.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = InfinityVAE(TINY_VAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_janus_vq.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = JanusGenerationModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_joyai_image.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = JoyImageEditTransformer3DModel(_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_kandinsky3_unet.py",
+        "line": 34,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Kandinsky3UNet(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_llada.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LLaDAForMultiModalGeneration(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_llama.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LlamaModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_llama_text.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LlamaTextModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_llamagen.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_llamagen.py",
+        "line": 132,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LlamaGenVQ(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_lumina2_transformer.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Lumina2Transformer2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_lumina_dimoo.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LLaDAForMultiModalGeneration(TINY_MODEL).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_lumina_dimoo.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "vqvae = VQModel(TINY_VQ).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_lumina_dimoo.py",
+        "line": 112,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LLaDAForMultiModalGeneration(TINY_MODEL).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_lumina_next_transformer.py",
+        "line": 33,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LuminaNextDiT2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_lumina_next_transformer.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LuminaNextDiT2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_meissonic_transformer.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = MeissonicTransformer2DModel(TINY_MEISSONIC_TRANSFORMER).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_nextstep.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = NextStepModel(_tiny_config()).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_nextstep.py",
+        "line": 94,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = NextStepModel(_tiny_config()).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_nextstep.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_omnigen_transformer.py",
+        "line": 64,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = OmniGenTransformer2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_ovis_image.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.OvisImageTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_ovis_image.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "native = OvisImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_paella_vq.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = PaellaVQModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_pixeldit.py",
+        "line": 82,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = PixelDiT(TINY_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_qwen2_5_vl_text.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Qwen25VLTextModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_sana_transformer.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = SanaTransformer2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_sana_transformer.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = SanaTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_sana_transformer.py",
+        "line": 72,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = SanaTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_sdxl_refiner.py",
+        "line": 214,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = AutoencoderKL({\"block_out_channels\": [32, 32, 64, 64], \"norm_num_groups\": 8}).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_show_o.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ShowOModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_stable_cascade_unet.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = StableCascadeUNet(PRIOR_TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_stable_cascade_unet.py",
+        "line": 102,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = StableCascadeUNet(DECODER_TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_training_distributed.py",
+        "line": 39,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as sock:"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_unet_2d.py",
+        "line": 197,
+        "keyword_detected": "eval(",
+        "code_snippet": "unet = UNet2DConditionModel(TINY_UNET_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_uvit_2d.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = UVit2DModel(TINY | extra).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_uvit_2d.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = UVit2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_vq_model.py",
+        "line": 22,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = VQModel(TINY_AMUSED_VQVAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_wuerstchen_models.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = WuerstchenPrior(PRIOR_TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_wuerstchen_models.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = WuerstchenDiffNeXt(DECODER_TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/test_z_image_transformer.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ZImageTransformer2DModel(TINY_TRANSFORMER).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/hunyuanimage.py",
+        "line": 13,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(body, {})  # noqa: S102"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_amused.py",
+        "line": 139,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_bagel_7b_mot.py",
+        "line": 211,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = model.bfloat16().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_bagel_7b_mot.py",
+        "line": 212,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = vae.bfloat16().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_bagel_7b_mot.py",
+        "line": 311,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = model.bfloat16().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_bagel_7b_mot.py",
+        "line": 312,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = vae.bfloat16().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_bk_sdm.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_bk_sdm.py",
+        "line": 149,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_bk_sdm_v2.py",
+        "line": 152,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_bk_sdm_v2.py",
+        "line": 155,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_chroma.py",
+        "line": 142,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_chroma.py",
+        "line": 143,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_chroma.py",
+        "line": 176,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_chroma.py",
+        "line": 177,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_cosmos2.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_cosmos2.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_cosmos2.py",
+        "line": 145,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference_text.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_cosmos2.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "native_text.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_cosmos2.py",
+        "line": 159,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference_transformer.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_cosmos2.py",
+        "line": 160,
+        "keyword_detected": "eval(",
+        "code_snippet": "native_transformer.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_cosmos2.py",
+        "line": 172,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference_vae.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_cosmos2.py",
+        "line": 173,
+        "keyword_detected": "eval(",
+        "code_snippet": "native_vae.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 119,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = ReferenceLM(reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = Emu3ForCausalLM(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 158,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = ReferenceVQ(ReferenceConfig(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 159,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = Emu3VisionVQ(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 212,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference_lm = ReferenceLM(reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 213,
+        "keyword_detected": "eval(",
+        "code_snippet": "native_lm = Emu3ForCausalLM(lm_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 215,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference_vq = ReferenceVQ(ReferenceVQConfig(**vq_config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 216,
+        "keyword_detected": "eval(",
+        "code_snippet": "native_vq = Emu3VisionVQ(vq_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 309,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 321,
+        "keyword_detected": "eval(",
+        "code_snippet": "vision.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 358,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_emu3_gen.py",
+        "line": 407,
+        "keyword_detected": "eval(",
+        "code_snippet": "vision.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_ernie_image.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_ernie_image.py",
+        "line": 250,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_flux_kontext_inputs.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_flux_kontext_inputs.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = AutoencoderKL(dict(reference_vae.config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_glm_image.py",
+        "line": 93,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_glm_image.py",
+        "line": 110,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_glm_image.py",
+        "line": 125,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_glm_image.py",
+        "line": 148,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_glm_image.py",
+        "line": 151,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_glm_image.py",
+        "line": 154,
+        "keyword_detected": "eval(",
+        "code_snippet": "root, text_encoder=text_encoder, transformer=transformer, vae=vae.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_glm_image.py",
+        "line": 316,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen2Model(transformers.Qwen2Config(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = Qwen2Model(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 131,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 132,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = HARTBlock(config, 0).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 173,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 174,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = HARTDiffusionMLP(8, 32, 32, 2).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 182,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference_loss = diffusion.DiffLoss(8, 32, 2, 32, \"8\").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 216,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 217,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = HARTDecoder(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 237,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 238,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = HARTQuantizer(32, 8).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 304,
+        "keyword_detected": "eval(",
+        "code_snippet": ".eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 353,
+        "keyword_detected": "eval(",
+        "code_snippet": ".eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hart.py",
+        "line": 360,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hidream_o1.py",
+        "line": 137,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hunyuan_dit_bert.py",
+        "line": 56,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_hunyuan_dit_transformer.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_ideogram4_caption_autoencoder.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "source = AutoencoderKLFlux2(CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_ideogram4_caption_autoencoder.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AutoencoderIdeogram4(CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_ideogram4_caption_autoencoder.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = reference_autoencoder.AutoEncoder(params).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_ideogram4_text.py",
+        "line": 128,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference_model = transformers.Qwen3VLTextModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_infinity_2b.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_infinity_2b.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = InfinitySelfAttention(64, 4).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_infinity_2b.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = basic.CrossAttention(embed_dim=64, kv_dim=128, num_heads=4).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_infinity_2b.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = InfinityCrossAttention(64, 128, 4).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_infinity_2b.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_infinity_2b.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = InfinityTransformer(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_infinity_2b.py",
+        "line": 218,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_infinity_2b.py",
+        "line": 219,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = InfinityDecoder(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_infinity_2b.py",
+        "line": 298,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_janus.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.JoyImageEditTransformer3DModel(**_TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = JoyImageEditTransformer3DModel(_TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.JoyImageEditPlusTransformer3DModel(**_TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = JoyImageEditTransformer3DModel(_TINY | {\"plus\": True}).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen3VLVisionModel(reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = Qwen3VLVisionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen3VLForConditionalGeneration(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 147,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = Qwen3VLForConditionalGeneration(config.to_dict()).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 230,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.AutoencoderKLWan(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 231,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = AutoencoderKLWan(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 349,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_joyai_image.py",
+        "line": 350,
+        "keyword_detected": "eval(",
+        "code_snippet": "native_transformer = JoyImageEditTransformer3DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_kandinsky5.py",
+        "line": 95,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_kandinsky5.py",
+        "line": 163,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_kandinsky5.py",
+        "line": 178,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_koala.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_koala.py",
+        "line": 133,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_koala_lightning.py",
+        "line": 127,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_koala_lightning.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_ldm.py",
+        "line": 66,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = reference_ldm.LDMBertModel(reference_ldm.LDMBertConfig(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_ldm.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = LDMBertModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_llamagen.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_llamagen.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_llamagen.py",
+        "line": 134,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_llamagen.py",
+        "line": 143,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_llamagen.py",
+        "line": 208,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_llamagen.py",
+        "line": 217,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_llamagen.py",
+        "line": 368,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_lora_ideogram4.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "source = Ideogram4Transformer(CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_lora_ideogram4.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "native = Ideogram4Transformer(CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_lora_ideogram4.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.Ideogram4Transformer2DModel(**reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_lumina_dimoo.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": "return reference.eval(), ours.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_lumina_dimoo.py",
+        "line": 249,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_meissonic.py",
+        "line": 130,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_nextstep_1.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen2Model(transformers.Qwen2Config(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_nextstep_1.py",
+        "line": 46,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = NextStepModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_nextstep_1.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen2Model(transformers.Qwen2Config(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_nextstep_1.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = NextStepModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_nextstep_1.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = module.SimpleMLPAdaLN(8, 32, dim=16, layers=2).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_nextstep_1.py",
+        "line": 82,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = FlowNetwork(8, 32, 16, 2).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_omnigen.py",
+        "line": 145,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 91,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = reference_class(**TINY_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = PixelDiT(TINY_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 147,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = reference_class(**TINY_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 148,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = PixelDiT(TINY_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 200,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 216,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours_model = ours_model.float().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 236,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = reference_class(**reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 253,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = ours.float().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 273,
+        "keyword_detected": "eval(",
+        "code_snippet": ".eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_pixeldit.py",
+        "line": 290,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = reference_class(**reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_prx.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "text_encoder = modeling.T5GemmaEncoder(transformers.T5GemmaModuleConfig(**text_config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_prx.py",
+        "line": 64,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_prx.py",
+        "line": 66,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = diffusers.AutoencoderKL.from_config(read_json(root / \"vae/config.json\")).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_amused.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UVit2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_amused.py",
+        "line": 46,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = UVit2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_amused.py",
+        "line": 121,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.VQModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_amused.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = VQModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_auraflow.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.AuraFlowTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_auraflow.py",
+        "line": 41,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AuraFlowTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_bert.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.BertModel(transformers.BertConfig(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_bert.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = BertModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_chatglm.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = modeling.ChatGLMModel(modeling.ChatGLMConfig(**config), empty_init=False).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_chatglm.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ChatGLMModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_clip_text_mask.py",
+        "line": 41,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = transformers.CLIPTextModelWithProjection(transformers.CLIPTextConfig(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_clip_text_mask.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = CLIPTextModelWithProjection(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_cogview3_plus_transformer.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.CogView3PlusTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_cogview3_plus_transformer.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = CogView3PlusTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_cogview4_transformer.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.CogView4Transformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_cogview4_transformer.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = CogView4Transformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_deepfloyd_if.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_deepfloyd_if.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_dreamlite.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.DreamLiteUNetModel(**TINY_UNET).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_dreamlite.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = DreamLiteUNetModel(TINY_UNET).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_dreamlite.py",
+        "line": 77,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.DreamLiteUNetModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_dreamlite.py",
+        "line": 78,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = DreamLiteUNetModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_dreamlite.py",
+        "line": 96,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.AutoencoderTiny(**TINY_VAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_dreamlite.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = AutoencoderTiny(TINY_VAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ernie_image_transformer.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.ErnieImageTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ernie_image_transformer.py",
+        "line": 62,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ErnieImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ernie_image_transformer.py",
+        "line": 84,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.ErnieImageTransformer2DModel(**PUBLISHED_SMALL).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ernie_image_transformer.py",
+        "line": 86,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ErnieImageTransformer2DModel(PUBLISHED_SMALL).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_flux1_transformer.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.FluxTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_flux1_transformer.py",
+        "line": 82,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = FluxTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_flux2_transformer.py",
+        "line": 81,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.Flux2Transformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_flux2_transformer.py",
+        "line": 82,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Flux2Transformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_flux2_vae.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.AutoencoderKLFlux2(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_flux2_vae.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AutoencoderKLFlux2(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_gemma.py",
+        "line": 46,
+        "keyword_detected": "eval(",
+        "code_snippet": "return transformers.GemmaModel(reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_gemma.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = GemmaModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_gemma.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = GemmaModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_gemma2.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "return transformers.Gemma2Model(reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_gemma2.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Gemma2Model(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_gemma2.py",
+        "line": 103,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Gemma2Model(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_glm.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.GlmModel(_reference_config(config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_glm.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = GlmModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_glm_image_ar.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_glm_image_ar.py",
+        "line": 101,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = GlmImageARModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_glm_image_transformer.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.GlmImageTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_glm_image_transformer.py",
+        "line": 49,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = GlmImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hidream_o1.py",
+        "line": 76,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = reference_module.Qwen3VLForConditionalGeneration(_reference_config()).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hidream_o1.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = HiDreamO1Model(TINY_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hidream_o1.py",
+        "line": 228,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = reference_module.Qwen3VLForConditionalGeneration(_reference_config()).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hidream_o1.py",
+        "line": 237,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = HiDreamO1Model(TINY_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hidream_transformer.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.HiDreamImageTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hidream_transformer.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = HiDreamImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hidream_transformer.py",
+        "line": 104,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = HiDreamImageTransformer2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hunyuan_dit.py",
+        "line": 106,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.HunyuanDiT2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hunyuan_dit.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = HunyuanDiT2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hunyuanimage_text.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.T5EncoderModel(transformers.T5Config(**small)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hunyuanimage_text.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = T5EncoderModel(small).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hunyuanimage_transformer.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hunyuanimage_transformer.py",
+        "line": 83,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = HunyuanImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hunyuanimage_vae.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_hunyuanimage_vae.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AutoencoderKLHunyuanImage(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ideogram4_transformer.py",
+        "line": 89,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = ReferenceModel(_reference_config(config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ideogram4_transformer.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Ideogram4Transformer(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky22_decoder.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky22_decoder.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky22_decoder.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.VQModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky22_decoder.py",
+        "line": 89,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = VQModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky22_prior.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = transformers.CLIPVisionModelWithProjection(ref_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky22_prior.py",
+        "line": 47,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = CLIPVisionModelWithProjection(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky22_prior.py",
+        "line": 82,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.PriorTransformer(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky22_prior.py",
+        "line": 83,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = PriorTransformer(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky3_movq.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.VQModel(**CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky3_movq.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = VQModel(CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky3_unet.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.Kandinsky3UNet(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky3_unet.py",
+        "line": 40,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = Kandinsky3UNet(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky5_transformer.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.Kandinsky5Transformer3DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kandinsky5_transformer.py",
+        "line": 48,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = Kandinsky5Transformer3DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kolors_unet.py",
+        "line": 35,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.UNet2DConditionModel.from_config(TINY_KOLORS_UNET).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_kolors_unet.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(TINY_KOLORS_UNET).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_krea2_transformer.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.Krea2Transformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_krea2_transformer.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Krea2Transformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_llama_text.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.LlamaForCausalLM(transformers.LlamaConfig(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_llama_text.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LlamaTextModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_longcat_image_transformer.py",
+        "line": 71,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.LongCatImageTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_longcat_image_transformer.py",
+        "line": 72,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LongCatImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_lumina2.py",
+        "line": 31,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.Lumina2Transformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_lumina2.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Lumina2Transformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_lumina_next.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.LuminaNextDiT2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_lumina_next.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = LuminaNextDiT2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_meissonic.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = module.Transformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_meissonic.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = MeissonicTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_mistral3_text.py",
+        "line": 65,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Mistral3Model(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_mistral3_text.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Mistral3TextModel({\"text_config\": text}).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_mistral3_text.py",
+        "line": 114,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Mistral3TextModel({\"text_config\": text}).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_nucleus_image.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.NucleusMoEImageTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_nucleus_image.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = NucleusImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_nucleus_image.py",
+        "line": 94,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.NucleusMoEImageTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_nucleus_image.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = NucleusImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_omnigen.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.OmniGenTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_omnigen.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = OmniGenTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ovis_image.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.OvisImageTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ovis_image.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = OvisImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ovis_image.py",
+        "line": 89,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen3Model(transformers.Qwen3Config(**TEXT)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_ovis_image.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = Qwen3Model(TEXT).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_paella_vq.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_paella_vq.py",
+        "line": 46,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = PaellaVQModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 55,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = CLIPTextModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 87,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = transformers.CLIPTextModelWithProjection(transformers.CLIPTextConfig(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 88,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = CLIPTextModelWithProjection(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 120,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = transformers.Qwen3Model(transformers.Qwen3Config(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 121,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = Qwen3Model(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 164,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = transformers.LlamaModel(ref_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 165,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = LlamaModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 244,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = JanusVQVAE(JanusVQVAEConfig(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 245,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = JanusGenerationModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 267,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref_aligner = JanusVQVAEAlignerMLP(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 268,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref_head = JanusVQVAEHead(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 269,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = JanusGenerationModel(TINY_JANUS_VQ).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 316,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.AutoencoderKL.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 319,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = AutoencoderKL(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 342,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.AutoencoderKL.from_config(TINY_Z_IMAGE_VAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 345,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = AutoencoderKL(TINY_Z_IMAGE_VAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 388,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.AutoencoderKL.from_config(TINY_COGVIEW4_VAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 391,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = AutoencoderKL(TINY_COGVIEW4_VAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 431,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.ZImageTransformer2DModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 432,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = ZImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 452,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 455,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 468,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 471,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 506,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 509,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 544,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_parity.py",
+        "line": 547,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_pixart.py",
+        "line": 109,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.PixArtTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_pixart.py",
+        "line": 110,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = PixArtTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_pixart.py",
+        "line": 191,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.PixArtTransformer2DModel(**clean_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_pixart.py",
+        "line": 192,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = PixArtTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_prx_transformer.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.PRXTransformer2DModel(**CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_prx_transformer.py",
+        "line": 26,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = PRXTransformer2DModel(CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen25_vl.py",
+        "line": 98,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen2_5_VisionTransformerPretrainedModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen25_vl.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = Qwen25VLVisionModel(VISION).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen25_vl.py",
+        "line": 125,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen2_5_VLForConditionalGeneration(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen25_vl.py",
+        "line": 126,
+        "keyword_detected": "eval(",
+        "code_snippet": "actual = Qwen25VLForConditionalGeneration(config_dict).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen25_vl.py",
+        "line": 160,
+        "keyword_detected": "eval(",
+        "code_snippet": "return transformers.Qwen2_5_VLForConditionalGeneration(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen25_vl.py",
+        "line": 203,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Qwen25VLTextModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen25_vl.py",
+        "line": 224,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Qwen25VLTextModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen25_vl.py",
+        "line": 252,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Qwen25VLTextModel(model_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen25_vl.py",
+        "line": 279,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Qwen25VLTextModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen3_vl.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen3VLTextModel(_reference_config(config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen3_vl.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Qwen3VLTextModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen3_vl.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.Qwen3VLTextModel(_reference_config(TINY)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen3_vl.py",
+        "line": 100,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = Qwen3VLTextModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen_image.py",
+        "line": 38,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.QwenImageTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen_image.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = QwenImageTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen_image21.py",
+        "line": 44,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.QwenImage21Transformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen_image21.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = QwenImage21Transformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen_image_vae.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.AutoencoderKLQwenImage(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen_image_vae.py",
+        "line": 37,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AutoencoderKLQwenImage(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen_vae21.py",
+        "line": 66,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.AutoencoderKLQwenImage21(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_qwen_vae21.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AutoencoderKLQwenImage21(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sana.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.SanaTransformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sana.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = SanaTransformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sana.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.AutoencoderDC(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sana.py",
+        "line": 99,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = AutoencoderDC(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sd3.py",
+        "line": 73,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.SD3Transformer2DModel(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sd3.py",
+        "line": 74,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = SD3Transformer2DModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sdxl_refiner.py",
+        "line": 39,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sdxl_refiner.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sdxs.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_sdxs.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_stable_cascade_unet.py",
+        "line": 19,
+        "keyword_detected": "eval(",
+        "code_snippet": "ref.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_stable_cascade_unet.py",
+        "line": 24,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = StableCascadeUNet(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_t5.py",
+        "line": 78,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.T5EncoderModel(reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_t5.py",
+        "line": 79,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = T5EncoderModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_t5gemma.py",
+        "line": 41,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = modeling.T5GemmaEncoder(reference_config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_t5gemma.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = T5GemmaEncoder(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_umt5.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = transformers.UMT5EncoderModel(transformers.UMT5Config(**config)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_umt5.py",
+        "line": 36,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UMT5EncoderModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_wuerstchen.py",
+        "line": 25,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = reference_cls(**config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_random_wuerstchen.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = our_cls(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_segmind_sd.py",
+        "line": 121,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_segmind_sd.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_segmind_vega.py",
+        "line": 122,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.UNet2DConditionModel.from_config(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_segmind_vega.py",
+        "line": 125,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours = UNet2DConditionModel(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_show_o_512.py",
+        "line": 80,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = official.PhiForCausalLM(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_show_o_512.py",
+        "line": 90,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = _official_magvit().MAGVITv2().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_show_o_random.py",
+        "line": 107,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = official.PhiForCausalLM(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_show_o_random.py",
+        "line": 108,
+        "keyword_detected": "eval(",
+        "code_snippet": "native = ShowOModel(values).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_show_o_random.py",
+        "line": 145,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = official.MAGVITv2().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_show_o_random.py",
+        "line": 146,
+        "keyword_detected": "eval(",
+        "code_snippet": "native = MAGVITv2({}).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_show_o_random.py",
+        "line": 167,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = ShowOModel(values).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_stable_cascade.py",
+        "line": 115,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_stable_cascade.py",
+        "line": 180,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_stable_cascade.py",
+        "line": 206,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_stable_cascade.py",
+        "line": 227,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_stable_cascade.py",
+        "line": 249,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_stable_cascade.py",
+        "line": 252,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_stable_cascade.py",
+        "line": 255,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_stable_cascade.py",
+        "line": 258,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_dreamlite.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours_unet = DreamLiteUNetModel(TINY_UNET).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_dreamlite.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "ours_vae = AutoencoderTiny(TINY_VAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_dreamlite.py",
+        "line": 60,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference_unet = diffusers.DreamLiteUNetModel(**TINY_UNET).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_dreamlite.py",
+        "line": 61,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference_vae = diffusers.AutoencoderTiny(**TINY_VAE).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_glm_image.py",
+        "line": 43,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_glm_image.py",
+        "line": 50,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_glm_image.py",
+        "line": 51,
+        "keyword_detected": "eval(",
+        "code_snippet": "transformer = diffusers.GlmImageTransformer2DModel(**TRANSFORMER_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_glm_image.py",
+        "line": 52,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = diffusers.AutoencoderKL(**VAE_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_ideogram4.py",
+        "line": 83,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_ideogram4.py",
+        "line": 105,
+        "keyword_detected": "eval(",
+        "code_snippet": "autoencoder = _Autoencoder().eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_janus.py",
+        "line": 28,
+        "keyword_detected": "eval(",
+        "code_snippet": "model = transformers.JanusForConditionalGeneration(config).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_janus.py",
+        "line": 54,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_kandinsky22.py",
+        "line": 118,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_kandinsky22.py",
+        "line": 121,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_kandinsky22.py",
+        "line": 122,
+        "keyword_detected": "eval(",
+        "code_snippet": "prior = diffusers.PriorTransformer(**PRIOR_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_kandinsky22.py",
+        "line": 123,
+        "keyword_detected": "eval(",
+        "code_snippet": "unet = diffusers.UNet2DConditionModel(**UNET_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_kandinsky22.py",
+        "line": 124,
+        "keyword_detected": "eval(",
+        "code_snippet": "movq = diffusers.VQModel(**MOVQ_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_llamagen.py",
+        "line": 89,
+        "keyword_detected": "eval(",
+        "code_snippet": "return root, generate_module, reference_gpt.eval(), reference_vq.eval(), components"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_prx.py",
+        "line": 30,
+        "keyword_detected": "eval(",
+        "code_snippet": "text = modeling.T5GemmaEncoder(transformers.T5GemmaModuleConfig(**text_cfg)).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_prx.py",
+        "line": 32,
+        "keyword_detected": "eval(",
+        "code_snippet": "transformer = diffusers.PRXTransformer2DModel(**transformer_cfg).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_prx.py",
+        "line": 34,
+        "keyword_detected": "eval(",
+        "code_snippet": "vae = diffusers.AutoencoderKL.from_config(vae_cfg).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_stable_cascade.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_stable_cascade.py",
+        "line": 69,
+        "keyword_detected": "eval(",
+        "code_snippet": "prior = diffusers.StableCascadeUNet(**PRIOR_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_stable_cascade.py",
+        "line": 70,
+        "keyword_detected": "eval(",
+        "code_snippet": "decoder = diffusers.StableCascadeUNet(**DECODER_CONFIG).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_stable_cascade.py",
+        "line": 75,
+        "keyword_detected": "eval(",
+        "code_snippet": "vqgan.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_wuerstchen.py",
+        "line": 45,
+        "keyword_detected": "eval(",
+        "code_snippet": "return model.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_wuerstchen.py",
+        "line": 57,
+        "keyword_detected": "eval(",
+        "code_snippet": "prior_text.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_tiny_wuerstchen.py",
+        "line": 58,
+        "keyword_detected": "eval(",
+        "code_snippet": "text.eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_visualcloze.py",
+        "line": 150,
+        "keyword_detected": "eval(",
+        "code_snippet": "reference = diffusers.FluxTransformer2DModel(**TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_visualcloze.py",
+        "line": 151,
+        "keyword_detected": "eval(",
+        "code_snippet": "native = FluxTransformer2DModel(TINY).eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_wuerstchen.py",
+        "line": 103,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_wuerstchen.py",
+        "line": 205,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_wuerstchen.py",
+        "line": 223,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_wuerstchen.py",
+        "line": 238,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_wuerstchen.py",
+        "line": 261,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_wuerstchen.py",
+        "line": 264,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_wuerstchen.py",
+        "line": 267,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_wuerstchen.py",
+        "line": 270,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      },
+      {
+        "file": "imagehub-0.1.0/tests/reference/test_ref_wuerstchen.py",
+        "line": 273,
+        "keyword_detected": "eval(",
+        "code_snippet": ").eval()"
+      }
+    ]
+  },
+  {
+    "package_name": "aixand-suite-connect",
+    "checked_at": "2026-11-15T22:07:45.061314",
+    "download_url": "https://files.pythonhosted.org/packages/d9/8a/c74748ef3d0d50415eb4b2526ab0685f9e231871f7508e6064501e254c0f/aixand_suite_connect-0.1.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aixand_suite_connect-0.1.0a1/aixand_connect/codex.py",
+        "line": 257,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen([binary, \"app-server\", \"--listen\", \"stdio://\"], cwd=record[\"cwd\"],"
+      },
+      {
+        "file": "aixand_suite_connect-0.1.0a1/aixand_connect/snapshot.py",
+        "line": 51,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "with subprocess.Popen(['git', '-c', 'core.fsmonitor=false', '-C', str(root), 'ls-files', '-z', '--cached', '--others', '--exclude-standard', '--', '.'],"
+      }
+    ]
+  },
+  {
+    "package_name": "aixand-suite-python",
+    "checked_at": "2026-11-15T22:07:45.115688",
+    "download_url": "https://files.pythonhosted.org/packages/db/10/225c18d28f1fd02d09de2a4a0fea2984a71f9fb6b276ab727d5a31e7bd86/aixand_suite_python-0.1.0a1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "aixand_suite_python-0.1.0a1/src/aixand/_carrier.py",
+        "line": 27,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "aixand_suite_python-0.1.0a1/src/aixand/_carrier.py",
+        "line": 71,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reservation:"
+      },
+      {
+        "file": "aixand_suite_python-0.1.0a1/src/aixand/_carrier.py",
+        "line": 77,
+        "keyword_detected": "exec(",
+        "code_snippet": "self.process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "aixand_suite_python-0.1.0a1/tests/test_integration.py",
+        "line": 57,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.daemon = subprocess.Popen([str(Path(BIN) / \"uc-daemon\")],"
+      }
+    ]
   }
 ]
