@@ -59814,5 +59814,113 @@
         "code_snippet": "with socket.socket() as s:"
       }
     ]
+  },
+  {
+    "package_name": "LMID-conformally-flat-puncture",
+    "checked_at": "2026-11-15T01:19:28.025741",
+    "download_url": "https://files.pythonhosted.org/packages/88/db/da7913f91fc87b0d2b20cf9fd5cb494e4eb781a6ab80d383f23071161f23/lmid_conformally_flat_puncture-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/src/lemaitre/initial_data/conformally_flat_puncture/parametric/hermite.py",
+        "line": 353,
+        "keyword_detected": "eval(",
+        "code_snippet": "with jax.ensure_compile_time_eval():"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/src/lemaitre/initial_data/conformally_flat_puncture/parametric/hermite_nd.py",
+        "line": 181,
+        "keyword_detected": "eval(",
+        "code_snippet": "with jax.ensure_compile_time_eval():"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/src/lemaitre/initial_data/conformally_flat_puncture/parametric/hermite_smolyak_cross.py",
+        "line": 139,
+        "keyword_detected": "eval(",
+        "code_snippet": "with jax.ensure_compile_time_eval():      # see parametric_nd._jax_consts"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/src/lemaitre/initial_data/conformally_flat_puncture/parametric/parametric_nd.py",
+        "line": 158,
+        "keyword_detected": "eval(",
+        "code_snippet": "with jax.ensure_compile_time_eval():"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/src/lemaitre/initial_data/conformally_flat_puncture/parametric/pooled.py",
+        "line": 293,
+        "keyword_detected": "eval(",
+        "code_snippet": "with jax.ensure_compile_time_eval():"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/src/lemaitre/initial_data/conformally_flat_puncture/solver/spectral.py",
+        "line": 127,
+        "keyword_detected": "eval(",
+        "code_snippet": "def legendre_P_eval(ell: int, mu) -> np.ndarray:"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/src/lemaitre/initial_data/conformally_flat_puncture/validation/export_grteclyn.py",
+        "line": 181,
+        "keyword_detected": "eval(",
+        "code_snippet": "def phi_eval(cos_c: np.ndarray, sin_c: np.ndarray, cos_m: np.ndarray,"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/src/lemaitre/initial_data/conformally_flat_puncture/validation/export_grteclyn.py",
+        "line": 448,
+        "keyword_detected": "eval(",
+        "code_snippet": "return phi_eval(C_q, S_q, exp.cos_m, exp.sin_m, phi)"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/tests/test_export_grteclyn.py",
+        "line": 85,
+        "keyword_detected": "eval(",
+        "code_snippet": "got = eg.phi_eval(cos_c, sin_c, cos_m, sin_m, phi)"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/tests/test_export_grteclyn.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": "got = float(eg.phi_eval(cos_c, sin_c, cos_m, sin_m, phi_k))"
+      },
+      {
+        "file": "lmid_conformally_flat_puncture-1.0.0/tests/test_spatial_spin.py",
+        "line": 185,
+        "keyword_detected": "eval(",
+        "code_snippet": "Pell = spectral.legendre_P_eval(ell, B)"
+      }
+    ]
+  },
+  {
+    "package_name": "vbee-mcp",
+    "checked_at": "2026-11-15T01:19:29.239832",
+    "download_url": "https://files.pythonhosted.org/packages/04/3d/967aaaab55bafa8744d7056cedec29b614ed5172fa0169f66ca0272fcce0/vbee_mcp-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "vbee_mcp-0.1.0/tests/test_tts_sync.py",
+        "line": 36,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "assert base64.b64decode(out[\"audio_base64\"]) == audio_bytes()"
+      }
+    ]
+  },
+  {
+    "package_name": "prism-ai-mcp-server",
+    "checked_at": "2026-11-15T01:19:29.493982",
+    "download_url": "https://files.pythonhosted.org/packages/8b/8c/67c9bb9d1075becf3229ed10fe5de9e21db9bbcd84cbf4c860760a49b363/prism_ai_mcp_server-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "prism_ai_mcp_server-0.2.0/src/prism_mcp_server/http.py",
+        "line": 60,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._sockets: set[socket.socket] = set()"
+      },
+      {
+        "file": "prism_ai_mcp_server-0.2.0/src/prism_mcp_server/http.py",
+        "line": 149,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def get_request(self) -> tuple[socket.socket, Any]:"
+      }
+    ]
   }
 ]
