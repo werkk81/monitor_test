@@ -62846,5 +62846,87 @@
         "code_snippet": "self.daemon = subprocess.Popen([str(Path(BIN) / \"uc-daemon\")],"
       }
     ]
+  },
+  {
+    "package_name": "stille-hunter",
+    "checked_at": "2026-11-16T01:55:12.424499",
+    "download_url": "https://files.pythonhosted.org/packages/04/97/564204dfa3401ba1614d7751c0106fee889208c918604faf8ead5de02c6d/stille_hunter-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "stille_hunter-0.3.0/src/stille_hunter/notify.py",
+        "line": 93,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "if \"://discord.com/api/webhooks/\" in url or \"://discordapp.com/api/webhooks/\" in url:"
+      },
+      {
+        "file": "stille_hunter-0.3.0/tests/test_generate.py",
+        "line": 176,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "pem = base64.b64decode(ca).decode()"
+      },
+      {
+        "file": "stille_hunter-0.3.0/tests/test_notify.py",
+        "line": 109,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "cfg = _config(tmp_path, {\"webhook\": {\"url\": \"https://discord.com/api/webhooks/1/x\"}})"
+      },
+      {
+        "file": "stille_hunter-0.3.0/tests/test_notify.py",
+        "line": 196,
+        "keyword_detected": "discord.com/api/webhooks",
+        "code_snippet": "(\"https://discord.com/api/webhooks/1/x\", \"discord\"),"
+      }
+    ]
+  },
+  {
+    "package_name": "coldread-tfm",
+    "checked_at": "2026-11-16T01:55:13.140221",
+    "download_url": "https://files.pythonhosted.org/packages/03/87/de4fe6a457eea748200f303c19e5f6856d5e30e7cae4a80d50e9cd0d887b/coldread_tfm-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "coldread_tfm-0.1.0/src/coldread/context/attention_retrieval.py",
+        "line": 211,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.eval()"
+      },
+      {
+        "file": "coldread_tfm-0.1.0/src/coldread/model/stage4_deep_attention.py",
+        "line": 156,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.bank.eval()"
+      },
+      {
+        "file": "coldread_tfm-0.1.0/src/coldread/model/stage4_predictive_attention.py",
+        "line": 42,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "coldread_tfm-0.1.0/src/coldread/model/stage4_predictive_attention.py",
+        "line": 53,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "coldread_tfm-0.1.0/src/coldread/model/stage4_predictive_attention.py",
+        "line": 59,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.model.eval()"
+      },
+      {
+        "file": "coldread_tfm-0.1.0/src/coldread/model/stage4_predictive_attention.py",
+        "line": 175,
+        "keyword_detected": "eval(",
+        "code_snippet": "self.bank.eval()"
+      },
+      {
+        "file": "coldread_tfm-0.1.0/src/coldread/serialization.py",
+        "line": 68,
+        "keyword_detected": "eval(",
+        "code_snippet": "model.to(device).eval()"
+      }
+    ]
   }
 ]
