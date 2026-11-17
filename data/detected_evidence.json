@@ -62928,5 +62928,563 @@
         "code_snippet": "model.to(device).eval()"
       }
     ]
+  },
+  {
+    "package_name": "omnipilot",
+    "checked_at": "2026-11-17T01:07:45.992329",
+    "download_url": "https://files.pythonhosted.org/packages/4b/22/8273cc5d536733360cbb57359f467694764bb93c8d01232713debc437fd7/omnipilot-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "omnipilot-1.1.0/apps/admin_console/routers/system.py",
+        "line": 579,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable] + sys.argv)"
+      },
+      {
+        "file": "omnipilot-1.1.0/apps/admin_console/routers/system.py",
+        "line": 584,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen([sys.executable] + sys.argv)"
+      },
+      {
+        "file": "omnipilot-1.1.0/apps/admin_console/services/device_stream_service.py",
+        "line": 47,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/apps/admin_console/services/device_stream_service.py",
+        "line": 76,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/apps/admin_console/services/media_service.py",
+        "line": 448,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "image_bytes = base64.b64decode(base64_data)"
+      },
+      {
+        "file": "omnipilot-1.1.0/apps/admin_console/services/task_queue_service.py",
+        "line": 855,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/mcp_server/tools/device_state.py",
+        "line": 67,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "screenshot_bytes = base64.b64decode(latest_screenshot_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/mcp_server/tools/task_runner.py",
+        "line": 491,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "omnipilot-1.1.0/mcp_server/utils/device_utils.py",
+        "line": 144,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "omnipilot-1.1.0/mcp_server/utils/device_utils.py",
+        "line": 152,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "subprocess.Popen("
+      },
+      {
+        "file": "omnipilot-1.1.0/mcp_server/utils/env_utils.py",
+        "line": 53,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "\"\"\"Returns kwargs for subprocess.Popen to run a fully detached background process cross-platform.\"\"\""
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/agents/operator/prompts.py",
+        "line": 894,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "curr_img_bytes = base64.b64decode(latest_screenshot_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/agents/operator/prompts.py",
+        "line": 1029,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "current_hash = dhash_hex(base64.b64decode(latest_screenshot_b64))"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/agents/planner/planner.py",
+        "line": 257,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "img_bytes = base64.b64decode(screenshot_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/agents/validator/execution_loop.py",
+        "line": 234,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "decoded_bytes = base64.b64decode(post_screenshot_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/agents/validator/precondition_pixel.py",
+        "line": 183,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "live_bytes = base64.b64decode(live_screenshot_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/agents/validator/precondition_pixel.py",
+        "line": 273,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "orig_bytes = base64.b64decode(pre_screenshot_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/agents/video_analyzer/chunk_conversation.py",
+        "line": 471,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/agents/video_analyzer/universal_engine.py",
+        "line": 320,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/controllers/unified_controller.py",
+        "line": 67,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await asyncio.create_subprocess_exec(*command, **kwargs)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/device_smoke.py",
+        "line": 257,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return len(base64.b64decode(b64))"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/emulator_manager.py",
+        "line": 71,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self._proc: subprocess.Popen | None = None"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/emulator_manager.py",
+        "line": 142,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _stream_logs(self, proc: subprocess.Popen):"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/emulator_manager.py",
+        "line": 204,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/emulator_manager.py",
+        "line": 251,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "async def _track_boot_lifecycle(self, avd_name: str, proc: subprocess.Popen, started_at: float):"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/emulator_manager.py",
+        "line": 311,
+        "keyword_detected": "exec(",
+        "code_snippet": "p = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/emulator_manager.py",
+        "line": 376,
+        "keyword_detected": "exec(",
+        "code_snippet": "p = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/probes/adb_probe.py",
+        "line": 121,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/probes/adb_probe.py",
+        "line": 205,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/probes/adb_probe.py",
+        "line": 291,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/probes/adb_probe.py",
+        "line": 322,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/core/diagnostics/probes/adb_probe.py",
+        "line": 481,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/data_engine/trace.py",
+        "line": 59,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "img_bytes = base64.b64decode(clean_str, validate=False)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/data_engine/trace.py",
+        "line": 89,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "img_bytes = base64.b64decode(clean_str, validate=False)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/drivers/android/adb_driver.py",
+        "line": 142,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "screenshot_bytes = base64.b64decode(screenshot_base64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/drivers/android/adb_driver.py",
+        "line": 175,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "screenshot_bytes = base64.b64decode(screenshot_base64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/drivers/android/adb_driver.py",
+        "line": 216,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "else base64.b64decode(clean_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/drivers/android/adb_driver.py",
+        "line": 453,
+        "keyword_detected": "exec(",
+        "code_snippet": "self._scrcpy_process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/drivers/android/adb_driver.py",
+        "line": 479,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/graph/graph.py",
+        "line": 146,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "screenshot_bytes = base64.b64decode(screenshot_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/graph/perception.py",
+        "line": 164,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "latest_screenshot_bytes = base64.b64decode(latest_screenshot_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/interfaces/cli/commands/ui.py",
+        "line": 130,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/mcp/action_executor.py",
+        "line": 525,
+        "keyword_detected": "eval(",
+        "code_snippet": "sequence = ast.literal_eval(sequence_str)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/mcp/observation.py",
+        "line": 64,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "screenshot_bytes = base64.b64decode(device_data.base64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/runtime/daemon_client.py",
+        "line": 101,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": ") -> subprocess.Popen | None:"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/runtime/daemon_client.py",
+        "line": 151,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen(cmd, **kwargs)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/runtime/device_pool.py",
+        "line": 136,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/runtime/device_pool.py",
+        "line": 252,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/runtime/server_lifecycle.py",
+        "line": 47,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/runtime/supervisor.py",
+        "line": 55,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/tools/command_tool.py",
+        "line": 738,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/tools/command_tool.py",
+        "line": 1104,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/coordinates.py",
+        "line": 480,
+        "keyword_detected": "eval(",
+        "code_snippet": "seq = ast.literal_eval(seq)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/image_diff.py",
+        "line": 165,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "last_bytes = base64.b64decode(last_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/image_diff.py",
+        "line": 177,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "curr_bytes = base64.b64decode(curr_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/image_diff.py",
+        "line": 266,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "last_bytes = base64.b64decode(last_data.base64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/image_diff.py",
+        "line": 278,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "curr_bytes = base64.b64decode(curr_data.base64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/ocr_xml_fusion.py",
+        "line": 110,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "img_data = base64.b64decode(screenshot_b64)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/task_tree.py",
+        "line": 360,
+        "keyword_detected": "eval(",
+        "code_snippet": "parsed = ast.literal_eval(cleaned)"
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/video.py",
+        "line": 158,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/video.py",
+        "line": 219,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/video.py",
+        "line": 253,
+        "keyword_detected": "exec(",
+        "code_snippet": "fallback_proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/video.py",
+        "line": 294,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/video.py",
+        "line": 334,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/video.py",
+        "line": 542,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/omnipilot/utils/visualization.py",
+        "line": 617,
+        "keyword_detected": "eval(",
+        "code_snippet": "sequence = ast.literal_eval(sequence_str)"
+      },
+      {
+        "file": "omnipilot-1.1.0/third_party/mobile_use/utils/video.py",
+        "line": 199,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/third_party/mobile_use/utils/video.py",
+        "line": 304,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/third_party/mobile_use/utils/video.py",
+        "line": 354,
+        "keyword_detected": "exec(",
+        "code_snippet": "probe = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "omnipilot-1.1.0/third_party/mobile_use/utils/video.py",
+        "line": 380,
+        "keyword_detected": "exec(",
+        "code_snippet": "proc = await asyncio.create_subprocess_exec("
+      }
+    ]
+  },
+  {
+    "package_name": "sowwic-nyx",
+    "checked_at": "2026-11-17T01:07:46.986031",
+    "download_url": "https://files.pythonhosted.org/packages/c9/0d/255c494572b2ebc3cb7562b00c3ed7a0bbfc2a8a65152f53d1cc9286f4f0/sowwic_nyx-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/core/value_storage.py",
+        "line": 177,
+        "keyword_detected": "eval(",
+        "code_snippet": "out_value = eval(self.raw_value)"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/editor/main_window.py",
+        "line": 452,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "layout_state = QtCore.QByteArray(base64.b64decode(layout_config.state))"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/editor/main_window.py",
+        "line": 472,
+        "keyword_detected": "exec(",
+        "code_snippet": "AboutDialog(self).exec()"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/editor/utils/context_menus.py",
+        "line": 17,
+        "keyword_detected": "exec(",
+        "code_snippet": "menu.exec(global_pos)"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/editor/widgets/dialogs/popup_nodes_palette.py",
+        "line": 131,
+        "keyword_detected": "exec(",
+        "code_snippet": "palette.exec()"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/editor/widgets/dialogs/popup_nodes_palette.py",
+        "line": 160,
+        "keyword_detected": "exec(",
+        "code_snippet": "palette.exec()"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/editor/widgets/dialogs/stage_object_picker.py",
+        "line": 106,
+        "keyword_detected": "exec(",
+        "code_snippet": "if dialog.exec() == QtWidgets.QDialog.DialogCode.Accepted:"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/editor/widgets/inspector_error_banner.py",
+        "line": 118,
+        "keyword_detected": "exec(",
+        "code_snippet": "ErrorDetailsDialog(f\"Error | {self._node.path}\", self._error, self).exec()"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/editor/widgets/inspector_node_header.py",
+        "line": 124,
+        "keyword_detected": "exec(",
+        "code_snippet": "diagnistics_dialog.exec()"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/main.py",
+        "line": 18,
+        "keyword_detected": "exec(",
+        "code_snippet": "status_code = app.exec()"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/plugins/functions/encoding_operations/operations.py",
+        "line": 86,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(text).decode(\"utf-8\")"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/stdlib/nodes/launch_process.py",
+        "line": 38,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process: subprocess.Popen,"
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/stdlib/nodes/launch_process.py",
+        "line": 46,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process (subprocess.Popen): the process, with its output piped."
+      },
+      {
+        "file": "sowwic_nyx-1.0.0/src/nyx/stdlib/nodes/launch_process.py",
+        "line": 329,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "process = subprocess.Popen("
+      }
+    ]
+  },
+  {
+    "package_name": "geoharness",
+    "checked_at": "2026-11-17T01:07:47.224208",
+    "download_url": "https://files.pythonhosted.org/packages/ad/55/ecc5d72800ffa0382fd36838d40f345f1b64546190a7b1d77ddc3033fc77/geoharness-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "geoharness-0.1.0/geoharness/mcp/_sandbox_child.py",
+        "line": 258,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(code, ns)  # noqa: S102 - the documented purpose of this process"
+      },
+      {
+        "file": "geoharness-0.1.0/geoharness/mcp/sandbox.py",
+        "line": 188,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "def _limit_windows(proc: subprocess.Popen, memory_mb: int) -> bool:"
+      },
+      {
+        "file": "geoharness-0.1.0/geoharness/mcp/sandbox.py",
+        "line": 250,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "geoharness-0.1.0/geoharness/operators/library/analysis/raster_calculator.py",
+        "line": 92,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(expression, {\"__builtins__\": {}}, ns)  # noqa: S307"
+      },
+      {
+        "file": "geoharness-0.1.0/geoharness/operators/library/spectral/band_math.py",
+        "line": 67,
+        "keyword_detected": "eval(",
+        "code_snippet": "result = eval(expression, {\"__builtins__\": {}}, namespace)  # noqa: S307"
+      }
+    ]
   }
 ]
