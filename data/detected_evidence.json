@@ -63770,5 +63770,121 @@
         "code_snippet": "exec(compile(block, str(README), \"exec\"), _namespace(block))"
       }
     ]
+  },
+  {
+    "package_name": "vcti-usd-schema-model-navigator",
+    "checked_at": "2026-11-18T23:37:30.349536",
+    "download_url": "https://files.pythonhosted.org/packages/bf/99/ad7877684f1b98b427a6bb3ae574371cdb913e90a70c4cbf6fedd30530c9/vcti_usd_schema_model_navigator-0.3.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "vcti_usd_schema_model_navigator-0.3.0/tests/test_docs.py",
+        "line": 152,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(block, f\"{path.name}:{line}\", \"exec\"), shared)"
+      }
+    ]
+  },
+  {
+    "package_name": "sattleme-checkout",
+    "checked_at": "2026-11-18T23:37:30.884519",
+    "download_url": "https://files.pythonhosted.org/packages/af/05/580ec8832a7fd81dfc14b7f17b770cda1f6426f479650226b99b4ea299fc/sattleme_checkout-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "sattleme_checkout-1.0.0/src/sattleme_checkout/_http.py",
+        "line": 86,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def __init__(self, sock: socket.socket, *args: Any, **kwargs: Any) -> None:"
+      },
+      {
+        "file": "sattleme_checkout-1.0.0/src/sattleme_checkout/_http.py",
+        "line": 116,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self._live: socket.socket | None = None"
+      },
+      {
+        "file": "sattleme_checkout-1.0.0/src/sattleme_checkout/_http.py",
+        "line": 126,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "socket.socket.shutdown(live, socket.SHUT_RDWR)"
+      },
+      {
+        "file": "sattleme_checkout-1.0.0/src/sattleme_checkout/_http.py",
+        "line": 145,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock = socket.socket(family, kind, proto)"
+      },
+      {
+        "file": "sattleme_checkout-1.0.0/src/sattleme_checkout/_text.py",
+        "line": 126,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "data = base64.b64decode(text, validate=True)"
+      },
+      {
+        "file": "sattleme_checkout-1.0.0/tests/test_transports.py",
+        "line": 338,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "closed = socket.socket()"
+      },
+      {
+        "file": "sattleme_checkout-1.0.0/tests/test_transports.py",
+        "line": 426,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _stalled_tls_server() -> tuple[socket.socket, threading.Event]:"
+      }
+    ]
+  },
+  {
+    "package_name": "opengene",
+    "checked_at": "2026-11-18T23:37:31.601414",
+    "download_url": "https://files.pythonhosted.org/packages/ca/a0/7ce5353feafe3578ffc6ade1adf8f7c6e746553a738b41d204b7694fa5e8/opengene-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "opengene-0.1.0/apps/desktop/main.py",
+        "line": 128,
+        "keyword_detected": "exec(",
+        "code_snippet": "return app.exec()"
+      }
+    ]
+  },
+  {
+    "package_name": "lodestream",
+    "checked_at": "2026-11-18T23:37:32.229214",
+    "download_url": "https://files.pythonhosted.org/packages/f4/44/01845cb4a462799c40fe08615281ee18b8414d0ad7b6f2801926b19ead6d/lodestream-0.2.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "lodestream-0.2.0/src/lodestream/_vendor/pytds/__init__.py",
+        "line": 137,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock: socket.socket | None = None,"
+      },
+      {
+        "file": "lodestream-0.2.0/src/lodestream/_vendor/pytds/__init__.py",
+        "line": 425,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "sock: socket.socket | None,"
+      },
+      {
+        "file": "lodestream-0.2.0/src/lodestream/_vendor/pytds/instance_browser_client.py",
+        "line": 46,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket(type=socket.SOCK_DGRAM) as s:"
+      },
+      {
+        "file": "lodestream-0.2.0/src/lodestream/_vendor/pytds/login.py",
+        "line": 214,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data)"
+      },
+      {
+        "file": "lodestream-0.2.0/src/lodestream/_vendor/pytds/login.py",
+        "line": 228,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(data)"
+      }
+    ]
   }
 ]
