@@ -63486,5 +63486,289 @@
         "code_snippet": "result = eval(expression, {\"__builtins__\": {}}, namespace)  # noqa: S307"
       }
     ]
+  },
+  {
+    "package_name": "ntf-ai",
+    "checked_at": "2026-11-18T00:03:45.207996",
+    "download_url": "https://files.pythonhosted.org/packages/e2/92/175696fae3ec94f7682480b388beee3dc355f744bcce4efab82eb2e69faa/ntf_ai-0.4.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ntf_ai-0.4.0/ntf_ai.py",
+        "line": 754,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "return base64.b64decode(text+'='*(-len(text)%4),altchars=b'-_',validate=True)"
+      },
+      {
+        "file": "ntf_ai-0.4.0/ntf_ai.py",
+        "line": 956,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(encoded + \"=\" * (-len(encoded) % 4), altchars=b\"-_\", validate=True)"
+      },
+      {
+        "file": "ntf_ai-0.4.0/tests/test_e2e.py",
+        "line": 34,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "s = socket.socket()"
+      },
+      {
+        "file": "ntf_ai-0.4.0/tests/test_e2e.py",
+        "line": 502,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc = subprocess.Popen([sys.executable, CLI, \"ask\", \"--timeout\", \"60\", \"Still need me?\"], env=self.env,"
+      },
+      {
+        "file": "ntf_ai-0.4.0/tests/test_e2e.py",
+        "line": 526,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.proc = subprocess.Popen([sys.executable, CLI, \"mcp\"], env=self.env, stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "ntf_ai-0.4.0/tests/test_security.py",
+        "line": 278,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "proc=subprocess.Popen([sys.executable,os.environ.get('NTF_CLI',os.path.join(os.path.dirname(HERE),'ntf_ai.py')),"
+      }
+    ]
+  },
+  {
+    "package_name": "wuo",
+    "checked_at": "2026-11-18T00:03:45.273489",
+    "download_url": "https://files.pythonhosted.org/packages/fc/53/e241d0e734e03ea5d95228aa8266680b5accb3fbcdc934e97c281aaaf92a/wuo-0.1.1.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "wuo-0.1.1/src/win_offline_update/catalog.py",
+        "line": 81,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "digest = base64.b64decode(value, validate=True)"
+      }
+    ]
+  },
+  {
+    "package_name": "debugealo",
+    "checked_at": "2026-11-18T00:03:45.498313",
+    "download_url": "https://files.pythonhosted.org/packages/bf/2f/62e0a0e1d5f9bd061672440b812a96d9736ffd463f7b59b0ddf860ec6f26/debugealo-1.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "debugealo-1.1.0/src/debugpilot/debugger/go.py",
+        "line": 119,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reservation:"
+      },
+      {
+        "file": "debugealo-1.1.0/src/debugpilot/debugger/python.py",
+        "line": 262,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reservation:"
+      },
+      {
+        "file": "debugealo-1.1.0/src/debugpilot/debugger/python.py",
+        "line": 419,
+        "keyword_detected": "exec(",
+        "code_snippet": "dump = f\"(lambda ns: (exec({VALUE_DUMP!r}, ns), ns['dump']({expression}))[1])({{}})\""
+      },
+      {
+        "file": "debugealo-1.1.0/src/debugpilot/debugger/python.py",
+        "line": 424,
+        "keyword_detected": "eval(",
+        "code_snippet": "value = ast.literal_eval(body.get('result', ''))"
+      },
+      {
+        "file": "debugealo-1.1.0/src/debugpilot/docker/compose.py",
+        "line": 847,
+        "keyword_detected": "exec(",
+        "code_snippet": "asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/src/debugpilot/docker/diagnostics.py",
+        "line": 42,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/src/debugpilot/docker/service.py",
+        "line": 47,
+        "keyword_detected": "exec(",
+        "code_snippet": "return await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/src/debugpilot/terminal/session.py",
+        "line": 180,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "self.process = subprocess.Popen("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/integration/test_docker_live_logs.py",
+        "line": 60,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/integration/test_fastapi_example_attach.py",
+        "line": 24,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reservation:"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/integration/test_fastapi_example_attach.py",
+        "line": 41,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/integration/test_tui_real_logs.py",
+        "line": 28,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_code_run_ui.py",
+        "line": 114,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"import subprocess,sys,time; subprocess.Popen([sys.executable,'-c',{child!r}]); \""
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_code_session.py",
+        "line": 59,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "parent = \"import subprocess,sys,time; subprocess.Popen([sys.executable,'-c',sys.argv[1]]); \""
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_compose.py",
+        "line": 508,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f\"subprocess.Popen([sys.executable,'-c',{descendant!r}]); \""
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_go_attach.py",
+        "line": 273,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reserve:"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_go_attach.py",
+        "line": 276,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_go_attach_disconnect.py",
+        "line": 52,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reserve:"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_go_attach_disconnect.py",
+        "line": 55,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reserve:"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_go_attach_disconnect.py",
+        "line": 69,
+        "keyword_detected": "exec(",
+        "code_snippet": "build = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_go_attach_disconnect.py",
+        "line": 83,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_go_attach_independent.py",
+        "line": 67,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reserve:"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_go_attach_independent.py",
+        "line": 70,
+        "keyword_detected": "exec(",
+        "code_snippet": "process = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_node_attach.py",
+        "line": 58,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reservation:"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_node_attach.py",
+        "line": 169,
+        "keyword_detected": "exec(",
+        "code_snippet": "target = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_node_attach.py",
+        "line": 446,
+        "keyword_detected": "exec(",
+        "code_snippet": "target = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_node_source_maps.py",
+        "line": 118,
+        "keyword_detected": "exec(",
+        "code_snippet": "target = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_python_attach.py",
+        "line": 124,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reservation:"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_python_attach.py",
+        "line": 144,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reservation:"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_python_attach.py",
+        "line": 193,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "with socket.socket() as reservation:"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_python_attach.py",
+        "line": 196,
+        "keyword_detected": "exec(",
+        "code_snippet": "target = await asyncio.create_subprocess_exec("
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_python_debug.py",
+        "line": 99,
+        "keyword_detected": "exec(",
+        "code_snippet": "probe = await asyncio.create_subprocess_exec(str(interpreter), '-c', 'import debugpy')"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_python_debug.py",
+        "line": 157,
+        "keyword_detected": "subprocess.Popen",
+        "code_snippet": "f'subprocess.Popen([sys.executable, \"-c\", {child!r}])\\n'"
+      },
+      {
+        "file": "debugealo-1.1.0/tests/unit/test_python_value_dump.py",
+        "line": 10,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(VALUE_DUMP, namespace)"
+      }
+    ]
+  },
+  {
+    "package_name": "skarn-guard",
+    "checked_at": "2026-11-18T00:03:45.877434",
+    "download_url": "https://files.pythonhosted.org/packages/a7/a2/77bb3d4a1920e3d4c8eba87e0d79b9899d3846ff384c0f2724b82b4cbeb4/skarn_guard-0.37.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "skarn_guard-0.37.0/tests/test_readme.py",
+        "line": 57,
+        "keyword_detected": "exec(",
+        "code_snippet": "exec(compile(block, str(README), \"exec\"), _namespace(block))"
+      }
+    ]
   }
 ]
