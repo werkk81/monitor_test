@@ -63886,5 +63886,69 @@
         "code_snippet": "return base64.b64decode(data)"
       }
     ]
+  },
+  {
+    "package_name": "dex-connector-microsoft-sql-server",
+    "checked_at": "2026-11-19T23:55:25.173028",
+    "download_url": "https://files.pythonhosted.org/packages/6e/86/563718f682735c98d8422e732b90deebe54a93a84bcfc3e058ae91a8e98f/dex_connector_microsoft_sql_server-0.1.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "dex_connector_microsoft_sql_server-0.1.0/src/dex_connectors/microsoft_sql_server/client.py",
+        "line": 86,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def _dispatch_socket_connection(*args: Any, **kwargs: Any) -> socket.socket:"
+      },
+      {
+        "file": "dex_connector_microsoft_sql_server-0.1.0/src/dex_connectors/microsoft_sql_server/operations.py",
+        "line": 240,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "self.sockets: list[socket.socket] = []"
+      },
+      {
+        "file": "dex_connector_microsoft_sql_server-0.1.0/src/dex_connectors/microsoft_sql_server/operations.py",
+        "line": 271,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def attach_socket(self, connected_socket: socket.socket) -> None:"
+      },
+      {
+        "file": "dex_connector_microsoft_sql_server-0.1.0/tests/test_tds_identity.py",
+        "line": 58,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def read_message(connection: socket.socket) -> tuple[int, bytes]:"
+      },
+      {
+        "file": "dex_connector_microsoft_sql_server-0.1.0/tests/test_tds_identity.py",
+        "line": 79,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "def serve(listener: socket.socket) -> None:"
+      },
+      {
+        "file": "dex_connector_microsoft_sql_server-0.1.0/tests/test_tds_identity.py",
+        "line": 139,
+        "keyword_detected": "socket.socket",
+        "code_snippet": "listener = socket.socket()"
+      }
+    ]
+  },
+  {
+    "package_name": "scudo-waf",
+    "checked_at": "2026-11-19T23:55:25.674950",
+    "download_url": "https://files.pythonhosted.org/packages/c5/36/397cba5293e0f06160e22107cd463a08a8962052c03128571d40b31d5fbd/scudo_waf-1.0.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "scudo_waf-1.0.0/scudo_waf/normalizer.py",
+        "line": 79,
+        "keyword_detected": "base64.b64decode",
+        "code_snippet": "raw = base64.b64decode(padded, validate=True)"
+      },
+      {
+        "file": "scudo_waf-1.0.0/tests/test_pii_and_evasion.py",
+        "line": 97,
+        "keyword_detected": "eval(",
+        "code_snippet": "(f\"eval(atob('{base64.b64encode(b'<script>alert(1)</script>').decode()}'))\", ThreatCategory.XSS),"
+      }
+    ]
   }
 ]
