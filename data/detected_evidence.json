@@ -63950,5 +63950,19 @@
         "code_snippet": "(f\"eval(atob('{base64.b64encode(b'<script>alert(1)</script>').decode()}'))\", ThreatCategory.XSS),"
       }
     ]
+  },
+  {
+    "package_name": "ludex-gui",
+    "checked_at": "2026-11-20T23:24:58.219201",
+    "download_url": "https://files.pythonhosted.org/packages/5d/3e/8d1c112872cd1ff18c69ff622d18f63885ce44ce4786cbaa622aea5616fb/ludex_gui-0.62.0.tar.gz",
+    "decision": "SUSPICIOUS",
+    "evidences": [
+      {
+        "file": "ludex_gui-0.62.0/src/ludex_gui/app.py",
+        "line": 84,
+        "keyword_detected": "exec(",
+        "code_snippet": "code = app.exec()"
+      }
+    ]
   }
 ]
